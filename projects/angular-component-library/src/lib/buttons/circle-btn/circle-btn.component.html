@@ -1,0 +1,9 @@
+<button
+    [style.background]="backgroundColor"
+    [class.active]="active"
+    [attr.aria-label]="ariaLabel"
+    class="btn-border">
+    @if (faIcon) {
+        <fa-icon [icon]="faIcon"> </fa-icon>
+    }
+</button>

@@ -1,0 +1,283 @@
+@import 'src/content/scss/_baseVariables';
+
+/********************
+CSS Variables -> --gray, --primary-color, --fa-icon-color for changing theme
+********************/
+
+:host {
+    display: inline-block;
+}
+
+button {
+    position: relative;
+    height: $btn-height;
+    line-height: $btn-height;
+    padding: $btn-padding;
+    border: 0;
+    border-radius: $border-radius;
+    font-weight: $font-weight-light;
+    font-size: $font-size;
+    background: white;
+    color: var(--gray);
+    cursor: pointer;
+
+    fa-icon {
+        color: var(--gray);
+    }
+
+    span {
+        margin: 0px 5px;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+/************************************
+Shining
+**************************************/
+
+.shining {
+    background: transparent;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 2px var(--gray);
+    transition: color 0.25s;
+
+    &::before,
+    &::after {
+        box-sizing: inherit;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: $border-width solid transparent;
+        width: 0;
+        height: 0;
+
+        fa-icon {
+            color: var(--primary-color);
+        }
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+    }
+
+    &:hover,
+    &.active {
+        &:not([disabled]) {
+            color: var(--primary-color);
+
+            fa-icon {
+                color: var(--primary-color);
+            }
+        }
+    }
+
+    &:hover::before,
+    &:hover::after,
+    &.active::before,
+    &.active::after {
+        width: 100%;
+        height: 100%;
+
+        fa-icon {
+            color: var(--primary-color);
+        }
+    }
+
+    &:hover::before,
+    &.active::before {
+        border-top-color: var(--primary-color);
+        border-right-color: var(--primary-color);
+        transition:
+            width 0.25s ease-out,
+            height 0.25s ease-out 0.25s;
+    }
+
+    &:hover::after,
+    &.active::after {
+        border-bottom-color: var(--primary-color);
+        border-left-color: var(--primary-color);
+        transition:
+            border-color 0s ease-out 0.5s,
+            width 0.25s ease-out 0.5s,
+            height 0.25s ease-out 0.75s;
+    }
+}
+
+/************************************
+Filling
+**************************************/
+.filling {
+    color: var(--primary-color);
+    border: $border-width solid var(--primary-color);
+    background: transparent;
+    background-image: linear-gradient(var(--primary-color), var(--primary-color));
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition:
+        background-size 0.5s,
+        color 0.5s;
+
+    fa-icon {
+        color: var(--primary-color);
+    }
+
+    &:hover,
+    &.active {
+        &:not([disabled]) {
+            background-size: 100% 100%;
+            color: var(--fa-icon-color);
+
+            fa-icon {
+                color: var(--fa-icon-color);
+            }
+        }
+    }
+}
+
+.filling.gray {
+    border: $border-width solid var(--gray);
+    color: var(--gray);
+    background-image: linear-gradient(var(--gray), var(--gray));
+
+    fa-icon {
+        color: var(--gray);
+    }
+
+    &:hover,
+    &.active {
+        &:not([disabled]) {
+            color: var(--primary-color);
+
+            fa-icon {
+                color: var(--primary-color);
+            }
+        }
+    }
+
+    &.loading::after {
+        border-top-color: var(--primary-color);
+    }
+}
+
+/***************************
+Simple hover
+********************************/
+.simple {
+    color: var(--primary-color);
+    border: $border-width solid var(--primary-color);
+    background: transparent;
+
+    fa-icon {
+        color: var(--primary-color);
+    }
+
+    &:active, &.active {
+        &:not([disabled]) {
+            background-color: var(--primary-color);
+            color: var(--fa-icon-color);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+
+            fa-icon {
+                color: var(--fa-icon-color);
+            }
+        }
+    }
+}
+
+.delete {
+    color: $toast-error-color;
+    border: $border-width solid $toast-error-color;
+    background: transparent;
+
+    fa-icon {
+        color: $toast-error-color;
+    }
+
+    &:active {
+        &:not([disabled]) {
+            background-color: $toast-error-color;
+            color: var(--fa-icon-color);
+
+            fa-icon {
+                color: var(--fa-icon-color);
+            }
+        }
+    }
+}
+
+.small{
+    height: $btn-small-height;
+    line-height: $btn-small-height;
+    padding: $btn-small-padding;
+}
+
+
+/************************************
+Disabled
+**************************************/
+button:disabled,
+button[disabled] {
+    opacity: 0.5;
+    background-size: 0% 100%;
+    cursor: not-allowed;
+
+    &:hover::before,
+    &:hover::after {
+        width: 0%;
+        height: 0%;
+        border-color: transparent;
+    }
+}
+
+/***************************************************************
+Media query to hide hover effects for devices 
+that do not support them, like touch displays
+**************************************************************/
+@media (hover: hover) {
+    .simple {
+        &:hover,
+        &.active {
+            &:not([disabled]) {
+                background-color: var(--primary-color);
+                color: var(--fa-icon-color);
+                background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+
+                fa-icon {
+                    color: var(--fa-icon-color);
+                }
+            }
+        }
+        &:active:not([disabled]) {
+            background-color: $primary-color-dark;
+        }
+    }
+
+    .delete {
+        &:hover,
+        &.active {
+            &:not([disabled]) {
+                background-color: $toast-error-color;
+                color: var(--fa-icon-color);
+
+                fa-icon {
+                    color: var(--fa-icon-color);
+                }
+            }
+        }
+        &:active:not([disabled]) {
+            background-color: $toast-error-color;
+        }
+    }
+}

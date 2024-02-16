@@ -1,0 +1,89 @@
+@import 'src/content/scss/_baseVariables';
+
+/********************
+CSS Variables -> --primary-color, --fa-icon-color for changing theme
+********************/
+
+:host {
+    display: inline-block;
+}
+
+button {
+    position: relative;
+    height: $btn-height;
+    line-height: $btn-height;
+    padding: $btn-padding;
+    border: 0;
+    font-weight: $font-weight-light;
+    font-size: $font-size;
+    transition: background 400ms;
+    background: var(--primary-color);
+    color: var(--fa-icon-color);
+    cursor: pointer;
+
+    fa-icon {
+        color: var(--fa-icon-color);
+    }
+
+    span {
+        color: var(--fa-icon-color);
+        margin: 0px 5px;
+    }
+}
+
+/************************************
+ Ripple
+**************************************/
+
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+
+    &:hover:not([disabled]) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    }
+
+    &:active:not([disabled]) {
+        background-color: $primary-color-dark;
+    }
+}
+
+.delete {
+    background: $toast-error-color;
+
+    &:active:not([disabled]) {
+        background-color: $primary-color-dark;
+    }
+}
+
+.not-emphrazed {
+    background: $not-emphrazed-color;
+
+    &:active:not([disabled]) {
+        background-color: $not-emphrazed-color-dark;
+    }
+}
+
+.navbar-btn {
+    border-radius: 5px;
+    height: calc($btn-height - 5px);
+    line-height: calc($btn-height - 5px);
+    padding: $btn-small-padding;
+}
+
+/************************************
+Disabled
+**************************************/
+button:disabled,
+button[disabled] {
+    opacity: 0.5;
+    background-size: 0% 100%;
+    cursor: not-allowed;
+
+    &:hover::before,
+    &:hover::after {
+        width: 0%;
+        height: 0%;
+        border-color: transparent;
+    }
+}

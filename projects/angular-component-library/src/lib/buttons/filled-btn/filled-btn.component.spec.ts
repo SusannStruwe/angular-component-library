@@ -1,0 +1,57 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FilledBtnComponent } from './filled-btn.component';
+import { By } from '@angular/platform-browser';
+import { IconService } from 'src/app/service/icon.service';
+
+describe('FilledBtnComponent', () => {
+    let component: FilledBtnComponent;
+    let fixture: ComponentFixture<FilledBtnComponent>;
+    const iconService = new IconService();
+
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [FilledBtnComponent],
+            providers: [],
+        });
+
+        fixture = TestBed.createComponent(FilledBtnComponent);
+
+        component = fixture.componentInstance;
+
+        fixture.detectChanges();
+    });
+
+    it('should create bordered btn component', () => {
+        expect(component).toBeTruthy();
+    });
+
+    it('should show button text', () => {
+        component.buttonText = 'Start';
+        fixture.detectChanges();
+
+        const btnText = fixture.debugElement.query(By.css('span')).nativeElement;
+        expect(btnText.innerHTML).toEqual('Start');
+    });
+
+    it('should show fa-icon check', () => {
+        component.showIcon = true;
+        component.faIcon = iconService.faCheck;
+        fixture.detectChanges();
+
+        expect(fixture.debugElement.query(By.css('svg')).nativeElement).toBeTruthy();
+
+        const faIconName = fixture.debugElement
+            .query(By.css('svg'))
+            .nativeElement.getAttribute('data-icon');
+
+        expect(faIconName).toEqual('check');
+    });
+
+    it('should be disabled', () => {
+        component.disabled = true;
+        fixture.detectChanges();
+
+        const button = fixture.debugElement.query(By.css('button')).nativeElement;
+        expect(button.disabled).toBeTruthy();
+    });
+});
