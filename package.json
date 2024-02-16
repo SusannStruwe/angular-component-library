@@ -5,8 +5,12 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "update:angular": "ng update @angular/cli @angular/core",
+    "build:lib": "ng build angular-component-library",
+    "pack:lib": "cd dist/angular-component-library && npm pack",
+    "build:sass": "sass styles/styles.scss assets/styles.css",
     "test": "ng test"
   },
   "private": true,

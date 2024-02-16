@@ -25,3 +25,25 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Build lib
+
+ng build angular-component-library
+
+cd dist/angular-component-library && npm pack
+
+Create "libs" folder in target project and run:
+npm install libs\angular-component-library-0.0.1.tgz 
+
+Add  `"preserveSymlinks": true` to build -> options.
+
+```
+"build": {
+    "builder": "@angular-devkit/build-angular:application",
+    "options": {
+    "outputPath": "dist/test-imp",
+    "index": "src/index.html",
+    "browser": "src/main.ts",
+    "preserveSymlinks": true,
+```

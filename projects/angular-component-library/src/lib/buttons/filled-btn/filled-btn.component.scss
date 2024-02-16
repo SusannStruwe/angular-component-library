@@ -1,7 +1,7 @@
-@import 'src/content/scss/_baseVariables';
+@import '../../../../assets/styles';
 
 /********************
-CSS Variables -> --primary-color, --fa-icon-color for changing theme
+CSS Variables -> --accent-color, --fa-icon-color for changing theme
 ********************/
 
 :host {
@@ -10,14 +10,14 @@ CSS Variables -> --primary-color, --fa-icon-color for changing theme
 
 button {
     position: relative;
-    height: $btn-height;
-    line-height: $btn-height;
-    padding: $btn-padding;
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    padding: var(--btn-padding);
     border: 0;
-    font-weight: $font-weight-light;
-    font-size: $font-size;
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size);
     transition: background 400ms;
-    background: var(--primary-color);
+    background: var(--accent-color);
     color: var(--fa-icon-color);
     cursor: pointer;
 
@@ -44,31 +44,31 @@ button {
     }
 
     &:active:not([disabled]) {
-        background-color: $primary-color-dark;
+        background-color: var(--accent-color-dark);
     }
 }
 
 .delete {
-    background: $toast-error-color;
+    background: var(--toast-error-color);
 
     &:active:not([disabled]) {
-        background-color: $primary-color-dark;
+        background-color: var(--accent-color-dark);
     }
 }
 
 .not-emphrazed {
-    background: $not-emphrazed-color;
+    background: var(--not-emphrazed-color);
 
     &:active:not([disabled]) {
-        background-color: $not-emphrazed-color-dark;
+        background-color: var(--not-emphrazed-color-dark);
     }
 }
 
 .navbar-btn {
     border-radius: 5px;
-    height: calc($btn-height - 5px);
-    line-height: calc($btn-height - 5px);
-    padding: $btn-small-padding;
+    height: calc(var(--btn-height) - 5px);
+    line-height: calc(var(--btn-height) - 5px);
+    padding: var(--btn-small-padding);
 }
 
 /************************************

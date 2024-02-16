@@ -12,7 +12,7 @@ import { HoverStyle } from '../../model/hoverstyle.enum';
  * ```
  * <bordered-btn-component
  *  [ariaLabel]= "'scheduler.today' | translate "
- *  [buttonText]="'scheduler.today' | translate "
+ *  [text]="'scheduler.today' | translate "
  *  [faIcon] = "faCog">
  * </bordered-btn-component>
  * ```
@@ -27,21 +27,20 @@ import { HoverStyle } from '../../model/hoverstyle.enum';
 export class BorderedBtnComponent {
     @Input() ariaLabel: string = '';
 
-    @Input() buttonText?: string;
+    @Input() text?: string;
 
     @Input() faIcon?: IconDefinition;
-    // example --> 100% or not
-    @Input() showIcon = true;
 
-    @Input() disabled?: boolean;
+    @Input() isDisabled?: boolean;
+    // example --> spin or not
+    @Input() isSpinning = false;
+    // example --> active or not
+    @Input() isActive?: boolean;
+
     // example --> gray, delete
     @Input() styleClass?: string = '';
     // example --> filling or shining
-    @Input() hoverStyle = HoverStyle.SIMPLE;
-    // example --> spin or not
-    @Input() spinning = false;
-    // example --> active or not
-    @Input() active?: boolean;
+    @Input() hoverStyle = HoverStyle.RIPPLE;
     // example --> 100% or not
     @Input() width?: string;
 }

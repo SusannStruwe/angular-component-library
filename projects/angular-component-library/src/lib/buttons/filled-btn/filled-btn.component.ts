@@ -11,7 +11,7 @@ import { HoverStyle } from '../../model/hoverstyle.enum';
  * ```
  * <filled-btn-component
  *  [ariaLabel]= "'scheduler.today' | translate "
- *  [buttonText]="'scheduler.today' | translate "
+ *  [text]="'scheduler.today' | translate "
  *  [faIcon] = "faCog">
  * </filled-btn-component>
  * ```
@@ -29,8 +29,6 @@ export class FilledBtnComponent {
     @Input() text?: string;
 
     @Input() faIcon?: IconDefinition;
-
-    @Input() showIcon = true;
 
     @Input() isDisabled?: boolean;
     // example --> spin or not

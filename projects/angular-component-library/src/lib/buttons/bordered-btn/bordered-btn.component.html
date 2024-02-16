@@ -2,12 +2,13 @@
     [style.width]="width"
     [ngClass]="[hoverStyle, styleClass]"
     [attr.aria-label]="ariaLabel"
-    [disabled]="disabled"
-    [class.active]="active">
-    @if (faIcon && showIcon) {
-        <fa-icon [icon]="faIcon" [spin]="spinning"></fa-icon>
+    [disabled]="isDisabled"
+    [class.active]="isActive">
+
+    @if (faIcon) {
+        <fa-icon [icon]="faIcon" [spin]="isSpinning"></fa-icon>
     }
-    @if (buttonText) {
-        <span>{{ buttonText }}</span>
+    @if (text) {
+        <span>{{ text }}</span>
     }
 </button>

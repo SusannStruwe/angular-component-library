@@ -1,7 +1,7 @@
-@import 'src/content/scss/_baseVariables';
+@import '../../../../assets/styles';
 
 /********************
-CSS Variables -> --gray, --primary-color, --fa-icon-color for changing theme
+CSS Variables -> var(--main-color), --accent-color, --fa-icon-color for changing theme
 ********************/
 
 :host {
@@ -10,19 +10,19 @@ CSS Variables -> --gray, --primary-color, --fa-icon-color for changing theme
 
 button {
     position: relative;
-    height: $btn-height;
-    line-height: $btn-height;
-    padding: $btn-padding;
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    padding: var(--btn-padding);
     border: 0;
-    border-radius: $border-radius;
-    font-weight: $font-weight-light;
-    font-size: $font-size;
+    border-radius: var(--border-radius);
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size);
     background: white;
-    color: var(--gray);
+    color: var(--accent-color);
     cursor: pointer;
 
     fa-icon {
-        color: var(--gray);
+        color: var(--accent-color);
     }
 
     span {
@@ -42,7 +42,7 @@ Shining
 .shining {
     background: transparent;
     box-sizing: border-box;
-    box-shadow: inset 0 0 0 2px var(--gray);
+    box-shadow: inset 0 0 0 2px var(--main-color);
     transition: color 0.25s;
 
     &::before,
@@ -52,12 +52,12 @@ Shining
         position: absolute;
         width: 100%;
         height: 100%;
-        border: $border-width solid transparent;
+        border: var(--border-width) solid transparent;
         width: 0;
         height: 0;
 
         fa-icon {
-            color: var(--primary-color);
+            color: var(--accent-color);
         }
     }
 
@@ -74,10 +74,10 @@ Shining
     &:hover,
     &.active {
         &:not([disabled]) {
-            color: var(--primary-color);
+            color: var(--accent-color);
 
             fa-icon {
-                color: var(--primary-color);
+                color: var(--accent-color);
             }
         }
     }
@@ -90,14 +90,14 @@ Shining
         height: 100%;
 
         fa-icon {
-            color: var(--primary-color);
+            color: var(--accent-color);
         }
     }
 
     &:hover::before,
     &.active::before {
-        border-top-color: var(--primary-color);
-        border-right-color: var(--primary-color);
+        border-top-color: var(--accent-color);
+        border-right-color: var(--accent-color);
         transition:
             width 0.25s ease-out,
             height 0.25s ease-out 0.25s;
@@ -105,8 +105,8 @@ Shining
 
     &:hover::after,
     &.active::after {
-        border-bottom-color: var(--primary-color);
-        border-left-color: var(--primary-color);
+        border-bottom-color: var(--accent-color);
+        border-left-color: var(--accent-color);
         transition:
             border-color 0s ease-out 0.5s,
             width 0.25s ease-out 0.5s,
@@ -118,10 +118,10 @@ Shining
 Filling
 **************************************/
 .filling {
-    color: var(--primary-color);
-    border: $border-width solid var(--primary-color);
+    color: var(--accent-color);
+    border: var(--border-width) solid var(--accent-color);
     background: transparent;
-    background-image: linear-gradient(var(--primary-color), var(--primary-color));
+    background-image: linear-gradient(var(--accent-color), var(--accent-color));
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 0% 100%;
@@ -130,7 +130,7 @@ Filling
         color 0.5s;
 
     fa-icon {
-        color: var(--primary-color);
+        color: var(--accent-color);
     }
 
     &:hover,
@@ -147,27 +147,27 @@ Filling
 }
 
 .filling.gray {
-    border: $border-width solid var(--gray);
-    color: var(--gray);
-    background-image: linear-gradient(var(--gray), var(--gray));
+    border: var(--border-width) solid var(var(--main-color));
+    color: var(var(--main-color));
+    background-image: linear-gradient(var(var(--main-color)), var(var(--main-color)));
 
     fa-icon {
-        color: var(--gray);
+        color: var(var(--main-color));
     }
 
     &:hover,
     &.active {
         &:not([disabled]) {
-            color: var(--primary-color);
+            color: var(--accent-color);
 
             fa-icon {
-                color: var(--primary-color);
+                color: var(--accent-color);
             }
         }
     }
 
     &.loading::after {
-        border-top-color: var(--primary-color);
+        border-top-color: var(--accent-color);
     }
 }
 
@@ -175,17 +175,17 @@ Filling
 Simple hover
 ********************************/
 .simple {
-    color: var(--primary-color);
-    border: $border-width solid var(--primary-color);
+    color: var(--accent-color);
+    border: var(--border-width) solid var(--accent-color);
     background: transparent;
 
     fa-icon {
-        color: var(--primary-color);
+        color: var(--accent-color);
     }
 
     &:active, &.active {
         &:not([disabled]) {
-            background-color: var(--primary-color);
+            background-color: var(--accent-color);
             color: var(--fa-icon-color);
             background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 
@@ -197,17 +197,17 @@ Simple hover
 }
 
 .delete {
-    color: $toast-error-color;
-    border: $border-width solid $toast-error-color;
+    color: var(--toast-error-color);
+    border: var(--border-width) solid var(--toast-error-color);
     background: transparent;
 
     fa-icon {
-        color: $toast-error-color;
+        color: var(--toast-error-color);
     }
 
     &:active {
         &:not([disabled]) {
-            background-color: $toast-error-color;
+            background-color: var(--toast-error-color);
             color: var(--fa-icon-color);
 
             fa-icon {
@@ -218,9 +218,9 @@ Simple hover
 }
 
 .small{
-    height: $btn-small-height;
-    line-height: $btn-small-height;
-    padding: $btn-small-padding;
+    height: var(--btn-small-height);
+    line-height: var(--btn-small-height);
+    padding: var(--btn-small-padding);
 }
 
 
@@ -250,7 +250,7 @@ that do not support them, like touch displays
         &:hover,
         &.active {
             &:not([disabled]) {
-                background-color: var(--primary-color);
+                background-color: var(--accent-color);
                 color: var(--fa-icon-color);
                 background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 
@@ -260,7 +260,7 @@ that do not support them, like touch displays
             }
         }
         &:active:not([disabled]) {
-            background-color: $primary-color-dark;
+            background-color: var(--accent-color-dark);
         }
     }
 
@@ -268,7 +268,7 @@ that do not support them, like touch displays
         &:hover,
         &.active {
             &:not([disabled]) {
-                background-color: $toast-error-color;
+                background-color: var(--toast-error-color);
                 color: var(--fa-icon-color);
 
                 fa-icon {
@@ -277,7 +277,7 @@ that do not support them, like touch displays
             }
         }
         &:active:not([disabled]) {
-            background-color: $toast-error-color;
+            background-color: var(--toast-error-color);
         }
     }
 }

@@ -1,8 +1,9 @@
 <button
+    [ngClass]="[styleClass]"
     [style.background]="backgroundColor"
-    [class.active]="active"
+    [class.active]="isActive"
     [attr.aria-label]="ariaLabel"
-    class="btn-border">
+    [disabled]="isDisabled">
     @if (faIcon) {
         <fa-icon [icon]="faIcon"> </fa-icon>
     }
