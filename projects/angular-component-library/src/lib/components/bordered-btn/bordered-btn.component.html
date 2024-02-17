@@ -1,9 +1,10 @@
 <button
-    [ngClass]="[hoverStyle, styleClass]"
     [style.width]="width"
+    [ngClass]="[classStyle]"
     [attr.aria-label]="ariaLabel"
     [disabled]="isDisabled"
     [class.active]="isActive">
+
     @if (faIcon) {
         <fa-icon [icon]="faIcon" [spin]="isSpinning"></fa-icon>
     }

@@ -33,11 +33,14 @@ ng build angular-component-library
 
 cd dist/angular-component-library && npm pack
 
-Create "libs" folder in target project and run:
+
+## Create "libs" folder in target project and run:
+
 npm install libs\angular-component-library-0.0.1.tgz 
+npm uninstall angular-component-library
 
-Add  `"preserveSymlinks": true` to build -> options.
 
+Add  `"preserveSymlinks": true` to build -> options in angular.json.
 ```
 "build": {
     "builder": "@angular-devkit/build-angular:application",
@@ -47,3 +50,5 @@ Add  `"preserveSymlinks": true` to build -> options.
     "browser": "src/main.ts",
     "preserveSymlinks": true,
 ```
+
+On export error delete cache in .angular folder

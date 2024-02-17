@@ -7,11 +7,11 @@
     "build": "ng build",
     "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "update:angular": "ng update @angular/cli @angular/core",
-    "build:lib": "ng build angular-component-library",
+    "build:lib": "ng build angular-component-library --configuration production",
+    "build:lib-watch": "ng build angular-component-library --configuration development --watch",
     "pack:lib": "cd dist/angular-component-library && npm pack",
-    "build:sass": "sass styles/styles.scss assets/styles.css",
-    "test": "ng test"
+    "test": "ng test",
+    "update:angular": "ng update @angular/cli @angular/core"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +25,12 @@
     "@angular/router": "^17.0.0",
     "@fortawesome/angular-fontawesome": "^0.14.1",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@ngx-translate/core": "^15.0.0",
+    "@types/lodash.clonedeep": "^4.5.9",
+    "lodash.clonedeep": "^4.5.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"

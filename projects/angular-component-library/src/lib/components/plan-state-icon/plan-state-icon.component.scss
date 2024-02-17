@@ -1,0 +1,47 @@
+@import '../../../../assets/styles';
+
+/*
+CSS Variables -> --gray for changing theme
+*/
+
+:host {
+    display: inline-block;
+}
+
+.successful {
+    color: var(--job-successful-color);
+}
+
+.pending {
+    color: var(--job-pending-color);
+}
+
+.running {
+    color: var(--job-running-color);
+}
+
+.failed {
+    color: var(--job-failed-color);
+}
+
+.released, .release-running {
+    position: relative;
+
+    span.star {
+        position: absolute;
+        top: -5px;
+        left: 10px;
+
+        fa-icon {
+            color: var(--toast-warning-color);
+        }
+    }
+}
+
+.release-running{
+    span.star {
+        fa-icon {
+            color: var(--job-running-color);
+        }
+    }
+}

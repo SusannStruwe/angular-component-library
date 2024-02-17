@@ -1,20 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FilledBtnComponent } from './filled-btn.component';
+import { ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing';
+import { BorderedBtnComponent } from './bordered-btn.component';
 import { By } from '@angular/platform-browser';
-import { IconService } from 'src/app/service/icon.service';
+import { IconService } from '../../services/icon.service';
 
-describe('FilledBtnComponent', () => {
-    let component: FilledBtnComponent;
-    let fixture: ComponentFixture<FilledBtnComponent>;
+
+describe('BorderedBtnComponent', () => {
+    let component: BorderedBtnComponent;
+    let fixture: ComponentFixture<BorderedBtnComponent>;
     const iconService = new IconService();
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [FilledBtnComponent],
+            imports: [BorderedBtnComponent],
             providers: [],
         });
 
-        fixture = TestBed.createComponent(FilledBtnComponent);
+        fixture = TestBed.createComponent(BorderedBtnComponent);
 
         component = fixture.componentInstance;
 
@@ -26,7 +27,7 @@ describe('FilledBtnComponent', () => {
     });
 
     it('should show button text', () => {
-        component.buttonText = 'Start';
+        component.text = 'Start';
         fixture.detectChanges();
 
         const btnText = fixture.debugElement.query(By.css('span')).nativeElement;
@@ -34,7 +35,6 @@ describe('FilledBtnComponent', () => {
     });
 
     it('should show fa-icon check', () => {
-        component.showIcon = true;
         component.faIcon = iconService.faCheck;
         fixture.detectChanges();
 
@@ -48,10 +48,25 @@ describe('FilledBtnComponent', () => {
     });
 
     it('should be disabled', () => {
-        component.disabled = true;
+        component.isDisabled = true;
         fixture.detectChanges();
 
         const button = fixture.debugElement.query(By.css('button')).nativeElement;
         expect(button.disabled).toBeTruthy();
     });
+
+    it('should be filled on active', fakeAsync(() => {
+        const button = fixture.debugElement.query(By.css('.simple'));
+        console.log(button);
+        const styles = window.getComputedStyle(button.nativeElement);
+
+        console.log(styles.backgroundColor);
+
+        expect(styles.backgroundColor).toEqual('rgba(0, 0, 0, 0)');
+
+        component.isActive = true;
+        fixture.detectChanges();
+
+        expect(styles.backgroundColor).not.toEqual('rgba(0, 0, 0, 0)');
+    }));
 });

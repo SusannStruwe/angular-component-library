@@ -1,0 +1,38 @@
+<!-- release state -->
+@if (state === jobState.RELEASED) {
+    <div class="released">
+        <span class="star">
+            <fa-icon [icon]="faStar"> </fa-icon>
+        </span>
+        <span>
+            <fa-icon class="successful" [icon]="faCircleCheck"> </fa-icon>
+        </span>
+    </div>
+}
+<!-- release running state -->
+@if (state === jobState.RELEASE_RUNNING) {
+    <div class="release-running">
+        <span class="star">
+            <fa-icon [icon]="faStar"> </fa-icon>
+        </span>
+        <span>
+            <fa-icon class="successful" [icon]="faCircleCheck"> </fa-icon>
+        </span>
+    </div>
+}
+<!-- successful state -->
+@if (state === jobState.SUCCESSFUL) {
+    <fa-icon class="successful" [icon]="faCircleCheck"> </fa-icon>
+}
+<!-- running state -->
+@if (state === jobState.RUNNING) {
+    <fa-icon class="running" [icon]="faClock"> </fa-icon>
+}
+<!-- pending state -->
+@if (state === jobState.PENDING) {
+    <fa-icon class="pending" [icon]="faClock"> </fa-icon>
+}
+<!-- failed state -->
+@if (state === jobState.FAILED) {
+    <fa-icon class="failed" [icon]="faCircleExclamation"> </fa-icon>
+}

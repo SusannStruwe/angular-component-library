@@ -1,0 +1,11 @@
+<p [ngClass]="classStyle">{{ label }}</p>
+
+<div class="toggle">
+    <input type="checkbox" 
+        class="checkbox" 
+        [disabled]="isDisabled"
+        [(ngModel)]="checked" 
+        (ngModelChange)="toggleState()" />
+    <div class="slider"></div>
+    <div class="layer"></div>
+</div>

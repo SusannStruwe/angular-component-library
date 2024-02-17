@@ -3,6 +3,7 @@
 ***************************************************/
 body {
     --font-family: 'Segoe UI', sans-serif;
+    --accent-color-light: #00c3d4;
     --accent-color: #0393a0;
     --accent-color-dark: #02707a;
     --main-color: #3b3c3e;
@@ -14,11 +15,11 @@ body {
     --tabs-bg-color: #111;
     --tabs-content-color: #f3f3f3;
     --tab-color: #ccc;
-
     --text-color: #2c2f33;
     --placeholder-color: #999;
     --fa-icon-color: white;
     --border-color-rgb: 000, 000, 000;
+
     --not-emphrazed-color: #aaa;
     --not-emphrazed-color-dark: #999;
     --first-cell-width: 225px;
@@ -51,6 +52,7 @@ body {
 
     --border-color: #ccc;
     --border-color-light: #e4e4e4;
+
     --box-shadow:
       0 1px 1px rgba(0, 0, 0, 0.12),
       0 1px 1px rgba(229, 112, 28, 0.14);
@@ -95,6 +97,7 @@ body {
     --row-height: 45px;
     --btn-small-height: 35px;
     --btn-small-padding: 0px 10px;
+    --max-width-select: 500px;
 }
 
 body.dark-theme {

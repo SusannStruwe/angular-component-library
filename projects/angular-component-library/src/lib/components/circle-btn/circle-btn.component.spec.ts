@@ -1,7 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CircleBtnComponent } from './circle-btn.component';
 import { By } from '@angular/platform-browser';
-import { IconService } from 'src/app/service/icon.service';
+import { IconService } from '../../services/icon.service';
+
 
 describe('CircleBtnComponent', () => {
     let component: CircleBtnComponent;

@@ -2,29 +2,32 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { HoverStyle } from '../../model/hoverstyle.enum';
+import { HoverStyle } from '../../model/hover-style.enum';
+
 
 /**
- * Component to create a filled button.
+ * Component to create a bordered button.
  *
  * @howToUse
  * ```
- * <filled-btn-component
+ * <bordered-btn-component
  *  [ariaLabel]= "'scheduler.today' | translate "
  *  [text]="'scheduler.today' | translate "
  *  [faIcon] = "faCog">
- * </filled-btn-component>
+ * </bordered-btn-component>
  * ```
  */
 @Component({
-    selector: 'filled-btn-component',
+    selector: 'bordered-btn-component',
     standalone: true,
     imports: [CommonModule, FontAwesomeModule],
-    templateUrl: './filled-btn.component.html',
-    styleUrls: ['./filled-btn.component.scss'],
+    templateUrl: './bordered-btn.component.html',
+    styleUrls: ['./bordered-btn.component.scss']
 })
-export class FilledBtnComponent {
+export class BorderedBtnComponent{
     @Input() ariaLabel: string = '';
+    // example --> filling or shining
+    @Input() classStyle: string = HoverStyle.SIMPLE;
 
     @Input() text?: string;
 
@@ -35,11 +38,7 @@ export class FilledBtnComponent {
     @Input() isSpinning = false;
     // example --> active or not
     @Input() isActive?: boolean;
-
-    // example --> gray, delete
-    @Input() styleClass?: string = '';
-    // example --> filling or shining
-    @Input() hoverStyle = HoverStyle.RIPPLE;
     // example --> 100% or not
     @Input() width?: string;
+
 }

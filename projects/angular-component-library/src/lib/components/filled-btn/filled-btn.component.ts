@@ -2,29 +2,28 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { HoverStyle } from '../../model/hoverstyle.enum';
-
+import { HoverStyle } from '../../model/hover-style.enum';
 
 /**
- * Component to create a bordered button.
+ * Component to create a filled button.
  *
  * @howToUse
  * ```
- * <bordered-btn-component
+ * <filled-btn-component
  *  [ariaLabel]= "'scheduler.today' | translate "
  *  [text]="'scheduler.today' | translate "
  *  [faIcon] = "faCog">
- * </bordered-btn-component>
+ * </filled-btn-component>
  * ```
  */
 @Component({
-    selector: 'bordered-btn-component',
+    selector: 'filled-btn-component',
     standalone: true,
     imports: [CommonModule, FontAwesomeModule],
-    templateUrl: './bordered-btn.component.html',
-    styleUrls: ['./bordered-btn.component.scss'],
+    templateUrl: './filled-btn.component.html',
+    styleUrls: ['./filled-btn.component.scss'],
 })
-export class BorderedBtnComponent {
+export class FilledBtnComponent {
     @Input() ariaLabel: string = '';
 
     @Input() text?: string;

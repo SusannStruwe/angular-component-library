@@ -1,0 +1,17 @@
+<div class="input-container" [ngClass]="[classStyle ?? '']">
+    <span class="icon left">
+        <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+    </span>
+    <input
+        type="text"
+        [(ngModel)]="filter"
+        (click)="$event.stopPropagation()"
+        (ngModelChange)="filterChanged()"
+        class="form-control"
+        placeholder="{{ placeholderText }}" />
+    @if (filter) {
+        <span class="icon right" (click)="clearFilter($event)">
+            <fa-icon [icon]="faCloseCircle"></fa-icon>
+        </span>
+    }
+</div>

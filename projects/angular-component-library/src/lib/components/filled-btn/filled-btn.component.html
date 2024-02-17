@@ -1,10 +1,10 @@
 <button
-    [style.width]="width"
     [ngClass]="[hoverStyle, styleClass]"
+    [style.width]="width"
     [attr.aria-label]="ariaLabel"
     [disabled]="isDisabled"
     [class.active]="isActive">
-
+    
     @if (faIcon) {
         <fa-icon [icon]="faIcon" [spin]="isSpinning"></fa-icon>
     }

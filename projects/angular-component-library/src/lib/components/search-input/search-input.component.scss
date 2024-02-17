@@ -1,0 +1,85 @@
+@import '../../../../assets/styles';
+
+:host{
+    display: flex;
+    position: relative;
+}
+
+.input-container {
+    position: relative;
+    margin: 0em 1em;
+
+    input{
+        height: calc(var(--input-height) - 10px);
+        font-size: 0.9em;
+        padding-right: 35px;
+        padding-left: 40px;
+    }
+    
+    .icon {
+        cursor: pointer;
+        width: 20px;
+    
+        fa-icon {
+            color: #999;
+        }
+    }
+    
+    .right {
+        position: absolute;
+        right: 10px;
+        top: 0px;
+    }
+
+    .left {
+        position: absolute;
+        left: 10px;
+        top: 0px;
+    }
+}
+
+
+.full-width{
+    width: 100%;
+    margin: 0.5em;
+
+    input{
+        width: 100%;
+        font-size: 1.1em;
+        height: var(--input-height);
+    }
+
+    fa-icon{
+        font-size: 18px;
+    }
+
+    .right {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .left {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+}
+
+
+/************************************************
+Media query to add hover only on device which support hover
+*********************************************/
+
+@media (hover: hover) {
+    .input-container {
+        .right {
+            &:hover{
+                fa-icon{
+                    color: var(--accent-color);
+                }
+            }
+        }
+    }
+    
+}
