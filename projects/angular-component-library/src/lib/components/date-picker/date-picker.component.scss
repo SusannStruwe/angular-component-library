@@ -1,0 +1,93 @@
+@import '../../../../assets/styles';
+
+:host {
+    display: inline-block;
+}
+
+.datepicker {
+    position: relative;
+    display: inline-block;
+
+    input[type='date'] {
+        height: var(--btn-height);
+        line-height: var(--btn-height);
+        min-width: auto;
+        font-size: var(--font-size);
+        outline: none;
+        font-family: var(--font-family);
+        border: var(--border-width) solid var(--accent-color);
+        cursor: pointer;
+        color: var(--text-color);
+        background: transparent;
+        box-sizing: border-box;
+        border-radius: var(--border-radius);
+        padding: 2px 16px 2px 5px;
+        -webkit-padding-end: 5px;
+    }
+
+    .btn-overlay {
+        height: var(--btn-height);
+        line-height: var(--btn-height);
+        position: absolute;
+        top: 0;
+        right: 0px;
+        background: var(--fa-icon-color);
+        border: 1px solid var(--accent-color);
+        border-left: none;
+        padding: 2px 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+
+        fa-icon {
+            color: var(--accent-color);
+            font-size: 1.2em;
+            display: contents;
+        }
+    }
+
+    &:hover{
+        input[type="date"]{
+            border-color: var(--accent-color);
+        }
+
+        .btn-overlay{
+            border-color: var(--accent-color);
+            background-color: var(--accent-color);
+
+            fa-icon{
+                color: var(--fa-icon-color);
+            }
+        }       
+    }
+
+    input:focus,
+    input:focus + .btn-overlay {
+        border-color: var(--accent-color);
+    }
+}
+
+.not-emphrazed {
+    input[type='date'] {
+        border: var(--border-width) solid var(--not-emphrazed-color);
+        color: var(--not-emphrazed-color);
+        background: transparent;
+    }
+    .btn-overlay {
+        background: var(--not-emphrazed-color);
+        border: 1px solid var(--not-emphrazed-color);
+
+        &:hover {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+        }
+    }
+
+    input:focus,
+    input:focus + .btn-overlay {
+        border-color: var(--not-emphrazed-color);
+    }
+}

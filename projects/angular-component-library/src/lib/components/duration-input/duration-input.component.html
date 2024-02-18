@@ -1,0 +1,44 @@
+<div class="flex-row">
+    <div class="flex-row">
+        @if (mode !== modes.READ) {
+            <input
+                type="number"
+                class="form-control duration"
+                [(ngModel)]="days"
+                (change)="durationChanged()" />
+        }
+        @if (mode === modes.READ) {
+            <p>{{ days }}</p>
+        }
+        <span>{{ daysTranslationKey | translate }}</span>
+    </div>
+    <div class="flex-row">
+        @if (mode !== modes.READ) {
+            <input
+                type="number"
+                class="form-control duration"
+                [(ngModel)]="hours"
+                (change)="durationChanged()" />
+        }
+        @if (mode === modes.READ) {
+            <p>{{ hours }}</p>
+        }
+        <span>{{ hoursShortTranslationKey | translate }}</span>
+    </div>
+    <div class="flex-row">
+        @if (mode !== modes.READ) {
+            <input
+                type="number"
+                class="form-control duration"
+                [(ngModel)]="minutes"
+                (change)="durationChanged()" />
+        }
+        @if (mode === modes.READ) {
+            <p>{{ minutes }}</p>
+        }
+        <span>{{ minutesShortTranslationKey | translate }}</span>
+    </div>
+</div>
+@if (numSeconds === maxDuration) {
+    <span class="error">{{ maxDurationTranslationKey | translate }}</span>
+}

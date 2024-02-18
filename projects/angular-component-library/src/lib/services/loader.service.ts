@@ -1,0 +1,24 @@
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+
+/**
+ * Loader service to hide and show date loader overlay
+ */
+@Injectable({
+    providedIn: 'root',
+})
+export class LoaderService {
+    public loader$: Subject<any>;
+
+    constructor() {
+        this.loader$ = new Subject<any>();
+    }
+
+    showLoader() {
+        this.loader$.next(true);
+    }
+
+    hideLoader() {
+        this.loader$.next(false);
+    }
+}

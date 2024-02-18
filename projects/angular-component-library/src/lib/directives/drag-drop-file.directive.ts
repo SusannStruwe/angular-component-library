@@ -24,7 +24,7 @@ export class FileDragNDropDirective {
         evt.stopPropagation();
 
         const bodyStyles = window.getComputedStyle(document.body);
-        const primayColor = bodyStyles.getPropertyValue('--primary-color');
+        const primayColor = bodyStyles.getPropertyValue('--accent-color');
         this.borderColor = primayColor;
         this.borderStyle = '2px solid';
     }

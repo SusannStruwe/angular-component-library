@@ -19,8 +19,18 @@ export * from './lib/components/tag-btn/tag-btn.component';
 export * from './lib/components/tooltip/tooltip.component';
 export * from './lib/components/loader/loader.component';
 
+export * from './lib/components/date-picker/date-picker.component';
+export * from './lib/components/date-time-picker/date-time-picker.component';
+export * from './lib/components/dropzone/dropzone.component';
+export * from './lib/components/duration-input/duration-input.component';
+export * from './lib/components/modal/modal.component';
+export * from './lib/components/non-modal/non-modal.component';
+export * from './lib/components/sass-helper.component';
+
 export * from './lib/services/icon.service';
 export * from './lib/services/color.service';
+export * from './lib/services/modal.service';
+export * from './lib/services/loader.service';
 
 export * from './lib/model/hover-style.enum';
 export * from './lib/model/select-item.model';
@@ -29,6 +39,8 @@ export * from './lib/model/loader-style.enum';
 export * from './lib/model/edit-mode.enum';
 export * from './lib/model/loader-style.enum';
 export * from './lib/model/alert-type.enum';
+export * from './lib/model/modal-result.enum';
+export * from './lib/model/modal-type.enum';
 
 export * from './lib/directives/click-outside.directive';
 export * from './lib/directives/drag-drop-file.directive';
