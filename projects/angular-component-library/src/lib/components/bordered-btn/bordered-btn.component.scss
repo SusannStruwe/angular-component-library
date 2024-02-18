@@ -1,7 +1,7 @@
 @import '../../../../assets/styles';
 
 /********************
-CSS Variables -> var(--main-color), --accent-color, --fa-icon-color for changing theme
+CSS Variables -> var(--btn-color), --accent-color, --fa-icon-color for changing theme
 ********************/
 
 :host {
@@ -42,7 +42,7 @@ Shining
 .shining {
     background: transparent;
     box-sizing: border-box;
-    box-shadow: inset 0 0 0 2px var(--main-color);
+    box-shadow: inset 0 0 0 2px var(--btn-color);
     transition: color 0.25s;
 
     &::before,
@@ -147,12 +147,12 @@ Filling
 }
 
 .filling.gray {
-    border: var(--border-width) solid var(var(--main-color));
-    color: var(var(--main-color));
-    background-image: linear-gradient(var(var(--main-color)), var(var(--main-color)));
+    border: var(--border-width) solid var(var(--btn-color));
+    color: var(var(--btn-color));
+    background-image: linear-gradient(var(var(--btn-color)), var(var(--btn-color)));
 
     fa-icon {
-        color: var(var(--main-color));
+        color: var(var(--btn-color));
     }
 
     &:hover,

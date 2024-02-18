@@ -1,0 +1,51 @@
+@import '../../../../assets/styles';
+
+
+:host {
+    display: inline-block;
+}
+
+button {
+    position: relative;
+    height: calc(var(--btn-height) - 5px);
+    line-height: calc(var(--btn-height) - 5px);
+    padding: var(--btn-padding);
+    border: 0;
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size);
+    transition: background 400ms;
+    background: var(--accent-color);
+    color: var(--fa-icon-color);
+    cursor: pointer;
+    border-radius: 15px;
+    margin: 0.25em;
+
+    fa-icon {
+        color: var(--fa-icon-color);
+    }
+
+    span {
+        color: var(--fa-icon-color);
+        margin: 0px 5px;
+    }
+
+    &:active:not([disabled]) {
+        background-color: var(--accent-color-dark);
+    }
+}
+
+/************************************************
+Media query to add hover only on device which support hover
+*********************************************/
+
+@media (hover: hover) {
+    button {
+        &:hover:not([disabled]) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+        }
+
+        &:active:not([disabled]) {
+            background-color: var(--accent-color-dark);
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<div class="loader-container">
+    @if (loaderStyle && animation) {
+        <div [ngClass]="[loaderStyle, animation]">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    }
+    @if (loaderStyle && !animation) {
+        <div [ngClass]="[loaderStyle]">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    }
+    @if (text) {
+        <p>{{ text }}</p>
+    }
+</div>

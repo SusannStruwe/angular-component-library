@@ -1,0 +1,63 @@
+@import '../../../../assets/styles';
+
+
+:host {
+    display: inline-block;
+}
+
+.badge {
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    background-color: var(--not-emphrazed-color);
+
+    p {
+        font-weight: var(--font-weight-semibold);
+        color: var(--fa-icon-color);
+        margin: 0px;
+        padding: 0px;
+        line-height: 10px;
+    }
+
+    &.success {
+        background-color: var(--job-successful-color);
+    }
+
+    &.failed {
+        background-color: var(--job-failed-color);
+    }
+
+    &.pos-absolute {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        line-height: 9px;
+        background-color: var(--job-failed-color);
+        color: var(--fa-icon-color);
+        font-weight: var(--font-weight-semibold);
+        padding: 2px;
+        z-index: 1500;
+
+        &.xs {
+            top: 1px;
+            padding: 0px;
+        }
+
+        &.event{
+            top: -4px;
+            right: -1px;
+            padding: 0px;
+        }
+      }
+}
+
+.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+
+
+  

@@ -1,0 +1,9 @@
+<button 
+    [attr.aria-label]="text"
+    [style.background]="backgroundColor">
+    
+    @if (text) {
+        <span>{{ text }}</span>
+    }
+    <fa-icon [icon]="faClose" (click)="removeTag()"></fa-icon>
+</button>

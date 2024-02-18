@@ -1,0 +1,101 @@
+@import '../../../../assets/styles';
+
+:host {
+    display: inline-block;
+}
+
+button {
+    position: relative;
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    padding: var(--btn-padding);
+    border-left: var(--border-width) solid var(--accent-color);
+    border-top: var(--border-width) solid var(--accent-color);
+    border-bottom: var(--border-width) solid var(--accent-color);
+    border-right: 0px;
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size);
+    background: transparent;
+    color: var(--accent-color);
+    margin-right: -var(--border-width);
+    transition: 0.25s;
+    cursor: pointer;
+
+    fa-icon {
+        color: var(--accent-color);
+    }
+
+    span {
+        margin: 0px 5px;
+    }
+
+    &:first-of-type {
+        border-top-left-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
+    }
+
+    &:last-of-type {
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+        border-right: var(--border-width) solid var(--accent-color);
+        margin-right: 0;
+    }
+
+    &.active:not([disabled]) {
+        background-color: var(--accent-color);
+        color: var(--fa-icon-color);
+
+        fa-icon {
+            color: var(--fa-icon-color);
+        }
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.not-emphrazed {
+    border: var(--border-width) solid var(--not-emphrazed-color);
+    background: transparent;
+    color: var(--not-emphrazed-color);
+
+    &:hover {
+        background-color: var(--not-emphrazed-color-dark);
+    }
+
+    &.active {
+        background-color: var(--not-emphrazed-color);
+        color: var(--fa-icon-color);
+
+        fa-icon {
+            color: var(--fa-icon-color);
+        }
+    }
+}
+
+/************************************************
+Media query to add hover only on device which support hover
+*********************************************/
+
+@media (hover: hover) {
+    button {
+        &:hover:not([disabled]) {
+            background-color: var(--accent-color);
+            color: var(--fa-icon-color);
+
+            fa-icon {
+                color: var(--fa-icon-color);
+            }
+        }
+
+        &:hover:not([disabled]) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+        }
+
+        &:active:not([disabled]) {
+            background-color: var(--accent-color-dark);
+        }
+    }
+}
