@@ -39,6 +39,6 @@ export class TagBtnComponent {
      * Remove tag
      */
     removeTag() {
-        this.removeTagSelected.emit(this.text);
+        this.removeTagSelected.emit(this.label);
     }
 }

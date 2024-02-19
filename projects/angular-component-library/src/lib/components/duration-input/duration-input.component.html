@@ -10,7 +10,7 @@
         @if (mode === modes.READ) {
             <p>{{ days }}</p>
         }
-        <span>{{ daysTranslationKey | translate }}</span>
+        <span>{{ daysLabel }}</span>
     </div>
     <div class="flex-row">
         @if (mode !== modes.READ) {
@@ -23,7 +23,7 @@
         @if (mode === modes.READ) {
             <p>{{ hours }}</p>
         }
-        <span>{{ hoursShortTranslationKey | translate }}</span>
+        <span>{{ hoursShortLabel }}</span>
     </div>
     <div class="flex-row">
         @if (mode !== modes.READ) {
@@ -36,9 +36,9 @@
         @if (mode === modes.READ) {
             <p>{{ minutes }}</p>
         }
-        <span>{{ minutesShortTranslationKey | translate }}</span>
+        <span>{{ minutesShortTLabel }}</span>
     </div>
 </div>
 @if (numSeconds === maxDuration) {
-    <span class="error">{{ maxDurationTranslationKey | translate }}</span>
+    <span class="error">{{ maxDurationLabel}}</span>
 }

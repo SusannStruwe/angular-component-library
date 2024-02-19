@@ -41,6 +41,8 @@ export * from './lib/model/loader-style.enum';
 export * from './lib/model/alert-type.enum';
 export * from './lib/model/modal-result.enum';
 export * from './lib/model/modal-type.enum';
+export * from './lib/model/datetime-format.enum';
+export * from './lib/model/default-column-key.enum';
 
 export * from './lib/directives/click-outside.directive';
 export * from './lib/directives/drag-drop-file.directive';

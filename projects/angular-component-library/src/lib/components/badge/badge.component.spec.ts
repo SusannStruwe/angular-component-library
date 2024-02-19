@@ -47,11 +47,12 @@ describe('BadgeComponent', () => {
 
         const badgeEl = fixture.debugElement.query(By.css('.badge'));
         const styles = window.getComputedStyle(badgeEl.nativeElement);
+        console.log("LOG badge:", fixture.nativeElement);
 
         expect(styles.backgroundColor).toEqual('rgb(226, 118, 29)');
     });
 
-    it('should change background color to rgb(226, 118, 29) on class style failed', () => {
+    it('should change class style to pos-absolute', () => {
         component.classStyle = 'pos-absolute';
         fixture.detectChanges();
 
@@ -66,7 +67,7 @@ describe('BadgeComponent', () => {
         expect(styles.padding).toEqual('2px');
     });
 
-    it('should change background color to rgb(226, 118, 29) on class style failed', () => {
+    it('should change class style to pos-absolute xs', () => {
         component.classStyle = 'pos-absolute xs';
         fixture.detectChanges();
 

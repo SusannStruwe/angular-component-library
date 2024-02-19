@@ -24,7 +24,7 @@
     <div>
         @if (date) {
             <span
-                >{{ date | date: 'dd.MM.yyyy HH:mm:ss' }} {{ clockTranslationKey| translate }}</span
+                >{{ date | date: 'dd.MM.yyyy HH:mm:ss' }} {{ clockLabel }}</span
             >
         }
         @if (!date) {

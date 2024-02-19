@@ -28,13 +28,13 @@ describe('ToggleBtnComponent', () => {
         expect(component).toBeTruthy();
     });
 
-    it('should have toggle btn text', () => {
-        const toggleBtnText = fixture.debugElement.query(By.css('span'));
+    it('should have toggle btn label', () => {
+        const toggleBtnText = fixture.debugElement.query(By.css('p'));
         expect(toggleBtnText).toBeTruthy();
     });
 
-    it('toggle btn text should be', () => {
-        const toggleBtnText = fixture.debugElement.query(By.css('span'));
+    it('toggle btn label should be', () => {
+        const toggleBtnText = fixture.debugElement.query(By.css('p'));
         const content = toggleBtnText.nativeElement.textContent;
         expect(content).toBe(text);
     });

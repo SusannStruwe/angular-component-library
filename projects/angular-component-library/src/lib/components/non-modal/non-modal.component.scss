@@ -26,7 +26,6 @@
         width: 60em;
         min-height: 20em;
         padding: 0 0 1.25em;
-        background: #fff;
         color: var(--text-color);
         font-family: inherit;
         font-size: 1rem;
@@ -35,7 +34,8 @@
         pointer-events: auto;
         overflow: hidden;
         margin: 0.5em;
-
+        background-color: var(--bg-color);
+        
         &.lg {
             height: 100%;
             width: 100%;
@@ -48,17 +48,17 @@
 
         &.m {
             position: absolute;
-            top: 90px;
+            top: 45px;
             right: 0px;
             bottom: 0px;
             min-height: 21em;
             height: auto;
-            width: 30em;
+            width: 50em;
         }
 
         &.s {
             position: absolute;
-            top: 90px;
+            top: 45px;
             right: 0px;
             min-height: 35em;
             width: 30em;
@@ -79,7 +79,7 @@
                 padding: 0.5em 2em 0.5em 1em;
                 color: inherit;
                 font-size: 1.2em;
-                font-weight: var(--font-weight-bold);
+                font-weight: var(--font-weight-semibold);
                 text-align: left;
                 text-transform: none;
 
@@ -140,7 +140,7 @@
                 text-align: left;
                 margin: 0.5em 0em;
                 font-size: 1em;
-                font-weight: var(--font-weight-semibold);
+                font-weight: var(--font-weight-medium);
                 padding: 0.25em 0em;
                 color: var(--not-emphrazed-color-dark);
                 text-transform: uppercase;
@@ -150,10 +150,18 @@
                 display: grid;
                 grid-template-columns: 2fr 3fr;
                 grid-template-rows: fit-content(1.5em);
-                grid-row-gap: 10px;
+                grid-row-gap: 15px;
                 text-align: left;
                 margin-left: 0.25em;
                 grid-column-gap: 10px;
+            }
+
+            .grid-2-4 {
+                @extend .grid;
+                margin-top: 1em;
+                grid-template-rows: max-content;
+                grid-template-columns: 2fr 4fr;
+                grid-column-gap: 0px;
             }
 
             .text-ellipsis{
@@ -163,8 +171,15 @@
             }
 
             label {
-                font-weight: var(--font-weight-bold);
+                font-weight: var(--font-weight-semibold);
                 height: 22px;
+            }
+
+            .auto-label {
+                @extend label;
+                height: auto;
+                display: grid;
+                align-items: center;
             }
 
             .margin-bottom {

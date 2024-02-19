@@ -2,16 +2,19 @@
 
 
 :host {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    height: var(--badge-height);
+    box-sizing: border-box;
 }
 
 .badge {
-    padding: 0.5em 1em;
+    padding: 0.7em 1em;
     border-radius: 20px;
     background-color: var(--not-emphrazed-color);
 
     p {
-        font-weight: var(--font-weight-semibold);
+        font-weight: var(--font-weight-medium);
         color: var(--fa-icon-color);
         margin: 0px;
         padding: 0px;
@@ -36,7 +39,7 @@
         line-height: 9px;
         background-color: var(--job-failed-color);
         color: var(--fa-icon-color);
-        font-weight: var(--font-weight-semibold);
+        font-weight: var(--font-weight-medium);
         padding: 2px;
         z-index: 1500;
 

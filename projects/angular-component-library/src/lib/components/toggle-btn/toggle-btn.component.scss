@@ -79,7 +79,7 @@ span {
         color: var(--fa-icon-color);
         font-size: 1.1em;
         line-height: 0.7em;
-        font-weight: var(--font-weight-semibold);
+        font-weight: var(--font-weight-medium);
         text-align: center;
         background-color: var(--accent-color);
         border-radius: 50%;
@@ -92,7 +92,7 @@ span {
         padding: 0.4em;
         font-size: 1.1em;
         line-height: 0.9em;
-        font-weight: var(--font-weight-semibold);
+        font-weight: var(--font-weight-medium);
         left: calc($toggle-btn-width - $toggle-btn-height + 3px);
         background-color: var(--fa-icon-color);
     }

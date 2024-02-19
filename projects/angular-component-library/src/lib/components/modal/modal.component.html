@@ -19,7 +19,7 @@
                     <bordered-btn-component
                         [ariaLabel]="'Close'"
                         (click)="closeModal()"
-                        [text]="cancelBtnText">
+                        [label]="cancelBtnText">
                     </bordered-btn-component>
                 }
                 @if (confirmBtn) {
@@ -29,7 +29,7 @@
                         [isDisabled]="confirmDisabled"
                         [isSpinning]="showConfirmBtnLoader"
                         (click)="confirmModal()"
-                        [text]="confirmBtnText">
+                        [label]="confirmBtnText">
                     </filled-btn-component>
                 }
             </div>
@@ -67,7 +67,7 @@
                     [ariaLabel]="'Close'"
                     [isDisabled]="confirmDisabled"
                     (click)="confirmModal()"
-                    [text]="'Ok'">
+                    [label]="'Ok'">
                 </filled-btn-component>
             </div>
         </div>

@@ -40,9 +40,9 @@ import { IconService } from '../../services/icon.service';
 })
 export class DateTimePickerComponent implements OnInit {
     @Input() date: string | null = null;
-    @Input() clockTranslationKey: string = "";
-    @Input() withInput?: boolean = true; // shows only calender btn
     @Input() mode: EditMode = EditMode.WRITE;
+    @Input() clockLabel?: string = "";
+    @Input() withInput?: boolean = true; // shows only calender btn
     @Input() height?: number;
     @Input() minWidth?: number;
 
@@ -51,7 +51,9 @@ export class DateTimePickerComponent implements OnInit {
     @ViewChild('dateTimePicker') dateTimePickerRef?: ElementRef;
 
     faCalender: IconDefinition;
+
     showOverlayBtn = true;
+
     randomId: string = Math.floor(Math.random() * 16777215).toString(16);
 
     modes: typeof EditMode = EditMode;

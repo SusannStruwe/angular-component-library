@@ -1,7 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AlertComponent, AlertType } from './alert.component';
+import { AlertComponent } from './alert.component';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
 import { By } from '@angular/platform-browser';
+import { AlertType } from '../../model/alert-type.enum';
 
 describe('AlertComponent', () => {
     let component: AlertComponent;

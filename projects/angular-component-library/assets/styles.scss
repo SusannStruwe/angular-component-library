@@ -77,8 +77,9 @@ body {
 
     --font-weight-light: 300;
     --font-weight-normal: 400;
-    --font-weight-semibold: 500;
-    --font-weight-bold: 600;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
     --font-size: 1em;
     --ic-font-size: 1.2em;
     --font-family: 'Segoe UI', sans-serif;
@@ -105,6 +106,7 @@ body {
     --btn-small-height: 35px;
     --btn-small-padding: 0px 10px;
     --max-width-select: 500px;
+    --badge-height: 30px;
 }
 
 body.dark-theme {
@@ -188,7 +190,7 @@ h3 {
 }
 
 h4 {
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
 }
 
 p {

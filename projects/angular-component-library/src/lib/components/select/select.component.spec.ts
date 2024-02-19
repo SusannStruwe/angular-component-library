@@ -3,7 +3,8 @@ import { SelectComponent } from './select.component';
 import { By } from '@angular/platform-browser';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
 import { TranslateModule } from '@ngx-translate/core';
-import { SelectItem } from './select-item.model';
+import { SelectItem } from '../../model/select-item.model';
+
 
 describe('SelectComponent', () => {
     let component: SelectComponent;
@@ -64,6 +65,7 @@ describe('SelectComponent', () => {
     it('check background color is transparent if class is navbar', () => {
         const button = fixture.debugElement.query(By.css('button'));
         const styles = window.getComputedStyle(button.nativeElement);
+        console.log("LOG select:" + styles.backgroundColor);
 
         if (button.nativeElement.classList.contains('navbar')) {
             expect(styles.backgroundColor).toEqual('rgba(0, 0, 0, 0)'); // transparent

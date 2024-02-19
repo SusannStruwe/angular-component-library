@@ -31,8 +31,8 @@ export class DropzoneComponent implements OnInit {
     @Input() allowedExtension: string[] = ['json'];
     @Input() fileArrayLength = 1;
     @Input() files: File[] = [];
-    @Input() choseFileTranslationKey: string = "";
-    @Input() dropItTranslationKey: string = "";
+    @Input() choseFileLabel: string = "";
+    @Input() dropItLabel: string = "";
 
     @Output() filesChanged = new EventEmitter<File[]>(); // When true, deliver events asynchronously.
 

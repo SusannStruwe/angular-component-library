@@ -30,10 +30,10 @@ export class DurationInputComponent implements OnChanges {
     @Input() seconds: string | number = 0;
     @Input() mode: EditMode = EditMode.WRITE;
     @Input() maxDuration?: number;
-    @Input() daysTranslationKey: string = "";
-    @Input() hoursShortTranslationKey: string = "";
-    @Input() minutesShortTranslationKey: string = "";
-    @Input() maxDurationTranslationKey: string = "";
+    @Input() daysLabel: string = "";
+    @Input() hoursShortLabel: string = "";
+    @Input() minutesShortTLabel: string = "";
+    @Input() maxDurationLabel: string = "";
     
 
     @Output() secondsChange = new EventEmitter<number>();

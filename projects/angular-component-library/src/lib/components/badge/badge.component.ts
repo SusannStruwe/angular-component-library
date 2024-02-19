@@ -19,7 +19,7 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./badge.component.scss'],
 })
 export class BadgeComponent {
-    @Input() text: string | number = '';
+    @Input() label: string | number = '';
     @Input() classStyle?: string;
     @Input() isDisabled? = false;
 }
