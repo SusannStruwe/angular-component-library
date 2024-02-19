@@ -19,7 +19,7 @@ describe('TagBtnComponent', () => {
         fixture = TestBed.createComponent(TagBtnComponent);
 
         component = fixture.componentInstance;
-        component.text = text;
+        component.label = text;
 
         fixture.detectChanges();
     });

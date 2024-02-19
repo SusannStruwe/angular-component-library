@@ -28,5 +28,5 @@ export class LoaderComponent {
     //example -> linear, ease
     @Input() animation?: string;
 
-    @Input() text?: string;
+    @Input() label?: string;
 }

@@ -26,7 +26,7 @@ import { HoverStyle } from '../../model/hover-style.enum';
 export class FilledBtnComponent {
     @Input() ariaLabel: string = '';
 
-    @Input() text?: string;
+    @Input() label?: string;
 
     @Input() faIcon?: IconDefinition;
 

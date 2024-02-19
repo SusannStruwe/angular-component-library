@@ -24,8 +24,6 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 export class CircleBtnComponent {
     @Input() ariaLabel: string = '';
 
-    @Input() text?: string;
-
     @Input() faIcon?: IconDefinition;
 
     @Input() isDisabled?: boolean;

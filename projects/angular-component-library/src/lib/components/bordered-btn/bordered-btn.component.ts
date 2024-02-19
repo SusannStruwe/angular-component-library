@@ -29,7 +29,7 @@ export class BorderedBtnComponent{
     // example --> filling or shining
     @Input() classStyle: string = HoverStyle.SIMPLE;
 
-    @Input() text?: string;
+    @Input() label?: string;
 
     @Input() faIcon?: IconDefinition;
 

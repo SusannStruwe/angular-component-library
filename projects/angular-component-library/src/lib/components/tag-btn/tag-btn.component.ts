@@ -22,7 +22,9 @@ import { IconService } from '../../services/icon.service';
     styleUrls: ['./tag-btn.component.scss']
 })
 export class TagBtnComponent {
-    @Input() text?: string;
+
+    @Input() label?: string;
+    
     @Input() backgroundColor?: string;
 
     @Output() removeTagSelected = new EventEmitter<string>();

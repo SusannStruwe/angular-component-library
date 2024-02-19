@@ -27,7 +27,7 @@ describe('BorderedBtnComponent', () => {
     });
 
     it('should show button text', () => {
-        component.text = 'Start';
+        component.label = 'Start';
         fixture.detectChanges();
 
         const btnText = fixture.debugElement.query(By.css('span')).nativeElement;
