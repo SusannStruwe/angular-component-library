@@ -1,0 +1,33 @@
+@import '../../../../assets/styles';
+:host {
+    display: inline-block;
+    position: relative;
+}
+
+.menu {
+    padding: 5px;
+    position: absolute;
+    top: calc(var(--btn-height) + 5px);
+    min-width: 150px;
+    width: max-content;
+    height: auto;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    background: var(--bg-color);
+    z-index: var(--z-index-4);
+    box-sizing: border-box;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.2s ease-in-out;
+
+    &.left {
+        left: 5px;
+    }
+
+    &.right {
+        right: 5px;
+    }
+
+    &.show {
+        transform: scaleY(1);
+    }
+}

@@ -1,0 +1,43 @@
+<div class="multi-select" (clickOutside)="handleClickOutside()">
+    <button #btn (click)="toggleFilter()" class="filter-btn">
+        @if (faIcon) {
+            <fa-icon [icon]="faIcon"></fa-icon>
+        }
+        @if (selectedItems.length !== 0) {
+            <p>{{ selectedItems.length }}</p>
+        }
+    </button>
+    <div
+        #menu
+        class="menu popup-shadow"
+        [class.show]="show"
+        [class.hide]="!show"
+        [ngClass]="alignmentLeft() ? 'left' : 'right'">
+        @if (withFilter) {
+            <search-input-component
+                [classStyle]="'full-width'"
+                [placeholderText]="filterPlaceholder"
+                [(filter)]="filter"
+                (filterChange)="filterAndSort()">
+            </search-input-component>
+        }
+        <ul class="selected-items">
+            @for (selectedItem of selectedItems; track selectedItem) {
+                <li (click)="removeElement(selectedItem)">
+                    <input type="checkbox" [checked]="isInFilterArray(selectedItem)" />
+                    <span class="checkmark"></span>
+                    <span class="text">{{ selectedItem }}</span>
+                </li>
+            }
+        </ul>
+        <ul [style.max-height.px]="300">
+            @for (item of items; track item) {
+                <li (click)="selectElement(item)">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    <span class="text">{{ item }}</span>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

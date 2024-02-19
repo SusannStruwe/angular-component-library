@@ -1,8 +1,4 @@
-@import 'src/content/scss/baseVariables';
-
-/*
-CSS Variables -> --text-color, --bg-color, --primary-color, --fa-icon-color for changing theme
-*/
+@import '../../../../assets/styles';
 
 :host {
     display: inline-block;
@@ -13,65 +9,76 @@ CSS Variables -> --text-color, --bg-color, --primary-color, --fa-icon-color for 
     display: inline-block;
 
     input[type='date'] {
-        height: $btn-height;
-        line-height: $btn-height;
+        height: var(--btn-height);
+        line-height: var(--btn-height);
         min-width: auto;
-        font-size: $font-size;
+        font-size: var(--font-size);
         outline: none;
-        font-family: $font-family;
-        border: $border-width solid var(--primary-color);
+        font-family: var(--font-family);
+        border: var(--border-width) solid var(--accent-color);
         cursor: pointer;
-        color: var(--primary-color);
+        color: var(--accent-color);
         background: transparent;
         box-sizing: border-box;
-        border-radius: $border-radius;
+        border-radius: var(--border-radius);
         padding: 2px 15px 2px 15px;
         -webkit-padding-end: 5px;
     }
 
     .btn-overlay {
-        height: $btn-height;
-        line-height: $btn-height;
+        height: var(--btn-height);
+        line-height: var(--btn-height);
         position: absolute;
         top: 0;
         right: -5px;
-        background: var(--content-bg-color);
-        border: 1px solid var(--primary-color);
+        background: var(--accent-color);
+        border: 1px solid var(--accent-color);
         padding: 2px 10px;
         cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
-        border-top-right-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
 
         fa-icon {
-            color: var(--primary-color);
+            color: var(--fa-icon-color);
             font-size: 1.3em;
             display: contents;
         }
+    }
 
-        &:hover {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    &:hover{
+        input[type="date"]{
+            border-color: var(--accent-color);
         }
+
+        .btn-overlay{
+            border-color: var(--accent-color);
+            background-color: var(--accent-color);
+
+            fa-icon{
+                color: var(--fa-icon-color);
+            }
+        }       
     }
 
     input:focus,
     input:focus + .btn-overlay {
-        border-color: var(--primary-color);
+        border-color: var(--accent-color);
     }
 }
 
 .not-emphrazed {
     input[type='date'] {
-        border: $border-width solid $not-emphrazed-color;
-        color: $not-emphrazed-color;
+        border: var(--border-width) solid var(--not-emphrazed-color);
+        color: var(--not-emphrazed-color);
         background: transparent;
     }
     .btn-overlay {
-        background: $not-emphrazed-color;
-        border: 1px solid $not-emphrazed-color;
+        background: var(--not-emphrazed-color);
+        border: 1px solid var(--not-emphrazed-color);
 
         &:hover {
             background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
@@ -80,12 +87,12 @@ CSS Variables -> --text-color, --bg-color, --primary-color, --fa-icon-color for 
 
     input:focus,
     input:focus + .btn-overlay {
-        border-color: $not-emphrazed-color;
+        border-color: var(--not-emphrazed-color);
     }
 }
 
 p {
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-weight: 600;
     display: inline;
     margin: 0.5em;

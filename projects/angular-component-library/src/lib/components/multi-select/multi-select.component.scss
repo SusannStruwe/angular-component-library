@@ -1,0 +1,399 @@
+@import '../../../../assets/styles';
+
+$max-width: 600px;
+
+:host {
+    display: inline-block;
+    position: relative;
+}
+
+.flex {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: flex-end;
+}
+
+.filter-btn {
+    width: var(--btn-height);
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    p {
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: var(--font-weight-semibold);
+        margin-left: 0.25em;
+        color: var(--fa-icon-color);
+    }
+
+    fa-icon {
+        color: var(--fa-icon-color);
+        margin-right: 2px;
+    }
+}
+
+button {
+    position: relative;
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    border: 0;
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size);
+    padding: var(--btn-padding);
+    background: transparent;
+    border: var(--border-width) solid var(--accent-color);
+    border-radius: var(--border-radius);
+    z-index: 10;
+    width: 100%;
+    max-width: $max-width;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    fa-icon {
+        color: var(--accent-color);
+    }
+
+    span {
+        height: var(--btn-height);
+        line-height: var(--btn-height);
+        text-align: left;
+        display: inline-block;
+        -webkit-line-clamp: 1;
+        color: var(--accent-color);
+        display: -webkit-box;
+        line-height: 1.4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        box-sizing: border-box;
+    }
+
+    span:last-of-type {
+        padding: 10px 15px;
+        background: var(--accent-color);
+        border-left: 1px solid var(--bg-color);
+
+        fa-icon {
+            color: var(--fa-icon-color);
+        }
+    }
+
+    &:hover,
+    &.active {
+        background-color: var(--accent-color);
+        span {
+            color: var(--bg-color);
+        }
+        fa-icon {
+            color: var(--fa-icon-color);
+        }
+    }
+
+    &:active:not([disabled]) {
+        background-color: var(--accent-color-dark);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.menu {
+    position: absolute;
+    top: calc(var(--btn-height) + 4px);
+    min-width: 150px;
+    width: max-content;
+    max-width: $max-width;
+    height: auto;
+    border-radius: 0;
+    background: var(--bg-color);
+    z-index: var(--z-index-4);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    &.left {
+        left: 0px;
+    }
+
+    &.right {
+        right: 0px;
+    }
+
+    &.show {
+        transform-origin: top;
+        transform: scaleY(1);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    &.hide {
+        transform-origin: top;
+        transition: transform 0.2s ease-in-out;
+        transform: scaleY(0);
+    }
+
+    input[type='text'] {
+        height: var(--input-height);
+        border: 1px solid var(--border-color);
+        border-radius: 0;
+        outline: none;
+        cursor: pointer;
+        font-size: var(--font-size);
+        background: transparent;
+        margin: 5px;
+        width: -moz-available; /* WebKit-based browsers will ignore this. */
+        width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+        width: strech;
+
+        display: flex;
+        flex-direction: column;
+
+        &:focus {
+            border-color: var(--accent-color);
+        }
+    }
+
+    .selected-items {
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 1.5em;
+        overflow: hidden;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        overflow-y: auto;
+        border-top: 1px solid var(--border-color);
+
+        li {
+            height: var(--btn-height);
+            display: block;
+            position: relative;
+            cursor: pointer;
+            font-size: var(--font-size);
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            padding: 0.5em 0.5em;
+            color: var(--text-color);
+            border-bottom: 1px solid rgb(var(--border-color-rgb), 0.2);
+            text-align: left;
+            box-sizing: border-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            input[type='checkbox'] {
+                margin-right: 10px;
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+
+            /* Create a custom checkbox */
+            .checkmark {
+                position: absolute;
+                margin-right: 10px;
+                height: 25px;
+                width: 25px;
+                background-color: transparent;
+                border: 1px solid var(--accent-color);
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    display: none;
+                    left: 9px;
+                    top: 5px;
+                    width: 5px;
+                    height: 10px;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+
+            .text {
+                padding-left: 35px;
+                padding-right: 10px;
+                line-height: calc(var(--btn-height) - 10px);
+            }
+
+            &:hover input ~ .checkmark {
+                background-color: var(--accent-color-light);
+            }
+
+            & input:checked ~ .checkmark {
+                background-color: var(--accent-color);
+            }
+
+            & input:checked ~ .checkmark:after {
+                display: block;
+            }
+
+            &:hover {
+                background-color: var(--accent-color-light);
+                color: var(--accent-color);
+            }
+        }
+    }
+}
+
+.not-emphrazed {
+    color: var(--fa-icon-color);
+    background: transparent;
+    border: var(--border-width) solid var(--not-emphrazed-color);
+    color: var(--not-emphrazed-color);
+
+    span {
+        color: var(--not-emphrazed-color);
+    }
+
+    span:last-of-type {
+        background: var(--not-emphrazed-color);
+        border-left: 1px solid var(--bg-color);
+
+        fa-icon {
+            color: var(--fa-icon-color);
+        }
+    }
+
+    &:active {
+        background-color: var(--not-emphrazed-color);
+        span {
+            color: var(--bg-color);
+        }
+    }
+}
+
+.navbar {
+    background: transparent;
+    border: none;
+    height: var(--sub-navbar-height);
+
+    span,
+    fa-icon {
+        color: var(--fa-icon-color);
+    }
+
+    span:last-of-type {
+        background: transparent;
+        border-left: none;
+        padding-left: 0px;
+
+        fa-icon {
+            color: var(--fa-icon-color);
+        }
+    }
+
+    &:active {
+        background-color: black;
+
+        fa-icon {
+            color: var(--accent-color);
+        }
+
+        button {
+            span:last-of-type {
+                fa-icon {
+                    color: var(--accent-color);
+                }
+            }
+            span,
+            fa-icon {
+                color: var(--accent-color);
+            }
+        }
+    }
+}
+
+/***************************************************************
+Media query to hide hover effects for devices 
+that do not support them, like touch displays
+**************************************************************/
+@media (hover: hover) {
+    .navbar {
+        &:hover {
+            background-color: black;
+            fa-icon {
+                color: var(--accent-color);
+            }
+            button {
+                span:last-of-type {
+                    fa-icon {
+                        color: var(--accent-color);
+                    }
+                }
+                span,
+                fa-icon {
+                    color: var(--accent-color);
+                }
+            }
+        }
+
+        &:active:not([disabled]) {
+            fa-icon {
+                color: var(--accent-color-dark);
+            }
+            button {
+                span:last-of-type {
+                    fa-icon {
+                        color: var(--accent-color-dark);
+                    }
+                }
+                span,
+                fa-icon {
+                    color: var(--accent-color-dark);
+                }
+            }
+        }
+    }
+
+    .not-emphrazed {
+        &:hover {
+            background-color: var(--not-emphrazed-color);
+            span {
+                color: var(--bg-color);
+            }
+        }
+
+        &:active {
+            background-color: var(--not-emphrazed-color);
+            span {
+                color: var(--bg-color);
+            }
+        }
+    }
+
+    .header {
+        &:hover,
+        &:active {
+            .filter-btn {
+                fa-icon {
+                    color: var(--accent-color);
+                }
+            }
+        }
+    }
+}

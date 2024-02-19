@@ -18,13 +18,18 @@ export * from './lib/components/segmented-btn/segmented-btn.component';
 export * from './lib/components/tag-btn/tag-btn.component';
 export * from './lib/components/tooltip/tooltip.component';
 export * from './lib/components/loader/loader.component';
-
 export * from './lib/components/date-picker/date-picker.component';
+export * from './lib/components/date-range-picker/date-range-picker.component';
 export * from './lib/components/date-time-picker/date-time-picker.component';
 export * from './lib/components/dropzone/dropzone.component';
 export * from './lib/components/duration-input/duration-input.component';
 export * from './lib/components/modal/modal.component';
 export * from './lib/components/non-modal/non-modal.component';
+export * from './lib/components/collapsible/collapsible.component';
+export * from './lib/components/custom-select/custom-select.component';
+export * from './lib/components/multi-select/multi-select.component';
+export * from './lib/components/navbar-btn/navbar-btn.component';
+
 export * from './lib/components/sass-helper.component';
 
 export * from './lib/services/icon.service';
@@ -43,6 +48,8 @@ export * from './lib/model/modal-result.enum';
 export * from './lib/model/modal-type.enum';
 export * from './lib/model/datetime-format.enum';
 export * from './lib/model/default-column-key.enum';
+export * from './lib/model/multi-select.model';
+export * from './lib/model/select-item.model';
 
 export * from './lib/directives/click-outside.directive';
 export * from './lib/directives/drag-drop-file.directive';

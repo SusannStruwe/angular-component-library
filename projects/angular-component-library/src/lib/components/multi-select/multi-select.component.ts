@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import {
     ChangeDetectionStrategy,
+    ChangeDetectorRef,
     Component,
     ElementRef,
     EventEmitter,
@@ -13,79 +14,66 @@ import {
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { ClickOutsideDirective } from '../../directives/click-outside.directive';
-import { SelectItem } from '../../model/select-item.model';
-import { cloneDeep } from 'lodash';
 import { TranslateModule } from '@ngx-translate/core';
-import { PlanStateIconComponent } from '../plan-state-icon/plan-state-icon.component';
 import { SearchInputComponent } from '../search-input/search-input.component';
-
+import { ClickOutsideDirective } from '../../directives/click-outside.directive';
 
 /**
  * Component to create and show  select
  *
  * @howToUse
  * ```
- * <select-component
- *    [items]="selectItems"
- *    [faIcon]="faCaretDown"
- *    [label]="'Plan: '"
- *    [withFilter]="false"
- *    [selectedItem]="selectedItem.text"
- *    (itemSelected)="selectItemProduction($event)">
- * </select-component>
+ * <multi-select-component
+ *   [items]="items"
+ *   [faIcon]="faFilter"
+ *   [withFilter]="false"
+ * ></multi-select-component>
  * ```
  */
 @Component({
-    selector: 'select-component',
+    selector: 'multi-select-component',
     standalone: true,
     imports: [
         CommonModule,
         FontAwesomeModule,
         FormsModule,
         ClickOutsideDirective,
-        PlanStateIconComponent,
-        SearchInputComponent,
         TranslateModule,
+        SearchInputComponent,
     ],
-    templateUrl: './select.component.html',
-    styleUrls: ['./select.component.scss'],
+    templateUrl: './multi-select.component.html',
+    styleUrls: ['./multi-select.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SelectComponent implements OnInit, OnChanges {
-    @Input() items: SelectItem[] = [];
-    @Input() selectedItem?: SelectItem;
-    @Input() text = '';
+export class MultiSelectComponent implements OnChanges {
+    @Input() items: string[] = [];
+    @Input() label = '';
     @Input() faIcon?: IconDefinition;
-    @Input() faIconBefore?: IconDefinition;
     @Input() withFilter?: boolean;
     @Input() filterPlaceholder?: string;
     @Input() classStyle?: string;
-    @Input() withBlankOption = false;
-    @Input() withDeselect = true;
 
-    @Output() itemSelected = new EventEmitter<SelectItem>();
+    @Output() itemsSelected = new EventEmitter<string[]>();
+
+    itemsBefore: string[] = [];
+    selectedItems: string[] = [];
+    filter = '';
+    show = false;
 
     @ViewChild('filterInput') filterInput?: ElementRef<HTMLDivElement>;
     @ViewChild('btn') btn?: ElementRef<HTMLDivElement>;
     @ViewChild('menu') menu?: ElementRef<HTMLDivElement>;
 
-    itemsBefore: SelectItem[] = [];
-    filter = '';
-    show = false;
-
-    ngOnInit(): void {
-        this.itemsBefore = cloneDeep(this.items);
-    }
+    constructor(private changedDetectorRef: ChangeDetectorRef) {}
 
     ngOnChanges() {
-        this.itemsBefore = cloneDeep(this.items);
+        this.itemsBefore = JSON.parse(JSON.stringify(this.items));
     }
 
     /**
      * Toggle show state of menu
      */
-    toggleMenu(): void {
+    toggleFilter(): void {
         this.show = !this.show;
     }
 
@@ -99,7 +87,7 @@ export class SelectComponent implements OnInit, OnChanges {
 
         if (boundingBtn && boundingMenu) {
             const right = document.body.scrollWidth - boundingBtn.right;
-            //as long as there is enough space on the right, align it to the right
+            //as long as there is enough space on the right, align it to the left
             return right > boundingMenu.width;
         } else {
             return false;
@@ -116,41 +104,27 @@ export class SelectComponent implements OnInit, OnChanges {
     }
 
     /**
-     * Select element in menu
+     * Removes selected element
      * @param item
      */
-    selectElement(item: SelectItem): void {
-        if (this.selectedItem) {
-            if (
-                this.selectedItem.text === item.text &&
-                this.selectedItem.timestamp === item.timestamp &&
-                this.withDeselect
-            ) {
-                this.selectedItem = new SelectItem('');
-            } else {
-                this.selectedItem = item;
-            }
-
-            this.itemSelected.emit(this.selectedItem);
-
-            if (this.show) {
-                this.show = !this.show;
-            }
-        }
+    removeElement(item: string): void {
+        this.selectedItems = this.selectedItems.filter((el) => el !== item);
+        this.items.push(item);
+        this.items = this.getSortedList(this.items);
+        this.changedDetectorRef.detectChanges();
+        this.itemsSelected.emit(this.selectedItems);
     }
 
     /**
-     * Set blank select item text
+     * Select element
      * @param item
      */
-    selectEmptyElement(): void {
-        if (this.selectedItem) {
-            this.selectedItem.text = '';
-            this.itemSelected.emit(this.selectedItem);
-            if (this.show) {
-                this.show = !this.show;
-            }
-        }
+    selectElement(item: string): void {
+        this.selectedItems.push(item);
+        this.items = this.items.filter((el) => el !== item);
+        this.items = this.getSortedList(this.items);
+        this.changedDetectorRef.detectChanges();
+        this.itemsSelected.emit(this.selectedItems);
     }
 
     /**
@@ -158,9 +132,18 @@ export class SelectComponent implements OnInit, OnChanges {
      * @param list
      * @returns
      */
-    getSortedFilterList(list: string[]): string[] {
+    getSortedList(list: string[]): string[] {
         list = list.sort((a, b) => a.localeCompare(b));
         return list;
+    }
+
+    /**
+     * Checks if item is in filtered array
+     * @param item
+     * @returns
+     */
+    isInFilterArray(item: string): boolean {
+        return this.selectedItems.some((el: string) => el === item);
     }
 
     /**
@@ -168,8 +151,9 @@ export class SelectComponent implements OnInit, OnChanges {
      */
     filterAndSort(): void {
         this.items = this.itemsBefore.filter(
-            (item: SelectItem) =>
-                !this.filter || item.text.toLowerCase().includes(this.filter.toLowerCase()),
+            (item: string) =>
+                !this.filter || item.toLowerCase().includes(this.filter.toLowerCase()),
         );
+        this.items = this.items.filter((el) => !this.isInFilterArray(el));
     }
 }
