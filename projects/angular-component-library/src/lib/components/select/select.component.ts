@@ -76,6 +76,10 @@ export class SelectComponent implements OnInit, OnChanges {
 
     ngOnInit(): void {
         this.itemsBefore = cloneDeep(this.items);
+
+        if(this.items.length === 1){
+            this.selectElement(this.items[0]);
+        }
     }
 
     ngOnChanges() {

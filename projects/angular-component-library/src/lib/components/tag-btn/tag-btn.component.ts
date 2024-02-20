@@ -10,7 +10,7 @@ import { IconService } from '../../services/icon.service';
  * @howToUse
  * ```
  * <tag-btn-component
- *  [text]="string | translate ">
+ *  [label]="string | translate ">
  * </tag-btn-component>
  * ```
  */

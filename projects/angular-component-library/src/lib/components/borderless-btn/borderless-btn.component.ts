@@ -6,25 +6,25 @@ import { HoverStyle } from '../../model/hover-style.enum';
 
 
 /**
- * Component to create a bordered button.
+ * Component to create a borderless button.
  *
  * @howToUse
  * ```
- * <bordered-btn-component
+ * <borderless-btn-component
  *  [ariaLabel]= "'scheduler.today' | translate "
  *  [label]="'scheduler.today' | translate "
  *  [faIcon] = "faCog">
- * </bordered-btn-component>
+ * </borderless-btn-component>
  * ```
  */
 @Component({
-    selector: 'bordered-btn-component',
+    selector: 'borderless-btn-component',
     standalone: true,
     imports: [CommonModule, FontAwesomeModule],
-    templateUrl: './bordered-btn.component.html',
-    styleUrls: ['./bordered-btn.component.scss']
+    templateUrl: './borderless-btn.component.html',
+    styleUrls: ['./borderless-btn.component.scss']
 })
-export class BorderedBtnComponent{
+export class BorderlessBtnComponent{
     @Input() ariaLabel: string = '';
     // example --> filling or shining
     @Input() classStyle: string = HoverStyle.SIMPLE;

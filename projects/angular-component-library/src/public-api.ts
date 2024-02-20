@@ -5,6 +5,7 @@
 export * from './lib/components/circle-btn/circle-btn.component';
 export * from './lib/components/filled-btn/filled-btn.component';
 export * from './lib/components/bordered-btn/bordered-btn.component';
+export * from './lib/components/borderless-btn/borderless-btn.component';
 export * from './lib/components/select/select.component';
 export * from './lib/components/search-input/search-input.component';
 export * from './lib/components/plan-state-icon/plan-state-icon.component';
@@ -29,7 +30,6 @@ export * from './lib/components/collapsible/collapsible.component';
 export * from './lib/components/custom-select/custom-select.component';
 export * from './lib/components/multi-select/multi-select.component';
 export * from './lib/components/navbar-btn/navbar-btn.component';
-
 export * from './lib/components/sass-helper.component';
 
 export * from './lib/services/icon.service';

@@ -12,7 +12,7 @@ import { LoaderStyle } from '../../model/loader-style.enum';
  * <loader-component
  *   [style.border]="'1px solid #ddd'"
  *   [loaderStyle]="dotLoader2"
- *   [text]="'Daten werden geladen...'">
+ *   [label]="'Daten werden geladen...'">
  * </loader-component>
  * ```
  */

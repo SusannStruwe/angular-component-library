@@ -10,9 +10,7 @@ import { IconService } from '../../services/icon.service';
  * @howToUse
  * ```
  * <no-data-component
- *   [style.border]="'1px solid #ddd'"
- *   [loaderStyle]="dotLoader2"
- *   [text]="'Daten werden geladen...'">
+ *   [translationKey]="'no.data'">
  * </no-data-component>
  * ```
  */

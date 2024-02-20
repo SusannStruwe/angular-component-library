@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
  * @howToUse
  * ```
  * <badge-component
- *  [text]="'scheduler.today' | translate ">
+ *  [label]="'scheduler.today' | translate ">
  * </badge-component>
  * ```
  */

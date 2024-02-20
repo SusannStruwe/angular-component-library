@@ -11,7 +11,7 @@ import { HoverStyle } from '../../model/hover-style.enum';
  * ```
  * <filled-btn-component
  *  [ariaLabel]= "'scheduler.today' | translate "
- *  [text]="'scheduler.today' | translate "
+ *  [label]="'scheduler.today' | translate "
  *  [faIcon] = "faCog">
  * </filled-btn-component>
  * ```
