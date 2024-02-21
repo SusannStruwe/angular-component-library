@@ -1,0 +1,47 @@
+@import '../../../../assets/styles'; 
+
+
+:host {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.tabs-view {
+    height: 100%;
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 0px;
+        padding: 0px;
+        height: var(--tab-bg-height);
+        position: relative;
+        z-index: var(--z-index-4);
+        background: var(--tabs-bg-color);
+
+        .active {
+            border-bottom: 3px solid var(--fa-icon-color);
+            color: var(--fa-icon-color);
+        }
+
+        li {
+            padding: var(--btn-small-padding);
+            margin: calc(var(--tab-bg-height) - var(--btn-height)) 5px 0px 5px;
+            cursor: pointer;
+            height: var(--btn-height);
+            line-height: var(--btn-height);
+            box-sizing: border-box;
+            font-weight: var(--font-weight-semibold);
+            color: var(--not-emphrazed-color-dark);
+
+            &:hover:not(.active) {
+                color: var(--accent-color);
+                border-bottom: 3px solid var(--accent-color);
+            }
+        }
+    }
+}

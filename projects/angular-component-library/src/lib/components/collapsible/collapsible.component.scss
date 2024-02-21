@@ -1,5 +1,6 @@
 @import '../../../../assets/styles';
 
+
 :host {
     position: relative;
     cursor: pointer;
@@ -53,7 +54,7 @@ that do not support them, like touch displays
 @media (hover: hover) {
     .collapsible-header {
         &:hover {
-            color:  var(--primary-color);
+            color:  var(--accent-color);
         }
     }
 }

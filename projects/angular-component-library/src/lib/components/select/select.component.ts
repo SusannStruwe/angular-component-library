@@ -78,7 +78,8 @@ export class SelectComponent implements OnInit, OnChanges {
         this.itemsBefore = cloneDeep(this.items);
 
         if(this.items.length === 1){
-            this.selectElement(this.items[0]);
+            this.selectedItem = this.items[0];
+            this.itemSelected.emit(this.selectedItem);
         }
     }
 

@@ -353,9 +353,6 @@ Media query to add hover only on device which support hover
         }
 
         &:active:not([disabled]) {
-            fa-icon {
-                // color: var(--accent-color-dark);
-            }
             button {
                 span:last-of-type {
                     fa-icon {

@@ -92,6 +92,8 @@ body {
     --z-index-6: 1000; //modals, non-modals, popovers, tooltips
     --z-index-7: 1010; // navbar
 
+    --scheduler-first-cell-width: 225px;
+    --scheduler-event-radius: 3px;
     --first-cell-width: 225px;
     --navbar-height: 45px;
     --btn-height: 40px;
@@ -107,6 +109,8 @@ body {
     --btn-small-padding: 0px 10px;
     --max-width-select: 500px;
     --badge-height: 30px;
+    --sidebar-width: 50px;
+    --max-width: 500px;
 }
 
 body.dark-theme {

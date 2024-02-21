@@ -31,12 +31,12 @@
         max-width: 100%;
         padding: 0 0 1.25em;
         border: none;
-        background: #fff;
         color: var(--text-color);
         font-family: inherit;
         font-size: 1rem;
         margin: auto;
         overflow: hidden;
+        background-color: var(--bg-color);
 
         &.lg {
             height: 100%;
@@ -187,6 +187,7 @@
 
             label {
                 font-weight: var(--font-weight-semibold);
+                color: var(--text-color);
                 height: 22px;
             }
 
@@ -211,7 +212,6 @@
         }
 
         .modal-footer {
-            background-color: white;
             position: absolute;
             bottom: 0;
             width: 100%;

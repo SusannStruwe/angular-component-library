@@ -1,0 +1,10 @@
+<div class="tabs-view">
+    <ul>
+        @for (tab of tabs; track tab) {
+            <li (click)="selectTab(tab)" [class.active]="tab.active">
+                {{ tab.tabTitle | translate }}
+            </li>
+        }
+    </ul>
+    <ng-content></ng-content>
+</div>
