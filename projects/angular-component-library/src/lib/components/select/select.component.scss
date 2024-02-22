@@ -232,9 +232,9 @@ button {
                 text-align: right;
             }
 
-            &:hover,
+            &:active,
             &.active {
-                background-color: var(--accent-color-light);
+                background-color: var(--row-highlight-color);
                 color: var(--accent-color);
 
                 fa-icon {
@@ -317,6 +317,21 @@ Media query to add hover only on device which support hover
 *********************************************/
 
 @media (hover: hover) {
+    .menu{
+        ul{
+            li{
+                &:hover {
+                    background-color: var(--row-highlight-color);
+                    color: var(--accent-color);
+    
+                    fa-icon {
+                        color: var(--accent-color);
+                    }
+                }
+            }
+        }
+    }
+
     .not-emphrazed {
         &:hover {
             background-color: var(--not-emphrazed-color);

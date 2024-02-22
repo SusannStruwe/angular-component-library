@@ -10,7 +10,7 @@
 
 .badge {
     padding: 0.7em 1em;
-    border-radius: 20px;
+    border-radius: var(--badge-radius);
     background-color: var(--not-emphrazed-color);
 
     p {
