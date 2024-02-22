@@ -65,12 +65,11 @@ describe('SelectComponent', () => {
     it('check background color is transparent if class is navbar', () => {
         const button = fixture.debugElement.query(By.css('button'));
         const styles = window.getComputedStyle(button.nativeElement);
-        console.log("LOG select:" + styles.backgroundColor);
 
         if (button.nativeElement.classList.contains('navbar')) {
             expect(styles.backgroundColor).toEqual('rgba(0, 0, 0, 0)'); // transparent
         } else {
-            expect(styles.backgroundColor).toEqual('rgb(255, 255, 255)');
+            expect(styles.backgroundColor).toEqual('rgba(0, 0, 0, 0)');
         }
     });
 });

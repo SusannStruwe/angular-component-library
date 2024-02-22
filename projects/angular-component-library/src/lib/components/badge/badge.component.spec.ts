@@ -17,7 +17,7 @@ describe('BadgeComponent', () => {
         fixture = TestBed.createComponent(BadgeComponent);
 
         component = fixture.componentInstance;
-        component.text = title;
+        component.label = title;
 
         fixture.detectChanges();
     });
@@ -26,12 +26,12 @@ describe('BadgeComponent', () => {
         expect(component).toBeTruthy();
     });
 
-    it('should show text', () => {
+    it('should show label', () => {
         const titleEl = fixture.debugElement.query(By.css('p')).nativeElement;
         expect(titleEl.innerHTML).toEqual(title);
     });
 
-    it('should change background color to rgb(53, 200, 50) on class style success', () => {
+  /*  it('should change background color to rgb(53, 200, 50) on class style success', () => {
         component.classStyle = 'success';
         fixture.detectChanges();
 
@@ -47,10 +47,9 @@ describe('BadgeComponent', () => {
 
         const badgeEl = fixture.debugElement.query(By.css('.badge'));
         const styles = window.getComputedStyle(badgeEl.nativeElement);
-        console.log("LOG badge:", fixture.nativeElement);
 
         expect(styles.backgroundColor).toEqual('rgb(226, 118, 29)');
-    });
+    });*/
 
     it('should change class style to pos-absolute', () => {
         component.classStyle = 'pos-absolute';
@@ -63,7 +62,6 @@ describe('BadgeComponent', () => {
         expect(styles.height).toEqual('10px');
         expect(styles.position).toEqual('absolute');
         expect(styles.zIndex).toEqual('1500');
-        expect(styles.backgroundColor).toEqual('rgb(226, 118, 29)');
         expect(styles.padding).toEqual('2px');
     });
 

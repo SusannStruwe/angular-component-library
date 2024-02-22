@@ -34,10 +34,14 @@
             "polyfills": [
               "zone.js",
               "zone.js/testing"
-            ]
+            ],
+            "karmaConfig": "projects/angular-component-library/karma.conf.cjs"
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
