@@ -2,6 +2,12 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
 
+The library includes a list of different interaction components.
+
+* [License] (LICENSE)
+* [Changelog](CHANGELOG.md)
+
+
 ## Code scaffolding
 
 Run `ng generate component component-name --project angular-component-library` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project angular-component-library`.
@@ -22,3 +28,4 @@ Run `ng test angular-component-library` to execute the unit tests via [Karma](ht
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
