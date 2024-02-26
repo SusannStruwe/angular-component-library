@@ -9,7 +9,7 @@ button {
     position: relative;
     border: 0;
     border-radius: 50%;
-    padding: 20px 22px;
+    padding: var(--btn-padding);
     margin: 5px;
     background: var(--btn-color);
     cursor: pointer;

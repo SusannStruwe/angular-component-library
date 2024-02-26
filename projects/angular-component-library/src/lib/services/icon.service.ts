@@ -43,6 +43,15 @@ import {
     faMagnifyingGlass,
     faCircleExclamation,
     faPalette,
+    faMagnifyingGlassChart,
+    faClipboardList,
+    faUsers,
+    faGauge,
+    faLanguage,
+    faRightFromBracket,
+    faArrowDown,
+    faArrowRight,
+    faCircleMinus
 } from '@fortawesome/free-solid-svg-icons';
 import {
     faSquarePlus,
@@ -50,13 +59,14 @@ import {
     faSquareCheck,
     faCircleCheck,
     faClock,
+    faCopy
 } from '@fortawesome/free-regular-svg-icons';
 
 /**
  * Icon service to manage fa icons
  */
 @Injectable({
-    providedIn: 'root',
+    providedIn: 'root'
 })
 export class IconService {
     // free solid
@@ -78,6 +88,7 @@ export class IconService {
     faUser: IconDefinition = faUser;
     faBuilding: IconDefinition = faBuilding;
     faSignOut: IconDefinition = faSignOut;
+    faArrowRight: IconDefinition = faArrowRight;
     faArrowRightArrowLeft: IconDefinition = faArrowRightArrowLeft;
     faSave: IconDefinition = faSave;
     faTrash: IconDefinition = faTrash;
@@ -91,6 +102,7 @@ export class IconService {
     faChevronRight: IconDefinition = faChevronRight;
     faRotate: IconDefinition = faRotate;
     faInfoCircle: IconDefinition = faInfoCircle;
+    faCircleMinus: IconDefinition = faCircleMinus;
     faCircleXmark: IconDefinition = faCircleXmark;
     faLocationCrosshairs: IconDefinition = faLocationCrosshairs;
     faWrench: IconDefinition = faWrench;
@@ -102,6 +114,13 @@ export class IconService {
     faStar: IconDefinition = faStar;
     faCircleExclamation: IconDefinition = faCircleExclamation;
     faPalette: IconDefinition = faPalette;
+    faGauge: IconDefinition = faGauge;
+    faUsers: IconDefinition = faUsers;
+    faClipboardList: IconDefinition = faClipboardList;
+    faMagnifyingGlassChart: IconDefinition = faMagnifyingGlassChart;
+    faLanguage: IconDefinition = faLanguage;
+    faRightFromBracket: IconDefinition = faRightFromBracket;
+    faArrowDown: IconDefinition = faArrowDown;
 
     // free regular
     faSquarePlus: IconDefinition = faSquarePlus;
@@ -109,4 +128,5 @@ export class IconService {
     faSquareCheck: IconDefinition = faSquareCheck;
     faCircleCheck: IconDefinition = faCircleCheck;
     faClock: IconDefinition = faClock;
+    faCopy: IconDefinition = faCopy;
 }
