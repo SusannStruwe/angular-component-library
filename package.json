@@ -6,7 +6,6 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --configuration production",
-    "watch": "ng build --watch --configuration production",
     "build:lib": "ng build angular-component-library --configuration production",
     "build:lib-watch": "ng build angular-component-library --configuration production --watch",
     "pack:lib": "cd dist/angular-component-library && npm pack",
