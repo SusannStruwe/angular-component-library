@@ -11,7 +11,6 @@
     align-items: center;
     justify-content: space-between;
     height: auto;
-    margin: 10px 5px;
     color: var(--text-color);
     box-sizing: border-box;
     padding: 10px 15px;
@@ -59,6 +58,7 @@
     }
 
     &.info {
+        background: lighten($toast-info-color, 50%);
         border: 1px solid var(--toast-info-color);
         border-top: 5px solid var(--toast-info-color);
 
@@ -73,6 +73,7 @@
     }
 
     &.warning {
+        background: lighten($toast-warning-color, 50%);
         border: 1px solid var(--toast-warning-color);
         border-left: 5px solid var(--toast-warning-color);
 
