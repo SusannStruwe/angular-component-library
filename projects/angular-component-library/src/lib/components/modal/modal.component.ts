@@ -38,6 +38,8 @@ export class ModalComponent implements OnInit, OnDestroy {
     @Input() confirmDisabled? = false;
     @Input() cancelBtn? = false;
     @Input() cancelBtnText? = 'Cancel';
+    @Input() deleteBtn? = 'Delete';
+    @Input() deleteBtnTxt? = 'Delete';
     @Input() sizeClass = ['m'];
 
     faLoader: IconDefinition;

@@ -22,6 +22,17 @@
                         [label]="cancelBtnText">
                     </bordered-btn-component>
                 }
+                @if (deleteBtn) {
+                    <filled-btn-component
+                        [ariaLabel]="'Delete'"
+                        [faIcon]="showConfirmBtnLoader ? faLoader: undefined"
+                        [isDisabled]="confirmDisabled"
+                        [styleClass]="'delete'"
+                        [isSpinning]="showConfirmBtnLoader"
+                        (click)="confirmModal()"
+                        [label]="deleteBtnTxt">
+                    </filled-btn-component>
+                }
                 @if (confirmBtn) {
                     <filled-btn-component
                         [ariaLabel]="'Confirm'"

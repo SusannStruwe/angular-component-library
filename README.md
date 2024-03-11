@@ -27,12 +27,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
-## Build lib
+## Build and pack lib
 
+```
 ng build angular-component-library
 
 cd dist/angular-component-library && npm pack
-
+```
 
 ## Create "libs" folder in target project and run:
 

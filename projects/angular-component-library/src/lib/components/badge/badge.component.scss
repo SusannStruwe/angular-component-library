@@ -24,9 +24,17 @@
     &.success {
         background-color: var(--job-successful-color);
     }
-
+    
     &.failed {
         background-color: var(--job-failed-color);
+    }
+    
+    &.pending {
+        background-color: var(--job-pending-color);
+    }
+    
+    &.running {
+        background-color: var(--job-running-color);
     }
 
     &.pos-absolute {
