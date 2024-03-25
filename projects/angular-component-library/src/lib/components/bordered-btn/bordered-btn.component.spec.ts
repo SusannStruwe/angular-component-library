@@ -27,7 +27,7 @@ describe('BorderedBtnComponent', () => {
     });
 
     it('should show button text', () => {
-        component.label = 'Start';
+        component.buttonText = 'Start';
         fixture.detectChanges();
 
         const btnText = fixture.debugElement.query(By.css('span')).nativeElement;
@@ -35,6 +35,7 @@ describe('BorderedBtnComponent', () => {
     });
 
     it('should show fa-icon check', () => {
+        component.showIcon = true;
         component.faIcon = iconService.faCheck;
         fixture.detectChanges();
 
@@ -48,7 +49,7 @@ describe('BorderedBtnComponent', () => {
     });
 
     it('should be disabled', () => {
-        component.isDisabled = true;
+        component.disabled = true;
         fixture.detectChanges();
 
         const button = fixture.debugElement.query(By.css('button')).nativeElement;
@@ -61,9 +62,9 @@ describe('BorderedBtnComponent', () => {
 
         expect(styles.backgroundColor).toEqual('rgba(0, 0, 0, 0)');
 
-        /* component.isActive = true;
+        component.active = true;
         fixture.detectChanges();
 
-        expect(styles.backgroundColor).not.toEqual('rgba(0, 0, 0, 0)');*/
+        expect(styles.backgroundColor).toEqual('rgb(199, 206, 250)');
     }));
 });

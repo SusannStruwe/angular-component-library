@@ -23,6 +23,11 @@
         font-size: 1.4em;
     }
 
+    a{
+        text-decoration: underline;
+        margin: 0em 0.5em;
+    }    
+
     p {
         margin: 0px;
         margin-left: 15px;
@@ -36,6 +41,7 @@
         border-left: 5px solid $toast-success-color;
 
         p,
+        a,
         fa-icon {
             display: inline-block;
             color: var(--toast-success-color);
@@ -48,6 +54,7 @@
     &.error {
         background: lighten($toast-error-color, 50%);
         p,
+        a,
         fa-icon {
             display: inline-block;
             color: var(--toast-error-color);
@@ -63,6 +70,7 @@
         border-top: 5px solid var(--toast-info-color);
 
         p,
+        a,
         fa-icon {
             display: inline-block;
             color: var(--toast-info-color);
@@ -78,6 +86,7 @@
         border-left: 5px solid var(--toast-warning-color);
 
         p,
+        a,
         fa-icon {
             display: inline-block;
             color: var(--toast-warning-color);
@@ -85,5 +94,17 @@
         .close:hover {
             color: darken($toast-warning-color, 10%);
         }
+    }
+}
+
+
+/***************************************************************
+Media query to hide hover effects for devices 
+that do not support them, like touch displays
+**************************************************************/
+@media (hover: hover) {
+
+    a:hover{
+        font-weight: var(--font-weight-medium);
     }
 }

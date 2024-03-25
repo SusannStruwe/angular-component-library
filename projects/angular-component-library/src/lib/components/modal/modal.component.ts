@@ -33,12 +33,12 @@ export class ModalComponent implements OnInit, OnDestroy {
     @Input() id: string = "";
     @Input() title = ' ';
     @Input() confirmBtn = true;
-    @Input() confirmBtnText = 'Ok';
+    @Input() confirmBtnText? = 'Ok';
     @Input() showConfirmBtnLoader = false;
     @Input() confirmDisabled? = false;
     @Input() cancelBtn? = false;
     @Input() cancelBtnText? = 'Cancel';
-    @Input() deleteBtn? = 'Delete';
+    @Input() deleteBtn? = false;
     @Input() deleteBtnTxt? = 'Delete';
     @Input() sizeClass = ['m'];
 

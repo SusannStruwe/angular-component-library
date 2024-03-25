@@ -9,6 +9,7 @@ import {
     faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import { AlertType } from '../../model/alert-type.enum';
+import { RouterModule } from '@angular/router';
 
 
 /**
@@ -26,7 +27,7 @@ import { AlertType } from '../../model/alert-type.enum';
 @Component({
     selector: 'alert-component',
     standalone: true,
-    imports: [CommonModule, FontAwesomeModule],
+    imports: [CommonModule, FontAwesomeModule, RouterModule],
     templateUrl: './alert.component.html',
     styleUrls: ['./alert.component.scss'],
 })
@@ -38,6 +39,10 @@ export class AlertComponent {
     @Input() type: AlertType = AlertType.SUCCESS;
     // if state is true, alert is shown
     @Input() visibleState = false;
+
+    @Input() navigationLink?: string;
+    @Input() navigationLinkLabel?: string;
+
     //with 'Change' add the end you can realize two-way-binding
     @Output() visibleStateChange = new EventEmitter<boolean>();
 

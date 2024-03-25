@@ -26,14 +26,18 @@ import { HoverStyle } from '../../model/hover-style.enum';
 })
 export class BorderedBtnComponent{
     @Input() ariaLabel: string = '';
-    // example --> filling or shining
-    @Input() classStyle: string = HoverStyle.SIMPLE;
 
     @Input() label?: string;
 
     @Input() faIcon?: IconDefinition;
+    // example --> 100% or not
+    @Input() showIcon = true;
 
     @Input() isDisabled?: boolean;
+    // example --> gray, delete
+    @Input() styleClass?: string = '';
+    // example --> filling or shining
+    @Input() hoverStyle = HoverStyle.SIMPLE;
     // example --> spin or not
     @Input() isSpinning = false;
     // example --> active or not

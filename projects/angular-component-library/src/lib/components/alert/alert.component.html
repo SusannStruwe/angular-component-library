@@ -18,7 +18,13 @@
                     <b>{{ title }}</b>
                 </p>
             }
-            <p [innerHTML]="message"></p>
+            <span>
+                <p [innerHTML]="message"></p>
+
+                @if (navigationLink) {
+                    <a [routerLink]="navigationLink"> {{ navigationLinkLabel }} </a>
+                }
+            </span>
         </div>
         <fa-icon class="close" [icon]="faClose" (click)="removeAlert()"></fa-icon>
     </div>
