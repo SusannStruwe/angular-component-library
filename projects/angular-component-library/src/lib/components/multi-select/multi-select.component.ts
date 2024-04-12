@@ -55,14 +55,17 @@ export class MultiSelectComponent implements OnChanges {
 
     @Output() itemsSelected = new EventEmitter<string[]>();
 
+    @ViewChild('filterInput') filterInput?: ElementRef<HTMLDivElement>;
+    @ViewChild('btn') btn?: ElementRef<HTMLDivElement>;
+    @ViewChild('menu') menu?: ElementRef<HTMLDivElement>;
+    
     itemsBefore: string[] = [];
     selectedItems: string[] = [];
     filter = '';
     show = false;
 
-    @ViewChild('filterInput') filterInput?: ElementRef<HTMLDivElement>;
-    @ViewChild('btn') btn?: ElementRef<HTMLDivElement>;
-    @ViewChild('menu') menu?: ElementRef<HTMLDivElement>;
+    randomId: string = Math.floor(Math.random() * 16777215).toString(16);
+
 
     constructor(private changedDetectorRef: ChangeDetectorRef) {}
 

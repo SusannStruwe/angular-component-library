@@ -184,14 +184,14 @@
                 grid-template-columns: 2fr 4fr;
             }
 
-            label {
+            h4 {
                 font-weight: var(--font-weight-semibold);
                 color: var(--text-color);
                 height: 22px;
             }
 
             .auto-label {
-                @extend label;
+                @extend h4;
                 height: auto;
                 display: grid;
                 align-items: center;

@@ -45,10 +45,10 @@ button {
         line-height: var(--btn-height);
         padding: 10px;
         text-align: left;
-        display: inline-block;
         -webkit-line-clamp: 1;
         color: var(--accent-color);
         display: -webkit-box;
+        display: inline-block;
         line-height: 1.4;
         -webkit-box-orient: vertical;
         overflow: hidden;
