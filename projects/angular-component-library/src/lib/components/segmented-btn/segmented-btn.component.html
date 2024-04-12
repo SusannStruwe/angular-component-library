@@ -4,6 +4,7 @@
             [class.active]="item === activeBtn"
             [disabled]="item.isDisabled"
             (click)="btnClick(item)"
+            [attr.title]="item.text | translate"
             [attr.aria-label]="item.text | translate">
             @if (item.icon) {
                 <fa-icon [icon]="item.icon"></fa-icon>

@@ -1,6 +1,7 @@
 <button
     [style.width]="width"
     [ngClass]="[hoverStyle, styleClass]"
+    [attr.title]="ariaLabel"
     [attr.aria-label]="ariaLabel"
     [disabled]="isDisabled"
     [class.active]="isActive">

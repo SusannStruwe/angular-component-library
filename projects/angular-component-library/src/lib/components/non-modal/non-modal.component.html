@@ -2,7 +2,12 @@
     <div #nonModalContent class="non-modal-content modal-shadow" [ngClass]="sizeClass">
         <div class="non-modal-header">
             <h2>{{ title }}</h2>
-            <button class="close-btn" [attr.aria-label]="'close'" type="button" (click)="close()">
+            <button 
+                class="close-btn" 
+                [attr.title]="'close'"
+                [attr.aria-label]="'close'" 
+                type="button" 
+                (click)="close()">
                 <fa-icon [icon]="faClose"></fa-icon>
             </button>
         </div>

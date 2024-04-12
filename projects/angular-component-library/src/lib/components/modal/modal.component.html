@@ -5,6 +5,7 @@
                 <h2>{{ title }}</h2>
                 <button
                     class="close-btn"
+                    [attr.title]="'close'"
                     [attr.aria-label]="'close'"
                     type="button"
                     (click)="closeModal()">
@@ -53,6 +54,7 @@
             <div class="modal-header">
                 <button
                     class="close-btn"
+                    [attr.title]="'close'"
                     [attr.aria-label]="'close'"
                     type="button"
                     (click)="closeModal()">

@@ -56,6 +56,7 @@ export * from './lib/model/default-column-key.enum';
 export * from './lib/model/multi-select.model';
 export * from './lib/model/context-menu-item.model';
 export * from './lib/model/feature.enum';
+export * from './lib/model/tab-view-type.enum';
 
 export * from './lib/directives/click-outside.directive';
 export * from './lib/directives/drag-drop-file.directive';

@@ -7,6 +7,7 @@
             id="test-btn"
             #btn
             [ngClass]="[show ? 'selected' : '', classStyle ?? '']"
+            [attr.title]="'Select'"
             [attr.aria-label]="'Select'"
             [attr.aria-haspopup]="'menu'"
             [attr.aria-expanded]="show"

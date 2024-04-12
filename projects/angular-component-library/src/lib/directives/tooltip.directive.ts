@@ -29,12 +29,23 @@ export class TooltipDirective implements OnDestroy {
     }
 
     @HostListener('mouseenter', ['$event']) onMouseEnter(event: MouseEvent) {
+        const elementWidth = Math.round(this.el.nativeElement.getBoundingClientRect().width);
+        const leftPosition = Math.trunc(this.el.nativeElement.getBoundingClientRect().left);
+        const windowWidth =  window.innerWidth;
+
         this.timer = setTimeout(() => {
-            const y =
-                this.el.nativeElement.getBoundingClientRect().top +
-                this.el.nativeElement.offsetHeight +
-                6; // Get the bottom of the element
-            this.createTooltipPopup(event.clientX, y);
+            let y = 0;
+            let x = leftPosition + (elementWidth / 2);
+
+            if( (leftPosition + elementWidth) > windowWidth - 10){
+                x = leftPosition + 5;
+            }
+
+            y = this.el.nativeElement.getBoundingClientRect().top +
+                this.el.nativeElement.offsetHeight + 6; 
+
+            this.createTooltipPopup(x, y);
+
         }, this.delay);
     }
 

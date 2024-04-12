@@ -9,6 +9,7 @@ import {
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
 import { TabComponent } from './tab/tab.component';
+import { TooltipDirective } from '../../directives/tooltip.directive';
 
 /**
  * Component to tab view with tabs to select.
@@ -32,7 +33,7 @@ import { TabComponent } from './tab/tab.component';
 @Component({
     selector: 'tabs-view-component',
     standalone: true,
-    imports: [FontAwesomeModule, TranslateModule],
+    imports: [FontAwesomeModule, TranslateModule, TooltipDirective],
     templateUrl: './tabs-view.component.html',
     styleUrls: ['./tabs-view.component.scss'],
 })

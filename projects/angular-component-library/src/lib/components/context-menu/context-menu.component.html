@@ -5,6 +5,7 @@
     <button
         #btn
         [ngClass]="[show ? 'selected' : '']"
+        [attr.title]="ariaLabel"
         [attr.aria-label]="ariaLabel"
         [attr.aria-haspopup]="'menu'"
         [attr.aria-expanded]="show"
