@@ -50,6 +50,8 @@ export class DurationInputComponent implements OnChanges {
 
     modes: typeof EditMode = EditMode;
 
+    randomId: string = Math.floor(Math.random() * 16777215).toString(16);
+
     numSeconds = 0;
 
     ngOnChanges(): void {

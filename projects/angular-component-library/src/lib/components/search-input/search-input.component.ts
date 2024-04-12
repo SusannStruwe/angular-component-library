@@ -34,6 +34,8 @@ export class SearchInputComponent {
     faMagnifyingGlass: IconDefinition;
     faCloseCircle: IconDefinition;
 
+    randomId: string = Math.floor(Math.random() * 16777215).toString(16);
+
     constructor(private iconService: IconService) {
         this.faMagnifyingGlass = this.iconService.faMagnifyingGlass;
         this.faCloseCircle = this.iconService.faCircleXmark;

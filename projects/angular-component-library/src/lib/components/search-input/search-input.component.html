@@ -3,6 +3,7 @@
         <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
     </span>
     <input
+        id="search-field-{{ randomId }}"
         type="text"
         [(ngModel)]="filter"
         (click)="$event.stopPropagation()"

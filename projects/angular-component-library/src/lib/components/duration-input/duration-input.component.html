@@ -2,6 +2,7 @@
     <div class="flex-row">
         @if (mode !== modes.READ) {
             <input
+                id="duration-days-{{ randomId }}"
                 type="number"
                 class="form-control duration"
                 [(ngModel)]="days"
@@ -15,6 +16,7 @@
     <div class="flex-row">
         @if (mode !== modes.READ) {
             <input
+                id="duration-hours-{{ randomId }}"
                 type="number"
                 class="form-control duration"
                 [(ngModel)]="hours"
@@ -28,6 +30,7 @@
     <div class="flex-row">
         @if (mode !== modes.READ) {
             <input
+                id="duration-minutes-{{ randomId }}"
                 type="number"
                 class="form-control duration"
                 [(ngModel)]="minutes"
