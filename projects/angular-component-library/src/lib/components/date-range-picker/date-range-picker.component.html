@@ -2,6 +2,7 @@
     <input
         id="start-date-input-{{ randomId }}"
         type="date"
+        [attr.aria-label]="'start-date-input'"
         [ngModel]="startDate | date: 'yyyy-MM-dd'"
         (ngModelChange)="startChanged((startDate = $event))" />
     <div class="btn-overlay" [style.position]="'absolute'" (click)="showDatePicker('start')">
@@ -15,6 +16,7 @@
     <input
         id="end-date-input-{{ randomId }}"
         type="date"
+        [attr.aria-label]="'end-date-input'"
         [ngModel]="endDate | date: 'yyyy-MM-dd'"
         (ngModelChange)="endChanged((endDate = $event))" />
     <div class="btn-overlay" [style.position]="'absolute'" (click)="showDatePicker('end')">

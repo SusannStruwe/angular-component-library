@@ -3,12 +3,13 @@
         <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
     </span>
     <input
-        id="search-field-{{ randomId }}"
+        id="search-field-{{randomId}}"
+        class="form-control"
         type="text"
+        [attr.aria-label]="'search-field-{{randomId}}'"
         [(ngModel)]="filter"
         (click)="$event.stopPropagation()"
         (ngModelChange)="filterChanged()"
-        class="form-control"
         placeholder="{{ placeholderText }}" />
     @if (filter) {
         <span class="icon right" (click)="clearFilter($event)">

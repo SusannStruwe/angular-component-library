@@ -24,16 +24,16 @@
         <ul class="selected-items">
             @for (selectedItem of selectedItems; track selectedItem; let i = $index) {
                 <li (click)="removeElement(selectedItem)">
-                    <input id="ms-s-items-randomId-{ i }}" type="checkbox" [checked]="isInFilterArray(selectedItem)" />
+                    <input id="ms-s-items-{{randomId}}-{{i}}" type="checkbox" [checked]="isInFilterArray(selectedItem)" />
                     <span class="checkmark"></span>
                     <span class="text">{{ selectedItem }}</span>
                 </li>
             }
         </ul>
         <ul [style.max-height.px]="300">
-            @for (item of items; track item) {
+            @for (item of items; track item; let i = $index) {
                 <li (click)="selectElement(item)">
-                    <input id="ms-items-randomId-{ i }}" type="checkbox" />
+                    <input id="ms-items-{{randomId}}-{{i}}" type="checkbox" />
                     <span class="checkmark"></span>
                     <span class="text">{{ item }}</span>
                 </li>

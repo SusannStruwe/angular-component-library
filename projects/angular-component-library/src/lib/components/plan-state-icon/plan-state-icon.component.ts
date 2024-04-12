@@ -2,7 +2,8 @@ import { Component, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { IconService } from '../../services/icon.service';
-import { JobState } from '../../model/job-state.enum';
+import { JobStatusState } from '../../model/job-status-state.enum';
+
 
 
 /**
@@ -25,7 +26,7 @@ import { JobState } from '../../model/job-state.enum';
 export class PlanStateIconComponent {
     @Input() state: string = '';
 
-    jobState: typeof JobState = JobState;
+    jobState: typeof JobStatusState = JobStatusState;
 
     faStar: IconDefinition;
     faCircleExclamation: IconDefinition;

@@ -1,7 +1,9 @@
 <p [ngClass]="classStyle">{{ label }}</p>
 
 <div class="toggle">
-    <input type="checkbox" 
+    <input 
+        id="toggle-btn-{{randomId}}"
+        type="checkbox" 
         class="checkbox" 
         [disabled]="isDisabled"
         [(ngModel)]="checked" 

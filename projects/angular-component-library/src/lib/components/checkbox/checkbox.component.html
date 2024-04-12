@@ -4,7 +4,7 @@
         (click)="toggleValue()"
         [style.height.px]="height ?? 30"
         [style.width.px]="height ?? 30">
-        <input type="checkbox" [checked]="value" />
+        <input id="checkbox-{{randomId}}" type="checkbox" [checked]="value" />
         <span class="checkmark" [style.height.px]="height ?? 30" [style.width.px]="height ?? 30">
             @if (value) {
                 <fa-icon [icon]="faCheck"> </fa-icon>

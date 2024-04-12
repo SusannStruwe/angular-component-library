@@ -44,7 +44,6 @@ export * from './lib/services/loader.service';
 
 export * from './lib/model/hover-style.enum';
 export * from './lib/model/select-item.model';
-export * from './lib/model/job-state.enum';
 export * from './lib/model/loader-style.enum';
 export * from './lib/model/edit-mode.enum';
 export * from './lib/model/loader-style.enum';

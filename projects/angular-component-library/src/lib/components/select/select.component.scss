@@ -47,8 +47,7 @@ button {
         text-align: left;
         -webkit-line-clamp: 1;
         color: var(--accent-color);
-        display: -webkit-box;
-        display: inline-block;
+        display: inline-flex;
         line-height: 1.4;
         -webkit-box-orient: vertical;
         overflow: hidden;

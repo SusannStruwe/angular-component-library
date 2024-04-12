@@ -34,6 +34,8 @@ export class CheckboxComponent {
     faSquareCheck: IconDefinition;
     faCheck: IconDefinition;
 
+    randomId: string = Math.floor(Math.random() * 16777215).toString(16);
+    
     constructor(private iconService: IconService) {
         this.faSquare = this.iconService.faSquare;
         this.faSquareCheck = this.iconService.faSquareCheck;

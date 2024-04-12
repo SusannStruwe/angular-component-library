@@ -34,6 +34,7 @@ export class ToggleBtnComponent {
     @Output() checkedChange = new EventEmitter<boolean>();
 
     faCheck: IconDefinition;
+    randomId: string = Math.floor(Math.random() * 16777215).toString(16);
 
     constructor(private iconService: IconService) {
         this.faCheck = this.iconService.faCheck;
