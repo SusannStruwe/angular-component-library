@@ -61,6 +61,10 @@ button[disabled] {
     border-left: none;
 }
 
+.borderless{
+    border: none;
+}
+
 /************************************************
 Media query to add hover only on device which support hover
 *********************************************/
