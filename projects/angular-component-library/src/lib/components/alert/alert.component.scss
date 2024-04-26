@@ -36,9 +36,9 @@
     }
 
     &.success {
-        background: lighten($toast-success-color, 40%);
+        background: lighten($toast-success-color, 30%);
         border: 1px solid var(--toast-success-color);
-        border-left: 5px solid $toast-success-color;
+        border-left: 5px solid var(--toast-success-color);
 
         p,
         a,
@@ -53,6 +53,9 @@
 
     &.error {
         background: lighten($toast-error-color, 50%);
+        border: 1px solid var(--toast-error-color);
+        border-left: 5px solid var(--toast-error-color);
+
         p,
         a,
         fa-icon {
@@ -67,7 +70,7 @@
     &.info {
         background: lighten($toast-info-color, 50%);
         border: 1px solid var(--toast-info-color);
-        border-top: 5px solid var(--toast-info-color);
+        border-left: 5px solid var(--toast-info-color);
 
         p,
         a,

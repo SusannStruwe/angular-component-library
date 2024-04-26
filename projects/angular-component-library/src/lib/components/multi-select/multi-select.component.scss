@@ -68,10 +68,9 @@ button {
         height: var(--btn-height);
         line-height: var(--btn-height);
         text-align: left;
-        display: inline-block;
+        display: inline-flex;
         -webkit-line-clamp: 1;
         color: var(--accent-color);
-        display: -webkit-box;
         line-height: 1.4;
         -webkit-box-orient: vertical;
         overflow: hidden;
