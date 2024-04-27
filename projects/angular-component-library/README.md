@@ -40,6 +40,13 @@ The library includes a list of different interaction components:
 * tooltip
 
 
+## Link library with target dev project
+
+Run `link:lib` script. After that a linked folder will be created in `AppData\Roaming\nvm\<version>\node_modules`. Now run the following command in the target project:
+
+> npm link angular-component-library
+
+
 ## Code scaffolding
 
 Run `ng generate component component-name --project angular-component-library` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project angular-component-library`.
