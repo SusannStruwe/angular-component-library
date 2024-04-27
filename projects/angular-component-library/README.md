@@ -64,7 +64,7 @@ After building your library with `ng build angular-component-library`, go to the
 
 Run `ng test angular-component-library` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Further help
+## Pack and use Lib
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run `ng build --configuration production` to build lib and run `cd dist/angular-component-library && npm pack` to pack and create lib in dist folder
 
