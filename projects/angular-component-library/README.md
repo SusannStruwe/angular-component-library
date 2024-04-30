@@ -68,3 +68,9 @@ Run `ng test angular-component-library` to execute the unit tests via [Karma](ht
 
 Run `ng build --configuration production` to build lib and run `cd dist/angular-component-library && npm pack` to pack and create lib in dist folder
 
+
+
+## Version Infos
+`~`version `Approximately equivalent to version`, will update to all future patch versions, without incrementing the minor version. ~1.2.3 will use releases from 1.2.3 to <1.3.0.
+
+`^`version `Compatible with version`, will update to all future minor/patch versions, without incrementing the major version. ^1.2.3 will use releases from 1.2.3 to <2.0.0.

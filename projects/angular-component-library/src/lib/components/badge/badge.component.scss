@@ -70,5 +70,19 @@
 }
 
 
+/***************************************************************
+Media query to hide hover effects for devices 
+that do not support them, like touch displays
+**************************************************************/
+@media (hover: hover) {
+    .badge {
+        &:hover,
+        &.active {
+            &:not([disabled]) {
+                filter: brightness(85%);
+            }
+        }
+    }
+}
 
   

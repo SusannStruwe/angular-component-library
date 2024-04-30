@@ -32,9 +32,14 @@ body {
     --not-emphrazed-color-dark: #999;
 
     --toast-info-color: #5699e4;
+    --toast-info-color-dark: #4073ac;
     --toast-success-color: #5cb55a;
+    --toast-success-color-dark: #407d3f;
+    --toast-error-color-light: rgba(190, 67, 34, 0.4);
     --toast-error-color: #be4322;
-    --toast-warning-color: #ffc107;
+    --toast-error-color-dark: #863018;
+    --toast-warning-color: #ff9c07;
+    --toast-warning-color-dark: #e18904;
 
     --job-pending-color: #999;
     --job-successful-color: #35c832;

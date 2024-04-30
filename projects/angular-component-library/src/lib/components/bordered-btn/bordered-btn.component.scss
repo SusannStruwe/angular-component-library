@@ -130,7 +130,7 @@ Filling
         color: var(--accent-color);
     }
 
-    &:hover,
+    &:active,
     &.active {
         &:not([disabled]) {
             background-size: 100% 100%;
@@ -152,7 +152,7 @@ Filling
         color: var(--gray);
     }
 
-    &:hover,
+    &:active,
     &.active {
         &:not([disabled]) {
             color: var(--accent-color);
@@ -180,7 +180,8 @@ Simple hover
         color: var(--btn-color);
     }
 
-    &:active, &.active {
+    &:active, 
+    &.active {
         &:not([disabled]) {
             border-color: transparent;
             background-color: var(--accent-color-light);
@@ -193,6 +194,36 @@ Simple hover
     }
 }
 
+
+/***************************
+Inverted hover
+********************************/
+.inverted {
+    color: var(--btn-color);
+    border: var(--border-width) solid var(--btn-color);
+    background: transparent;
+
+    fa-icon {
+        color: var(--btn-color);
+    }
+
+    &:active, 
+    &.active {
+        &:not([disabled]) {
+            border-color: transparent;
+            background-color: var(--btn-color);
+            color: var(--fa-icon-color);
+
+            fa-icon {
+                color: var(--fa-icon-color);
+            }
+        }
+    }
+}
+
+/************************************
+Deleted
+**************************************/
 .delete {
     color: var(--toast-error-color);
     border: var(--border-width) solid var(--toast-error-color);
@@ -243,6 +274,33 @@ Media query to hide hover effects for devices
 that do not support them, like touch displays
 **************************************************************/
 @media (hover: hover) {
+    .filling {
+        &:hover,
+        &.active {
+            &:not([disabled]) {
+                background-size: 100% 100%;
+                color: var(--fa-icon-color);
+    
+                fa-icon {
+                    color: var(--fa-icon-color);
+                }
+            }
+        }
+    }
+    
+    .filling.gray {
+        &:hover,
+        &.active {
+            &:not([disabled]) {
+                color: var(--accent-color);
+    
+                fa-icon {
+                    color: var(--accent-color);
+                }
+            }
+        }
+    }
+
     .simple {
         &:hover,
         &.active {
@@ -258,6 +316,21 @@ that do not support them, like touch displays
         }
     }
 
+    .inverted {
+        &:hover, 
+        &.active {
+            &:not([disabled]) {
+                border-color: transparent;
+                background-color: var(--btn-color);
+                color: var(--fa-icon-color);
+    
+                fa-icon {
+                    color: var(--fa-icon-color);
+                }
+            }
+        }
+    }
+
     .delete {
         &:hover,
         &.active {
@@ -267,6 +340,20 @@ that do not support them, like touch displays
 
                 fa-icon {
                     color: var(--toast-error-color);
+                }
+            }
+        }
+    }
+    
+    .inverted.delete {
+        &:hover, 
+        &.active {
+            &:not([disabled]) {
+                background-color: var(--toast-error-color);
+                color: var(--fa-icon-color);
+
+                fa-icon {
+                    color: var(--fa-icon-color);
                 }
             }
         }
