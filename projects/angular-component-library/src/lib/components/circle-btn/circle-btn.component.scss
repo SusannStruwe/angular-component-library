@@ -6,10 +6,11 @@
 }
 
 button {
+    height: var(--btn-height);
+    width: var(--btn-height);
     position: relative;
     border: 0;
     border-radius: 50%;
-    padding: var(--btn-padding);
     margin: 5px;
     background: var(--btn-color);
     cursor: pointer;
