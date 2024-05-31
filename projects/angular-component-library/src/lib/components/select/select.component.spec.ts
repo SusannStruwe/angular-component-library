@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SelectComponent } from './select.component';
 import { By } from '@angular/platform-browser';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
-import { TranslateModule } from '@ngx-translate/core';
 import { SelectItem } from '../../model/select-item.model';
 
 
@@ -14,7 +13,7 @@ describe('SelectComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SelectComponent, TranslateModule.forRoot(), FontAwesomeTestingModule],
+            imports: [SelectComponent, FontAwesomeTestingModule],
             providers: [],
         }).compileComponents();
 

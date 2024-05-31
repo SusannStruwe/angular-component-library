@@ -11,7 +11,6 @@ import {
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { ContextMenuItem } from '../../model/context-menu-item.model';
-import { TranslateModule } from '@ngx-translate/core';
 import { ClickOutsideDirective } from '../../directives/click-outside.directive';
 
 /**
@@ -30,7 +29,7 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
 @Component({
     selector: 'context-menu-component',
     standalone: true,
-    imports: [CommonModule, FontAwesomeModule, TranslateModule, ClickOutsideDirective],
+    imports: [CommonModule, FontAwesomeModule, ClickOutsideDirective],
     templateUrl: './context-menu.component.html',
     styleUrls: ['./context-menu.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,

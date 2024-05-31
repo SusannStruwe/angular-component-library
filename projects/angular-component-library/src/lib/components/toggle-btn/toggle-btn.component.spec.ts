@@ -1,7 +1,6 @@
-import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
+import { ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing';
 import { ToggleBtnComponent } from './toggle-btn.component';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
-import { TranslateModule } from '@ngx-translate/core';
 import { By } from '@angular/platform-browser';
 
 describe('ToggleBtnComponent', () => {
@@ -12,7 +11,7 @@ describe('ToggleBtnComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [ToggleBtnComponent, TranslateModule.forRoot(), FontAwesomeTestingModule],
+            imports: [ToggleBtnComponent, FontAwesomeTestingModule],
             providers: [],
         });
 
@@ -36,7 +35,7 @@ describe('ToggleBtnComponent', () => {
     it('toggle btn label should be', () => {
         const toggleBtnText = fixture.debugElement.query(By.css('p'));
         const content = toggleBtnText.nativeElement.textContent;
-        expect(content).toBe(text);
+        expect(content).toEqual(text);
     });
 
     it('toggle btn should toggle state', fakeAsync(() => {

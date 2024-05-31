@@ -44,7 +44,7 @@
     margin: 0.5em;
 
     input{
-        width: 100%;
+        width: calc(100% - 80px);
         font-size: 1.1em;
         height: var(--input-height);
     }
@@ -56,13 +56,13 @@
     .right {
         position: absolute;
         right: 10px;
-        top: 10px;
+        top: 15px;
     }
 
     .left {
         position: absolute;
         left: 10px;
-        top: 10px;
+        top: 15px;
     }
 }
 

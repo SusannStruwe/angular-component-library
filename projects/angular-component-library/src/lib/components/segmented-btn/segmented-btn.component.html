@@ -4,14 +4,14 @@
             [class.active]="item === activeBtn"
             [disabled]="item.isDisabled"
             (click)="btnClick(item)"
-            [attr.title]="item.text | translate"
-            [attr.aria-label]="item.text | translate">
+            [attr.title]="item.text"
+            [attr.aria-label]="item.text">
             @if (item.icon) {
                 <fa-icon [icon]="item.icon"></fa-icon>
             }
             @if (item.text) {
                 <span [style.margin]="item.icon ? '0px 5px' : '0px'">
-                    {{ item.text | translate }}</span
+                    {{ item.text }}</span
                 >
             }
         </button>

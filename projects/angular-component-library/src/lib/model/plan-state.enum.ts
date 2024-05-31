@@ -1,0 +1,14 @@
+export enum PlanState {
+    UNKNOWN = 'UNKNOWN',
+    PENDING = 'PENDING',
+    RUNNING = 'RUNNING',
+    SUCCESSFUL = 'SUCCESSFUL',
+    FAILED = 'FAILED',
+    NO_VALID_PLAN_FOUND = 'NO_VALID_PLAN_FOUND',
+    CANCELLATION_PENDING = 'CANCELLATION_PENDING',
+
+    // to following states are used only in ui
+    RELEASED = 'RELEASED',
+    RELEASE_RUNNING = 'RELEASE_RUNNING',
+}
+

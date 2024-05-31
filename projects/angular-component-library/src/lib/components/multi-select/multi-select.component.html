@@ -1,15 +1,25 @@
 <div class="multi-select" (clickOutside)="handleClickOutside()">
-    <button #btn (click)="toggleFilter()" class="filter-btn">
-        @if (faIcon) {
-            <fa-icon [icon]="faIcon"></fa-icon>
-        }
+    <button 
+    #btn 
+    [attr.title]="'MultiSelect'"
+    [attr.aria-label]="'MultiSelect'"
+    [attr.aria-haspopup]="'menu'"
+    [attr.aria-expanded]="show"
+    [style.background-color]="backgroundColor"
+    (click)="toggleFilter()"
+    class="filter-btn">
+
         @if (label) {
             <span>{{ label }}</span>
+        }
+        @if (faIcon) {
+            <fa-icon [icon]="faIcon"></fa-icon>
         }
         @if (selectedItems.length !== 0) {
             <p>{{ selectedItems.length }}</p>
         }
     </button>
+
     <div
         #menu
         class="menu popup-shadow"

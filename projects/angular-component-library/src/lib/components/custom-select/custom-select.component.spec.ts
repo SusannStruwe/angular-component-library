@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CustomSelectComponent } from './custom-select.component';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
-import { TranslateModule } from '@ngx-translate/core';
 import { By } from '@angular/platform-browser';
 
 describe('CustomSelectComponent', () => {
@@ -10,7 +9,7 @@ describe('CustomSelectComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [CustomSelectComponent, TranslateModule.forRoot(), FontAwesomeTestingModule],
+            imports: [CustomSelectComponent,FontAwesomeTestingModule],
             providers: [],
         }).compileComponents();
 

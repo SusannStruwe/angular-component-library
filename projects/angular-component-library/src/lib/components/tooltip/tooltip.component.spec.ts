@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TooltipComponent } from './tooltip.component';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
-import { TranslateModule } from '@ngx-translate/core';
 import { By } from '@angular/platform-browser';
 
 describe('TooltipComponent', () => {
@@ -12,7 +11,7 @@ describe('TooltipComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [TooltipComponent, TranslateModule.forRoot(), FontAwesomeTestingModule],
+            imports: [TooltipComponent,FontAwesomeTestingModule],
             providers: [],
         });
 

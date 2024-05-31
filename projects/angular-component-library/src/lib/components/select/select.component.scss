@@ -66,9 +66,11 @@ button {
 
     // dropdown arrow design
     span:last-of-type{
-        padding: 10px 15px;
+        width: var(--btn-height);
         background: var(--accent-color);
         border-left: none;
+        align-items: center;
+        justify-content: center;
 
         &:active:not([disabled]){
           background-color: var(--accent-color-dark);
@@ -111,12 +113,11 @@ button {
     max-width: var(--max-width-select);
     height: auto;
     border-radius: 0;
-    background: var(--bg-color);
+    background: var(--menu-color);
     z-index: var(--z-index-4);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-
     &.left {
         left: 0px;
     }

@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MultiSelectComponent } from './multi-select.component';
 import { By } from '@angular/platform-browser';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
-import { TranslateModule } from '@ngx-translate/core';
 
 describe('MultiSelectComponent', () => {
     let component: MultiSelectComponent;
@@ -10,7 +9,7 @@ describe('MultiSelectComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [MultiSelectComponent, TranslateModule.forRoot(), FontAwesomeTestingModule],
+            imports: [MultiSelectComponent, FontAwesomeTestingModule],
             providers: [],
         }).compileComponents();
 

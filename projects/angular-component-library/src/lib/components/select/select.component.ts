@@ -16,7 +16,6 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { ClickOutsideDirective } from '../../directives/click-outside.directive';
 import { SelectItem } from '../../model/select-item.model';
 import { cloneDeep } from 'lodash';
-import { TranslateModule } from '@ngx-translate/core';
 import { PlanStateIconComponent } from '../plan-state-icon/plan-state-icon.component';
 import { SearchInputComponent } from '../search-input/search-input.component';
 
@@ -46,7 +45,6 @@ import { SearchInputComponent } from '../search-input/search-input.component';
         ClickOutsideDirective,
         PlanStateIconComponent,
         SearchInputComponent,
-        TranslateModule,
     ],
     templateUrl: './select.component.html',
     styleUrls: ['./select.component.scss'],

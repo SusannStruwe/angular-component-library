@@ -7,7 +7,6 @@ import {
     EventEmitter,
     Input,
     OnChanges,
-    OnInit,
     Output,
     ViewChild,
 } from '@angular/core';
@@ -52,7 +51,8 @@ export class MultiSelectComponent implements OnChanges {
     @Input() withFilter?: boolean;
     @Input() filterPlaceholder?: string;
     @Input() classStyle?: string;
-
+    @Input() backgroundColor?: string;
+    
     @Output() itemsSelected = new EventEmitter<string[]>();
 
     @ViewChild('filterInput') filterInput?: ElementRef<HTMLDivElement>;

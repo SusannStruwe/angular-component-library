@@ -1,29 +1,29 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TagBtnComponent } from './tag-btn.component';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
 import { By } from '@angular/platform-browser';
+import { NoDataComponent } from './no-data.component';
 
-describe('TagBtnComponent', () => {
-    let component: TagBtnComponent;
-    let fixture: ComponentFixture<TagBtnComponent>;
+describe('NoDataComponent', () => {
+    let component: NoDataComponent;
+    let fixture: ComponentFixture<NoDataComponent>;
 
-    const text = 'Tip';
+    const text = 'Beschreibung';
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [TagBtnComponent, FontAwesomeTestingModule],
+            imports: [NoDataComponent, FontAwesomeTestingModule],
             providers: [],
         });
 
-        fixture = TestBed.createComponent(TagBtnComponent);
+        fixture = TestBed.createComponent(NoDataComponent);
 
         component = fixture.componentInstance;
-        component.label = text;
+        component.text = text;
 
         fixture.detectChanges();
     });
 
-    it('should create tag button component', () => {
+    it('should create no data component', () => {
         expect(component).toBeTruthy();
     });
 
@@ -32,7 +32,7 @@ describe('TagBtnComponent', () => {
         expect(tagBtn).toBeTruthy();
     });
 
-    it('tag text should be', () => {
+    it('text should be', () => {
         const tagBtn = fixture.debugElement.query(By.css('span'));
         const content = tagBtn.nativeElement.textContent;
         expect(content).toBe(text);

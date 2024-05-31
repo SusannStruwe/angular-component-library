@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { FileDragNDropDirective } from '../../directives/drag-drop-file.directive';
 import { IconService } from '../../services/icon.service';
 import { ModalService } from '../../services/modal.service';
@@ -22,7 +22,7 @@ import { ModalService } from '../../services/modal.service';
 @Component({
     selector: 'dropzone-component',
     standalone: true,
-    imports: [CommonModule, FontAwesomeModule, FileDragNDropDirective, TranslateModule],
+    imports: [CommonModule, FontAwesomeModule, FileDragNDropDirective],
     templateUrl: './dropzone.component.html',
     styleUrls: ['./dropzone.component.scss'],
 })

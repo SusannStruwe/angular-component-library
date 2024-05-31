@@ -3,7 +3,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { TranslateModule } from '@ngx-translate/core';
 import { IconService } from '../../services/icon.service';
 
 
@@ -20,7 +19,7 @@ import { IconService } from '../../services/icon.service';
 @Component({
     selector: 'search-input-component',
     standalone: true,
-    imports: [CommonModule, TranslateModule, FontAwesomeModule, FormsModule],
+    imports: [CommonModule, FontAwesomeModule, FormsModule],
     templateUrl: './search-input.component.html',
     styleUrls: ['./search-input.component.scss'],
 })

@@ -12,7 +12,6 @@ import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { Platform, PlatformModule } from '@angular/cdk/platform';
-import { TranslateModule } from '@ngx-translate/core';
 import { EditMode } from '../../model/edit-mode.enum';
 import { IconService } from '../../services/icon.service';
 
@@ -34,7 +33,7 @@ import { IconService } from '../../services/icon.service';
 @Component({
     selector: 'date-time-picker-component',
     standalone: true,
-    imports: [CommonModule, FormsModule, FontAwesomeModule, PlatformModule, TranslateModule],
+    imports: [CommonModule, FormsModule, FontAwesomeModule, PlatformModule],
     templateUrl: './date-time-picker.component.html',
     styleUrls: ['./date-time-picker.component.scss'],
 })

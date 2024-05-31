@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ColorPaletteComponent } from './color-palette.component';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
-import { TranslateModule } from '@ngx-translate/core';
 import { By } from '@angular/platform-browser';
 import { ColorService } from '../../services/color.service';
 
@@ -13,7 +12,7 @@ describe('ColorPaletteComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ColorPaletteComponent, TranslateModule.forRoot(), FontAwesomeTestingModule],
+            imports: [ColorPaletteComponent, FontAwesomeTestingModule],
             providers: [ColorService],
         }).compileComponents();
 
