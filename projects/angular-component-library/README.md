@@ -64,7 +64,19 @@ After building your library with `ng build angular-component-library`, go to the
 
 Run `ng test angular-component-library` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Pack and use Lib
+
+## Link and Watch Library
+
+Run `cd dist/angular-component-library && npm link` to create a link. 
+
+Then run `ng build angular-component-library --configuration production --watch` to build library and watch on it. 
+
+The built library’s /dist folder will later be used by the demo app. --watch mode is used to hot-reload (rebuild dist folder). his means when changes are made to the library files, our demo app consuming library from the /dist folder will also get the changes.
+
+In the target project run `npm link` install the library if not already seen and then run `ng serve`.
+
+
+## Further help
 
 Run `ng build --configuration production` to build lib and run `cd dist/angular-component-library && npm pack` to pack and create lib in dist folder
 

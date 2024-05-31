@@ -17,8 +17,8 @@
                     <fa-icon [icon]="faIconBefore"></fa-icon>
                 </span>
             }
-            @if (text) {
-                <span [style.min-width.px]="50">{{ text }}</span>
+            @if (label) {
+                <span [style.min-width.px]="50">{{ label }}</span>
             }
             @if (selectedItem.text) {
                 <span class="select-text"> {{ selectedItem.text | translate }}</span>

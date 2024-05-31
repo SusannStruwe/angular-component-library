@@ -55,7 +55,7 @@ import { SearchInputComponent } from '../search-input/search-input.component';
 export class SelectComponent implements OnInit, OnChanges {
     @Input() items: SelectItem[] = [];
     @Input() selectedItem?: SelectItem;
-    @Input() text = '';
+    @Input() label = '';
     @Input() faIcon?: IconDefinition;
     @Input() faIconBefore?: IconDefinition;
     @Input() withFilter?: boolean;

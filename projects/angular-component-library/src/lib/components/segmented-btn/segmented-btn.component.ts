@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
-import { SegmentedBtnItem } from './segmented-btn.model';
+import { SegmentedBtnItem } from '../../model/segmented-btn.model';
 
 /**
  * Component to create segmented buttons.

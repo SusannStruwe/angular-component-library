@@ -3,6 +3,9 @@
         @if (faIcon) {
             <fa-icon [icon]="faIcon"></fa-icon>
         }
+        @if (label) {
+            <span>{{ label }}</span>
+        }
         @if (selectedItems.length !== 0) {
             <p>{{ selectedItems.length }}</p>
         }
