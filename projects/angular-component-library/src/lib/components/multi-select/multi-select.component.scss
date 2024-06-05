@@ -14,7 +14,7 @@
     span {
         font-weight: var(--font-weight-light);
         color: var(--fa-icon-color);
-        min-width: 50px;
+        width: max-content;
         padding-left: 0.75em;
     }
 
