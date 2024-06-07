@@ -37,6 +37,31 @@
         background-color: var(--job-running-color);
     }
 
+    &.current {
+        background-color: var(--current-color);
+    }
+
+    &.urgent {
+        background-color: var(--urgent-color);
+    }
+
+    &.frozen {
+        background-color: var(--frozen-color);
+    }
+
+    &.manual {
+        background-color: var(--manual-color);
+    }
+
+    &.free {
+        background-color: var(--free-color);
+        border: 1px solid var(--border-color);
+
+         p{
+            color: var(--text-color);
+        }
+    }
+
     &.pos-absolute {
         position: absolute;
         top: -4px;

@@ -62,11 +62,16 @@ body {
     --downtime-color: #ccc; // #cc3611;
     --collapse-background: #f3f3f3;
 
+    --current-color:#35c832;
+    --frozen-color: #9dc6ff;
+    --manual-color: #599eff;
+    --urgent-color: #f44118;
+    --free-color: #e9e9e9;
+    
     --border-color-rgb: 000, 000, 000;
     --loader-bg-rgb: 255, 255, 255;
     --border-color: #ccc;
     --border-color-light: #e4e4e4;
-    --frozen-zone-color: #9df7ff;
 
     --row-highlight-color: rgba(223, 251, 255, 0.5);
     --header-bg-color: rgb(000, 000, 000, 0.03);

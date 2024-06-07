@@ -20,6 +20,7 @@ import { Component, Input } from '@angular/core';
 })
 export class BadgeComponent {
     @Input() label: string | number = '';
+    @Input() borderRadius: number = 0;
     @Input() classStyle?: string;
     @Input() isDisabled? = false;
 }
