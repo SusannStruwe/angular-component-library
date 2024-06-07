@@ -43,6 +43,7 @@
 
     &.urgent {
         background-color: var(--urgent-color);
+        border: 1px solid white;
     }
 
     &.frozen {
