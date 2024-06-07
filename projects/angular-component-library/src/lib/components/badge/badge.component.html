@@ -2,6 +2,7 @@
     class="badge" 
     [attr.aria-label]="label" 
     [ngClass]="classStyle ?? ''"
+    [style.border-radius.px]="borderRadius"
     [class.disabled]="isDisabled">
     <p>{{ label }}</p>
 </div>
