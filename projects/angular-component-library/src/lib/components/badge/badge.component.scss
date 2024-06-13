@@ -37,31 +37,56 @@
         background-color: var(--job-running-color);
     }
 
+    /** task states ***/
     &.current {
         background-color: var(--current-color);
+        p{
+           font-weight: var(--font-weight-bold);
+           text-transform: uppercase;
+           color: var(--current-color-dark);
+        }
     }
 
     &.urgent {
         background-color: var(--urgent-color);
         border: 1px solid white;
+        p{
+            font-weight: var(--font-weight-bold);
+            text-transform: uppercase;
+            color: var(--urgent-color-dark);
+        }
     }
 
     &.frozen {
         background-color: var(--frozen-color);
+        p{
+            font-weight: var(--font-weight-bold);
+            text-transform: uppercase;
+            color: var(--frozen-color-dark);
+        }
     }
 
     &.manual {
         background-color: var(--manual-color);
+        p{
+            font-weight: var(--font-weight-bold);
+            text-transform: uppercase;
+            color: var(--manual-color-dark);
+        }
     }
 
     &.free {
         background-color: var(--free-color);
         border: 1px solid var(--border-color);
 
-         p{
-            color: var(--text-color);
+        p{
+            font-weight: var(--font-weight-bold);
+            text-transform: uppercase;
+            color: var(--free-color);
         }
     }
+
+
 
     &.pos-absolute {
         position: absolute;
