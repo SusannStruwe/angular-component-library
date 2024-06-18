@@ -4,7 +4,6 @@
 :host {
     display: inline-flex;
     align-items: center;
-    height: var(--badge-height);
     box-sizing: border-box;
 }
 
@@ -12,6 +11,9 @@
     padding: 0.7em 1em;
     border-radius: var(--badge-radius);
     background-color: var(--not-emphrazed-color);
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
 
     p {
         font-weight: var(--font-weight-medium);
@@ -35,6 +37,21 @@
     
     &.running {
         background-color: var(--job-running-color);
+    }
+
+    &.changes{
+        background-color: var(--job-failed-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(var(--btn-height) - 15px);
+        height: calc(var(--btn-height) - 15px);
+        box-sizing: border-box;
+        padding: 0.4em;
+        position: relative;
+        margin: auto;
     }
 
     /** task states ***/
@@ -84,9 +101,11 @@
             text-transform: uppercase;
             color: var(--free-color-dark);
         }
+
+        fa-icon{
+            color: var(--free-color-dark);
+        }
     }
-
-
 
     &.pos-absolute {
         position: absolute;
