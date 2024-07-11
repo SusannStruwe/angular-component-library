@@ -126,6 +126,12 @@
             padding: 0px;
         }
 
+        &.s {
+            padding: 4px;
+            display: flex;
+            justify-content: center;
+        }
+
         &.event{
             top: -4px;
             right: -1px;
