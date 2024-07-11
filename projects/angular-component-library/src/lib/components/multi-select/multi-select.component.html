@@ -18,6 +18,7 @@
         [ngClass]="alignmentLeft() ? 'left' : 'right'">
         @if (withFilter) {
             <search-input-component
+                [style.margin.em]="'0.5'"
                 [classStyle]="'full-width'"
                 [placeholderText]="filterPlaceholder"
                 [(filter)]="filter"
