@@ -24,7 +24,6 @@ button {
     height: var(--btn-height);
     min-width: var(--btn-height);
     line-height: var(--btn-height);
-    border: 0;
     font-weight: var(--font-weight-light);
     font-size: var(--font-size);
     padding: 0px;
@@ -176,7 +175,7 @@ button {
             user-select: none;
             padding: 0.25em 0.5em 0.25em 0.75em;
             color: var(--text-color);
-            border-bottom: 1px solid rgb(var(--border-color), 0.2);
+            border-bottom: 1px solid rgb(var(--border-color-rgb), 0.2);
             text-align: left;
             box-sizing: border-box;
             overflow: hidden;
@@ -308,6 +307,60 @@ button {
 
     .menu {
         top: calc(var(--navbar-height) + 5px);
+    }
+}
+
+
+.scheduler {
+
+    button {
+        border: var(--border-width) solid var(--btn-color);
+
+        span {
+            color: var(--btn-color);
+        }
+
+        .select-text{
+            width: 100%;
+        }
+
+        span:last-of-type{
+            padding: 10px 15px;
+            background: var(--fa-icon-color);
+            border-left: none;
+
+            &:active:not([disabled]){
+                background-color: var(--accent-color-dark);
+            }
+        }
+
+        fa-icon {
+            color: var(--btn-color);
+        }
+
+
+        // complete button design
+        &:hover,
+        &.active {
+            border-color: var(--accent-color-light);
+
+            span:last-of-type{
+                background-color: var(--accent-color-light);
+                
+                fa-icon{
+                    color: var(--accent-color);
+                }
+            }
+        
+            ::ng-deep {
+                .successful,
+                .released,
+                .failed,
+                .pending {
+                    color: var(--accent-color);
+                }
+            }
+        }
     }
 }
 
