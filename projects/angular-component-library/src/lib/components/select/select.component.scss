@@ -161,6 +161,7 @@ button {
         padding: 0px;
         margin: 0px;
         max-height: 500px;
+        width: 100%;
         overflow-y: auto;
         border-top: 1px solid var(--border-color);
 
@@ -286,7 +287,6 @@ button {
         }
 
         span:first-of-type {
-            line-height: calc((var(--btn-height) / 2) + 5px);
             overflow: hidden;
             word-break: break-all;
         }
@@ -300,14 +300,14 @@ button {
             }
         }
 
-        .select-text{
-            line-height: calc((var(--btn-height) / 2) + 5px);
-        }
-
         &:disabled {
             opacity: 0.5;
             cursor: not-allowed;
         }
+    }
+
+    .menu {
+        top: calc(var(--navbar-height) + 5px);
     }
 }
 

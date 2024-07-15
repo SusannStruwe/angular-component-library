@@ -1,4 +1,4 @@
-export enum JobStatusState {
+export enum PlanState {
     UNKNOWN = 'UNKNOWN',
     PENDING = 'PENDING',
     RUNNING = 'RUNNING',
