@@ -1,5 +1,12 @@
 # Changelog 
 
+## Version  1.0.2
+
+### Maintain
+
+-   Updated dependencies
+-   Small design updates
+
 
 ## Version  1.0.1
 
