@@ -6,7 +6,7 @@
     [class.active]="isActive">
 
     @if (faIcon && showIcon) {
-        <fa-icon [icon]="faIcon" [spin]="isSpinning"></fa-icon>
+        <fa-icon [icon]="faIcon" [animation]="isSpinning ? 'spin' : undefined"></fa-icon>
     }
 
     @if (label) {
