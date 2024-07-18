@@ -28,15 +28,15 @@ export class PlanStateIconComponent {
 
     planState: typeof PlanState = PlanState;
 
-    faStar: IconDefinition;
     faCircleExclamation: IconDefinition;
     faCircleCheck: IconDefinition;
     faClock: IconDefinition;
+    faGlobe: IconDefinition;
 
     constructor(private iconService: IconService) {
-        this.faStar = this.iconService.faStar;
         this.faCircleExclamation = this.iconService.faCircleExclamation;
         this.faCircleCheck = this.iconService.faCircleCheck;
         this.faClock = this.iconService.faClock;
+        this.faGlobe = this.iconService.faGlobe;
     }
 }

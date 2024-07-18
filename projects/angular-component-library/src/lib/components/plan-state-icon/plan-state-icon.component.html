@@ -1,24 +1,10 @@
 <!-- release state -->
 @if (state === planState.RELEASED) {
-    <div class="released">
-        <span class="star">
-            <fa-icon [icon]="faStar"> </fa-icon>
-        </span>
-        <span>
-            <fa-icon class="successful" [icon]="faCircleCheck"> </fa-icon>
-        </span>
-    </div>
+    <fa-icon class="released" [icon]="faGlobe"> </fa-icon>
 }
 <!-- release running state -->
 @if (state === planState.RELEASE_RUNNING) {
-    <div class="release-running">
-        <span class="star">
-            <fa-icon [icon]="faStar"> </fa-icon>
-        </span>
-        <span>
-            <fa-icon class="successful" [icon]="faCircleCheck"> </fa-icon>
-        </span>
-    </div>
+    <fa-icon class="pending" [icon]="faGlobe"> </fa-icon>
 }
 <!-- successful state -->
 @if (state === planState.SUCCESSFUL) {

@@ -24,24 +24,6 @@ CSS Variables -> --gray for changing theme
     color: var(--job-failed-color);
 }
 
-.released, .release-running {
-    position: relative;
-
-    span.star {
-        position: absolute;
-        top: -5px;
-        left: 10px;
-
-        fa-icon {
-            color: var(--toast-warning-color);
-        }
-    }
-}
-
-.release-running{
-    span.star {
-        fa-icon {
-            color: var(--job-running-color);
-        }
-    }
+.released{
+    color: var(--accent-color);
 }

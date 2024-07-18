@@ -1,20 +1,33 @@
-
-<div
-    class="flex"
-    (clickOutside)="handleClickOutside()"
-    [ngClass]="[show ? 'selected' : '', classStyle ?? '']">
-    <button
-        #btn
-        [ngClass]="[show ? 'selected' : '', classStyle ?? '']"
-        [attr.title]="'Select'"
-        [attr.aria-label]="'Select'"
-        [attr.aria-haspopup]="'menu'"
-        [attr.aria-expanded]="show"
-        (click)="toggleMenu()">
-
-        @if (faIconBefore) {
-            <span class="icon-before">
-                <fa-icon [icon]="faIconBefore"></fa-icon>
+@if (selectedItem) {
+    <div
+        class="flex"
+        (clickOutside)="handleClickOutside()"
+        [ngClass]="[show ? 'selected' : '', classStyle ?? '']">
+        <button
+            id="select-component"
+            #btn
+            [ngClass]="[show ? 'selected' : '', classStyle ?? '']"
+            [attr.title]="'Select'"
+            [attr.aria-label]="'Select'"
+            [attr.aria-haspopup]="'menu'"
+            [attr.aria-expanded]="show"
+            (click)="toggleMenu()">
+            
+            @if (faIconBefore) {
+                <span class="icon-before">
+                    <fa-icon [icon]="faIconBefore"></fa-icon>
+                </span>
+            }
+            @if (label) {
+                <span [style.min-width.px]="50">{{ label }}</span>
+            }
+            @if (selectedItem.text) {
+                <span class="select-text"> {{ selectedItem.text | translate }}</span>
+            }
+            <span>
+                @if (faIcon) {
+                    <fa-icon [icon]="faIcon"> </fa-icon>
+                }
             </span>
         }
         @if (label) {

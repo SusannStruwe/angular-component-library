@@ -4,7 +4,6 @@
 :host {
     display: inline-flex;
     align-items: center;
-    height: var(--badge-height);
     box-sizing: border-box;
 }
 
@@ -12,6 +11,9 @@
     padding: 0.7em 1em;
     border-radius: var(--badge-radius);
     background-color: var(--not-emphrazed-color);
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
 
     p {
         font-weight: var(--font-weight-medium);
@@ -20,6 +22,38 @@
         padding: 0px;
         line-height: 10px;
     }
+
+    &.pos-absolute {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        line-height: 9px;
+        background-color: var(--job-failed-color);
+        color: var(--fa-icon-color);
+        font-weight: var(--font-weight-medium);
+        padding: 2px;
+        z-index: 1500;
+
+        &.xs {
+            top: 1px;
+            padding: 0px;
+        }
+
+        &.s {
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+        }
+
+        &.event{
+            top: -4px;
+            right: -1px;
+            padding: 0px;
+        }
+      }
 
     &.success {
         background-color: var(--job-successful-color);
@@ -37,56 +71,73 @@
         background-color: var(--job-running-color);
     }
 
+    &.changes{
+        background-color: var(--job-failed-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(var(--btn-height) - 15px);
+        height: calc(var(--btn-height) - 15px);
+        box-sizing: border-box;
+        padding: 0.4em;
+        position: relative;
+        margin: auto;
+    }
+
+    /** task states ***/
     &.current {
         background-color: var(--current-color);
+        p{
+           font-weight: var(--font-weight-bold);
+           text-transform: uppercase;
+           color: var(--current-color-dark);
+        }
     }
 
     &.urgent {
         background-color: var(--urgent-color);
+        border: 1px solid white;
+        p{
+            font-weight: var(--font-weight-bold);
+            text-transform: uppercase;
+            color: var(--urgent-color-dark);
+        }
     }
 
     &.frozen {
         background-color: var(--frozen-color);
+        p{
+            font-weight: var(--font-weight-bold);
+            text-transform: uppercase;
+            color: var(--frozen-color-dark);
+        }
     }
 
     &.manual {
         background-color: var(--manual-color);
+        p{
+            font-weight: var(--font-weight-bold);
+            text-transform: uppercase;
+            color: var(--manual-color-dark);
+        }
     }
 
     &.free {
         background-color: var(--free-color);
         border: 1px solid var(--border-color);
 
-         p{
-            color: var(--text-color);
+        p{
+            font-weight: var(--font-weight-bold);
+            text-transform: uppercase;
+            color: var(--free-color-dark);
+        }
+
+        fa-icon{
+            color: var(--free-color-dark);
         }
     }
-
-    &.pos-absolute {
-        position: absolute;
-        top: -4px;
-        right: -4px;
-        border-radius: 50%;
-        width: 10px;
-        height: 10px;
-        line-height: 9px;
-        background-color: var(--job-failed-color);
-        color: var(--fa-icon-color);
-        font-weight: var(--font-weight-medium);
-        padding: 2px;
-        z-index: 1500;
-
-        &.xs {
-            top: 1px;
-            padding: 0px;
-        }
-
-        &.event{
-            top: -4px;
-            right: -1px;
-            padding: 0px;
-        }
-      }
 }
 
 .disabled {

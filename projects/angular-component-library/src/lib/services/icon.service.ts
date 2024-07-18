@@ -51,7 +51,16 @@ import {
     faRightFromBracket,
     faArrowDown,
     faArrowRight,
-    faCircleMinus
+    faCircleMinus,
+    faCodeBranch,
+    faGlobe,
+    faUserGroup,
+    faChartGantt,
+    faTable,
+    faClockRotateLeft,
+    faTriangleExclamation,
+    faCircleRight,
+    faPlay
 } from '@fortawesome/free-solid-svg-icons';
 import {
     faSquarePlus,
@@ -59,7 +68,8 @@ import {
     faSquareCheck,
     faCircleCheck,
     faClock,
-    faCopy
+    faCopy,
+    faCirclePause
 } from '@fortawesome/free-regular-svg-icons';
 
 /**
@@ -116,17 +126,28 @@ export class IconService {
     faPalette: IconDefinition = faPalette;
     faGauge: IconDefinition = faGauge;
     faUsers: IconDefinition = faUsers;
+
     faClipboardList: IconDefinition = faClipboardList;
     faMagnifyingGlassChart: IconDefinition = faMagnifyingGlassChart;
     faLanguage: IconDefinition = faLanguage;
     faRightFromBracket: IconDefinition = faRightFromBracket;
     faArrowDown: IconDefinition = faArrowDown;
+    faBranch: IconDefinition = faCodeBranch;
+    faGlobe: IconDefinition = faGlobe;
+    faChartGantt: IconDefinition = faChartGantt;
+    faUserGroup: IconDefinition = faUserGroup;
+    faTable: IconDefinition = faTable;
+    faCircleRight: IconDefinition = faCircleRight;
+    faTriangleExclamation: IconDefinition = faTriangleExclamation;
+    faClockRotateLeft: IconDefinition = faClockRotateLeft;
+    faPlay: IconDefinition = faPlay;
 
     // free regular
     faSquarePlus: IconDefinition = faSquarePlus;
     faSquare: IconDefinition = faSquare;
     faSquareCheck: IconDefinition = faSquareCheck;
     faCircleCheck: IconDefinition = faCircleCheck;
+    faCirclePause: IconDefinition = faCirclePause;
     faClock: IconDefinition = faClock;
     faCopy: IconDefinition = faCopy;
 }
