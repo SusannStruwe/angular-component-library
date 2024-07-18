@@ -4,7 +4,10 @@ import {
     ChangeDetectorRef,
     Component,
     ElementRef,
+    EventEmitter,
+    Input,
     OnInit,
+    Output,
     ViewChild,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -44,7 +47,9 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CustomSelectComponent implements OnInit {
-    show = false;
+    @Input() show? = false;
+
+    @Output() showChange = new EventEmitter<boolean>();
 
     @ViewChild('btn') btn?: ElementRef<HTMLDivElement>;
     @ViewChild('menu') menu?: ElementRef<HTMLDivElement>;
@@ -57,6 +62,7 @@ export class CustomSelectComponent implements OnInit {
 
     toggleFilter(): void {
         this.show = !this.show;
+        this.showChange.emit(this.show);
     }
 
     getBtnHeight(): number {
@@ -84,6 +90,7 @@ export class CustomSelectComponent implements OnInit {
     handleClickOutside(): void {
         if (this.show) {
             this.show = !this.show;
+            this.showChange.emit(this.show);
         }
     }
 }

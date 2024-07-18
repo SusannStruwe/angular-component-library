@@ -4,10 +4,11 @@
     [attr.aria-label]="ariaLabel"
     [disabled]="isDisabled"
     [class.active]="isActive">
-    
-    @if (faIcon) {
+
+    @if (faIcon && showIcon) {
         <fa-icon [icon]="faIcon" [spin]="isSpinning"></fa-icon>
     }
+
     @if (label) {
         <span>{{ label }}</span>
     }

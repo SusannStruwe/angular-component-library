@@ -30,9 +30,12 @@ export class FilledBtnComponent {
 
     @Input() faIcon?: IconDefinition;
 
-    @Input() isDisabled?: boolean;
+    @Input() showIcon = true;
     // example --> spin or not
     @Input() isSpinning = false;
+    
+    @Input() isDisabled?: boolean;
+
     // example --> active or not
     @Input() isActive?: boolean;
 
