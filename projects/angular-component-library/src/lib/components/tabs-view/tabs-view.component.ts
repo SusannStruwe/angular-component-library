@@ -7,7 +7,6 @@ import {
     QueryList,
 } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { TranslateModule } from '@ngx-translate/core';
 import { TabComponent } from './tab/tab.component';
 import { TooltipDirective } from '../../directives/tooltip.directive';
 
@@ -33,7 +32,7 @@ import { TooltipDirective } from '../../directives/tooltip.directive';
 @Component({
     selector: 'tabs-view-component',
     standalone: true,
-    imports: [FontAwesomeModule, TranslateModule, TooltipDirective],
+    imports: [FontAwesomeModule, TooltipDirective],
     templateUrl: './tabs-view.component.html',
     styleUrls: ['./tabs-view.component.scss'],
 })

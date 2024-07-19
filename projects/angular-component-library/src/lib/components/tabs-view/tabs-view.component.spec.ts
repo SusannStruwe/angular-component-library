@@ -3,7 +3,7 @@ import { TabsViewComponent } from './tabs-view.component';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
 import { TabComponent } from './tab/tab.component';
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+
 
 @Component({
     selector: 'tabs-view-mock-component',
@@ -23,7 +23,6 @@ describe('TabsViewComponent', () => {
             declarations: [TabsViewMockComponent],
             imports: [
                 TabsViewComponent,
-                TranslateModule.forRoot(),
                 FontAwesomeTestingModule,
                 TabComponent,
             ],

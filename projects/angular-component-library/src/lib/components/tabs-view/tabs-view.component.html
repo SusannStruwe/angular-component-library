@@ -3,8 +3,8 @@
         @for (tab of tabs; track tab) {
             <li (click)="selectTab(tab)" 
             [class.active]="tab.active"
-            [tooltip]="tab.tooltip | translate">
-                {{ tab.tabTitle | translate }}
+            [tooltip]="tab.tooltip">
+                {{ tab.tabTitle }}
             </li>
         }
     </ul>

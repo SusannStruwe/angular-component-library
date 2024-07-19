@@ -10,7 +10,6 @@ import {
     Output,
     ViewChild,
 } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { ClickOutsideDirective } from '../../directives/click-outside.directive';
@@ -18,7 +17,7 @@ import { SelectItem } from '../../model/select-item.model';
 import { cloneDeep } from 'lodash';
 import { PlanStateIconComponent } from '../plan-state-icon/plan-state-icon.component';
 import { SearchInputComponent } from '../search-input/search-input.component';
-import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
 
 
 /**
@@ -46,7 +45,6 @@ import { TranslateModule } from '@ngx-translate/core';
         ClickOutsideDirective,
         PlanStateIconComponent,
         SearchInputComponent,
-        TranslateModule,
     ],
     templateUrl: './select.component.html',
     styleUrls: ['./select.component.scss'],

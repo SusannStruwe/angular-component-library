@@ -10,12 +10,11 @@ import {
     Output,
     ViewChild,
 } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { TranslateModule } from '@ngx-translate/core';
 import { SearchInputComponent } from '../search-input/search-input.component';
 import { ClickOutsideDirective } from '../../directives/click-outside.directive';
+import { FormsModule } from '@angular/forms';
 
 /**
  * Component to create and show  select
@@ -37,7 +36,6 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
         FontAwesomeModule,
         FormsModule,
         ClickOutsideDirective,
-        TranslateModule,
         SearchInputComponent,
     ],
     templateUrl: './multi-select.component.html',

@@ -21,7 +21,7 @@
                 <span [style.min-width.px]="50">{{ label }}</span>
             }
             @if (selectedItem.text) {
-                <span class="select-text"> {{ selectedItem.text | translate }}</span>
+                <span class="select-text"> {{ selectedItem.text }}</span>
             }
             <span>
                 @if (faIcon) {
@@ -65,7 +65,7 @@
                         @if (item.icon && !item.planState) {
                             <fa-icon [icon]="item.icon"></fa-icon>
                         }
-                        <span class="text">{{ item.text | translate }}</span>
+                        <span class="text">{{ item.text }}</span>
                         @if (item.localTimestamp) {
                             <small>[{{ item.localTimestamp }}]</small>
                         }
