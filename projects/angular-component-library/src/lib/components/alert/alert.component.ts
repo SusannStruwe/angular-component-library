@@ -2,14 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
-    faBan,
-    faCircleCheck,
-    faCircleExclamation,
-    faTriangleExclamation,
-    faXmark,
+    IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
 import { AlertType } from '../../model/alert-type.enum';
 import { RouterModule } from '@angular/router';
+import { IconService } from '../../services/icon.service';
 
 
 /**
@@ -46,11 +43,19 @@ export class AlertComponent {
     //with 'Change' add the end you can realize two-way-binding
     @Output() visibleStateChange = new EventEmitter<boolean>();
 
-    faErrorIcon = faBan;
-    faWarningIcon = faTriangleExclamation;
-    faSuccessIcon = faCircleCheck;
-    faInfoIcon = faCircleExclamation;
-    faClose = faXmark;
+    faErrorIcon: IconDefinition;
+    faWarningIcon: IconDefinition;
+    faSuccessIcon: IconDefinition;
+    faInfoIcon: IconDefinition;
+    faClose: IconDefinition;
+
+    constructor(private iconService: IconService){
+        this.faErrorIcon = this.iconService.faError;
+        this.faWarningIcon = this.iconService.faWarning;
+        this.faSuccessIcon = this.iconService.faSuccess;
+        this.faInfoIcon = this.iconService.faInfo
+        this.faClose = this.iconService.faXmark;
+    }
 
     removeAlert(): void {
         this.visibleState = false;
