@@ -142,6 +142,11 @@ export class IconService {
     faClockRotateLeft: IconDefinition = faClockRotateLeft;
     faPlay: IconDefinition = faPlay;
 
+    faError: IconDefinition = faCircleXmark;
+    faWarning: IconDefinition = faCircleExclamation;
+    faInfo: IconDefinition = faCircleExclamation;
+    faSuccess: IconDefinition = faCircleCheck;
+
     // free regular
     faSquarePlus: IconDefinition = faSquarePlus;
     faSquare: IconDefinition = faSquare;

@@ -31,7 +31,7 @@
         width: 10px;
         height: 10px;
         line-height: 9px;
-        background-color: var(--job-failed-color);
+        background-color: var(--modified-data-color);
         color: var(--fa-icon-color);
         font-weight: var(--font-weight-medium);
         padding: 2px;
@@ -72,7 +72,7 @@
     }
 
     &.changes{
-        background-color: var(--job-failed-color);
+        background-color: var(--modified-data-color);
         color: white;
         border-radius: 50%;
         display: flex;
@@ -90,7 +90,7 @@
     &.current {
         background-color: var(--current-color);
         p{
-           font-weight: var(--font-weight-bold);
+           font-weight: var(--font-weight-semibold);
            text-transform: uppercase;
            color: var(--current-color-dark);
         }
@@ -100,7 +100,7 @@
         background-color: var(--urgent-color);
         border: 1px solid white;
         p{
-            font-weight: var(--font-weight-bold);
+            font-weight: var(--font-weight-semibold);
             text-transform: uppercase;
             color: var(--urgent-color-dark);
         }
@@ -109,7 +109,7 @@
     &.frozen {
         background-color: var(--frozen-color);
         p{
-            font-weight: var(--font-weight-bold);
+            font-weight: var(--font-weight-semibold);
             text-transform: uppercase;
             color: var(--frozen-color-dark);
         }
@@ -118,7 +118,7 @@
     &.manual {
         background-color: var(--manual-color);
         p{
-            font-weight: var(--font-weight-bold);
+            font-weight: var(--font-weight-semibold);
             text-transform: uppercase;
             color: var(--manual-color-dark);
         }
@@ -129,7 +129,7 @@
         border: 1px solid var(--border-color);
 
         p{
-            font-weight: var(--font-weight-bold);
+            font-weight: var(--font-weight-semibold);
             text-transform: uppercase;
             color: var(--free-color-dark);
         }
