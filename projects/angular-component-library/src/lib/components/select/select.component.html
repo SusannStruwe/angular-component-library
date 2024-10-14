@@ -20,8 +20,8 @@
             @if (label) {
                 <span [style.min-width.px]="50">{{ label }}</span>
             }
-            @if (selectedItem.text) {
-                <span class="select-text"> {{ selectedItem.text | translate }}</span>
+            @if (selectedItem.text || selectedItem.displayBtnText) {
+                <span class="select-text"> {{ selectedItem.displayBtnText ?? selectedItem.text }}</span>
             }
             <span>
                 @if (faIcon) {
@@ -53,22 +53,16 @@
                     <li
                         (click)="selectElement(item)"
                         [ngClass]="
-                            (item.icon || item.planState) && item.localTimestamp ? 'grid' : 'flex'
+                            item.icon && item.localTimestamp ? 'grid' : 'flex'
                         "
                         [class.active]="
                             item.text === selectedItem.text &&
                             item.localTimestamp === selectedItem.localTimestamp
                         ">
-                        @if (item.planState) {
-                            <plan-state-icon [state]="item.planState"></plan-state-icon>
-                        }
-                        @if (item.icon && !item.planState) {
+                        @if (item.icon) {
                             <fa-icon [icon]="item.icon"></fa-icon>
                         }
-                        <span class="text">{{ item.text | translate }}</span>
-                        @if (item.localTimestamp) {
-                            <small>[{{ item.localTimestamp }}]</small>
-                        }
+                        <span class="text">{{ item.text }}</span>
                     </li>
                 }
             </ul>

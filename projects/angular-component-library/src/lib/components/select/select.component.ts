@@ -17,7 +17,6 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
 import { SelectItem } from '../../model/select-item.model';
 import { cloneDeep } from 'lodash';
 import { TranslateModule } from '@ngx-translate/core';
-import { PlanStateIconComponent } from '../plan-state-icon/plan-state-icon.component';
 import { SearchInputComponent } from '../search-input/search-input.component';
 
 
@@ -44,7 +43,6 @@ import { SearchInputComponent } from '../search-input/search-input.component';
         FontAwesomeModule,
         FormsModule,
         ClickOutsideDirective,
-        PlanStateIconComponent,
         SearchInputComponent,
         TranslateModule,
     ],
@@ -63,7 +61,9 @@ export class SelectComponent implements OnInit, OnChanges {
     @Input() classStyle?: string;
     @Input() withBlankOption = false;
     @Input() withDeselect = true;
+    @Input() show? = false;
 
+    @Output() showChange = new EventEmitter<boolean>();
     @Output() itemSelected = new EventEmitter<SelectItem>();
 
     @ViewChild('filterInput') filterInput?: ElementRef<HTMLDivElement>;
@@ -72,7 +72,6 @@ export class SelectComponent implements OnInit, OnChanges {
 
     itemsBefore: SelectItem[] = [];
     filter = '';
-    show = false;
 
     ngOnInit(): void {
         this.itemsBefore = cloneDeep(this.items);
@@ -92,6 +91,7 @@ export class SelectComponent implements OnInit, OnChanges {
      */
     toggleMenu(): void {
         this.show = !this.show;
+        this.showChange.emit(this.show);
     }
 
     /**
@@ -117,6 +117,7 @@ export class SelectComponent implements OnInit, OnChanges {
     handleClickOutside(): void {
         if (this.show) {
             this.show = !this.show;
+            this.showChange.emit(this.show);
         }
     }
 
@@ -140,6 +141,7 @@ export class SelectComponent implements OnInit, OnChanges {
 
             if (this.show) {
                 this.show = !this.show;
+                this.showChange.emit(this.show);
             }
         }
     }
@@ -152,8 +154,10 @@ export class SelectComponent implements OnInit, OnChanges {
         if (this.selectedItem) {
             this.selectedItem.text = '';
             this.itemSelected.emit(this.selectedItem);
+            
             if (this.show) {
                 this.show = !this.show;
+                this.showChange.emit(this.show);
             }
         }
     }
