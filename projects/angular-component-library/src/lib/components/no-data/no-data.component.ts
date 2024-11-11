@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { TranslateModule } from '@ngx-translate/core';
 import { IconService } from '../../services/icon.service';
 
 /**
@@ -16,12 +17,12 @@ import { IconService } from '../../services/icon.service';
 @Component({
     selector: 'no-data-component',
     standalone: true,
-    imports: [FontAwesomeModule],
+    imports: [FontAwesomeModule, TranslateModule],
     templateUrl: './no-data.component.html',
     styleUrls: ['./no-data.component.scss']
 })
 export class NoDataComponent {
-    @Input() text = '';
+    @Input() translationKey = 'general.noData';
 
     faCircleInfo: IconDefinition;
 
