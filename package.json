@@ -11,6 +11,7 @@
     "pack:lib": "cd dist/angular-component-library && npm pack",
     "link:lib": "cd dist/angular-component-library && npm link",
     "test": "ng test",
+    "update:devkit": "ng update @angular-devkit/build-angular@18",
     "update:angular": "ng update @angular/cli @angular/core",
     "update:angular/cdk": "ng update @angular/cdk @ngx-translate/core",
     "update:fortawesome": "ng update @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons",
