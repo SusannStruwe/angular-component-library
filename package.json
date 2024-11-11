@@ -11,11 +11,11 @@
     "pack:lib": "cd dist/angular-component-library && npm pack",
     "link:lib": "cd dist/angular-component-library && npm link",
     "test": "ng test",
-    "update:devkit": "ng update @angular-devkit/build-angular@18",
+    "update:devkit": "ng update @angular-devkit/build-angular",
     "update:angular": "ng update @angular/cli @angular/core",
     "update:angular/cdk": "ng update @angular/cdk @ngx-translate/core",
     "update:fortawesome": "ng update @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons",
-    "update:util": "ng update date-fns @types/lodash.clonedeep lodash.clonedeep rxjs tslib zone.js",
+    "update:util": "ng update date-fns @types/lodash.clonedeep lodash.clonedeep rxjs tslib",
     "update:karma": "ng update karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter"
   },
   "private": true,
@@ -36,10 +36,10 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@ngx-translate/core": "^16.0.3",
     "@types/lodash.clonedeep": "^4.5.9",
-    "date-fns": "^3.6.0",
+    "date-fns": "^4.1.0",
     "lodash.clonedeep": "^4.5.0",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
+    "tslib": "^2.8.1",
     "zone.js": "~0.14.10"
   },
   "devDependencies": {
