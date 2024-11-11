@@ -365,6 +365,37 @@ button {
     }
 }
 
+
+.sidebar {
+    @extend .scheduler;
+
+    button {
+        border: none;
+
+        span:last-of-type{     
+            background: transparent;
+        }
+
+        &:hover,
+        &.active {
+            background-color: var(--accent-color-light);
+            color: var(--accent-color);
+    
+            span:last-of-type{     
+                background-color: var(--accent-color-light);
+    
+                fa-icon{
+                    color: var(--accent-color);
+                }
+
+                &:active:not([disabled]){
+                    background-color: var(--accent-color-light);
+                }
+            }
+        }
+    }
+}
+
 /************************************************
 Media query to add hover only on device which support hover
 *********************************************/

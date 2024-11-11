@@ -25,7 +25,7 @@ import { CommonModule } from '@angular/common';
     styleUrls: ['./toggle-btn.component.scss'],
 })
 export class ToggleBtnComponent {
-    @Input() label = '';
+    @Input() label?: string;
     @Input() checked = true;
     @Input() isDisabled = false;
     @Input() classStyle?: string;

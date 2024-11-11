@@ -60,7 +60,8 @@ import {
     faClockRotateLeft,
     faTriangleExclamation,
     faCircleRight,
-    faPlay
+    faPlay,
+    faCaretRight
 } from '@fortawesome/free-solid-svg-icons';
 import {
     faSquarePlus,
@@ -141,6 +142,7 @@ export class IconService {
     faTriangleExclamation: IconDefinition = faTriangleExclamation;
     faClockRotateLeft: IconDefinition = faClockRotateLeft;
     faPlay: IconDefinition = faPlay;
+    faCaretRight: IconDefinition = faCaretRight;
 
     faError: IconDefinition = faCircleXmark;
     faWarning: IconDefinition = faCircleExclamation;

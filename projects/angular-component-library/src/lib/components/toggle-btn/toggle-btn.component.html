@@ -1,6 +1,9 @@
-<p [ngClass]="classStyle">{{ label }}</p>
+@if(label) {
+    <p [ngClass]="classStyle">{{ label }} </p>
+}
 
 <div class="toggle"
+    [style.margin-left.em]="label ? '0.25' : '0'"
     [class.disabled]="isDisabled">
     <input 
         id="toggle-btn-{{randomId}}"
@@ -10,5 +13,5 @@
         [(ngModel)]="checked" 
         (ngModelChange)="toggleState()" />
     <div class="slider"></div>
-    <div class="layer"></div>
+    <div class="layer" [class.active]="checked"></div>
 </div>
