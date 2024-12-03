@@ -67,9 +67,12 @@ export class MultiSelectComponent implements OnChanges {
 
     constructor(private changedDetectorRef: ChangeDetectorRef) {}
 
+
     ngOnChanges() {
+        this.selectedItems = [];
         this.itemsBefore = JSON.parse(JSON.stringify(this.items));
     }
+
 
     /**
      * Toggle show state of menu

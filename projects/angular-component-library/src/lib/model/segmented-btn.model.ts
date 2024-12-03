@@ -5,6 +5,7 @@ export class SegmentedBtnItem {
         public text: string,
         public value: string,
         public isDisabled: boolean,
+        public onlyIcons?: boolean,
         public icon?: IconProp,
     ) {}
 }

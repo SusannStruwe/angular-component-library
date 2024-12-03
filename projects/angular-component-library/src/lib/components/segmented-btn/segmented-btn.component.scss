@@ -1,44 +1,33 @@
 @import '../../../../assets/styles';
 
+
 :host {
-    display: inline-block;
+    display: flex;
+    border: var(--border-width) solid var(--btn-color);
+    border-radius: var(--border-radius);
 }
 
 button {
     position: relative;
-    height: var(--btn-height);
-    line-height: var(--btn-height);
+    margin: 2px;
+    height: calc(var(--btn-height) - 4px);
+    line-height: calc(var(--btn-height) - 4px);
     padding: var(--btn-padding);
-    border-left: var(--border-width) solid var(--accent-color);
-    border-top: var(--border-width) solid var(--accent-color);
-    border-bottom: var(--border-width) solid var(--accent-color);
-    border-right: 0px;
     font-weight: var(--font-weight-light);
     font-size: var(--font-size);
     background: transparent;
-    color: var(--accent-color);
-    margin-right: -var(--border-width);
+    color: var(--btn-color);
     transition: 0.25s;
     cursor: pointer;
+    border: 0;
+    border-radius: var(--border-radius);
 
     fa-icon {
-        color: var(--accent-color);
+        color: var(--btn-color);
     }
 
     span {
         margin: 0px 5px;
-    }
-
-    &:first-of-type {
-        border-top-left-radius: var(--border-radius);
-        border-bottom-left-radius: var(--border-radius);
-    }
-
-    &:last-of-type {
-        border-top-right-radius: var(--border-radius);
-        border-bottom-right-radius: var(--border-radius);
-        border-right: var(--border-width) solid var(--accent-color);
-        margin-right: 0;
     }
 
     &.active:not([disabled]) {
@@ -47,6 +36,14 @@ button {
 
         fa-icon {
             color: var(--fa-icon-color);
+        }
+    }
+    &.focus {
+        background-color: var(--accent-color-light);
+        color: var(--accent-color);
+
+        fa-icon {
+            color: var(--accent-color);
         }
     }
 
@@ -61,10 +58,6 @@ button {
     background: transparent;
     color: var(--not-emphrazed-color);
 
-    &:hover {
-        background-color: var(--not-emphrazed-color-dark);
-    }
-
     &.active {
         background-color: var(--not-emphrazed-color);
         color: var(--fa-icon-color);
@@ -75,6 +68,12 @@ button {
     }
 }
 
+.navbar{
+    fa-icon {
+        color: var(--fa-icon-color);
+    }
+}
+
 /************************************************
 Media query to add hover only on device which support hover
 *********************************************/
@@ -82,20 +81,20 @@ Media query to add hover only on device which support hover
 @media (hover: hover) {
     button {
         &:hover:not([disabled]) {
-            background-color: var(--accent-color);
-            color: var(--fa-icon-color);
-
+            background-color: var(--accent-color-light);
+            color: var(--accent-color);
+    
             fa-icon {
-                color: var(--fa-icon-color);
+                color: var(--accent-color);
             }
         }
+    }
 
-        &:hover:not([disabled]) {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    .not-emphrazed {
+    
+        &:hover {
+            background-color: var(--not-emphrazed-color-dark);
         }
-
-        &:active:not([disabled]) {
-            background-color: var(--accent-color-dark);
-        }
+    
     }
 }

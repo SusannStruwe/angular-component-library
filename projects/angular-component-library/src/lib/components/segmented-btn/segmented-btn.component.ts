@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SegmentedBtnItem } from '../../model/segmented-btn.model';
+import { TranslateModule } from '@ngx-translate/core';
 
 /**
  * Component to create segmented buttons.
@@ -17,13 +18,12 @@ import { SegmentedBtnItem } from '../../model/segmented-btn.model';
 @Component({
     selector: 'segmented-btn-component',
     standalone: true,
-    imports: [FontAwesomeModule],
+    imports: [FontAwesomeModule, TranslateModule],
     templateUrl: './segmented-btn.component.html',
     styleUrls: ['./segmented-btn.component.scss'],
 })
 export class SegmentedBtnComponent {
-    // example --> primary or gray
-    @Input() color?: string;
+    @Input() classStyle: string = '';
     // example ->   buttons = [{text:"left", value: "", isDisabled: false, icon: faXing}]
     @Input() btnArray: SegmentedBtnItem[] = [];
     // example ->   left
@@ -32,7 +32,9 @@ export class SegmentedBtnComponent {
     @Output() btnSelected = new EventEmitter<SegmentedBtnItem>();
     @Output() activeBtnChange = new EventEmitter<SegmentedBtnItem>();
 
-    btnClick(item: SegmentedBtnItem): void {
+    btnClick(event: Event, item: SegmentedBtnItem): void {
+        event.stopPropagation();
+
         this.activeBtn = item;
         this.activeBtnChange.emit(item);
         this.btnSelected.emit(item);

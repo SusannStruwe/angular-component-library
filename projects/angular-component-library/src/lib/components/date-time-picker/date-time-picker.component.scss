@@ -66,21 +66,6 @@
         }
     }
 
-    &:hover{
-        input[type="datetime-local"]{
-            border-color: var(--accent-color);
-        }
-
-        .btn-overlay{
-            border-color: var(--accent-color);
-            background-color: var(--accent-color);
-
-            fa-icon{
-                color: var(--fa-icon-color);
-            }
-        }       
-    }
-
     input:focus, input:focus + .btn-overlay{
         border-color: var(--accent-color);
     }
@@ -105,4 +90,42 @@
     input:focus, input:focus + .btn-overlay{
         border-color: var(--not-emphrazed-color);
     }
+}
+
+
+
+
+/***************************************************************
+Media query to hide hover effects for devices 
+that do not support them, like touch displays
+**************************************************************/
+@media (hover: hover) {
+    .datepicker {
+    
+        &:hover{
+            input[type="datetime-local"]{
+                border-color: var(--accent-color);
+            }
+    
+            .btn-overlay{
+                border-color: var(--accent-color);
+                background-color: var(--accent-color);
+    
+                fa-icon{
+                    color: var(--fa-icon-color);
+                }
+            }       
+        }
+    }
+    
+    .not-emphrazed {
+
+        .btn-overlay {
+
+            &:hover {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+            }
+        }
+    }
+    
 }
