@@ -56,7 +56,6 @@ export * from './lib/model/multi-select.model';
 export * from './lib/model/context-menu-item.model';
 export * from './lib/model/feature.enum';
 export * from './lib/model/tab-view-type.enum';
-export * from './lib/model/plan-state.enum';
 export * from './lib/model/segmented-btn.model';
 
 export * from './lib/directives/click-outside.directive';
