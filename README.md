@@ -1,6 +1,42 @@
 # AngularComponentLibrary
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli).
+
+* [License] (LICENSE)
+
+The library includes a list of different interaction components:
+* alert
+* badge
+* bordered-btn
+* borderless-btn
+* checkbox
+* circle-btn
+* collapsible
+* color-palette
+* context-menu
+* costum-select
+* date-picker
+* date-range-picker
+* date-time-picker
+* dropzone
+* duration-input
+* filled-btn
+* loader
+* modal
+* multi-select
+* navbar-btn
+* no-data
+* non-modal
+* popover
+* search-input
+* segmented-btn
+* select
+* table
+* tabs-view
+* tag-btn
+* toggle-btn
+* tooltip
+
 
 ## Development server
 
@@ -25,7 +61,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
 
 ## Build and pack lib
 

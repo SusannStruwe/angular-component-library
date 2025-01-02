@@ -1,9 +1,8 @@
 # AngularComponentLibrary
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
 * [License] (LICENSE)
-* [Changelog](CHANGELOG.md)
 
 The library includes a list of different interaction components:
 * alert
@@ -44,7 +43,6 @@ The library includes a list of different interaction components:
 Run `link:lib` script. After that a linked folder will be created in `AppData\Roaming\nvm\<version>\node_modules`. Now run the following command in the target project:
 
 > npm link angular-component-library
-
 
 ## Code scaffolding
 
