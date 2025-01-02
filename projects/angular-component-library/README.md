@@ -28,7 +28,6 @@ The library includes a list of different interaction components:
 * navbar-btn
 * no-data
 * non-modal
-* plan-state-icon
 * popover
 * search-input
 * segmented-btn

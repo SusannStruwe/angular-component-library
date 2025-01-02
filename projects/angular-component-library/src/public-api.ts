@@ -8,7 +8,6 @@ export * from './lib/components/bordered-btn/bordered-btn.component';
 export * from './lib/components/borderless-btn/borderless-btn.component';
 export * from './lib/components/select/select.component';
 export * from './lib/components/search-input/search-input.component';
-export * from './lib/components/plan-state-icon/plan-state-icon.component';
 export * from './lib/components/toggle-btn/toggle-btn.component';
 export * from './lib/components/alert/alert.component';
 export * from './lib/components/badge/badge.component';
