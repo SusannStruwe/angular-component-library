@@ -53,26 +53,6 @@ button {
     }
 }
 
-.not-emphrazed {
-    border: var(--border-width) solid var(--not-emphrazed-color);
-    background: transparent;
-    color: var(--not-emphrazed-color);
-
-    &.active {
-        background-color: var(--not-emphrazed-color);
-        color: var(--fa-icon-color);
-
-        fa-icon {
-            color: var(--fa-icon-color);
-        }
-    }
-}
-
-.navbar{
-    fa-icon {
-        color: var(--fa-icon-color);
-    }
-}
 
 /************************************************
 Media query to add hover only on device which support hover

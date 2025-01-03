@@ -11,7 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
  * <segmented-btn-component
  *    [btnArray] = "buttons"
  *    [(activeBtn)]="activeTimeSpanBtn"
- *    (btnSelected)="timeSpanBtnClicked($event)">
+ *    (activeBtnChange)="timeSpanBtnClicked($event)">
  *  </segmented-btn-component>
  * ```
  */
@@ -23,13 +23,11 @@ import { TranslateModule } from '@ngx-translate/core';
     styleUrls: ['./segmented-btn.component.scss'],
 })
 export class SegmentedBtnComponent {
-    @Input() classStyle: string = '';
     // example ->   buttons = [{text:"left", value: "", isDisabled: false, icon: faXing}]
     @Input() btnArray: SegmentedBtnItem[] = [];
     // example ->   left
     @Input() activeBtn?: SegmentedBtnItem;
 
-    @Output() btnSelected = new EventEmitter<SegmentedBtnItem>();
     @Output() activeBtnChange = new EventEmitter<SegmentedBtnItem>();
 
     btnClick(event: Event, item: SegmentedBtnItem): void {
@@ -37,6 +35,5 @@ export class SegmentedBtnComponent {
 
         this.activeBtn = item;
         this.activeBtnChange.emit(item);
-        this.btnSelected.emit(item);
     }
 }
