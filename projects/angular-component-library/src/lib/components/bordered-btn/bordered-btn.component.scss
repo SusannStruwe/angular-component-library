@@ -183,7 +183,7 @@ Simple hover
     &:active, 
     &.active {
         &:not([disabled]) {
-            border-color: transparent;
+            border-color: var(--accent-color);
             background-color: var(--accent-color-light);
             color: var(--accent-color);
 
@@ -305,7 +305,7 @@ that do not support them, like touch displays
         &:hover,
         &.active {
             &:not([disabled]) {
-                border-color: transparent;
+                border-color: var(--accent-color);
                 background-color: var(--accent-color-light);
                 color: var(--accent-color);
 
@@ -335,6 +335,7 @@ that do not support them, like touch displays
         &:hover,
         &.active {
             &:not([disabled]) {
+                border-color: var(--toast-error-color);
                 background-color: var(--toast-error-color-light);
                 color: var(--toast-error-color);
 
