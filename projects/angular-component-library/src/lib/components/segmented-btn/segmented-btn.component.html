@@ -1,5 +1,5 @@
 <div class="segmented-btn">
-    @for (item of btnArray; track item; let i = $index) {
+    @for (item of btnArray; track $index; let i = $index) {
         <button
             [class.active]="item === activeBtn"
             [disabled]="item.isDisabled"

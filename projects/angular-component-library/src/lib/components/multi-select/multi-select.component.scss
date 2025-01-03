@@ -56,17 +56,15 @@ button {
     align-items: center;
     cursor: pointer;
 
-    fa-icon {
+    fa-icon, span {
         color: var(--accent-color);
     }
 
-    &:hover,
     &.active {
         background-color: var(--accent-color) !important;
-        span {
-            color: var(--bg-color);
-        }
-        fa-icon {
+        border: var(--border-width) solid var(--accent-color) !important;
+
+        fa-icon, span {
             color: var(--fa-icon-color);
         }
     }
@@ -234,32 +232,6 @@ button {
     }
 }
 
-.not-emphrazed {
-    color: var(--fa-icon-color);
-    background: transparent;
-    border: var(--border-width) solid var(--not-emphrazed-color);
-    color: var(--not-emphrazed-color);
-
-    span {
-        color: var(--not-emphrazed-color);
-    }
-
-    span:last-of-type {
-        background: var(--not-emphrazed-color);
-        border-left: 1px solid var(--bg-color);
-
-        fa-icon {
-            color: var(--fa-icon-color);
-        }
-    }
-
-    &:active {
-        background-color: var(--not-emphrazed-color);
-        span {
-            color: var(--bg-color);
-        }
-    }
-}
 
 .navbar {
     background: transparent;
@@ -308,6 +280,18 @@ that do not support them, like touch displays
 **************************************************************/
 @media (hover: hover) {
 
+    button {
+        &:hover,
+        &.active {
+            background-color: var(--accent-color) !important;
+            border: var(--border-width) solid var(--accent-color) !important;
+    
+            fa-icon, span {
+                color: var(--fa-icon-color);
+            }
+        }
+    }
+
     .menu{
         ul{
             li{
@@ -352,22 +336,6 @@ that do not support them, like touch displays
                 fa-icon {
                     color: var(--accent-color-dark);
                 }
-            }
-        }
-    }
-
-    .not-emphrazed {
-        &:hover {
-            background-color: var(--not-emphrazed-color);
-            span {
-                color: var(--bg-color);
-            }
-        }
-
-        &:active {
-            background-color: var(--not-emphrazed-color);
-            span {
-                color: var(--bg-color);
             }
         }
     }

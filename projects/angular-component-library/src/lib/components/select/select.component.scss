@@ -29,7 +29,7 @@ button {
     padding: 0px;
     color: var(--fa-icon-color);
     background: transparent;
-    border: var(--border-width) solid var(--accent-color);
+    border: var(--border-width) solid var(--btn-color);
     border-radius: var(--border-radius);
     width: 100%;
     max-width: var(--max-width-select);
@@ -45,7 +45,7 @@ button {
         padding: 10px;
         text-align: left;
         -webkit-line-clamp: 1;
-        color: var(--accent-color);
+        color: var(--btn-color);
         display: inline-flex;
         line-height: 1.4;
         -webkit-box-orient: vertical;
@@ -63,10 +63,14 @@ button {
         width: 65%;
     }
 
+    fa-icon{
+        color: var(--btn-color);
+    }    
+
     // dropdown arrow design
-    span:last-of-type{
+    span:last-of-type {
         width: var(--btn-height);
-        background: var(--accent-color);
+        background: var(--btn-color);
         border-left: none;
         align-items: center;
         justify-content: center;
@@ -74,15 +78,16 @@ button {
         &:active:not([disabled]){
           background-color: var(--accent-color-dark);
         }
+
+        fa-icon{
+            color: var(--fa-icon-color);
+        }    
     }
    
-    fa-icon{
-        color: var(--fa-icon-color);
-    }
-      
+ 
     // complete button design
-    &:hover,
     &.active {
+        border-color: var(--accent-color);
 
         span:last-of-type{
             background-color: var(--accent-color);
@@ -90,7 +95,7 @@ button {
             
             fa-icon{
                 color: var(--fa-icon-color);
-              }
+            }
         }
     
         ::ng-deep {
@@ -218,7 +223,7 @@ button {
             }
 
             fa-icon {
-                color: var(--text-color);
+                color: var(--btn-color);
 
                 &.pending {
                     color: var(--job-pending-color);
@@ -245,32 +250,6 @@ button {
     }
 }
 
-.not-emphrazed {
-    color: var(--fa-icon-color);
-    background: transparent;
-    border: var(--border-width) solid var(--not-emphrazed-color);
-    color: var(--not-emphrazed-color);
-
-    span {
-        color: var(--not-emphrazed-color);
-    }
-
-    span:last-of-type {
-        background: var(--not-emphrazed-color);
-        border-left: 1px solid var(--bg-color);
-
-        fa-icon {
-            color: var(--fa-icon-color);
-        }
-    }
-
-    &:active:not([disabled]) {
-        background-color: var(--not-emphrazed-color);
-        span {
-            color: var(--bg-color);
-        }
-    }
-}
 
 .flex.navbar {
     cursor: pointer;
@@ -330,15 +309,16 @@ button {
             background: var(--fa-icon-color);
             border-left: none;
 
+            fa-icon {
+                color: var(--btn-color);
+            }    
+
             &:active:not([disabled]){
                 background-color: var(--accent-color-dark);
             }
         }
 
-        fa-icon {
-            color: var(--btn-color);
-        }
-
+      
 
         // complete button design
         &:hover,
@@ -376,17 +356,16 @@ button {
             background: transparent;
         }
 
-        &:hover,
         &.active {
             background-color: var(--accent-color-light);
             color: var(--accent-color);
+
+            fa-icon, span{
+                color: var(--accent-color);
+            }
     
             span:last-of-type{     
                 background-color: var(--accent-color-light);
-    
-                fa-icon{
-                    color: var(--accent-color);
-                }
 
                 &:active:not([disabled]){
                     background-color: var(--accent-color-light);
@@ -401,6 +380,31 @@ Media query to add hover only on device which support hover
 *********************************************/
 
 @media (hover: hover) {
+    button {
+        // complete button design
+        &:hover {
+            border-color: var(--accent-color);
+
+            span:last-of-type {
+                background-color: var(--accent-color);
+                // background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+                
+                fa-icon{
+                    color: var(--fa-icon-color);
+                }
+            }
+        
+            ::ng-deep {
+                .successful,
+                .released,
+                .failed,
+                .pending {
+                    color: var(--accent-color);
+                }
+            }
+        }
+    }
+
     .menu{
         ul{
             li{
@@ -412,22 +416,6 @@ Media query to add hover only on device which support hover
                         color: var(--accent-color);
                     }
                 }
-            }
-        }
-    }
-
-    .not-emphrazed {
-        &:hover {
-            background-color: var(--not-emphrazed-color);
-            span {
-                color: var(--bg-color);
-            }
-        }
-
-        &:active:not([disabled]) {
-            background-color: var(--not-emphrazed-color);
-            span {
-                color: var(--bg-color);
             }
         }
     }
@@ -464,4 +452,55 @@ Media query to add hover only on device which support hover
             }
         }
     }
+
+    .scheduler {
+        button {
+            &:hover,
+            &.active {
+                border-color: var(--accent-color-light);
+
+                span:last-of-type{
+                    background-color: var(--accent-color-light);
+                    
+                    fa-icon{
+                        color: var(--accent-color);
+                    }
+                }
+            
+                ::ng-deep {
+                    .successful,
+                    .released,
+                    .failed,
+                    .pending {
+                        color: var(--accent-color);
+                    }
+                }
+            }
+       }
+    }
+
+    .sidebar {
+        @extend .scheduler;
+        button {
+
+            &:hover {
+                background-color: var(--accent-color-light);
+                color: var(--accent-color);
+
+                fa-icon, span{
+                    color: var(--accent-color);
+                }
+
+                span:last-of-type{     
+                    background-color: var(--accent-color-light);
+    
+                    &:active:not([disabled]){
+                        background-color: var(--accent-color-light);
+                    }
+                }
+            }
+        }
+    }
+   
+
 }

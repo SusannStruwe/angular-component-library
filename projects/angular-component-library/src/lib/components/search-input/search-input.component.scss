@@ -29,13 +29,19 @@
     .right {
         position: absolute;
         right: 10px;
-        top: 0px;
+        top: calc((var(--input-height) - 30px) / 2);
     }
 
     .left {
         position: absolute;
         left: 10px;
-        top: 0px;
+        top: calc((var(--input-height) - 30px) / 2);
+    }
+}
+
+.no-radius {
+    input {
+        border-radius: 0;
     }
 }
 

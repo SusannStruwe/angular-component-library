@@ -23,7 +23,7 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
 @Component({
     selector: 'collapsible-component',
     standalone: true,
-    imports: [CommonModule, FontAwesomeModule, FormsModule, ClickOutsideDirective],
+    imports: [CommonModule, FontAwesomeModule, FormsModule],
     templateUrl: './collapsible.component.html',
     styleUrls: ['./collapsible.component.scss'],
 })

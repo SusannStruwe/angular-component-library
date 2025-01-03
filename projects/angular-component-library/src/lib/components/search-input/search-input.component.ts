@@ -25,7 +25,7 @@ import { IconService } from '../../services/icon.service';
 })
 export class SearchInputComponent {
     @Input() filter = '';
-    @Input() classStyle?: string;
+    @Input() classStyles?: string;
     @Input() placeholderText? = '';
 
     @Output() filterChange = new EventEmitter<string>();

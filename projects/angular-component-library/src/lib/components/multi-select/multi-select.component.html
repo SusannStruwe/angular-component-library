@@ -6,6 +6,7 @@
     [attr.aria-haspopup]="'menu'"
     [attr.aria-expanded]="show"
     [style.background-color]="backgroundColor"
+    [style.border-color]="backgroundColor"
     (click)="toggleFilter()"
     class="filter-btn">
 
@@ -29,14 +30,14 @@
         @if (withFilter) {
             <search-input-component
                 [style.margin.em]="'0.25'"
-                [classStyle]="'full-width'"
+                [classStyles]="'full-width no-radius'"
                 [placeholderText]="filterPlaceholder"
                 [(filter)]="filter"
                 (filterChange)="filterAndSort()">
             </search-input-component>
         }
         <ul class="selected-items">
-            @for (selectedItem of selectedItems; track selectedItem; let i = $index) {
+            @for (selectedItem of selectedItems; track $index; let i = $index) {
                 <li (click)="removeElement(selectedItem)">
                     <input id="ms-s-items-{{randomId}}-{{i}}" type="checkbox" [checked]="isInFilterArray(selectedItem)" />
                     <span class="checkmark"></span>
@@ -45,7 +46,7 @@
             }
         </ul>
         <ul [style.max-height.px]="300">
-            @for (item of items; track item; let i = $index) {
+            @for (item of items; track $index; let i = $index) {
                 <li (click)="selectElement(item)">
                     <input id="ms-items-{{randomId}}-{{i}}" type="checkbox" />
                     <span class="checkmark"></span>

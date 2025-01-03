@@ -38,7 +38,7 @@
             @if (withFilter) {
                 <search-input-component
                     [style.margin.em]="'0.25'"
-                    [classStyle]="'full-width'"
+                    [classStyles]="'full-width no-radius'"
                     [placeholderText]="filterPlaceholder"
                     [(filter)]="filter"
                     (filterChange)="filterAndSort()">
@@ -50,8 +50,9 @@
                         <span class="text"></span>
                     </li>
                 }
-                @for (item of items; track item) {
+                @for (item of items; track $index; let i = $index) {
                     <li
+                        id="s-item-{{i}}"
                         (click)="selectElement(item)"
                         [ngClass]="
                             item.icon && item.localTimestamp ? 'grid' : 'flex'
