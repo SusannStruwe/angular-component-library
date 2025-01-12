@@ -1,53 +1,56 @@
 <div class="flex-row">
-  <div class="flex-row">
-    @if (mode !== modes.READ) {
-      <input
-        id="duration-days-{{ randomId }}"
-        type="number"
-        class="form-control duration"
-        [attr.aria-label]="'duration-days'"
-        [(ngModel)]="days"
-        (change)="durationChanged()"
-      />
-    }
-    @if (mode === modes.READ) {
-      <p>{{ days }}</p>
-    }
-    <span>{{ daysLabel }}</span>
-  </div>
-  <div class="flex-row">
-    @if (mode !== modes.READ) {
-      <input
-        id="duration-hours-{{ randomId }}"
-        type="number"
-        class="form-control duration"
-        [attr.aria-label]="'duration-hours'"
-        [(ngModel)]="hours"
-        (change)="durationChanged()"
-      />
-    }
-    @if (mode === modes.READ) {
-      <p>{{ hours }}</p>
-    }
-    <span>{{ hoursShortLabel }}</span>
-  </div>
-  <div class="flex-row">
-    @if (mode !== modes.READ) {
-      <input
-        id="duration-minutes-{{ randomId }}"
-        type="number"
-        class="form-control duration"
-        [attr.aria-label]="'duration-minutes'"
-        [(ngModel)]="minutes"
-        (change)="durationChanged()"
-      />
-    }
-    @if (mode === modes.READ) {
-      <p>{{ minutes }}</p>
-    }
-    <span>{{ minutesShortTLabel }}</span>
-  </div>
+    <div class="flex-row">
+        @if (mode !== modes.READ) {
+            <input
+                id="duration-days-{{ randomId }}"
+                class="form-control duration"
+                [style.height.px]="height ?? 40"
+                [attr.aria-labelledby]="'duration-days'"
+                type="number"
+                min="0"
+                [(ngModel)]="days"
+                (change)="durationChanged()" />
+        }
+        @if (mode === modes.READ) {
+            <p>{{ days }}</p>
+        }
+        <span>{{ 'time.days' | translate }}</span>
+    </div>
+    <div class="flex-row">
+        @if (mode !== modes.READ) {
+            <input
+                id="duration-hours-{{ randomId }}"
+                class="form-control duration"
+                [style.height.px]="height ?? 40"
+                [attr.aria-labelledby]="'duration-hours'"
+                type="number"
+                min="0"
+                [(ngModel)]="hours"
+                (change)="durationChanged()" />
+        }
+        @if (mode === modes.READ) {
+            <p>{{ hours }}</p>
+        }
+        <span>{{ 'time.hoursShort' | translate }}</span>
+    </div>
+    <div class="flex-row">
+        @if (mode !== modes.READ) {
+            <input
+                id="duration-minutes-{{ randomId }}"
+                class="form-control duration"
+                [style.height.px]="height ?? 40"
+                [attr.aria-labelledby]="'duration-minutes'"
+                type="number"
+                min="0"
+                [(ngModel)]="minutes"
+                (change)="durationChanged()" />
+        }
+        @if (mode === modes.READ) {
+            <p>{{ minutes }}</p>
+        }
+        <span>{{ 'time.minutesShort' | translate }}</span>
+    </div>
 </div>
 @if (numSeconds === maxDuration) {
-  <span class="error">{{ maxDurationLabel }}</span>
+    <span class="error">{{ 'validation.maxDuration' | translate }}</span>
 }

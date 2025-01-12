@@ -1,35 +1,42 @@
-@import "../../../../assets/styles";
+@use "../../../../assets/styles" as *;
 
-:host {
-  display: flex;
-  flex-direction: column;
+
+:host{
+    display: flex;
+    flex-direction: column;
 }
 
-input {
-  min-width: auto;
-  width: 4em !important;
-  margin-right: 5px;
-  border: var(--border-width) solid var(--accent-color);
-  border-radius: var(--border-radius);
-}
-span {
-  font-weight: var(--font-weight-light);
-  margin-right: 10px;
-  font-size: 0.95em;
-}
 
-p {
-  margin-right: 0.5em !important;
+input{
+    height: var(--input-height);
+    min-width: auto;
+    width: 4em !important;
+    margin-right: 5px;
+    border: var(--border-width) solid var(--btn-color);
+
+    &:hover{
+        border-color: var(--accent-color);
+    }
 }
 
-.readonly {
-  border: none;
-  width: 2.5em !important;
-  padding: 0;
-  text-align: right;
-  cursor: default;
+span{
+    font-weight: var(--font-weight-light);
+    margin-right: 10px;
+    font-size: 0.85em;
+}
 
-  -webkit-appearance: none;
-  -moz-appearance: textfield;
-  appearance: textfield;
+p{
+    margin-right: 0.5em !important;
+}
+
+.readonly{
+    border: none;
+    width: 2.5em !important;
+    padding: 0;
+    text-align: right;
+    cursor: default;
+
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: textfield;
 }

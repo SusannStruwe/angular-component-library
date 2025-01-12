@@ -1,4 +1,5 @@
-@import "../../../../assets/styles";
+@use "../../../../assets/styles" as *;
+@use 'sass:color';
 
 :host {
   display: inline-block;
@@ -13,6 +14,10 @@
   color: var(--text-color);
   box-sizing: border-box;
   padding: 10px 15px;
+
+  .flex-row {
+    align-items: center;
+  }
 
   .close {
     cursor: pointer;
@@ -35,7 +40,7 @@
   }
 
   &.success {
-    background: lighten($toast-success-color, 50%);
+    background: color.adjust($toast-success-color, $lightness: 50%);
     border: 1px solid var(--toast-success-color);
     border-left: 5px solid var(--toast-success-color);
 
@@ -46,12 +51,12 @@
       color: var(--toast-success-color);
     }
     .close:hover {
-      color: darken($toast-success-color, 10%);
+      color: color.adjust($toast-success-color, $lightness: -10%);
     }
   }
 
   &.error {
-    background: lighten($toast-error-color, 50%);
+    background: color.adjust($toast-error-color, $lightness: 50%);
     border: 1px solid var(--toast-error-color);
     border-left: 5px solid var(--toast-error-color);
 
@@ -62,12 +67,12 @@
       color: var(--toast-error-color);
     }
     .close:hover {
-      color: darken($toast-error-color, 10%);
+      color: color.adjust($toast-error-color, $lightness: -10%);
     }
   }
 
   &.info {
-    background: lighten($toast-info-color, 50%);
+    background: color.adjust($toast-info-color, $lightness: 50%);
     border: 1px solid var(--toast-info-color);
     border-left: 5px solid var(--toast-info-color);
 
@@ -78,12 +83,12 @@
       color: var(--toast-info-color);
     }
     .close:hover {
-      color: darken($toast-info-color, 10%);
+      color: color.adjust($toast-info-color, $lightness: -10%);
     }
   }
 
   &.warning {
-    background: lighten($toast-warning-color, 50%);
+    background: color.adjust($toast-warning-color, $lightness: 50%);
     border: 1px solid var(--toast-warning-color);
     border-left: 5px solid var(--toast-warning-color);
 
@@ -94,7 +99,7 @@
       color: var(--toast-warning-color);
     }
     .close:hover {
-      color: darken($toast-warning-color, 10%);
+      color: color.adjust($toast-warning-color, $lightness: -10%);
     }
   }
 }

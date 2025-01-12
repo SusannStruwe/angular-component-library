@@ -1,5 +1,4 @@
-@import "../../../../assets/styles";
-
+@use "../../../../assets/styles" as *;
 :host {
   display: none;
 }
