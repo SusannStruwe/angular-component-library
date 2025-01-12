@@ -26,7 +26,7 @@ CSS Variables -> --text-color, --bg-color, --accent-color, --fa-icon-color for c
         color: var(--btn-color);
         background: transparent;
         box-sizing: border-box;
-        border-radius: var(--border-radius);
+        border-radius: var(--input-radius);
         padding: 2px 16px 2px 5px;
         -webkit-padding-end: 5px;
 
@@ -54,8 +54,8 @@ CSS Variables -> --text-color, --bg-color, --accent-color, --fa-icon-color for c
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
-        border-top-right-radius: var(--border-radius);
-        border-bottom-right-radius: var(--border-radius);
+        border-top-right-radius: var(--input-radius);
+        border-bottom-right-radius: var(--input-radius);
         
         fa-icon{
             color:var(--btn-color);

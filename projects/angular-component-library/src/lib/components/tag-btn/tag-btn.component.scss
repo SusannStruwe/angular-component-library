@@ -15,7 +15,7 @@ button {
   background: var(--accent-color);
   color: var(--fa-icon-color);
   cursor: pointer;
-  border-radius: 15px;
+  border-radius: var(--tag-btn-radius);
   margin: 0.25em;
   display: flex;
   align-items: center;
