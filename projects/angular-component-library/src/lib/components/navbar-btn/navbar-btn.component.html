@@ -1,13 +1,14 @@
 <button
-    [ngClass]="[classStyle]"
-    [attr.title]="label"
-    [attr.aria-label]="label"
-    [disabled]="disabled"
-    [class.active]="active">
-    @if (faIcon) {
-        <fa-icon [icon]="faIcon"></fa-icon>
-    }
-    @if (label) {
-        <span>{{ label }}</span>
-    }
+  [ngClass]="[classStyle]"
+  [attr.title]="label"
+  [attr.aria-label]="label"
+  [disabled]="disabled"
+  [class.active]="active"
+>
+  @if (faIcon) {
+    <fa-icon [icon]="faIcon"></fa-icon>
+  }
+  @if (label) {
+    <span>{{ label }}</span>
+  }
 </button>

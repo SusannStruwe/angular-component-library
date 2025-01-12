@@ -1,296 +1,295 @@
-@import '../../../../assets/styles';
-
+@import "../../../../assets/styles";
 
 :host {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 .flex {
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-    .icon-before {
-        padding-left: 10px;
-        padding-right: 5px;
-    }
+  .icon-before {
+    padding-left: 10px;
+    padding-right: 5px;
+  }
 }
 
 button {
-    cursor: pointer;
-    position: relative;
+  cursor: pointer;
+  position: relative;
+  height: var(--btn-height);
+  min-width: var(--btn-height);
+  line-height: var(--btn-height);
+  border: 0;
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size);
+  padding: 0px;
+  color: var(--fa-icon-color);
+  background: var(--bg-color);
+  border: var(--border-width) solid var(--accent-color);
+  border-radius: var(--border-radius);
+  width: 100%;
+  max-width: var(--max-width);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  fa-icon {
+    padding: var(--btn-padding);
+  }
+
+  span {
     height: var(--btn-height);
-    min-width: var(--btn-height);
     line-height: var(--btn-height);
-    border: 0;
-    font-weight: var(--font-weight-light);
-    font-size: var(--font-size);
-    padding: 0px;
-    color: var(--fa-icon-color);
-    background: var(--bg-color);
-    border: var(--border-width) solid var(--accent-color);
-    border-radius: var(--border-radius);
-    width: 100%;
-    max-width: var(--max-width);
+    padding: 10px;
+    text-align: left;
+    display: inline-flex;
+    -webkit-line-clamp: 1;
+    color: var(--accent-color);
+    line-height: 1.4;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    box-sizing: border-box;
+  }
 
-    fa-icon {
-        padding: var(--btn-padding);
-    }
+  &:hover,
+  &.active {
+    background-color: var(--accent-color-light);
+    color: var(--accent-color);
 
-    span {
-        height: var(--btn-height);
-        line-height: var(--btn-height);
-        padding: 10px;
-        text-align: left;
-        display: inline-flex;
-        -webkit-line-clamp: 1;
+    ::ng-deep {
+      .successful,
+      .released,
+      .failed,
+      .pending {
         color: var(--accent-color);
-        line-height: 1.4;
-        -webkit-box-orient: vertical;
+      }
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  top: calc(var(--btn-height) + 5px);
+  min-width: 150px;
+  width: max-content;
+  max-width: var(--max-width);
+  height: auto;
+  border-radius: 0;
+  background: var(--bg-color);
+  z-index: var(--z-index-5);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  &.left {
+    left: 2px;
+  }
+
+  &.right {
+    right: 2px;
+  }
+
+  &.show {
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &.hide {
+    transform-origin: top;
+    transition: transform 0.2s ease-in-out;
+    transform: scaleY(0);
+  }
+
+  input[type="text"] {
+    height: var(--input-height);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: var(--font-size);
+    background: transparent;
+    margin: 5px;
+    width: -moz-available; /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    width: strech;
+
+    &:focus {
+      border-color: var(--accent-color);
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    max-height: 500px;
+    overflow-y: auto;
+    border-top: 1px solid var(--border-color);
+
+    li {
+      height: var(--btn-height);
+      position: relative;
+      cursor: pointer;
+      font-size: var(--font-size);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      padding: 0.25em 0.5em 0.25em 0.75em;
+      color: var(--text-color);
+      border-bottom: 1px solid rgb(var(--border-color), 0.2);
+      text-align: left;
+      box-sizing: border-box;
+      overflow: hidden;
+      align-items: center;
+      display: grid;
+      grid-template-columns: 0.4fr 3fr;
+
+      &.grid {
+        display: grid;
+        grid-template-columns: 0.4fr 3fr;
+      }
+
+      &.flex {
+        display: flex;
+        gap: 15px;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 10px;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      .text {
+        line-height: calc(var(--btn-height) - 10px);
+        word-wrap: break-word;
+        // max-width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         text-align: left;
-        box-sizing: border-box;
-    }
+      }
 
-    &:hover,
-    &.active {
+      fa-icon {
+        color: var(--text-color);
+
+        &.pending {
+          color: var(--job-pending-color);
+        }
+        &.successful {
+          color: var(--job-successful-color);
+        }
+      }
+
+      &:hover,
+      &.active {
         background-color: var(--accent-color-light);
         color: var(--accent-color);
 
-        ::ng-deep {
-            .successful,
-            .released,
-            .failed,
-            .pending {
-                color: var(--accent-color);
-            }
+        fa-icon {
+          color: var(--accent-color);
         }
+      }
     }
-}
-
-.menu {
-    position: absolute;
-    top: calc(var(--btn-height) + 5px);
-    min-width: 150px;
-    width: max-content;
-    max-width: var(--max-width);
-    height: auto;
-    border-radius: 0;
-    background: var(--bg-color);
-    z-index: var(--z-index-5);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-
-    &.left {
-        left: 2px;
-    }
-
-    &.right {
-        right: 2px;
-    }
-
-    &.show {
-        transform-origin: top;
-        transform: scaleY(1);
-        transition: transform 0.2s ease-in-out;
-    }
-
-    &.hide {
-        transform-origin: top;
-        transition: transform 0.2s ease-in-out;
-        transform: scaleY(0);
-    }
-
-    input[type='text'] {
-        height: var(--input-height);
-        border: var(--border-width) solid var(--border-color);
-        border-radius: 0;
-        outline: none;
-        cursor: pointer;
-        font-size: var(--font-size);
-        background: transparent;
-        margin: 5px;
-        width: -moz-available; /* WebKit-based browsers will ignore this. */
-        width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
-        width: strech;
-
-        &:focus {
-            border-color: var(--accent-color);
-        }
-    }
-
-    ul {
-        list-style: none;
-        padding: 0px;
-        margin: 0px;
-        max-height: 500px;
-        overflow-y: auto;
-        border-top: 1px solid var(--border-color);
-
-        li {
-            height: var(--btn-height);
-            position: relative;
-            cursor: pointer;
-            font-size: var(--font-size);
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            padding: 0.25em 0.5em 0.25em 0.75em;
-            color: var(--text-color);
-            border-bottom: 1px solid rgb(var(--border-color), 0.2);
-            text-align: left;
-            box-sizing: border-box;
-            overflow: hidden;
-            align-items: center;
-            display: grid;
-            grid-template-columns: 0.4fr 3fr;
-
-            &.grid {
-                display: grid;
-                grid-template-columns: 0.4fr 3fr;
-            }
-
-            &.flex {
-                display: flex;
-                gap: 15px;
-            }
-
-            input[type='checkbox'] {
-                margin-right: 10px;
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-                height: 0;
-                width: 0;
-            }
-
-            &:last-of-type {
-                border-bottom: none;
-            }
-
-            .text {
-                line-height: calc(var(--btn-height) - 10px);
-                word-wrap: break-word;
-                // max-width: 100%;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                text-align: left;
-            }
-
-            fa-icon {
-                color: var(--text-color);
-
-                &.pending {
-                    color: var(--job-pending-color);
-                }
-                &.successful {
-                    color: var(--job-successful-color);
-                }
-            }
-
-            &:hover,
-            &.active {
-                background-color: var(--accent-color-light);
-                color: var(--accent-color);
-
-                fa-icon {
-                    color: var(--accent-color);
-                }
-            }
-        }
-    }
+  }
 }
 
 .not-emphrazed {
-    color: var(--fa-icon-color);
-    background: transparent;
-    border: var(--border-width) solid var(--not-emphrazed-color);
+  color: var(--fa-icon-color);
+  background: transparent;
+  border: var(--border-width) solid var(--not-emphrazed-color);
+  color: var(--not-emphrazed-color);
+
+  span {
     color: var(--not-emphrazed-color);
+  }
 
+  span:last-of-type {
+    background: var(--not-emphrazed-color);
+    border-left: 1px solid var(--bg-color);
+
+    fa-icon {
+      color: var(--fa-icon-color);
+    }
+  }
+
+  &:active:not([disabled]) {
+    background-color: var(--not-emphrazed-color);
     span {
-        color: var(--not-emphrazed-color);
+      color: var(--bg-color);
     }
-
-    span:last-of-type {
-        background: var(--not-emphrazed-color);
-        border-left: 1px solid var(--bg-color);
-
-        fa-icon {
-            color: var(--fa-icon-color);
-        }
-    }
-
-    &:active:not([disabled]) {
-        background-color: var(--not-emphrazed-color);
-        span {
-            color: var(--bg-color);
-        }
-    }
+  }
 }
 
 .flex.navbar {
+  cursor: pointer;
+
+  button {
+    background: transparent;
+    border: none;
+    height: var(--sub-navbar-height);
     cursor: pointer;
+    max-width: 350px;
 
+    span {
+      color: var(--fa-icon-color);
+    }
+
+    span:first-of-type {
+      line-height: calc((var(--btn-height) / 2) + 5px);
+      overflow: hidden;
+      word-break: break-all;
+    }
+
+    span:last-of-type {
+      background: transparent;
+      border-left: none;
+
+      fa-icon {
+        color: var(--fa-icon-color);
+      }
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  &:active:not([disabled]) {
+    fa-icon {
+      color: var(--accent-color-dark);
+    }
     button {
-        background: transparent;
-        border: none;
-        height: var(--sub-navbar-height);
-        cursor: pointer;
-        max-width: 350px;
-
-        span {
-            color: var(--fa-icon-color);
-        }
-
-        span:first-of-type {
-            line-height: calc((var(--btn-height) / 2) + 5px);
-            overflow: hidden;
-            word-break: break-all;
-        }
-
-        span:last-of-type {
-            background: transparent;
-            border-left: none;
-
-            fa-icon {
-                color: var(--fa-icon-color);
-            }
-        }
-
-        &:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-    }
-
-    &:active:not([disabled]) {
+      span:last-of-type {
         fa-icon {
-            color: var(--accent-color-dark);
+          color: var(--accent-color-dark);
         }
-        button {
-            span:last-of-type {
-                fa-icon {
-                    color: var(--accent-color-dark);
-                }
-            }
-            span,
-            fa-icon {
-                color: var(--accent-color-dark);
-            }
-        }
+      }
+      span,
+      fa-icon {
+        color: var(--accent-color-dark);
+      }
     }
+  }
 }
 
 /************************************************
@@ -298,56 +297,56 @@ Media query to add hover only on device which support hover
 *********************************************/
 
 @media (hover: hover) {
-    .not-emphrazed {
-        &:hover {
-            background-color: var(--not-emphrazed-color);
-            span {
-                color: var(--bg-color);
-            }
-        }
-
-        &:active:not([disabled]) {
-            background-color: var(--not-emphrazed-color);
-            span {
-                color: var(--bg-color);
-            }
-        }
+  .not-emphrazed {
+    &:hover {
+      background-color: var(--not-emphrazed-color);
+      span {
+        color: var(--bg-color);
+      }
     }
 
-    .flex.navbar {
-        &:hover {
-            background-color: black;
-            fa-icon {
-                color: var(--accent-color);
-            }
-            button {
-                span:last-of-type {
-                    fa-icon {
-                        color: var(--accent-color);
-                    }
-                }
-                span,
-                fa-icon {
-                    color: var(--accent-color);
-                }
-            }
-        }
-
-        &:active:not([disabled]) {
-            fa-icon {
-                color: var(--accent-color-dark);
-            }
-            button {
-                span:last-of-type {
-                    fa-icon {
-                        color: var(--accent-color-dark);
-                    }
-                }
-                span,
-                fa-icon {
-                    color: var(--accent-color-dark);
-                }
-            }
-        }
+    &:active:not([disabled]) {
+      background-color: var(--not-emphrazed-color);
+      span {
+        color: var(--bg-color);
+      }
     }
+  }
+
+  .flex.navbar {
+    &:hover {
+      background-color: black;
+      fa-icon {
+        color: var(--accent-color);
+      }
+      button {
+        span:last-of-type {
+          fa-icon {
+            color: var(--accent-color);
+          }
+        }
+        span,
+        fa-icon {
+          color: var(--accent-color);
+        }
+      }
+    }
+
+    &:active:not([disabled]) {
+      fa-icon {
+        color: var(--accent-color-dark);
+      }
+      button {
+        span:last-of-type {
+          fa-icon {
+            color: var(--accent-color-dark);
+          }
+        }
+        span,
+        fa-icon {
+          color: var(--accent-color-dark);
+        }
+      }
+    }
+  }
 }

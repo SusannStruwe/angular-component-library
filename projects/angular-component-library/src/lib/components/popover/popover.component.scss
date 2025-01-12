@@ -1,96 +1,94 @@
-@import '../../../../assets/styles';
-
+@import "../../../../assets/styles";
 
 :host {
-    position: absolute;
-    bottom: 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 .popover {
+  position: absolute;
+  min-width: 150px;
+  width: max-content;
+  max-width: 450px;
+  height: auto;
+  border-radius: 0;
+  background: var(--bg-color);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  z-index: var(--z-index-6);
+  padding: 1em;
+  text-align: left;
+
+  &:after,
+  &:before {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
     position: absolute;
-    min-width: 150px;
-    width: max-content;
-    max-width: 450px;
+    display: inline-block;
+  }
+
+  &:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #ffffff;
+    border-width: 10px;
+    left: 15px;
+    margin-left: 0px;
+  }
+
+  &:before {
+    border-color: rgba(113, 158, 206, 0);
+    border-bottom-color: var(--border-color);
+    border-width: 11.5px;
+    left: 15px;
+    margin-left: -1px;
+  }
+
+  ::ng-deep h4 {
+    margin: 0;
+  }
+
+  &.show {
     height: auto;
-    border-radius: 0;
-    background: var(--bg-color);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    z-index: var(--z-index-6);
-    padding: 1em;
-    text-align: left;
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: transform 0.2s ease-in-out;
+  }
 
-    &:after,
-    &:before {
-        bottom: 100%;
-        border: solid transparent;
-        content: ' ';
-        height: 0;
-        width: 0;
-        position: absolute;
-        display: inline-block;
-    }
-
-    &:after {
-        border-color: rgba(255, 255, 255, 0);
-        border-bottom-color: #ffffff;
-        border-width: 10px;
-        left: 15px;
-        margin-left: 0px;
-    }
-
-    &:before {
-        border-color: rgba(113, 158, 206, 0);
-        border-bottom-color: var(--border-color);
-        border-width: 11.5px;
-        left: 15px;
-        margin-left: -1px;
-    }
-
-    ::ng-deep h4 {
-        margin: 0;
-    }
-
-    &.show {
-        height: auto;
-        transform-origin: top;
-        transform: scaleY(1);
-        transition: transform 0.2s ease-in-out;
-    }
-
-    &.hide {
-        height: 0;
-        transform-origin: top;
-        transition: transform 0s ease-in-out;
-        transform: scaleY(0);
-    }
+  &.hide {
+    height: 0;
+    transform-origin: top;
+    transition: transform 0s ease-in-out;
+    transform: scaleY(0);
+  }
 }
 
 .alignment-right {
+  &:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #ffffff;
+    border-width: 10px;
+    right: 15px;
+    left: auto;
+    margin-right: 0px;
+  }
 
-    &:after {
-        border-color: rgba(255, 255, 255, 0);
-        border-bottom-color: #ffffff;
-        border-width: 10px;
-        right: 15px;
-        left: auto;
-        margin-right: 0px;
-    }
+  &:before {
+    border-color: rgba(113, 158, 206, 0);
+    border-bottom-color: var(--border-color);
+    border-width: 11.5px;
+    right: 15px;
+    left: auto;
+    margin-right: -1px;
+  }
 
-    &:before {
-        border-color: rgba(113, 158, 206, 0);
-        border-bottom-color: var(--border-color);
-        border-width: 11.5px;
-        right: 15px;
-        left: auto;
-        margin-right: -1px;
-    }
-
-    &.show {
-        right: - var(--btn-height);
-    }
+  &.show {
+    right: - var(--btn-height);
+  }
 }

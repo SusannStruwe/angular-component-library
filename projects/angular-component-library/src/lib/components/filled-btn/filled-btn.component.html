@@ -1,15 +1,18 @@
 <button
-    [ngClass]="[hoverStyle, styleClass]"
-    [style.width]="width"
-    [attr.aria-label]="ariaLabel"
-    [disabled]="isDisabled"
-    [class.active]="isActive">
+  [ngClass]="[hoverStyle, styleClass]"
+  [style.width]="width"
+  [attr.aria-label]="ariaLabel"
+  [disabled]="isDisabled"
+  [class.active]="isActive"
+>
+  @if (faIcon && showIcon) {
+    <fa-icon
+      [icon]="faIcon"
+      [animation]="isSpinning ? 'spin' : undefined"
+    ></fa-icon>
+  }
 
-    @if (faIcon && showIcon) {
-        <fa-icon [icon]="faIcon" [animation]="isSpinning ? 'spin' : undefined"></fa-icon>
-    }
-
-    @if (label) {
-        <span>{{ label }}</span>
-    }
+  @if (label) {
+    <span>{{ label }}</span>
+  }
 </button>

@@ -1,50 +1,49 @@
-@import '../../../../assets/styles';
-
+@import "../../../../assets/styles";
 
 :host {
-    position: relative;
-    cursor: pointer;
+  position: relative;
+  cursor: pointer;
 }
 
 .collapsible-header {
-    border: 1px solid var(--border-color);
-    margin: 10px 5px 0px 5px;
-    height: var(--btn-height);
-    line-height: var(--btn-height);
-    box-sizing: border-box;
-    padding: 0em 1em;
+  border: 1px solid var(--border-color);
+  margin: 10px 5px 0px 5px;
+  height: var(--btn-height);
+  line-height: var(--btn-height);
+  box-sizing: border-box;
+  padding: 0em 1em;
 }
 
 .collapsible-content {
-    border-left: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    margin: 0px 5px;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin: 0px 5px;
 
-    &.show {
-        height: auto;
-        transform-origin: top;
-        transform: scaleY(1);
-        transition: transform 0.2s ease-in-out;
-    }
+  &.show {
+    height: auto;
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: transform 0.2s ease-in-out;
+  }
 
-    &.hide {
-        height: 0;
-        transform-origin: top;
-        transition: transform 0s ease-in-out;
-        transform: scaleY(0);
-    }
+  &.hide {
+    height: 0;
+    transform-origin: top;
+    transition: transform 0s ease-in-out;
+    transform: scaleY(0);
+  }
 }
 
 .scheduler-design {
-    border: none;
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0em;
+  border: none;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0em;
 }
 
 .collapsible-header.scheduler-design {
-    min-height: calc(var(--btn-height) + 5px);
+  min-height: calc(var(--btn-height) + 5px);
 }
 
 /***************************************************************
@@ -52,9 +51,9 @@ Media query to hide hover effects for devices
 that do not support them, like touch displays
 **************************************************************/
 @media (hover: hover) {
-    .collapsible-header {
-        &:hover {
-            color:  var(--accent-color);
-        }
+  .collapsible-header {
+    &:hover {
+      color: var(--accent-color);
     }
+  }
 }

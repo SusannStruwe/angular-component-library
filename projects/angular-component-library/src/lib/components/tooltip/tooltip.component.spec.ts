@@ -4,37 +4,37 @@ import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testi
 import { By } from '@angular/platform-browser';
 
 describe('TooltipComponent', () => {
-    let component: TooltipComponent;
-    let fixture: ComponentFixture<TooltipComponent>;
+  let component: TooltipComponent;
+  let fixture: ComponentFixture<TooltipComponent>;
 
-    const toolTipText = 'Tip';
+  const toolTipText = 'Tip';
 
-    beforeEach(() => {
-        TestBed.configureTestingModule({
-            imports: [TooltipComponent,FontAwesomeTestingModule],
-            providers: [],
-        });
-
-        fixture = TestBed.createComponent(TooltipComponent);
-
-        component = fixture.componentInstance;
-        component.tooltip = toolTipText;
-
-        fixture.detectChanges();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [TooltipComponent, FontAwesomeTestingModule],
+      providers: [],
     });
 
-    it('should create tooltip component', () => {
-        expect(component).toBeTruthy();
-    });
+    fixture = TestBed.createComponent(TooltipComponent);
 
-    it('should have tooltip text', () => {
-        const tooltipEl = fixture.debugElement.query(By.css('.tooltip'));
-        expect(tooltipEl).toBeTruthy();
-    });
+    component = fixture.componentInstance;
+    component.tooltip = toolTipText;
 
-    it('tooltip text should be', () => {
-        const tooltipEl = fixture.debugElement.query(By.css('.tooltip'));
-        const content = tooltipEl.nativeElement.textContent;
-        expect(content).toBe(toolTipText);
-    });
+    fixture.detectChanges();
+  });
+
+  it('should create tooltip component', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should have tooltip text', () => {
+    const tooltipEl = fixture.debugElement.query(By.css('.tooltip'));
+    expect(tooltipEl).toBeTruthy();
+  });
+
+  it('tooltip text should be', () => {
+    const tooltipEl = fixture.debugElement.query(By.css('.tooltip'));
+    const content = tooltipEl.nativeElement.textContent;
+    expect(content).toBe(toolTipText);
+  });
 });

@@ -4,32 +4,32 @@ import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testi
 import { By } from '@angular/platform-browser';
 
 describe('BadgeComponent', () => {
-    let component: BadgeComponent;
-    let fixture: ComponentFixture<BadgeComponent>;
-    const title = 'SUCCESSFUL';
+  let component: BadgeComponent;
+  let fixture: ComponentFixture<BadgeComponent>;
+  const title = 'SUCCESSFUL';
 
-    beforeEach(() => {
-        TestBed.configureTestingModule({
-            imports: [BadgeComponent, FontAwesomeTestingModule],
-            providers: [],
-        });
-
-        fixture = TestBed.createComponent(BadgeComponent);
-
-        component = fixture.componentInstance;
-        component.label = title;
-
-        fixture.detectChanges();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [BadgeComponent, FontAwesomeTestingModule],
+      providers: [],
     });
 
-    it('should create badge component', () => {
-        expect(component).toBeTruthy();
-    });
+    fixture = TestBed.createComponent(BadgeComponent);
 
-    it('should show label', () => {
-        const titleEl = fixture.debugElement.query(By.css('p')).nativeElement;
-        expect(titleEl.innerHTML).toEqual(title);
-    });
+    component = fixture.componentInstance;
+    component.label = title;
+
+    fixture.detectChanges();
+  });
+
+  it('should create badge component', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should show label', () => {
+    const titleEl = fixture.debugElement.query(By.css('p')).nativeElement;
+    expect(titleEl.innerHTML).toEqual(title);
+  });
 
   /*  it('should change background color to rgb(53, 200, 50) on class style success', () => {
         component.classStyle = 'success';
@@ -51,27 +51,27 @@ describe('BadgeComponent', () => {
         expect(styles.backgroundColor).toEqual('rgb(226, 118, 29)');
     });*/
 
-    it('should change class style to pos-absolute', () => {
-        component.classStyle = 'pos-absolute';
-        fixture.detectChanges();
+  it('should change class style to pos-absolute', () => {
+    component.classStyle = 'pos-absolute';
+    fixture.detectChanges();
 
-        const badgeEl = fixture.debugElement.query(By.css('.badge'));
-        const styles = window.getComputedStyle(badgeEl.nativeElement);
+    const badgeEl = fixture.debugElement.query(By.css('.badge'));
+    const styles = window.getComputedStyle(badgeEl.nativeElement);
 
-        expect(styles.width).toEqual('10px');
-        expect(styles.height).toEqual('10px');
-        expect(styles.position).toEqual('absolute');
-        expect(styles.zIndex).toEqual('1500');
-        expect(styles.padding).toEqual('2px');
-    });
+    expect(styles.width).toEqual('10px');
+    expect(styles.height).toEqual('10px');
+    expect(styles.position).toEqual('absolute');
+    expect(styles.zIndex).toEqual('1500');
+    expect(styles.padding).toEqual('2px');
+  });
 
-    it('should change class style to pos-absolute xs', () => {
-        component.classStyle = 'pos-absolute xs';
-        fixture.detectChanges();
+  it('should change class style to pos-absolute xs', () => {
+    component.classStyle = 'pos-absolute xs';
+    fixture.detectChanges();
 
-        const badgeEl = fixture.debugElement.query(By.css('.badge'));
-        const styles = window.getComputedStyle(badgeEl.nativeElement);
+    const badgeEl = fixture.debugElement.query(By.css('.badge'));
+    const styles = window.getComputedStyle(badgeEl.nativeElement);
 
-        expect(styles.padding).toEqual('0px');
-    });
+    expect(styles.padding).toEqual('0px');
+  });
 });

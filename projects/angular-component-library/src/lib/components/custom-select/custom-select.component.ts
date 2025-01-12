@@ -1,19 +1,18 @@
 import { CommonModule } from '@angular/common';
 import {
-    ChangeDetectionStrategy,
-    ChangeDetectorRef,
-    Component,
-    ElementRef,
-    EventEmitter,
-    Input,
-    OnInit,
-    Output,
-    ViewChild,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ClickOutsideDirective } from '../../directives/click-outside.directive';
-
 
 /**
  * Component to create and show custom select with own button content and menu content
@@ -34,63 +33,63 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
  * ```
  */
 @Component({
-    selector: 'custom-select-component',
-    standalone: true,
-    imports: [
-        CommonModule, 
-        FontAwesomeModule, 
-        FormsModule, 
-        ClickOutsideDirective
-    ],
-    templateUrl: './custom-select.component.html',
-    styleUrls: ['./custom-select.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'custom-select-component',
+  standalone: true,
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    FormsModule,
+    ClickOutsideDirective,
+  ],
+  templateUrl: './custom-select.component.html',
+  styleUrls: ['./custom-select.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CustomSelectComponent implements OnInit {
-    @Input() show? = false;
+  @Input() show? = false;
 
-    @Output() showChange = new EventEmitter<boolean>();
+  @Output() showChange = new EventEmitter<boolean>();
 
-    @ViewChild('btn') btn?: ElementRef<HTMLDivElement>;
-    @ViewChild('menu') menu?: ElementRef<HTMLDivElement>;
+  @ViewChild('btn') btn?: ElementRef<HTMLDivElement>;
+  @ViewChild('menu') menu?: ElementRef<HTMLDivElement>;
 
-    constructor(private changeDetector: ChangeDetectorRef) {}
+  constructor(private changeDetector: ChangeDetectorRef) {}
 
-    ngOnInit(): void {
-        this.changeDetector.detectChanges();
+  ngOnInit(): void {
+    this.changeDetector.detectChanges();
+  }
+
+  toggleFilter(): void {
+    this.show = !this.show;
+    this.showChange.emit(this.show);
+  }
+
+  getBtnHeight(): number {
+    const boundingBtn = this.btn?.nativeElement.getBoundingClientRect();
+    if (boundingBtn) {
+      return boundingBtn.height;
+    } else {
+      return 0;
     }
+  }
 
-    toggleFilter(): void {
-        this.show = !this.show;
-        this.showChange.emit(this.show);
+  aligmentLeft(): boolean {
+    const boundingMenu = this.menu?.nativeElement.getBoundingClientRect();
+    const boundingBtn = this.btn?.nativeElement.getBoundingClientRect();
+
+    if (boundingBtn && boundingMenu) {
+      const right = document.body.scrollWidth - boundingBtn.right;
+      //as long as there is enough space on the right, align it to the left
+      return right > boundingMenu.width;
+    } else {
+      return false;
     }
+  }
 
-    getBtnHeight(): number {
-        const boundingBtn = this.btn?.nativeElement.getBoundingClientRect();
-        if (boundingBtn) {
-            return boundingBtn.height;
-        } else {
-            return 0;
-        }
+  handleClickOutside(): void {
+    if (this.show) {
+      this.show = !this.show;
+      this.showChange.emit(this.show);
     }
-
-    aligmentLeft(): boolean {
-        const boundingMenu = this.menu?.nativeElement.getBoundingClientRect();
-        const boundingBtn = this.btn?.nativeElement.getBoundingClientRect();
-
-        if (boundingBtn && boundingMenu) {
-            const right = document.body.scrollWidth - boundingBtn.right;
-            //as long as there is enough space on the right, align it to the left
-            return right > boundingMenu.width;
-        } else {
-            return false;
-        }
-    }
-
-    handleClickOutside(): void {
-        if (this.show) {
-            this.show = !this.show;
-            this.showChange.emit(this.show);
-        }
-    }
+  }
 }

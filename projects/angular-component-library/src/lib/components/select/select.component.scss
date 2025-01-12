@@ -1,378 +1,371 @@
-@import '../../../../assets/styles';
-
+@import "../../../../assets/styles";
 
 :host {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 .flex {
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-    .icon-before {
-        padding-left: 10px;
-        padding-right: 5px;
-    }
+  .icon-before {
+    padding-left: 10px;
+    padding-right: 5px;
+  }
 }
 
 button {
-    cursor: pointer;
-    position: relative;
-    height: var(--btn-height);
-    min-width: var(--btn-height);
-    line-height: var(--btn-height);
-    font-weight: var(--font-weight-light);
-    font-size: var(--font-size);
-    padding: 0px;
-    color: var(--fa-icon-color);
-    background: transparent;
-    border: var(--border-width) solid var(--btn-color);
-    border-radius: var(--border-radius);
-    width: 100%;
-    max-width: var(--max-width-select);
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  cursor: pointer;
+  position: relative;
+  height: var(--btn-height);
+  min-width: var(--btn-height);
+  line-height: var(--btn-height);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size);
+  padding: 0px;
+  color: var(--fa-icon-color);
+  background: transparent;
+  border: var(--border-width) solid var(--btn-color);
+  border-radius: var(--border-radius);
+  width: 100%;
+  max-width: var(--max-width-select);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-    span {
-        height: var(--btn-height);
-        line-height: var(--btn-height);
-        padding: 10px;
-        text-align: left;
-        -webkit-line-clamp: 1;
-        color: var(--btn-color);
-        display: inline-flex;
-        line-height: 1.4;
-        -webkit-box-orient: vertical;
+  span {
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    padding: 10px;
+    text-align: left;
+    -webkit-line-clamp: 1;
+    color: var(--btn-color);
+    display: inline-flex;
+    line-height: 1.4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  .select-text {
+    min-width: auto;
+    padding: 10px 0px 10px 10px;
+    text-align: left;
+    width: 65%;
+  }
+
+  fa-icon {
+    color: var(--btn-color);
+  }
+
+  // dropdown arrow design
+  span:last-of-type {
+    width: var(--btn-height);
+    background: var(--btn-color);
+    border-left: none;
+    align-items: center;
+    justify-content: center;
+
+    &:active:not([disabled]) {
+      background-color: var(--accent-color-dark);
+    }
+
+    fa-icon {
+      color: var(--fa-icon-color);
+    }
+  }
+
+  // complete button design
+  &.active {
+    border-color: var(--accent-color);
+
+    span:last-of-type {
+      background-color: var(--accent-color);
+      // background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+
+      fa-icon {
+        color: var(--fa-icon-color);
+      }
+    }
+
+    ::ng-deep {
+      .successful,
+      .released,
+      .failed,
+      .pending {
+        color: var(--accent-color);
+      }
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  top: calc(var(--btn-height) + 5px);
+  min-width: 150px;
+  width: max-content;
+  max-width: var(--max-width-select);
+  height: auto;
+  border-radius: 0;
+  background: var(--menu-color);
+  z-index: var(--z-index-5);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  &.left {
+    left: 0px;
+  }
+
+  &.right {
+    right: 0px;
+  }
+
+  &.show {
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: transform 0.2s ease-in-out;
+    min-width: 100%;
+  }
+
+  &.hide {
+    transform-origin: top;
+    transition: transform 0.2s ease-in-out;
+    transform: scaleY(0);
+  }
+
+  input[type="text"] {
+    height: var(--input-height);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: var(--font-size);
+    background: transparent;
+    margin: 5px;
+    width: -moz-available; /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    width: strech;
+
+    &:focus {
+      border-color: var(--accent-color);
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    max-height: 500px;
+    width: 100%;
+    overflow-y: auto;
+    border-top: 1px solid var(--border-color);
+
+    li {
+      height: var(--btn-height);
+      position: relative;
+      cursor: pointer;
+      font-size: var(--font-size);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      padding: 0.25em 0.5em 0.25em 0.75em;
+      color: var(--text-color);
+      border-bottom: 1px solid rgb(var(--border-color-rgb), 0.2);
+      text-align: left;
+      box-sizing: border-box;
+      overflow: hidden;
+      align-items: center;
+      display: grid;
+      grid-template-columns: 0.6fr 5fr 2fr;
+
+      &.grid {
+        display: grid;
+        grid-template-columns: 0.6fr 5fr 2fr;
+      }
+
+      &.flex {
+        display: flex;
+        gap: 15px;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 10px;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      .text {
+        line-height: calc(var(--btn-height) - 10px);
+        word-wrap: break-word;
+        // max-width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         text-align: left;
-        box-sizing: border-box;
-    }
+      }
 
-    .select-text{
-        min-width: auto;
-        padding: 10px 0px 10px 10px; 
-        text-align: left;
-        width: 65%;
-    }
-
-    fa-icon{
+      fa-icon {
         color: var(--btn-color);
-    }    
 
-    // dropdown arrow design
-    span:last-of-type {
-        width: var(--btn-height);
-        background: var(--btn-color);
-        border-left: none;
-        align-items: center;
-        justify-content: center;
-
-        &:active:not([disabled]){
-          background-color: var(--accent-color-dark);
+        &.pending {
+          color: var(--job-pending-color);
         }
+        &.successful {
+          color: var(--job-successful-color);
+        }
+      }
 
-        fa-icon{
-            color: var(--fa-icon-color);
-        }    
+      small {
+        text-align: right;
+      }
+
+      &:active,
+      &.active {
+        background-color: var(--row-highlight-color);
+        color: var(--accent-color);
+
+        fa-icon {
+          color: var(--accent-color);
+        }
+      }
     }
-   
- 
-    // complete button design
-    &.active {
-        border-color: var(--accent-color);
-
-        span:last-of-type{
-            background-color: var(--accent-color);
-            // background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-            
-            fa-icon{
-                color: var(--fa-icon-color);
-            }
-        }
-    
-        ::ng-deep {
-            .successful,
-            .released,
-            .failed,
-            .pending {
-                color: var(--accent-color);
-            }
-        }
-    }
+  }
 }
-
-.menu {
-    position: absolute;
-    top: calc(var(--btn-height) + 5px);
-    min-width: 150px;
-    width: max-content;
-    max-width: var(--max-width-select);
-    height: auto;
-    border-radius: 0;
-    background: var(--menu-color);
-    z-index: var(--z-index-5);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    &.left {
-        left: 0px;
-    }
-
-    &.right {
-        right: 0px;
-    }
-
-    &.show {
-        transform-origin: top;
-        transform: scaleY(1);
-        transition: transform 0.2s ease-in-out;
-        min-width: 100%;
-    }
-
-    &.hide {
-        transform-origin: top;
-        transition: transform 0.2s ease-in-out;
-        transform: scaleY(0);
-    }
-
-    input[type='text'] {
-        height: var(--input-height);
-        border: var(--border-width) solid var(--border-color);
-        border-radius: 0;
-        outline: none;
-        cursor: pointer;
-        font-size: var(--font-size);
-        background: transparent;
-        margin: 5px;
-        width: -moz-available; /* WebKit-based browsers will ignore this. */
-        width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
-        width: strech;
-
-        &:focus {
-            border-color: var(--accent-color);
-        }
-    }
-
-    ul {
-        list-style: none;
-        padding: 0px;
-        margin: 0px;
-        max-height: 500px;
-        width: 100%;
-        overflow-y: auto;
-        border-top: 1px solid var(--border-color);
-
-        li {
-            height: var(--btn-height);
-            position: relative;
-            cursor: pointer;
-            font-size: var(--font-size);
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            padding: 0.25em 0.5em 0.25em 0.75em;
-            color: var(--text-color);
-            border-bottom: 1px solid rgb(var(--border-color-rgb), 0.2);
-            text-align: left;
-            box-sizing: border-box;
-            overflow: hidden;
-            align-items: center;
-            display: grid;
-            grid-template-columns: 0.6fr 5fr 2fr;
-
-            &.grid {
-                display: grid;
-                grid-template-columns: 0.6fr 5fr 2fr;
-            }
-
-            &.flex {
-                display: flex;
-                gap: 15px;
-            }
-
-            input[type='checkbox'] {
-                margin-right: 10px;
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-                height: 0;
-                width: 0;
-            }
-
-            &:last-of-type {
-                border-bottom: none;
-            }
-
-            .text {
-                line-height: calc(var(--btn-height) - 10px);
-                word-wrap: break-word;
-                // max-width: 100%;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                text-align: left;
-            }
-
-            fa-icon {
-                color: var(--btn-color);
-
-                &.pending {
-                    color: var(--job-pending-color);
-                }
-                &.successful {
-                    color: var(--job-successful-color);
-                }
-            }
-
-            small{
-                text-align: right;
-            }
-
-            &:active,
-            &.active {
-                background-color: var(--row-highlight-color);
-                color: var(--accent-color);
-
-                fa-icon {
-                    color: var(--accent-color);
-                }
-            }
-        }
-    }
-}
-
 
 .flex.navbar {
+  cursor: pointer;
+
+  button {
+    background: transparent;
+    border: none;
+    height: var(--sub-navbar-height);
     cursor: pointer;
+    max-width: 350px;
 
-    button {
-        background: transparent;
-        border: none;
-        height: var(--sub-navbar-height);
-        cursor: pointer;
-        max-width: 350px;
-
-        span {
-            color: var(--fa-icon-color);
-        }
-
-        span:first-of-type {
-            overflow: hidden;
-            word-break: break-all;
-        }
-
-        span:last-of-type {
-            background: transparent;
-            border-left: none;
-
-            fa-icon {
-                color: var(--fa-icon-color);
-            }
-        }
-
-        &:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
+    span {
+      color: var(--fa-icon-color);
     }
 
-    .menu {
-        top: calc(var(--navbar-height) + 5px);
+    span:first-of-type {
+      overflow: hidden;
+      word-break: break-all;
     }
+
+    span:last-of-type {
+      background: transparent;
+      border-left: none;
+
+      fa-icon {
+        color: var(--fa-icon-color);
+      }
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  .menu {
+    top: calc(var(--navbar-height) + 5px);
+  }
 }
-
 
 .scheduler {
+  button {
+    border: var(--border-width) solid var(--btn-color);
 
-    button {
-        border: var(--border-width) solid var(--btn-color);
-
-        span {
-            color: var(--btn-color);
-        }
-
-        .select-text{
-            width: 100%;
-        }
-
-        span:last-of-type{
-            padding: 10px 15px;
-            background: var(--fa-icon-color);
-            border-left: none;
-
-            fa-icon {
-                color: var(--btn-color);
-            }    
-
-            &:active:not([disabled]){
-                background-color: var(--accent-color-dark);
-            }
-        }
-
-      
-
-        // complete button design
-        &:hover,
-        &.active {
-            border-color: var(--accent-color-light);
-
-            span:last-of-type{
-                background-color: var(--accent-color-light);
-                
-                fa-icon{
-                    color: var(--accent-color);
-                }
-            }
-        
-            ::ng-deep {
-                .successful,
-                .released,
-                .failed,
-                .pending {
-                    color: var(--accent-color);
-                }
-            }
-        }
+    span {
+      color: var(--btn-color);
     }
+
+    .select-text {
+      width: 100%;
+    }
+
+    span:last-of-type {
+      padding: 10px 15px;
+      background: var(--fa-icon-color);
+      border-left: none;
+
+      fa-icon {
+        color: var(--btn-color);
+      }
+
+      &:active:not([disabled]) {
+        background-color: var(--accent-color-dark);
+      }
+    }
+
+    // complete button design
+    &:hover,
+    &.active {
+      border-color: var(--accent-color-light);
+
+      span:last-of-type {
+        background-color: var(--accent-color-light);
+
+        fa-icon {
+          color: var(--accent-color);
+        }
+      }
+
+      ::ng-deep {
+        .successful,
+        .released,
+        .failed,
+        .pending {
+          color: var(--accent-color);
+        }
+      }
+    }
+  }
 }
 
-
 .sidebar {
-    @extend .scheduler;
+  @extend .scheduler;
 
-    button {
-        border: none;
+  button {
+    border: none;
 
-        span:last-of-type{     
-            background: transparent;
-        }
-
-        &.active {
-            background-color: var(--accent-color-light);
-            color: var(--accent-color);
-
-            fa-icon, span{
-                color: var(--accent-color);
-            }
-    
-            span:last-of-type{     
-                background-color: var(--accent-color-light);
-
-                &:active:not([disabled]){
-                    background-color: var(--accent-color-light);
-                }
-            }
-        }
+    span:last-of-type {
+      background: transparent;
     }
+
+    &.active {
+      background-color: var(--accent-color-light);
+      color: var(--accent-color);
+
+      fa-icon,
+      span {
+        color: var(--accent-color);
+      }
+
+      span:last-of-type {
+        background-color: var(--accent-color-light);
+
+        &:active:not([disabled]) {
+          background-color: var(--accent-color-light);
+        }
+      }
+    }
+  }
 }
 
 /************************************************
@@ -380,127 +373,125 @@ Media query to add hover only on device which support hover
 *********************************************/
 
 @media (hover: hover) {
+  button {
+    // complete button design
+    &:hover {
+      border-color: var(--accent-color);
+
+      span:last-of-type {
+        background-color: var(--accent-color);
+        // background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+
+        fa-icon {
+          color: var(--fa-icon-color);
+        }
+      }
+
+      ::ng-deep {
+        .successful,
+        .released,
+        .failed,
+        .pending {
+          color: var(--accent-color);
+        }
+      }
+    }
+  }
+
+  .menu {
+    ul {
+      li {
+        &:hover {
+          background-color: var(--row-highlight-color);
+          color: var(--accent-color);
+
+          fa-icon {
+            color: var(--accent-color);
+          }
+        }
+      }
+    }
+  }
+
+  .flex.navbar {
+    &:hover {
+      background-color: black;
+      fa-icon {
+        color: var(--accent-color);
+      }
+      button {
+        span:last-of-type {
+          fa-icon {
+            color: var(--accent-color);
+          }
+        }
+        span,
+        fa-icon {
+          color: var(--accent-color);
+        }
+      }
+    }
+
+    &:active:not([disabled]) {
+      button {
+        span:last-of-type {
+          fa-icon {
+            color: var(--accent-color-dark);
+          }
+        }
+        span {
+          color: var(--accent-color-dark);
+        }
+      }
+    }
+  }
+
+  .scheduler {
     button {
-        // complete button design
-        &:hover {
-            border-color: var(--accent-color);
+      &:hover,
+      &.active {
+        border-color: var(--accent-color-light);
 
-            span:last-of-type {
-                background-color: var(--accent-color);
-                // background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-                
-                fa-icon{
-                    color: var(--fa-icon-color);
-                }
-            }
-        
-            ::ng-deep {
-                .successful,
-                .released,
-                .failed,
-                .pending {
-                    color: var(--accent-color);
-                }
-            }
-        }
-    }
+        span:last-of-type {
+          background-color: var(--accent-color-light);
 
-    .menu{
-        ul{
-            li{
-                &:hover {
-                    background-color: var(--row-highlight-color);
-                    color: var(--accent-color);
-    
-                    fa-icon {
-                        color: var(--accent-color);
-                    }
-                }
-            }
-        }
-    }
-
-    .flex.navbar {
-        &:hover {
-            background-color: black;
-            fa-icon {
-                color: var(--accent-color);
-            }
-            button {
-                span:last-of-type {
-                    fa-icon {
-                        color: var(--accent-color);
-                    }
-                }
-                span,
-                fa-icon {
-                    color: var(--accent-color);
-                }
-            }
+          fa-icon {
+            color: var(--accent-color);
+          }
         }
 
-        &:active:not([disabled]) {
-            button {
-                span:last-of-type {
-                    fa-icon {
-                        color: var(--accent-color-dark);
-                    }
-                }
-                span{
-                    color: var(--accent-color-dark);
-                }
-            }
+        ::ng-deep {
+          .successful,
+          .released,
+          .failed,
+          .pending {
+            color: var(--accent-color);
+          }
         }
+      }
     }
+  }
 
-    .scheduler {
-        button {
-            &:hover,
-            &.active {
-                border-color: var(--accent-color-light);
+  .sidebar {
+    @extend .scheduler;
+    button {
+      &:hover {
+        background-color: var(--accent-color-light);
+        color: var(--accent-color);
 
-                span:last-of-type{
-                    background-color: var(--accent-color-light);
-                    
-                    fa-icon{
-                        color: var(--accent-color);
-                    }
-                }
-            
-                ::ng-deep {
-                    .successful,
-                    .released,
-                    .failed,
-                    .pending {
-                        color: var(--accent-color);
-                    }
-                }
-            }
-       }
-    }
-
-    .sidebar {
-        @extend .scheduler;
-        button {
-
-            &:hover {
-                background-color: var(--accent-color-light);
-                color: var(--accent-color);
-
-                fa-icon, span{
-                    color: var(--accent-color);
-                }
-
-                span:last-of-type{     
-                    background-color: var(--accent-color-light);
-    
-                    &:active:not([disabled]){
-                        background-color: var(--accent-color-light);
-                    }
-                }
-            }
+        fa-icon,
+        span {
+          color: var(--accent-color);
         }
-    }
-   
 
+        span:last-of-type {
+          background-color: var(--accent-color-light);
+
+          &:active:not([disabled]) {
+            background-color: var(--accent-color-light);
+          }
+        }
+      }
+    }
+  }
 }

@@ -3,39 +3,40 @@ import { CircleBtnComponent } from './circle-btn.component';
 import { By } from '@angular/platform-browser';
 import { IconService } from '../../services/icon.service';
 
-
 describe('CircleBtnComponent', () => {
-    let component: CircleBtnComponent;
-    let fixture: ComponentFixture<CircleBtnComponent>;
-    const iconService = new IconService();
+  let component: CircleBtnComponent;
+  let fixture: ComponentFixture<CircleBtnComponent>;
+  const iconService = new IconService();
 
-    beforeEach(() => {
-        TestBed.configureTestingModule({
-            imports: [CircleBtnComponent],
-            providers: [],
-        });
-
-        fixture = TestBed.createComponent(CircleBtnComponent);
-
-        component = fixture.componentInstance;
-
-        fixture.detectChanges();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [CircleBtnComponent],
+      providers: [],
     });
 
-    it('should create circle btn component', () => {
-        expect(component).toBeTruthy();
-    });
+    fixture = TestBed.createComponent(CircleBtnComponent);
 
-    it('should show fa-icon check', () => {
-        component.faIcon = iconService.faCheck;
-        fixture.detectChanges();
+    component = fixture.componentInstance;
 
-        expect(fixture.debugElement.query(By.css('svg')).nativeElement).toBeTruthy();
+    fixture.detectChanges();
+  });
 
-        const faIconName = fixture.debugElement
-            .query(By.css('svg'))
-            .nativeElement.getAttribute('data-icon');
+  it('should create circle btn component', () => {
+    expect(component).toBeTruthy();
+  });
 
-        expect(faIconName).toEqual('check');
-    });
+  it('should show fa-icon check', () => {
+    component.faIcon = iconService.faCheck;
+    fixture.detectChanges();
+
+    expect(
+      fixture.debugElement.query(By.css('svg')).nativeElement,
+    ).toBeTruthy();
+
+    const faIconName = fixture.debugElement
+      .query(By.css('svg'))
+      .nativeElement.getAttribute('data-icon');
+
+    expect(faIconName).toEqual('check');
+  });
 });

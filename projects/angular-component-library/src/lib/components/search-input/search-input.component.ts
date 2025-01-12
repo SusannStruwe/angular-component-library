@@ -5,9 +5,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { IconService } from '../../services/icon.service';
 
-
 /**
- * Component to select duration
+ * Component to search
  *
  * @howToUse
  * ```
@@ -17,42 +16,42 @@ import { IconService } from '../../services/icon.service';
  * ```
  */
 @Component({
-    selector: 'search-input-component',
-    standalone: true,
-    imports: [CommonModule, FontAwesomeModule, FormsModule],
-    templateUrl: './search-input.component.html',
-    styleUrls: ['./search-input.component.scss'],
+  selector: 'search-input-component',
+  standalone: true,
+  imports: [CommonModule, FontAwesomeModule, FormsModule],
+  templateUrl: './search-input.component.html',
+  styleUrls: ['./search-input.component.scss'],
 })
 export class SearchInputComponent {
-    @Input() filter = '';
-    @Input() classStyles?: string;
-    @Input() placeholderText? = '';
+  @Input() filter = '';
+  @Input() classStyles?: string;
+  @Input() placeholderText? = '';
 
-    @Output() filterChange = new EventEmitter<string>();
+  @Output() filterChange = new EventEmitter<string>();
 
-    faMagnifyingGlass: IconDefinition;
-    faCloseCircle: IconDefinition;
+  faMagnifyingGlass: IconDefinition;
+  faCloseCircle: IconDefinition;
 
-    randomId: string = Math.floor(Math.random() * 16777215).toString(16);
+  randomId: string = Math.floor(Math.random() * 16777215).toString(16);
 
-    constructor(private iconService: IconService) {
-        this.faMagnifyingGlass = this.iconService.faMagnifyingGlass;
-        this.faCloseCircle = this.iconService.faCircleXmark;
-    }
+  constructor(private iconService: IconService) {
+    this.faMagnifyingGlass = this.iconService.faMagnifyingGlass;
+    this.faCloseCircle = this.iconService.faCircleXmark;
+  }
 
-    /**
-     * Filter string has changed
-     */
-    filterChanged(): void {
-        this.filterChange.emit(this.filter);
-    }
+  /**
+   * Filter string has changed
+   */
+  filterChanged(): void {
+    this.filterChange.emit(this.filter);
+  }
 
-    /**
-     * Clear filter
-     */
-    clearFilter(event: Event): void {
-        event.stopPropagation();
-        this.filter = '';
-        this.filterChange.emit(this.filter);
-    }
+  /**
+   * Clear filter
+   */
+  clearFilter(event: Event): void {
+    event.stopPropagation();
+    this.filter = '';
+    this.filterChange.emit(this.filter);
+  }
 }

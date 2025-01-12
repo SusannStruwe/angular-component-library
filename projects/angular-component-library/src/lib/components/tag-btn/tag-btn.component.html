@@ -1,10 +1,10 @@
-<button 
-    [attr.title]="label"
-    [attr.aria-label]="label"
-    [style.background]="backgroundColor">
-    
-    @if (label) {
-        <span>{{ label }}</span>
-    }
-    <fa-icon [icon]="faClose" (click)="removeTag()"></fa-icon>
+<button
+  [attr.title]="label"
+  [attr.aria-label]="label"
+  [style.background]="backgroundColor"
+>
+  @if (label) {
+    <span>{{ label }}</span>
+  }
+  <fa-icon [icon]="faClose" (click)="removeTag()"></fa-icon>
 </button>

@@ -1,31 +1,31 @@
 @if (visibleState) {
-    <div class="alert" [ngClass]="[type]">
-        <div class="flex-row">
-            @if (type === 'error') {
-                <fa-icon [icon]="faErrorIcon"></fa-icon>
-            }
-            @if (type === 'warning') {
-                <fa-icon [icon]="faWarningIcon"></fa-icon>
-            }
-            @if (type === 'info') {
-                <fa-icon [icon]="faInfoIcon" [rotate]="180"></fa-icon>
-            }
-            @if (type === 'success') {
-                <fa-icon [icon]="faSuccessIcon"></fa-icon>
-            }
-            @if (title) {
-                <p>
-                    <b>{{ title }}</b>
-                </p>
-            }
-            <span>
-                <p [innerHTML]="message"></p>
+  <div class="alert" [ngClass]="[type]">
+    <div class="flex-row">
+      @if (type === "error") {
+        <fa-icon [icon]="faErrorIcon"></fa-icon>
+      }
+      @if (type === "warning") {
+        <fa-icon [icon]="faWarningIcon"></fa-icon>
+      }
+      @if (type === "info") {
+        <fa-icon [icon]="faInfoIcon" [rotate]="180"></fa-icon>
+      }
+      @if (type === "success") {
+        <fa-icon [icon]="faSuccessIcon"></fa-icon>
+      }
+      @if (title) {
+        <p>
+          <b>{{ title }}</b>
+        </p>
+      }
+      <span>
+        <p [innerHTML]="message"></p>
 
-                @if (navigationLink) {
-                    <a [routerLink]="navigationLink"> {{ navigationLinkLabel }} </a>
-                }
-            </span>
-        </div>
-        <fa-icon class="close" [icon]="faClose" (click)="removeAlert()"></fa-icon>
+        @if (navigationLink) {
+          <a [routerLink]="navigationLink"> {{ navigationLinkLabel }} </a>
+        }
+      </span>
     </div>
+    <fa-icon class="close" [icon]="faClose" (click)="removeAlert()"></fa-icon>
+  </div>
 }

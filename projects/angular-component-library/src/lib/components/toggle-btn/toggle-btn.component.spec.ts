@@ -4,44 +4,46 @@ import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testi
 import { By } from '@angular/platform-browser';
 
 describe('ToggleBtnComponent', () => {
-    let component: ToggleBtnComponent;
-    let fixture: ComponentFixture<ToggleBtnComponent>;
+  let component: ToggleBtnComponent;
+  let fixture: ComponentFixture<ToggleBtnComponent>;
 
-    const text = 'Tip';
+  const text = 'Tip';
 
-    beforeEach(() => {
-        TestBed.configureTestingModule({
-            imports: [ToggleBtnComponent, FontAwesomeTestingModule],
-            providers: [],
-        });
-
-        fixture = TestBed.createComponent(ToggleBtnComponent);
-
-        component = fixture.componentInstance;
-        component.label = text;
-
-        fixture.detectChanges();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [ToggleBtnComponent, FontAwesomeTestingModule],
+      providers: [],
     });
 
-    it('should create toggle button component', () => {
-        expect(component).toBeTruthy();
-    });
+    fixture = TestBed.createComponent(ToggleBtnComponent);
 
-    it('should have toggle btn label', () => {
-        const toggleBtnText = fixture.debugElement.query(By.css('p'));
-        expect(toggleBtnText).toBeTruthy();
-    });
+    component = fixture.componentInstance;
+    component.label = text;
 
-    it('toggle btn label should be', () => {
-        const toggleBtnText = fixture.debugElement.query(By.css('p'));
-        const content = toggleBtnText.nativeElement.textContent;
-        expect(content).toEqual(text);
-    });
+    fixture.detectChanges();
+  });
 
-    it('toggle btn should toggle state', fakeAsync(() => {
-        const toggleInput = fixture.debugElement.query(By.css('.checkbox')).nativeElement;
-        toggleInput.dispatchEvent(new Event('change'));
-        fixture.detectChanges();
-        expect(component.checked).toBe(false);
-    }));
+  it('should create toggle button component', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should have toggle btn label', () => {
+    const toggleBtnText = fixture.debugElement.query(By.css('p'));
+    expect(toggleBtnText).toBeTruthy();
+  });
+
+  it('toggle btn label should be', () => {
+    const toggleBtnText = fixture.debugElement.query(By.css('p'));
+    const content = toggleBtnText.nativeElement.textContent;
+    expect(content).toEqual(text);
+  });
+
+  it('toggle btn should toggle state', fakeAsync(() => {
+    const toggleInput = fixture.debugElement.query(
+      By.css('.checkbox'),
+    ).nativeElement;
+    toggleInput.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+    expect(component.checked).toBe(false);
+  }));
 });

@@ -1,89 +1,99 @@
 @if (type === modalType.custom) {
-    <div class="modal" [style.z-index]="zIndex">
-        <div class="modal-content" [ngClass]="sizeClass">
-            <div class="modal-header">
-                <h2>{{ title }}</h2>
-                <button
-                    class="close-btn"
-                    [attr.title]="'close'"
-                    [attr.aria-label]="'close'"
-                    type="button"
-                    (click)="closeModal()">
-                    <fa-icon [icon]="faClose"></fa-icon>
-                </button>
-            </div>
-            <div class="modal-body">
-                <ng-content> </ng-content>
-            </div>
-            <div class="modal-footer">
-                @if (cancelBtn) {
-                    <bordered-btn-component
-                        [ariaLabel]="'Close'"
-                        (click)="closeModal()"
-                        [label]="cancelBtnText">
-                    </bordered-btn-component>
-                }
-                @if (deleteBtn) {
-                    <filled-btn-component
-                        [ariaLabel]="'Delete'"
-                        [faIcon]="showConfirmBtnLoader ? faLoader: undefined"
-                        [isDisabled]="confirmDisabled"
-                        [styleClass]="'delete'"
-                        [isSpinning]="showConfirmBtnLoader"
-                        (click)="confirmModal()"
-                        [label]="deleteBtnTxt">
-                    </filled-btn-component>
-                }
-                @if (confirmBtn) {
-                    <filled-btn-component
-                        [ariaLabel]="'Confirm'"
-                        [faIcon]="showConfirmBtnLoader ? faLoader: undefined"
-                        [isDisabled]="confirmDisabled"
-                        [isSpinning]="showConfirmBtnLoader"
-                        (click)="confirmModal()"
-                        [label]="confirmBtnText">
-                    </filled-btn-component>
-                }
-            </div>
-        </div>
+  <div class="modal" [style.z-index]="zIndex">
+    <div class="modal-content" [ngClass]="sizeClass">
+      <div class="modal-header">
+        <h2>{{ title }}</h2>
+        <button
+          class="close-btn"
+          [attr.title]="'close'"
+          [attr.aria-label]="'close'"
+          type="button"
+          (click)="closeModal()"
+        >
+          <fa-icon [icon]="faClose"></fa-icon>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ng-content> </ng-content>
+      </div>
+      <div class="modal-footer">
+        @if (cancelBtn) {
+          <bordered-btn-component
+            [ariaLabel]="'Close'"
+            (click)="closeModal()"
+            [label]="cancelBtnText"
+          >
+          </bordered-btn-component>
+        }
+        @if (deleteBtn) {
+          <filled-btn-component
+            [ariaLabel]="'Delete'"
+            [faIcon]="showConfirmBtnLoader ? faLoader : undefined"
+            [isDisabled]="confirmDisabled"
+            [styleClass]="'delete'"
+            [isSpinning]="showConfirmBtnLoader"
+            (click)="confirmModal()"
+            [label]="deleteBtnTxt"
+          >
+          </filled-btn-component>
+        }
+        @if (confirmBtn) {
+          <filled-btn-component
+            [ariaLabel]="'Confirm'"
+            [faIcon]="showConfirmBtnLoader ? faLoader : undefined"
+            [isDisabled]="confirmDisabled"
+            [isSpinning]="showConfirmBtnLoader"
+            (click)="confirmModal()"
+            [label]="confirmBtnText"
+          >
+          </filled-btn-component>
+        }
+      </div>
     </div>
+  </div>
 }
 @if (type !== modalType.custom) {
-    <div class="modal" [style.z-index]="zIndex" (click)="handleClickOutside($event)">
-        <div class="modal-content" [ngClass]="sizeClass">
-            <div class="modal-header">
-                <button
-                    class="close-btn"
-                    [attr.title]="'close'"
-                    [attr.aria-label]="'close'"
-                    type="button"
-                    (click)="closeModal()">
-                    <fa-icon [icon]="faClose"></fa-icon>
-                </button>
-            </div>
-            <div class="modal-body" [style.text-align]="'center'">
-                @if (type === modalType.info) {
-                    <div class="info-icon">
-                        <fa-icon [icon]="faCircleInfo"></fa-icon>
-                    </div>
-                }
-                @if (type === modalType.error) {
-                    <div class="error-icon">
-                        <fa-icon [icon]="faCircleXmark"></fa-icon>
-                    </div>
-                }
-                <h2>{{ title }}</h2>
-                <div [innerHTML]="description"></div>
-            </div>
-            <div class="modal-footer">
-                <filled-btn-component
-                    [ariaLabel]="'Close'"
-                    [isDisabled]="confirmDisabled"
-                    (click)="confirmModal()"
-                    [label]="'Ok'">
-                </filled-btn-component>
-            </div>
-        </div>
+  <div
+    class="modal"
+    [style.z-index]="zIndex"
+    (click)="handleClickOutside($event)"
+  >
+    <div class="modal-content" [ngClass]="sizeClass">
+      <div class="modal-header">
+        <button
+          class="close-btn"
+          [attr.title]="'close'"
+          [attr.aria-label]="'close'"
+          type="button"
+          (click)="closeModal()"
+        >
+          <fa-icon [icon]="faClose"></fa-icon>
+        </button>
+      </div>
+      <div class="modal-body" [style.text-align]="'center'">
+        @if (type === modalType.info) {
+          <div class="info-icon">
+            <fa-icon [icon]="faCircleInfo"></fa-icon>
+          </div>
+        }
+        @if (type === modalType.error) {
+          <div class="error-icon">
+            <fa-icon [icon]="faCircleXmark"></fa-icon>
+          </div>
+        }
+        <h2>{{ title }}</h2>
+        <div [innerHTML]="description"></div>
+      </div>
+      <div class="modal-footer">
+        <filled-btn-component
+          [ariaLabel]="'Close'"
+          [isDisabled]="confirmDisabled"
+          (click)="confirmModal()"
+          [label]="'Ok'"
+        >
+        </filled-btn-component>
+      </div>
     </div>
+  </div>
 }
 <div class="modal-background" [style.z-index]="zIndex - 1"></div>

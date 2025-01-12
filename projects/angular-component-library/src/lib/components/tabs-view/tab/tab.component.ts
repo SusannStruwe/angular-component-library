@@ -15,16 +15,16 @@ import { CommonModule } from '@angular/common';
  * ```
  */
 @Component({
-    selector: 'tab-component',
-    standalone: true,
-    imports: [CommonModule, FontAwesomeModule],
-    templateUrl: './tab.component.html',
-    styleUrls: ['./tab.component.scss'],
+  selector: 'tab-component',
+  standalone: true,
+  imports: [CommonModule, FontAwesomeModule],
+  templateUrl: './tab.component.html',
+  styleUrls: ['./tab.component.scss'],
 })
 export class TabComponent {
-    @Input() tabTitle: TabViewType = TabViewType.PRODUCTION;;
-    @Input() tabIcon?: IconDefinition;
-    @Input() active = false;
-    @Input() tooltip = '';
-    @Input() classStyle: string = '';
+  @Input() tabTitle: TabViewType = TabViewType.PRODUCTION;
+  @Input() tabIcon?: IconDefinition;
+  @Input() active = false;
+  @Input() tooltip = '';
+  @Input() classStyle: string = '';
 }

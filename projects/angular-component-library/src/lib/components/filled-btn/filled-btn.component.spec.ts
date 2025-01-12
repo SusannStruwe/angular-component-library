@@ -3,55 +3,56 @@ import { FilledBtnComponent } from './filled-btn.component';
 import { By } from '@angular/platform-browser';
 import { IconService } from '../../services/icon.service';
 
-
 describe('FilledBtnComponent', () => {
-    let component: FilledBtnComponent;
-    let fixture: ComponentFixture<FilledBtnComponent>;
-    const iconService = new IconService();
+  let component: FilledBtnComponent;
+  let fixture: ComponentFixture<FilledBtnComponent>;
+  const iconService = new IconService();
 
-    beforeEach(() => {
-        TestBed.configureTestingModule({
-            imports: [FilledBtnComponent],
-            providers: [],
-        });
-
-        fixture = TestBed.createComponent(FilledBtnComponent);
-
-        component = fixture.componentInstance;
-
-        fixture.detectChanges();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [FilledBtnComponent],
+      providers: [],
     });
 
-    it('should create bordered btn component', () => {
-        expect(component).toBeTruthy();
-    });
+    fixture = TestBed.createComponent(FilledBtnComponent);
 
-    it('should show button text', () => {
-        component.label = 'Start';
-        fixture.detectChanges();
+    component = fixture.componentInstance;
 
-        const btnText = fixture.debugElement.query(By.css('span')).nativeElement;
-        expect(btnText.innerHTML).toEqual('Start');
-    });
+    fixture.detectChanges();
+  });
 
-    it('should show fa-icon check', () => {
-        component.faIcon = iconService.faCheck;
-        fixture.detectChanges();
+  it('should create bordered btn component', () => {
+    expect(component).toBeTruthy();
+  });
 
-        expect(fixture.debugElement.query(By.css('svg')).nativeElement).toBeTruthy();
+  it('should show button text', () => {
+    component.label = 'Start';
+    fixture.detectChanges();
 
-        const faIconName = fixture.debugElement
-            .query(By.css('svg'))
-            .nativeElement.getAttribute('data-icon');
+    const btnText = fixture.debugElement.query(By.css('span')).nativeElement;
+    expect(btnText.innerHTML).toEqual('Start');
+  });
 
-        expect(faIconName).toEqual('check');
-    });
+  it('should show fa-icon check', () => {
+    component.faIcon = iconService.faCheck;
+    fixture.detectChanges();
 
-    it('should be disabled', () => {
-        component.isDisabled = true;
-        fixture.detectChanges();
+    expect(
+      fixture.debugElement.query(By.css('svg')).nativeElement,
+    ).toBeTruthy();
 
-        const button = fixture.debugElement.query(By.css('button')).nativeElement;
-        expect(button.disabled).toBeTruthy();
-    });
+    const faIconName = fixture.debugElement
+      .query(By.css('svg'))
+      .nativeElement.getAttribute('data-icon');
+
+    expect(faIconName).toEqual('check');
+  });
+
+  it('should be disabled', () => {
+    component.isDisabled = true;
+    fixture.detectChanges();
+
+    const button = fixture.debugElement.query(By.css('button')).nativeElement;
+    expect(button.disabled).toBeTruthy();
+  });
 });

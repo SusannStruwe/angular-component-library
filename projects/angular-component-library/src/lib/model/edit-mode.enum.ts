@@ -1,4 +1,4 @@
 export enum EditMode {
-    READ = 'READ',
-    WRITE = 'WRITE'
+  READ = 'READ',
+  WRITE = 'WRITE',
 }

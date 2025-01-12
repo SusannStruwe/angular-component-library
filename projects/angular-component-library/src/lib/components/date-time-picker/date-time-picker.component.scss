@@ -1,131 +1,127 @@
-@import '../../../../assets/styles';
+@import "../../../../assets/styles";
 
 ::-webkit-calendar-picker-indicator {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="var(--accent-color)" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="var(--accent-color)" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+}
+
+:host {
+  display: inline-block;
+}
+
+.datepicker {
+  position: relative;
+  display: inline-block;
+
+  input[type="datetime-local"] {
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    min-width: auto;
+    font-size: var(--font-size);
+    outline: none;
+    font-family: var(--font-family);
+    border: var(--border-width) solid var(--accent-color);
+    cursor: pointer;
+    color: var(--text-color);
+    background: transparent;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    padding: 2px 16px 2px 5px;
+    -webkit-padding-end: 5px;
+
+    &.readonly {
+      border: none;
+      padding: 0;
+      text-align: right;
+      cursor: default;
+    }
   }
 
-:host{
-    display: inline-block;
+  .btn-overlay {
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: var(--content-bg-color);
+    border: 1px solid var(--accent-color);
+    border-left: none;
+    padding: 2px 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+
+    fa-icon {
+      color: var(--accent-color);
+      font-size: 1.2em;
+      display: contents;
+    }
+
+    &.readonly {
+      display: none;
+    }
+  }
+
+  input:focus,
+  input:focus + .btn-overlay {
+    border-color: var(--accent-color);
+  }
 }
 
-.datepicker{
-    position: relative;
-    display: inline-block;
+.not-emphrazed {
+  input[type="date"] {
+    border: var(--border-width) solid var(--not-emphrazed-color);
+    color: var(--not-emphrazed-color);
+    background: transparent;
+  }
+  .btn-overlay {
+    background: var(--not-emphrazed-color);
+    border: 1px solid var(--not-emphrazed-color);
 
-    input[type="datetime-local"]{
-        height: var(--btn-height);
-        line-height: var(--btn-height);
-        min-width: auto;
-        font-size: var(--font-size);
-        outline: none;
-        font-family: var(--font-family);
-        border: var(--border-width) solid var(--accent-color);
-        cursor: pointer;
-        color: var(--text-color);
-        background: transparent;
-        box-sizing: border-box;
-        border-radius: var(--border-radius);
-        padding: 2px 16px 2px 5px;
-        -webkit-padding-end: 5px;
-
-        &.readonly{
-            border: none;
-            padding: 0;
-            text-align: right;
-            cursor: default;
-        }
-        
+    &:hover {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
     }
+  }
 
-    .btn-overlay{
-        height: var(--btn-height);
-        line-height: var(--btn-height);
-        position: absolute;
-        top: 0;
-        right: 0px;
-        background: var(--content-bg-color);
-        border: 1px solid var(--accent-color);
-        border-left: none;
-        padding: 2px 10px;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
-        border-top-right-radius: var(--border-radius);
-        border-bottom-right-radius: var(--border-radius);
-        
-        fa-icon{
-            color:var(--accent-color);
-            font-size: 1.2em;
-            display: contents;
-        }
-    
-        &.readonly{
-            display: none;
-        }
-    }
-
-    input:focus, input:focus + .btn-overlay{
-        border-color: var(--accent-color);
-    }
+  input:focus,
+  input:focus + .btn-overlay {
+    border-color: var(--not-emphrazed-color);
+  }
 }
-
-
-.not-emphrazed{
-    input[type="date"]{
-        border: var(--border-width) solid var(--not-emphrazed-color);
-        color: var(--not-emphrazed-color);
-        background: transparent;
-    }
-    .btn-overlay{
-        background: var(--not-emphrazed-color);
-        border: 1px solid var(--not-emphrazed-color);
-    
-        &:hover{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-        }
-    }
-
-    input:focus, input:focus + .btn-overlay{
-        border-color: var(--not-emphrazed-color);
-    }
-}
-
-
-
 
 /***************************************************************
 Media query to hide hover effects for devices 
 that do not support them, like touch displays
 **************************************************************/
 @media (hover: hover) {
-    .datepicker {
-    
-        &:hover{
-            input[type="datetime-local"]{
-                border-color: var(--accent-color);
-            }
-    
-            .btn-overlay{
-                border-color: var(--accent-color);
-                background-color: var(--accent-color);
-    
-                fa-icon{
-                    color: var(--fa-icon-color);
-                }
-            }       
-        }
-    }
-    
-    .not-emphrazed {
+  .datepicker {
+    &:hover {
+      input[type="datetime-local"] {
+        border-color: var(--accent-color);
+      }
 
-        .btn-overlay {
+      .btn-overlay {
+        border-color: var(--accent-color);
+        background-color: var(--accent-color);
 
-            &:hover {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-            }
+        fa-icon {
+          color: var(--fa-icon-color);
         }
+      }
     }
-    
+  }
+
+  .not-emphrazed {
+    .btn-overlay {
+      &:hover {
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0.1)
+        );
+      }
+    }
+  }
 }

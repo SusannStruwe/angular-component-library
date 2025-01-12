@@ -15,30 +15,29 @@ import { IconService } from '../../services/icon.service';
  * ```
  */
 @Component({
-    selector: 'tag-btn-component',
-    standalone: true,
-    imports: [FontAwesomeModule],
-    templateUrl: './tag-btn.component.html',
-    styleUrls: ['./tag-btn.component.scss']
+  selector: 'tag-btn-component',
+  standalone: true,
+  imports: [FontAwesomeModule],
+  templateUrl: './tag-btn.component.html',
+  styleUrls: ['./tag-btn.component.scss'],
 })
 export class TagBtnComponent {
+  @Input() label?: string;
 
-    @Input() label?: string;
-    
-    @Input() backgroundColor?: string;
+  @Input() backgroundColor?: string;
 
-    @Output() removeTagSelected = new EventEmitter<string>();
+  @Output() removeTagSelected = new EventEmitter<string>();
 
-    faClose: IconDefinition = faClose;
+  faClose: IconDefinition = faClose;
 
-    constructor(private iconService: IconService) {
-        this.faClose = this.iconService.faXmark;
-    }
+  constructor(private iconService: IconService) {
+    this.faClose = this.iconService.faXmark;
+  }
 
-    /**
-     * Remove tag
-     */
-    removeTag() {
-        this.removeTagSelected.emit(this.label);
-    }
+  /**
+   * Remove tag
+   */
+  removeTag() {
+    this.removeTagSelected.emit(this.label);
+  }
 }

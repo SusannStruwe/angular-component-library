@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ColorService } from '../../services/color.service';
 
-
 /**
  * Component to show colors from color service in a grid
  *
@@ -11,18 +10,18 @@ import { ColorService } from '../../services/color.service';
  * ```
  */
 @Component({
-    selector: 'color-palette-component',
-    standalone: true,
-    imports: [],
-    templateUrl: './color-palette.component.html',
-    styleUrls: ['./color-palette.component.scss'],
+  selector: 'color-palette-component',
+  standalone: true,
+  imports: [],
+  templateUrl: './color-palette.component.html',
+  styleUrls: ['./color-palette.component.scss'],
 })
 export class ColorPaletteComponent implements OnInit {
-    colors: string[] = [];
+  colors: string[] = [];
 
-    constructor(private colorService: ColorService) {}
+  constructor(private colorService: ColorService) {}
 
-    ngOnInit() {
-        this.colors = this.colorService.colors;
-    }
+  ngOnInit() {
+    this.colors = this.colorService.colors;
+  }
 }
