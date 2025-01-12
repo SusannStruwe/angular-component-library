@@ -11,10 +11,16 @@
 
   input {
     height: var(--input-height);
+    font-family: var(--font-family);
     font-size: var(--font-size);
     padding-right: 35px;
     padding-left: 40px;
     border-radius: var(--border-radius);
+    outline: none;
+    color: var(--text-color);
+    background: transparent;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
   }
 
   .icon {
