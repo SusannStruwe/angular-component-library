@@ -1,35 +1,11 @@
-<div class="datepicker">
-  <input
-    id="start-date-input-{{ randomId }}"
-    type="date"
-    [attr.aria-label]="'start-date-input'"
-    [ngModel]="startDate | date: 'yyyy-MM-dd'"
-    (ngModelChange)="startChanged((startDate = $event))"
-  />
-  <div
-    class="btn-overlay"
-    [style.position]="'absolute'"
-    (click)="showDatePicker('start')"
-  >
-    <fa-icon [icon]="faCalender"></fa-icon>
-  </div>
-</div>
+<date-picker-component 
+  [date]="startDate" 
+  (startDateChange)="startChanged($event)">
+</date-picker-component>
 
 <p>-</p>
 
-<div class="datepicker">
-  <input
-    id="end-date-input-{{ randomId }}"
-    type="date"
-    [attr.aria-label]="'end-date-input'"
-    [ngModel]="endDate | date: 'yyyy-MM-dd'"
-    (ngModelChange)="endChanged((endDate = $event))"
-  />
-  <div
-    class="btn-overlay"
-    [style.position]="'absolute'"
-    (click)="showDatePicker('end')"
-  >
-    <fa-icon [icon]="faCalender"></fa-icon>
-  </div>
-</div>
+<date-picker-component 
+  [date]="startDate" 
+  (startDateChange)="endChanged($event)">
+</date-picker-component>

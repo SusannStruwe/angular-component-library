@@ -5,6 +5,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition, faCalendar } from '@fortawesome/free-solid-svg-icons';
 import { Platform, PlatformModule } from '@angular/cdk/platform';
 import { parseISO } from 'date-fns';
+import { DatePickerComponent } from '../date-picker/date-picker.component';
 
 /**
  * Component select date
@@ -20,7 +21,7 @@ import { parseISO } from 'date-fns';
 @Component({
   selector: 'date-range-picker-component',
   standalone: true,
-  imports: [CommonModule, FormsModule, FontAwesomeModule, PlatformModule],
+  imports: [CommonModule, FormsModule, FontAwesomeModule, PlatformModule, DatePickerComponent],
   templateUrl: './date-range-picker.component.html',
   styleUrls: ['./date-range-picker.component.scss'],
 })

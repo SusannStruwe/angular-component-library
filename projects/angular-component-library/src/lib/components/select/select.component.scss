@@ -14,6 +14,11 @@
     padding-left: 10px;
     padding-right: 5px;
   }
+
+  .label-before {
+    min-width: 50px;
+    width: 60%;
+  }
 }
 
 button {
@@ -38,11 +43,9 @@ button {
   align-items: center;
 
   span {
-    height: var(--btn-height);
     line-height: var(--btn-height);
-    padding: 10px;
+    padding-left: 10px;
     text-align: left;
-    -webkit-line-clamp: 1;
     color: var(--btn-color);
     display: inline-flex;
     line-height: 1.4;
@@ -58,7 +61,7 @@ button {
     min-width: auto;
     padding: 10px 0px 10px 10px;
     text-align: left;
-    width: 65%;
+    width: 100%;
   }
 
   fa-icon {
@@ -68,6 +71,7 @@ button {
   // dropdown arrow design
   span:last-of-type {
     width: var(--btn-height);
+    padding: 15px;
     background: var(--btn-color);
     border-left: none;
     align-items: center;
@@ -299,7 +303,6 @@ button {
     }
 
     span:last-of-type {
-      padding: 10px 15px;
       background: var(--fa-icon-color);
       border-left: none;
 

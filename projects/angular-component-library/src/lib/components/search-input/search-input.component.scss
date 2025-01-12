@@ -10,8 +10,9 @@
 
   input {
     height: var(--input-height);
-    font-family: var(--font-family);
     font-size: var(--font-size);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-normal);
     padding-right: 35px;
     padding-left: 40px;
     border-radius: var(--border-radius);
