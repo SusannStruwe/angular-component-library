@@ -16,8 +16,7 @@
   }
 
   .label-before {
-    min-width: 50px;
-    width: 60%;
+    padding-left: 10px;
   }
 }
 
@@ -41,27 +40,20 @@ button {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 
   span {
-    line-height: var(--btn-height);
-    padding-left: 10px;
-    text-align: left;
     color: var(--btn-color);
-    display: inline-flex;
-    line-height: 1.4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap;
-    text-align: left;
-    box-sizing: border-box;
   }
 
   .select-text {
     min-width: auto;
-    padding: 10px 0px 10px 10px;
+    padding: 0px 10px;
     text-align: left;
     width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   fa-icon {
@@ -74,8 +66,10 @@ button {
     padding: 15px;
     background: var(--btn-color);
     border-left: none;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 
     &:active:not([disabled]) {
       background-color: var(--accent-color-dark);
