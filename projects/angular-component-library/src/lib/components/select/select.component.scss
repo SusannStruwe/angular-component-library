@@ -1,4 +1,4 @@
-@use "../../../../assets/styles" as *;
+
 :host {
   display: inline-block;
   position: relative;
@@ -86,7 +86,7 @@ button {
 
     span:last-of-type {
       background-color: var(--accent-color);
-      // background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+      // background-image: var(--darken-gradient);
 
       fa-icon {
         color: var(--fa-icon-color);
@@ -376,7 +376,7 @@ Media query to add hover only on device which support hover
 
       span:last-of-type {
         background-color: var(--accent-color);
-        // background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+        // background-image: var(--darken-gradient);
 
         fa-icon {
           color: var(--fa-icon-color);

@@ -1,4 +1,4 @@
-@use "../../../../assets/styles" as *;
+
 :host {
   display: inline-block;
 }
@@ -181,7 +181,8 @@ Simple hover
   &:active,
   &.active {
     &:not([disabled]) {
-      border-color: var(--accent-color);
+      // border-color: var(--accent-color);
+      border-color: transparent;
       background-color: var(--accent-color-light);
       color: var(--accent-color);
 
@@ -222,21 +223,22 @@ Inverted hover
 Deleted
 **************************************/
 .delete {
-  color: var(--toast-error-color);
-  border: var(--border-width) solid var(--toast-error-color);
+  color: var(--delete-color);
+  border: var(--border-width) solid var(--delete-color);
   background: transparent;
 
   fa-icon {
-    color: var(--toast-error-color);
+    color: var(--delete-color);
   }
 
   &:active {
     &:not([disabled]) {
-      background-color: var(--toast-error-color-light);
-      color: var(--toast-error-color);
+      border-color: transparent;
+      background-color: var(--delete-color-light);
+      color: var(--delete-color);
 
       fa-icon {
-        color: var(--toast-error-color);
+        color: var(--delete-color);
       }
     }
   }
@@ -296,12 +298,12 @@ that do not support them, like touch displays
       }
     }
   }
-
+ 
   .simple {
     &:hover,
     &.active {
       &:not([disabled]) {
-        border-color: var(--accent-color);
+        border-color: transparent;
         background-color: var(--accent-color-light);
         color: var(--accent-color);
 
@@ -331,12 +333,12 @@ that do not support them, like touch displays
     &:hover,
     &.active {
       &:not([disabled]) {
-        border-color: var(--toast-error-color);
-        background-color: var(--toast-error-color-light);
-        color: var(--toast-error-color);
+        border-color: transparent;
+        background-color: var(--delete-color-light);
+        color: var(--delete-color);
 
         fa-icon {
-          color: var(--toast-error-color);
+          color: var(--delete-color);
         }
       }
     }
@@ -346,7 +348,7 @@ that do not support them, like touch displays
     &:hover,
     &.active {
       &:not([disabled]) {
-        background-color: var(--toast-error-color);
+        background-color: var(--delete-color);
         color: var(--fa-icon-color);
 
         fa-icon {

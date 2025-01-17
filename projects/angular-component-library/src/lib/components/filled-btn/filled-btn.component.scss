@@ -1,4 +1,4 @@
-@use "../../../../assets/styles" as *;
+
 /********************
 CSS Variables -> --accent-color, --fa-icon-color for changing theme
 ********************/
@@ -45,15 +45,21 @@ button {
   }
 }
 
+/************************************
+ Delete
+**************************************/
 .delete {
-  background: var(--toast-error-color);
+  background: var(--delete-color);
 
   &.active,
   &:active:not([disabled]) {
-    background-color: var(--toast-error-color-dark);
+    background-color: var(--delete-color-dark);
   }
 }
 
+/************************************
+ Not emphrazed
+**************************************/
 .not-emphrazed {
   background: var(--not-emphrazed-color);
 
@@ -87,7 +93,7 @@ that do not support them, like touch displays
 @media (hover: hover) {
   .ripple {
     &:hover:not([disabled]) {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+      background-image: var(--darken-gradient);
     }
   }
 

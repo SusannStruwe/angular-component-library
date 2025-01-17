@@ -1,4 +1,4 @@
-@use "../../../../assets/styles" as *;
+
 
 :host {
     display: inline-block;
@@ -83,7 +83,7 @@
         border: 1px solid var(--not-emphrazed-color);
 
         &:hover {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+            background-image: var(--darken-gradient);
         }
     }
 

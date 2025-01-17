@@ -1,4 +1,4 @@
-@use "../../../../assets/styles" as *;
+
 :host {
   display: inline-block;
 }
@@ -41,10 +41,7 @@ Media query to add hover only on device which support hover
 @media (hover: hover) {
   button {
     &:hover:not([disabled]) {
-      background-image: linear-gradient(
-        rgba(0, 0, 0, 0.1),
-        rgba(0, 0, 0, 0.1)
-      ) !important;
+      background-image: var(--darken-gradient) !important;
     }
 
     &:active:not([disabled]) {

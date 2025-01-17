@@ -42,7 +42,7 @@
   }
 
   &.success {
-    background: color.adjust($toast-success-color, $lightness: 50%);
+    background: var(--toast-success-color-light);
     border: 1px solid var(--toast-success-color);
     border-left: 5px solid var(--toast-success-color);
 
@@ -58,7 +58,7 @@
   }
 
   &.error {
-    background: color.adjust($toast-error-color, $lightness: 50%);
+    background: var(--toast-error-color-light);
     border: 1px solid var(--toast-error-color);
     border-left: 5px solid var(--toast-error-color);
 
@@ -74,7 +74,7 @@
   }
 
   &.info {
-    background: color.adjust($toast-info-color, $lightness: 50%);
+    background: var(--toast-info-color-light);
     border: 1px solid var(--toast-info-color);
     border-left: 5px solid var(--toast-info-color);
 
@@ -90,7 +90,7 @@
   }
 
   &.warning {
-    background: color.adjust($toast-warning-color, $lightness: 50%);
+    background: var(--toast-warning-color-light);
     border: 1px solid var(--toast-warning-color);
     border-left: 5px solid var(--toast-warning-color);
 

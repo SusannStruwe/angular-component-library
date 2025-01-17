@@ -29,17 +29,24 @@ body {
   --fa-icon-color: white;
   --tooltip-bg-color: #262626;
   --menu-color: #fff;
+  --downtime-color: #ccc; // #cc3611;
+  --collapse-background: #f3f3f3;
 
   --not-emphrazed-color: #aaa;
   --not-emphrazed-color-dark: #999;
+  --delete-color-light: #be432230;
+  --delete-color: #be4322;
 
+  --toast-info-color-light: #5699e410;
   --toast-info-color: #5699e4;
   --toast-info-color-dark: #4073ac;
+  --toast-success-color-light: #5cb55a10;
   --toast-success-color: #5cb55a;
   --toast-success-color-dark: #407d3f;
-  --toast-error-color-light: rgba(190, 67, 34, 0.4);
+  --toast-error-color-light: #be432210;
   --toast-error-color: #be4322;
   --toast-error-color-dark: #863018;
+  --toast-warning-color-light: #ff9c0710;
   --toast-warning-color: #ff9c07;
   --toast-warning-color-dark: #e18904;
 
@@ -51,17 +58,6 @@ body {
   --modified-data-color: #e2761d;
   --added-data-color: #35c832;
   --deleted-data-color: #be4322;
-
-  --normal-state-color: #35c832;
-  --normal-state-color-dark: #29a727;
-  --acting-state-color: #72b5f5; //#5699e4
-  --acting-state-color-dark: #5588b8;
-  --critical-state-color: #f44118;
-  --critical-state-color-dark: #bd3112;
-  --paused-state-color: #aaa;
-  --paused-state-color-dark: #8d8b8b;
-  --downtime-color: #ccc; // #cc3611;
-  --collapse-background: #f3f3f3;
 
   --current-color: #35c832;
   --current-color-dark: #289626;
@@ -86,7 +82,7 @@ body {
     0 1px 1px rgba(229, 112, 28, 0.14);
   --popup-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.3),
     0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-
+  --darken-gradient: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   --brightness: brightness(0.85);
 
   --font-weight-light: 300;

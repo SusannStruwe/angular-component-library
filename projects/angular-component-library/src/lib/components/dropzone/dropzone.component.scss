@@ -1,4 +1,4 @@
-@use "../../../../assets/styles" as *;
+
 :host {
   display: inline-block;
 }
@@ -84,7 +84,7 @@ input[type="file"] {
       color: var(--text-color);
 
       &:hover:not([disabled]) {
-        color: var(--toast-error-color);
+        color: var(--delete-color);
       }
     }
   }
@@ -99,7 +99,7 @@ input[type="file"] {
   transition: background 0.8s;
 
   &:hover:not([disabled]) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    background-image: var(--darken-gradient);
   }
 
   &:active:not([disabled]) {

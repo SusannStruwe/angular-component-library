@@ -1,4 +1,4 @@
-@use "../../../../assets/styles" as *;
+
 :host {
   display: inline-block;
 }
@@ -100,7 +100,7 @@ Simple hover
     &:not([disabled]) {
       background-color: var(--accent-color);
       color: var(--fa-icon-color);
-      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+      background-image: var(--darken-gradient);
 
       fa-icon {
         color: var(--fa-icon-color);
@@ -109,17 +109,20 @@ Simple hover
   }
 }
 
+/************************************
+Deleted
+**************************************/
 .delete {
-  color: var(--toast-error-color);
+  color: var(--delete-color);
   background: transparent;
 
   fa-icon {
-    color: var(--toast-error-color);
+    color: var(--delete-color);
   }
 
   &:active {
     &:not([disabled]) {
-      background-color: var(--toast-error-color);
+      background-color: var(--delete-color);
       color: var(--fa-icon-color);
 
       fa-icon {
@@ -162,10 +165,7 @@ that do not support them, like touch displays
       &:not([disabled]) {
         background-color: var(--accent-color);
         color: var(--fa-icon-color);
-        background-image: linear-gradient(
-          rgba(0, 0, 0, 0.1),
-          rgba(0, 0, 0, 0.1)
-        );
+        background-image: var(--darken-gradient);
 
         fa-icon {
           color: var(--fa-icon-color);
@@ -181,7 +181,7 @@ that do not support them, like touch displays
     &:hover,
     &.active {
       &:not([disabled]) {
-        background-color: var(--toast-error-color);
+        background-color: var(--delete-color);
         color: var(--fa-icon-color);
 
         fa-icon {
@@ -190,7 +190,7 @@ that do not support them, like touch displays
       }
     }
     &:active:not([disabled]) {
-      background-color: var(--toast-error-color);
+      background-color: var(--delete-color);
     }
   }
 }

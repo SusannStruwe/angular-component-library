@@ -1,4 +1,4 @@
-@use "../../../../assets/styles" as *;
+
 :host {
   display: none;
 }
@@ -159,7 +159,7 @@
 
         fa-icon {
           font-size: 4em;
-          color: var(--toast-error-color);
+          color: var(--delete-color);
         }
       }
 

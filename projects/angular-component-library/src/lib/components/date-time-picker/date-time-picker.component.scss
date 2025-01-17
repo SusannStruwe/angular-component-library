@@ -1,4 +1,4 @@
-@use "../../../../assets/styles" as *;
+
 /*
 CSS Variables -> --text-color, --bg-color, --accent-color, --fa-icon-color for changing theme
 */
@@ -100,7 +100,7 @@ CSS Variables -> --text-color, --bg-color, --accent-color, --fa-icon-color for c
         border: 1px solid var(--not-emphrazed-color);
     
         &:hover{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+            background-image: var(--darken-gradient);
         }
     }
 
