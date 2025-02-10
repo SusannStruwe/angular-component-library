@@ -1,47 +1,46 @@
-
 :host {
-    display: flex;
-    position: relative;
+  display: flex;
+  position: relative;
 }
 
 .input-container {
-    position: relative;
+  position: relative;
 
-    input {
-        height: var(--input-height);
-        min-width: 160px;
-        outline: none;
-        font-size: var(--font-size);
-        font-family: var(--font-family);
-        font-weight: var(--font-weight-normal);
-        color: var(--text-color);
-        background: white;
-        border: 1px solid var(--placeholder-color);
-        border-radius: var(--input-radius);
-        padding-right: 35px;
-        padding-left: 20px;
-        box-sizing: border-box;
+  input {
+    height: var(--input-height);
+    min-width: 160px;
+    outline: none;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-normal);
+    color: var(--text-color);
+    background: white;
+    border: 1px solid var(--placeholder-color);
+    border-radius: var(--input-radius);
+    padding-right: 35px;
+    padding-left: 20px;
+    box-sizing: border-box;
+  }
+
+  .icon {
+    width: 20px;
+
+    fa-icon {
+      color: #999;
     }
+  }
 
-    .icon {
-        width: 20px;
-
-        fa-icon {
-            color: #999;
-        }
-    }
-
-    .right {
-        position: absolute;
-        right: 10px;
-        top: calc((var(--input-height) - 20px) / 2);
-    }
+  .right {
+    position: absolute;
+    right: 10px;
+    top: calc((var(--input-height) - 20px) / 2);
+  }
 }
 
 .no-radius {
-    input {
-        border-radius: 0;
-    }
+  input {
+    border-radius: 0;
+  }
 }
 
 .full-width {
@@ -57,11 +56,11 @@ Media query to add hover only on device which support hover
 *********************************************/
 
 @media (hover: hover) {
-    .input-container {
-        &:hover {
-            input {
-                border: 2px solid var(--accent-color);
-            }
-        }
+  .input-container {
+    &:hover {
+      input {
+        border: 2px solid var(--accent-color);
+      }
     }
+  }
 }

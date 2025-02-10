@@ -21,7 +21,13 @@ import { DatePickerComponent } from '../date-picker/date-picker.component';
 @Component({
   selector: 'date-range-picker-component',
   standalone: true,
-  imports: [CommonModule, FormsModule, FontAwesomeModule, PlatformModule, DatePickerComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    FontAwesomeModule,
+    PlatformModule,
+    DatePickerComponent,
+  ],
   templateUrl: './date-range-picker.component.html',
   styleUrls: ['./date-range-picker.component.scss'],
 })

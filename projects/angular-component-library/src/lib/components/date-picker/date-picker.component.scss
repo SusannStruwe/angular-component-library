@@ -1,94 +1,91 @@
-
-
 :host {
-    display: inline-block;
+  display: inline-block;
 }
 
 .datepicker {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 
-    input[type='date'] {
-        height: var(--btn-height);
-        line-height: var(--btn-height);
-        min-width: auto;
-        font-size: var(--font-size);
-        outline: none;
-        font-family: var(--font-family);
-        border: var(--border-width) solid var(--btn-color);
-        cursor: pointer;
-        color: var(--btn-color);
-        background: transparent;
-        box-sizing: border-box;
-        border-radius: var(--input-radius);
-        padding: 2px 16px 2px 5px;
-        -webkit-padding-end: 5px;
+  input[type="date"] {
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    min-width: auto;
+    font-size: var(--font-size);
+    outline: none;
+    font-family: var(--font-family);
+    border: var(--border-width) solid var(--btn-color);
+    cursor: pointer;
+    color: var(--btn-color);
+    background: transparent;
+    box-sizing: border-box;
+    border-radius: var(--input-radius);
+    padding: 2px 16px 2px 5px;
+    -webkit-padding-end: 5px;
+  }
+
+  .btn-overlay {
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: var(--fa-icon-color);
+    border: 1px solid var(--btn-color);
+    border-left: none;
+    padding: 2px 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-top-right-radius: var(--input-radius);
+    border-bottom-right-radius: var(--input-radius);
+
+    fa-icon {
+      color: var(--btn-color);
+      font-size: 1.2em;
+      display: contents;
+    }
+  }
+
+  &:hover {
+    input[type="date"] {
+      border-color: var(--accent-color-light);
     }
 
     .btn-overlay {
-        height: var(--btn-height);
-        line-height: var(--btn-height);
-        position: absolute;
-        top: 0;
-        right: 0px;
-        background: var(--fa-icon-color);
-        border: 1px solid var(--btn-color);
-        border-left: none;
-        padding: 2px 10px;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
-        border-top-right-radius: var(--input-radius);
-        border-bottom-right-radius: var(--input-radius);
+      border-color: var(--accent-color-light);
+      background-color: var(--accent-color-light);
 
-        fa-icon {
-            color: var(--btn-color);
-            font-size: 1.2em;
-            display: contents;
-        }
+      fa-icon {
+        color: var(--accent-color);
+      }
     }
+  }
 
-    &:hover{
-        input[type="date"]{
-            border-color: var(--accent-color-light);
-        }
-
-        .btn-overlay{
-            border-color: var(--accent-color-light);
-            background-color: var(--accent-color-light);
-
-            fa-icon{
-                color: var(--accent-color);
-            }
-        }       
-    }
-
-    input:focus,
-    input:focus + .btn-overlay {
-        border-color: var(--accent-color-light);
-    }
-
+  input:focus,
+  input:focus + .btn-overlay {
+    border-color: var(--accent-color-light);
+  }
 }
 
 .not-emphrazed {
-    input[type='date'] {
-        border: var(--border-width) solid var(--not-emphrazed-color);
-        color: var(--not-emphrazed-color);
-        background: transparent;
-    }
-    .btn-overlay {
-        background: var(--not-emphrazed-color);
-        border: 1px solid var(--not-emphrazed-color);
+  input[type="date"] {
+    border: var(--border-width) solid var(--not-emphrazed-color);
+    color: var(--not-emphrazed-color);
+    background: transparent;
+  }
+  .btn-overlay {
+    background: var(--not-emphrazed-color);
+    border: 1px solid var(--not-emphrazed-color);
 
-        &:hover {
-            background-image: var(--darken-gradient);
-        }
+    &:hover {
+      background-image: var(--darken-gradient);
     }
+  }
 
-    input:focus,
-    input:focus + .btn-overlay {
-        border-color: var(--not-emphrazed-color);
-    }
+  input:focus,
+  input:focus + .btn-overlay {
+    border-color: var(--not-emphrazed-color);
+  }
 }

@@ -10,17 +10,19 @@
         id="file-{{ randomId }}"
         type="file"
         name="file-{{ randomId }}"
-        (change)="onFileChange($event)"
+        (change)="onInputFileChange($event)"
         multiple
       />
       <label for="file-{{ randomId }}">
         <span class="upload-btn ripple">
           <fa-icon [icon]="faUpload"></fa-icon>
-          {{ choseFileLabel }}</span
+          {{ "upload.dropElement.choseFile" | translate }}</span
         >
-        {{ dropItLabel }}
+        {{ "upload.dropElement.dropIt" | translate }}
       </label>
-      <p>( {{ allowedExtension }} )</p>
+      <p>
+        ( Format: {{ allowedExtension }} , max {{ maxSizeOfFiles / 1000 }} MB)
+      </p>
     </div>
   </div>
 </div>
@@ -31,8 +33,10 @@
         <fa-icon [icon]="faFile"></fa-icon>
       </span>
       <p>
-        {{ file.name }} [
-        {{ file.size / 1000 | number: "1.2-2" : localeId }} KB]
+        {{ file.name }} [{{
+          file.size / FILE_SIZE_CONVERTER | number: "1.2-2" : getLocale()
+        }}
+        KB]
       </p>
     </div>
     <div class="right">

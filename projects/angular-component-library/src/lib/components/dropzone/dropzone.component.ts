@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 import { FileDragNDropDirective } from '../../directives/drag-drop-file.directive';
 import { IconService } from '../../services/icon.service';
-import { ModalService } from '../../services/modal.service';
 
 /**
  * Component to upload files by drag and drop or simple upload button
@@ -15,6 +15,7 @@ import { ModalService } from '../../services/modal.service';
  * <dropzone-component
  *   [files]="planningInputFiles"
  *   [fileArrayLength]="100"
+ *   [fileArraySize]="100"
  *   (filesChanged)="filesChanged($event)">
  * </dropzone-component>
  * ```
@@ -22,28 +23,37 @@ import { ModalService } from '../../services/modal.service';
 @Component({
   selector: 'dropzone-component',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, FileDragNDropDirective],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    FileDragNDropDirective,
+    TranslateModule,
+  ],
   templateUrl: './dropzone.component.html',
   styleUrls: ['./dropzone.component.scss'],
 })
-export class DropzoneComponent implements OnInit {
+export class DropzoneComponent {
   @Input() dropHeight = 100;
   @Input() allowedExtension: string[] = ['json'];
-  @Input() fileArrayLength = 1;
+  @Input() fileArrayLength = 100;
   @Input() files: File[] = [];
-  @Input() choseFileLabel: string = '';
-  @Input() dropItLabel: string = '';
+  @Input() maxSizeOfFiles = 5000; // 10 MB
 
   @Output() filesChanged = new EventEmitter<File[]>(); // When true, deliver events asynchronously.
+  @Output() fileExistsError = new EventEmitter<File>();
+  @Output() maxListSizeReachedError = new EventEmitter<number>();
+  @Output() fileTypeNotAllowedError = new EventEmitter<string>();
 
-  localeId = 'de-DE';
   faUpload: IconDefinition;
   faFile: IconDefinition;
   faRemove: IconDefinition;
   randomId: string = Math.floor(Math.random() * 16777215).toString(16);
 
+  onLangChangeSubscription?: Subscription;
+
+  FILE_SIZE_CONVERTER = 1024;
+
   constructor(
-    private modalService: ModalService,
     private translate: TranslateService,
     private iconService: IconService,
   ) {
@@ -52,70 +62,91 @@ export class DropzoneComponent implements OnInit {
     this.faRemove = this.iconService.faTrash;
   }
 
-  ngOnInit() {
-    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
-      this.localeId = event.lang + '-' + event.lang.toUpperCase();
-    });
+  /**
+   * Provides the current lang
+   */
+  getLocale() {
+    return this.translate.currentLang;
   }
 
   /**
-   * Triggered if file changed
+   * Triggered if file changed in drop zone
+   * @param files
+   */
+  onFileChange(fileList: FileList) {
+    const files = Array.from(fileList as FileList);
+
+    if (files.length < this.fileArrayLength) {
+      this.addFile(files);
+    } else {
+      this.replaceFileWithLastItems(files);
+    }
+  }
+
+  /**
+   * Triggered if file changed in drop zone
    * @param event
    */
-  onFileChange(event: any) {
-    if (this.files.length < this.fileArrayLength) {
-      this.addFile(event);
-    } else {
-      this.replaceFile(event);
+  onInputFileChange(event: Event) {
+    if (
+      (event.target as HTMLInputElement).files &&
+      (event.target as HTMLInputElement).files!.length
+    ) {
+      const fileList: FileList | null = (event.target as HTMLInputElement)
+        .files;
+      const files = Array.from(fileList as FileList);
+
+      if (files && files.length < this.fileArrayLength) {
+        this.addFile(files);
+      } else {
+        this.replaceFileWithLastItems(files);
+      }
     }
-    this.filesChanged.emit(this.files);
   }
 
   /**
    * Adds file to array
    * @param event
    */
-  addFile(event: any): void {
-    if (event instanceof FileList) {
-      Array.from(event as FileList).forEach(async (file) => {
-        if (
-          this.isAllowedFileType(file) &&
-          !this.files.some((f) => f.name === file.name)
-        ) {
-          this.files.push(file);
-        }
-      });
-    } else {
-      for (let i = 0; i < event.target.files.length; i++) {
-        const file = event.target.files[i];
-        if (
-          this.isAllowedFileType(file) &&
-          this.files.length < this.fileArrayLength &&
-          !this.files.some((f) => f.name === file.name)
-        ) {
-          this.files.push(file);
-        }
+  addFile(files: File[]): void {
+    files.forEach((file: File) => {
+      if (
+        !this.fileExists(file) &&
+        this.isAllowedFileType(file) &&
+        !this.maxListSizeReached(file)
+      ) {
+        this.files.push(file);
+        this.filesChanged.emit(this.files);
       }
-    }
+    });
   }
 
   /**
-   * Replaces file to array
+   * Replaces file in array with last items
    * @param event
    */
-  replaceFile(event: any): void {
-    if (event instanceof FileList) {
-      Array.from(event as FileList).forEach(async (file) => {
-        if (this.isAllowedFileType(file))
-          this.files[this.files.length - 1] = file;
-      });
-    } else {
-      for (let i = 0; i < event.target.files.length; i++) {
-        if (this.isAllowedFileType(event.target.files[i])) {
-          this.files[this.files.length - 1] = event.target.files[i];
-        }
+  replaceFileWithLastItems(files: File[]): void {
+    files.forEach((file: File) => {
+      if (this.isAllowedFileType(file) && !this.maxListSizeReached(file)) {
+        this.files[this.files.length - 1] = file;
+        this.filesChanged.emit(this.files);
       }
+    });
+  }
+
+  /**
+   * Gets a list of files from event
+   * @param event
+   * @returns
+   */
+  getFilesFromEvent(event: any): File[] {
+    let files = [];
+    if (event instanceof FileList) {
+      files = Array.from(event as FileList);
+    } else {
+      files = event.target.files;
     }
+    return files;
   }
 
   /**
@@ -128,10 +159,43 @@ export class DropzoneComponent implements OnInit {
     if (type && this.allowedExtension.includes(type)) {
       return true;
     } else {
-      const title = this.translate.instant('modal.note');
-      const description = this.translate.instant('modal.allowedExtensionNote');
-      this.modalService.showInfoModal(title, description);
+      this.fileTypeNotAllowedError.emit(type);
       return false;
+    }
+  }
+
+  /**
+   * Checks if file exists in List
+   * @param file
+   * @returns
+   */
+  fileExists(file: File): boolean {
+    if (this.files.some((f) => f.name === file.name)) {
+      this.fileExistsError.emit(file);
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  /**
+   * Checks if max size of list reached (with new files)
+   * @param file
+   * @returns
+   */
+  maxListSizeReached(file: File): boolean {
+    let kbSize = 0;
+    // get size of all olf files
+    this.files.forEach((f) => (kbSize = kbSize + f.size));
+
+    // add size of new file
+    kbSize = (kbSize + file.size) / this.FILE_SIZE_CONVERTER;
+
+    if (kbSize <= this.maxSizeOfFiles) {
+      return false;
+    } else {
+      this.maxListSizeReachedError.emit(kbSize);
+      return true;
     }
   }
 
@@ -141,7 +205,11 @@ export class DropzoneComponent implements OnInit {
    */
   removeFile(f: File) {
     this.files = this.files.filter(function (item) {
-      return item.name !== f.name;
+      return (
+        item.name !== f.name &&
+        item.lastModified !== f.lastModified &&
+        item.size !== f.size
+      );
     });
     this.filesChanged.emit(this.files);
   }

@@ -1,4 +1,3 @@
-
 :host {
   display: inline-block;
 }
@@ -13,15 +12,22 @@ button {
   font-weight: var(--font-weight-light);
   font-size: var(--font-size);
   background: transparent;
-  color: var(--gray);
+  color: var(--btn-color);
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   fa-icon {
-    color: var(--gray);
+    color: var(--btn-color);
   }
 
   span {
     margin: 0px 5px;
+  }
+
+  .pailot-icon {
+    font-size: 1.6em;
   }
 
   &:disabled {
@@ -37,7 +43,7 @@ Shining
 .shining {
   background: transparent;
   box-sizing: border-box;
-  box-shadow: inset 0 0 0 2px var(--gray);
+  box-shadow: inset 0 0 0 2px var(--btn-color);
   transition: color 0.25s;
 
   &::before,
@@ -128,7 +134,7 @@ Filling
     color: var(--accent-color);
   }
 
-  &:active,
+  &:hover,
   &.active {
     &:not([disabled]) {
       background-size: 100% 100%;
@@ -142,15 +148,15 @@ Filling
 }
 
 .filling.gray {
-  border: var(--border-width) solid var(--gray);
-  color: var(--gray);
-  background-image: linear-gradient(var(--gray), var(--gray));
+  border: var(--border-width) solid var(--btn-color);
+  color: var(--btn-color);
+  background-image: linear-gradient(var(--btn-color), var(--btn-color));
 
   fa-icon {
-    color: var(--gray);
+    color: var(--btn-color);
   }
 
-  &:active,
+  &:hover,
   &.active {
     &:not([disabled]) {
       color: var(--accent-color);
@@ -181,12 +187,14 @@ Simple hover
   &:active,
   &.active {
     &:not([disabled]) {
-      // border-color: var(--accent-color);
       border-color: transparent;
       background-color: var(--accent-color-light);
       color: var(--accent-color);
 
       fa-icon {
+        color: var(--accent-color);
+      }
+      .pailot-icon {
         color: var(--accent-color);
       }
     }
@@ -215,6 +223,10 @@ Inverted hover
       fa-icon {
         color: var(--fa-icon-color);
       }
+
+      .pailot-icon {
+        color: var(--fa-icon-color);
+      }
     }
   }
 }
@@ -223,22 +235,24 @@ Inverted hover
 Deleted
 **************************************/
 .delete {
-  color: var(--delete-color);
-  border: var(--border-width) solid var(--delete-color);
+  color: var(--toast-error-color);
+  border: var(--border-width) solid var(--toast-error-color);
   background: transparent;
 
   fa-icon {
-    color: var(--delete-color);
+    color: var(--toast-error-color);
   }
 
   &:active {
     &:not([disabled]) {
-      border-color: transparent;
-      background-color: var(--delete-color-light);
-      color: var(--delete-color);
+      background-color: var(--toast-error-color-light);
+      color: var(--toast-error-color);
 
       fa-icon {
-        color: var(--delete-color);
+        color: var(--toast-error-color);
+      }
+      .pailot-icon {
+        color: var(--toast-error-color);
       }
     }
   }
@@ -272,33 +286,6 @@ Media query to hide hover effects for devices
 that do not support them, like touch displays
 **************************************************************/
 @media (hover: hover) {
-  .filling {
-    &:hover,
-    &.active {
-      &:not([disabled]) {
-        background-size: 100% 100%;
-        color: var(--fa-icon-color);
-
-        fa-icon {
-          color: var(--fa-icon-color);
-        }
-      }
-    }
-  }
-
-  .filling.gray {
-    &:hover,
-    &.active {
-      &:not([disabled]) {
-        color: var(--accent-color);
-
-        fa-icon {
-          color: var(--accent-color);
-        }
-      }
-    }
-  }
- 
   .simple {
     &:hover,
     &.active {
@@ -310,20 +297,9 @@ that do not support them, like touch displays
         fa-icon {
           color: var(--accent-color);
         }
-      }
-    }
-  }
 
-  .inverted {
-    &:hover,
-    &.active {
-      &:not([disabled]) {
-        border-color: transparent;
-        background-color: var(--btn-color);
-        color: var(--fa-icon-color);
-
-        fa-icon {
-          color: var(--fa-icon-color);
+        .pailot-icon {
+          color: var(--accent-color);
         }
       }
     }
@@ -333,12 +309,15 @@ that do not support them, like touch displays
     &:hover,
     &.active {
       &:not([disabled]) {
-        border-color: transparent;
-        background-color: var(--delete-color-light);
-        color: var(--delete-color);
+        background-color: var(--toast-error-color-light);
+        color: var(--toast-error-color);
 
         fa-icon {
-          color: var(--delete-color);
+          color: var(--toast-error-color);
+        }
+
+        .pailot-icon {
+          color: var(--toast-error-color);
         }
       }
     }
