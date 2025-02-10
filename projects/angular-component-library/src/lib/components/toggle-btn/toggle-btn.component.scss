@@ -69,7 +69,7 @@ span {
 
   /* toggle 1 */
   .slider:before {
-    content: " ";
+    content: ' ';
     position: absolute;
     left: 3px;
     bottom: 4px;
@@ -86,7 +86,7 @@ span {
   }
 
   .checkbox:checked + .slider:before {
-    content: " ";
+    content: ' ';
     color: var(--accent-color);
     font-size: 1.1em;
     line-height: 0.9em;

@@ -19,6 +19,10 @@ button {
   background: var(--accent-color);
   color: var(--fa-icon-color);
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 
   fa-icon {
     color: var(--fa-icon-color);

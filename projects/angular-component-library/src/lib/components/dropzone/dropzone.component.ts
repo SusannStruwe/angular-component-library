@@ -73,13 +73,11 @@ export class DropzoneComponent {
    * Triggered if file changed in drop zone
    * @param files
    */
-  onFileChange(fileList: FileList) {
-    const files = Array.from(fileList as FileList);
-
-    if (files.length < this.fileArrayLength) {
-      this.addFile(files);
+  onFileChange(fileList: File[]) {
+    if (fileList.length < this.fileArrayLength) {
+      this.addFile(fileList);
     } else {
-      this.replaceFileWithLastItems(files);
+      this.replaceFileWithLastItems(fileList);
     }
   }
 

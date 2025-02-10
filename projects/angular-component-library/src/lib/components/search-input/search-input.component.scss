@@ -5,7 +5,6 @@
 
 .input-container {
   position: relative;
-  // margin: 0em 1em;
 
   input {
     height: var(--input-height);
@@ -76,13 +75,15 @@
   .right {
     position: absolute;
     right: 10px;
-    top: calc((var(--input-height) - 30px) / 2);
+    top: 10px;
+    line-height: calc(var(--input-height) - 20px);
   }
 
   .left {
     position: absolute;
     left: 10px;
-    top: calc((var(--input-height) - 30px) / 2);
+    top: 10px;
+    line-height: calc(var(--input-height) - 20px);
   }
 }
 

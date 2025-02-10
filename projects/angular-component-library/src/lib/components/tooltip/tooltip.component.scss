@@ -18,7 +18,7 @@
   z-index: var(--z-index-5);
 
   &::before {
-    content: "";
+    content: '';
     width: 0;
     height: 0;
     border-left: 5px solid transparent;

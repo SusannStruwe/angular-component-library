@@ -10,8 +10,7 @@
     [(ngModel)]="filter"
     (click)="$event.stopPropagation()"
     (ngModelChange)="filterChanged()"
-    placeholder="{{ placeholderText }}"
-  />
+    placeholder="{{ placeholderText }}" />
   @if (filter) {
     <span class="icon right" (click)="clearFilter($event)">
       <fa-icon [icon]="faCloseCircle"></fa-icon>

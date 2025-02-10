@@ -5,16 +5,14 @@
 <div
   class="toggle"
   [style.margin-left.em]="label ? '0.25' : '0'"
-  [class.disabled]="isDisabled"
->
+  [class.disabled]="isDisabled">
   <input
     id="toggle-btn-{{ randomId }}"
     type="checkbox"
     class="checkbox"
     [disabled]="isDisabled"
     [(ngModel)]="checked"
-    (ngModelChange)="toggleState()"
-  />
+    (ngModelChange)="toggleState()" />
   <div class="slider"></div>
   <div class="layer" [class.active]="checked"></div>
 </div>

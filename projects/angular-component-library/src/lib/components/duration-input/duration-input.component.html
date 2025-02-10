@@ -9,13 +9,12 @@
         type="number"
         min="0"
         [(ngModel)]="days"
-        (change)="durationChanged()"
-      />
+        (change)="durationChanged()" />
     }
     @if (mode === modes.READ) {
       <p>{{ days }}</p>
     }
-    <span>{{ "time.days" | translate }}</span>
+    <span>{{ 'time.days' | translate }}</span>
   </div>
   <div class="flex-row">
     @if (mode !== modes.READ) {
@@ -27,13 +26,12 @@
         type="number"
         min="0"
         [(ngModel)]="hours"
-        (change)="durationChanged()"
-      />
+        (change)="durationChanged()" />
     }
     @if (mode === modes.READ) {
       <p>{{ hours }}</p>
     }
-    <span>{{ "time.hoursShort" | translate }}</span>
+    <span>{{ 'time.hoursShort' | translate }}</span>
   </div>
   <div class="flex-row">
     @if (mode !== modes.READ) {
@@ -45,15 +43,14 @@
         type="number"
         min="0"
         [(ngModel)]="minutes"
-        (change)="durationChanged()"
-      />
+        (change)="durationChanged()" />
     }
     @if (mode === modes.READ) {
       <p>{{ minutes }}</p>
     }
-    <span>{{ "time.minutesShort" | translate }}</span>
+    <span>{{ 'time.minutesShort' | translate }}</span>
   </div>
 </div>
 @if (numSeconds === maxDuration) {
-  <span class="error">{{ "validation.maxDuration" | translate }}</span>
+  <span class="error">{{ 'validation.maxDuration' | translate }}</span>
 }

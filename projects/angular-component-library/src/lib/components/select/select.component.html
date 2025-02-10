@@ -2,8 +2,7 @@
   <div
     class="flex"
     (clickOutside)="handleClickOutside()"
-    [ngClass]="[show ? 'selected' : '', classStyle ?? '']"
-  >
+    [ngClass]="[show ? 'selected' : '', classStyle ?? '']">
     <button
       id="select-component"
       #btn
@@ -12,8 +11,7 @@
       [attr.aria-label]="'Select'"
       [attr.aria-haspopup]="'menu'"
       [attr.aria-expanded]="show"
-      (click)="toggleMenu()"
-    >
+      (click)="toggleMenu()">
       @if (faIconBefore) {
         <span class="icon-before">
           <fa-icon [icon]="faIconBefore"></fa-icon>
@@ -38,24 +36,21 @@
       class="menu popup-shadow"
       [class.show]="show"
       [class.hide]="!show"
-      [ngClass]="alignmentLeft() ? 'left' : 'right'"
-    >
+      [ngClass]="alignmentLeft() ? 'left' : 'right'">
       @if (withFilter) {
         <search-input-component
           [style.margin.em]="'0.25'"
           [classStyles]="'full-width no-radius'"
           [placeholderText]="filterPlaceholder"
           [(filter)]="filter"
-          (filterChange)="filterAndSort()"
-        >
+          (filterChange)="filterAndSort()">
         </search-input-component>
       }
       <ul>
         @if (withBlankOption) {
           <li
             (click)="selectEmptyElement()"
-            [class.active]="'' === selectedItem.text"
-          >
+            [class.active]="'' === selectedItem.text">
             <span class="text"></span>
           </li>
         }
@@ -67,8 +62,7 @@
             [class.active]="
               item.text === selectedItem.text &&
               item.localTimestamp === selectedItem.localTimestamp
-            "
-          >
+            ">
             @if (item.icon) {
               <fa-icon [icon]="item.icon"></fa-icon>
             }

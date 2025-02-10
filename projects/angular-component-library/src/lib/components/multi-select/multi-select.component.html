@@ -8,8 +8,7 @@
     [style.background-color]="backgroundColor"
     [style.border-color]="backgroundColor"
     (click)="toggleFilter()"
-    class="filter-btn"
-  >
+    class="filter-btn">
     @if (label) {
       <span>{{ label }}</span>
     }
@@ -26,16 +25,14 @@
     class="menu popup-shadow"
     [class.show]="show"
     [class.hide]="!show"
-    [ngClass]="alignmentLeft() ? 'left' : 'right'"
-  >
+    [ngClass]="alignmentLeft() ? 'left' : 'right'">
     @if (withFilter) {
       <search-input-component
         [style.margin.em]="'0.25'"
         [classStyles]="'full-width no-radius'"
         [placeholderText]="filterPlaceholder"
         [(filter)]="filter"
-        (filterChange)="filterAndSort()"
-      >
+        (filterChange)="filterAndSort()">
       </search-input-component>
     }
     <ul class="selected-items">
@@ -44,8 +41,7 @@
           <input
             id="ms-s-items-{{ randomId }}-{{ i }}"
             type="checkbox"
-            [checked]="isInFilterArray(selectedItem)"
-          />
+            [checked]="isInFilterArray(selectedItem)" />
           <span class="checkmark"></span>
           <span class="text">{{ selectedItem }}</span>
         </li>

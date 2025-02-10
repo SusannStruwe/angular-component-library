@@ -4,14 +4,15 @@
   [attr.title]="ariaLabel"
   [attr.aria-label]="ariaLabel"
   [disabled]="isDisabled"
-  [class.active]="isActive"
->
+  [class.active]="isActive">
   @if (faIcon && showIcon) {
     <fa-icon
       [icon]="faIcon"
-      [animation]="isSpinning ? 'spin' : undefined"
-    ></fa-icon>
+      [animation]="isSpinning ? 'spin' : undefined"></fa-icon>
   }
+
+  <ng-content select="[icon]"></ng-content>
+
   @if (label) {
     <span>{{ label }}</span>
   }

@@ -1,8 +1,7 @@
 <div
   class="flex"
   (clickOutside)="handleClickOutside()"
-  [ngClass]="[show ? 'selected' : '', classStyle ?? '']"
->
+  [ngClass]="[show ? 'selected' : '', classStyle ?? '']">
   <button
     #btn
     [ngClass]="[show ? 'selected' : '']"
@@ -11,8 +10,7 @@
     [attr.aria-haspopup]="'menu'"
     [attr.aria-expanded]="show"
     (click)="toggleMenu()"
-    [style.justify-content]="label ? 'space-between' : 'center'"
-  >
+    [style.justify-content]="label ? 'space-between' : 'center'">
     @if (label) {
       <span>{{ label }}</span>
     }
@@ -27,14 +25,12 @@
     class="menu popup-shadow"
     [class.show]="show"
     [class.hide]="!show"
-    [ngClass]="alignmentLeft() ? 'left' : 'right'"
-  >
+    [ngClass]="alignmentLeft() ? 'left' : 'right'">
     <ul>
       @for (item of items; track item) {
         <li
           (click)="selectElement(item)"
-          [ngClass]="item.icon ? 'grid' : 'flex'"
-        >
+          [ngClass]="item.icon ? 'grid' : 'flex'">
           @if (item.icon) {
             <fa-icon [icon]="item.icon"></fa-icon>
           }

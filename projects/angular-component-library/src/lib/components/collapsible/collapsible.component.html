@@ -1,14 +1,12 @@
 <div
   [ngClass]="['collapsible-header', classStyles]"
-  (click)="collapseContent()"
->
+  (click)="collapseContent()">
   <ng-content select="[header]"></ng-content>
 </div>
 
 <div
   [ngClass]="['collapsible-content', classStyles]"
   [class.show]="show"
-  [class.hide]="!show"
->
+  [class.hide]="!show">
   <ng-content select="[content]"></ng-content>
 </div>

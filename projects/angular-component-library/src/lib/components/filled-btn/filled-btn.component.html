@@ -3,13 +3,11 @@
   [style.width]="width"
   [attr.aria-label]="ariaLabel"
   [disabled]="isDisabled"
-  [class.active]="isActive"
->
+  [class.active]="isActive">
   @if (faIcon && showIcon) {
     <fa-icon
       [icon]="faIcon"
-      [animation]="isSpinning ? 'spin' : undefined"
-    ></fa-icon>
+      [animation]="isSpinning ? 'spin' : undefined"></fa-icon>
   }
 
   @if (label) {

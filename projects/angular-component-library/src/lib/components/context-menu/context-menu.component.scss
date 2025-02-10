@@ -36,6 +36,7 @@ button {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 
   fa-icon {
     padding: var(--btn-padding);
@@ -108,7 +109,7 @@ button {
     transform: scaleY(0);
   }
 
-  input[type="text"] {
+  input[type='text'] {
     height: var(--input-height);
     border: var(--border-width) solid var(--border-color);
     border-radius: 0;
@@ -163,7 +164,7 @@ button {
         gap: 15px;
       }
 
-      input[type="checkbox"] {
+      input[type='checkbox'] {
         margin-right: 10px;
         position: absolute;
         opacity: 0;

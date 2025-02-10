@@ -9,7 +9,7 @@ $toast-error-color: #be4322;
 $toast-warning-color: #ffc107;
 
 body {
-  --font-family: "Segoe UI", sans-serif;
+  --font-family: 'Segoe UI', sans-serif;
 
   --accent-color-light: #00c3d4;
   --accent-color: #0393a0;
@@ -93,7 +93,7 @@ body {
   --font-weight-bold: 700;
   --font-size: 1em;
   --ic-font-size: 1.2em;
-  --font-family: "Segoe UI", sans-serif;
+  --font-family: 'Segoe UI', sans-serif;
 
   --z-index-1: 9; // availabilities
   --z-index-2: 10; // scheduler background active states, buttons in navbar
@@ -103,8 +103,6 @@ body {
   --z-index-6: 1000; //modals, non-modals, popovers, tooltips
   --z-index-7: 1010; // navbar
 
-  --scheduler-first-cell-width: 225px;
-  --scheduler-event-radius: 3px;
   --first-cell-width: 225px;
   --navbar-height: 45px;
   --btn-height: 40px;

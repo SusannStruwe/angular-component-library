@@ -111,7 +111,7 @@ button {
     transform: scaleY(0);
   }
 
-  input[type="text"] {
+  input[type='text'] {
     height: var(--input-height);
     border: 1px solid var(--border-color);
     border-radius: 0;
@@ -163,7 +163,7 @@ button {
       overflow: hidden;
       text-overflow: ellipsis;
 
-      input[type="checkbox"] {
+      input[type='checkbox'] {
         margin-right: 10px;
         position: absolute;
         opacity: 0;
@@ -186,7 +186,7 @@ button {
         border: 1px solid var(--text-color);
 
         &:after {
-          content: "";
+          content: '';
           position: absolute;
           display: none;
           left: 9px;

@@ -8,8 +8,7 @@
           [attr.title]="'close'"
           [attr.aria-label]="'close'"
           type="button"
-          (click)="closeModal()"
-        >
+          (click)="closeModal()">
           <fa-icon [icon]="faClose"></fa-icon>
         </button>
       </div>
@@ -21,8 +20,7 @@
           <bordered-btn-component
             [ariaLabel]="'Close'"
             (click)="closeModal()"
-            [label]="cancelBtnText"
-          >
+            [label]="cancelBtnText">
           </bordered-btn-component>
         }
         @if (deleteBtn) {
@@ -33,8 +31,7 @@
             [styleClass]="'delete'"
             [isSpinning]="showConfirmBtnLoader"
             (click)="confirmModal()"
-            [label]="deleteBtnTxt"
-          >
+            [label]="deleteBtnTxt">
           </filled-btn-component>
         }
         @if (confirmBtn) {
@@ -44,8 +41,7 @@
             [isDisabled]="confirmDisabled"
             [isSpinning]="showConfirmBtnLoader"
             (click)="confirmModal()"
-            [label]="confirmBtnText"
-          >
+            [label]="confirmBtnText">
           </filled-btn-component>
         }
       </div>
@@ -56,8 +52,7 @@
   <div
     class="modal"
     [style.z-index]="zIndex"
-    (click)="handleClickOutside($event)"
-  >
+    (click)="handleClickOutside($event)">
     <div class="modal-content" [ngClass]="sizeClass">
       <div class="modal-header">
         <button
@@ -65,8 +60,7 @@
           [attr.title]="'close'"
           [attr.aria-label]="'close'"
           type="button"
-          (click)="closeModal()"
-        >
+          (click)="closeModal()">
           <fa-icon [icon]="faClose"></fa-icon>
         </button>
       </div>
@@ -89,8 +83,7 @@
           [ariaLabel]="'Close'"
           [isDisabled]="confirmDisabled"
           (click)="confirmModal()"
-          [label]="'Ok'"
-        >
+          [label]="'Ok'">
         </filled-btn-component>
       </div>
     </div>

@@ -8,8 +8,7 @@
     class="menu shadow"
     [class.show]="show"
     [style.top.px]="getBtnHeight()"
-    [ngClass]="aligmentLeft() ? 'left' : 'right'"
-  >
+    [ngClass]="aligmentLeft() ? 'left' : 'right'">
     <ng-content select="[body]"></ng-content>
   </div>
 </div>
