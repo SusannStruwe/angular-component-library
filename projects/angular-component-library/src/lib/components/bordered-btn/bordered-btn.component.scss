@@ -19,20 +19,20 @@ button {
   align-items: center;
 
   fa-icon {
-      color: var(--btn-color);
+    color: var(--btn-color);
   }
 
   ::ng-deep .pailot-icon {
-      font-size: 1.6em;
+    font-size: 1.6em;
   }
 
   span {
-      margin: 0px 5px;
+    margin: 0px 5px;
   }
 
   &:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }
 
@@ -48,70 +48,70 @@ Shining
 
   &::before,
   &::after {
-      box-sizing: inherit;
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border: var(--border-width) solid transparent;
-      width: 0;
-      height: 0;
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: var(--border-width) solid transparent;
+    width: 0;
+    height: 0;
 
-      fa-icon {
-          color: var(--accent-color);
-      }
+    fa-icon {
+      color: var(--accent-color);
+    }
   }
 
   &::before {
-      top: 0;
-      left: 0;
+    top: 0;
+    left: 0;
   }
 
   &::after {
-      bottom: 0;
-      right: 0;
+    bottom: 0;
+    right: 0;
   }
 
   &:hover,
   &.active {
-      &:not([disabled]) {
-          color: var(--accent-color);
+    &:not([disabled]) {
+      color: var(--accent-color);
 
-          fa-icon {
-              color: var(--accent-color);
-          }
+      fa-icon {
+        color: var(--accent-color);
       }
+    }
   }
 
   &:hover::before,
   &:hover::after,
   &.active::before,
   &.active::after {
-      width: 100%;
-      height: 100%;
+    width: 100%;
+    height: 100%;
 
-      fa-icon {
-          color: var(--accent-color);
-      }
+    fa-icon {
+      color: var(--accent-color);
+    }
   }
 
   &:hover::before,
   &.active::before {
-      border-top-color: var(--accent-color);
-      border-right-color: var(--accent-color);
-      transition:
-          width 0.25s ease-out,
-          height 0.25s ease-out 0.25s;
+    border-top-color: var(--accent-color);
+    border-right-color: var(--accent-color);
+    transition:
+      width 0.25s ease-out,
+      height 0.25s ease-out 0.25s;
   }
 
   &:hover::after,
   &.active::after {
-      border-bottom-color: var(--accent-color);
-      border-left-color: var(--accent-color);
-      transition:
-          border-color 0s ease-out 0.5s,
-          width 0.25s ease-out 0.5s,
-          height 0.25s ease-out 0.75s;
+    border-bottom-color: var(--accent-color);
+    border-left-color: var(--accent-color);
+    transition:
+      border-color 0s ease-out 0.5s,
+      width 0.25s ease-out 0.5s,
+      height 0.25s ease-out 0.75s;
   }
 }
 
@@ -127,23 +127,23 @@ Filling
   background-repeat: no-repeat;
   background-size: 0% 100%;
   transition:
-      background-size 0.5s,
-      color 0.5s;
+    background-size 0.5s,
+    color 0.5s;
 
   fa-icon {
-      color: var(--accent-color);
+    color: var(--accent-color);
   }
 
   &:active,
   &.active {
-      &:not([disabled]) {
-          background-size: 100% 100%;
-          color: var(--fa-icon-color);
+    &:not([disabled]) {
+      background-size: 100% 100%;
+      color: var(--fa-icon-color);
 
-          fa-icon {
-              color: var(--fa-icon-color);
-          }
+      fa-icon {
+        color: var(--fa-icon-color);
       }
+    }
   }
 }
 
@@ -153,22 +153,22 @@ Filling
   background-image: linear-gradient(var(--btn-color), var(--btn-color));
 
   fa-icon {
-      color: var(--btn-color);
+    color: var(--btn-color);
   }
 
   &:active,
   &.active {
-      &:not([disabled]) {
-          color: var(--accent-color);
+    &:not([disabled]) {
+      color: var(--accent-color);
 
-          fa-icon {
-              color: var(--accent-color);
-          }
+      fa-icon {
+        color: var(--accent-color);
       }
+    }
   }
 
   &.loading::after {
-      border-top-color: var(--accent-color);
+    border-top-color: var(--accent-color);
   }
 }
 
@@ -181,23 +181,24 @@ Simple hover
   background: transparent;
 
   fa-icon {
-      color: var(--btn-color);
+    color: var(--btn-color);
   }
 
-  &:active, &.active {
-      &:not([disabled]) {
-          border-color: transparent;
-          background-color: var(--accent-color-light);
-          color: var(--accent-color);
+  &:active,
+  &.active {
+    &:not([disabled]) {
+      border-color: transparent;
+      background-color: var(--accent-color-light);
+      color: var(--accent-color);
 
-          fa-icon {
-              color: var(--accent-color);
-          }
-
-          ::ng-deep .pailot-icon {
-              color: var(--accent-color);
-          }
+      fa-icon {
+        color: var(--accent-color);
       }
+
+      ::ng-deep .pailot-icon {
+        color: var(--accent-color);
+      }
+    }
   }
 }
 
@@ -224,13 +225,12 @@ Inverted hover
         color: var(--fa-icon-color);
       }
 
-      ::ng-deep .pailot-icon{
-          color: var(--fa-icon-color);
+      ::ng-deep .pailot-icon {
+        color: var(--fa-icon-color);
       }
     }
   }
 }
-
 
 /************************************
 Deleted
@@ -253,19 +253,18 @@ Deleted
       fa-icon {
         color: var(--delete-color);
       }
-      ::ng-deep .pailot-icon{
-          color: var(--delete-color);
+      ::ng-deep .pailot-icon {
+        color: var(--delete-color);
       }
     }
   }
 }
 
-.small{
+.small {
   height: var(--btn-small-height);
   line-height: var(--btn-small-height);
   padding: var(--btn-small-padding);
 }
-
 
 /************************************
 Disabled
@@ -278,12 +277,11 @@ button[disabled] {
 
   &:hover::before,
   &:hover::after {
-      width: 0%;
-      height: 0%;
-      border-color: transparent;
+    width: 0%;
+    height: 0%;
+    border-color: transparent;
   }
 }
-
 
 /***************************************************************
 Media query to hide hover effects for devices 
@@ -291,97 +289,96 @@ that do not support them, like touch displays
 **************************************************************/
 @media (hover: hover) {
   .filling {
-      &:hover,
-      &.active {
-        &:not([disabled]) {
-          background-size: 100% 100%;
+    &:hover,
+    &.active {
+      &:not([disabled]) {
+        background-size: 100% 100%;
+        color: var(--fa-icon-color);
+
+        fa-icon {
           color: var(--fa-icon-color);
-  
-          fa-icon {
-            color: var(--fa-icon-color);
-          }
         }
       }
     }
-  
-    .filling.gray {
-      &:hover,
-      &.active {
-        &:not([disabled]) {
+  }
+
+  .filling.gray {
+    &:hover,
+    &.active {
+      &:not([disabled]) {
+        color: var(--accent-color);
+
+        fa-icon {
           color: var(--accent-color);
-  
-          fa-icon {
-            color: var(--accent-color);
-          }
         }
       }
     }
+  }
 
   .simple {
-      &:hover,
-      &.active {
-          &:not([disabled]) {
-              border-color: transparent;
-              background-color: var(--accent-color-light);
-              color: var(--accent-color);
+    &:hover,
+    &.active {
+      &:not([disabled]) {
+        border-color: transparent;
+        background-color: var(--accent-color-light);
+        color: var(--accent-color);
 
-              fa-icon {
-                  color: var(--accent-color);
-              }
+        fa-icon {
+          color: var(--accent-color);
+        }
 
-              ::ng-deep .pailot-icon {
-                  color: var(--accent-color);
-              }
-              
-          }
+        ::ng-deep .pailot-icon {
+          color: var(--accent-color);
+        }
       }
+    }
   }
 
   .delete {
-      &:hover,
-      &.active {
-          &:not([disabled]) {
-              border-color: transparent;
-              background-color: var(--delete-color-light);
-              color: var(--delete-color);
+    &:hover,
+    &.active {
+      &:not([disabled]) {
+        border-color: transparent;
+        background-color: var(--delete-color-light);
+        color: var(--delete-color);
 
-              fa-icon {
-                  color: var(--delete-color);
-              }
+        fa-icon {
+          color: var(--delete-color);
+        }
 
-              ::ng-deep .pailot-icon{
-                  color: var(--delete-color);
-              }
-          }
+        ::ng-deep .pailot-icon {
+          color: var(--delete-color);
+        }
       }
+    }
   }
 
   .inverted {
-      &:hover,
-      &.active {
-        &:not([disabled]) {
-          border-color: transparent;
-          background-color: var(--btn-color);
+    &:hover,
+    &.active {
+      &:not([disabled]) {
+        border-color: transparent;
+        background-color: var(--btn-color);
+        color: var(--fa-icon-color);
+
+        fa-icon {
           color: var(--fa-icon-color);
-  
-          fa-icon {
-            color: var(--fa-icon-color);
-          }
         }
       }
     }
+  }
 
   .inverted.delete {
-      &:hover,
-      &.active {
-        &:not([disabled]) {
-          background-color: var(--delete-color);
+    &:hover,
+    &.active {
+      &:not([disabled]) {
+        background-color: var(--delete-color);
+        color: var(--fa-icon-color);
+
+        fa-icon {
           color: var(--fa-icon-color);
-  
-          fa-icon {
-            color: var(--fa-icon-color);
-          }
         }
       }
     }
+  }
 }

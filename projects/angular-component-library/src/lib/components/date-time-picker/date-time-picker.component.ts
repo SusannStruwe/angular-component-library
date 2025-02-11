@@ -18,9 +18,7 @@ import { EditMode } from '../../model/edit-mode.enum';
 import { IconService } from '../../services/icon.service';
 
 /**
- * Component select date time
- * Note -> :not(p) is only a pseudo-selector with no effect,
- * it is used to  handle Component ID generation collision errors
+ * Component to select date time
  *
  * Note: The format is "yyyy-MM-ddThh:mm" followed by optional ":ss" or ":ss.SSS".
  *
@@ -34,7 +32,7 @@ import { IconService } from '../../services/icon.service';
  * ```
  */
 @Component({
-  selector: 'date-time-picker-component:not(p)',
+  selector: 'date-time-picker-component',
   standalone: true,
   imports: [
     CommonModule,

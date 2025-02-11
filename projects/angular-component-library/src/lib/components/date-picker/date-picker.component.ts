@@ -9,9 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { IconService } from '../../services/icon.service';
 
 /**
- * Component select date
- * Note -> :not(p) is only a pseudo-selector with no effect,
- * it is used to  handle Component ID generation collision errors
+ * Component to select date
  *
  * @howToUse
  * ```
@@ -23,7 +21,7 @@ import { IconService } from '../../services/icon.service';
  * ```
  */
 @Component({
-  selector: 'date-picker-component:not(p)',
+  selector: 'date-picker-component',
   standalone: true,
   imports: [CommonModule, FormsModule, FontAwesomeModule, PlatformModule],
   templateUrl: './date-picker.component.html',
