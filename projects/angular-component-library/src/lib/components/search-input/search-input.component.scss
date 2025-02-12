@@ -33,13 +33,21 @@
   .right {
     position: absolute;
     right: 10px;
-    top: calc((var(--input-height) - 20px) / 2);
+    top: 0px;
+    display: flex;
+    height: var(--input-height);
+    justify-content: center;
+    align-items: center;
   }
 
   .left {
     position: absolute;
     left: 10px;
-    top: calc((var(--input-height) - 20px) / 2);
+    top: 0px;
+    display: flex;
+    height: var(--input-height);
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -64,6 +72,8 @@
 }
 
 .small {
+  line-height: calc(var(--input-height) - 10px);
+  
   input {
     height: calc(var(--input-height) - 10px);
     font-size: 0.9em;
@@ -75,15 +85,21 @@
   .right {
     position: absolute;
     right: 10px;
-    top: 10px;
-    line-height: calc(var(--input-height) - 20px);
+    top: 0px;
+    height: calc(var(--input-height) - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .left {
     position: absolute;
     left: 10px;
-    top: 10px;
-    line-height: calc(var(--input-height) - 20px);
+    top: 0px;
+    height: calc(var(--input-height) - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
