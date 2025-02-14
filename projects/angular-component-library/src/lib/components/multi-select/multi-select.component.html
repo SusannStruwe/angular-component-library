@@ -36,7 +36,7 @@
       </search-input-component>
     }
     <ul class="selected-items">
-      @for (selectedItem of selectedItems; track $index; let i = $index) {
+      @for (selectedItem of selectedItems; track i; let i = $index) {
         <li (click)="removeElement(selectedItem)">
           <input
             id="ms-s-items-{{ randomId }}-{{ i }}"
@@ -48,7 +48,7 @@
       }
     </ul>
     <ul [style.max-height.px]="300">
-      @for (item of items; track $index; let i = $index) {
+      @for (item of items; track i; let i = $index) {
         <li (click)="selectElement(item)">
           <input id="ms-items-{{ randomId }}-{{ i }}" type="checkbox" />
           <span class="checkmark"></span>

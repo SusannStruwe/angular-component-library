@@ -54,7 +54,7 @@
             <span class="text"></span>
           </li>
         }
-        @for (item of items; track $index; let i = $index) {
+        @for (item of items; track i; let i = $index) {
           <li
             id="s-item-{{ i }}"
             (click)="selectElement(item)"
