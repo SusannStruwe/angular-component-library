@@ -5,14 +5,18 @@
 
 .collapsible-header {
   border: 1px solid var(--border-color);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
   margin: 10px 5px 0px 5px;
   height: var(--btn-height);
   line-height: var(--btn-height);
   box-sizing: border-box;
   padding: 0em 1em;
 
-  h2, h3, h4, p {
-    margin: 0px;
+  ::ng-deep {
+    h2, h3, h4, p {
+      margin: 0px;
+    }
   }
 }
 
@@ -20,10 +24,14 @@
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
   margin: 0px 5px;
 
-  h2, h3, h4, p {
-    margin: 0px;
+  ::ng-deep {
+    h2, h3, h4, p {
+      margin: 0px;
+    }
   }
 
   &.show {
@@ -60,6 +68,12 @@ that do not support them, like touch displays
   .collapsible-header {
     &:hover {
       color: var(--accent-color);
+
+      ::ng-deep {   
+        fa-icon {
+          color: var(--accent-color) !important;
+        }
+      }
     }
   }
 }
