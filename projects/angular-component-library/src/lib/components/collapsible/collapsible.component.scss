@@ -10,6 +10,10 @@
   line-height: var(--btn-height);
   box-sizing: border-box;
   padding: 0em 1em;
+
+  h2, h3, h4, p {
+    margin: 0px;
+  }
 }
 
 .collapsible-content {
@@ -17,6 +21,10 @@
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   margin: 0px 5px;
+
+  h2, h3, h4, p {
+    margin: 0px;
+  }
 
   &.show {
     height: auto;

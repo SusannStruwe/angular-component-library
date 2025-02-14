@@ -13,7 +13,7 @@
     font-size: var(--font-size);
     outline: none;
     font-family: var(--font-family);
-    border: var(--border-width) solid var(--btn-color);
+    border: var(--border-width) solid var(--btn-border-color);
     cursor: pointer;
     color: var(--btn-color);
     background: transparent;
@@ -30,7 +30,7 @@
     top: 0;
     right: 0px;
     background: var(--fa-icon-color);
-    border: 1px solid var(--btn-color);
+    border: 1px solid var(--btn-border-color);
     border-left: none;
     padding: 2px 10px;
     cursor: pointer;

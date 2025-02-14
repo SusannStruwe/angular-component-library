@@ -30,7 +30,7 @@ button {
   padding: 0px;
   color: var(--fa-icon-color);
   background: transparent;
-  border: var(--border-width) solid var(--btn-color);
+  border: var(--border-width) solid var(--btn-border-color);
   border-radius: var(--border-radius);
   width: 100%;
   max-width: var(--max-width-select);
@@ -111,7 +111,7 @@ button {
   max-width: var(--max-width-select);
   height: auto;
   border-radius: 0;
-  background: var(--menu-color);
+  background: var(--menu-background);
   z-index: var(--z-index-5);
   box-sizing: border-box;
   display: flex;
@@ -285,7 +285,7 @@ button {
 
 .scheduler {
   button {
-    border: var(--border-width) solid var(--btn-color);
+    border: var(--border-width) solid var(--btn-border-color);
 
     span {
       color: var(--btn-color);

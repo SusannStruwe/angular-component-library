@@ -17,20 +17,23 @@ body {
   --accent-color-rgb: 3, 147, 160;
 
   --btn-color: #3b3c3e;
-  --bg-color: #fbfbfb;
-  --navbar-bg-color: #111;
-  --content-bg-color: #f3f3f3;
+  --btn-border-color: #3b3c3e;
+  --toggle-btn-background: #3b3c3e;
+  --tooltip-background: #262626;
+  --modal-background: #fbfbfb;
+  --menu-background: #fff;
   --table-header-color: #fbfbfb;
-  --tabs-bg-color: #111;
+  --tabs-background: #111;
   --tabs-content-color: #f3f3f3;
   --tab-color: #ccc;
   --text-color: #2c2f33;
   --placeholder-color: #999;
   --fa-icon-color: white;
-  --tooltip-bg-color: #262626;
-  --menu-color: #fff;
-  --downtime-color: #ccc; // #cc3611;
   --collapse-background: #f3f3f3;
+  --border-color-rgb: 000, 000, 000;
+  --loader-bg-rgb: 255, 255, 255;
+  --border-color: #ccc;
+  --border-color-light: #e4e4e4;
 
   --not-emphrazed-color: #aaa;
   --not-emphrazed-color-dark: #999;
@@ -69,11 +72,7 @@ body {
   --urgent-color-dark: #863018;
   --free-color: #eef9ff;
   --free-color-dark: #a1c7dc;
-
-  --border-color-rgb: 000, 000, 000;
-  --loader-bg-rgb: 255, 255, 255;
-  --border-color: #ccc;
-  --border-color-light: #e4e4e4;
+  --downtime-color: #ccc; // #cc3611;
 
   --row-highlight-color: rgba(223, 251, 255, 0.5);
   --header-bg-color: rgb(000, 000, 000, 0.03);
@@ -91,9 +90,9 @@ body {
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+
   --font-size: 1em;
   --ic-font-size: 1.2em;
-  --font-family: 'Segoe UI', sans-serif;
 
   --z-index-1: 9; // availabilities
   --z-index-2: 10; // scheduler background active states, buttons in navbar
@@ -103,7 +102,6 @@ body {
   --z-index-6: 1000; //modals, non-modals, popovers, tooltips
   --z-index-7: 1010; // navbar
 
-  --first-cell-width: 225px;
   --navbar-height: 45px;
   --btn-height: 40px;
   --input-height: 40px;
@@ -132,24 +130,21 @@ body.dark-theme {
   --accent-color-light: #00c3d4;
   --accent-color: #0393a0;
   --accent-color-dark: #02707a;
-  --btn-color: #b0b1b3;
 
-  --bg-color: #111;
-  --navbar-bg-color: #111;
-  --content-bg-color: #f3f3f3;
+  --btn-color: #b0b1b3;
+  --btn-border-color: #b0b1b3;
   --table-header-color: #222;
-  --tabs-bg-color: #111;
+  --tabs-background: #111;
   --tabs-content-color: #f3f3f3;
   --tab-color: #444;
   --text-color: white;
   --placeholder-color: #999;
   --fa-icon-color: white;
-  --tooltip-bg-color: rgb(183, 183, 183);
+  --tooltip-background: rgb(183, 183, 183);
 
   --border-color-rgb: 255, 255, 255;
   --border-color: #ccc;
   --border-color-light: #e4e4e4;
-  --frozen-zone-color: #9df7ff;
 
   --row-highlight-color: rgba(223, 251, 255, 0.5);
   --header-bg-color: rgb(000, 000, 000, 0.03);

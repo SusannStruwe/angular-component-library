@@ -177,7 +177,7 @@ Simple hover
 ********************************/
 .simple {
   color: var(--btn-color);
-  border: var(--border-width) solid var(--btn-color);
+  border: var(--border-width) solid var(--btn-border-color);
   background: transparent;
 
   fa-icon {
@@ -207,7 +207,7 @@ Inverted hover
 ********************************/
 .inverted {
   color: var(--btn-color);
-  border: var(--border-width) solid var(--btn-color);
+  border: var(--border-width) solid var(--btn-border-color);
   background: transparent;
 
   fa-icon {

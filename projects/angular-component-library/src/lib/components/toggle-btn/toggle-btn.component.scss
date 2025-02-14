@@ -58,7 +58,7 @@ span {
   .layer {
     width: auto;
     transition: 0.3s ease all;
-    border: 1px solid var(--btn-color);
+    border: 1px solid var(--btn-border-color);
     z-index: 1;
     border-radius: 100px;
 
@@ -80,7 +80,7 @@ span {
     line-height: 0.7em;
     font-weight: var(--font-weight-medium);
     text-align: center;
-    background-color: var(--btn-color);
+    background-color: var(--toggle-btn-background);
     border-radius: 50%;
     transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
   }

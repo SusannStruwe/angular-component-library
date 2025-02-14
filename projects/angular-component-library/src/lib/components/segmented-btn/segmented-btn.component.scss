@@ -1,6 +1,6 @@
 :host {
   display: flex;
-  border: var(--border-width) solid var(--btn-color);
+  border: var(--border-width) solid var(--btn-border-color);
   border-radius: var(--border-radius);
   height: var(--btn-height);
   box-sizing: border-box;
@@ -61,7 +61,6 @@ button {
     cursor: not-allowed;
   }
 }
-
 
 /************************************************
 Media query to add hover only on device which support hover
