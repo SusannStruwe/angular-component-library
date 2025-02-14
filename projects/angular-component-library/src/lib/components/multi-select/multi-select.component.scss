@@ -113,8 +113,8 @@ button {
 
   input[type='text'] {
     height: var(--input-height);
-    border: 1px solid var(--border-color);
-    border-radius: 0;
+    border: 1px solid var(--btn-border-color);
+    border-radius: var(--border-radius);
     outline: none;
     cursor: pointer;
     font-size: var(--font-size);
@@ -183,7 +183,8 @@ button {
         height: 25px;
         width: 25px;
         background-color: transparent;
-        border: 1px solid var(--text-color);
+        border: 1px solid var(--btn-border-color);
+        border-radius: var(--border-radius);
 
         &:after {
           content: '';
