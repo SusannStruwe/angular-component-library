@@ -1,12 +1,11 @@
 import { ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing';
 import { BorderedBtnComponent } from './bordered-btn.component';
 import { By } from '@angular/platform-browser';
-import { IconService } from '../../services/icon.service';
+import { Icons } from '../../model/icons';
 
 describe('BorderedBtnComponent', () => {
   let component: BorderedBtnComponent;
   let fixture: ComponentFixture<BorderedBtnComponent>;
-  const iconService = new IconService();
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -35,7 +34,7 @@ describe('BorderedBtnComponent', () => {
 
   it('should show fa-icon check', () => {
     component.showIcon = true;
-    component.faIcon = iconService.faCheck;
+    component.faIcon = Icons.faCheck;
     fixture.detectChanges();
 
     expect(

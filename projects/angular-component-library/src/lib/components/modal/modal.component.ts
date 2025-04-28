@@ -15,7 +15,7 @@ import { Subscription } from 'rxjs';
 import { ModalResult } from '../../model/modal-result.enum';
 import { ModalType } from '../../model/modal-type.enum';
 import { ModalService } from '../../services/modal.service';
-import { IconService } from '../../services/icon.service';
+import { Icons } from '../../model/icons';
 import { SassHelperComponent } from '../sass-helper.component';
 
 /**
@@ -54,10 +54,10 @@ export class ModalComponent implements OnInit, OnDestroy {
   @Input() deleteBtnTxt? = 'Delete';
   @Input() sizeClass = ['m'];
 
-  faLoader: IconDefinition;
-  faClose: IconDefinition;
-  faCircleInfo: IconDefinition;
-  faCircleXmark: IconDefinition;
+  faLoader: IconDefinition = Icons.faLoader;
+  faClose: IconDefinition = Icons.faXmark;
+  faCircleInfo: IconDefinition = Icons.faCircleInfo;
+  faCircleXmark: IconDefinition = Icons.faCircleXmark;
 
   type: ModalType = ModalType.custom;
   modalType: typeof ModalType = ModalType;
@@ -73,13 +73,8 @@ export class ModalComponent implements OnInit, OnDestroy {
   constructor(
     private modalService: ModalService,
     private el: ElementRef,
-    private iconService: IconService,
   ) {
     this.element = this.el.nativeElement;
-    this.faLoader = this.iconService.faLoader;
-    this.faClose = this.iconService.faXmark;
-    this.faCircleInfo = this.iconService.faCircleInfo;
-    this.faCircleXmark = this.iconService.faCircleXmark;
   }
 
   ngOnInit(): void {

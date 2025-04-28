@@ -1,12 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FilledBtnComponent } from './filled-btn.component';
 import { By } from '@angular/platform-browser';
-import { IconService } from '../../services/icon.service';
+import { Icons } from '../../model/icons';
 
 describe('FilledBtnComponent', () => {
   let component: FilledBtnComponent;
   let fixture: ComponentFixture<FilledBtnComponent>;
-  const iconService = new IconService();
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -34,7 +33,7 @@ describe('FilledBtnComponent', () => {
   });
 
   it('should show fa-icon check', () => {
-    component.faIcon = iconService.faCheck;
+    component.faIcon = Icons.faCheck;
     fixture.detectChanges();
 
     expect(

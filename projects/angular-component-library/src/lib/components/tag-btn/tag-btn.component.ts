@@ -1,8 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { faClose } from '@fortawesome/free-solid-svg-icons';
-import { IconService } from '../../services/icon.service';
+import { Icons } from '../../model/icons';
 
 /**
  * Component to create a tag.
@@ -28,11 +27,7 @@ export class TagBtnComponent {
 
   @Output() removeTagSelected = new EventEmitter<string>();
 
-  faClose: IconDefinition = faClose;
-
-  constructor(private iconService: IconService) {
-    this.faClose = this.iconService.faXmark;
-  }
+  faClose: IconDefinition = Icons.faXmark;
 
   /**
    * Remove tag

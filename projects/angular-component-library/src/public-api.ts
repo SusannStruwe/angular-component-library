@@ -37,8 +37,8 @@ export * from './lib/components/tabs-view/tabs-view.component';
 export * from './lib/components/tabs-view/tab/tab.component';
 export * from './lib/components/sass-helper.component';
 
-export * from './lib/services/icon.service';
-export * from './lib/services/color.service';
+export * from './lib/model/icons';
+export * from './lib/model/colors';
 export * from './lib/services/modal.service';
 export * from './lib/services/loader.service';
 

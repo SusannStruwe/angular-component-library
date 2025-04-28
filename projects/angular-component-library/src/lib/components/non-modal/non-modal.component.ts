@@ -12,7 +12,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { ModalResult } from '../../model/modal-result.enum';
 import { ModalService } from '../../services/modal.service';
-import { IconService } from '../../services/icon.service';
+import { Icons } from '../../model/icons';
 
 /**
  * Component to create and show a modal.
@@ -39,17 +39,15 @@ export class NonModalComponent implements OnInit, OnDestroy {
 
   modalResult: typeof ModalResult = ModalResult;
 
-  faClose: IconDefinition;
+  faClose: IconDefinition = Icons.faXmark;
 
   private element: any;
 
   constructor(
     private modalService: ModalService,
     private el: ElementRef,
-    private iconService: IconService,
   ) {
     this.element = this.el.nativeElement;
-    this.faClose = this.iconService.faXmark;
   }
 
   ngOnInit(): void {

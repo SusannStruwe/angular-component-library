@@ -13,7 +13,10 @@
   padding: 0em 1em;
 
   ::ng-deep {
-    h2, h3, h4, p {
+    h2,
+    h3,
+    h4,
+    p {
       margin: 0px;
     }
   }
@@ -27,7 +30,10 @@
   border-bottom-right-radius: var(--border-radius);
 
   ::ng-deep {
-    h2, h3, h4, p {
+    h2,
+    h3,
+    h4,
+    p {
       margin: 0px;
     }
   }
@@ -67,7 +73,7 @@ that do not support them, like touch displays
     &:hover {
       color: var(--accent-color);
 
-      ::ng-deep {   
+      ::ng-deep {
         fa-icon {
           color: var(--accent-color) !important;
         }

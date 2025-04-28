@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ColorService } from '../../services/color.service';
+import { Colors } from '../../model/colors';
 
 /**
  * Component to show colors from color service in a grid
@@ -19,9 +19,7 @@ import { ColorService } from '../../services/color.service';
 export class ColorPaletteComponent implements OnInit {
   colors: string[] = [];
 
-  constructor(private colorService: ColorService) {}
-
   ngOnInit() {
-    this.colors = this.colorService.colors;
+    this.colors = Colors.standard;
   }
 }

@@ -6,7 +6,7 @@ import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { Platform, PlatformModule } from '@angular/cdk/platform';
 import { cloneDeep } from 'lodash';
 import { TranslateService } from '@ngx-translate/core';
-import { IconService } from '../../services/icon.service';
+import { Icons } from '../../model/icons';
 
 /**
  * Component to select date
@@ -34,7 +34,7 @@ export class DatePickerComponent implements OnInit {
 
   @Output() dateChanged = new EventEmitter<Date>();
 
-  faCalender: IconDefinition;
+  faCalender: IconDefinition = Icons.faCalendar;
   showOverlayBtn = true;
   randomId: string = Math.floor(Math.random() * 16777215).toString(16);
 
@@ -42,11 +42,8 @@ export class DatePickerComponent implements OnInit {
 
   constructor(
     public platform: Platform,
-    private iconService: IconService,
     private translateService: TranslateService,
-  ) {
-    this.faCalender = this.iconService.faCalendar;
-  }
+  ) {}
 
   ngOnInit() {
     //hide overlay button on ios, safari or webkit because it does not work

@@ -15,7 +15,7 @@ import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { Platform, PlatformModule } from '@angular/cdk/platform';
 import { TranslateModule } from '@ngx-translate/core';
 import { EditMode } from '../../model/edit-mode.enum';
-import { IconService } from '../../services/icon.service';
+import { Icons } from '../../model/icons';
 
 /**
  * Component to select date time
@@ -56,18 +56,13 @@ export class DateTimePickerComponent implements OnInit {
 
   @ViewChild('dateTimePicker') dateTimePickerRef?: ElementRef;
 
-  faCalender: IconDefinition;
+  faCalender: IconDefinition = Icons.faCalendar;
   showOverlayBtn = true;
   randomId: string = Math.floor(Math.random() * 16777215).toString(16);
 
   modes: typeof EditMode = EditMode;
 
-  constructor(
-    public platform: Platform,
-    private iconService: IconService,
-  ) {
-    this.faCalender = this.iconService.faCalendar;
-  }
+  constructor(public platform: Platform) {}
 
   ngOnInit() {
     //hide overlay button on ios, safari or webkit because it does not work

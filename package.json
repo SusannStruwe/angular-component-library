@@ -17,7 +17,9 @@
     "update:fortawesome": "ng update @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons",
     "update:util": "ng update date-fns @types/lodash.clonedeep lodash.clonedeep rxjs tslib",
     "update:karma": "ng update karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter",
-    "prettier": "npx prettier --write ."
+    "prettier": "npx prettier --write .",
+    "storybook": "ng run angular-component-library:storybook",
+    "build-storybook": "ng run angular-component-library:build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -47,6 +49,14 @@
     "@angular-devkit/build-angular": "^18.2.11",
     "@angular/cli": "^18.1.1",
     "@angular/compiler-cli": "^18.2.11",
+    "@compodoc/compodoc": "^1.1.26",
+    "@storybook/addon-docs": "^8.6.12",
+    "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-interactions": "^8.6.12",
+    "@storybook/addon-onboarding": "^8.6.12",
+    "@storybook/angular": "^8.6.12",
+    "@storybook/blocks": "^8.6.12",
+    "@storybook/test": "^8.6.12",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.3",
@@ -55,6 +65,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^18.2.1",
+    "storybook": "^8.6.12",
     "typescript": "~5.5.4"
   }
 }

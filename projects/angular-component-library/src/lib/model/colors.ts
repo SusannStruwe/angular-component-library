@@ -1,13 +1,10 @@
 import { Injectable } from '@angular/core';
 
 /**
- * Color service to manage colors
+ * Color class to manage colors
  */
-@Injectable({
-  providedIn: 'root',
-})
-export class ColorService {
-  colors: string[] = [
+export class Colors {
+  static standard: string[] = [
     //demo colors
     '#2dc3c1',
     'mediumseagreen',
@@ -84,7 +81,7 @@ export class ColorService {
     '#536dfe',
   ];
 
-  cssColors: string[] = [
+  static cssColors: string[] = [
     'aliceblue',
     'antiquewhite',
     'aqua',
@@ -233,59 +230,53 @@ export class ColorService {
     'yellow',
     'yellowgreen',
   ];
+}
 
-  /**
-   * Get colors
-   * @returns
-   */
-  getColors(): string[] {
-    return this.colors;
-  }
+/**
+ * Get colors
+ * @returns
+ */
+export function getColors(): string[] {
+  return Colors.standard;
+}
 
-  /**
-   * Gets random color
-   * @returns
-   */
-  getRandomColor(): string {
-    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    randomColor.length === 5 ? (randomColor = randomColor + 'f') : null;
-    return '#' + randomColor;
-  }
+/**
+ * Gets random color
+ * @returns
+ */
+export function getRandomColor(): string {
+  let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  randomColor.length === 5 ? (randomColor = randomColor + 'f') : null;
+  return '#' + randomColor;
+}
 
-  // used defined colors for customer show case
-  getColorToName(taskName: string): string {
-    // A111 & B111 red , B222 & A222 blue, A333 green
-    // darkgreen
-    const colors = [
-      '#9a0303',
-      '#6e0101',
-      '#2dc3c1',
-      '#0193A0',
-      'mediumseagreen',
-    ];
-    const color = taskName.includes('A111')
-      ? colors[0]
-      : taskName.includes('B111')
-        ? colors[1]
-        : taskName.includes('A222')
-          ? colors[2]
-          : taskName.includes('B222')
-            ? colors[3]
-            : taskName.includes('A333')
-              ? colors[4]
-              : colors[0];
-    return color;
-  }
+// used defined colors for customer show case
+export function getColorToName(taskName: string): string {
+  // A111 & B111 red , B222 & A222 blue, A333 green
+  // darkgreen
+  const colors = ['#9a0303', '#6e0101', '#2dc3c1', '#0193A0', 'mediumseagreen'];
+  const color = taskName.includes('A111')
+    ? colors[0]
+    : taskName.includes('B111')
+      ? colors[1]
+      : taskName.includes('A222')
+        ? colors[2]
+        : taskName.includes('B222')
+          ? colors[3]
+          : taskName.includes('A333')
+            ? colors[4]
+            : colors[0];
+  return color;
+}
 
-  /**
-   * Gets a color as string to a task name (==orderId)
-   * @param name
-   * @returns
-   */
-  getColorToTaskOrderIdName(
-    name: string,
-    taskColors: { [id: string]: string },
-  ): string {
-    return taskColors[name];
-  }
+/**
+ * Gets a color as string to a task name (==orderId)
+ * @param name
+ * @returns
+ */
+export function getColorToTaskOrderIdName(
+  name: string,
+  taskColors: { [id: string]: string },
+): string {
+  return taskColors[name];
 }

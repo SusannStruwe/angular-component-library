@@ -34,6 +34,38 @@
             "polyfills": ["zone.js", "zone.js/testing"],
             "karmaConfig": "projects/angular-component-library/karma.conf.cjs"
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/angular-component-library/.storybook",
+            "browserTarget": "angular-component-library:build",
+            "styles": ["projects/angular-component-library/assets/styles.scss"],
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/angular-component-library"
+            ],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/angular-component-library/.storybook",
+            "browserTarget": "angular-component-library:build",
+            "styles": ["projects/angular-component-library/assets/styles.scss"],
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/angular-component-library"
+            ],
+            "outputDir": "storybook-static"
+          }
         }
       }
     }

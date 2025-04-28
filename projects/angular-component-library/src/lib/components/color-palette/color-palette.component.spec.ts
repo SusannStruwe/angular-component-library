@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ColorPaletteComponent } from './color-palette.component';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
 import { By } from '@angular/platform-browser';
-import { ColorService } from '../../services/color.service';
+import { ColorService } from '../../model/colors';
 
 describe('ColorPaletteComponent', () => {
   let component: ColorPaletteComponent;

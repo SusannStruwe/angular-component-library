@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { IconService } from '../../services/icon.service';
+import { Icons } from '../../model/icons';
 
 /**
  * Component to search
@@ -29,15 +29,10 @@ export class SearchInputComponent {
 
   @Output() filterChange = new EventEmitter<string>();
 
-  faMagnifyingGlass: IconDefinition;
-  faCloseCircle: IconDefinition;
+  faMagnifyingGlass: IconDefinition = Icons.faMagnifyingGlass;
+  faCloseCircle: IconDefinition = Icons.faCircleXmark;
 
   randomId: string = Math.floor(Math.random() * 16777215).toString(16);
-
-  constructor(private iconService: IconService) {
-    this.faMagnifyingGlass = this.iconService.faMagnifyingGlass;
-    this.faCloseCircle = this.iconService.faCircleXmark;
-  }
 
   /**
    * Filter string has changed

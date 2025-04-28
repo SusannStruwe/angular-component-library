@@ -5,7 +5,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { FileDragNDropDirective } from '../../directives/drag-drop-file.directive';
-import { IconService } from '../../services/icon.service';
+import { Icons } from '../../model/icons';
 
 /**
  * Component to upload files by drag and drop or simple upload button
@@ -44,23 +44,16 @@ export class DropzoneComponent {
   @Output() maxListSizeReachedError = new EventEmitter<number>();
   @Output() fileTypeNotAllowedError = new EventEmitter<string>();
 
-  faUpload: IconDefinition;
-  faFile: IconDefinition;
-  faRemove: IconDefinition;
+  faUpload: IconDefinition = Icons.faUpload;
+  faFile: IconDefinition = Icons.faFile;
+  faRemove: IconDefinition = Icons.faTrash;
   randomId: string = Math.floor(Math.random() * 16777215).toString(16);
 
   onLangChangeSubscription?: Subscription;
 
   FILE_SIZE_CONVERTER = 1024;
 
-  constructor(
-    private translate: TranslateService,
-    private iconService: IconService,
-  ) {
-    this.faUpload = this.iconService.faUpload;
-    this.faFile = this.iconService.faFile;
-    this.faRemove = this.iconService.faTrash;
-  }
+  constructor(private translate: TranslateService) {}
 
   /**
    * Provides the current lang

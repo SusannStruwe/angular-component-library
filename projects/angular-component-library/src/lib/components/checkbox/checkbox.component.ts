@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { IconService } from '../../services/icon.service';
+import { Icons } from '../../model/icons';
 import { EditMode } from '../../model/edit-mode.enum';
 
 /**
@@ -30,17 +30,11 @@ export class CheckboxComponent {
 
   modes: typeof EditMode = EditMode;
 
-  faSquare: IconDefinition;
-  faSquareCheck: IconDefinition;
-  faCheck: IconDefinition;
+  faSquare: IconDefinition = Icons.faSquare;
+  faSquareCheck: IconDefinition = Icons.faSquareCheck;
+  faCheck: IconDefinition = Icons.faCheck;
 
   randomId: string = Math.floor(Math.random() * 16777215).toString(16);
-
-  constructor(private iconService: IconService) {
-    this.faSquare = this.iconService.faSquare;
-    this.faSquareCheck = this.iconService.faSquareCheck;
-    this.faCheck = this.iconService.faCheck;
-  }
 
   toggleValue(): void {
     this.value = !this.value;
