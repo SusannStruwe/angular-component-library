@@ -4,67 +4,71 @@ import { By } from '@angular/platform-browser';
 import { Icons } from '../../model/icons';
 
 describe('BorderedBtnComponent', () => {
-  let component: BorderedBtnComponent;
-  let fixture: ComponentFixture<BorderedBtnComponent>;
+    let component: BorderedBtnComponent;
+    let fixture: ComponentFixture<BorderedBtnComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [BorderedBtnComponent],
-      providers: [],
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [BorderedBtnComponent],
+            providers: []
+        });
+
+        fixture = TestBed.createComponent(BorderedBtnComponent);
+
+        component = fixture.componentInstance;
+
+        fixture.detectChanges();
     });
 
-    fixture = TestBed.createComponent(BorderedBtnComponent);
+    it('should create bordered btn component', () => {
+        expect(component).toBeTruthy();
+    });
 
-    component = fixture.componentInstance;
+    it('should show button text', () => {
+        component.label = 'Start';
+        fixture.detectChanges();
 
-    fixture.detectChanges();
-  });
+        const btnText = fixture.debugElement.query(
+            By.css('span')
+        ).nativeElement;
+        expect(btnText.innerHTML).toEqual('Start');
+    });
 
-  it('should create bordered btn component', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should show fa-icon check', () => {
+        component.showIcon = true;
+        component.faIcon = Icons.faCheck;
+        fixture.detectChanges();
 
-  it('should show button text', () => {
-    component.label = 'Start';
-    fixture.detectChanges();
+        expect(
+            fixture.debugElement.query(By.css('svg')).nativeElement
+        ).toBeTruthy();
 
-    const btnText = fixture.debugElement.query(By.css('span')).nativeElement;
-    expect(btnText.innerHTML).toEqual('Start');
-  });
+        const faIconName = fixture.debugElement
+            .query(By.css('svg'))
+            .nativeElement.getAttribute('data-icon');
 
-  it('should show fa-icon check', () => {
-    component.showIcon = true;
-    component.faIcon = Icons.faCheck;
-    fixture.detectChanges();
+        expect(faIconName).toEqual('check');
+    });
 
-    expect(
-      fixture.debugElement.query(By.css('svg')).nativeElement,
-    ).toBeTruthy();
+    it('should be disabled', () => {
+        component.isDisabled = true;
+        fixture.detectChanges();
 
-    const faIconName = fixture.debugElement
-      .query(By.css('svg'))
-      .nativeElement.getAttribute('data-icon');
+        const button = fixture.debugElement.query(
+            By.css('button')
+        ).nativeElement;
+        expect(button.disabled).toBeTruthy();
+    });
 
-    expect(faIconName).toEqual('check');
-  });
+    it('should be filled on active', fakeAsync(() => {
+        const button = fixture.debugElement.query(By.css('.simple'));
+        const styles = window.getComputedStyle(button.nativeElement);
 
-  it('should be disabled', () => {
-    component.isDisabled = true;
-    fixture.detectChanges();
+        expect(styles.backgroundColor).toEqual('rgba(0, 0, 0, 0)');
 
-    const button = fixture.debugElement.query(By.css('button')).nativeElement;
-    expect(button.disabled).toBeTruthy();
-  });
+        component.isActive = true;
+        fixture.detectChanges();
 
-  it('should be filled on active', fakeAsync(() => {
-    const button = fixture.debugElement.query(By.css('.simple'));
-    const styles = window.getComputedStyle(button.nativeElement);
-
-    expect(styles.backgroundColor).toEqual('rgba(0, 0, 0, 0)');
-
-    component.isActive = true;
-    fixture.detectChanges();
-
-    // expect(styles.backgroundColor).toEqual('rgb(199, 206, 250)');
-  }));
+        // expect(styles.backgroundColor).toEqual('rgb(199, 206, 250)');
+    }));
 });

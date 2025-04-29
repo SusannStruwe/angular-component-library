@@ -4,37 +4,37 @@ import { By } from '@angular/platform-browser';
 import { NoDataComponent } from './no-data.component';
 
 describe('NoDataComponent', () => {
-  let component: NoDataComponent;
-  let fixture: ComponentFixture<NoDataComponent>;
+    let component: NoDataComponent;
+    let fixture: ComponentFixture<NoDataComponent>;
 
-  const text = 'Beschreibung';
+    const text = 'Beschreibung';
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [NoDataComponent, FontAwesomeTestingModule],
-      providers: [],
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [NoDataComponent, FontAwesomeTestingModule],
+            providers: []
+        });
+
+        fixture = TestBed.createComponent(NoDataComponent);
+
+        component = fixture.componentInstance;
+        component.text = text;
+
+        fixture.detectChanges();
     });
 
-    fixture = TestBed.createComponent(NoDataComponent);
+    it('should create no data component', () => {
+        expect(component).toBeTruthy();
+    });
 
-    component = fixture.componentInstance;
-    component.text = text;
+    it('should have tag text', () => {
+        const tagBtn = fixture.debugElement.query(By.css('span'));
+        expect(tagBtn).toBeTruthy();
+    });
 
-    fixture.detectChanges();
-  });
-
-  it('should create no data component', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it('should have tag text', () => {
-    const tagBtn = fixture.debugElement.query(By.css('span'));
-    expect(tagBtn).toBeTruthy();
-  });
-
-  it('text should be', () => {
-    const tagBtn = fixture.debugElement.query(By.css('span'));
-    const content = tagBtn.nativeElement.textContent;
-    expect(content).toBe(text);
-  });
+    it('text should be', () => {
+        const tagBtn = fixture.debugElement.query(By.css('span'));
+        const content = tagBtn.nativeElement.textContent;
+        expect(content).toBe(text);
+    });
 });

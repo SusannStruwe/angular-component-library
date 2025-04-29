@@ -15,29 +15,29 @@ import { EditMode } from '../../model/edit-mode.enum';
  * ```
  */
 @Component({
-  selector: 'checkbox-component',
-  standalone: true,
-  imports: [FontAwesomeModule],
-  templateUrl: './checkbox.component.html',
-  styleUrls: ['./checkbox.component.scss'],
+    selector: 'checkbox-component',
+    standalone: true,
+    imports: [FontAwesomeModule],
+    templateUrl: './checkbox.component.html',
+    styleUrls: ['./checkbox.component.scss']
 })
 export class CheckboxComponent {
-  @Input() value = false;
-  @Input() mode: EditMode = EditMode.WRITE;
-  @Input() height?: number;
+    @Input() value = false;
+    @Input() mode: EditMode = EditMode.WRITE;
+    @Input() height?: number;
 
-  @Output() valueChange = new EventEmitter<boolean>();
+    @Output() valueChange = new EventEmitter<boolean>();
 
-  modes: typeof EditMode = EditMode;
+    modes: typeof EditMode = EditMode;
 
-  faSquare: IconDefinition = Icons.faSquare;
-  faSquareCheck: IconDefinition = Icons.faSquareCheck;
-  faCheck: IconDefinition = Icons.faCheck;
+    faSquare: IconDefinition = Icons.faSquare;
+    faSquareCheck: IconDefinition = Icons.faSquareCheck;
+    faCheck: IconDefinition = Icons.faCheck;
 
-  randomId: string = Math.floor(Math.random() * 16777215).toString(16);
+    randomId: string = Math.floor(Math.random() * 16777215).toString(16);
 
-  toggleValue(): void {
-    this.value = !this.value;
-    this.valueChange.emit(this.value);
-  }
+    toggleValue(): void {
+        this.value = !this.value;
+        this.valueChange.emit(this.value);
+    }
 }

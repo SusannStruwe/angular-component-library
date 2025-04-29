@@ -1,16 +1,16 @@
 <div class="input-container" [ngClass]="[classStyles ?? '']">
-  <input
-    id="input-field-{{ randomId }}"
-    class="form-control"
-    type="{{ type }}"
-    [attr.aria-label]="'search-field-{{randomId}}'"
-    [(ngModel)]="input"
-    (click)="$event.stopPropagation()"
-    (ngModelChange)="inputChanged()"
-    placeholder="{{ placeholderText }}" />
-  @if (icon) {
-    <span class="icon right">
-      <fa-icon [icon]="icon"></fa-icon>
-    </span>
-  }
+    <input
+        id="input-field-{{ randomId }}"
+        class="form-control"
+        type="{{ type }}"
+        [attr.aria-label]="'search-field-{{randomId}}'"
+        [(ngModel)]="input"
+        (click)="$event.stopPropagation()"
+        (ngModelChange)="inputChanged()"
+        placeholder="{{ placeholderText }}" />
+    @if (icon) {
+        <span class="icon right">
+            <fa-icon [icon]="icon"></fa-icon>
+        </span>
+    }
 </div>

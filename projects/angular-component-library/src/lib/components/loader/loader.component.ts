@@ -16,16 +16,16 @@ import { LoaderStyle } from '../../model/loader-style.enum';
  * ```
  */
 @Component({
-  selector: 'loader-component',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
-  templateUrl: './loader.component.html',
-  styleUrls: ['./loader.component.scss'],
+    selector: 'loader-component',
+    standalone: true,
+    imports: [CommonModule, FontAwesomeModule],
+    templateUrl: './loader.component.html',
+    styleUrls: ['./loader.component.scss']
 })
 export class LoaderComponent {
-  @Input() loaderStyle?: LoaderStyle;
-  //example -> linear, ease
-  @Input() animation?: string;
+    @Input() loaderStyle?: LoaderStyle;
+    //example -> linear, ease
+    @Input() animation?: string;
 
-  @Input() label?: string;
+    @Input() label?: string;
 }

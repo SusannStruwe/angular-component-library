@@ -10,16 +10,16 @@ import { Colors } from '../../model/colors';
  * ```
  */
 @Component({
-  selector: 'color-palette-component',
-  standalone: true,
-  imports: [],
-  templateUrl: './color-palette.component.html',
-  styleUrls: ['./color-palette.component.scss'],
+    selector: 'color-palette-component',
+    standalone: true,
+    imports: [],
+    templateUrl: './color-palette.component.html',
+    styleUrls: ['./color-palette.component.scss']
 })
 export class ColorPaletteComponent implements OnInit {
-  colors: string[] = [];
+    colors: string[] = [];
 
-  ngOnInit() {
-    this.colors = Colors.standard;
-  }
+    ngOnInit() {
+        this.colors = Colors.standard;
+    }
 }

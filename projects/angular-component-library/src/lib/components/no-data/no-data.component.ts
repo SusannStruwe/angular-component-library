@@ -15,14 +15,14 @@ import { Icons } from '../../model/icons';
  * ```
  */
 @Component({
-  selector: 'no-data-component',
-  standalone: true,
-  imports: [FontAwesomeModule, TranslateModule],
-  templateUrl: './no-data.component.html',
-  styleUrls: ['./no-data.component.scss'],
+    selector: 'no-data-component',
+    standalone: true,
+    imports: [FontAwesomeModule, TranslateModule],
+    templateUrl: './no-data.component.html',
+    styleUrls: ['./no-data.component.scss']
 })
 export class NoDataComponent {
-  @Input() translationKey = 'general.noData';
+    @Input() translationKey = 'general.noData';
 
-  faCircleInfo: IconDefinition = Icons.faCircleInfo;
+    faCircleInfo: IconDefinition = Icons.faCircleInfo;
 }

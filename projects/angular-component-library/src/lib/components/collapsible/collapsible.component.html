@@ -1,12 +1,12 @@
 <div
-  [ngClass]="['collapsible-header', classStyles]"
-  (click)="collapseContent()">
-  <ng-content select="[header]"></ng-content>
+    [ngClass]="['collapsible-header', classStyles]"
+    (click)="collapseContent()">
+    <ng-content select="[header]"></ng-content>
 </div>
 
 <div
-  [ngClass]="['collapsible-content', classStyles]"
-  [class.show]="show"
-  [class.hide]="!show">
-  <ng-content select="[content]"></ng-content>
+    [ngClass]="['collapsible-content', classStyles]"
+    [class.show]="show"
+    [class.hide]="!show">
+    <ng-content select="[content]"></ng-content>
 </div>

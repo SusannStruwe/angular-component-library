@@ -1,4 +1,7 @@
 {
-  "singleQuote": true,
-  "bracketSameLine": true
+    "singleQuote": true,
+    "bracketSameLine": true,
+    "tabWidth": 4,
+    "useTabs": false,
+    "trailingComma": "none"
 }

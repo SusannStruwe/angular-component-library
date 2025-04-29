@@ -10,21 +10,21 @@ import { Component, Input } from '@angular/core';
  * ```
  */
 @Component({
-  selector: 'popover-component',
-  standalone: true,
-  imports: [],
-  templateUrl: './popover.component.html',
-  styleUrls: ['./popover.component.scss'],
+    selector: 'popover-component',
+    standalone: true,
+    imports: [],
+    templateUrl: './popover.component.html',
+    styleUrls: ['./popover.component.scss']
 })
 export class PopoverComponent {
-  @Input() alignmentRight = false;
+    @Input() alignmentRight = false;
 
-  show = false;
+    show = false;
 
-  /**
-   * Toggle show state
-   */
-  togglePopover(): void {
-    this.show = !this.show;
-  }
+    /**
+     * Toggle show state
+     */
+    togglePopover(): void {
+        this.show = !this.show;
+    }
 }

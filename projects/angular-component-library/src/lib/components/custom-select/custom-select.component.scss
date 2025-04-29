@@ -1,36 +1,36 @@
 :host {
-  display: inline-block;
-  position: relative;
+    display: inline-block;
+    position: relative;
 }
 
 button {
-  background: transparent;
-  border: none;
-  padding: 0px;
+    background: transparent;
+    border: none;
+    padding: 0px;
 }
 
 .menu {
-  position: absolute;
-  top: calc(var(--btn-height) + 5px);
-  min-width: 150px;
-  width: max-content;
-  height: auto;
-  background: var(--menu-background);
-  z-index: var(--z-index-5);
-  box-sizing: border-box;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.2s ease-in-out;
+    position: absolute;
+    top: calc(var(--btn-height) + 5px);
+    min-width: 150px;
+    width: max-content;
+    height: auto;
+    background: var(--menu-background);
+    z-index: var(--z-index-5);
+    box-sizing: border-box;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.2s ease-in-out;
 
-  &.left {
-    left: 5px;
-  }
+    &.left {
+        left: 5px;
+    }
 
-  &.right {
-    right: 5px;
-  }
+    &.right {
+        right: 5px;
+    }
 
-  &.show {
-    transform: scaleY(1);
-  }
+    &.show {
+        transform: scaleY(1);
+    }
 }

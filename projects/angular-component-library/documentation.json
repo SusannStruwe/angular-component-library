@@ -17,13 +17,9 @@
             "outputs": [],
             "providers": [],
             "selector": "alert-component",
-            "styleUrls": [
-                "./alert.component.scss"
-            ],
+            "styleUrls": ["./alert.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./alert.component.html"
-            ],
+            "templateUrl": ["./alert.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -214,13 +210,9 @@
             "outputs": [],
             "providers": [],
             "selector": "badge-component",
-            "styleUrls": [
-                "./badge.component.scss"
-            ],
+            "styleUrls": ["./badge.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./badge.component.html"
-            ],
+            "templateUrl": ["./badge.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -307,11 +299,11 @@
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<div\n  class=\"badge\"\n  [attr.aria-label]=\"label\"\n  [ngClass]=\"classStyle ?? ''\"\n  [style.border-radius.px]=\"borderRadius\"\n  [class.disabled]=\"isDisabled\">\n  @if (preIcon) {\n    <fa-icon [icon]=\"preIcon\"></fa-icon>\n  }\n  <p>{{ label }}</p>\n\n  @if (postIcon) {\n    <fa-icon [icon]=\"postIcon\"></fa-icon>\n  }\n</div>\n"
+            "templateData": "<div\n  class=\"badge\"\n  [attr.aria-label]=\"label\"\n  [ngClass]=\"styleClass ?? ''\"\n  [style.border-radius.px]=\"borderRadius\"\n  [class.disabled]=\"isDisabled\">\n  @if (preIcon) {\n    <fa-icon [icon]=\"preIcon\"></fa-icon>\n  }\n  <p>{{ label }}</p>\n\n  @if (postIcon) {\n    <fa-icon [icon]=\"postIcon\"></fa-icon>\n  }\n</div>\n"
         },
         {
             "name": "BorderedBtnComponent",
-            "id": "component-BorderedBtnComponent-4d3e6fbca12accf022da7eef85f238d7a04ec182f5ba8afc09e41996afe83a4b6c5c617a6bc7b01da66cf7ce7b61b65186f95507c9e1b0833d9f145b4efdfba2",
+            "id": "component-BorderedBtnComponent-47f6bc768f3b315795b66fa8d9084a9ec0ca0dee6b126a5a5a2d1b8e72932d747ff32351820506544015cdc8af50ce8f3c75d3f4b1dd923066ee2c671e1b3be2",
             "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -319,13 +311,9 @@
             "outputs": [],
             "providers": [],
             "selector": "bordered-btn-component",
-            "styleUrls": [
-                "./bordered-btn.component.scss"
-            ],
+            "styleUrls": ["./bordered-btn.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./bordered-btn.component.html"
-            ],
+            "templateUrl": ["./bordered-btn.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -433,10 +421,10 @@
                     "type": "module"
                 }
             ],
-            "description": "<p>Component to create a bordered button.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-none\">&lt;bordered-btn-component\n [ariaLabel]= &quot;&#39;scheduler.today&#39; | translate &quot;\n [label]=&quot;&#39;scheduler.today&#39; | translate &quot;\n [faIcon] = &quot;faCog&quot;&gt;\n&lt;/bordered-btn-component&gt;</code></pre></div>",
-            "rawdescription": "\n\nComponent to create a bordered button.\n\n```\n<bordered-btn-component\n [ariaLabel]= \"'scheduler.today' | translate \"\n [label]=\"'scheduler.today' | translate \"\n [faIcon] = \"faCog\">\n</bordered-btn-component>\n```\n",
+            "description": "<p>Component to create a bordered button.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-none\">&lt;bordered-btn-component\n [ariaLabel]= &quot;&#39;scheduler.today&#39; | translate &quot;\n [label]=&quot;&#39;scheduler.today&#39; | translate &quot;\n [faIcon]=&quot;faCog&quot;&gt;\n&lt;/bordered-btn-component&gt;</code></pre></div>",
+            "rawdescription": "\n\nComponent to create a bordered button.\n\n```\n<bordered-btn-component\n [ariaLabel]= \"'scheduler.today' | translate \"\n [label]=\"'scheduler.today' | translate \"\n [faIcon]=\"faCog\">\n</bordered-btn-component>\n```\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { FontAwesomeModule } from '@fortawesome/angular-fontawesome';\nimport { IconDefinition } from '@fortawesome/fontawesome-svg-core';\nimport { HoverStyle } from '../../model/hover-style.enum';\n\n/**\n * Component to create a bordered button.\n *\n * @howToUse\n * ```\n * <bordered-btn-component\n *  [ariaLabel]= \"'scheduler.today' | translate \"\n *  [label]=\"'scheduler.today' | translate \"\n *  [faIcon] = \"faCog\">\n * </bordered-btn-component>\n * ```\n */\n@Component({\n  selector: 'bordered-btn-component',\n  standalone: true,\n  imports: [CommonModule, FontAwesomeModule],\n  templateUrl: './bordered-btn.component.html',\n  styleUrls: ['./bordered-btn.component.scss'],\n})\nexport class BorderedBtnComponent {\n  @Input() ariaLabel: string = '';\n\n  @Input() label?: string;\n\n  @Input() faIcon?: IconDefinition;\n  // example --> 100% or not\n  @Input() showIcon = true;\n\n  @Input() isDisabled?: boolean;\n  // example --> gray, delete\n  @Input() styleClass?: string = '';\n  // example --> filling or shining\n  @Input() hoverStyle = HoverStyle.SIMPLE;\n  // example --> spin or not\n  @Input() isSpinning = false;\n  // example --> active or not\n  @Input() isActive?: boolean;\n  // example --> 100% or not\n  @Input() width?: string;\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { FontAwesomeModule } from '@fortawesome/angular-fontawesome';\nimport { IconDefinition } from '@fortawesome/fontawesome-svg-core';\nimport { HoverStyle } from '../../model/hover-style.enum';\n\n/**\n * Component to create a bordered button.\n *\n * @howToUse\n * ```\n * <bordered-btn-component\n *  [ariaLabel]= \"'scheduler.today' | translate \"\n *  [label]=\"'scheduler.today' | translate \"\n *  [faIcon]=\"faCog\">\n * </bordered-btn-component>\n * ```\n */\n@Component({\n  selector: 'bordered-btn-component',\n  standalone: true,\n  imports: [CommonModule, FontAwesomeModule],\n  templateUrl: './bordered-btn.component.html',\n  styleUrls: ['./bordered-btn.component.scss'],\n})\nexport class BorderedBtnComponent {\n  @Input() ariaLabel: string = '';\n\n  @Input() label?: string;\n\n  @Input() faIcon?: IconDefinition;\n\n  @Input() showIcon = true;\n\n  @Input() isDisabled?: boolean;\n  // example --> gray, delete\n  @Input() styleClass?: string = '';\n  // example --> filling or shining\n  @Input() hoverStyle = HoverStyle.SIMPLE;\n  // example --> spin or not\n  @Input() isSpinning = false;\n  // example --> active or not\n  @Input() isActive?: boolean;\n  // example --> 100% or not\n  @Input() width?: string;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -450,7 +438,7 @@
         },
         {
             "name": "BorderlessBtnComponent",
-            "id": "component-BorderlessBtnComponent-6858601461ec1e4a13a95aeacb65dad5cc276b039c65cbeb9549b230c936bda12acaa12043a1cb4f11455acd09714c5bcabc795f48bb92b2fbfce045a8c57d79",
+            "id": "component-BorderlessBtnComponent-19789e365f1434599649d292bd34a799026316febff43da568495b2935573a004c2f28b9bc5c59f72f2b0ee217fac9aaf938a5c8e9ed3e30c902ac55c4aa4beb",
             "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -458,13 +446,9 @@
             "outputs": [],
             "providers": [],
             "selector": "borderless-btn-component",
-            "styleUrls": [
-                "./borderless-btn.component.scss"
-            ],
+            "styleUrls": ["./borderless-btn.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./borderless-btn.component.html"
-            ],
+            "templateUrl": ["./borderless-btn.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -575,7 +559,7 @@
             "description": "<p>Component to create a borderless button.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-none\">&lt;borderless-btn-component\n [ariaLabel]= &quot;&#39;scheduler.today&#39; | translate &quot;\n [label]=&quot;&#39;scheduler.today&#39; | translate &quot;\n [faIcon] = &quot;faCog&quot;&gt;\n&lt;/borderless-btn-component&gt;</code></pre></div>",
             "rawdescription": "\n\nComponent to create a borderless button.\n\n```\n<borderless-btn-component\n [ariaLabel]= \"'scheduler.today' | translate \"\n [label]=\"'scheduler.today' | translate \"\n [faIcon] = \"faCog\">\n</borderless-btn-component>\n```\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { FontAwesomeModule } from '@fortawesome/angular-fontawesome';\nimport { IconDefinition } from '@fortawesome/fontawesome-svg-core';\nimport { HoverStyle } from '../../model/hover-style.enum';\n\n/**\n * Component to create a borderless button.\n *\n * @howToUse\n * ```\n * <borderless-btn-component\n *  [ariaLabel]= \"'scheduler.today' | translate \"\n *  [label]=\"'scheduler.today' | translate \"\n *  [faIcon] = \"faCog\">\n * </borderless-btn-component>\n * ```\n */\n@Component({\n  selector: 'borderless-btn-component',\n  standalone: true,\n  imports: [CommonModule, FontAwesomeModule],\n  templateUrl: './borderless-btn.component.html',\n  styleUrls: ['./borderless-btn.component.scss'],\n})\nexport class BorderlessBtnComponent {\n  @Input() ariaLabel: string = '';\n\n  @Input() label?: string;\n\n  @Input() faIcon?: IconDefinition;\n  // example --> 100% or not\n  @Input() showIcon = true;\n\n  @Input() isDisabled?: boolean;\n  // example --> gray, delete\n  @Input() styleClass?: string = '';\n  // example --> filling or shining\n  @Input() hoverStyle = HoverStyle.SIMPLE;\n  // example --> spin or not\n  @Input() isSpinning = false;\n  // example --> active or not\n  @Input() isActive?: boolean;\n  // example --> 100% or not\n  @Input() width?: string;\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { FontAwesomeModule } from '@fortawesome/angular-fontawesome';\nimport { IconDefinition } from '@fortawesome/fontawesome-svg-core';\nimport { HoverStyle } from '../../model/hover-style.enum';\n\n/**\n * Component to create a borderless button.\n *\n * @howToUse\n * ```\n * <borderless-btn-component\n *  [ariaLabel]= \"'scheduler.today' | translate \"\n *  [label]=\"'scheduler.today' | translate \"\n *  [faIcon] = \"faCog\">\n * </borderless-btn-component>\n * ```\n */\n@Component({\n  selector: 'borderless-btn-component',\n  standalone: true,\n  imports: [CommonModule, FontAwesomeModule],\n  templateUrl: './borderless-btn.component.html',\n  styleUrls: ['./borderless-btn.component.scss'],\n})\nexport class BorderlessBtnComponent {\n  @Input() ariaLabel: string = '';\n\n  @Input() label?: string;\n\n  @Input() faIcon?: IconDefinition;\n\n  @Input() showIcon = true;\n\n  @Input() isDisabled?: boolean;\n  // example --> gray, delete\n  @Input() styleClass?: string = '';\n  // example --> filling or shining\n  @Input() hoverStyle = HoverStyle.SIMPLE;\n  // example --> spin or not\n  @Input() isSpinning = false;\n  // example --> active or not\n  @Input() isActive?: boolean;\n  // example --> 100% or not\n  @Input() width?: string;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -597,9 +581,7 @@
             "outputs": [],
             "providers": [],
             "selector": "storybook-button",
-            "styleUrls": [
-                "./button.css"
-            ],
+            "styleUrls": ["./button.css"],
             "styles": [],
             "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\">\n   {{ label }}\n </button>",
             "templateUrl": [],
@@ -731,13 +713,9 @@
             "outputs": [],
             "providers": [],
             "selector": "checkbox-component",
-            "styleUrls": [
-                "./checkbox.component.scss"
-            ],
+            "styleUrls": ["./checkbox.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./checkbox.component.html"
-            ],
+            "templateUrl": ["./checkbox.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -883,13 +861,9 @@
             "outputs": [],
             "providers": [],
             "selector": "circle-btn-component",
-            "styleUrls": [
-                "./circle-btn.component.scss"
-            ],
+            "styleUrls": ["./circle-btn.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./circle-btn.component.html"
-            ],
+            "templateUrl": ["./circle-btn.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -1004,13 +978,9 @@
             "outputs": [],
             "providers": [],
             "selector": "collapsible-component",
-            "styleUrls": [
-                "./collapsible.component.scss"
-            ],
+            "styleUrls": ["./collapsible.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./collapsible.component.html"
-            ],
+            "templateUrl": ["./collapsible.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -1124,9 +1094,7 @@
                 ]
             },
             "extends": [],
-            "implements": [
-                "OnInit"
-            ],
+            "implements": ["OnInit"],
             "templateData": "<div\n  [ngClass]=\"['collapsible-header', classStyles]\"\n  (click)=\"collapseContent()\">\n  <ng-content select=\"[header]\"></ng-content>\n</div>\n\n<div\n  [ngClass]=\"['collapsible-content', classStyles]\"\n  [class.show]=\"show\"\n  [class.hide]=\"!show\">\n  <ng-content select=\"[content]\"></ng-content>\n</div>\n"
         },
         {
@@ -1139,13 +1107,9 @@
             "outputs": [],
             "providers": [],
             "selector": "color-palette-component",
-            "styleUrls": [
-                "./color-palette.component.scss"
-            ],
+            "styleUrls": ["./color-palette.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./color-palette.component.html"
-            ],
+            "templateUrl": ["./color-palette.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [],
@@ -1194,9 +1158,7 @@
             ],
             "stylesData": "",
             "extends": [],
-            "implements": [
-                "OnInit"
-            ],
+            "implements": ["OnInit"],
             "templateData": "<div class=\"color-palette\">\n  @for (color of colors; track color; let i = $index) {\n    <div class=\"color-item\" [style.background]=\"color\">\n      <span>{{ color }}</span>\n    </div>\n  }\n</div>\n"
         },
         {
@@ -1210,13 +1172,9 @@
             "outputs": [],
             "providers": [],
             "selector": "context-menu-component",
-            "styleUrls": [
-                "./context-menu.component.scss"
-            ],
+            "styleUrls": ["./context-menu.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./context-menu.component.html"
-            ],
+            "templateUrl": ["./context-menu.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -1299,9 +1257,7 @@
                             "stringifiedArguments": "'btn'"
                         }
                     ],
-                    "modifierKind": [
-                        170
-                    ]
+                    "modifierKind": [170]
                 },
                 {
                     "name": "menu",
@@ -1318,9 +1274,7 @@
                             "stringifiedArguments": "'menu'"
                         }
                     ],
-                    "modifierKind": [
-                        170
-                    ]
+                    "modifierKind": [170]
                 },
                 {
                     "name": "show",
@@ -1476,13 +1430,9 @@
             "outputs": [],
             "providers": [],
             "selector": "custom-select-component",
-            "styleUrls": [
-                "./custom-select.component.scss"
-            ],
+            "styleUrls": ["./custom-select.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./custom-select.component.html"
-            ],
+            "templateUrl": ["./custom-select.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -1522,9 +1472,7 @@
                             "stringifiedArguments": "'btn'"
                         }
                     ],
-                    "modifierKind": [
-                        170
-                    ]
+                    "modifierKind": [170]
                 },
                 {
                     "name": "menu",
@@ -1541,9 +1489,7 @@
                             "stringifiedArguments": "'menu'"
                         }
                     ],
-                    "modifierKind": [
-                        170
-                    ]
+                    "modifierKind": [170]
                 }
             ],
             "methodsClass": [
@@ -1660,9 +1606,7 @@
                 ]
             },
             "extends": [],
-            "implements": [
-                "OnInit"
-            ],
+            "implements": ["OnInit"],
             "templateData": "<div class=\"dropdown\" (clickOutside)=\"handleClickOutside()\">\n  <button #btn (click)=\"toggleFilter()\">\n    <ng-content select=\"[header]\"></ng-content>\n  </button>\n\n  <div\n    #menu\n    class=\"menu shadow\"\n    [class.show]=\"show\"\n    [style.top.px]=\"getBtnHeight()\"\n    [ngClass]=\"aligmentLeft() ? 'left' : 'right'\">\n    <ng-content select=\"[body]\"></ng-content>\n  </div>\n</div>\n"
         },
         {
@@ -1675,13 +1619,9 @@
             "outputs": [],
             "providers": [],
             "selector": "date-picker-component",
-            "styleUrls": [
-                "./date-picker.component.scss"
-            ],
+            "styleUrls": ["./date-picker.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./date-picker.component.html"
-            ],
+            "templateUrl": ["./date-picker.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -1754,9 +1694,7 @@
                     "optional": false,
                     "description": "",
                     "line": 44,
-                    "modifierKind": [
-                        125
-                    ]
+                    "modifierKind": [125]
                 },
                 {
                     "name": "randomId",
@@ -1912,9 +1850,7 @@
                 ]
             },
             "extends": [],
-            "implements": [
-                "OnInit"
-            ],
+            "implements": ["OnInit"],
             "templateData": "<div class=\"datepicker\">\n  <input\n    id=\"date-input-{{ randomId }}\"\n    [style.display]=\"withInput ? 'block' : 'none'\"\n    [attr.aria-labelledby]=\"'date-input'\"\n    type=\"date\"\n    [ngModel]=\"date | date: 'yyyy-MM-dd'\"\n    (ngModelChange)=\"changeDate((date = $event))\" />\n  @if (showOverlayBtn) {\n    <div\n      class=\"btn-overlay\"\n      [style.position]=\"withInput ? 'absolute' : 'relative'\"\n      (click)=\"showDatePicker()\">\n      <fa-icon [icon]=\"faCalender\"></fa-icon>\n    </div>\n  }\n</div>\n"
         },
         {
@@ -1927,13 +1863,9 @@
             "outputs": [],
             "providers": [],
             "selector": "date-range-picker-component",
-            "styleUrls": [
-                "./date-range-picker.component.scss"
-            ],
+            "styleUrls": ["./date-range-picker.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./date-range-picker.component.html"
-            ],
+            "templateUrl": ["./date-range-picker.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -1995,9 +1927,7 @@
                     "optional": false,
                     "description": "",
                     "line": 45,
-                    "modifierKind": [
-                        125
-                    ]
+                    "modifierKind": [125]
                 },
                 {
                     "name": "randomId",
@@ -2190,9 +2120,7 @@
                 ]
             },
             "extends": [],
-            "implements": [
-                "OnInit"
-            ],
+            "implements": ["OnInit"],
             "templateData": "<date-picker-component\n  [date]=\"startDate\"\n  (startDateChange)=\"startChanged($event)\">\n</date-picker-component>\n\n<p>-</p>\n\n<date-picker-component\n  [date]=\"startDate\"\n  (startDateChange)=\"endChanged($event)\">\n</date-picker-component>\n"
         },
         {
@@ -2205,13 +2133,9 @@
             "outputs": [],
             "providers": [],
             "selector": "date-time-picker-component",
-            "styleUrls": [
-                "./date-time-picker.component.scss"
-            ],
+            "styleUrls": ["./date-time-picker.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./date-time-picker.component.html"
-            ],
+            "templateUrl": ["./date-time-picker.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -2293,9 +2217,7 @@
                             "stringifiedArguments": "'dateTimePicker'"
                         }
                     ],
-                    "modifierKind": [
-                        170
-                    ]
+                    "modifierKind": [170]
                 },
                 {
                     "name": "faCalender",
@@ -2328,9 +2250,7 @@
                     "optional": false,
                     "description": "",
                     "line": 65,
-                    "modifierKind": [
-                        125
-                    ]
+                    "modifierKind": [125]
                 },
                 {
                     "name": "randomId",
@@ -2383,9 +2303,7 @@
                             "stringifiedArguments": "'focusout'"
                         }
                     ],
-                    "modifierKind": [
-                        170
-                    ]
+                    "modifierKind": [170]
                 },
                 {
                     "name": "showDatePicker",
@@ -2477,9 +2395,7 @@
                 ]
             },
             "extends": [],
-            "implements": [
-                "OnInit"
-            ],
+            "implements": ["OnInit"],
             "templateData": "@if (mode === modes.WRITE) {\n  <div class=\"datepicker\">\n    <input\n      #dateTimePicker\n      [style.display]=\"withInput ? 'block' : 'none'\"\n      [style.height.px]=\"height ?? 40\"\n      [style.min-width.px]=\"minWidth ?? 'auto'\"\n      [attr.aria-labelledby]=\"'date-time-input'\"\n      id=\"date-time-input-{{ randomId }}\"\n      type=\"datetime-local\"\n      [(ngModel)]=\"date\" />\n    @if (showOverlayBtn) {\n      <div\n        class=\"btn-overlay\"\n        [style.position]=\"withInput ? 'absolute' : 'relative'\"\n        [style.height.px]=\"height ?? 40\"\n        (click)=\"showDatePicker()\">\n        <fa-icon [icon]=\"faCalender\"></fa-icon>\n      </div>\n    }\n  </div>\n}\n@if (mode === modes.READ) {\n  <div>\n    @if (date) {\n      <span\n        >{{ date | date: 'dd.MM.yyyy HH:mm:ss' }}\n        {{ 'scheduler.clock' | translate }}</span\n      >\n    }\n    @if (!date) {\n      <span> - </span>\n    }\n  </div>\n}\n"
         },
         {
@@ -2492,13 +2408,9 @@
             "outputs": [],
             "providers": [],
             "selector": "dropzone-component",
-            "styleUrls": [
-                "./dropzone.component.scss"
-            ],
+            "styleUrls": ["./dropzone.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./dropzone.component.html"
-            ],
+            "templateUrl": ["./dropzone.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -3145,13 +3057,9 @@
             "outputs": [],
             "providers": [],
             "selector": "duration-input-component",
-            "styleUrls": [
-                "./duration-input.component.scss"
-            ],
+            "styleUrls": ["./duration-input.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./duration-input.component.html"
-            ],
+            "templateUrl": ["./duration-input.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -3335,9 +3243,7 @@
             ],
             "stylesData": "",
             "extends": [],
-            "implements": [
-                "OnChanges"
-            ],
+            "implements": ["OnChanges"],
             "templateData": "<div class=\"flex-row\">\n  <div class=\"flex-row\">\n    @if (mode !== modes.READ) {\n      <input\n        id=\"duration-days-{{ randomId }}\"\n        class=\"form-control duration\"\n        [style.height.px]=\"height ?? 40\"\n        [attr.aria-labelledby]=\"'duration-days'\"\n        type=\"number\"\n        min=\"0\"\n        [(ngModel)]=\"days\"\n        (change)=\"durationChanged()\" />\n    }\n    @if (mode === modes.READ) {\n      <p>{{ days }}</p>\n    }\n    <span>{{ 'time.days' | translate }}</span>\n  </div>\n  <div class=\"flex-row\">\n    @if (mode !== modes.READ) {\n      <input\n        id=\"duration-hours-{{ randomId }}\"\n        class=\"form-control duration\"\n        [style.height.px]=\"height ?? 40\"\n        [attr.aria-labelledby]=\"'duration-hours'\"\n        type=\"number\"\n        min=\"0\"\n        [(ngModel)]=\"hours\"\n        (change)=\"durationChanged()\" />\n    }\n    @if (mode === modes.READ) {\n      <p>{{ hours }}</p>\n    }\n    <span>{{ 'time.hoursShort' | translate }}</span>\n  </div>\n  <div class=\"flex-row\">\n    @if (mode !== modes.READ) {\n      <input\n        id=\"duration-minutes-{{ randomId }}\"\n        class=\"form-control duration\"\n        [style.height.px]=\"height ?? 40\"\n        [attr.aria-labelledby]=\"'duration-minutes'\"\n        type=\"number\"\n        min=\"0\"\n        [(ngModel)]=\"minutes\"\n        (change)=\"durationChanged()\" />\n    }\n    @if (mode === modes.READ) {\n      <p>{{ minutes }}</p>\n    }\n    <span>{{ 'time.minutesShort' | translate }}</span>\n  </div>\n</div>\n@if (numSeconds === maxDuration) {\n  <span class=\"error\">{{ 'validation.maxDuration' | translate }}</span>\n}\n"
         },
         {
@@ -3350,13 +3256,9 @@
             "outputs": [],
             "providers": [],
             "selector": "filled-btn-component",
-            "styleUrls": [
-                "./filled-btn.component.scss"
-            ],
+            "styleUrls": ["./filled-btn.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./filled-btn.component.html"
-            ],
+            "templateUrl": ["./filled-btn.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -3489,9 +3391,7 @@
             "outputs": [],
             "providers": [],
             "selector": "storybook-header",
-            "styleUrls": [
-                "./header.css"
-            ],
+            "styleUrls": ["./header.css"],
             "styles": [],
             "template": "<header>    <div class=\"storybook-header\">\n      <div>\n        <svg\n          width=\"32\"\n          height=\"32\"\n          viewBox=\"0 0 32 32\"\n          xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\" />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\" />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\" />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            [primary]=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>",
             "templateUrl": [],
@@ -3575,13 +3475,9 @@
             "outputs": [],
             "providers": [],
             "selector": "input-component",
-            "styleUrls": [
-                "./input.component.scss"
-            ],
+            "styleUrls": ["./input.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./input.component.html"
-            ],
+            "templateUrl": ["./input.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -3710,13 +3606,9 @@
             "outputs": [],
             "providers": [],
             "selector": "loader-component",
-            "styleUrls": [
-                "./loader.component.scss"
-            ],
+            "styleUrls": ["./loader.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./loader.component.html"
-            ],
+            "templateUrl": ["./loader.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -3788,13 +3680,9 @@
             "outputs": [],
             "providers": [],
             "selector": "modal-component",
-            "styleUrls": [
-                "./modal.component.scss"
-            ],
+            "styleUrls": ["./modal.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./modal.component.html"
-            ],
+            "templateUrl": ["./modal.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -3920,9 +3808,7 @@
                     "optional": false,
                     "description": "",
                     "line": 69,
-                    "modifierKind": [
-                        123
-                    ]
+                    "modifierKind": [123]
                 },
                 {
                     "name": "faCircleInfo",
@@ -4005,9 +3891,7 @@
                             "stringifiedArguments": "SassHelperComponent"
                         }
                     ],
-                    "modifierKind": [
-                        170
-                    ]
+                    "modifierKind": [170]
                 },
                 {
                     "name": "subscriptionOnClose",
@@ -4269,10 +4153,7 @@
                 ]
             },
             "extends": [],
-            "implements": [
-                "OnInit",
-                "OnDestroy"
-            ],
+            "implements": ["OnInit", "OnDestroy"],
             "templateData": "@if (type === modalType.custom) {\n  <div class=\"modal\" [style.z-index]=\"zIndex\">\n    <div class=\"modal-content\" [ngClass]=\"sizeClass\">\n      <div class=\"modal-header\">\n        <h2>{{ title }}</h2>\n        <button\n          class=\"close-btn\"\n          [attr.title]=\"'close'\"\n          [attr.aria-label]=\"'close'\"\n          type=\"button\"\n          (click)=\"closeModal()\">\n          <fa-icon [icon]=\"faClose\"></fa-icon>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        <ng-content> </ng-content>\n      </div>\n      <div class=\"modal-footer\">\n        @if (cancelBtn) {\n          <bordered-btn-component\n            [ariaLabel]=\"'Close'\"\n            (click)=\"closeModal()\"\n            [label]=\"cancelBtnText\">\n          </bordered-btn-component>\n        }\n        @if (deleteBtn) {\n          <filled-btn-component\n            [ariaLabel]=\"'Delete'\"\n            [faIcon]=\"showConfirmBtnLoader ? faLoader : undefined\"\n            [isDisabled]=\"confirmDisabled\"\n            [styleClass]=\"'delete'\"\n            [isSpinning]=\"showConfirmBtnLoader\"\n            (click)=\"confirmModal()\"\n            [label]=\"deleteBtnTxt\">\n          </filled-btn-component>\n        }\n        @if (confirmBtn) {\n          <filled-btn-component\n            [ariaLabel]=\"'Confirm'\"\n            [faIcon]=\"showConfirmBtnLoader ? faLoader : undefined\"\n            [isDisabled]=\"confirmDisabled\"\n            [isSpinning]=\"showConfirmBtnLoader\"\n            (click)=\"confirmModal()\"\n            [label]=\"confirmBtnText\">\n          </filled-btn-component>\n        }\n      </div>\n    </div>\n  </div>\n}\n@if (type !== modalType.custom) {\n  <div\n    class=\"modal\"\n    [style.z-index]=\"zIndex\"\n    (click)=\"handleClickOutside($event)\">\n    <div class=\"modal-content\" [ngClass]=\"sizeClass\">\n      <div class=\"modal-header\">\n        <button\n          class=\"close-btn\"\n          [attr.title]=\"'close'\"\n          [attr.aria-label]=\"'close'\"\n          type=\"button\"\n          (click)=\"closeModal()\">\n          <fa-icon [icon]=\"faClose\"></fa-icon>\n        </button>\n      </div>\n      <div class=\"modal-body\" [style.text-align]=\"'center'\">\n        @if (type === modalType.info) {\n          <div class=\"info-icon\">\n            <fa-icon [icon]=\"faCircleInfo\"></fa-icon>\n          </div>\n        }\n        @if (type === modalType.error) {\n          <div class=\"error-icon\">\n            <fa-icon [icon]=\"faCircleXmark\"></fa-icon>\n          </div>\n        }\n        <h2>{{ title }}</h2>\n        <div [innerHTML]=\"description\"></div>\n      </div>\n      <div class=\"modal-footer\">\n        <filled-btn-component\n          [ariaLabel]=\"'Close'\"\n          [isDisabled]=\"confirmDisabled\"\n          (click)=\"confirmModal()\"\n          [label]=\"'Ok'\">\n        </filled-btn-component>\n      </div>\n    </div>\n  </div>\n}\n<div class=\"modal-background\" [style.z-index]=\"zIndex - 1\"></div>\n"
         },
         {
@@ -4286,13 +4167,9 @@
             "outputs": [],
             "providers": [],
             "selector": "multi-select-component",
-            "styleUrls": [
-                "./multi-select.component.scss"
-            ],
+            "styleUrls": ["./multi-select.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./multi-select.component.html"
-            ],
+            "templateUrl": ["./multi-select.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -4381,9 +4258,7 @@
                             "stringifiedArguments": "'btn'"
                         }
                     ],
-                    "modifierKind": [
-                        170
-                    ]
+                    "modifierKind": [170]
                 },
                 {
                     "name": "filter",
@@ -4411,9 +4286,7 @@
                             "stringifiedArguments": "'filterInput'"
                         }
                     ],
-                    "modifierKind": [
-                        170
-                    ]
+                    "modifierKind": [170]
                 },
                 {
                     "name": "itemsBefore",
@@ -4441,9 +4314,7 @@
                             "stringifiedArguments": "'menu'"
                         }
                     ],
-                    "modifierKind": [
-                        170
-                    ]
+                    "modifierKind": [170]
                 },
                 {
                     "name": "randomId",
@@ -4823,9 +4694,7 @@
                 ]
             },
             "extends": [],
-            "implements": [
-                "OnChanges"
-            ],
+            "implements": ["OnChanges"],
             "templateData": "<div class=\"multi-select\" (clickOutside)=\"handleClickOutside()\">\n  <button\n    #btn\n    [attr.title]=\"'MultiSelect'\"\n    [attr.aria-label]=\"'MultiSelect'\"\n    [attr.aria-haspopup]=\"'menu'\"\n    [attr.aria-expanded]=\"show\"\n    [style.background-color]=\"backgroundColor\"\n    [style.border-color]=\"backgroundColor\"\n    (click)=\"toggleFilter()\"\n    class=\"filter-btn\">\n    @if (label) {\n      <span>{{ label }}</span>\n    }\n    @if (faIcon) {\n      <fa-icon [icon]=\"faIcon\"></fa-icon>\n    }\n    @if (selectedItems.length !== 0) {\n      <p>{{ selectedItems.length }}</p>\n    }\n  </button>\n\n  <div\n    #menu\n    class=\"menu popup-shadow\"\n    [class.show]=\"show\"\n    [class.hide]=\"!show\"\n    [ngClass]=\"alignmentLeft() ? 'left' : 'right'\">\n    @if (withFilter) {\n      <search-input-component\n        [style.margin.em]=\"'0.25'\"\n        [classStyles]=\"'full-width no-radius'\"\n        [placeholderText]=\"filterPlaceholder\"\n        [(filter)]=\"filter\"\n        (filterChange)=\"filterAndSort()\">\n      </search-input-component>\n    }\n    <ul class=\"selected-items\">\n      @for (selectedItem of selectedItems; track i; let i = $index) {\n        <li (click)=\"removeElement(selectedItem)\">\n          <input\n            id=\"ms-s-items-{{ randomId }}-{{ i }}\"\n            type=\"checkbox\"\n            [checked]=\"isInFilterArray(selectedItem)\" />\n          <span class=\"checkmark\"></span>\n          <span class=\"text\">{{ selectedItem }}</span>\n        </li>\n      }\n    </ul>\n    <ul [style.max-height.px]=\"300\">\n      @for (item of items; track i; let i = $index) {\n        <li (click)=\"selectElement(item)\">\n          <input id=\"ms-items-{{ randomId }}-{{ i }}\" type=\"checkbox\" />\n          <span class=\"checkmark\"></span>\n          <span class=\"text\">{{ item }}</span>\n        </li>\n      }\n    </ul>\n  </div>\n</div>\n"
         },
         {
@@ -4838,13 +4707,9 @@
             "outputs": [],
             "providers": [],
             "selector": "navbar-btn-component",
-            "styleUrls": [
-                "./navbar-btn.component.scss"
-            ],
+            "styleUrls": ["./navbar-btn.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./navbar-btn.component.html"
-            ],
+            "templateUrl": ["./navbar-btn.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -4933,13 +4798,9 @@
             "outputs": [],
             "providers": [],
             "selector": "no-data-component",
-            "styleUrls": [
-                "./no-data.component.scss"
-            ],
+            "styleUrls": ["./no-data.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./no-data.component.html"
-            ],
+            "templateUrl": ["./no-data.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -5008,13 +4869,9 @@
             "outputs": [],
             "providers": [],
             "selector": "non-modal-component",
-            "styleUrls": [
-                "./non-modal.component.scss"
-            ],
+            "styleUrls": ["./non-modal.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./non-modal.component.html"
-            ],
+            "templateUrl": ["./non-modal.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -5057,9 +4914,7 @@
                     "optional": false,
                     "description": "",
                     "line": 44,
-                    "modifierKind": [
-                        123
-                    ]
+                    "modifierKind": [123]
                 },
                 {
                     "name": "faClose",
@@ -5098,9 +4953,7 @@
                             "stringifiedArguments": "'nonModalContent'"
                         }
                     ],
-                    "modifierKind": [
-                        170
-                    ]
+                    "modifierKind": [170]
                 }
             ],
             "methodsClass": [
@@ -5223,10 +5076,7 @@
                 ]
             },
             "extends": [],
-            "implements": [
-                "OnInit",
-                "OnDestroy"
-            ],
+            "implements": ["OnInit", "OnDestroy"],
             "templateData": "<div class=\"non-modal\">\n  <div\n    #nonModalContent\n    class=\"non-modal-content modal-shadow\"\n    [ngClass]=\"sizeClass\">\n    <div class=\"non-modal-header\">\n      <h2>{{ title }}</h2>\n      <button\n        class=\"close-btn\"\n        [attr.title]=\"'close'\"\n        [attr.aria-label]=\"'close'\"\n        type=\"button\"\n        (click)=\"close()\">\n        <fa-icon [icon]=\"faClose\"></fa-icon>\n      </button>\n    </div>\n\n    <div class=\"non-modal-body\">\n      <ng-content> </ng-content>\n    </div>\n  </div>\n</div>\n"
         },
         {
@@ -5239,9 +5089,7 @@
             "outputs": [],
             "providers": [],
             "selector": "storybook-page",
-            "styleUrls": [
-                "./page.css"
-            ],
+            "styleUrls": ["./page.css"],
             "styles": [],
             "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a\n          href=\"https://componentdriven.org\"\n          target=\"_blank\"\n          rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page\n        states without needing to navigate to them in your app. Here are some\n        handy patterns for managing page data in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose\n          such data from the \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock\n          these services out using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a\n          href=\"https://storybook.js.org/tutorials/\"\n          target=\"_blank\"\n          rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a\n          href=\"https://storybook.js.org/docs\"\n          target=\"_blank\"\n          rel=\"noopener noreferrer\">\n          docs\n        </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg\n          width=\"10\"\n          height=\"10\"\n          viewBox=\"0 0 12 12\"\n          xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\" />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
             "templateUrl": [],
@@ -5333,13 +5181,9 @@
             "outputs": [],
             "providers": [],
             "selector": "popover-component",
-            "styleUrls": [
-                "./popover.component.scss"
-            ],
+            "styleUrls": ["./popover.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./popover.component.html"
-            ],
+            "templateUrl": ["./popover.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -5580,13 +5424,9 @@
             "outputs": [],
             "providers": [],
             "selector": "search-input-component",
-            "styleUrls": [
-                "./search-input.component.scss"
-            ],
+            "styleUrls": ["./search-input.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./search-input.component.html"
-            ],
+            "templateUrl": ["./search-input.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -5750,13 +5590,9 @@
             "outputs": [],
             "providers": [],
             "selector": "segmented-btn-component",
-            "styleUrls": [
-                "./segmented-btn.component.scss"
-            ],
+            "styleUrls": ["./segmented-btn.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./segmented-btn.component.html"
-            ],
+            "templateUrl": ["./segmented-btn.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -5896,13 +5732,9 @@
             "outputs": [],
             "providers": [],
             "selector": "select-component",
-            "styleUrls": [
-                "./select.component.scss"
-            ],
+            "styleUrls": ["./select.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./select.component.html"
-            ],
+            "templateUrl": ["./select.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -6034,9 +5866,7 @@
                             "stringifiedArguments": "'btn'"
                         }
                     ],
-                    "modifierKind": [
-                        170
-                    ]
+                    "modifierKind": [170]
                 },
                 {
                     "name": "filter",
@@ -6064,9 +5894,7 @@
                             "stringifiedArguments": "'filterInput'"
                         }
                     ],
-                    "modifierKind": [
-                        170
-                    ]
+                    "modifierKind": [170]
                 },
                 {
                     "name": "itemsBefore",
@@ -6094,9 +5922,7 @@
                             "stringifiedArguments": "'menu'"
                         }
                     ],
-                    "modifierKind": [
-                        170
-                    ]
+                    "modifierKind": [170]
                 }
             ],
             "methodsClass": [
@@ -6338,10 +6164,7 @@
             ],
             "stylesData": "",
             "extends": [],
-            "implements": [
-                "OnInit",
-                "OnChanges"
-            ],
+            "implements": ["OnInit", "OnChanges"],
             "templateData": "@if (selectedItem) {\n  <div\n    class=\"flex\"\n    (clickOutside)=\"handleClickOutside()\"\n    [ngClass]=\"[show ? 'selected' : '', classStyle ?? '']\">\n    <button\n      id=\"select-component\"\n      #btn\n      [ngClass]=\"[show ? 'selected' : '', classStyle ?? '']\"\n      [attr.title]=\"'Select'\"\n      [attr.aria-label]=\"'Select'\"\n      [attr.aria-haspopup]=\"'menu'\"\n      [attr.aria-expanded]=\"show\"\n      (click)=\"toggleMenu()\">\n      @if (faIconBefore) {\n        <span class=\"icon-before\">\n          <fa-icon [icon]=\"faIconBefore\"></fa-icon>\n        </span>\n      }\n      @if (label) {\n        <span class=\"label-before\">{{ label }}</span>\n      }\n      @if (selectedItem.text || selectedItem.displayBtnText) {\n        <span class=\"select-text\">\n          {{ selectedItem.displayBtnText ?? selectedItem.text }}</span\n        >\n      }\n      <span>\n        @if (faIcon) {\n          <fa-icon [icon]=\"faIcon\"> </fa-icon>\n        }\n      </span>\n    </button>\n    <div\n      #menu\n      class=\"menu popup-shadow\"\n      [class.show]=\"show\"\n      [class.hide]=\"!show\"\n      [ngClass]=\"alignmentLeft() ? 'left' : 'right'\">\n      @if (withFilter) {\n        <search-input-component\n          [style.margin.em]=\"'0.25'\"\n          [classStyles]=\"'full-width no-radius'\"\n          [placeholderText]=\"filterPlaceholder\"\n          [(filter)]=\"filter\"\n          (filterChange)=\"filterAndSort()\">\n        </search-input-component>\n      }\n      <ul>\n        @if (withBlankOption) {\n          <li\n            (click)=\"selectEmptyElement()\"\n            [class.active]=\"'' === selectedItem.text\">\n            <span class=\"text\"></span>\n          </li>\n        }\n        @for (item of items; track i; let i = $index) {\n          <li\n            id=\"s-item-{{ i }}\"\n            (click)=\"selectElement(item)\"\n            [ngClass]=\"item.icon && item.localTimestamp ? 'grid' : 'flex'\"\n            [class.active]=\"\n              item.text === selectedItem.text &&\n              item.localTimestamp === selectedItem.localTimestamp\n            \">\n            @if (item.icon) {\n              <fa-icon [icon]=\"item.icon\"></fa-icon>\n            }\n            <span class=\"text\">{{ item.text }}</span>\n          </li>\n        }\n      </ul>\n    </div>\n  </div>\n}\n"
         },
         {
@@ -6354,13 +6177,9 @@
             "outputs": [],
             "providers": [],
             "selector": "tab-component",
-            "styleUrls": [
-                "./tab.component.scss"
-            ],
+            "styleUrls": ["./tab.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./tab.component.html"
-            ],
+            "templateUrl": ["./tab.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -6452,13 +6271,9 @@
             "outputs": [],
             "providers": [],
             "selector": "table-component",
-            "styleUrls": [
-                "./table.component.scss"
-            ],
+            "styleUrls": ["./table.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./table.component.html"
-            ],
+            "templateUrl": ["./table.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -6519,13 +6334,9 @@
             "outputs": [],
             "providers": [],
             "selector": "tabs-view-component",
-            "styleUrls": [
-                "./tabs-view.component.scss"
-            ],
+            "styleUrls": ["./tabs-view.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./tabs-view.component.html"
-            ],
+            "templateUrl": ["./tabs-view.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [],
@@ -6555,9 +6366,7 @@
                             "stringifiedArguments": "TabComponent"
                         }
                     ],
-                    "modifierKind": [
-                        170
-                    ]
+                    "modifierKind": [170]
                 }
             ],
             "methodsClass": [
@@ -6628,9 +6437,7 @@
             ],
             "stylesData": "",
             "extends": [],
-            "implements": [
-                "AfterContentInit"
-            ],
+            "implements": ["AfterContentInit"],
             "templateData": "<div class=\"tabs-view\">\n  <ul>\n    @for (tab of tabs; track tab) {\n      <li\n        (click)=\"selectTab(tab)\"\n        [class.active]=\"tab.active\"\n        [tooltip]=\"tab.tooltip\">\n        {{ tab.tabTitle }}\n      </li>\n    }\n  </ul>\n  <ng-content></ng-content>\n</div>\n"
         },
         {
@@ -6643,13 +6450,9 @@
             "outputs": [],
             "providers": [],
             "selector": "tag-btn-component",
-            "styleUrls": [
-                "./tag-btn.component.scss"
-            ],
+            "styleUrls": ["./tag-btn.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./tag-btn.component.html"
-            ],
+            "templateUrl": ["./tag-btn.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -6743,13 +6546,9 @@
             "outputs": [],
             "providers": [],
             "selector": "toggle-btn-component",
-            "styleUrls": [
-                "./toggle-btn.component.scss"
-            ],
+            "styleUrls": ["./toggle-btn.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./toggle-btn.component.html"
-            ],
+            "templateUrl": ["./toggle-btn.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
@@ -6878,13 +6677,9 @@
             "outputs": [],
             "providers": [],
             "selector": "tooltip-component",
-            "styleUrls": [
-                "./tooltip.component.scss"
-            ],
+            "styleUrls": ["./tooltip.component.scss"],
             "styles": [],
-            "templateUrl": [
-                "./tooltip.component.html"
-            ],
+            "templateUrl": ["./tooltip.component.html"],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [],
@@ -6956,6 +6751,36 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "Active",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'Active',\n    isDisabled: false,\n    isActive: true,\n    faIcon: faInfo,\n  },\n}"
+            },
+            {
+                "name": "Changes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 1,\n    borderRadius: 50,\n    classStyle: 'changes',\n    isDisabled: false,\n  },\n}"
+            },
+            {
+                "name": "Colors",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/colors.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryObj",
+                "defaultValue": "{\n\trender: () => {\n\t  const tokens = getColorTokens();\n\t  return {\n\t\tprops: { tokens },\n\t\ttemplate: `\n\t\t  <div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 1rem;\">\n\t\t\t<div *ngFor=\"let token of tokens\">\n\t\t\t  <div [style.background]=\"token.value\" style=\"height: 60px; border-radius: 6px; border: 1px solid #ccc;\"></div>\n\t\t\t  <div style=\"font-size: 12px; margin-top: 4px;\">{{ token.name }}</div>\n\t\t\t  <div style=\"font-size: 12px;\">{{ token.value }}</div>\n\t\t\t</div>\n\t\t  </div>\n\t\t`,\n\t  };\n\t},\n  }"
+            },
+            {
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -6964,6 +6789,36 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    label: 'Default',\n    borderRadius: 10,\n    isDisabled: false,\n    postIcon: faCheck,\n    preIcon: undefined,\n  },\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'Default',\n    isDisabled: false,\n  },\n}"
+            },
+            {
+                "name": "Delete",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'Delete',\n    isDisabled: false,\n    faIcon: faTrash,\n    styleClass: 'delete',\n    width: '200px',\n  },\n}"
+            },
+            {
+                "name": "Disabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'Disabled',\n    isDisabled: true,\n    faIcon: faInfo,\n    styleClass: 'inverted',\n  },\n}"
             },
             {
                 "name": "ErrorWithLink",
@@ -6976,6 +6831,26 @@
                 "defaultValue": "{\n  args: {\n    title: 'Error Alert',\n    message: 'Error Message',\n    type: AlertType.ERROR,\n    visibleState: true,\n  },\n}"
             },
             {
+                "name": "getColorTokens",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/colors.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(): ColorToken[] => {\n  const styles = window.getComputedStyle(document.documentElement);\n\n  return accentColors.map(name => ({\n    name,\n    value: styles.getPropertyValue(name) || 'transparent'\n  }));\n}"
+            },
+            {
+                "name": "hoverStyles",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "HoverStyle"
+            },
+            {
                 "name": "iconOptions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -6986,6 +6861,16 @@
                 "defaultValue": "{\n  faCheck: faCheck,\n  faExclamation: faExclamation,\n  faInfo: faInfo,\n}"
             },
             {
+                "name": "iconOptions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Record<string, IconDefinition>",
+                "defaultValue": "{\n  faCheck: faCheck,\n  faExclamation: faExclamation,\n  faInfo: faInfo,\n  faSpinner: faSpinner,\n  faTrash: faTrash,\n}"
+            },
+            {
                 "name": "InfoAlert",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -6994,6 +6879,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    title: 'Info Alert',\n    message: 'Info  Message',\n    type: AlertType.INFO,\n    visibleState: true,\n    navigationLink: 'pailot.com',\n    navigationLinkLabel: 'Further informations under pailto.com ',\n  },\n}"
+            },
+            {
+                "name": "Inverted",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'Inverted',\n    isDisabled: false,\n    faIcon: faInfo,\n    styleClass: 'inverted',\n  },\n}"
             },
             {
                 "name": "Large",
@@ -7079,11 +6974,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/colors.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta",
+                "defaultValue": "{\n  title: 'Design/Colors',\n  parameters: {\n    docs: {\n      description: {\n        component: 'Colors overview',\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<AlertComponent>",
-                "defaultValue": "{\n  title: 'Components/Alert',\n  component: AlertComponent,\n  decorators: [\n    moduleMetadata({\n      imports: [RouterModule],\n      providers: [\n        {\n          provide: ActivatedRoute,\n          useValue: { \n            snapshot: { paramMap: new Map([['id', '123']]), data: {} }, \n            params: [{ id: '123' }],\n            queryParams: {},\n          },  // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n        },\n      ],\n    }),\n  ],\n  tags: ['autodocs'],\n  argTypes: {\n    title: { control: 'text' },\n    message: { control: 'text' },\n    type: {\n      control: {\n        type: 'select',\n      },\n      options: Object.values(types),\n      mapping: AlertType,\n    },\n    visibleState: { control: 'boolean' },\n    navigationLink: { control: 'text'},\n    navigationLinkLabel: { control: 'text' },\n  },\n}"
+                "defaultValue": "{\n  title: 'Components/Alert',\n  component: AlertComponent,\n  decorators: [\n    moduleMetadata({\n      imports: [RouterModule],\n      providers: [\n        {\n          provide: ActivatedRoute,\n          useValue: {\n            snapshot: { paramMap: new Map([['id', '123']]), data: {} },\n            params: [{ id: '123' }],\n            queryParams: {},\n          }, // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n        },\n      ],\n    }),\n  ],\n  tags: ['autodocs'],\n  argTypes: {\n    title: { control: 'text', value: '' },\n    message: { control: 'text', value: '' },\n    type: {\n      control: {\n        type: 'select',\n      },\n      options: Object.values(types),\n      mapping: AlertType,\n      value: AlertType.SUCCESS,\n    },\n    visibleState: { control: 'boolean', value: false },\n    navigationLink: { control: 'text', value: undefined },\n    navigationLinkLabel: { control: 'text', value: undefined },\n  },\n}"
             },
             {
                 "name": "meta",
@@ -7094,6 +6999,16 @@
                 "deprecationMessage": "",
                 "type": "Meta<BadgeComponent>",
                 "defaultValue": "{\n  title: 'Components/Badge',\n  component: BadgeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    label: { control: 'text' },\n    borderRadius: { control: 'number' },\n    classStyle: {\n      control: 'select',\n      options: [\n        'running',\n        'failed',\n        'success',\n        'pending',\n        'changes',\n        'urgent',\n        'frozen',\n        'current',\n        'manual',\n        'free',\n      ],\n    },\n    isDisabled: { control: 'boolean' },\n    postIcon: {\n      control: {\n        type: 'select',\n      },\n      options: Object.keys(iconOptions),\n      mapping: iconOptions,\n    },\n    preIcon: {\n      control: {\n        type: 'select',\n      },\n      options: Object.keys(iconOptions),\n      mapping: iconOptions,\n    },\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<BorderedBtnComponent>",
+                "defaultValue": "{\n  title: 'Components/Buttons/BorderedBtn',\n  component: BorderedBtnComponent,\n  argTypes: {\n    ariaLabel: { control: 'text' },\n    label: { control: 'text' },\n    faIcon: {\n      control: {\n        type: 'select',\n      },\n      options: Object.keys(iconOptions),\n      mapping: iconOptions,\n    },\n    hoverStyle: {\n      control: {\n        type: 'select',\n      },\n      options: Object.values(hoverStyles),\n      mapping: HoverStyle,\n    },\n    showIcon: { control: 'boolean' },\n    isDisabled: { control: 'boolean' },\n    styleClass: {\n      control: 'select',\n      options: ['simple', 'filling', 'shining', 'delete', 'inverted'],\n    },\n    width: { control: 'text' },\n    isSpinning: { control: 'boolean' },\n    isActive: { control: 'boolean' },\n  },\n  tags: ['autodocs'],\n}"
             },
             {
                 "name": "PREFIX",
@@ -7156,6 +7071,16 @@
                 "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
             },
             {
+                "name": "Spinning",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'Spinning',\n    isDisabled: false,\n    isSpinning: true,\n    faIcon: faSpinner,\n  },\n}"
+            },
+            {
                 "name": "SuccessAlert",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -7199,6 +7124,17 @@
         "functions": [],
         "typealiases": [
             {
+                "name": "ColorToken",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "projects/angular-component-library/src/lib/components/colors.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 187
+            },
+            {
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
@@ -7235,6 +7171,17 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj",
+                "file": "projects/angular-component-library/src/lib/components/colors.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<AlertComponent>",
                 "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                 "deprecated": false,
@@ -7252,11 +7199,124 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<BorderedBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
             }
         ],
         "enumerations": [],
         "groupedVariables": {
+            "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts": [
+                {
+                    "name": "Active",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'Active',\n    isDisabled: false,\n    isActive: true,\n    faIcon: faInfo,\n  },\n}"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'Default',\n    isDisabled: false,\n  },\n}"
+                },
+                {
+                    "name": "Delete",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'Delete',\n    isDisabled: false,\n    faIcon: faTrash,\n    styleClass: 'delete',\n    width: '200px',\n  },\n}"
+                },
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'Disabled',\n    isDisabled: true,\n    faIcon: faInfo,\n    styleClass: 'inverted',\n  },\n}"
+                },
+                {
+                    "name": "hoverStyles",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "HoverStyle"
+                },
+                {
+                    "name": "iconOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Record<string, IconDefinition>",
+                    "defaultValue": "{\n  faCheck: faCheck,\n  faExclamation: faExclamation,\n  faInfo: faInfo,\n  faSpinner: faSpinner,\n  faTrash: faTrash,\n}"
+                },
+                {
+                    "name": "Inverted",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'Inverted',\n    isDisabled: false,\n    faIcon: faInfo,\n    styleClass: 'inverted',\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<BorderedBtnComponent>",
+                    "defaultValue": "{\n  title: 'Components/Buttons/BorderedBtn',\n  component: BorderedBtnComponent,\n  argTypes: {\n    ariaLabel: { control: 'text' },\n    label: { control: 'text' },\n    faIcon: {\n      control: {\n        type: 'select',\n      },\n      options: Object.keys(iconOptions),\n      mapping: iconOptions,\n    },\n    hoverStyle: {\n      control: {\n        type: 'select',\n      },\n      options: Object.values(hoverStyles),\n      mapping: HoverStyle,\n    },\n    showIcon: { control: 'boolean' },\n    isDisabled: { control: 'boolean' },\n    styleClass: {\n      control: 'select',\n      options: ['simple', 'filling', 'shining', 'delete', 'inverted'],\n    },\n    width: { control: 'text' },\n    isSpinning: { control: 'boolean' },\n    isActive: { control: 'boolean' },\n  },\n  tags: ['autodocs'],\n}"
+                },
+                {
+                    "name": "Spinning",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'Spinning',\n    isDisabled: false,\n    isSpinning: true,\n    faIcon: faSpinner,\n  },\n}"
+                }
+            ],
             "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
+                {
+                    "name": "Changes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 1,\n    borderRadius: 50,\n    classStyle: 'changes',\n    isDisabled: false,\n  },\n}"
+                },
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
@@ -7308,6 +7368,38 @@
                     "defaultValue": "{\n  args: {\n    label: 'Success',\n    borderRadius: 10,\n    classStyle: 'success',\n    isDisabled: false,\n    postIcon: undefined,\n    preIcon: faInfo,\n  },\n}"
                 }
             ],
+            "projects/angular-component-library/src/lib/components/colors.stories.ts": [
+                {
+                    "name": "Colors",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/colors.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryObj",
+                    "defaultValue": "{\n\trender: () => {\n\t  const tokens = getColorTokens();\n\t  return {\n\t\tprops: { tokens },\n\t\ttemplate: `\n\t\t  <div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 1rem;\">\n\t\t\t<div *ngFor=\"let token of tokens\">\n\t\t\t  <div [style.background]=\"token.value\" style=\"height: 60px; border-radius: 6px; border: 1px solid #ccc;\"></div>\n\t\t\t  <div style=\"font-size: 12px; margin-top: 4px;\">{{ token.name }}</div>\n\t\t\t  <div style=\"font-size: 12px;\">{{ token.value }}</div>\n\t\t\t</div>\n\t\t  </div>\n\t\t`,\n\t  };\n\t},\n  }"
+                },
+                {
+                    "name": "getColorTokens",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/colors.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(): ColorToken[] => {\n  const styles = window.getComputedStyle(document.documentElement);\n\n  return accentColors.map(name => ({\n    name,\n    value: styles.getPropertyValue(name) || 'transparent'\n  }));\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/colors.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta",
+                    "defaultValue": "{\n  title: 'Design/Colors',\n  parameters: {\n    docs: {\n      description: {\n        component: 'Colors overview',\n      },\n    },\n  },\n}"
+                }
+            ],
             "projects/angular-component-library/src/lib/components/alert/alert.stories.ts": [
                 {
                     "name": "ErrorWithLink",
@@ -7337,7 +7429,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<AlertComponent>",
-                    "defaultValue": "{\n  title: 'Components/Alert',\n  component: AlertComponent,\n  decorators: [\n    moduleMetadata({\n      imports: [RouterModule],\n      providers: [\n        {\n          provide: ActivatedRoute,\n          useValue: { \n            snapshot: { paramMap: new Map([['id', '123']]), data: {} }, \n            params: [{ id: '123' }],\n            queryParams: {},\n          },  // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n        },\n      ],\n    }),\n  ],\n  tags: ['autodocs'],\n  argTypes: {\n    title: { control: 'text' },\n    message: { control: 'text' },\n    type: {\n      control: {\n        type: 'select',\n      },\n      options: Object.values(types),\n      mapping: AlertType,\n    },\n    visibleState: { control: 'boolean' },\n    navigationLink: { control: 'text'},\n    navigationLinkLabel: { control: 'text' },\n  },\n}"
+                    "defaultValue": "{\n  title: 'Components/Alert',\n  component: AlertComponent,\n  decorators: [\n    moduleMetadata({\n      imports: [RouterModule],\n      providers: [\n        {\n          provide: ActivatedRoute,\n          useValue: {\n            snapshot: { paramMap: new Map([['id', '123']]), data: {} },\n            params: [{ id: '123' }],\n            queryParams: {},\n          }, // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n        },\n      ],\n    }),\n  ],\n  tags: ['autodocs'],\n  argTypes: {\n    title: { control: 'text', value: '' },\n    message: { control: 'text', value: '' },\n    type: {\n      control: {\n        type: 'select',\n      },\n      options: Object.values(types),\n      mapping: AlertType,\n      value: AlertType.SUCCESS,\n    },\n    visibleState: { control: 'boolean', value: false },\n    navigationLink: { control: 'text', value: undefined },\n    navigationLinkLabel: { control: 'text', value: undefined },\n  },\n}"
                 },
                 {
                     "name": "SuccessAlert",
@@ -7514,6 +7606,30 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
+            "projects/angular-component-library/src/lib/components/colors.stories.ts": [
+                {
+                    "name": "ColorToken",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "projects/angular-component-library/src/lib/components/colors.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 187
+                },
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj",
+                    "file": "projects/angular-component-library/src/lib/components/colors.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/angular-component-library/src/stories/button.stories.ts": [
                 {
                     "name": "Story",
@@ -7578,12 +7694,25 @@
                     "description": "",
                     "kind": 183
                 }
+            ],
+            "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<BorderedBtnComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
             ]
         }
     },
     "routes": [],
     "coverage": {
-        "count": 13,
+        "count": 10,
         "status": "low",
         "files": [
             {
@@ -7689,6 +7818,16 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "Changes",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "Default",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -7754,6 +7893,106 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Active",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Delete",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Disabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "hoverStyles",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "iconOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Inverted",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spinning",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -7797,6 +8036,56 @@
                 "coveragePercent": 33,
                 "coverageCount": "1/3",
                 "status": "medium"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/colors.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Colors",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/colors.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "getColorTokens",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/colors.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/colors.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "ColorToken",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/colors.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
             },
             {
                 "filePath": "projects/angular-component-library/src/lib/components/context-menu/context-menu.component.ts",

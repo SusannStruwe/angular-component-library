@@ -1,42 +1,42 @@
 <div
-  class="flex"
-  (clickOutside)="handleClickOutside()"
-  [ngClass]="[show ? 'selected' : '', classStyle ?? '']">
-  <button
-    #btn
-    [ngClass]="[show ? 'selected' : '']"
-    [attr.title]="ariaLabel"
-    [attr.aria-label]="ariaLabel"
-    [attr.aria-haspopup]="'menu'"
-    [attr.aria-expanded]="show"
-    (click)="toggleMenu()"
-    [style.justify-content]="label ? 'space-between' : 'center'">
-    @if (label) {
-      <span>{{ label }}</span>
-    }
-    <span [style.padding-left.px]="label ? 5 : 10">
-      @if (faIcon) {
-        <fa-icon [icon]="faIcon"></fa-icon>
-      }
-    </span>
-  </button>
-  <div
-    #menu
-    class="menu popup-shadow"
-    [class.show]="show"
-    [class.hide]="!show"
-    [ngClass]="alignmentLeft() ? 'left' : 'right'">
-    <ul>
-      @for (item of items; track item) {
-        <li
-          (click)="selectElement(item)"
-          [ngClass]="item.icon ? 'grid' : 'flex'">
-          @if (item.icon) {
-            <fa-icon [icon]="item.icon"></fa-icon>
-          }
-          <span class="text">{{ item.text }} </span>
-        </li>
-      }
-    </ul>
-  </div>
+    class="flex"
+    (clickOutside)="handleClickOutside()"
+    [ngClass]="[show ? 'selected' : '', classStyle ?? '']">
+    <button
+        #btn
+        [ngClass]="[show ? 'selected' : '']"
+        [attr.title]="ariaLabel"
+        [attr.aria-label]="ariaLabel"
+        [attr.aria-haspopup]="'menu'"
+        [attr.aria-expanded]="show"
+        (click)="toggleMenu()"
+        [style.justify-content]="label ? 'space-between' : 'center'">
+        @if (label) {
+            <span>{{ label }}</span>
+        }
+        <span [style.padding-left.px]="label ? 5 : 10">
+            @if (faIcon) {
+                <fa-icon [icon]="faIcon"></fa-icon>
+            }
+        </span>
+    </button>
+    <div
+        #menu
+        class="menu popup-shadow"
+        [class.show]="show"
+        [class.hide]="!show"
+        [ngClass]="alignmentLeft() ? 'left' : 'right'">
+        <ul>
+            @for (item of items; track item) {
+                <li
+                    (click)="selectElement(item)"
+                    [ngClass]="item.icon ? 'grid' : 'flex'">
+                    @if (item.icon) {
+                        <fa-icon [icon]="item.icon"></fa-icon>
+                    }
+                    <span class="text">{{ item.text }} </span>
+                </li>
+            }
+        </ul>
+    </div>
 </div>

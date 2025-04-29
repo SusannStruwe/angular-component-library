@@ -3,35 +3,35 @@ CSS Variables -> --accent-color, --fa-icon-color for changing theme
 ********************/
 
 :host {
-  display: inline-block;
+    display: inline-block;
 }
 
 button {
-  position: relative;
-  height: var(--btn-height);
-  line-height: var(--btn-height);
-  padding: var(--btn-padding);
-  border: var(--border-width);
-  border-radius: var(--border-radius);
-  font-weight: var(--font-weight-light);
-  font-size: var(--font-size);
-  transition: background 400ms;
-  background: var(--accent-color);
-  color: var(--fa-icon-color);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-
-  fa-icon {
+    position: relative;
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    padding: var(--btn-padding);
+    border: var(--border-width);
+    border-radius: var(--border-radius);
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size);
+    transition: background 400ms;
+    background: var(--accent-color);
     color: var(--fa-icon-color);
-  }
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 
-  span {
-    color: var(--fa-icon-color);
-    margin: 0px 5px;
-  }
+    fa-icon {
+        color: var(--fa-icon-color);
+    }
+
+    span {
+        color: var(--fa-icon-color);
+        margin: 0px 5px;
+    }
 }
 
 /************************************
@@ -39,44 +39,44 @@ button {
 **************************************/
 
 .ripple {
-  background-position: center;
-  transition: background 0.8s;
+    background-position: center;
+    transition: background 0.8s;
 
-  &.active,
-  &:active:not([disabled]) {
-    background-color: var(--accent-color-dark);
-  }
+    &.active,
+    &:active:not([disabled]) {
+        background-color: var(--accent-color-dark);
+    }
 }
 
 /************************************
  Delete
 **************************************/
 .delete {
-  background: var(--delete-color);
+    background: var(--delete-color);
 
-  &.active,
-  &:active:not([disabled]) {
-    background-color: var(--delete-color-dark);
-  }
+    &.active,
+    &:active:not([disabled]) {
+        background-color: var(--delete-color-dark);
+    }
 }
 
 /************************************
  Not emphrazed
 **************************************/
 .not-emphrazed {
-  background: var(--not-emphrazed-color);
+    background: var(--not-emphrazed-color);
 
-  &.active,
-  &:active:not([disabled]) {
-    background-color: var(--not-emphrazed-color-dark);
-  }
+    &.active,
+    &:active:not([disabled]) {
+        background-color: var(--not-emphrazed-color-dark);
+    }
 }
 
 .navbar-btn {
-  border-radius: 5px;
-  height: calc(var(--btn-height) - 5px);
-  line-height: calc(var(--btn-height) - 5px);
-  padding: var(--btn-small-padding);
+    border-radius: 5px;
+    height: calc(var(--btn-height) - 5px);
+    line-height: calc(var(--btn-height) - 5px);
+    padding: var(--btn-small-padding);
 }
 
 /************************************
@@ -84,9 +84,9 @@ Disabled
 **************************************/
 button:disabled,
 button[disabled] {
-  opacity: 0.5;
-  background-size: 0% 100%;
-  cursor: not-allowed;
+    opacity: 0.5;
+    background-size: 0% 100%;
+    cursor: not-allowed;
 }
 
 /***************************************************************
@@ -94,19 +94,19 @@ Media query to hide hover effects for devices
 that do not support them, like touch displays
 **************************************************************/
 @media (hover: hover) {
-  .ripple {
-    &:hover:not([disabled]) {
-      background-image: var(--darken-gradient);
+    .ripple {
+        &:hover:not([disabled]) {
+            background-image: var(--darken-gradient);
+        }
     }
-  }
 
-  button:disabled,
-  button[disabled] {
-    &:hover::before,
-    &:hover::after {
-      width: 0%;
-      height: 0%;
-      border-color: transparent;
+    button:disabled,
+    button[disabled] {
+        &:hover::before,
+        &:hover::after {
+            width: 0%;
+            height: 0%;
+            border-color: transparent;
+        }
     }
-  }
 }

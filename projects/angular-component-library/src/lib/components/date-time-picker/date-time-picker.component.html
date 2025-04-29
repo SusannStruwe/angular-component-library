@@ -1,35 +1,35 @@
 @if (mode === modes.WRITE) {
-  <div class="datepicker">
-    <input
-      #dateTimePicker
-      [style.display]="withInput ? 'block' : 'none'"
-      [style.height.px]="height ?? 40"
-      [style.min-width.px]="minWidth ?? 'auto'"
-      [attr.aria-labelledby]="'date-time-input'"
-      id="date-time-input-{{ randomId }}"
-      type="datetime-local"
-      [(ngModel)]="date" />
-    @if (showOverlayBtn) {
-      <div
-        class="btn-overlay"
-        [style.position]="withInput ? 'absolute' : 'relative'"
-        [style.height.px]="height ?? 40"
-        (click)="showDatePicker()">
-        <fa-icon [icon]="faCalender"></fa-icon>
-      </div>
-    }
-  </div>
+    <div class="datepicker">
+        <input
+            #dateTimePicker
+            [style.display]="withInput ? 'block' : 'none'"
+            [style.height.px]="height ?? 40"
+            [style.min-width.px]="minWidth ?? 'auto'"
+            [attr.aria-labelledby]="'date-time-input'"
+            id="date-time-input-{{ randomId }}"
+            type="datetime-local"
+            [(ngModel)]="date" />
+        @if (showOverlayBtn) {
+            <div
+                class="btn-overlay"
+                [style.position]="withInput ? 'absolute' : 'relative'"
+                [style.height.px]="height ?? 40"
+                (click)="showDatePicker()">
+                <fa-icon [icon]="faCalender"></fa-icon>
+            </div>
+        }
+    </div>
 }
 @if (mode === modes.READ) {
-  <div>
-    @if (date) {
-      <span
-        >{{ date | date: 'dd.MM.yyyy HH:mm:ss' }}
-        {{ 'scheduler.clock' | translate }}</span
-      >
-    }
-    @if (!date) {
-      <span> - </span>
-    }
-  </div>
+    <div>
+        @if (date) {
+            <span
+                >{{ date | date: 'dd.MM.yyyy HH:mm:ss' }}
+                {{ 'scheduler.clock' | translate }}</span
+            >
+        }
+        @if (!date) {
+            <span> - </span>
+        }
+    </div>
 }

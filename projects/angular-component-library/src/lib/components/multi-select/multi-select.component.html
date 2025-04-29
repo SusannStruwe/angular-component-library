@@ -1,60 +1,62 @@
 <div class="multi-select" (clickOutside)="handleClickOutside()">
-  <button
-    #btn
-    [attr.title]="'MultiSelect'"
-    [attr.aria-label]="'MultiSelect'"
-    [attr.aria-haspopup]="'menu'"
-    [attr.aria-expanded]="show"
-    [style.background-color]="backgroundColor"
-    [style.border-color]="backgroundColor"
-    (click)="toggleFilter()"
-    class="filter-btn">
-    @if (label) {
-      <span>{{ label }}</span>
-    }
-    @if (faIcon) {
-      <fa-icon [icon]="faIcon"></fa-icon>
-    }
-    @if (selectedItems.length !== 0) {
-      <p>{{ selectedItems.length }}</p>
-    }
-  </button>
+    <button
+        #btn
+        [attr.title]="'MultiSelect'"
+        [attr.aria-label]="'MultiSelect'"
+        [attr.aria-haspopup]="'menu'"
+        [attr.aria-expanded]="show"
+        [style.background-color]="backgroundColor"
+        [style.border-color]="backgroundColor"
+        (click)="toggleFilter()"
+        class="filter-btn">
+        @if (label) {
+            <span>{{ label }}</span>
+        }
+        @if (faIcon) {
+            <fa-icon [icon]="faIcon"></fa-icon>
+        }
+        @if (selectedItems.length !== 0) {
+            <p>{{ selectedItems.length }}</p>
+        }
+    </button>
 
-  <div
-    #menu
-    class="menu popup-shadow"
-    [class.show]="show"
-    [class.hide]="!show"
-    [ngClass]="alignmentLeft() ? 'left' : 'right'">
-    @if (withFilter) {
-      <search-input-component
-        [style.margin.em]="'0.25'"
-        [classStyles]="'full-width no-radius'"
-        [placeholderText]="filterPlaceholder"
-        [(filter)]="filter"
-        (filterChange)="filterAndSort()">
-      </search-input-component>
-    }
-    <ul class="selected-items">
-      @for (selectedItem of selectedItems; track i; let i = $index) {
-        <li (click)="removeElement(selectedItem)">
-          <input
-            id="ms-s-items-{{ randomId }}-{{ i }}"
-            type="checkbox"
-            [checked]="isInFilterArray(selectedItem)" />
-          <span class="checkmark"></span>
-          <span class="text">{{ selectedItem }}</span>
-        </li>
-      }
-    </ul>
-    <ul [style.max-height.px]="300">
-      @for (item of items; track i; let i = $index) {
-        <li (click)="selectElement(item)">
-          <input id="ms-items-{{ randomId }}-{{ i }}" type="checkbox" />
-          <span class="checkmark"></span>
-          <span class="text">{{ item }}</span>
-        </li>
-      }
-    </ul>
-  </div>
+    <div
+        #menu
+        class="menu popup-shadow"
+        [class.show]="show"
+        [class.hide]="!show"
+        [ngClass]="alignmentLeft() ? 'left' : 'right'">
+        @if (withFilter) {
+            <search-input-component
+                [style.margin.em]="'0.25'"
+                [classStyles]="'full-width no-radius'"
+                [placeholderText]="filterPlaceholder"
+                [(filter)]="filter"
+                (filterChange)="filterAndSort()">
+            </search-input-component>
+        }
+        <ul class="selected-items">
+            @for (selectedItem of selectedItems; track i; let i = $index) {
+                <li (click)="removeElement(selectedItem)">
+                    <input
+                        id="ms-s-items-{{ randomId }}-{{ i }}"
+                        type="checkbox"
+                        [checked]="isInFilterArray(selectedItem)" />
+                    <span class="checkmark"></span>
+                    <span class="text">{{ selectedItem }}</span>
+                </li>
+            }
+        </ul>
+        <ul [style.max-height.px]="300">
+            @for (item of items; track i; let i = $index) {
+                <li (click)="selectElement(item)">
+                    <input
+                        id="ms-items-{{ randomId }}-{{ i }}"
+                        type="checkbox" />
+                    <span class="checkmark"></span>
+                    <span class="text">{{ item }}</span>
+                </li>
+            }
+        </ul>
+    </div>
 </div>

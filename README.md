@@ -57,8 +57,8 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running storybook
 
 Run `ng run angular-component-library:storybook`
-Run `npm run storybook`
-Storybook is hosted unter > loacalhost:6006
+
+Navigate to `http://localhost:6006`
 
 ## Running end-to-end tests
 

@@ -14,17 +14,17 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
  * ```
  */
 @Component({
-  selector: 'badge-component',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
-  templateUrl: './badge.component.html',
-  styleUrls: ['./badge.component.scss'],
+    selector: 'badge-component',
+    standalone: true,
+    imports: [CommonModule, FontAwesomeModule],
+    templateUrl: './badge.component.html',
+    styleUrls: ['./badge.component.scss']
 })
 export class BadgeComponent {
-  @Input() label: string | number = '';
-  @Input() borderRadius: number = 0;
-  @Input() classStyle?: string;
-  @Input() isDisabled? = false;
-  @Input() postIcon?: IconDefinition;
-  @Input() preIcon?: IconDefinition;
+    @Input() label: string | number = '';
+    @Input() borderRadius: number = 0;
+    @Input() classStyle?: string;
+    @Input() isDisabled? = false;
+    @Input() postIcon?: IconDefinition;
+    @Input() preIcon?: IconDefinition;
 }

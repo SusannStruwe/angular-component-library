@@ -19,37 +19,37 @@ import { AlertType } from '../../model/alert-type.enum';
  * ```
  */
 @Component({
-  selector: 'alert-component',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule, RouterModule],
-  templateUrl: './alert.component.html',
-  styleUrls: ['./alert.component.scss'],
+    selector: 'alert-component',
+    standalone: true,
+    imports: [CommonModule, FontAwesomeModule, RouterModule],
+    templateUrl: './alert.component.html',
+    styleUrls: ['./alert.component.scss']
 })
 export class AlertComponent {
-  @Input() title = '';
-  // message to display, realized as htmlInput
-  @Input() message = '';
-  // info, success, error, waring
-  @Input() type: AlertType = AlertType.SUCCESS;
-  // if state is true, alert is shown
-  @Input() visibleState = false;
+    @Input() title = '';
+    // message to display, realized as htmlInput
+    @Input() message = '';
+    // info, success, error, waring
+    @Input() type: AlertType = AlertType.SUCCESS;
+    // if state is true, alert is shown
+    @Input() visibleState = false;
 
-  @Input() navigationLink?: string;
-  @Input() navigationLinkLabel?: string;
+    @Input() navigationLink?: string;
+    @Input() navigationLinkLabel?: string;
 
-  //with 'Change' add the end you can realize two-way-binding
-  @Output() visibleStateChange = new EventEmitter<boolean>();
+    //with 'Change' add the end you can realize two-way-binding
+    @Output() visibleStateChange = new EventEmitter<boolean>();
 
-  faErrorIcon: IconDefinition = Icons.faError;
-  faWarningIcon: IconDefinition = Icons.faWarning;
-  faSuccessIcon: IconDefinition = Icons.faSuccess;
-  faInfoIcon: IconDefinition = Icons.faInfo;
-  faClose: IconDefinition = Icons.faXmark;
+    faErrorIcon: IconDefinition = Icons.faError;
+    faWarningIcon: IconDefinition = Icons.faWarning;
+    faSuccessIcon: IconDefinition = Icons.faSuccess;
+    faInfoIcon: IconDefinition = Icons.faInfo;
+    faClose: IconDefinition = Icons.faXmark;
 
-  AlertType = AlertType;
+    AlertType = AlertType;
 
-  removeAlert(): void {
-    this.visibleState = false;
-    this.visibleStateChange.emit(this.visibleState);
-  }
+    removeAlert(): void {
+        this.visibleState = false;
+        this.visibleStateChange.emit(this.visibleState);
+    }
 }

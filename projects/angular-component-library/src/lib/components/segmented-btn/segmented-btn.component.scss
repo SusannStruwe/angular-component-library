@@ -1,65 +1,65 @@
 :host {
-  display: flex;
-  border: var(--border-width) solid var(--btn-border-color);
-  border-radius: var(--border-radius);
-  height: var(--btn-height);
-  box-sizing: border-box;
-  overflow: hidden;
+    display: flex;
+    border: var(--border-width) solid var(--btn-border-color);
+    border-radius: var(--border-radius);
+    height: var(--btn-height);
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 button {
-  position: relative;
-  margin: 2px;
-  margin-right: 0px;
-  height: calc(var(--btn-height) - 6px);
-  line-height: calc(var(--btn-height) - 6px);
-  padding: var(--btn-padding);
-  font-weight: var(--font-weight-light);
-  font-size: var(--font-size);
-  background: transparent;
-  color: var(--btn-color);
-  transition: 0.25s;
-  cursor: pointer;
-  border: 0;
-  border-radius: var(--border-radius);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-
-  &:last-of-type {
-    margin-right: 2px;
-  }
-
-  fa-icon {
+    position: relative;
+    margin: 2px;
+    margin-right: 0px;
+    height: calc(var(--btn-height) - 6px);
+    line-height: calc(var(--btn-height) - 6px);
+    padding: var(--btn-padding);
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size);
+    background: transparent;
     color: var(--btn-color);
-  }
+    transition: 0.25s;
+    cursor: pointer;
+    border: 0;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 
-  span {
-    margin: 0px 5px;
-  }
-
-  &.active:not([disabled]) {
-    background-color: var(--accent-color);
-    color: var(--fa-icon-color);
+    &:last-of-type {
+        margin-right: 2px;
+    }
 
     fa-icon {
-      color: var(--fa-icon-color);
+        color: var(--btn-color);
     }
-  }
-  &.focus {
-    background-color: var(--accent-color-light);
-    color: var(--accent-color);
 
-    fa-icon {
-      color: var(--accent-color);
+    span {
+        margin: 0px 5px;
     }
-  }
 
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
+    &.active:not([disabled]) {
+        background-color: var(--accent-color);
+        color: var(--fa-icon-color);
+
+        fa-icon {
+            color: var(--fa-icon-color);
+        }
+    }
+    &.focus {
+        background-color: var(--accent-color-light);
+        color: var(--accent-color);
+
+        fa-icon {
+            color: var(--accent-color);
+        }
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
 }
 
 /************************************************
@@ -67,20 +67,20 @@ Media query to add hover only on device which support hover
 *********************************************/
 
 @media (hover: hover) {
-  button {
-    &:hover:not([disabled]) {
-      background-color: var(--accent-color-light);
-      color: var(--accent-color);
+    button {
+        &:hover:not([disabled]) {
+            background-color: var(--accent-color-light);
+            color: var(--accent-color);
 
-      fa-icon {
-        color: var(--accent-color);
-      }
+            fa-icon {
+                color: var(--accent-color);
+            }
+        }
     }
-  }
 
-  .not-emphrazed {
-    &:hover {
-      background-color: var(--not-emphrazed-color-dark);
+    .not-emphrazed {
+        &:hover {
+            background-color: var(--not-emphrazed-color-dark);
+        }
     }
-  }
 }

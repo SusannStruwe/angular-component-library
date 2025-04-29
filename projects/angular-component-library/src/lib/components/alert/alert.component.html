@@ -1,33 +1,38 @@
 @if (visibleState) {
-  <div class="alert" [ngClass]="[type]">
-    <div class="flex-row">
-      @switch (type) {
-        @case (AlertType.ERROR) {
-          <fa-icon [icon]="faErrorIcon"></fa-icon>
-        }
-        @case (AlertType.WARNING) {
-          <fa-icon [icon]="faWarningIcon"></fa-icon>
-        }
-        @case (AlertType.INFO) {
-          <fa-icon [icon]="faInfoIcon" [rotate]="180"></fa-icon>
-        }
-        @case (AlertType.SUCCESS) {
-          <fa-icon [icon]="faSuccessIcon"></fa-icon>
-        }
-      }
-      @if (title) {
-        <p>
-          <b>{{ title }}</b>
-        </p>
-      }
-      <span>
-        <p [innerHTML]="message"></p>
+    <div class="alert" [ngClass]="[type]">
+        <div class="flex-row">
+            @switch (type) {
+                @case (AlertType.ERROR) {
+                    <fa-icon [icon]="faErrorIcon"></fa-icon>
+                }
+                @case (AlertType.WARNING) {
+                    <fa-icon [icon]="faWarningIcon"></fa-icon>
+                }
+                @case (AlertType.INFO) {
+                    <fa-icon [icon]="faInfoIcon" [rotate]="180"></fa-icon>
+                }
+                @case (AlertType.SUCCESS) {
+                    <fa-icon [icon]="faSuccessIcon"></fa-icon>
+                }
+            }
+            @if (title) {
+                <p>
+                    <b>{{ title }}</b>
+                </p>
+            }
+            <span>
+                <p [innerHTML]="message"></p>
 
-        @if (navigationLink) {
-          <a [routerLink]="navigationLink"> {{ navigationLinkLabel }} </a>
-        }
-      </span>
+                @if (navigationLink) {
+                    <a [routerLink]="navigationLink">
+                        {{ navigationLinkLabel }}
+                    </a>
+                }
+            </span>
+        </div>
+        <fa-icon
+            class="close"
+            [icon]="faClose"
+            (click)="removeAlert()"></fa-icon>
     </div>
-    <fa-icon class="close" [icon]="faClose" (click)="removeAlert()"></fa-icon>
-  </div>
 }

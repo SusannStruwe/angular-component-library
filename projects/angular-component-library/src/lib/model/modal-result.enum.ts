@@ -1,5 +1,5 @@
 export enum ModalResult {
-  isConfirmed = 'isConfirmed',
-  isDenied = 'isDenied',
-  isDismissed = 'isDismissed',
+    isConfirmed = 'isConfirmed',
+    isDenied = 'isDenied',
+    isDismissed = 'isDismissed'
 }

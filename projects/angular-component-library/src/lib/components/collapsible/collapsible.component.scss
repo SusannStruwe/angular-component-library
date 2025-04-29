@@ -1,67 +1,67 @@
 :host {
-  position: relative;
-  cursor: pointer;
+    position: relative;
+    cursor: pointer;
 }
 
 .collapsible-header {
-  border: 1px solid var(--border-color);
-  border-top-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
-  height: var(--btn-height);
-  line-height: var(--btn-height);
-  box-sizing: border-box;
-  padding: 0em 1em;
+    border: 1px solid var(--border-color);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    box-sizing: border-box;
+    padding: 0em 1em;
 
-  ::ng-deep {
-    h2,
-    h3,
-    h4,
-    p {
-      margin: 0px;
+    ::ng-deep {
+        h2,
+        h3,
+        h4,
+        p {
+            margin: 0px;
+        }
     }
-  }
 }
 
 .collapsible-content {
-  border-left: 1px solid var(--border-color);
-  border-right: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-  border-bottom-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
 
-  ::ng-deep {
-    h2,
-    h3,
-    h4,
-    p {
-      margin: 0px;
+    ::ng-deep {
+        h2,
+        h3,
+        h4,
+        p {
+            margin: 0px;
+        }
     }
-  }
 
-  &.show {
-    height: auto;
-    transform-origin: top;
-    transform: scaleY(1);
-    transition: transform 0.2s ease-in-out;
-  }
+    &.show {
+        height: auto;
+        transform-origin: top;
+        transform: scaleY(1);
+        transition: transform 0.2s ease-in-out;
+    }
 
-  &.hide {
-    height: 0;
-    transform-origin: top;
-    transition: transform 0s ease-in-out;
-    transform: scaleY(0);
-  }
+    &.hide {
+        height: 0;
+        transform-origin: top;
+        transition: transform 0s ease-in-out;
+        transform: scaleY(0);
+    }
 }
 
 .scheduler-design {
-  border: none;
-  margin: 0;
-  box-sizing: border-box;
-  padding: 0em;
+    border: none;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0em;
 }
 
 .collapsible-header.scheduler-design {
-  min-height: calc(var(--btn-height) + 5px);
+    min-height: calc(var(--btn-height) + 5px);
 }
 
 /***************************************************************
@@ -69,15 +69,15 @@ Media query to hide hover effects for devices
 that do not support them, like touch displays
 **************************************************************/
 @media (hover: hover) {
-  .collapsible-header {
-    &:hover {
-      color: var(--accent-color);
+    .collapsible-header {
+        &:hover {
+            color: var(--accent-color);
 
-      ::ng-deep {
-        fa-icon {
-          color: var(--accent-color) !important;
+            ::ng-deep {
+                fa-icon {
+                    color: var(--accent-color) !important;
+                }
+            }
         }
-      }
     }
-  }
 }

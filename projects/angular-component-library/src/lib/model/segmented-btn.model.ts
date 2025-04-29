@@ -1,11 +1,11 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export class SegmentedBtnItem {
-  constructor(
-    public text: string,
-    public value: string,
-    public isDisabled: boolean,
-    public onlyIcons?: boolean,
-    public icon?: IconProp,
-  ) {}
+    constructor(
+        public text: string,
+        public value: string,
+        public isDisabled: boolean,
+        public onlyIcons?: boolean,
+        public icon?: IconProp
+    ) {}
 }

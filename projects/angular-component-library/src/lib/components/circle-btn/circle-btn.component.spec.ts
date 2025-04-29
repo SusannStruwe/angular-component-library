@@ -4,38 +4,38 @@ import { By } from '@angular/platform-browser';
 import { Icons } from '../../model/icons';
 
 describe('CircleBtnComponent', () => {
-  let component: CircleBtnComponent;
-  let fixture: ComponentFixture<CircleBtnComponent>;
+    let component: CircleBtnComponent;
+    let fixture: ComponentFixture<CircleBtnComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [CircleBtnComponent],
-      providers: [],
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [CircleBtnComponent],
+            providers: []
+        });
+
+        fixture = TestBed.createComponent(CircleBtnComponent);
+
+        component = fixture.componentInstance;
+
+        fixture.detectChanges();
     });
 
-    fixture = TestBed.createComponent(CircleBtnComponent);
+    it('should create circle btn component', () => {
+        expect(component).toBeTruthy();
+    });
 
-    component = fixture.componentInstance;
+    it('should show fa-icon check', () => {
+        component.faIcon = Icons.faCheck;
+        fixture.detectChanges();
 
-    fixture.detectChanges();
-  });
+        expect(
+            fixture.debugElement.query(By.css('svg')).nativeElement
+        ).toBeTruthy();
 
-  it('should create circle btn component', () => {
-    expect(component).toBeTruthy();
-  });
+        const faIconName = fixture.debugElement
+            .query(By.css('svg'))
+            .nativeElement.getAttribute('data-icon');
 
-  it('should show fa-icon check', () => {
-    component.faIcon = Icons.faCheck;
-    fixture.detectChanges();
-
-    expect(
-      fixture.debugElement.query(By.css('svg')).nativeElement,
-    ).toBeTruthy();
-
-    const faIconName = fixture.debugElement
-      .query(By.css('svg'))
-      .nativeElement.getAttribute('data-icon');
-
-    expect(faIconName).toEqual('check');
-  });
+        expect(faIconName).toEqual('check');
+    });
 });

@@ -1,36 +1,36 @@
 :host {
-  display: inline-block;
+    display: inline-block;
 }
 
 button {
-  position: relative;
-  height: calc(var(--btn-height) - 5px);
-  line-height: calc(var(--btn-height) - 5px);
-  padding: var(--btn-padding);
-  border: 0;
-  font-weight: var(--font-weight-light);
-  font-size: var(--font-size);
-  transition: background 400ms;
-  background: var(--accent-color);
-  color: var(--fa-icon-color);
-  cursor: pointer;
-  border-radius: var(--tag-btn-radius);
-  margin: 0.25em;
-  display: flex;
-  align-items: center;
-
-  fa-icon {
+    position: relative;
+    height: calc(var(--btn-height) - 5px);
+    line-height: calc(var(--btn-height) - 5px);
+    padding: var(--btn-padding);
+    border: 0;
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size);
+    transition: background 400ms;
+    background: var(--accent-color);
     color: var(--fa-icon-color);
-  }
+    cursor: pointer;
+    border-radius: var(--tag-btn-radius);
+    margin: 0.25em;
+    display: flex;
+    align-items: center;
 
-  span {
-    color: var(--fa-icon-color);
-    margin: 0px 5px;
-  }
+    fa-icon {
+        color: var(--fa-icon-color);
+    }
 
-  &:active:not([disabled]) {
-    background-color: var(--accent-color-dark);
-  }
+    span {
+        color: var(--fa-icon-color);
+        margin: 0px 5px;
+    }
+
+    &:active:not([disabled]) {
+        background-color: var(--accent-color-dark);
+    }
 }
 
 /************************************************
@@ -38,13 +38,13 @@ Media query to add hover only on device which support hover
 *********************************************/
 
 @media (hover: hover) {
-  button {
-    &:hover:not([disabled]) {
-      background-image: var(--darken-gradient) !important;
-    }
+    button {
+        &:hover:not([disabled]) {
+            background-image: var(--darken-gradient) !important;
+        }
 
-    &:active:not([disabled]) {
-      background-color: var(--accent-color-dark);
+        &:active:not([disabled]) {
+            background-color: var(--accent-color-dark);
+        }
     }
-  }
 }

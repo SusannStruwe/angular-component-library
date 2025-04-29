@@ -16,37 +16,37 @@ import { Icons } from '../../model/icons';
  * ```
  */
 @Component({
-  selector: 'search-input-component',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule, FormsModule],
-  templateUrl: './search-input.component.html',
-  styleUrls: ['./search-input.component.scss'],
+    selector: 'search-input-component',
+    standalone: true,
+    imports: [CommonModule, FontAwesomeModule, FormsModule],
+    templateUrl: './search-input.component.html',
+    styleUrls: ['./search-input.component.scss']
 })
 export class SearchInputComponent {
-  @Input() filter = '';
-  @Input() classStyles?: string;
-  @Input() placeholderText? = '';
+    @Input() filter = '';
+    @Input() classStyles?: string;
+    @Input() placeholderText? = '';
 
-  @Output() filterChange = new EventEmitter<string>();
+    @Output() filterChange = new EventEmitter<string>();
 
-  faMagnifyingGlass: IconDefinition = Icons.faMagnifyingGlass;
-  faCloseCircle: IconDefinition = Icons.faCircleXmark;
+    faMagnifyingGlass: IconDefinition = Icons.faMagnifyingGlass;
+    faCloseCircle: IconDefinition = Icons.faCircleXmark;
 
-  randomId: string = Math.floor(Math.random() * 16777215).toString(16);
+    randomId: string = Math.floor(Math.random() * 16777215).toString(16);
 
-  /**
-   * Filter string has changed
-   */
-  filterChanged(): void {
-    this.filterChange.emit(this.filter);
-  }
+    /**
+     * Filter string has changed
+     */
+    filterChanged(): void {
+        this.filterChange.emit(this.filter);
+    }
 
-  /**
-   * Clear filter
-   */
-  clearFilter(event: Event): void {
-    event.stopPropagation();
-    this.filter = '';
-    this.filterChange.emit(this.filter);
-  }
+    /**
+     * Clear filter
+     */
+    clearFilter(event: Event): void {
+        event.stopPropagation();
+        this.filter = '';
+        this.filterChange.emit(this.filter);
+    }
 }
