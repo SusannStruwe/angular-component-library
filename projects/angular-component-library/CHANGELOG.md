@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 2.0.0
+
+### Maintain
+
+- Added Storybook
+
 ## Version 1.0.2
 
 ### Maintain

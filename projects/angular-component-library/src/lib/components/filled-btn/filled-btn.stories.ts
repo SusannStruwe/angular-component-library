@@ -2,27 +2,27 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import {
     faCheck,
     faExclamation,
-    faInfo,
     faInfoCircle,
     faSpinner,
     faTrash
 } from '@fortawesome/free-solid-svg-icons';
 import { Meta, StoryObj } from '@storybook/angular';
 import { HoverStyle } from '../../model/hover-style.enum';
-import { BorderedBtnComponent } from './bordered-btn.component';
+import { FilledBtnComponent } from './filled-btn.component';
+
 
 const iconOptions: Record<string, IconDefinition> = {
     faCheck: faCheck,
     faExclamation: faExclamation,
-    faInfo: faInfo,
+    faInfoCircle: faInfoCircle,
     faSpinner: faSpinner,
     faTrash: faTrash
 };
 const hoverStyles: typeof HoverStyle = HoverStyle;
 
-const meta: Meta<BorderedBtnComponent> = {
-    title: 'Components/Buttons/Bordered Btn',
-    component: BorderedBtnComponent,
+const meta: Meta<FilledBtnComponent> = {
+    title: 'Components/Buttons/Filled Btn',
+    component: FilledBtnComponent,
     argTypes: {
         ariaLabel: { control: 'text' },
         label: { control: 'text' },
@@ -44,7 +44,7 @@ const meta: Meta<BorderedBtnComponent> = {
         isDisabled: { control: 'boolean' },
         styleClass: {
             control: 'select',
-            options: ['gray', 'delete' ]
+            options: ['delete', 'not-emphrazed', 'navbar-btn']
         },
         width: { control: 'text' },
         isSpinning: { control: 'boolean' },
@@ -54,7 +54,7 @@ const meta: Meta<BorderedBtnComponent> = {
 };
 export default meta;
 
-type Story = StoryObj<BorderedBtnComponent>;
+type Story = StoryObj<FilledBtnComponent>;
 
 export const Default: Story = {
     args: {
@@ -70,13 +70,14 @@ export const Active: Story = {
         isActive: true,
         faIcon: faInfoCircle
     }
-}
+};
 
 export const Disabled: Story = {
     args: {
         label: 'Disabled',
         isDisabled: true,
         faIcon: faInfoCircle,
+        styleClass: 'inverted'
     }
 };
 
@@ -112,15 +113,6 @@ export const DeleteDisabled: Story = {
     }
 };
 
-export const Inverted: Story = {
-    args: {
-        label: 'Inverted',
-        isDisabled: false,
-        faIcon: faInfoCircle,
-        hoverStyle: HoverStyle.INVERTED
-    }
-};
-
 export const Spinning: Story = {
     args: {
         label: 'Spinning',
@@ -131,13 +123,10 @@ export const Spinning: Story = {
 };
 
 
-
 export const Icon: Story = {
     args: {
         isDisabled: false,
         faIcon: faInfoCircle,
     }
 };
-
-
 

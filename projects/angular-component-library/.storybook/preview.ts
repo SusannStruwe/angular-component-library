@@ -10,7 +10,13 @@ const preview: Preview = {
                 color: /(background|color)$/i,
                 date: /Date$/i
             }
-        }
+        },
+        designToken: {
+            defaultTab: 'Colors',
+            tokens: {
+              color: ['../assets/styles.scss'],
+            },
+          },
     }
 };
 

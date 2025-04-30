@@ -20,6 +20,6 @@ export class ColorPaletteComponent implements OnInit {
     colors: string[] = [];
 
     ngOnInit() {
-        this.colors = Colors.standard;
+        this.colors = Colors.standard.concat(Colors.cssColors);
     }
 }

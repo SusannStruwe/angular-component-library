@@ -35,10 +35,10 @@ button {
 }
 
 /************************************
- Ripple
+ Simple
 **************************************/
 
-.ripple {
+.simple {
     background-position: center;
     transition: background 0.8s;
 
@@ -94,7 +94,7 @@ Media query to hide hover effects for devices
 that do not support them, like touch displays
 **************************************************************/
 @media (hover: hover) {
-    .ripple {
+    .simple {
         &:hover:not([disabled]) {
             background-image: var(--darken-gradient);
         }

@@ -9,8 +9,11 @@ $toast-error-color: #be4322;
 $toast-warning-color: #ffc107;
 
 body {
-    --font-family: 'Segoe UI', sans-serif;
 
+    /**
+    * @tokens Colors
+    * @presenter Color
+    */
     --accent-color-light: #e8b8fe; // #f2ebf5;
     --accent-color: #bd37fb; // #bd37fb
     --accent-color-dark: #701e96;
@@ -39,7 +42,8 @@ body {
     --not-emphrazed-color-dark: #999;
     --delete-color-light: #be432230;
     --delete-color: #be4322;
-
+    --delete-color-dark: #863018;
+    
     --toast-info-color-light: #5699e410;
     --toast-info-color: #5699e4;
     --toast-info-color-dark: #4073ac;
@@ -85,6 +89,16 @@ body {
     --darken-gradient: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     --brightness: brightness(0.85);
 
+    /**
+    * @tokens FontFamily
+    * @presenter FontFamily
+    */
+    --font-family: 'Segoe UI', sans-serif;
+
+    /**
+    * @tokens FontWeight
+    * @presenter FontWeight
+    */
     --font-weight-light: 300;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
@@ -94,6 +108,9 @@ body {
     --font-size: 1em;
     --ic-font-size: 1.2em;
 
+    /**
+    * @tokens Others
+    */
     --z-index-1: 9; // availabilities
     --z-index-2: 10; // scheduler background active states, buttons in navbar
     --z-index-3: 11; // scheduler events
@@ -124,6 +141,10 @@ body {
     --badge-height: 30px;
     --sidebar-width: 50px;
     --max-width: 500px;
+
+    /**
+    * @tokens-end
+    */
 }
 
 body.dark-theme {

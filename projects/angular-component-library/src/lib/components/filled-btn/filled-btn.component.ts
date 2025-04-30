@@ -42,7 +42,7 @@ export class FilledBtnComponent {
     // example --> gray, delete
     @Input() styleClass?: string = '';
     // example --> filling or shining
-    @Input() hoverStyle = HoverStyle.RIPPLE;
+    @Input() hoverStyle = HoverStyle.SIMPLE;
     // example --> 100% or not
     @Input() width?: string;
 }
