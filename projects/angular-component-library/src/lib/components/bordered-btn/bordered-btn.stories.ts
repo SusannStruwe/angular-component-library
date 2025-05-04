@@ -42,7 +42,7 @@ const meta: Meta<BorderedBtnComponent> = {
         },
         showIcon: { control: 'boolean' },
         isDisabled: { control: 'boolean' },
-        styleClass: {
+        classStyle: {
             control: 'select',
             options: ['gray', 'delete' ]
         },
@@ -85,7 +85,7 @@ export const Delete: Story = {
         label: 'Delete',
         isDisabled: false,
         faIcon: faTrash,
-        styleClass: 'delete',
+        classStyle: 'delete',
         width: '200px'
     }
 };
@@ -96,7 +96,7 @@ export const DeleteActive: Story = {
         isDisabled: false,
         isActive: true,
         faIcon: faTrash,
-        styleClass: 'delete',
+        classStyle: 'delete',
         width: '200px'
     }
 };
@@ -107,7 +107,7 @@ export const DeleteDisabled: Story = {
         isDisabled: true,
         isActive: true,
         faIcon: faTrash,
-        styleClass: 'delete',
+        classStyle: 'delete',
         width: '200px'
     }
 };

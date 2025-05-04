@@ -42,7 +42,7 @@ const meta: Meta<FilledBtnComponent> = {
         },
         showIcon: { control: 'boolean' },
         isDisabled: { control: 'boolean' },
-        styleClass: {
+        classStyle: {
             control: 'select',
             options: ['delete', 'not-emphrazed', 'navbar-btn']
         },
@@ -77,7 +77,7 @@ export const Disabled: Story = {
         label: 'Disabled',
         isDisabled: true,
         faIcon: faInfoCircle,
-        styleClass: 'inverted'
+        classStyle: 'inverted'
     }
 };
 
@@ -86,7 +86,7 @@ export const Delete: Story = {
         label: 'Delete',
         isDisabled: false,
         faIcon: faTrash,
-        styleClass: 'delete',
+        classStyle: 'delete',
         width: '200px'
     }
 };
@@ -97,7 +97,7 @@ export const DeleteActive: Story = {
         isDisabled: false,
         isActive: true,
         faIcon: faTrash,
-        styleClass: 'delete',
+        classStyle: 'delete',
         width: '200px'
     }
 };
@@ -108,7 +108,7 @@ export const DeleteDisabled: Story = {
         isDisabled: true,
         isActive: true,
         faIcon: faTrash,
-        styleClass: 'delete',
+        classStyle: 'delete',
         width: '200px'
     }
 };

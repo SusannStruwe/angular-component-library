@@ -1,7 +1,7 @@
 import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
-import { AlertComponent } from 'angular-component-library';
 import { AlertType } from '../../model/alert-type.enum';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { AlertComponent } from './alert.component';
 
 const types: typeof AlertType = AlertType;
 

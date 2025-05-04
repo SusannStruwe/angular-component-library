@@ -40,7 +40,7 @@ export class FilledBtnComponent {
     @Input() isActive?: boolean;
 
     // example --> gray, delete
-    @Input() styleClass?: string = '';
+    @Input() classStyle?: string = '';
     // example --> filling or shining
     @Input() hoverStyle = HoverStyle.SIMPLE;
     // example --> 100% or not

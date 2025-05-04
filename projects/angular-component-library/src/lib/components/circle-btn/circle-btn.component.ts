@@ -35,7 +35,7 @@ export class CircleBtnComponent {
     @Input() backgroundColor?: string;
 
     // example --> gray, delete
-    @Input() styleClass?: string = '';
+    @Input() classStyle?: string = '';
 
     // example --> 100% or not
     @Input() width?: string;

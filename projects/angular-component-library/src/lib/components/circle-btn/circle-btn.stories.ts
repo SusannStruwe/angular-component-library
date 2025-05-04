@@ -32,7 +32,7 @@ const meta: Meta<CircleBtnComponent> = {
         },
         backgroundColor:  { control: 'text' },
         isDisabled: { control: 'boolean' },
-        styleClass: { control: 'text' },
+        classStyle: { control: 'text' },
         width: { control: 'text' },
         isSpinning: { control: 'boolean' },
         isActive: { control: 'boolean' }

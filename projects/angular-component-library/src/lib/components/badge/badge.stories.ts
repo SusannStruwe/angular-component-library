@@ -5,7 +5,7 @@ import {
     faInfo
 } from '@fortawesome/free-solid-svg-icons';
 import { Meta, StoryObj } from '@storybook/angular';
-import { BadgeComponent } from 'angular-component-library';
+import { BadgeComponent } from './badge.component';
 
 const iconOptions: Record<string, IconDefinition> = {
     faCheck: faCheck,

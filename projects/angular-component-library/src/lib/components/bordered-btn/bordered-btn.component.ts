@@ -34,7 +34,7 @@ export class BorderedBtnComponent {
 
     @Input() isDisabled?: boolean;
     // example --> gray, delete
-    @Input() styleClass?: string = '';
+    @Input() classStyle?: string = '';
     // example --> filling or shining
     @Input() hoverStyle = HoverStyle.SIMPLE;
     // example --> spin or not
