@@ -65,7 +65,6 @@ export const Default: Story = {
 export const Active: Story = {
     args: {
         label: 'Active',
-        isDisabled: false,
         isActive: true,
         faIcon: faInfoCircle
     }
@@ -82,7 +81,6 @@ export const Disabled: Story = {
 export const Delete: Story = {
     args: {
         label: 'Delete',
-        isDisabled: false,
         faIcon: faTrash,
         classStyle: 'delete',
         width: '200px'
@@ -114,7 +112,6 @@ export const DeleteDisabled: Story = {
 export const Spinning: Story = {
     args: {
         label: 'Spinning',
-        isDisabled: false,
         isSpinning: true,
         faIcon: faSpinner
     }
@@ -122,7 +119,6 @@ export const Spinning: Story = {
 
 export const Icon: Story = {
     args: {
-        isDisabled: false,
         faIcon: faInfoCircle
     }
 };

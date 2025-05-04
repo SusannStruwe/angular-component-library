@@ -1,0 +1,307 @@
+<div class="comp" [style.padding.em]="'1'">
+
+    <h2>Overview Components</h2>
+
+    <div class="grid-2-2-2" [style.column-gap.em]="1">
+
+        <div class="flex-column">
+            <bordered-btn-component [label]="'Default BorderedBtn'"> </bordered-btn-component>
+        
+            <bordered-btn-component [faIcon]="faInfoCircle" [label]="'Default BorderedBtn'">
+            </bordered-btn-component>
+        
+            <bordered-btn-component
+                [faIcon]="faInfoCircle"
+                [isActive]="true"
+                [label]="'Active BorderedBtn'">
+            </bordered-btn-component>
+        
+            <bordered-btn-component
+                [faIcon]="faInfoCircle"
+                [isDisabled]="true"
+                [label]="'Disabled BorderedBtn'">
+            </bordered-btn-component>
+        
+            <bordered-btn-component
+                [faIcon]="faInfoCircle"
+                [classStyle]="'delete'"
+                [label]="'Delete BorderedBtn'">
+            </bordered-btn-component>
+        
+            <bordered-btn-component
+                [faIcon]="faInfoCircle"
+                [classStyle]="'delete'"
+                [isActive]="true"
+                [label]="'Active delete BorderedBtn'">
+            </bordered-btn-component>
+        
+            <bordered-btn-component
+                [faIcon]="faInfoCircle"
+                [classStyle]="'delete'"
+                [isDisabled]="true"
+                [label]="'Disabled delete BorderedBtn'">
+            </bordered-btn-component>
+        
+            <bordered-btn-component
+                [faIcon]="faInfoCircle"
+                [classStyle]="'custom-border-style'"
+                [label]="'Custom BorderedBtn'">
+            </bordered-btn-component>
+        
+            <bordered-btn-component [faIcon]="faSpinner" [isSpinning]="true"> </bordered-btn-component>
+        </div>
+
+        <div class="flex-column">
+            <borderless-btn-component [label]="'Default BorderlessBtn'"> </borderless-btn-component>
+        
+            <borderless-btn-component [faIcon]="faInfoCircle" [label]="'Default BorderlessBtn'">
+            </borderless-btn-component>
+        
+            <borderless-btn-component
+                [faIcon]="faInfoCircle"
+                [isActive]="true"
+                [label]="'Active BorderlessBtn'">
+            </borderless-btn-component>
+        
+            <borderless-btn-component
+                [faIcon]="faInfoCircle"
+                [isDisabled]="true"
+                [label]="'Disabled BorderlessBtn'">
+            </borderless-btn-component>
+        
+            <borderless-btn-component
+                [faIcon]="faInfoCircle"
+                [classStyle]="'delete'"
+                [label]="'Delete BorderlessBtn'">
+            </borderless-btn-component>
+        
+            <borderless-btn-component
+                [faIcon]="faInfoCircle"
+                [classStyle]="'delete'"
+                [label]="'Active delete BorderlessBtn'"
+                [isActive]="true">
+            </borderless-btn-component>
+        
+            <borderless-btn-component
+                [faIcon]="faInfoCircle"
+                [classStyle]="'delete'"
+                [label]="'Disabled delete BorderlessBtn'"
+                [isDisabled]="true">
+            </borderless-btn-component>
+
+            <borderless-btn-component
+                [faIcon]="faInfoCircle"
+                [classStyle]="'custom-border-style'"
+                [label]="'Custom BorderedBtn'">
+            </borderless-btn-component>
+        
+            <borderless-btn-component [faIcon]="faSpinner" [isSpinning]="true"> </borderless-btn-component>
+        </div>
+
+        
+        <div class="flex-column">
+            <filled-btn-component [label]="'Default FilledBtn'"> </filled-btn-component>
+        
+            <filled-btn-component [faIcon]="faInfoCircle" [label]="'Default FilledBtn'">
+            </filled-btn-component>
+        
+            <filled-btn-component
+                [faIcon]="faInfoCircle"
+                [isActive]="true"
+                [label]="'Active FilledBtn'">
+            </filled-btn-component>
+        
+            <filled-btn-component
+                [faIcon]="faInfoCircle"
+                [isDisabled]="true"
+                [label]="'Disabled FilledBtn'">
+            </filled-btn-component>
+        
+            <filled-btn-component [classStyle]="'delete'" [label]="'Style delete FilledBtn'">
+            </filled-btn-component>
+        
+            <filled-btn-component
+                [classStyle]="'delete'"
+                [label]="'Active delete FilledBtn'"
+                [isActive]="true">
+            </filled-btn-component>
+        
+            <filled-btn-component
+                [classStyle]="'delete'"
+                [isDisabled]="true"
+                [label]="'Disabled delete FilledBtn'">
+            </filled-btn-component>
+        
+            <filled-btn-component
+                [faIcon]="faInfoCircle"
+                [classStyle]="'custom-filled-style'"
+                [label]="'Custom FilledBtn'">
+            </filled-btn-component>
+        
+            <filled-btn-component [faIcon]="faSpinner" [isSpinning]="true"> </filled-btn-component>
+        </div>        
+        
+    </div>
+
+    <div class="grid-2-2-2" [style.column-gap.em]="1" [style.margin-top.em]="2">
+
+        <div class="flex-column">
+            <div class="flex-row">
+                <circle-btn-component [faIcon]="faInfoCircle"> </circle-btn-component>
+                <p>Default CircleBtn</p>
+            </div>
+        
+            <div class="flex-row">
+                <circle-btn-component [isDisabled]="true" [faIcon]="faInfoCircle"> </circle-btn-component>
+                <p>Disabled default CircleBtn</p>
+            </div>
+        
+            <div class="flex-row">
+                <circle-btn-component [faIcon]="faSpinner" [isSpinning]="true"> </circle-btn-component>
+                <p>Spinning CircleBtn</p>
+            </div>
+        </div>
+
+        <div>
+            <toggle-btn-component [label]="'On toggleBtn'"> </toggle-btn-component>
+
+            <toggle-btn-component [label]="'Off toggleBtn'" [checked]="false">
+            </toggle-btn-component>
+
+            <div class="flex-row">
+                <checkbox-component [(value)]="checked"> </checkbox-component>
+                <p>Checked</p>
+            </div>
+            <div class="flex-row">
+                <checkbox-component [(value)]="checked2"> </checkbox-component>
+                <p>Unchecked</p>
+            </div>
+
+            <segmented-btn-component
+                [(activeBtn)]="activeBtn"
+                [btnArray]="btnArray"
+                [style.width]="'fit-content'"
+                [style.margin-top.em]="1">
+            </segmented-btn-component>
+
+            <div [style.margin-top.em]="1">
+                <tag-btn-component [label]="'Filter 1'"> </tag-btn-component>
+                <tag-btn-component [label]="'Filter 2'"> </tag-btn-component>
+            </div>
+
+            <div [style.margin-top.em]="1"></div>
+        </div>
+
+        <div class="flex-column" [style.min-width.px]="300">
+            <select-component
+                [style.width]="'100%'"
+                [items]="selectItems"
+                [selectedItem]="selectedItem"
+                [withFilter]="true"
+                [label]="'Select:'"
+                [faIcon]="faChevronDown">
+            </select-component>
+
+            <select-component
+                [style.width]="'100%'"
+                [classStyle]="'scheduler'"
+                [faIconBefore]="faPalette"
+                [items]="selectItems"
+                [faIcon]="faChevronDown"
+                [withDeselect]="false"
+                [selectedItem]="selectedItem">
+            </select-component>
+
+            <multi-select-component
+                [style.max-width]="'fit-content'"
+                [items]="multiSelectItems"
+                [label]="'Please select:'"
+                [backgroundColor]="'#3f5af3'"
+                [faIcon]="faChevronDown">
+            </multi-select-component>
+
+            <multi-select-component
+                [items]="multiSelectItems"
+                [withFilter]="true"
+                [faIcon]="faFilter"
+                [style.width.px]="55"
+                [backgroundColor]="'#3f5af3'">
+            </multi-select-component>
+
+            <collapsible-component [(show)]="open">
+                <div header class="flex-row" 
+                [style.justify-content]="'space-between'"
+                [style.width.px]="300">
+                    <p>Collapse</p>
+                     <fa-icon [style.color]="'black'" [icon]="open ? faChevronUp : faChevronDown"> </fa-icon>
+                </div>
+                <div content>
+                    <div class="flex-row" [style.padding.em]="1">
+                        <p>Say Hello</p>
+                    </div>
+                </div>
+            </collapsible-component>
+        </div>
+    </div>
+
+    <div class="grid-2-2-2" [style.column-gap.em]="1" [style.margin-top.em]="2">
+        <div class="flex-column">
+            <alert-component
+                [(visibleState)]="showAlert"
+                [message]="'Attention, please note ...'"
+                [type]="alertTypes.ERROR">
+            </alert-component>
+            <alert-component
+                [(visibleState)]="showAlert"
+                [message]="'Attention, please note ...'"
+                [type]="alertTypes.WARNING">
+            </alert-component>
+            <alert-component
+                [(visibleState)]="showAlert"
+                [message]="'Please note ...'"
+                [type]="alertTypes.INFO">
+            </alert-component>
+            <alert-component
+                [(visibleState)]="showAlert"
+                [message]="'Data successfully processed..'"
+                [type]="alertTypes.SUCCESS">
+            </alert-component>
+        </div>
+        <div class="flex-column">
+            <search-input-component [classStyles]="'full-width'" [placeholderText]="'Search...'">
+            </search-input-component>
+            <input-component
+                [input]="username"
+                [classStyles]="'full-width'"
+                [placeholderText]="'Username'"></input-component>
+            <input-component
+                [input]="username"
+                [placeholderText]="'Password'"
+                [type]="'password'"
+                [icon]="faEyeSlash">
+            </input-component>
+
+            <duration-input-component [(seconds)]="duration" [maxDuration]="31536000">
+            </duration-input-component>
+        </div>
+        <div class="flex-column">
+            <date-picker-component [date]="selectedDate"></date-picker-component>
+
+            <date-time-picker-component [(date)]="selectedDatetime"></date-time-picker-component>
+
+            <date-range-picker-component></date-range-picker-component>
+
+            <div [style.margin-top.em]="1">
+                <badge-component [label]="'Failed'" [classStyle]="'failed'" [borderRadius]="15" [style.margin.em]="'0.5'">
+                </badge-component>
+                <badge-component [label]="'Running'" [classStyle]="'running'" [borderRadius]="15" [style.margin.em]="'0.5'">
+                </badge-component>
+                <badge-component [label]="'Success'" [classStyle]="'success'" [borderRadius]="15" [style.margin.em]="'0.5'">
+                </badge-component>
+                <badge-component [label]="'Pending'" [classStyle]="'pending'" [borderRadius]="15" [style.margin.em]="'0.5'">
+                </badge-component>
+            </div>
+        </div>
+    </div>
+
+</div>

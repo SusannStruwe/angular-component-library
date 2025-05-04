@@ -17,6 +17,8 @@ import { SelectItem } from '../../model/select-item.model';
 import { cloneDeep } from 'lodash';
 import { SearchInputComponent } from '../search-input/search-input.component';
 import { FormsModule } from '@angular/forms';
+import { Icons } from '../../model/icons';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 /**
  * Component to create and show  select
@@ -51,7 +53,7 @@ export class SelectComponent implements OnInit, OnChanges {
     @Input() items: SelectItem[] = [];
     @Input() selectedItem?: SelectItem;
     @Input() label = '';
-    @Input() faIcon?: IconDefinition;
+    @Input() faIcon: IconDefinition = Icons.faChevronDown;
     @Input() faIconBefore?: IconDefinition;
     @Input() withFilter?: boolean;
     @Input() filterPlaceholder?: string;

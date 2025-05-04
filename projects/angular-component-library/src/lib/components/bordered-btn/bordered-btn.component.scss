@@ -11,6 +11,7 @@ button {
     border-radius: var(--border-radius);
     font-weight: var(--font-weight-light);
     font-size: var(--font-size);
+    font-family: var(--font-family);
     background: transparent;
     color: var(--btn-color);
     cursor: pointer;
@@ -28,6 +29,9 @@ button {
 
     span {
         margin: 0px 5px;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        white-space: nowrap;
     }
 
     &:disabled {

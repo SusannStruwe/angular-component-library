@@ -2,7 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
 import { TranslateModule } from '@ngx-translate/core';
-import { CollapsibleComponent } from 'angular-component-library';
+import { CollapsibleComponent } from './collapsible.component';
+
 
 describe('CollapsibleComponent', () => {
     let component: CollapsibleComponent;

@@ -31,3 +31,10 @@ export const Default: Story = {
         mode: EditMode.WRITE
     }
 };
+
+export const ReadMode: Story = {
+    args: {
+        value: true,
+        mode: EditMode.READ
+    }
+};

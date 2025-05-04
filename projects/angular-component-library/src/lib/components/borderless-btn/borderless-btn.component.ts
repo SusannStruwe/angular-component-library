@@ -32,7 +32,7 @@ export class BorderlessBtnComponent {
 
     @Input() showIcon = true;
 
-    @Input() isDisabled?: boolean;
+    @Input() isDisabled?: boolean = false;
     // example --> gray, delete
     @Input() classStyle?: string = '';
     // example --> filling or shining

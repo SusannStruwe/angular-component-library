@@ -11,6 +11,7 @@ button {
     border-radius: var(--border-radius);
     font-weight: var(--font-weight-light);
     font-size: var(--font-size);
+    font-family: var(--font-family);
     background: white;
     color: var(--accent-color);
     cursor: pointer;
@@ -22,9 +23,12 @@ button {
     fa-icon {
         color: var(--accent-color);
     }
-
+    
     span {
         margin: 0px 5px;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        white-space: nowrap;
     }
 
     &:disabled {

@@ -34,7 +34,7 @@ export class FilledBtnComponent {
     // example --> spin or not
     @Input() isSpinning = false;
 
-    @Input() isDisabled?: boolean;
+    @Input() isDisabled?: boolean = false;
 
     // example --> active or not
     @Input() isActive?: boolean;

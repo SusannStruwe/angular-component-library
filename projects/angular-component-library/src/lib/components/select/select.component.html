@@ -12,22 +12,24 @@
         [attr.aria-haspopup]="'menu'"
         [attr.aria-expanded]="show"
         (click)="toggleMenu()">
+
         @if (faIconBefore) {
-        <span class="icon-before">
-            <fa-icon [icon]="faIconBefore"></fa-icon>
-        </span>
-        } @if (label) {
-        <span class="label-before">{{ label }}</span>
-        } @if (selectedItem.text || selectedItem.displayBtnText) {
-        <span class="select-text">
-            {{ selectedItem.displayBtnText ?? selectedItem.text }}</span
-        >
+            <span class="icon-before">
+                <fa-icon [icon]="faIconBefore"></fa-icon>
+            </span>
+        } 
+        @if (label) {
+            <span class="label-before">{{ label }}</span>
+        } 
+        @if (selectedItem.text || selectedItem.displayBtnText) {
+            <span class="select-text">
+                {{ selectedItem.displayBtnText ?? selectedItem.text }}</span
+            >
         }
         <span>
-            @if (faIcon) {
             <fa-icon [icon]="faIcon"> </fa-icon>
-            }
         </span>
+     
     </button>
     <div
         #menu

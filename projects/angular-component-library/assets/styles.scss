@@ -13,9 +13,9 @@ body {
     * @tokens Colors
     * @presenter Color
     */
-    --accent-color-light: #e8b8fe; // #f2ebf5;
-    --accent-color: #bd37fb; // #bd37fb
-    --accent-color-dark: #701e96;
+    --accent-color-light: #d9deff; //#c7cefa;
+    --accent-color: #486bff; //#324bff;
+    --accent-color-dark: #293dd8; // 3044b5
     --accent-color-rgb: 3, 147, 160;
 
     --btn-color: #3b3c3e;
@@ -33,50 +33,59 @@ body {
     --fa-icon-color: white;
     --collapse-background: #f3f3f3;
     --border-color-rgb: 000, 000, 000;
-    --loader-bg-rgb: 255, 255, 255;
     --border-color: #ccc;
     --border-color-light: #e4e4e4;
 
-    --not-emphrazed-color: #aaa;
-    --not-emphrazed-color-dark: #999;
-    --delete-color-light: #be432230;
+    --required-color: #f44118;
+    --not-emphrazed-color: #aaaaaa;
+    --not-emphrazed-color-dark: #999999;
+    --delete-color-light: #be432210;
     --delete-color: #be4322;
     --delete-color-dark: #863018;
 
-    --toast-info-color-light: #5699e410;
-    --toast-info-color: #5699e4;
-    --toast-info-color-dark: #4073ac;
-    --toast-success-color-light: #5cb55a10;
-    --toast-success-color: #5cb55a;
-    --toast-success-color-dark: #407d3f;
-    --toast-error-color-light: #be432210;
+    --toast-info-color-light: #f6f9fd; // #2571c610;
+    --toast-info-color: #2571c6;
+    --toast-info-color-dark: #1a5496;
+    --toast-success-color-light: #f6faf5; // #09850710;
+    --toast-success-color: #098507;
+    --toast-success-color-dark: #066604;
+    --toast-error-color-light: #faf4f2; //#be432210;
     --toast-error-color: #be4322;
     --toast-error-color-dark: #863018;
-    --toast-warning-color-light: #ff9c0710;
+    --toast-warning-color-light: #fffcf9; // #ff9c0710;
     --toast-warning-color: #ff9c07;
-    --toast-warning-color-dark: #e18904;
+    --toast-warning-color-dark: #de8602;
 
-    --job-pending-color: #999;
-    --job-successful-color: #35c832;
+    --job-pending-color: #999999;
+    --job-successful-color: #2bba28;
     --job-running-color: #72b5f5;
-    --job-failed-color: #e2761d;
+    --job-failed-color: #e24e1d;
+
+    --level-warning-color: #ff9c07;
+    --level-error-color: #e24e1d;
 
     --modified-data-color: #e2761d;
-    --added-data-color: #35c832;
+    --added-data-color-light-rgb: rgba(53, 200, 50, 0.1);
+    --added-data-color: #2bba28;
+    --deleted-data-color-light-rgb: rgb(226, 118, 29, 0.1);
     --deleted-data-color: #be4322;
 
-    --current-color: #35c832;
-    --current-color-dark: #289626;
+    --current-color: #2bba28;
+    --current-color-dark: #ffffff;
     --frozen-color: #9dc6ff;
-    --frozen-color-dark: #78a4e1;
-    --manual-color: #599eff;
-    --manual-color-dark: #3371c7;
+    --frozen-color-dark: #ffffff;
+    --manual-color: #787ffe;
+    --manual-color-dark: #ffffff;
     --urgent-color: #be4322;
-    --urgent-color-dark: #863018;
+    --urgent-color-dark: #ffffff;
     --free-color: #eef9ff;
-    --free-color-dark: #a1c7dc;
-    --downtime-color: #ccc; // #cc3611;
+    --free-color-dark: #4e87a5;
+    --tardiness-color: #ff6946;
+    --hide-color: #aaaaaa;
+    --downtime-color: #e0e0e0; // #cc3611;
 
+    --list-item-color: #e3e6f9; // without opacity to overlay lines;
+    --loader-bg-rgb: 255, 255, 255;
     --row-highlight-color: rgba(223, 251, 255, 0.5);
     --header-bg-color: rgb(000, 000, 000, 0.03);
 
@@ -91,7 +100,7 @@ body {
     * @tokens FontFamily
     * @presenter FontFamily
     */
-    --font-family: 'Segoe UI', sans-serif;
+    --font-family: 'Poppins', sans-serif;
 
     /**
     * @tokens FontWeight
@@ -103,7 +112,7 @@ body {
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
 
-    --font-size: 1em;
+    --font-size: 15px;
     --ic-font-size: 1.2em;
 
     /**
@@ -271,6 +280,74 @@ a {
     box-shadow: var(--popup-shadow);
 }
 
+
+.grid-2-2-2 {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    margin: auto;
+}
+
+.flex-column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+    justify-content: center;
+    width: fit-content;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    row-gap: 0.5em;
+    justify-content: center;
+    width: fit-content;
+    align-items: center;
+    column-gap: 0.5em;
+
+    p {
+        margin: 0.5em 0;
+    }
+}
+
+.custom-border-style {
+    border-color: green !important;
+    color: green !important;
+
+    fa-icon {
+        color: green !important;
+    }
+
+    &:hover,
+    &.active {
+        &:not([disabled]) {
+            color: var(--fa-icon-color) !important;
+            background: green !important;
+
+            fa-icon {
+                color: var(--fa-icon-color) !important;
+            }
+        }
+    }
+}
+
+
+.custom-filled-style {
+    background-color: green !important;
+    color: var(--fa-icon-color) !important;
+
+    &:hover,
+    &.active {
+        &:not([disabled]) {
+            color: var(--fa-icon-color);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+        }
+    }
+}
+
 /*=============================================
   ngx-toast colors overwrites
 =================================================*/
@@ -289,6 +366,14 @@ a {
 .toast-container .ngx-toastr {
     box-shadow: 2px 2px 2px rgb(0 0 0 / 35%);
 }
+
+/*=============================================
+  storybook overwrites
+=================================================*/
+.docs-story {
+    min-height: 300px !important;
+    position: relative;
+  }
 
 /*===================================================
 Media queries for small devices

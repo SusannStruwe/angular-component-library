@@ -10,6 +10,22 @@ export class FakeLoader implements TranslateLoader {
                         choseFile: 'Datei wählen',
                         dropIt: '... oder per Drag & Drop reinziehen'
                     }
+                },
+                time: {
+                    hoursShort: 'hours',
+                    days: 'days',
+                    minutesShort: 'min',
+                },
+                validation: {
+                    maxDuration: '365 Tage'
+                },
+                scheduler: {
+                    clock: 'Uhr'
+                },
+                btn: {
+                    day: 'Tag',
+                    week: 'Woche',
+                    month: 'Monat'
                 }
             },
             de: {
@@ -18,6 +34,22 @@ export class FakeLoader implements TranslateLoader {
                         choseFile: 'Datei wählen',
                         dropIt: '... oder per Drag & Drop reinziehen'
                     }
+                },
+                time: {
+                    hoursShort: 'hours',
+                    days: 'days',
+                    minutesShort: 'min',
+                },
+                validation: {
+                    maxDuration: '365 Tage'
+                },
+                scheduler: {
+                    clock: 'Uhr'
+                },
+                btn: {
+                    day: 'Tag',
+                    week: 'Woche',
+                    month: 'Monat'
                 }
             }
         };

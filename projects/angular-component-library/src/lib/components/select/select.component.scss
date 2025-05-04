@@ -1,6 +1,7 @@
 :host {
     display: inline-block;
     position: relative;
+    font-family: var(--font-family);
 }
 
 .flex {
@@ -27,6 +28,7 @@ button {
     line-height: var(--btn-height);
     font-weight: var(--font-weight-light);
     font-size: var(--font-size);
+    font-family: var(--font-family);
     padding: 0px;
     color: var(--fa-icon-color);
     background: transparent;
@@ -116,6 +118,8 @@ button {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    font-family: var(--font-family);
+    
     &.left {
         left: 0px;
     }

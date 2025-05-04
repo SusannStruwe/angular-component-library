@@ -15,13 +15,13 @@ import {
     USE_DEFAULT_LANG,
     USE_EXTEND
 } from '@ngx-translate/core';
-import { Observable, of } from 'rxjs';
 import { APP_INITIALIZER } from '@angular/core';
 setCompodocJson(docJson);
 import { FakeLoader } from '../src/lib/fake-translate-loader';
 
 const preview: Preview = {
     parameters: {
+        layout: 'centered',
         controls: {
             matchers: {
                 color: /(background|color)$/i,

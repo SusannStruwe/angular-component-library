@@ -4,55 +4,7 @@
     "injectables": [],
     "guards": [],
     "interceptors": [],
-    "classes": [
-        {
-            "name": "FakeLoader",
-            "id": "class-FakeLoader-5b6b68d43c42f1ec37ad8f13e0567f64f326a084515a961d525300c7e2f9e792e4079b0563e9db50261558a47035e18caa60acad2d805da17e5828d74eb4a168",
-            "file": "projects/angular-component-library/.storybook/preview.ts",
-            "deprecated": false,
-            "deprecationMessage": "",
-            "type": "class",
-            "sourceCode": "import { applicationConfig, type Preview } from '@storybook/angular';\r\nimport { setCompodocJson } from '@storybook/addon-docs/angular';\r\nimport docJson from '../documentation.json';\r\nimport { ISOALTE_TRANSLATE_SERVICE, MissingTranslationHandler, TranslateCompiler, TranslateDefaultParser, TranslateFakeCompiler, TranslateLoader, TranslateModule, TranslateParser, TranslateService, TranslateStore, USE_DEFAULT_LANG, USE_EXTEND } from '@ngx-translate/core';\r\nimport { Observable, of } from 'rxjs';\r\nimport { APP_INITIALIZER, importProvidersFrom } from '@angular/core';\r\nsetCompodocJson(docJson);\r\n\r\n\r\n\r\nexport class FakeLoader implements TranslateLoader {\r\n    getTranslation(lang: string): Observable<any> {\r\n      const translations: { [key: string]: any } = {\r\n        en: {\r\n            upload: {\r\n                dropElement: {\r\n                    chooseFile: \"Datei wählen\",\r\n                    dropIt: \"Los lassen\"\r\n                }\r\n            },\r\n        },\r\n        de: {\r\n            upload: {\r\n                dropElement: {\r\n                    chooseFile: \"Datei wählen\",\r\n                    dropIt: \"Los lassen\"\r\n                }\r\n            },\r\n        }\r\n      };\r\n      return of(translations[lang] || {});\r\n    }\r\n  }\r\n  \r\n\r\nconst preview: Preview = {\r\n    parameters: {\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n              color: ['../assets/styles.scss'],\r\n            },\r\n          },\r\n    },\r\n    decorators: [\r\n        applicationConfig({\r\n          providers: [\r\n            {\r\n                provide: TranslateLoader,\r\n                useClass: FakeLoader,\r\n              },\r\n              {\r\n                provide: TranslateCompiler,\r\n                useClass: TranslateFakeCompiler,\r\n              },\r\n              {\r\n                provide: TranslateParser,\r\n                useClass: TranslateDefaultParser,\r\n              },\r\n              {\r\n                provide: MissingTranslationHandler,\r\n                useValue: null,\r\n              },\r\n              {\r\n                provide: USE_DEFAULT_LANG,\r\n                useValue: true,\r\n              },\r\n              {\r\n                provide: USE_EXTEND,\r\n                useValue: false,\r\n              },\r\n              { provide: ISOALTE_TRANSLATE_SERVICE, \r\n                useValue: false \r\n            },\r\n              TranslateStore,\r\n            {\r\n              provide: APP_INITIALIZER,\r\n              useFactory: (translate: TranslateService) => () => {\r\n                translate.setDefaultLang('de');\r\n                translate.use('de');\r\n                return Promise.resolve();\r\n              },\r\n              deps: [TranslateService],\r\n              multi: true\r\n            },\r\n          ]\r\n        })\r\n      ]\r\n};\r\n\r\nexport default preview;\r\n",
-            "inputsClass": [],
-            "outputsClass": [],
-            "properties": [],
-            "methods": [
-                {
-                    "name": "getTranslation",
-                    "args": [
-                        {
-                            "name": "lang",
-                            "type": "string",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "Observable<any>",
-                    "typeParameters": [],
-                    "line": 12,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "lang",
-                            "type": "string",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "indexSignatures": [],
-            "extends": [],
-            "hostBindings": [],
-            "hostListeners": [],
-            "implements": ["TranslateLoader"]
-        }
-    ],
+    "classes": [],
     "directives": [],
     "components": [],
     "modules": [],
@@ -66,7 +18,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Active',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
                 "name": "Active",
@@ -76,7 +28,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Active',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
                 "name": "Active",
@@ -96,7 +48,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Active',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
                 "name": "Changes",
@@ -107,6 +59,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 1,\n        borderRadius: 50,\n        classStyle: 'changes',\n        isDisabled: false\n    }\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
             },
             {
                 "name": "Default",
@@ -126,7 +88,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Default',\n        isDisabled: false\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Default',\n    }\n}"
             },
             {
                 "name": "Default",
@@ -146,7 +108,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        value: true,\n        mode: EditMode.WRITE,\n    }\n}"
+                "defaultValue": "{\n    args: {\n        value: true,\n        mode: EditMode.WRITE\n    }\n}"
             },
             {
                 "name": "Default",
@@ -166,7 +128,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n    }\n}"
+                "defaultValue": "{\n    args: {}\n}"
             },
             {
                 "name": "Default",
@@ -176,7 +138,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        dropHeight: 100,\n    }\n}"
+                "defaultValue": "{\n    args: {\n        dropHeight: 100\n    }\n}"
             },
             {
                 "name": "Default",
@@ -196,7 +158,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Delete',\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
             },
             {
                 "name": "Delete",
@@ -206,7 +168,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Delete',\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
             },
             {
                 "name": "Delete",
@@ -216,7 +178,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Delete',\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
             },
             {
                 "name": "DeleteActive",
@@ -226,7 +188,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
             },
             {
                 "name": "DeleteActive",
@@ -246,7 +208,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
             },
             {
                 "name": "DeleteDisabled",
@@ -286,7 +248,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle,\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
                 "name": "Disabled",
@@ -296,7 +258,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle,\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
                 "name": "Disabled",
@@ -306,7 +268,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: true,\n        faIcon: faInfoCircle,\n    }\n}"
+                "defaultValue": "{\n    args: {\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
                 "name": "Disabled",
@@ -317,6 +279,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle,\n        classStyle: 'inverted'\n    }\n}"
+            },
+            {
+                "name": "Disabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        checked: true,\n        isDisabled: true,\n    }\n}"
             },
             {
                 "name": "ErrorWithLink",
@@ -366,7 +338,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faInfoCircle,\n    }\n}"
+                "defaultValue": "{\n    args: {\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
                 "name": "Icon",
@@ -376,7 +348,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faInfoCircle,\n    }\n}"
+                "defaultValue": "{\n    args: {\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
                 "name": "Icon",
@@ -386,7 +358,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faInfoCircle,\n    }\n}"
+                "defaultValue": "{\n    args: {\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
                 "name": "iconOptions",
@@ -456,7 +428,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Inverted',\n        isDisabled: false,\n        faIcon: faInfoCircle,\n        hoverStyle: HoverStyle.INVERTED\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Inverted',\n        faIcon: faInfoCircle,\n        hoverStyle: HoverStyle.INVERTED\n    }\n}"
             },
             {
                 "name": "Large",
@@ -542,6 +514,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<OverviewWrapperComponent>",
+                "defaultValue": "{\n    title: 'Overview',\n    component: OverviewWrapperComponent,\n    tags: ['autodocs'],\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -566,7 +548,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BorderedBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['gray', 'delete' ]\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['gray', 'delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -586,7 +568,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CheckboxComponent>",
-                "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' },\n    }\n}"
+                "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' }\n    }\n}"
             },
             {
                 "name": "meta",
@@ -596,7 +578,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CircleBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor:  { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -616,7 +598,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<DropzoneComponent>",
-                "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        dropHeight: { control: 'number' },\n        allowedExtension: { control: 'object'},\n        fileArrayLength: { control: 'number' },\n        files: { control: 'object'},\n        maxSizeOfFiles: {control: 'number'}\n    }\n}"
+                "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        dropHeight: { control: 'number' },\n        allowedExtension: { control: 'check', options: ['json'] },\n        fileArrayLength: { control: 'number' },\n        files: { control: { type: 'file', accept: '.json' } },\n        maxSizeOfFiles: { control: 'number' }\n    }\n}"
             },
             {
                 "name": "meta",
@@ -629,6 +611,46 @@
                 "defaultValue": "{\n    title: 'Components/Buttons/Filled Btn',\n    component: FilledBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete', 'not-emphrazed', 'navbar-btn']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
             },
             {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TagBtnComponent>",
+                "defaultValue": "{\n    title: 'Components/TagBtn',\n    component: TagBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        backgroundColor: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ToggleBtnComponent>",
+                "defaultValue": "{\n    title: 'Components/ToggleBtn',\n    component: ToggleBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        checked: {control: 'boolean'},\n        isDisabled: {control: 'boolean'},\n        classStyle: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "Off",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Off',\n        checked: false,\n    }\n}"
+            },
+            {
+                "name": "On",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'On',\n        checked: true,\n    }\n}"
+            },
+            {
                 "name": "preview",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -636,7 +658,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\r\n    parameters: {\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n              color: ['../assets/styles.scss'],\r\n            },\r\n          },\r\n    },\r\n    decorators: [\r\n        applicationConfig({\r\n          providers: [\r\n            {\r\n                provide: TranslateLoader,\r\n                useClass: FakeLoader,\r\n              },\r\n              {\r\n                provide: TranslateCompiler,\r\n                useClass: TranslateFakeCompiler,\r\n              },\r\n              {\r\n                provide: TranslateParser,\r\n                useClass: TranslateDefaultParser,\r\n              },\r\n              {\r\n                provide: MissingTranslationHandler,\r\n                useValue: null,\r\n              },\r\n              {\r\n                provide: USE_DEFAULT_LANG,\r\n                useValue: true,\r\n              },\r\n              {\r\n                provide: USE_EXTEND,\r\n                useValue: false,\r\n              },\r\n              { provide: ISOALTE_TRANSLATE_SERVICE, \r\n                useValue: false \r\n            },\r\n              TranslateStore,\r\n            {\r\n              provide: APP_INITIALIZER,\r\n              useFactory: (translate: TranslateService) => () => {\r\n                translate.setDefaultLang('de');\r\n                translate.use('de');\r\n                return Promise.resolve();\r\n              },\r\n              deps: [TranslateService],\r\n              multi: true\r\n            },\r\n          ]\r\n        })\r\n      ]\r\n}"
+                "defaultValue": "{\n    parameters: {\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        }\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                {\n                    provide: TranslateLoader,\n                    useClass: FakeLoader\n                },\n                {\n                    provide: TranslateCompiler,\n                    useClass: TranslateFakeCompiler\n                },\n                {\n                    provide: TranslateParser,\n                    useClass: TranslateDefaultParser\n                },\n                {\n                    provide: MissingTranslationHandler,\n                    useValue: null\n                },\n                {\n                    provide: USE_DEFAULT_LANG,\n                    useValue: true\n                },\n                {\n                    provide: DEFAULT_LANGUAGE,\n                    useValue: true\n                },\n                {\n                    provide: USE_EXTEND,\n                    useValue: false\n                },\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\n                TranslateStore,\n                {\n                    provide: APP_INITIALIZER,\n                    useFactory: (translate: TranslateService) => () => {\n                        translate.setDefaultLang('de');\n                        translate.use('de');\n                        return Promise.resolve();\n                    },\n                    deps: [TranslateService],\n                    multi: true\n                }\n            ]\n        })\n    ]\n}"
             },
             {
                 "name": "Primary",
@@ -647,6 +669,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        primary: true,\n        label: 'Button'\n    }\n}"
+            },
+            {
+                "name": "ReadMode",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        value: true,\n        mode: EditMode.READ\n    }\n}"
             },
             {
                 "name": "RunningWithPostIcon",
@@ -686,7 +718,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
             },
             {
                 "name": "Spinning",
@@ -696,7 +728,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
             },
             {
                 "name": "Spinning",
@@ -716,7 +748,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
             },
             {
                 "name": "SuccessAlert",
@@ -737,6 +769,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Success',\n        borderRadius: 10,\n        classStyle: 'success',\n        isDisabled: false,\n        postIcon: undefined,\n        preIcon: faInfo\n    }\n}"
+            },
+            {
+                "name": "Tag",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Tag 1',\n    }\n}"
             },
             {
                 "name": "types",
@@ -799,6 +841,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<PageComponent>",
                 "file": "projects/angular-component-library/src/stories/page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<OverviewWrapperComponent>",
+                "file": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -902,6 +955,28 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<TagBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ToggleBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
             }
         ],
         "enumerations": [],
@@ -915,7 +990,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Active',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
                 },
                 {
                     "name": "Default",
@@ -925,7 +1000,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Default',\n        isDisabled: false\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Default',\n    }\n}"
                 },
                 {
                     "name": "Delete",
@@ -935,7 +1010,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
                 },
                 {
                     "name": "DeleteActive",
@@ -945,7 +1020,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
                 },
                 {
                     "name": "DeleteDisabled",
@@ -965,7 +1040,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle,\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
                 },
                 {
                     "name": "hoverStyles",
@@ -985,7 +1060,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faInfoCircle,\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        faIcon: faInfoCircle\n    }\n}"
                 },
                 {
                     "name": "iconOptions",
@@ -1005,7 +1080,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Inverted',\n        isDisabled: false,\n        faIcon: faInfoCircle,\n        hoverStyle: HoverStyle.INVERTED\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Inverted',\n        faIcon: faInfoCircle,\n        hoverStyle: HoverStyle.INVERTED\n    }\n}"
                 },
                 {
                     "name": "meta",
@@ -1015,7 +1090,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<BorderedBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['gray', 'delete' ]\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['gray', 'delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Spinning",
@@ -1025,7 +1100,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts": [
@@ -1037,7 +1112,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Active',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
                 },
                 {
                     "name": "Default",
@@ -1057,7 +1132,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
                 },
                 {
                     "name": "DeleteActive",
@@ -1087,7 +1162,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle,\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
                 },
                 {
                     "name": "hoverStyles",
@@ -1107,7 +1182,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faInfoCircle,\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        faIcon: faInfoCircle\n    }\n}"
                 },
                 {
                     "name": "iconOptions",
@@ -1137,7 +1212,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
@@ -1169,7 +1244,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: true,\n        faIcon: faInfoCircle,\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
                 },
                 {
                     "name": "iconOptions",
@@ -1189,7 +1264,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CircleBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor:  { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Spinning",
@@ -1211,7 +1286,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Active',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
                 },
                 {
                     "name": "Default",
@@ -1231,7 +1306,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
                 },
                 {
                     "name": "DeleteActive",
@@ -1241,7 +1316,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
                 },
                 {
                     "name": "DeleteDisabled",
@@ -1281,7 +1356,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faInfoCircle,\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        faIcon: faInfoCircle\n    }\n}"
                 },
                 {
                     "name": "iconOptions",
@@ -1311,7 +1386,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
@@ -1376,6 +1451,28 @@
                     "defaultValue": "{\n    args: {\n        label: 'Success',\n        borderRadius: 10,\n        classStyle: 'success',\n        isDisabled: false,\n        postIcon: undefined,\n        preIcon: faInfo\n    }\n}"
                 }
             ],
+            "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<OverviewWrapperComponent>",
+                    "defaultValue": "{\n    title: 'Overview',\n    component: OverviewWrapperComponent,\n    tags: ['autodocs'],\n}"
+                }
+            ],
             "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
                 {
                     "name": "Default",
@@ -1385,7 +1482,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        value: true,\n        mode: EditMode.WRITE,\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        value: true,\n        mode: EditMode.WRITE\n    }\n}"
                 },
                 {
                     "name": "meta",
@@ -1395,7 +1492,17 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CheckboxComponent>",
-                    "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' },\n    }\n}"
+                    "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' }\n    }\n}"
+                },
+                {
+                    "name": "ReadMode",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        value: true,\n        mode: EditMode.READ\n    }\n}"
                 },
                 {
                     "name": "types",
@@ -1417,7 +1524,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n    }\n}"
+                    "defaultValue": "{\n    args: {}\n}"
                 },
                 {
                     "name": "meta",
@@ -1439,7 +1546,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        dropHeight: 100,\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        dropHeight: 100\n    }\n}"
                 },
                 {
                     "name": "meta",
@@ -1449,7 +1556,49 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<DropzoneComponent>",
-                    "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        dropHeight: { control: 'number' },\n        allowedExtension: { control: 'object'},\n        fileArrayLength: { control: 'number' },\n        files: { control: 'object'},\n        maxSizeOfFiles: {control: 'number'}\n    }\n}"
+                    "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        dropHeight: { control: 'number' },\n        allowedExtension: { control: 'check', options: ['json'] },\n        fileArrayLength: { control: 'number' },\n        files: { control: { type: 'file', accept: '.json' } },\n        maxSizeOfFiles: { control: 'number' }\n    }\n}"
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts": [
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        checked: true,\n        isDisabled: true,\n    }\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ToggleBtnComponent>",
+                    "defaultValue": "{\n    title: 'Components/ToggleBtn',\n    component: ToggleBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        checked: {control: 'boolean'},\n        isDisabled: {control: 'boolean'},\n        classStyle: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
+                },
+                {
+                    "name": "Off",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Off',\n        checked: false,\n    }\n}"
+                },
+                {
+                    "name": "On",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'On',\n        checked: true,\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/alert/alert.stories.ts": [
@@ -1630,6 +1779,28 @@
                     "defaultValue": "{\n    title: 'Example/Page',\n    component: PageComponent,\n    parameters: {\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen'\n    }\n}"
                 }
             ],
+            "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TagBtnComponent>",
+                    "defaultValue": "{\n    title: 'Components/TagBtn',\n    component: TagBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        backgroundColor: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
+                },
+                {
+                    "name": "Tag",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Tag 1',\n    }\n}"
+                }
+            ],
             "projects/angular-component-library/.storybook/preview.ts": [
                 {
                     "name": "preview",
@@ -1639,7 +1810,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\r\n    parameters: {\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n              color: ['../assets/styles.scss'],\r\n            },\r\n          },\r\n    },\r\n    decorators: [\r\n        applicationConfig({\r\n          providers: [\r\n            {\r\n                provide: TranslateLoader,\r\n                useClass: FakeLoader,\r\n              },\r\n              {\r\n                provide: TranslateCompiler,\r\n                useClass: TranslateFakeCompiler,\r\n              },\r\n              {\r\n                provide: TranslateParser,\r\n                useClass: TranslateDefaultParser,\r\n              },\r\n              {\r\n                provide: MissingTranslationHandler,\r\n                useValue: null,\r\n              },\r\n              {\r\n                provide: USE_DEFAULT_LANG,\r\n                useValue: true,\r\n              },\r\n              {\r\n                provide: USE_EXTEND,\r\n                useValue: false,\r\n              },\r\n              { provide: ISOALTE_TRANSLATE_SERVICE, \r\n                useValue: false \r\n            },\r\n              TranslateStore,\r\n            {\r\n              provide: APP_INITIALIZER,\r\n              useFactory: (translate: TranslateService) => () => {\r\n                translate.setDefaultLang('de');\r\n                translate.use('de');\r\n                return Promise.resolve();\r\n              },\r\n              deps: [TranslateService],\r\n              multi: true\r\n            },\r\n          ]\r\n        })\r\n      ]\r\n}"
+                    "defaultValue": "{\n    parameters: {\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        }\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                {\n                    provide: TranslateLoader,\n                    useClass: FakeLoader\n                },\n                {\n                    provide: TranslateCompiler,\n                    useClass: TranslateFakeCompiler\n                },\n                {\n                    provide: TranslateParser,\n                    useClass: TranslateDefaultParser\n                },\n                {\n                    provide: MissingTranslationHandler,\n                    useValue: null\n                },\n                {\n                    provide: USE_DEFAULT_LANG,\n                    useValue: true\n                },\n                {\n                    provide: DEFAULT_LANGUAGE,\n                    useValue: true\n                },\n                {\n                    provide: USE_EXTEND,\n                    useValue: false\n                },\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\n                TranslateStore,\n                {\n                    provide: APP_INITIALIZER,\n                    useFactory: (translate: TranslateService) => () => {\n                        translate.setDefaultLang('de');\n                        translate.use('de');\n                        return Promise.resolve();\n                    },\n                    deps: [TranslateService],\n                    multi: true\n                }\n            ]\n        })\n    ]\n}"
                 }
             ]
         },
@@ -1679,6 +1850,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<PageComponent>",
                     "file": "projects/angular-component-library/src/stories/page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<OverviewWrapperComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1801,6 +1985,32 @@
                     "description": "",
                     "kind": 183
                 }
+            ],
+            "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TagBtnComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ToggleBtnComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
             ]
         }
     },
@@ -1809,15 +2019,6 @@
         "count": 0,
         "status": "low",
         "files": [
-            {
-                "filePath": "projects/angular-component-library/.storybook/preview.ts",
-                "type": "class",
-                "linktype": "classe",
-                "name": "FakeLoader",
-                "coveragePercent": 0,
-                "coverageCount": "0/2",
-                "status": "low"
-            },
             {
                 "filePath": "projects/angular-component-library/.storybook/preview.ts",
                 "type": "variable",
@@ -2243,6 +2444,16 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "ReadMode",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "types",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -2500,6 +2711,116 @@
             },
             {
                 "filePath": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Tag",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Disabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Off",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "On",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
