@@ -64,7 +64,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/overview-wrapper.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -149,6 +149,26 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Default',\n        isDisabled: false\n    }\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Default component with items to select',\n          },\n        },\n      },\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
             },
             {
                 "name": "Delete",
@@ -411,6 +431,16 @@
                 "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
             },
             {
+                "name": "iconOptions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Record<string, IconDefinition>",
+                "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash,\n}"
+            },
+            {
                 "name": "InfoAlert",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -434,7 +464,7 @@
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/stories/button.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -444,7 +474,7 @@
                 "name": "LoggedIn",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/stories/header.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -454,7 +484,7 @@
                 "name": "LoggedIn",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/stories/page.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -464,7 +494,7 @@
                 "name": "LoggedOut",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/stories/header.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -474,7 +504,7 @@
                 "name": "LoggedOut",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/stories/page.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -484,7 +514,7 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/stories/button.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ButtonComponent>",
@@ -494,7 +524,7 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/stories/header.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<HeaderComponent>",
@@ -504,21 +534,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/stories/page.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/overview-wrapper.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<PageComponent>",
-                "defaultValue": "{\n    title: 'Example/Page',\n    component: PageComponent,\n    parameters: {\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen'\n    }\n}"
+                "type": "Meta<OverviewWrapperComponent>",
+                "defaultValue": "{\n    title: 'Overview',\n    component: OverviewWrapperComponent,\n    tags: ['autodocs'],\n}"
             },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<OverviewWrapperComponent>",
-                "defaultValue": "{\n    title: 'Overview',\n    component: OverviewWrapperComponent,\n    tags: ['autodocs'],\n}"
+                "type": "Meta<PageComponent>",
+                "defaultValue": "{\n    title: 'Example/Page',\n    component: PageComponent,\n    parameters: {\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen'\n    }\n}"
             },
             {
                 "name": "meta",
@@ -614,11 +644,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<SelectComponent>",
+                "defaultValue": "{\n    title: 'Components/Select',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\n              }\n        },\n    },\n    argTypes: {\n        items: {control: 'object'},\n        selectedItem: {control: 'object'},\n        label: {control: 'text'},\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: { control: 'text' },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TagBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/TagBtn',\n    component: TagBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        backgroundColor: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Tag',\n    component: TagBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        backgroundColor: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -628,7 +668,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ToggleBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/ToggleBtn',\n    component: ToggleBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        checked: {control: 'boolean'},\n        isDisabled: {control: 'boolean'},\n        classStyle: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Toggle Btn',\n    component: ToggleBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        checked: {control: 'boolean'},\n        isDisabled: {control: 'boolean'},\n        classStyle: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TooltipComponent>",
+                "defaultValue": "{\n    title: 'Components/Tooltip',\n    component: TooltipComponent,\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "Off",
@@ -658,13 +708,13 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\n    parameters: {\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        }\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                {\n                    provide: TranslateLoader,\n                    useClass: FakeLoader\n                },\n                {\n                    provide: TranslateCompiler,\n                    useClass: TranslateFakeCompiler\n                },\n                {\n                    provide: TranslateParser,\n                    useClass: TranslateDefaultParser\n                },\n                {\n                    provide: MissingTranslationHandler,\n                    useValue: null\n                },\n                {\n                    provide: USE_DEFAULT_LANG,\n                    useValue: true\n                },\n                {\n                    provide: DEFAULT_LANGUAGE,\n                    useValue: true\n                },\n                {\n                    provide: USE_EXTEND,\n                    useValue: false\n                },\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\n                TranslateStore,\n                {\n                    provide: APP_INITIALIZER,\n                    useFactory: (translate: TranslateService) => () => {\n                        translate.setDefaultLang('de');\n                        translate.use('de');\n                        return Promise.resolve();\n                    },\n                    deps: [TranslateService],\n                    multi: true\n                }\n            ]\n        })\n    ]\n}"
+                "defaultValue": "{\n    parameters: {\n        storySort: {\n            order: ['Welcome', 'Components'],\n        },\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        }\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                {\n                    provide: TranslateLoader,\n                    useClass: FakeLoader\n                },\n                {\n                    provide: TranslateCompiler,\n                    useClass: TranslateFakeCompiler\n                },\n                {\n                    provide: TranslateParser,\n                    useClass: TranslateDefaultParser\n                },\n                {\n                    provide: MissingTranslationHandler,\n                    useValue: null\n                },\n                {\n                    provide: USE_DEFAULT_LANG,\n                    useValue: true\n                },\n                {\n                    provide: DEFAULT_LANGUAGE,\n                    useValue: true\n                },\n                {\n                    provide: USE_EXTEND,\n                    useValue: false\n                },\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\n                TranslateStore,\n                {\n                    provide: APP_INITIALIZER,\n                    useFactory: (translate: TranslateService) => () => {\n                        translate.setDefaultLang('de');\n                        translate.use('de');\n                        return Promise.resolve();\n                    },\n                    deps: [TranslateService],\n                    multi: true\n                }\n            ]\n        })\n    ]\n}"
             },
             {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/stories/button.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -694,17 +744,37 @@
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/stories/button.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Button'\n    }\n}"
             },
             {
+                "name": "selectedItem",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "new SelectItem('select1', undefined, Icons.faInfoCircle)"
+            },
+            {
+                "name": "selectItems",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\n    new SelectItem('select3'),\n]"
+            },
+            {
                 "name": "Small",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/stories/button.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -781,6 +851,16 @@
                 "defaultValue": "{\n    args: {\n        label: 'Tag 1',\n    }\n}"
             },
             {
+                "name": "TagBackgroundGreen",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Tag 2',\n        backgroundColor: 'green'\n    }\n}"
+            },
+            {
                 "name": "types",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -818,7 +898,7 @@
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<ButtonComponent>",
-                "file": "projects/angular-component-library/src/stories/button.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -829,18 +909,7 @@
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<HeaderComponent>",
-                "file": "projects/angular-component-library/src/stories/header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<PageComponent>",
-                "file": "projects/angular-component-library/src/stories/page.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -851,7 +920,18 @@
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<OverviewWrapperComponent>",
-                "file": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                "file": "projects/angular-component-library/src/lib/stories/overview-wrapper.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<PageComponent>",
+                "file": "projects/angular-component-library/src/lib/stories/page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -960,6 +1040,17 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<SelectComponent>",
+                "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<TagBtnComponent>",
                 "file": "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts",
                 "deprecated": false,
@@ -973,6 +1064,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<ToggleBtnComponent>",
                 "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<TooltipComponent>",
+                "file": "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1451,12 +1553,12 @@
                     "defaultValue": "{\n    args: {\n        label: 'Success',\n        borderRadius: 10,\n        classStyle: 'success',\n        isDisabled: false,\n        postIcon: undefined,\n        preIcon: faInfo\n    }\n}"
                 }
             ],
-            "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts": [
+            "projects/angular-component-library/src/lib/stories/overview-wrapper.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/overview-wrapper.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -1466,7 +1568,7 @@
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/overview-wrapper.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<OverviewWrapperComponent>",
@@ -1559,6 +1661,80 @@
                     "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        dropHeight: { control: 'number' },\n        allowedExtension: { control: 'check', options: ['json'] },\n        fileArrayLength: { control: 'number' },\n        files: { control: { type: 'file', accept: '.json' } },\n        maxSizeOfFiles: { control: 'number' }\n    }\n}"
                 }
             ],
+            "projects/angular-component-library/src/lib/components/select/select.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Default component with items to select',\n          },\n        },\n      },\n}"
+                },
+                {
+                    "name": "iconOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Record<string, IconDefinition>",
+                    "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash,\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<SelectComponent>",
+                    "defaultValue": "{\n    title: 'Components/Select',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\n              }\n        },\n    },\n    argTypes: {\n        items: {control: 'object'},\n        selectedItem: {control: 'object'},\n        label: {control: 'text'},\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: { control: 'text' },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n    },\n    tags: ['autodocs']\n}"
+                },
+                {
+                    "name": "selectedItem",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "new SelectItem('select1', undefined, Icons.faInfoCircle)"
+                },
+                {
+                    "name": "selectItems",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\n    new SelectItem('select3'),\n]"
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TooltipComponent>",
+                    "defaultValue": "{\n    title: 'Components/Tooltip',\n    component: TooltipComponent,\n    tags: ['autodocs']\n}"
+                }
+            ],
             "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts": [
                 {
                     "name": "Disabled",
@@ -1578,7 +1754,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ToggleBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/ToggleBtn',\n    component: ToggleBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        checked: {control: 'boolean'},\n        isDisabled: {control: 'boolean'},\n        classStyle: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Toggle Btn',\n    component: ToggleBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        checked: {control: 'boolean'},\n        isDisabled: {control: 'boolean'},\n        classStyle: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Off",
@@ -1663,12 +1839,12 @@
                     "defaultValue": "{\n    args: {\n        title: 'Warning Alert',\n        message: 'Warning Message',\n        type: AlertType.WARNING,\n        visibleState: true\n    }\n}"
                 }
             ],
-            "projects/angular-component-library/src/stories/button.stories.ts": [
+            "projects/angular-component-library/src/lib/stories/button.stories.ts": [
                 {
                     "name": "Large",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/angular-component-library/src/stories/button.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -1678,7 +1854,7 @@
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/angular-component-library/src/stories/button.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ButtonComponent>",
@@ -1688,7 +1864,7 @@
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/angular-component-library/src/stories/button.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -1698,7 +1874,7 @@
                     "name": "Secondary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/angular-component-library/src/stories/button.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -1708,19 +1884,19 @@
                     "name": "Small",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/angular-component-library/src/stories/button.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n        size: 'small',\n        label: 'Button'\n    }\n}"
                 }
             ],
-            "projects/angular-component-library/src/stories/header.stories.ts": [
+            "projects/angular-component-library/src/lib/stories/header.stories.ts": [
                 {
                     "name": "LoggedIn",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/angular-component-library/src/stories/header.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/header.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -1730,7 +1906,7 @@
                     "name": "LoggedOut",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/angular-component-library/src/stories/header.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/header.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -1740,19 +1916,19 @@
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/angular-component-library/src/stories/header.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/header.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<HeaderComponent>",
                     "defaultValue": "{\n    title: 'Example/Header',\n    component: HeaderComponent,\n    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n    tags: ['autodocs'],\n    parameters: {\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen'\n    },\n    args: {\n        onLogin: fn(),\n        onLogout: fn(),\n        onCreateAccount: fn()\n    }\n}"
                 }
             ],
-            "projects/angular-component-library/src/stories/page.stories.ts": [
+            "projects/angular-component-library/src/lib/stories/page.stories.ts": [
                 {
                     "name": "LoggedIn",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/angular-component-library/src/stories/page.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/page.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -1762,7 +1938,7 @@
                     "name": "LoggedOut",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/angular-component-library/src/stories/page.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/page.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -1772,7 +1948,7 @@
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/angular-component-library/src/stories/page.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/page.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<PageComponent>",
@@ -1788,7 +1964,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TagBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/TagBtn',\n    component: TagBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        backgroundColor: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Tag',\n    component: TagBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        backgroundColor: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Tag",
@@ -1799,6 +1975,16 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n        label: 'Tag 1',\n    }\n}"
+                },
+                {
+                    "name": "TagBackgroundGreen",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Tag 2',\n        backgroundColor: 'green'\n    }\n}"
                 }
             ],
             "projects/angular-component-library/.storybook/preview.ts": [
@@ -1810,59 +1996,59 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\n    parameters: {\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        }\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                {\n                    provide: TranslateLoader,\n                    useClass: FakeLoader\n                },\n                {\n                    provide: TranslateCompiler,\n                    useClass: TranslateFakeCompiler\n                },\n                {\n                    provide: TranslateParser,\n                    useClass: TranslateDefaultParser\n                },\n                {\n                    provide: MissingTranslationHandler,\n                    useValue: null\n                },\n                {\n                    provide: USE_DEFAULT_LANG,\n                    useValue: true\n                },\n                {\n                    provide: DEFAULT_LANGUAGE,\n                    useValue: true\n                },\n                {\n                    provide: USE_EXTEND,\n                    useValue: false\n                },\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\n                TranslateStore,\n                {\n                    provide: APP_INITIALIZER,\n                    useFactory: (translate: TranslateService) => () => {\n                        translate.setDefaultLang('de');\n                        translate.use('de');\n                        return Promise.resolve();\n                    },\n                    deps: [TranslateService],\n                    multi: true\n                }\n            ]\n        })\n    ]\n}"
+                    "defaultValue": "{\n    parameters: {\n        storySort: {\n            order: ['Welcome', 'Components'],\n        },\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        }\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                {\n                    provide: TranslateLoader,\n                    useClass: FakeLoader\n                },\n                {\n                    provide: TranslateCompiler,\n                    useClass: TranslateFakeCompiler\n                },\n                {\n                    provide: TranslateParser,\n                    useClass: TranslateDefaultParser\n                },\n                {\n                    provide: MissingTranslationHandler,\n                    useValue: null\n                },\n                {\n                    provide: USE_DEFAULT_LANG,\n                    useValue: true\n                },\n                {\n                    provide: DEFAULT_LANGUAGE,\n                    useValue: true\n                },\n                {\n                    provide: USE_EXTEND,\n                    useValue: false\n                },\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\n                TranslateStore,\n                {\n                    provide: APP_INITIALIZER,\n                    useFactory: (translate: TranslateService) => () => {\n                        translate.setDefaultLang('de');\n                        translate.use('de');\n                        return Promise.resolve();\n                    },\n                    deps: [TranslateService],\n                    multi: true\n                }\n            ]\n        })\n    ]\n}"
                 }
             ]
         },
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
-            "projects/angular-component-library/src/stories/button.stories.ts": [
+            "projects/angular-component-library/src/lib/stories/button.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ButtonComponent>",
-                    "file": "projects/angular-component-library/src/stories/button.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/stories/header.stories.ts": [
+            "projects/angular-component-library/src/lib/stories/header.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<HeaderComponent>",
-                    "file": "projects/angular-component-library/src/stories/header.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/header.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/stories/page.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<PageComponent>",
-                    "file": "projects/angular-component-library/src/stories/page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts": [
+            "projects/angular-component-library/src/lib/stories/overview-wrapper.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<OverviewWrapperComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/stories/overview-wrapper.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/stories/page.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<PageComponent>",
+                    "file": "projects/angular-component-library/src/lib/stories/page.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1986,6 +2172,19 @@
                     "kind": 183
                 }
             ],
+            "projects/angular-component-library/src/lib/components/select/select.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<SelectComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts": [
                 {
                     "name": "Story",
@@ -2006,6 +2205,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ToggleBtnComponent>",
                     "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TooltipComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2720,7 +2932,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2730,7 +2942,17 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "iconOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2740,7 +2962,27 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/lib/components/overview-wrapper.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "selectedItem",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "selectItems",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
@@ -2765,6 +3007,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Tag",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TagBackgroundGreen",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2830,7 +3082,37 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/stories/button.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2840,7 +3122,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/stories/button.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2850,7 +3132,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/stories/button.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2860,7 +3142,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/stories/button.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2870,7 +3152,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/stories/button.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2880,7 +3162,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/stories/button.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/stories/button.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
@@ -2890,7 +3172,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/stories/header.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/stories/header.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2900,7 +3182,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/stories/header.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/stories/header.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2910,7 +3192,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/stories/header.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/stories/header.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2920,7 +3202,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/stories/header.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/stories/header.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
@@ -2930,27 +3212,17 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/stories/page.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/stories/overview-wrapper.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "LoggedIn",
+                "name": "Default",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/stories/page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/angular-component-library/src/stories/page.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/stories/overview-wrapper.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2960,7 +3232,47 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/angular-component-library/src/stories/page.stories.ts",
+                "filePath": "projects/angular-component-library/src/lib/stories/overview-wrapper.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/stories/page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/stories/page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/stories/page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/stories/page.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

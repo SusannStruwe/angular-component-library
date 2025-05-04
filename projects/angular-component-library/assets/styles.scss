@@ -370,10 +370,25 @@ a {
 /*=============================================
   storybook overwrites
 =================================================*/
+
+.sbdocs-preview {
+    overflow: visible !important;
+}
+
 .docs-story {
-    min-height: 300px !important;
-    position: relative;
-  }
+    overflow: visible !important;
+    min-height: 200px;
+}
+
+.docs-story :not(.sb-story *) {
+    transform: none;
+}
+
+.docs-story div[scale="1"] {
+    transform: none;
+    min-height: 200px;
+} 
+
 
 /*===================================================
 Media queries for small devices

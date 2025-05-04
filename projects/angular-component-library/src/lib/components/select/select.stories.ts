@@ -25,6 +25,13 @@ const selectedItem = new SelectItem('select1', undefined, Icons.faInfoCircle);
 const meta: Meta<SelectComponent> = {
     title: 'Components/Select',
     component: SelectComponent,
+    parameters: {
+        docs: {
+            description: {
+                story: '### Wichtig\n\nDieser Button ist für Primäraktionen gedacht.',
+              }
+        },
+    },
     argTypes: {
         items: {control: 'object'},
         selectedItem: {control: 'object'},
@@ -63,5 +70,12 @@ export const Default: Story = {
         selectedItem: selectedItem,
         filterPlaceholder: 'Select...',
         show: true
-    }
+    },
+    parameters: {
+        docs: {
+          description: {
+            story: 'Default component with items to select',
+          },
+        },
+      },
 };

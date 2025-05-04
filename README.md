@@ -2,7 +2,7 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
--   [MIT license] (LICENSE)
+- [MIT licensee](./projects/angular-component-library/LICENSE)
 
 The library includes a list of different interaction components:
 
