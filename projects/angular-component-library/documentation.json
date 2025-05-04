@@ -4,7 +4,55 @@
     "injectables": [],
     "guards": [],
     "interceptors": [],
-    "classes": [],
+    "classes": [
+        {
+            "name": "FakeLoader",
+            "id": "class-FakeLoader-5b6b68d43c42f1ec37ad8f13e0567f64f326a084515a961d525300c7e2f9e792e4079b0563e9db50261558a47035e18caa60acad2d805da17e5828d74eb4a168",
+            "file": "projects/angular-component-library/.storybook/preview.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "import { applicationConfig, type Preview } from '@storybook/angular';\r\nimport { setCompodocJson } from '@storybook/addon-docs/angular';\r\nimport docJson from '../documentation.json';\r\nimport { ISOALTE_TRANSLATE_SERVICE, MissingTranslationHandler, TranslateCompiler, TranslateDefaultParser, TranslateFakeCompiler, TranslateLoader, TranslateModule, TranslateParser, TranslateService, TranslateStore, USE_DEFAULT_LANG, USE_EXTEND } from '@ngx-translate/core';\r\nimport { Observable, of } from 'rxjs';\r\nimport { APP_INITIALIZER, importProvidersFrom } from '@angular/core';\r\nsetCompodocJson(docJson);\r\n\r\n\r\n\r\nexport class FakeLoader implements TranslateLoader {\r\n    getTranslation(lang: string): Observable<any> {\r\n      const translations: { [key: string]: any } = {\r\n        en: {\r\n            upload: {\r\n                dropElement: {\r\n                    chooseFile: \"Datei wählen\",\r\n                    dropIt: \"Los lassen\"\r\n                }\r\n            },\r\n        },\r\n        de: {\r\n            upload: {\r\n                dropElement: {\r\n                    chooseFile: \"Datei wählen\",\r\n                    dropIt: \"Los lassen\"\r\n                }\r\n            },\r\n        }\r\n      };\r\n      return of(translations[lang] || {});\r\n    }\r\n  }\r\n  \r\n\r\nconst preview: Preview = {\r\n    parameters: {\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n              color: ['../assets/styles.scss'],\r\n            },\r\n          },\r\n    },\r\n    decorators: [\r\n        applicationConfig({\r\n          providers: [\r\n            {\r\n                provide: TranslateLoader,\r\n                useClass: FakeLoader,\r\n              },\r\n              {\r\n                provide: TranslateCompiler,\r\n                useClass: TranslateFakeCompiler,\r\n              },\r\n              {\r\n                provide: TranslateParser,\r\n                useClass: TranslateDefaultParser,\r\n              },\r\n              {\r\n                provide: MissingTranslationHandler,\r\n                useValue: null,\r\n              },\r\n              {\r\n                provide: USE_DEFAULT_LANG,\r\n                useValue: true,\r\n              },\r\n              {\r\n                provide: USE_EXTEND,\r\n                useValue: false,\r\n              },\r\n              { provide: ISOALTE_TRANSLATE_SERVICE, \r\n                useValue: false \r\n            },\r\n              TranslateStore,\r\n            {\r\n              provide: APP_INITIALIZER,\r\n              useFactory: (translate: TranslateService) => () => {\r\n                translate.setDefaultLang('de');\r\n                translate.use('de');\r\n                return Promise.resolve();\r\n              },\r\n              deps: [TranslateService],\r\n              multi: true\r\n            },\r\n          ]\r\n        })\r\n      ]\r\n};\r\n\r\nexport default preview;\r\n",
+            "inputsClass": [],
+            "outputsClass": [],
+            "properties": [],
+            "methods": [
+                {
+                    "name": "getTranslation",
+                    "args": [
+                        {
+                            "name": "lang",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<any>",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "lang",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "indexSignatures": [],
+            "extends": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "implements": ["TranslateLoader"]
+        }
+    ],
     "directives": [],
     "components": [],
     "modules": [],
@@ -94,6 +142,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        value: true,\n        mode: EditMode.WRITE,\n    }\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -114,6 +172,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        dropHeight: 100,\n    }\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -128,7 +196,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
             },
             {
                 "name": "Delete",
@@ -138,7 +206,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
             },
             {
                 "name": "Delete",
@@ -148,7 +216,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
             },
             {
                 "name": "DeleteActive",
@@ -158,7 +226,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
             },
             {
                 "name": "DeleteActive",
@@ -168,7 +236,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
             },
             {
                 "name": "DeleteActive",
@@ -178,7 +246,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
             },
             {
                 "name": "DeleteDisabled",
@@ -188,7 +256,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
             },
             {
                 "name": "DeleteDisabled",
@@ -198,7 +266,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
             },
             {
                 "name": "DeleteDisabled",
@@ -208,7 +276,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
             },
             {
                 "name": "Disabled",
@@ -248,7 +316,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle,\n        styleClass: 'inverted'\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle,\n        classStyle: 'inverted'\n    }\n}"
             },
             {
                 "name": "ErrorWithLink",
@@ -498,7 +566,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BorderedBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        styleClass: {\n            control: 'select',\n            options: ['gray', 'delete' ]\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['gray', 'delete' ]\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -508,7 +576,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BorderlessBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        styleClass: {\n            control: 'select',\n            options: ['delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CheckboxComponent>",
+                "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' },\n    }\n}"
             },
             {
                 "name": "meta",
@@ -518,7 +596,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CircleBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor:  { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        styleClass: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor:  { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -534,11 +612,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DropzoneComponent>",
+                "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        dropHeight: { control: 'number' },\n        allowedExtension: { control: 'object'},\n        fileArrayLength: { control: 'number' },\n        files: { control: 'object'},\n        maxSizeOfFiles: {control: 'number'}\n    }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<FilledBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Filled Btn',\n    component: FilledBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        styleClass: {\n            control: 'select',\n            options: ['delete', 'not-emphrazed', 'navbar-btn']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Buttons/Filled Btn',\n    component: FilledBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete', 'not-emphrazed', 'navbar-btn']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "preview",
@@ -548,7 +636,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\r\n    parameters: {\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n              color: ['../assets/styles.scss'],\r\n            },\r\n          },\r\n    }\r\n}"
+                "defaultValue": "{\r\n    parameters: {\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n              color: ['../assets/styles.scss'],\r\n            },\r\n          },\r\n    },\r\n    decorators: [\r\n        applicationConfig({\r\n          providers: [\r\n            {\r\n                provide: TranslateLoader,\r\n                useClass: FakeLoader,\r\n              },\r\n              {\r\n                provide: TranslateCompiler,\r\n                useClass: TranslateFakeCompiler,\r\n              },\r\n              {\r\n                provide: TranslateParser,\r\n                useClass: TranslateDefaultParser,\r\n              },\r\n              {\r\n                provide: MissingTranslationHandler,\r\n                useValue: null,\r\n              },\r\n              {\r\n                provide: USE_DEFAULT_LANG,\r\n                useValue: true,\r\n              },\r\n              {\r\n                provide: USE_EXTEND,\r\n                useValue: false,\r\n              },\r\n              { provide: ISOALTE_TRANSLATE_SERVICE, \r\n                useValue: false \r\n            },\r\n              TranslateStore,\r\n            {\r\n              provide: APP_INITIALIZER,\r\n              useFactory: (translate: TranslateService) => () => {\r\n                translate.setDefaultLang('de');\r\n                translate.use('de');\r\n                return Promise.resolve();\r\n              },\r\n              deps: [TranslateService],\r\n              multi: true\r\n            },\r\n          ]\r\n        })\r\n      ]\r\n}"
             },
             {
                 "name": "Primary",
@@ -661,6 +749,16 @@
                 "defaultValue": "AlertType"
             },
             {
+                "name": "types",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "EditMode"
+            },
+            {
                 "name": "WarningAlert",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -754,6 +852,17 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<CheckboxComponent>",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<CircleBtnComponent>",
                 "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
@@ -767,6 +876,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<ColorPaletteComponent>",
                 "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<DropzoneComponent>",
+                "file": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -815,7 +935,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
                 },
                 {
                     "name": "DeleteActive",
@@ -825,7 +945,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
                 },
                 {
                     "name": "DeleteDisabled",
@@ -835,7 +955,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
                 },
                 {
                     "name": "Disabled",
@@ -895,7 +1015,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<BorderedBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        styleClass: {\n            control: 'select',\n            options: ['gray', 'delete' ]\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['gray', 'delete' ]\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Spinning",
@@ -937,7 +1057,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
                 },
                 {
                     "name": "DeleteActive",
@@ -947,7 +1067,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
                 },
                 {
                     "name": "DeleteDisabled",
@@ -957,7 +1077,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
                 },
                 {
                     "name": "Disabled",
@@ -1007,7 +1127,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<BorderlessBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        styleClass: {\n            control: 'select',\n            options: ['delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Spinning",
@@ -1069,7 +1189,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CircleBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor:  { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        styleClass: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor:  { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Spinning",
@@ -1111,7 +1231,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        isDisabled: false,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
                 },
                 {
                     "name": "DeleteActive",
@@ -1121,7 +1241,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
                 },
                 {
                     "name": "DeleteDisabled",
@@ -1131,7 +1251,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        styleClass: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
                 },
                 {
                     "name": "Disabled",
@@ -1141,7 +1261,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle,\n        styleClass: 'inverted'\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle,\n        classStyle: 'inverted'\n    }\n}"
                 },
                 {
                     "name": "hoverStyles",
@@ -1181,7 +1301,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<FilledBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Filled Btn',\n    component: FilledBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        styleClass: {\n            control: 'select',\n            options: ['delete', 'not-emphrazed', 'navbar-btn']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Buttons/Filled Btn',\n    component: FilledBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete', 'not-emphrazed', 'navbar-btn']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Spinning",
@@ -1256,6 +1376,38 @@
                     "defaultValue": "{\n    args: {\n        label: 'Success',\n        borderRadius: 10,\n        classStyle: 'success',\n        isDisabled: false,\n        postIcon: undefined,\n        preIcon: faInfo\n    }\n}"
                 }
             ],
+            "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        value: true,\n        mode: EditMode.WRITE,\n    }\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CheckboxComponent>",
+                    "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' },\n    }\n}"
+                },
+                {
+                    "name": "types",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "EditMode"
+                }
+            ],
             "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts": [
                 {
                     "name": "Default",
@@ -1276,6 +1428,28 @@
                     "deprecationMessage": "",
                     "type": "Meta<ColorPaletteComponent>",
                     "defaultValue": "{\n    title: 'Components/ColorPalette',\n    component: ColorPaletteComponent,\n    tags: ['autodocs']\n}"
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        dropHeight: 100,\n    }\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DropzoneComponent>",
+                    "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        dropHeight: { control: 'number' },\n        allowedExtension: { control: 'object'},\n        fileArrayLength: { control: 'number' },\n        files: { control: 'object'},\n        maxSizeOfFiles: {control: 'number'}\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/alert/alert.stories.ts": [
@@ -1465,7 +1639,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\r\n    parameters: {\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n              color: ['../assets/styles.scss'],\r\n            },\r\n          },\r\n    }\r\n}"
+                    "defaultValue": "{\r\n    parameters: {\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n              color: ['../assets/styles.scss'],\r\n            },\r\n          },\r\n    },\r\n    decorators: [\r\n        applicationConfig({\r\n          providers: [\r\n            {\r\n                provide: TranslateLoader,\r\n                useClass: FakeLoader,\r\n              },\r\n              {\r\n                provide: TranslateCompiler,\r\n                useClass: TranslateFakeCompiler,\r\n              },\r\n              {\r\n                provide: TranslateParser,\r\n                useClass: TranslateDefaultParser,\r\n              },\r\n              {\r\n                provide: MissingTranslationHandler,\r\n                useValue: null,\r\n              },\r\n              {\r\n                provide: USE_DEFAULT_LANG,\r\n                useValue: true,\r\n              },\r\n              {\r\n                provide: USE_EXTEND,\r\n                useValue: false,\r\n              },\r\n              { provide: ISOALTE_TRANSLATE_SERVICE, \r\n                useValue: false \r\n            },\r\n              TranslateStore,\r\n            {\r\n              provide: APP_INITIALIZER,\r\n              useFactory: (translate: TranslateService) => () => {\r\n                translate.setDefaultLang('de');\r\n                translate.use('de');\r\n                return Promise.resolve();\r\n              },\r\n              deps: [TranslateService],\r\n              multi: true\r\n            },\r\n          ]\r\n        })\r\n      ]\r\n}"
                 }
             ]
         },
@@ -1563,6 +1737,19 @@
                     "kind": 183
                 }
             ],
+            "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CheckboxComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
                 {
                     "name": "Story",
@@ -1589,6 +1776,19 @@
                     "kind": 183
                 }
             ],
+            "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DropzoneComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts": [
                 {
                     "name": "Story",
@@ -1609,6 +1809,15 @@
         "count": 0,
         "status": "low",
         "files": [
+            {
+                "filePath": "projects/angular-component-library/.storybook/preview.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "FakeLoader",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
             {
                 "filePath": "projects/angular-component-library/.storybook/preview.ts",
                 "type": "variable",
@@ -2010,6 +2219,46 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "types",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2101,6 +2350,36 @@
             },
             {
                 "filePath": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

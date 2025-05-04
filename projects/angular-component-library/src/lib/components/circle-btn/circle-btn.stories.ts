@@ -9,7 +9,6 @@ import {
 import { Meta, StoryObj } from '@storybook/angular';
 import { CircleBtnComponent } from './circle-btn.component';
 
-
 const iconOptions: Record<string, IconDefinition> = {
     faCheck: faCheck,
     faExclamation: faExclamation,
@@ -30,7 +29,7 @@ const meta: Meta<CircleBtnComponent> = {
             options: Object.keys(iconOptions),
             mapping: iconOptions
         },
-        backgroundColor:  { control: 'text' },
+        backgroundColor: { control: 'text' },
         isDisabled: { control: 'boolean' },
         classStyle: { control: 'text' },
         width: { control: 'text' },
@@ -61,7 +60,7 @@ export const Active: Story = {
 export const Disabled: Story = {
     args: {
         isDisabled: true,
-        faIcon: faInfoCircle,
+        faIcon: faInfoCircle
     }
 };
 
@@ -72,4 +71,3 @@ export const Spinning: Story = {
         faIcon: faSpinner
     }
 };
-

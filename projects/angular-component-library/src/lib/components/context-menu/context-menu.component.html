@@ -12,11 +12,11 @@
         (click)="toggleMenu()"
         [style.justify-content]="label ? 'space-between' : 'center'">
         @if (label) {
-            <span>{{ label }}</span>
+        <span>{{ label }}</span>
         }
         <span [style.padding-left.px]="label ? 5 : 10">
             @if (faIcon) {
-                <fa-icon [icon]="faIcon"></fa-icon>
+            <fa-icon [icon]="faIcon"></fa-icon>
             }
         </span>
     </button>
@@ -28,14 +28,14 @@
         [ngClass]="alignmentLeft() ? 'left' : 'right'">
         <ul>
             @for (item of items; track item) {
-                <li
-                    (click)="selectElement(item)"
-                    [ngClass]="item.icon ? 'grid' : 'flex'">
-                    @if (item.icon) {
-                        <fa-icon [icon]="item.icon"></fa-icon>
-                    }
-                    <span class="text">{{ item.text }} </span>
-                </li>
+            <li
+                (click)="selectElement(item)"
+                [ngClass]="item.icon ? 'grid' : 'flex'">
+                @if (item.icon) {
+                <fa-icon [icon]="item.icon"></fa-icon>
+                }
+                <span class="text">{{ item.text }} </span>
+            </li>
             }
         </ul>
     </div>

@@ -264,14 +264,14 @@ export function getColorToName(taskName: string): string {
     const color = taskName.includes('A111')
         ? colors[0]
         : taskName.includes('B111')
-          ? colors[1]
-          : taskName.includes('A222')
-            ? colors[2]
-            : taskName.includes('B222')
-              ? colors[3]
-              : taskName.includes('A333')
-                ? colors[4]
-                : colors[0];
+        ? colors[1]
+        : taskName.includes('A222')
+        ? colors[2]
+        : taskName.includes('B222')
+        ? colors[3]
+        : taskName.includes('A333')
+        ? colors[4]
+        : colors[0];
     return color;
 }
 

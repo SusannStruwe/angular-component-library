@@ -1,22 +1,21 @@
 @if (mode === modes.WRITE) {
+<span
+    class="checkbox"
+    (click)="toggleValue()"
+    [style.height.px]="height ?? 30"
+    [style.width.px]="height ?? 30">
+    <input id="checkbox-{{ randomId }}" type="checkbox" [checked]="value" />
     <span
-        class="checkbox"
-        (click)="toggleValue()"
+        class="checkmark"
         [style.height.px]="height ?? 30"
         [style.width.px]="height ?? 30">
-        <input id="checkbox-{{ randomId }}" type="checkbox" [checked]="value" />
-        <span
-            class="checkmark"
-            [style.height.px]="height ?? 30"
-            [style.width.px]="height ?? 30">
-            @if (value) {
-                <fa-icon [icon]="faCheck"> </fa-icon>
-            }
-        </span>
+        @if (value) {
+        <fa-icon [icon]="faCheck"> </fa-icon>
+        }
     </span>
-}
-@if (mode === modes.READ) {
-    <span class="read">
-        <fa-icon [icon]="value ? faSquareCheck : faSquare"> </fa-icon>
-    </span>
+</span>
+} @if (mode === modes.READ) {
+<span class="read">
+    <fa-icon [icon]="value ? faSquareCheck : faSquare"> </fa-icon>
+</span>
 }

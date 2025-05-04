@@ -10,7 +10,6 @@ import { Meta, StoryObj } from '@storybook/angular';
 import { HoverStyle } from '../../model/hover-style.enum';
 import { BorderlessBtnComponent } from './borderless-btn.component';
 
-
 const iconOptions: Record<string, IconDefinition> = {
     faCheck: faCheck,
     faExclamation: faExclamation,
@@ -76,7 +75,7 @@ export const Disabled: Story = {
     args: {
         label: 'Disabled',
         isDisabled: true,
-        faIcon: faInfoCircle,
+        faIcon: faInfoCircle
     }
 };
 
@@ -121,12 +120,9 @@ export const Spinning: Story = {
     }
 };
 
-
 export const Icon: Story = {
     args: {
         isDisabled: false,
-        faIcon: faInfoCircle,
+        faIcon: faInfoCircle
     }
 };
-
-

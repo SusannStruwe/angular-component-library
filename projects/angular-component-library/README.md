@@ -2,41 +2,41 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
-- [License] (LICENSE)
+-   [License] (LICENSE)
 
 The library includes a list of different interaction components:
 
-- alert
-- badge
-- bordered-btn
-- borderless-btn
-- checkbox
-- circle-btn
-- collapsible
-- color-palette
-- context-menu
-- custom-select
-- date-picker
-- date-range-picker
-- date-time-picker
-- dropzone
-- duration-input
-- filled-btn
-- loader
-- modal
-- multi-select
-- navbar-btn
-- no-data
-- non-modal
-- popover
-- search-input
-- segmented-btn
-- select
-- table
-- tabs-view
-- tag-btn
-- toggle-btn
-- tooltip
+-   alert
+-   badge
+-   bordered-btn
+-   borderless-btn
+-   checkbox
+-   circle-btn
+-   collapsible
+-   color-palette
+-   context-menu
+-   custom-select
+-   date-picker
+-   date-range-picker
+-   date-time-picker
+-   dropzone
+-   duration-input
+-   filled-btn
+-   loader
+-   modal
+-   multi-select
+-   navbar-btn
+-   no-data
+-   non-modal
+-   popover
+-   search-input
+-   segmented-btn
+-   select
+-   table
+-   tabs-view
+-   tag-btn
+-   toggle-btn
+-   tooltip
 
 ## Link library with target dev project
 

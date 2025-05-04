@@ -9,7 +9,6 @@ $toast-error-color: #be4322;
 $toast-warning-color: #ffc107;
 
 body {
-
     /**
     * @tokens Colors
     * @presenter Color
@@ -43,7 +42,7 @@ body {
     --delete-color-light: #be432230;
     --delete-color: #be4322;
     --delete-color-dark: #863018;
-    
+
     --toast-info-color-light: #5699e410;
     --toast-info-color: #5699e4;
     --toast-info-color-dark: #4073ac;
@@ -81,11 +80,10 @@ body {
     --row-highlight-color: rgba(223, 251, 255, 0.5);
     --header-bg-color: rgb(000, 000, 000, 0.03);
 
-    --box-shadow:
-        0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(229, 112, 28, 0.14);
-    --popup-shadow:
-        0 3px 1px -2px rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2),
-        0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    --box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+        0 1px 1px rgba(229, 112, 28, 0.14);
+    --popup-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.3),
+        0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     --darken-gradient: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     --brightness: brightness(0.85);
 

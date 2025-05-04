@@ -10,7 +10,6 @@ import { Meta, StoryObj } from '@storybook/angular';
 import { HoverStyle } from '../../model/hover-style.enum';
 import { FilledBtnComponent } from './filled-btn.component';
 
-
 const iconOptions: Record<string, IconDefinition> = {
     faCheck: faCheck,
     faExclamation: faExclamation,
@@ -122,11 +121,9 @@ export const Spinning: Story = {
     }
 };
 
-
 export const Icon: Story = {
     args: {
         isDisabled: false,
-        faIcon: faInfoCircle,
+        faIcon: faInfoCircle
     }
 };
-

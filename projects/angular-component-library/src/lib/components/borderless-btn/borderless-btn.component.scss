@@ -43,9 +43,7 @@ Filling
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 0% 100%;
-    transition:
-        background-size 0.5s,
-        color 0.5s;
+    transition: background-size 0.5s, color 0.5s;
 
     fa-icon {
         color: var(--accent-color);

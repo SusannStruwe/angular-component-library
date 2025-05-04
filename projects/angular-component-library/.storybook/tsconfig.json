@@ -8,7 +8,8 @@
     "exclude": ["../src/test.ts", "../src/**/*.spec.ts"],
     "include": [
         "../src/**/*.stories.*",
-        "./preview.ts", "../src/lib/tokens/Color.mdx",
+        "./preview.ts",
+        "../src/lib/tokens/Color.mdx"
     ],
     "files": ["./typings.d.ts"]
 }

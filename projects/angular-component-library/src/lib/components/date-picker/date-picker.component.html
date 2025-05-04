@@ -4,14 +4,14 @@
         [style.display]="withInput ? 'block' : 'none'"
         [attr.aria-labelledby]="'date-input'"
         type="date"
-        [ngModel]="date | date: 'yyyy-MM-dd'"
+        [ngModel]="date | date : 'yyyy-MM-dd'"
         (ngModelChange)="changeDate((date = $event))" />
     @if (showOverlayBtn) {
-        <div
-            class="btn-overlay"
-            [style.position]="withInput ? 'absolute' : 'relative'"
-            (click)="showDatePicker()">
-            <fa-icon [icon]="faCalender"></fa-icon>
-        </div>
+    <div
+        class="btn-overlay"
+        [style.position]="withInput ? 'absolute' : 'relative'"
+        (click)="showDatePicker()">
+        <fa-icon [icon]="faCalender"></fa-icon>
+    </div>
     }
 </div>

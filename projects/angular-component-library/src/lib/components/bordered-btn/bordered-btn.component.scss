@@ -99,18 +99,14 @@ Shining
     &.active::before {
         border-top-color: var(--accent-color);
         border-right-color: var(--accent-color);
-        transition:
-            width 0.25s ease-out,
-            height 0.25s ease-out 0.25s;
+        transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
     }
 
     &:hover::after,
     &.active::after {
         border-bottom-color: var(--accent-color);
         border-left-color: var(--accent-color);
-        transition:
-            border-color 0s ease-out 0.5s,
-            width 0.25s ease-out 0.5s,
+        transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
             height 0.25s ease-out 0.75s;
     }
 }
@@ -126,9 +122,7 @@ Filling
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 0% 100%;
-    transition:
-        background-size 0.5s,
-        color 0.5s;
+    transition: background-size 0.5s, color 0.5s;
 
     fa-icon {
         color: var(--accent-color);

@@ -44,7 +44,7 @@ const meta: Meta<BorderedBtnComponent> = {
         isDisabled: { control: 'boolean' },
         classStyle: {
             control: 'select',
-            options: ['gray', 'delete' ]
+            options: ['gray', 'delete']
         },
         width: { control: 'text' },
         isSpinning: { control: 'boolean' },
@@ -70,13 +70,13 @@ export const Active: Story = {
         isActive: true,
         faIcon: faInfoCircle
     }
-}
+};
 
 export const Disabled: Story = {
     args: {
         label: 'Disabled',
         isDisabled: true,
-        faIcon: faInfoCircle,
+        faIcon: faInfoCircle
     }
 };
 
@@ -130,14 +130,9 @@ export const Spinning: Story = {
     }
 };
 
-
-
 export const Icon: Story = {
     args: {
         isDisabled: false,
-        faIcon: faInfoCircle,
+        faIcon: faInfoCircle
     }
 };
-
-
-
