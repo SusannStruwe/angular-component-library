@@ -1,4 +1,4 @@
-import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
+import { Meta, StoryObj } from '@storybook/angular';
 import { DropzoneComponent } from './dropzone.component';
 
 const meta: Meta<DropzoneComponent> = {
