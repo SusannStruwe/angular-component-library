@@ -18,7 +18,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Active',\r\n        isActive: true,\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
             },
             {
                 "name": "Active",
@@ -28,7 +28,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Active',\r\n        isActive: true,\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
             },
             {
                 "name": "Active",
@@ -38,7 +38,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        isDisabled: false,\r\n        isActive: true,\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
             },
             {
                 "name": "Active",
@@ -48,7 +48,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Active',\r\n        isActive: true,\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
             },
             {
                 "name": "Changes",
@@ -58,7 +58,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 1,\n        borderRadius: 50,\n        classStyle: 'changes',\n        isDisabled: false\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 1,\r\n        borderRadius: 50,\r\n        classStyle: 'changes',\r\n        isDisabled: false\r\n    }\r\n}"
             },
             {
                 "name": "Default",
@@ -78,7 +78,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Default',\n        borderRadius: 10,\n        isDisabled: false,\n        postIcon: faCheck,\n        preIcon: undefined\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Default',\r\n        borderRadius: 10,\r\n        isDisabled: false,\r\n        postIcon: faCheck,\r\n        preIcon: undefined\r\n    }\r\n}"
             },
             {
                 "name": "Default",
@@ -88,7 +88,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Default',\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Default',\r\n    }\r\n}"
             },
             {
                 "name": "Default",
@@ -98,7 +98,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Default',\n        isDisabled: false\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Default',\r\n        isDisabled: false\r\n    }\r\n}"
             },
             {
                 "name": "Default",
@@ -108,7 +108,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        value: true,\n        mode: EditMode.WRITE\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        value: true,\r\n        mode: EditMode.WRITE\r\n    }\r\n}"
             },
             {
                 "name": "Default",
@@ -118,7 +118,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faCheck\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        isDisabled: false,\r\n        faIcon: faCheck\r\n    }\r\n}"
             },
             {
                 "name": "Default",
@@ -128,7 +128,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {}\n}"
+                "defaultValue": "{\r\n    args: {}\r\n}"
             },
             {
                 "name": "Default",
@@ -138,7 +138,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        dropHeight: 100\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        dropHeight: 100\r\n    }\r\n}"
             },
             {
                 "name": "Default",
@@ -148,7 +148,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Default',\n        isDisabled: false\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Default',\r\n        isDisabled: false\r\n    }\r\n}"
             },
             {
                 "name": "Default",
@@ -158,7 +158,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Default component with items to select',\n          },\n        },\n      },\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Label: ',\r\n        items: selectItems,\r\n        selectedItem: selectedItem,\r\n        filterPlaceholder: 'Select...',\r\n        show: true\r\n    },\r\n    parameters: {\r\n        docs: {\r\n          description: {\r\n            story: 'Default component with items to select',\r\n          },\r\n        },\r\n      },\r\n}"
             },
             {
                 "name": "Default",
@@ -178,7 +178,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Delete',\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Delete',\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
             },
             {
                 "name": "Delete",
@@ -188,7 +188,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Delete',\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Delete',\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
             },
             {
                 "name": "Delete",
@@ -198,7 +198,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Delete',\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Delete',\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
             },
             {
                 "name": "DeleteActive",
@@ -208,7 +208,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'DeleteActive',\r\n        isActive: true,\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
             },
             {
                 "name": "DeleteActive",
@@ -218,7 +218,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'DeleteActive',\r\n        isDisabled: false,\r\n        isActive: true,\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
             },
             {
                 "name": "DeleteActive",
@@ -228,7 +228,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'DeleteActive',\r\n        isActive: true,\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
             },
             {
                 "name": "DeleteDisabled",
@@ -238,7 +238,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'DeleteDisabled',\r\n        isDisabled: true,\r\n        isActive: true,\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
             },
             {
                 "name": "DeleteDisabled",
@@ -248,7 +248,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'DeleteDisabled',\r\n        isDisabled: true,\r\n        isActive: true,\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
             },
             {
                 "name": "DeleteDisabled",
@@ -258,7 +258,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'DeleteDisabled',\r\n        isDisabled: true,\r\n        isActive: true,\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
             },
             {
                 "name": "Disabled",
@@ -268,7 +268,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Disabled',\r\n        isDisabled: true,\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
             },
             {
                 "name": "Disabled",
@@ -278,7 +278,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Disabled',\r\n        isDisabled: true,\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
             },
             {
                 "name": "Disabled",
@@ -288,7 +288,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        isDisabled: true,\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
             },
             {
                 "name": "Disabled",
@@ -298,7 +298,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle,\n        classStyle: 'inverted'\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Disabled',\r\n        isDisabled: true,\r\n        faIcon: faInfoCircle,\r\n        classStyle: 'inverted'\r\n    }\r\n}"
             },
             {
                 "name": "Disabled",
@@ -308,7 +308,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        checked: true,\n        isDisabled: true,\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Disabled',\r\n        checked: true,\r\n        isDisabled: true,\r\n    }\r\n}"
             },
             {
                 "name": "ErrorWithLink",
@@ -318,7 +318,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        title: 'Error Alert',\n        message: 'Error Message',\n        type: AlertType.ERROR,\n        visibleState: true\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        title: 'Error Alert',\r\n        message: 'Error Message',\r\n        type: AlertType.ERROR,\r\n        visibleState: true\r\n    }\r\n}"
             },
             {
                 "name": "hoverStyles",
@@ -358,7 +358,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        faIcon: faInfoCircle\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
             },
             {
                 "name": "Icon",
@@ -368,7 +368,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        faIcon: faInfoCircle\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
             },
             {
                 "name": "Icon",
@@ -378,7 +378,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        faIcon: faInfoCircle\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
             },
             {
                 "name": "iconOptions",
@@ -388,7 +388,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
-                "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfo: faInfo\n}"
+                "defaultValue": "{\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfo: faInfo\r\n}"
             },
             {
                 "name": "iconOptions",
@@ -398,7 +398,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
-                "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfo: faInfo,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+                "defaultValue": "{\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfo: faInfo,\r\n    faSpinner: faSpinner,\r\n    faTrash: faTrash\r\n}"
             },
             {
                 "name": "iconOptions",
@@ -408,7 +408,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
-                "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+                "defaultValue": "{\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfoCircle: faInfoCircle,\r\n    faSpinner: faSpinner,\r\n    faTrash: faTrash\r\n}"
             },
             {
                 "name": "iconOptions",
@@ -418,7 +418,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
-                "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+                "defaultValue": "{\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfoCircle: faInfoCircle,\r\n    faSpinner: faSpinner,\r\n    faTrash: faTrash\r\n}"
             },
             {
                 "name": "iconOptions",
@@ -428,7 +428,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
-                "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+                "defaultValue": "{\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfoCircle: faInfoCircle,\r\n    faSpinner: faSpinner,\r\n    faTrash: faTrash\r\n}"
             },
             {
                 "name": "iconOptions",
@@ -438,7 +438,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
-                "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash,\n}"
+                "defaultValue": "{\r\n    faChevronDown: faChevronDown,\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfoCircle: faInfoCircle,\r\n    faSpinner: faSpinner,\r\n    faTrash: faTrash,\r\n}"
             },
             {
                 "name": "InfoAlert",
@@ -448,7 +448,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        title: 'Info Alert',\n        message: 'Info  Message',\n        type: AlertType.INFO,\n        visibleState: true,\n        navigationLink: 'pailot.com',\n        navigationLinkLabel: 'Further informations under pailto.com '\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        title: 'Info Alert',\r\n        message: 'Info  Message',\r\n        type: AlertType.INFO,\r\n        visibleState: true,\r\n        navigationLink: 'pailot.com',\r\n        navigationLinkLabel: 'Further informations under pailto.com '\r\n    }\r\n}"
             },
             {
                 "name": "Inverted",
@@ -458,7 +458,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Inverted',\n        faIcon: faInfoCircle,\n        hoverStyle: HoverStyle.INVERTED\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Inverted',\r\n        faIcon: faInfoCircle,\r\n        hoverStyle: HoverStyle.INVERTED\r\n    }\r\n}"
             },
             {
                 "name": "Large",
@@ -468,7 +468,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        size: 'large',\n        label: 'Button'\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        size: 'large',\r\n        label: 'Button'\r\n    }\r\n}"
             },
             {
                 "name": "LoggedIn",
@@ -478,7 +478,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        user: {\n            name: 'Jane Doe'\n        }\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        user: {\r\n            name: 'Jane Doe'\r\n        }\r\n    }\r\n}"
             },
             {
                 "name": "LoggedIn",
@@ -488,7 +488,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n        const loginButton = canvas.getByRole('button', { name: /Log in/i });\n        await expect(loginButton).toBeInTheDocument();\n        await userEvent.click(loginButton);\n        await expect(loginButton).not.toBeInTheDocument();\n\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n        await expect(logoutButton).toBeInTheDocument();\n    }\n}"
+                "defaultValue": "{\r\n    play: async ({ canvasElement }) => {\r\n        const canvas = within(canvasElement);\r\n        const loginButton = canvas.getByRole('button', { name: /Log in/i });\r\n        await expect(loginButton).toBeInTheDocument();\r\n        await userEvent.click(loginButton);\r\n        await expect(loginButton).not.toBeInTheDocument();\r\n\r\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i });\r\n        await expect(logoutButton).toBeInTheDocument();\r\n    }\r\n}"
             },
             {
                 "name": "LoggedOut",
@@ -518,7 +518,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ButtonComponent>",
-                "defaultValue": "{\n    title: 'Example/Button',\n    component: ButtonComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        backgroundColor: {\n            control: 'color'\n        }\n    },\n    // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\n    args: { onClick: fn() }\n}"
+                "defaultValue": "{\r\n    title: 'Example/Button',\r\n    component: ButtonComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        backgroundColor: {\r\n            control: 'color'\r\n        }\r\n    },\r\n    // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n    args: { onClick: fn() }\r\n}"
             },
             {
                 "name": "meta",
@@ -528,7 +528,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<HeaderComponent>",
-                "defaultValue": "{\n    title: 'Example/Header',\n    component: HeaderComponent,\n    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n    tags: ['autodocs'],\n    parameters: {\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen'\n    },\n    args: {\n        onLogin: fn(),\n        onLogout: fn(),\n        onCreateAccount: fn()\n    }\n}"
+                "defaultValue": "{\r\n    title: 'Example/Header',\r\n    component: HeaderComponent,\r\n    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\r\n    tags: ['autodocs'],\r\n    parameters: {\r\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n        layout: 'fullscreen'\r\n    },\r\n    args: {\r\n        onLogin: fn(),\r\n        onLogout: fn(),\r\n        onCreateAccount: fn()\r\n    }\r\n}"
             },
             {
                 "name": "meta",
@@ -538,7 +538,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<OverviewWrapperComponent>",
-                "defaultValue": "{\n    title: 'Overview',\n    component: OverviewWrapperComponent,\n    tags: ['autodocs'],\n}"
+                "defaultValue": "{\r\n    title: 'Overview',\r\n    component: OverviewWrapperComponent,\r\n    tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "meta",
@@ -548,7 +548,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<PageComponent>",
-                "defaultValue": "{\n    title: 'Example/Page',\n    component: PageComponent,\n    parameters: {\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen'\n    }\n}"
+                "defaultValue": "{\r\n    title: 'Example/Page',\r\n    component: PageComponent,\r\n    parameters: {\r\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n        layout: 'fullscreen'\r\n    }\r\n}"
             },
             {
                 "name": "meta",
@@ -558,7 +558,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<AlertComponent>",
-                "defaultValue": "{\n    title: 'Components/Alert',\n    component: AlertComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [RouterModule],\n            providers: [\n                {\n                    provide: ActivatedRoute,\n                    useValue: {\n                        snapshot: {\n                            paramMap: new Map([['id', '123']]),\n                            data: {}\n                        },\n                        params: [{ id: '123' }],\n                        queryParams: {}\n                    } // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n                }\n            ]\n        })\n    ],\n    tags: ['autodocs'],\n    argTypes: {\n        title: { control: 'text', value: '' },\n        message: { control: 'text', value: '' },\n        type: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: AlertType,\n            value: AlertType.SUCCESS\n        },\n        visibleState: { control: 'boolean', value: false },\n        navigationLink: { control: 'text', value: undefined },\n        navigationLinkLabel: { control: 'text', value: undefined }\n    }\n}"
+                "defaultValue": "{\r\n    title: 'Components/Alert',\r\n    component: AlertComponent,\r\n    decorators: [\r\n        moduleMetadata({\r\n            imports: [RouterModule],\r\n            providers: [\r\n                {\r\n                    provide: ActivatedRoute,\r\n                    useValue: {\r\n                        snapshot: {\r\n                            paramMap: new Map([['id', '123']]),\r\n                            data: {}\r\n                        },\r\n                        params: [{ id: '123' }],\r\n                        queryParams: {}\r\n                    } // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\r\n                }\r\n            ]\r\n        })\r\n    ],\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        title: { control: 'text', value: '' },\r\n        message: { control: 'text', value: '' },\r\n        type: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(types),\r\n            mapping: AlertType,\r\n            value: AlertType.SUCCESS\r\n        },\r\n        visibleState: { control: 'boolean', value: false },\r\n        navigationLink: { control: 'text', value: undefined },\r\n        navigationLinkLabel: { control: 'text', value: undefined }\r\n    }\r\n}"
             },
             {
                 "name": "meta",
@@ -568,7 +568,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BadgeComponent>",
-                "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        classStyle: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ]\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
+                "defaultValue": "{\r\n    title: 'Components/Badge',\r\n    component: BadgeComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        label: { control: 'text' },\r\n        borderRadius: { control: 'number' },\r\n        classStyle: {\r\n            control: 'select',\r\n            options: [\r\n                'running',\r\n                'failed',\r\n                'success',\r\n                'pending',\r\n                'changes',\r\n                'urgent',\r\n                'frozen',\r\n                'current',\r\n                'manual',\r\n                'free'\r\n            ]\r\n        },\r\n        isDisabled: { control: 'boolean' },\r\n        postIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        preIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        }\r\n    }\r\n}"
             },
             {
                 "name": "meta",
@@ -578,7 +578,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BorderedBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['gray', 'delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\r\n    title: 'Components/Buttons/Bordered Btn',\r\n    component: BorderedBtnComponent,\r\n    argTypes: {\r\n        ariaLabel: { control: 'text' },\r\n        label: { control: 'text' },\r\n        faIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        hoverStyle: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(hoverStyles),\r\n            mapping: HoverStyle\r\n        },\r\n        showIcon: { control: 'boolean' },\r\n        isDisabled: { control: 'boolean' },\r\n        classStyle: {\r\n            control: 'select',\r\n            options: ['gray', 'delete']\r\n        },\r\n        width: { control: 'text' },\r\n        isSpinning: { control: 'boolean' },\r\n        isActive: { control: 'boolean' }\r\n    },\r\n    tags: ['autodocs']\r\n}"
             },
             {
                 "name": "meta",
@@ -588,7 +588,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BorderlessBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\r\n    title: 'Components/Buttons/Borderless Btn',\r\n    component: BorderlessBtnComponent,\r\n    argTypes: {\r\n        ariaLabel: { control: 'text' },\r\n        label: { control: 'text' },\r\n        faIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        hoverStyle: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(hoverStyles),\r\n            mapping: HoverStyle\r\n        },\r\n        showIcon: { control: 'boolean' },\r\n        isDisabled: { control: 'boolean' },\r\n        classStyle: {\r\n            control: 'select',\r\n            options: ['delete']\r\n        },\r\n        width: { control: 'text' },\r\n        isSpinning: { control: 'boolean' },\r\n        isActive: { control: 'boolean' }\r\n    },\r\n    tags: ['autodocs']\r\n}"
             },
             {
                 "name": "meta",
@@ -598,7 +598,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CheckboxComponent>",
-                "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' }\n    }\n}"
+                "defaultValue": "{\r\n    title: 'Components/Checkbox',\r\n    component: CheckboxComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        value: { control: 'boolean' },\r\n        mode: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(types),\r\n            mapping: EditMode,\r\n            value: EditMode.WRITE\r\n        },\r\n        height: { control: 'number' }\r\n    }\r\n}"
             },
             {
                 "name": "meta",
@@ -608,7 +608,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CircleBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\r\n    title: 'Components/Buttons/Circle Btn',\r\n    component: CircleBtnComponent,\r\n    argTypes: {\r\n        ariaLabel: { control: 'text' },\r\n        faIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        backgroundColor: { control: 'text' },\r\n        isDisabled: { control: 'boolean' },\r\n        classStyle: { control: 'text' },\r\n        width: { control: 'text' },\r\n        isSpinning: { control: 'boolean' },\r\n        isActive: { control: 'boolean' }\r\n    },\r\n    tags: ['autodocs']\r\n}"
             },
             {
                 "name": "meta",
@@ -618,7 +618,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ColorPaletteComponent>",
-                "defaultValue": "{\n    title: 'Components/ColorPalette',\n    component: ColorPaletteComponent,\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\r\n    title: 'Components/ColorPalette',\r\n    component: ColorPaletteComponent,\r\n    tags: ['autodocs']\r\n}"
             },
             {
                 "name": "meta",
@@ -628,7 +628,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<DropzoneComponent>",
-                "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        dropHeight: { control: 'number' },\n        allowedExtension: { control: 'check', options: ['json'] },\n        fileArrayLength: { control: 'number' },\n        files: { control: { type: 'file', accept: '.json' } },\n        maxSizeOfFiles: { control: 'number' }\n    }\n}"
+                "defaultValue": "{\r\n    title: 'Components/Dropzone',\r\n    component: DropzoneComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        dropHeight: { control: 'number' },\r\n        allowedExtension: { control: 'check', options: ['json'] },\r\n        fileArrayLength: { control: 'number' },\r\n        files: { control: { type: 'file', accept: '.json' } },\r\n        maxSizeOfFiles: { control: 'number' }\r\n    }\r\n}"
             },
             {
                 "name": "meta",
@@ -638,7 +638,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<FilledBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Filled Btn',\n    component: FilledBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete', 'not-emphrazed', 'navbar-btn']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\r\n    title: 'Components/Buttons/Filled Btn',\r\n    component: FilledBtnComponent,\r\n    argTypes: {\r\n        ariaLabel: { control: 'text' },\r\n        label: { control: 'text' },\r\n        faIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        hoverStyle: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(hoverStyles),\r\n            mapping: HoverStyle\r\n        },\r\n        showIcon: { control: 'boolean' },\r\n        isDisabled: { control: 'boolean' },\r\n        classStyle: {\r\n            control: 'select',\r\n            options: ['delete', 'not-emphrazed', 'navbar-btn']\r\n        },\r\n        width: { control: 'text' },\r\n        isSpinning: { control: 'boolean' },\r\n        isActive: { control: 'boolean' }\r\n    },\r\n    tags: ['autodocs']\r\n}"
             },
             {
                 "name": "meta",
@@ -648,7 +648,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<SelectComponent>",
-                "defaultValue": "{\n    title: 'Components/Select',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\n              }\n        },\n    },\n    argTypes: {\n        items: {control: 'object'},\n        selectedItem: {control: 'object'},\n        label: {control: 'text'},\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: { control: 'text' },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\r\n    title: 'Components/Select',\r\n    component: SelectComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\r\n              }\r\n        },\r\n    },\r\n    argTypes: {\r\n        items: {control: 'object'},\r\n        selectedItem: {control: 'object'},\r\n        label: {control: 'text'},\r\n        faIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        faIconBefore: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        classStyle: { control: 'text' },\r\n        withBlankOption: { control: 'boolean' },\r\n        withDeselect: { control: 'boolean' },\r\n        withFilter: { control: 'boolean' },\r\n        filterPlaceholder: { control: 'text' },\r\n        show: { control: 'boolean' },\r\n    },\r\n    tags: ['autodocs']\r\n}"
             },
             {
                 "name": "meta",
@@ -658,7 +658,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TagBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Tag',\n    component: TagBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        backgroundColor: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\r\n    title: 'Components/Tag',\r\n    component: TagBtnComponent,\r\n    argTypes: {\r\n        label: {control: 'text'},\r\n        backgroundColor: {control: 'text'},\r\n    },\r\n    tags: ['autodocs']\r\n}"
             },
             {
                 "name": "meta",
@@ -668,7 +668,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ToggleBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Toggle Btn',\n    component: ToggleBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        checked: {control: 'boolean'},\n        isDisabled: {control: 'boolean'},\n        classStyle: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\r\n    title: 'Components/Toggle Btn',\r\n    component: ToggleBtnComponent,\r\n    argTypes: {\r\n        label: {control: 'text'},\r\n        checked: {control: 'boolean'},\r\n        isDisabled: {control: 'boolean'},\r\n        classStyle: {control: 'text'},\r\n    },\r\n    tags: ['autodocs']\r\n}"
             },
             {
                 "name": "meta",
@@ -678,7 +678,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TooltipComponent>",
-                "defaultValue": "{\n    title: 'Components/Tooltip',\n    component: TooltipComponent,\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\r\n    title: 'Components/Tooltip',\r\n    component: TooltipComponent,\r\n    tags: ['autodocs']\r\n}"
             },
             {
                 "name": "Off",
@@ -688,7 +688,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Off',\n        checked: false,\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Off',\r\n        checked: false,\r\n    }\r\n}"
             },
             {
                 "name": "On",
@@ -698,7 +698,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'On',\n        checked: true,\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'On',\r\n        checked: true,\r\n    }\r\n}"
             },
             {
                 "name": "preview",
@@ -708,7 +708,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\n    parameters: {\n        storySort: {\n            order: ['Welcome', 'Components'],\n        },\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        }\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                {\n                    provide: TranslateLoader,\n                    useClass: FakeLoader\n                },\n                {\n                    provide: TranslateCompiler,\n                    useClass: TranslateFakeCompiler\n                },\n                {\n                    provide: TranslateParser,\n                    useClass: TranslateDefaultParser\n                },\n                {\n                    provide: MissingTranslationHandler,\n                    useValue: null\n                },\n                {\n                    provide: USE_DEFAULT_LANG,\n                    useValue: true\n                },\n                {\n                    provide: DEFAULT_LANGUAGE,\n                    useValue: true\n                },\n                {\n                    provide: USE_EXTEND,\n                    useValue: false\n                },\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\n                TranslateStore,\n                {\n                    provide: APP_INITIALIZER,\n                    useFactory: (translate: TranslateService) => () => {\n                        translate.setDefaultLang('de');\n                        translate.use('de');\n                        return Promise.resolve();\n                    },\n                    deps: [TranslateService],\n                    multi: true\n                }\n            ]\n        })\n    ]\n}"
+                "defaultValue": "{\r\n    parameters: {\r\n        layout: 'centered',\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n                color: ['../assets/styles.scss']\r\n            }\r\n        }\r\n    },\r\n    decorators: [\r\n        applicationConfig({\r\n            providers: [\r\n                {\r\n                    provide: TranslateLoader,\r\n                    useClass: FakeLoader\r\n                },\r\n                {\r\n                    provide: TranslateCompiler,\r\n                    useClass: TranslateFakeCompiler\r\n                },\r\n                {\r\n                    provide: TranslateParser,\r\n                    useClass: TranslateDefaultParser\r\n                },\r\n                {\r\n                    provide: MissingTranslationHandler,\r\n                    useValue: null\r\n                },\r\n                {\r\n                    provide: USE_DEFAULT_LANG,\r\n                    useValue: true\r\n                },\r\n                {\r\n                    provide: DEFAULT_LANGUAGE,\r\n                    useValue: true\r\n                },\r\n                {\r\n                    provide: USE_EXTEND,\r\n                    useValue: false\r\n                },\r\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\r\n                TranslateStore,\r\n                {\r\n                    provide: APP_INITIALIZER,\r\n                    useFactory: (translate: TranslateService) => () => {\r\n                        translate.setDefaultLang('de');\r\n                        translate.use('de');\r\n                        return Promise.resolve();\r\n                    },\r\n                    deps: [TranslateService],\r\n                    multi: true\r\n                }\r\n            ]\r\n        })\r\n    ]\r\n}"
             },
             {
                 "name": "Primary",
@@ -718,7 +718,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        primary: true,\n        label: 'Button'\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        primary: true,\r\n        label: 'Button'\r\n    }\r\n}"
             },
             {
                 "name": "ReadMode",
@@ -728,7 +728,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        value: true,\n        mode: EditMode.READ\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        value: true,\r\n        mode: EditMode.READ\r\n    }\r\n}"
             },
             {
                 "name": "RunningWithPostIcon",
@@ -738,7 +738,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Running',\n        borderRadius: 10,\n        classStyle: 'running',\n        isDisabled: false,\n        postIcon: faCheck,\n        preIcon: undefined\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Running',\r\n        borderRadius: 10,\r\n        classStyle: 'running',\r\n        isDisabled: false,\r\n        postIcon: faCheck,\r\n        preIcon: undefined\r\n    }\r\n}"
             },
             {
                 "name": "Secondary",
@@ -748,7 +748,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Button'\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Button'\r\n    }\r\n}"
             },
             {
                 "name": "selectedItem",
@@ -768,7 +768,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\n    new SelectItem('select3'),\n]"
+                "defaultValue": "[\r\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\r\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\r\n    new SelectItem('select3'),\r\n]"
             },
             {
                 "name": "Small",
@@ -778,7 +778,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        size: 'small',\n        label: 'Button'\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        size: 'small',\r\n        label: 'Button'\r\n    }\r\n}"
             },
             {
                 "name": "Spinning",
@@ -788,7 +788,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Spinning',\r\n        isSpinning: true,\r\n        faIcon: faSpinner\r\n    }\r\n}"
             },
             {
                 "name": "Spinning",
@@ -798,7 +798,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Spinning',\r\n        isSpinning: true,\r\n        faIcon: faSpinner\r\n    }\r\n}"
             },
             {
                 "name": "Spinning",
@@ -808,7 +808,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        isDisabled: false,\r\n        isSpinning: true,\r\n        faIcon: faSpinner\r\n    }\r\n}"
             },
             {
                 "name": "Spinning",
@@ -818,7 +818,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Spinning',\r\n        isSpinning: true,\r\n        faIcon: faSpinner\r\n    }\r\n}"
             },
             {
                 "name": "SuccessAlert",
@@ -828,7 +828,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        title: 'Success Alert',\n        message: 'Success Message',\n        type: AlertType.SUCCESS,\n        visibleState: true\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        title: 'Success Alert',\r\n        message: 'Success Message',\r\n        type: AlertType.SUCCESS,\r\n        visibleState: true\r\n    }\r\n}"
             },
             {
                 "name": "SuccessWithPreIcon",
@@ -838,7 +838,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Success',\n        borderRadius: 10,\n        classStyle: 'success',\n        isDisabled: false,\n        postIcon: undefined,\n        preIcon: faInfo\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Success',\r\n        borderRadius: 10,\r\n        classStyle: 'success',\r\n        isDisabled: false,\r\n        postIcon: undefined,\r\n        preIcon: faInfo\r\n    }\r\n}"
             },
             {
                 "name": "Tag",
@@ -848,7 +848,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Tag 1',\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Tag 1',\r\n    }\r\n}"
             },
             {
                 "name": "TagBackgroundGreen",
@@ -858,7 +858,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Tag 2',\n        backgroundColor: 'green'\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Tag 2',\r\n        backgroundColor: 'green'\r\n    }\r\n}"
             },
             {
                 "name": "types",
@@ -888,7 +888,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        title: 'Warning Alert',\n        message: 'Warning Message',\n        type: AlertType.WARNING,\n        visibleState: true\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        title: 'Warning Alert',\r\n        message: 'Warning Message',\r\n        type: AlertType.WARNING,\r\n        visibleState: true\r\n    }\r\n}"
             }
         ],
         "functions": [],
@@ -1092,7 +1092,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Active',\r\n        isActive: true,\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
                 },
                 {
                     "name": "Default",
@@ -1102,7 +1102,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Default',\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Default',\r\n    }\r\n}"
                 },
                 {
                     "name": "Delete",
@@ -1112,7 +1112,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Delete',\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
                 },
                 {
                     "name": "DeleteActive",
@@ -1122,7 +1122,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'DeleteActive',\r\n        isActive: true,\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
                 },
                 {
                     "name": "DeleteDisabled",
@@ -1132,7 +1132,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'DeleteDisabled',\r\n        isDisabled: true,\r\n        isActive: true,\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
                 },
                 {
                     "name": "Disabled",
@@ -1142,7 +1142,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Disabled',\r\n        isDisabled: true,\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
                 },
                 {
                     "name": "hoverStyles",
@@ -1162,7 +1162,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        faIcon: faInfoCircle\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
                 },
                 {
                     "name": "iconOptions",
@@ -1172,7 +1172,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Record<string, IconDefinition>",
-                    "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfo: faInfo,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+                    "defaultValue": "{\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfo: faInfo,\r\n    faSpinner: faSpinner,\r\n    faTrash: faTrash\r\n}"
                 },
                 {
                     "name": "Inverted",
@@ -1182,7 +1182,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Inverted',\n        faIcon: faInfoCircle,\n        hoverStyle: HoverStyle.INVERTED\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Inverted',\r\n        faIcon: faInfoCircle,\r\n        hoverStyle: HoverStyle.INVERTED\r\n    }\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1192,7 +1192,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<BorderedBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['gray', 'delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Buttons/Bordered Btn',\r\n    component: BorderedBtnComponent,\r\n    argTypes: {\r\n        ariaLabel: { control: 'text' },\r\n        label: { control: 'text' },\r\n        faIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        hoverStyle: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(hoverStyles),\r\n            mapping: HoverStyle\r\n        },\r\n        showIcon: { control: 'boolean' },\r\n        isDisabled: { control: 'boolean' },\r\n        classStyle: {\r\n            control: 'select',\r\n            options: ['gray', 'delete']\r\n        },\r\n        width: { control: 'text' },\r\n        isSpinning: { control: 'boolean' },\r\n        isActive: { control: 'boolean' }\r\n    },\r\n    tags: ['autodocs']\r\n}"
                 },
                 {
                     "name": "Spinning",
@@ -1202,7 +1202,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Spinning',\r\n        isSpinning: true,\r\n        faIcon: faSpinner\r\n    }\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts": [
@@ -1214,7 +1214,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Active',\r\n        isActive: true,\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
                 },
                 {
                     "name": "Default",
@@ -1224,7 +1224,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Default',\n        isDisabled: false\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Default',\r\n        isDisabled: false\r\n    }\r\n}"
                 },
                 {
                     "name": "Delete",
@@ -1234,7 +1234,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Delete',\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
                 },
                 {
                     "name": "DeleteActive",
@@ -1244,7 +1244,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'DeleteActive',\r\n        isDisabled: false,\r\n        isActive: true,\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
                 },
                 {
                     "name": "DeleteDisabled",
@@ -1254,7 +1254,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'DeleteDisabled',\r\n        isDisabled: true,\r\n        isActive: true,\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
                 },
                 {
                     "name": "Disabled",
@@ -1264,7 +1264,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Disabled',\r\n        isDisabled: true,\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
                 },
                 {
                     "name": "hoverStyles",
@@ -1284,7 +1284,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        faIcon: faInfoCircle\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
                 },
                 {
                     "name": "iconOptions",
@@ -1294,7 +1294,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Record<string, IconDefinition>",
-                    "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+                    "defaultValue": "{\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfoCircle: faInfoCircle,\r\n    faSpinner: faSpinner,\r\n    faTrash: faTrash\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1304,7 +1304,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<BorderlessBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Buttons/Borderless Btn',\r\n    component: BorderlessBtnComponent,\r\n    argTypes: {\r\n        ariaLabel: { control: 'text' },\r\n        label: { control: 'text' },\r\n        faIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        hoverStyle: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(hoverStyles),\r\n            mapping: HoverStyle\r\n        },\r\n        showIcon: { control: 'boolean' },\r\n        isDisabled: { control: 'boolean' },\r\n        classStyle: {\r\n            control: 'select',\r\n            options: ['delete']\r\n        },\r\n        width: { control: 'text' },\r\n        isSpinning: { control: 'boolean' },\r\n        isActive: { control: 'boolean' }\r\n    },\r\n    tags: ['autodocs']\r\n}"
                 },
                 {
                     "name": "Spinning",
@@ -1314,7 +1314,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Spinning',\r\n        isSpinning: true,\r\n        faIcon: faSpinner\r\n    }\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
@@ -1326,7 +1326,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        isDisabled: false,\r\n        isActive: true,\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
                 },
                 {
                     "name": "Default",
@@ -1336,7 +1336,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faCheck\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        isDisabled: false,\r\n        faIcon: faCheck\r\n    }\r\n}"
                 },
                 {
                     "name": "Disabled",
@@ -1346,7 +1346,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        isDisabled: true,\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
                 },
                 {
                     "name": "iconOptions",
@@ -1356,7 +1356,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Record<string, IconDefinition>",
-                    "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+                    "defaultValue": "{\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfoCircle: faInfoCircle,\r\n    faSpinner: faSpinner,\r\n    faTrash: faTrash\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1366,7 +1366,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CircleBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Buttons/Circle Btn',\r\n    component: CircleBtnComponent,\r\n    argTypes: {\r\n        ariaLabel: { control: 'text' },\r\n        faIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        backgroundColor: { control: 'text' },\r\n        isDisabled: { control: 'boolean' },\r\n        classStyle: { control: 'text' },\r\n        width: { control: 'text' },\r\n        isSpinning: { control: 'boolean' },\r\n        isActive: { control: 'boolean' }\r\n    },\r\n    tags: ['autodocs']\r\n}"
                 },
                 {
                     "name": "Spinning",
@@ -1376,7 +1376,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        isDisabled: false,\r\n        isSpinning: true,\r\n        faIcon: faSpinner\r\n    }\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts": [
@@ -1388,7 +1388,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Active',\r\n        isActive: true,\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
                 },
                 {
                     "name": "Default",
@@ -1398,7 +1398,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Default',\n        isDisabled: false\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Default',\r\n        isDisabled: false\r\n    }\r\n}"
                 },
                 {
                     "name": "Delete",
@@ -1408,7 +1408,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Delete',\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
                 },
                 {
                     "name": "DeleteActive",
@@ -1418,7 +1418,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'DeleteActive',\r\n        isActive: true,\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
                 },
                 {
                     "name": "DeleteDisabled",
@@ -1428,7 +1428,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'DeleteDisabled',\r\n        isDisabled: true,\r\n        isActive: true,\r\n        faIcon: faTrash,\r\n        classStyle: 'delete',\r\n        width: '200px'\r\n    }\r\n}"
                 },
                 {
                     "name": "Disabled",
@@ -1438,7 +1438,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle,\n        classStyle: 'inverted'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Disabled',\r\n        isDisabled: true,\r\n        faIcon: faInfoCircle,\r\n        classStyle: 'inverted'\r\n    }\r\n}"
                 },
                 {
                     "name": "hoverStyles",
@@ -1458,7 +1458,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        faIcon: faInfoCircle\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        faIcon: faInfoCircle\r\n    }\r\n}"
                 },
                 {
                     "name": "iconOptions",
@@ -1468,7 +1468,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Record<string, IconDefinition>",
-                    "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+                    "defaultValue": "{\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfoCircle: faInfoCircle,\r\n    faSpinner: faSpinner,\r\n    faTrash: faTrash\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1478,7 +1478,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<FilledBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Filled Btn',\n    component: FilledBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete', 'not-emphrazed', 'navbar-btn']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Buttons/Filled Btn',\r\n    component: FilledBtnComponent,\r\n    argTypes: {\r\n        ariaLabel: { control: 'text' },\r\n        label: { control: 'text' },\r\n        faIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        hoverStyle: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(hoverStyles),\r\n            mapping: HoverStyle\r\n        },\r\n        showIcon: { control: 'boolean' },\r\n        isDisabled: { control: 'boolean' },\r\n        classStyle: {\r\n            control: 'select',\r\n            options: ['delete', 'not-emphrazed', 'navbar-btn']\r\n        },\r\n        width: { control: 'text' },\r\n        isSpinning: { control: 'boolean' },\r\n        isActive: { control: 'boolean' }\r\n    },\r\n    tags: ['autodocs']\r\n}"
                 },
                 {
                     "name": "Spinning",
@@ -1488,7 +1488,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Spinning',\r\n        isSpinning: true,\r\n        faIcon: faSpinner\r\n    }\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
@@ -1500,7 +1500,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 1,\n        borderRadius: 50,\n        classStyle: 'changes',\n        isDisabled: false\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 1,\r\n        borderRadius: 50,\r\n        classStyle: 'changes',\r\n        isDisabled: false\r\n    }\r\n}"
                 },
                 {
                     "name": "Default",
@@ -1510,7 +1510,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Default',\n        borderRadius: 10,\n        isDisabled: false,\n        postIcon: faCheck,\n        preIcon: undefined\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Default',\r\n        borderRadius: 10,\r\n        isDisabled: false,\r\n        postIcon: faCheck,\r\n        preIcon: undefined\r\n    }\r\n}"
                 },
                 {
                     "name": "iconOptions",
@@ -1520,7 +1520,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Record<string, IconDefinition>",
-                    "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfo: faInfo\n}"
+                    "defaultValue": "{\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfo: faInfo\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1530,7 +1530,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<BadgeComponent>",
-                    "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        classStyle: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ]\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Badge',\r\n    component: BadgeComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        label: { control: 'text' },\r\n        borderRadius: { control: 'number' },\r\n        classStyle: {\r\n            control: 'select',\r\n            options: [\r\n                'running',\r\n                'failed',\r\n                'success',\r\n                'pending',\r\n                'changes',\r\n                'urgent',\r\n                'frozen',\r\n                'current',\r\n                'manual',\r\n                'free'\r\n            ]\r\n        },\r\n        isDisabled: { control: 'boolean' },\r\n        postIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        preIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        }\r\n    }\r\n}"
                 },
                 {
                     "name": "RunningWithPostIcon",
@@ -1540,7 +1540,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Running',\n        borderRadius: 10,\n        classStyle: 'running',\n        isDisabled: false,\n        postIcon: faCheck,\n        preIcon: undefined\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Running',\r\n        borderRadius: 10,\r\n        classStyle: 'running',\r\n        isDisabled: false,\r\n        postIcon: faCheck,\r\n        preIcon: undefined\r\n    }\r\n}"
                 },
                 {
                     "name": "SuccessWithPreIcon",
@@ -1550,7 +1550,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Success',\n        borderRadius: 10,\n        classStyle: 'success',\n        isDisabled: false,\n        postIcon: undefined,\n        preIcon: faInfo\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Success',\r\n        borderRadius: 10,\r\n        classStyle: 'success',\r\n        isDisabled: false,\r\n        postIcon: undefined,\r\n        preIcon: faInfo\r\n    }\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/stories/overview-wrapper.stories.ts": [
@@ -1572,7 +1572,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<OverviewWrapperComponent>",
-                    "defaultValue": "{\n    title: 'Overview',\n    component: OverviewWrapperComponent,\n    tags: ['autodocs'],\n}"
+                    "defaultValue": "{\r\n    title: 'Overview',\r\n    component: OverviewWrapperComponent,\r\n    tags: ['autodocs'],\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
@@ -1584,7 +1584,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        value: true,\n        mode: EditMode.WRITE\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        value: true,\r\n        mode: EditMode.WRITE\r\n    }\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1594,7 +1594,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CheckboxComponent>",
-                    "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' }\n    }\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Checkbox',\r\n    component: CheckboxComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        value: { control: 'boolean' },\r\n        mode: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(types),\r\n            mapping: EditMode,\r\n            value: EditMode.WRITE\r\n        },\r\n        height: { control: 'number' }\r\n    }\r\n}"
                 },
                 {
                     "name": "ReadMode",
@@ -1604,7 +1604,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        value: true,\n        mode: EditMode.READ\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        value: true,\r\n        mode: EditMode.READ\r\n    }\r\n}"
                 },
                 {
                     "name": "types",
@@ -1626,7 +1626,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {}\n}"
+                    "defaultValue": "{\r\n    args: {}\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1636,7 +1636,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ColorPaletteComponent>",
-                    "defaultValue": "{\n    title: 'Components/ColorPalette',\n    component: ColorPaletteComponent,\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\r\n    title: 'Components/ColorPalette',\r\n    component: ColorPaletteComponent,\r\n    tags: ['autodocs']\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts": [
@@ -1648,7 +1648,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        dropHeight: 100\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        dropHeight: 100\r\n    }\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1658,7 +1658,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<DropzoneComponent>",
-                    "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        dropHeight: { control: 'number' },\n        allowedExtension: { control: 'check', options: ['json'] },\n        fileArrayLength: { control: 'number' },\n        files: { control: { type: 'file', accept: '.json' } },\n        maxSizeOfFiles: { control: 'number' }\n    }\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Dropzone',\r\n    component: DropzoneComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        dropHeight: { control: 'number' },\r\n        allowedExtension: { control: 'check', options: ['json'] },\r\n        fileArrayLength: { control: 'number' },\r\n        files: { control: { type: 'file', accept: '.json' } },\r\n        maxSizeOfFiles: { control: 'number' }\r\n    }\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/select/select.stories.ts": [
@@ -1670,7 +1670,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Default component with items to select',\n          },\n        },\n      },\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Label: ',\r\n        items: selectItems,\r\n        selectedItem: selectedItem,\r\n        filterPlaceholder: 'Select...',\r\n        show: true\r\n    },\r\n    parameters: {\r\n        docs: {\r\n          description: {\r\n            story: 'Default component with items to select',\r\n          },\r\n        },\r\n      },\r\n}"
                 },
                 {
                     "name": "iconOptions",
@@ -1680,7 +1680,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Record<string, IconDefinition>",
-                    "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash,\n}"
+                    "defaultValue": "{\r\n    faChevronDown: faChevronDown,\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfoCircle: faInfoCircle,\r\n    faSpinner: faSpinner,\r\n    faTrash: faTrash,\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1690,7 +1690,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<SelectComponent>",
-                    "defaultValue": "{\n    title: 'Components/Select',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\n              }\n        },\n    },\n    argTypes: {\n        items: {control: 'object'},\n        selectedItem: {control: 'object'},\n        label: {control: 'text'},\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: { control: 'text' },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Select',\r\n    component: SelectComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\r\n              }\r\n        },\r\n    },\r\n    argTypes: {\r\n        items: {control: 'object'},\r\n        selectedItem: {control: 'object'},\r\n        label: {control: 'text'},\r\n        faIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        faIconBefore: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        classStyle: { control: 'text' },\r\n        withBlankOption: { control: 'boolean' },\r\n        withDeselect: { control: 'boolean' },\r\n        withFilter: { control: 'boolean' },\r\n        filterPlaceholder: { control: 'text' },\r\n        show: { control: 'boolean' },\r\n    },\r\n    tags: ['autodocs']\r\n}"
                 },
                 {
                     "name": "selectedItem",
@@ -1710,7 +1710,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "[\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\n    new SelectItem('select3'),\n]"
+                    "defaultValue": "[\r\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\r\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\r\n    new SelectItem('select3'),\r\n]"
                 }
             ],
             "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts": [
@@ -1732,7 +1732,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TooltipComponent>",
-                    "defaultValue": "{\n    title: 'Components/Tooltip',\n    component: TooltipComponent,\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Tooltip',\r\n    component: TooltipComponent,\r\n    tags: ['autodocs']\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts": [
@@ -1744,7 +1744,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        checked: true,\n        isDisabled: true,\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Disabled',\r\n        checked: true,\r\n        isDisabled: true,\r\n    }\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1754,7 +1754,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ToggleBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Toggle Btn',\n    component: ToggleBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        checked: {control: 'boolean'},\n        isDisabled: {control: 'boolean'},\n        classStyle: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Toggle Btn',\r\n    component: ToggleBtnComponent,\r\n    argTypes: {\r\n        label: {control: 'text'},\r\n        checked: {control: 'boolean'},\r\n        isDisabled: {control: 'boolean'},\r\n        classStyle: {control: 'text'},\r\n    },\r\n    tags: ['autodocs']\r\n}"
                 },
                 {
                     "name": "Off",
@@ -1764,7 +1764,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Off',\n        checked: false,\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Off',\r\n        checked: false,\r\n    }\r\n}"
                 },
                 {
                     "name": "On",
@@ -1774,7 +1774,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'On',\n        checked: true,\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'On',\r\n        checked: true,\r\n    }\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/alert/alert.stories.ts": [
@@ -1786,7 +1786,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        title: 'Error Alert',\n        message: 'Error Message',\n        type: AlertType.ERROR,\n        visibleState: true\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        title: 'Error Alert',\r\n        message: 'Error Message',\r\n        type: AlertType.ERROR,\r\n        visibleState: true\r\n    }\r\n}"
                 },
                 {
                     "name": "InfoAlert",
@@ -1796,7 +1796,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        title: 'Info Alert',\n        message: 'Info  Message',\n        type: AlertType.INFO,\n        visibleState: true,\n        navigationLink: 'pailot.com',\n        navigationLinkLabel: 'Further informations under pailto.com '\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        title: 'Info Alert',\r\n        message: 'Info  Message',\r\n        type: AlertType.INFO,\r\n        visibleState: true,\r\n        navigationLink: 'pailot.com',\r\n        navigationLinkLabel: 'Further informations under pailto.com '\r\n    }\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1806,7 +1806,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<AlertComponent>",
-                    "defaultValue": "{\n    title: 'Components/Alert',\n    component: AlertComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [RouterModule],\n            providers: [\n                {\n                    provide: ActivatedRoute,\n                    useValue: {\n                        snapshot: {\n                            paramMap: new Map([['id', '123']]),\n                            data: {}\n                        },\n                        params: [{ id: '123' }],\n                        queryParams: {}\n                    } // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n                }\n            ]\n        })\n    ],\n    tags: ['autodocs'],\n    argTypes: {\n        title: { control: 'text', value: '' },\n        message: { control: 'text', value: '' },\n        type: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: AlertType,\n            value: AlertType.SUCCESS\n        },\n        visibleState: { control: 'boolean', value: false },\n        navigationLink: { control: 'text', value: undefined },\n        navigationLinkLabel: { control: 'text', value: undefined }\n    }\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Alert',\r\n    component: AlertComponent,\r\n    decorators: [\r\n        moduleMetadata({\r\n            imports: [RouterModule],\r\n            providers: [\r\n                {\r\n                    provide: ActivatedRoute,\r\n                    useValue: {\r\n                        snapshot: {\r\n                            paramMap: new Map([['id', '123']]),\r\n                            data: {}\r\n                        },\r\n                        params: [{ id: '123' }],\r\n                        queryParams: {}\r\n                    } // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\r\n                }\r\n            ]\r\n        })\r\n    ],\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        title: { control: 'text', value: '' },\r\n        message: { control: 'text', value: '' },\r\n        type: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(types),\r\n            mapping: AlertType,\r\n            value: AlertType.SUCCESS\r\n        },\r\n        visibleState: { control: 'boolean', value: false },\r\n        navigationLink: { control: 'text', value: undefined },\r\n        navigationLinkLabel: { control: 'text', value: undefined }\r\n    }\r\n}"
                 },
                 {
                     "name": "SuccessAlert",
@@ -1816,7 +1816,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        title: 'Success Alert',\n        message: 'Success Message',\n        type: AlertType.SUCCESS,\n        visibleState: true\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        title: 'Success Alert',\r\n        message: 'Success Message',\r\n        type: AlertType.SUCCESS,\r\n        visibleState: true\r\n    }\r\n}"
                 },
                 {
                     "name": "types",
@@ -1836,7 +1836,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        title: 'Warning Alert',\n        message: 'Warning Message',\n        type: AlertType.WARNING,\n        visibleState: true\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        title: 'Warning Alert',\r\n        message: 'Warning Message',\r\n        type: AlertType.WARNING,\r\n        visibleState: true\r\n    }\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/stories/button.stories.ts": [
@@ -1848,7 +1848,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        size: 'large',\n        label: 'Button'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        size: 'large',\r\n        label: 'Button'\r\n    }\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1858,7 +1858,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ButtonComponent>",
-                    "defaultValue": "{\n    title: 'Example/Button',\n    component: ButtonComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        backgroundColor: {\n            control: 'color'\n        }\n    },\n    // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\n    args: { onClick: fn() }\n}"
+                    "defaultValue": "{\r\n    title: 'Example/Button',\r\n    component: ButtonComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        backgroundColor: {\r\n            control: 'color'\r\n        }\r\n    },\r\n    // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n    args: { onClick: fn() }\r\n}"
                 },
                 {
                     "name": "Primary",
@@ -1868,7 +1868,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        primary: true,\n        label: 'Button'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        primary: true,\r\n        label: 'Button'\r\n    }\r\n}"
                 },
                 {
                     "name": "Secondary",
@@ -1878,7 +1878,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Button'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Button'\r\n    }\r\n}"
                 },
                 {
                     "name": "Small",
@@ -1888,7 +1888,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        size: 'small',\n        label: 'Button'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        size: 'small',\r\n        label: 'Button'\r\n    }\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/stories/header.stories.ts": [
@@ -1900,7 +1900,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        user: {\n            name: 'Jane Doe'\n        }\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        user: {\r\n            name: 'Jane Doe'\r\n        }\r\n    }\r\n}"
                 },
                 {
                     "name": "LoggedOut",
@@ -1920,7 +1920,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<HeaderComponent>",
-                    "defaultValue": "{\n    title: 'Example/Header',\n    component: HeaderComponent,\n    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n    tags: ['autodocs'],\n    parameters: {\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen'\n    },\n    args: {\n        onLogin: fn(),\n        onLogout: fn(),\n        onCreateAccount: fn()\n    }\n}"
+                    "defaultValue": "{\r\n    title: 'Example/Header',\r\n    component: HeaderComponent,\r\n    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\r\n    tags: ['autodocs'],\r\n    parameters: {\r\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n        layout: 'fullscreen'\r\n    },\r\n    args: {\r\n        onLogin: fn(),\r\n        onLogout: fn(),\r\n        onCreateAccount: fn()\r\n    }\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/stories/page.stories.ts": [
@@ -1932,7 +1932,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n        const loginButton = canvas.getByRole('button', { name: /Log in/i });\n        await expect(loginButton).toBeInTheDocument();\n        await userEvent.click(loginButton);\n        await expect(loginButton).not.toBeInTheDocument();\n\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n        await expect(logoutButton).toBeInTheDocument();\n    }\n}"
+                    "defaultValue": "{\r\n    play: async ({ canvasElement }) => {\r\n        const canvas = within(canvasElement);\r\n        const loginButton = canvas.getByRole('button', { name: /Log in/i });\r\n        await expect(loginButton).toBeInTheDocument();\r\n        await userEvent.click(loginButton);\r\n        await expect(loginButton).not.toBeInTheDocument();\r\n\r\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i });\r\n        await expect(logoutButton).toBeInTheDocument();\r\n    }\r\n}"
                 },
                 {
                     "name": "LoggedOut",
@@ -1952,7 +1952,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<PageComponent>",
-                    "defaultValue": "{\n    title: 'Example/Page',\n    component: PageComponent,\n    parameters: {\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n        layout: 'fullscreen'\n    }\n}"
+                    "defaultValue": "{\r\n    title: 'Example/Page',\r\n    component: PageComponent,\r\n    parameters: {\r\n        // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n        layout: 'fullscreen'\r\n    }\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts": [
@@ -1964,7 +1964,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TagBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Tag',\n    component: TagBtnComponent,\n    argTypes: {\n        label: {control: 'text'},\n        backgroundColor: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Tag',\r\n    component: TagBtnComponent,\r\n    argTypes: {\r\n        label: {control: 'text'},\r\n        backgroundColor: {control: 'text'},\r\n    },\r\n    tags: ['autodocs']\r\n}"
                 },
                 {
                     "name": "Tag",
@@ -1974,7 +1974,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Tag 1',\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Tag 1',\r\n    }\r\n}"
                 },
                 {
                     "name": "TagBackgroundGreen",
@@ -1984,7 +1984,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Tag 2',\n        backgroundColor: 'green'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Tag 2',\r\n        backgroundColor: 'green'\r\n    }\r\n}"
                 }
             ],
             "projects/angular-component-library/.storybook/preview.ts": [
@@ -1996,7 +1996,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\n    parameters: {\n        storySort: {\n            order: ['Welcome', 'Components'],\n        },\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        }\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                {\n                    provide: TranslateLoader,\n                    useClass: FakeLoader\n                },\n                {\n                    provide: TranslateCompiler,\n                    useClass: TranslateFakeCompiler\n                },\n                {\n                    provide: TranslateParser,\n                    useClass: TranslateDefaultParser\n                },\n                {\n                    provide: MissingTranslationHandler,\n                    useValue: null\n                },\n                {\n                    provide: USE_DEFAULT_LANG,\n                    useValue: true\n                },\n                {\n                    provide: DEFAULT_LANGUAGE,\n                    useValue: true\n                },\n                {\n                    provide: USE_EXTEND,\n                    useValue: false\n                },\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\n                TranslateStore,\n                {\n                    provide: APP_INITIALIZER,\n                    useFactory: (translate: TranslateService) => () => {\n                        translate.setDefaultLang('de');\n                        translate.use('de');\n                        return Promise.resolve();\n                    },\n                    deps: [TranslateService],\n                    multi: true\n                }\n            ]\n        })\n    ]\n}"
+                    "defaultValue": "{\r\n    parameters: {\r\n        layout: 'centered',\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n                color: ['../assets/styles.scss']\r\n            }\r\n        }\r\n    },\r\n    decorators: [\r\n        applicationConfig({\r\n            providers: [\r\n                {\r\n                    provide: TranslateLoader,\r\n                    useClass: FakeLoader\r\n                },\r\n                {\r\n                    provide: TranslateCompiler,\r\n                    useClass: TranslateFakeCompiler\r\n                },\r\n                {\r\n                    provide: TranslateParser,\r\n                    useClass: TranslateDefaultParser\r\n                },\r\n                {\r\n                    provide: MissingTranslationHandler,\r\n                    useValue: null\r\n                },\r\n                {\r\n                    provide: USE_DEFAULT_LANG,\r\n                    useValue: true\r\n                },\r\n                {\r\n                    provide: DEFAULT_LANGUAGE,\r\n                    useValue: true\r\n                },\r\n                {\r\n                    provide: USE_EXTEND,\r\n                    useValue: false\r\n                },\r\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\r\n                TranslateStore,\r\n                {\r\n                    provide: APP_INITIALIZER,\r\n                    useFactory: (translate: TranslateService) => () => {\r\n                        translate.setDefaultLang('de');\r\n                        translate.use('de');\r\n                        return Promise.resolve();\r\n                    },\r\n                    deps: [TranslateService],\r\n                    multi: true\r\n                }\r\n            ]\r\n        })\r\n    ]\r\n}"
                 }
             ]
         },
