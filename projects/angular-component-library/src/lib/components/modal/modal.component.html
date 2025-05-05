@@ -23,7 +23,7 @@
             [label]="cancelBtnText">
           </bordered-btn-component>
         }
-        @if (deleteBtn) {
+        @if (deleteBtn && deleteBtnTxt) {
           <filled-btn-component
             [ariaLabel]="'Delete'"
             [faIcon]="showConfirmBtnLoader ? faLoader : undefined"
@@ -34,7 +34,7 @@
             [label]="deleteBtnTxt">
           </filled-btn-component>
         }
-        @if (confirmBtn) {
+        @if (confirmBtn && confirmBtnText) {
           <filled-btn-component
             [ariaLabel]="'Confirm'"
             [faIcon]="showConfirmBtnLoader ? faLoader : undefined"
