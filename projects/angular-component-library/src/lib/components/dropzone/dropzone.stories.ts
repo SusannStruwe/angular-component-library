@@ -6,12 +6,20 @@ const meta: Meta<DropzoneComponent> = {
     component: DropzoneComponent,
     tags: ['autodocs'],
     argTypes: {
-        dropHeight: { control: 'number' },
+        choseFileLabel: {control: 'text'},
         allowedExtension: { control: 'check', options: ['json'] },
         fileArrayLength: { control: 'number' },
         files: { control: { type: 'file', accept: '.json' } },
-        maxSizeOfFiles: { control: 'number' }
-    }
+        maxSizeOfFiles: { control: 'number'},
+        height: { control: 'text' },
+        width: { control: 'text' },
+    },
+    decorators: [
+        (story) => ({
+          template: `<div style="width: 300px;">${story().template}</div>`,
+          props: story().props,
+        }),
+    ],
 };
 export default meta;
 
@@ -19,6 +27,8 @@ type Story = StoryObj<DropzoneComponent>;
 
 export const Default: Story = {
     args: {
-        dropHeight: 100
+        height: '100px',
+        width: '300px',
+        choseFileLabel: 'Load Input files'
     }
 };

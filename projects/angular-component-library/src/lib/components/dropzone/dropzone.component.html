@@ -1,6 +1,7 @@
 <div
     class="dropzone"
-    [style.height.px]="dropHeight"
+    [style.height]="height"
+    [style.width]="width"
     dragDropFile
     (filesChangeEmitter)="onFileChange($event)">
     <div class="text-wrapper">
@@ -14,9 +15,8 @@
             <label for="file-{{ randomId }}">
                 <span class="upload-btn ripple">
                     <fa-icon [icon]="faUpload"></fa-icon>
-                    {{ 'upload.dropElement.choseFile' | translate }}</span
-                >
-                {{ 'upload.dropElement.dropIt' | translate }}
+                    {{ choseFileLabel }}
+                </span>
             </label>
             <p>
                 ( Format: {{ allowedExtension }} , max

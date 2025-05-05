@@ -33,11 +33,13 @@ import { Icons } from '../../model/icons';
     styleUrls: ['./dropzone.component.scss']
 })
 export class DropzoneComponent {
-    @Input() dropHeight = 100;
     @Input() allowedExtension: string[] = ['json'];
+    @Input() choseFileLabel: string = '';
     @Input() fileArrayLength = 100;
     @Input() files: File[] = [];
     @Input() maxSizeOfFiles = 5000; // 10 MB
+    @Input() height?: string = '100px';
+    @Input() width?: string;
 
     @Output() filesChanged = new EventEmitter<File[]>(); // When true, deliver events asynchronously.
     @Output() fileExistsError = new EventEmitter<File>();
