@@ -51,6 +51,26 @@
                 "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
+                "name": "activeBtn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "SegmentedBtnItem",
+                "defaultValue": "btnArray[1]"
+            },
+            {
+                "name": "btnArray",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n    new SegmentedBtnItem('btn.day', '1', true, false, Icons.faInfoCircle),\n    new SegmentedBtnItem('btn.week', '2', false, false, Icons.faInfoCircle),\n    new SegmentedBtnItem('btn.month', '3', false, false, Icons.faInfoCircle),\n]"
+            },
+            {
                 "name": "Changes",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -154,6 +174,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        btnArray: btnArray,\n        activeBtn: activeBtn,\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Default component with items to select',\n          },\n        },\n      },\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -178,7 +208,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{}"
+                "defaultValue": "{\n    render: () => ({\n        template: `<tooltip-component [style.position]=\"'relative'\"></tooltip-component>`\n    }),\n}"
             },
             {
                 "name": "Delete",
@@ -444,6 +474,16 @@
                 "name": "iconOptions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Record<string, IconDefinition>",
+                "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash,\n}"
+            },
+            {
+                "name": "iconOptions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -654,6 +694,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<SegmentedBtnComponent>",
+                "defaultValue": "{\n    title: 'Components/SegmentedBtn',\n    component: SegmentedBtnComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\n              }\n        },\n    },\n    argTypes: {\n        btnArray: {control: 'object'},\n        activeBtn: {control: 'object'},\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -668,7 +718,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TabsViewComponent>",
-                "defaultValue": "{\n    title: 'Components/TabsView',\n    component: TabsViewComponent,\n    decorators: [\n        moduleMetadata({\n          imports: [TabsViewComponent, TabComponent],\n        }),\n      ],\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/TabsView',\n    component: TabsViewComponent,\n    decorators: [\n        moduleMetadata({\n          imports: [TabsViewComponent, TabComponent],\n        }),\n      ],\n    parameters: {\n        docs: {\n            description: {\n                story: 'TabsView to switch between dfferent contents',\n              }\n        },\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -1051,6 +1101,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<FilledBtnComponent>",
                 "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<SegmentedBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1522,6 +1583,58 @@
                     "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
                 }
             ],
+            "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts": [
+                {
+                    "name": "activeBtn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "SegmentedBtnItem",
+                    "defaultValue": "btnArray[1]"
+                },
+                {
+                    "name": "btnArray",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n    new SegmentedBtnItem('btn.day', '1', true, false, Icons.faInfoCircle),\n    new SegmentedBtnItem('btn.week', '2', false, false, Icons.faInfoCircle),\n    new SegmentedBtnItem('btn.month', '3', false, false, Icons.faInfoCircle),\n]"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        btnArray: btnArray,\n        activeBtn: activeBtn,\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Default component with items to select',\n          },\n        },\n      },\n}"
+                },
+                {
+                    "name": "iconOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Record<string, IconDefinition>",
+                    "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash,\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<SegmentedBtnComponent>",
+                    "defaultValue": "{\n    title: 'Components/SegmentedBtn',\n    component: SegmentedBtnComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\n              }\n        },\n    },\n    argTypes: {\n        btnArray: {control: 'object'},\n        activeBtn: {control: 'object'},\n    },\n    tags: ['autodocs']\n}"
+                }
+            ],
             "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
                 {
                     "name": "Changes",
@@ -1763,7 +1876,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TabsViewComponent>",
-                    "defaultValue": "{\n    title: 'Components/TabsView',\n    component: TabsViewComponent,\n    decorators: [\n        moduleMetadata({\n          imports: [TabsViewComponent, TabComponent],\n        }),\n      ],\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/TabsView',\n    component: TabsViewComponent,\n    decorators: [\n        moduleMetadata({\n          imports: [TabsViewComponent, TabComponent],\n        }),\n      ],\n    parameters: {\n        docs: {\n            description: {\n                story: 'TabsView to switch between dfferent contents',\n              }\n        },\n    },\n    tags: ['autodocs']\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts": [
@@ -1775,7 +1888,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{}"
+                    "defaultValue": "{\n    render: () => ({\n        template: `<tooltip-component [style.position]=\"'relative'\"></tooltip-component>`\n    }),\n}"
                 },
                 {
                     "name": "meta",
@@ -2219,6 +2332,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<FilledBtnComponent>",
                     "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<SegmentedBtnComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2989,6 +3115,66 @@
             },
             {
                 "filePath": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "activeBtn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "btnArray",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "iconOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
