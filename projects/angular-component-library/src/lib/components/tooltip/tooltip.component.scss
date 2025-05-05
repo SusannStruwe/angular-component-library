@@ -3,7 +3,7 @@
 }
 
 .tooltip {
-    position: fixed;
+    position: absolute;
     background-color: var(--tooltip-background);
     border-radius: 4px;
     color: var(--fa-icon-color);

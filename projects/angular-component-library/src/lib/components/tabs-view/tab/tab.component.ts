@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
  * @howToUse
  * ```
  *  <tab-component
- *     [tabTitle]="tab1">
+ *     [tabTitle]="'tab1'">
  *  </tab-component>
  * ```
  */

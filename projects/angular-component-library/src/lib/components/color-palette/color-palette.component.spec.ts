@@ -2,24 +2,24 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ColorPaletteComponent } from './color-palette.component';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
 import { By } from '@angular/platform-browser';
-import { ColorService } from '../../model/colors';
+import { Colors } from '../../model/colors';
+
 
 describe('ColorPaletteComponent', () => {
     let component: ColorPaletteComponent;
     let fixture: ComponentFixture<ColorPaletteComponent>;
-    const colorService = new ColorService();
-    const colorLength = colorService.getColors().length;
+    const colorLength = Colors.standard.concat(Colors.cssColors).length;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [ColorPaletteComponent, FontAwesomeTestingModule],
-            providers: [ColorService]
+            providers: []
         }).compileComponents();
 
         fixture = TestBed.createComponent(ColorPaletteComponent);
 
         component = fixture.componentInstance;
-        component.colors = colorService.getColors();
+        component.colors = Colors.standard.concat(Colors.cssColors);
 
         fixture.detectChanges();
     });

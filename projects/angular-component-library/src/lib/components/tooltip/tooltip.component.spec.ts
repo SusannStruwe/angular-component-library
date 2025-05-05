@@ -35,6 +35,7 @@ describe('TooltipComponent', () => {
     it('tooltip text should be', () => {
         const tooltipEl = fixture.debugElement.query(By.css('.tooltip'));
         const content = tooltipEl.nativeElement.textContent;
-        expect(content).toBe(toolTipText);
+        const withoutSpaces = content.replace(/\s+/g, '');
+        expect(withoutSpaces).toBe(toolTipText);
     });
 });

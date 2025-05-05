@@ -33,24 +33,24 @@ describe('AlertComponent', () => {
         expect(titleEl.innerHTML).toEqual(title);
     });
 
-    it('should show ban icon if alert type is error', () => {
+    it('should show circle-xmark icon if alert type is error', () => {
         component.type = AlertType.ERROR;
         fixture.detectChanges();
 
         const faIconName = fixture.debugElement
             .query(By.css('svg'))
             .nativeElement.getAttribute('data-icon');
-        expect(faIconName).toEqual('ban');
+        expect(faIconName).toEqual('circle-xmark');
     });
 
-    it('should show triangle-exclamation icon if alert type is warning', () => {
+    it('should show circle-exclamation icon if alert type is warning', () => {
         component.type = AlertType.WARNING;
         fixture.detectChanges();
 
         const faIconName = fixture.debugElement
             .query(By.css('svg'))
             .nativeElement.getAttribute('data-icon');
-        expect(faIconName).toEqual('triangle-exclamation');
+        expect(faIconName).toEqual('circle-exclamation');
     });
 
     it('should show circle-check icon if alert type is success', () => {
