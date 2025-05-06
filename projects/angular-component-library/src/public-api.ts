@@ -37,11 +37,12 @@ export * from './lib/components/tabs-view/tabs-view.component';
 export * from './lib/components/tabs-view/tab/tab.component';
 export * from './lib/components/sass-helper.component';
 
-export * from './lib/model/icons';
-export * from './lib/model/colors';
 export * from './lib/services/modal.service';
 export * from './lib/services/loader.service';
+export * from './lib/services/sort.service';
 
+export * from './lib/model/icons';
+export * from './lib/model/colors';
 export * from './lib/model/hover-style.enum';
 export * from './lib/model/select-item.model';
 export * from './lib/model/loader-style.enum';
@@ -57,8 +58,12 @@ export * from './lib/model/context-menu-item.model';
 export * from './lib/model/feature.enum';
 export * from './lib/model/tab-view-type.enum';
 export * from './lib/model/segmented-btn.model';
+export * from './lib/model/column-header-item.model';
+export * from './lib/model/sort-column-event.model';
+export * from './lib/model/search-filter.model';
 
 export * from './lib/directives/click-outside.directive';
 export * from './lib/directives/drag-drop-file.directive';
 export * from './lib/directives/is-last.directive';
 export * from './lib/directives/tooltip.directive';
+export * from './lib/directives/sort-column.directive';

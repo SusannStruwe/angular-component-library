@@ -28,6 +28,9 @@ const preview: Preview = {
                 date: /Date$/i
             }
         },
+        actions: {
+            argTypesRegex:'Change$' 
+        },
         designToken: {
             defaultTab: 'Colors',
             tokens: {

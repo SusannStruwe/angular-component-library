@@ -51,26 +51,6 @@
                 "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
-                "name": "activeBtn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "SegmentedBtnItem",
-                "defaultValue": "btnArray[1]"
-            },
-            {
-                "name": "btnArray",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "[]",
-                "defaultValue": "[\n    new SegmentedBtnItem('btn.day', '1', true, false, Icons.faInfoCircle),\n    new SegmentedBtnItem('btn.week', '2', false, false, Icons.faInfoCircle),\n    new SegmentedBtnItem('btn.month', '3', false, false, Icons.faInfoCircle),\n]"
-            },
-            {
                 "name": "Changes",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -194,11 +174,21 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    render: () => ({\n        props: {\n          items: headerItemsTasks,\n          filters: filters,\n          filterRows: (event: any) => console.log('Filter Rows', event),\n          sortColumn: (event: any) => console.log('Sort Column', event),\n        },\n        template: defaultTemplateMock,\n      }),\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/tabs-view/tabs-view.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    render: () => ({\n        template: templateMock\n    }),\n}"
+                "defaultValue": "{\n    render: () => ({\n        props: {\n            selectedTabChange: (event: any) => alert('Selected tab changed to ' + event),\n        },\n        template: templateMock\n    }),\n}"
             },
             {
                 "name": "Default",
@@ -209,6 +199,26 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    render: () => ({\n        template: `<tooltip-component [style.position]=\"'relative'\"></tooltip-component>`\n    }),\n}"
+            },
+            {
+                "name": "defaultTemplateMock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "`   <table-component [style.width]=\"'100%'\">\n            <div header></div>\n            <div content></div>\n        </table-component>\n     `"
+            },
+            {
+                "name": "defaultTemplateMock2",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "`\n      <table-component>\n        <div header>\n          <table-header-component\n            [headerItemsTasks]=\"items\"\n            [searchFilters]=\"filters\"\n            (filterRowChange)=\"filterRows($event)\"\n            (sortColumnChange)=\"sortColumn($event)\">\n          </table-header-component>\n        </div>\n        <div content></div>\n      </table-component>\n    `"
             },
             {
                 "name": "Delete",
@@ -361,6 +371,26 @@
                 "defaultValue": "{\n    args: {\n        title: 'Error Alert',\n        message: 'Error Message',\n        type: AlertType.ERROR,\n        visibleState: true\n    }\n}"
             },
             {
+                "name": "filters",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "getSearchFilters(headerItemsTasks)"
+            },
+            {
+                "name": "headerItemsTasks",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ColumnHeaderItem[]",
+                "defaultValue": "[\n    new ColumnHeaderItem('Id', 'job_id', ColumnType.STRING, false),\n    new ColumnHeaderItem('Email', 'client_email', ColumnType.STRING, true),\n    new ColumnHeaderItem('Name', 'client_id', ColumnType.STRING, true),\n]"
+            },
+            {
                 "name": "hoverStyles",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -469,16 +499,6 @@
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
                 "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
-            },
-            {
-                "name": "iconOptions",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Record<string, IconDefinition>",
-                "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash,\n}"
             },
             {
                 "name": "iconOptions",
@@ -698,7 +718,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<SegmentedBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/SegmentedBtn',\n    component: SegmentedBtnComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\n              }\n        },\n    },\n    argTypes: {\n        btnArray: {control: 'object'},\n        activeBtn: {control: 'object'},\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Segmented Btn',\n    component: SegmentedBtnComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\n              }\n        },\n    },\n    argTypes: {\n        btnArray: {control: 'object'},\n        activeBtn: {control: 'object'},\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -714,11 +734,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TableComponent>",
+                "defaultValue": "{\n    title: 'Components/Table',\n    component: TableComponent,\n    decorators: [\n        moduleMetadata({\n          imports: [TableComponent, TableHeaderComponent],\n        }),\n      ],\n    parameters: {\n        docs: {\n            description: {\n                story: 'TabsView to switch between dfferent contents',\n              }\n        },\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/tabs-view/tabs-view.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TabsViewComponent>",
-                "defaultValue": "{\n    title: 'Components/TabsView',\n    component: TabsViewComponent,\n    decorators: [\n        moduleMetadata({\n          imports: [TabsViewComponent, TabComponent],\n        }),\n      ],\n    parameters: {\n        docs: {\n            description: {\n                story: 'TabsView to switch between dfferent contents',\n              }\n        },\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/TabsView',\n    component: TabsViewComponent,\n    decorators: [\n        moduleMetadata({\n          imports: [TabsViewComponent, TabComponent],\n        }),\n      ],\n    parameters: {\n        docs: {\n            description: {\n                story: 'TabsView to switch between dfferent contents',\n              }\n        },\n    },\n    args: { \n        selectedTabChanged: fn() \n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -778,7 +808,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\r\n    parameters: {\r\n        layout: 'centered',\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n                color: ['../assets/styles.scss']\r\n            }\r\n        }\r\n    },\r\n    decorators: [\r\n        applicationConfig({\r\n            providers: [\r\n                {\r\n                    provide: TranslateLoader,\r\n                    useClass: FakeLoader\r\n                },\r\n                {\r\n                    provide: TranslateCompiler,\r\n                    useClass: TranslateFakeCompiler\r\n                },\r\n                {\r\n                    provide: TranslateParser,\r\n                    useClass: TranslateDefaultParser\r\n                },\r\n                {\r\n                    provide: MissingTranslationHandler,\r\n                    useValue: null\r\n                },\r\n                {\r\n                    provide: USE_DEFAULT_LANG,\r\n                    useValue: true\r\n                },\r\n                {\r\n                    provide: DEFAULT_LANGUAGE,\r\n                    useValue: true\r\n                },\r\n                {\r\n                    provide: USE_EXTEND,\r\n                    useValue: false\r\n                },\r\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\r\n                TranslateStore,\r\n                {\r\n                    provide: APP_INITIALIZER,\r\n                    useFactory: (translate: TranslateService) => () => {\r\n                        translate.setDefaultLang('de');\r\n                        translate.use('de');\r\n                        return Promise.resolve();\r\n                    },\r\n                    deps: [TranslateService],\r\n                    multi: true\r\n                }\r\n            ]\r\n        })\r\n    ]\r\n}"
+                "defaultValue": "{\r\n    parameters: {\r\n        layout: 'centered',\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        actions: {\r\n            argTypesRegex:'Change$' \r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n                color: ['../assets/styles.scss']\r\n            }\r\n        }\r\n    },\r\n    decorators: [\r\n        applicationConfig({\r\n            providers: [\r\n                {\r\n                    provide: TranslateLoader,\r\n                    useClass: FakeLoader\r\n                },\r\n                {\r\n                    provide: TranslateCompiler,\r\n                    useClass: TranslateFakeCompiler\r\n                },\r\n                {\r\n                    provide: TranslateParser,\r\n                    useClass: TranslateDefaultParser\r\n                },\r\n                {\r\n                    provide: MissingTranslationHandler,\r\n                    useValue: null\r\n                },\r\n                {\r\n                    provide: USE_DEFAULT_LANG,\r\n                    useValue: true\r\n                },\r\n                {\r\n                    provide: DEFAULT_LANGUAGE,\r\n                    useValue: true\r\n                },\r\n                {\r\n                    provide: USE_EXTEND,\r\n                    useValue: false\r\n                },\r\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\r\n                TranslateStore,\r\n                {\r\n                    provide: APP_INITIALIZER,\r\n                    useFactory: (translate: TranslateService) => () => {\r\n                        translate.setDefaultLang('de');\r\n                        translate.use('de');\r\n                        return Promise.resolve();\r\n                    },\r\n                    deps: [TranslateService],\r\n                    multi: true\r\n                }\r\n            ]\r\n        })\r\n    ]\r\n}"
             },
             {
                 "name": "Primary",
@@ -1123,6 +1153,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<SelectComponent>",
                 "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<TableComponent>",
+                "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1583,58 +1624,6 @@
                     "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
                 }
             ],
-            "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts": [
-                {
-                    "name": "activeBtn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "SegmentedBtnItem",
-                    "defaultValue": "btnArray[1]"
-                },
-                {
-                    "name": "btnArray",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "[]",
-                    "defaultValue": "[\n    new SegmentedBtnItem('btn.day', '1', true, false, Icons.faInfoCircle),\n    new SegmentedBtnItem('btn.week', '2', false, false, Icons.faInfoCircle),\n    new SegmentedBtnItem('btn.month', '3', false, false, Icons.faInfoCircle),\n]"
-                },
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        btnArray: btnArray,\n        activeBtn: activeBtn,\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Default component with items to select',\n          },\n        },\n      },\n}"
-                },
-                {
-                    "name": "iconOptions",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Record<string, IconDefinition>",
-                    "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash,\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<SegmentedBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/SegmentedBtn',\n    component: SegmentedBtnComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\n              }\n        },\n    },\n    argTypes: {\n        btnArray: {control: 'object'},\n        activeBtn: {control: 'object'},\n    },\n    tags: ['autodocs']\n}"
-                }
-            ],
             "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
                 {
                     "name": "Changes",
@@ -1805,6 +1794,28 @@
                     "defaultValue": "{\r\n    title: 'Components/Dropzone',\r\n    component: DropzoneComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        choseFileLabel: {control: 'text'},\r\n        allowedExtension: { control: 'check', options: ['json'] },\r\n        fileArrayLength: { control: 'number' },\r\n        files: { control: { type: 'file', accept: '.json' } },\r\n        maxSizeOfFiles: { control: 'number'},\r\n        height: { control: 'text' },\r\n        width: { control: 'text' },\r\n    },\r\n    decorators: [\r\n        (story) => ({\r\n          template: `<div style=\"width: 300px;\">${story().template}</div>`,\r\n          props: story().props,\r\n        }),\r\n    ],\r\n}"
                 }
             ],
+            "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        btnArray: btnArray,\n        activeBtn: activeBtn,\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Default component with items to select',\n          },\n        },\n      },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<SegmentedBtnComponent>",
+                    "defaultValue": "{\n    title: 'Components/Segmented Btn',\n    component: SegmentedBtnComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\n              }\n        },\n    },\n    argTypes: {\n        btnArray: {control: 'object'},\n        activeBtn: {control: 'object'},\n    },\n    tags: ['autodocs']\n}"
+                }
+            ],
             "projects/angular-component-library/src/lib/components/select/select.stories.ts": [
                 {
                     "name": "Default",
@@ -1857,6 +1868,68 @@
                     "defaultValue": "[\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\n    new SelectItem('select3'),\n]"
                 }
             ],
+            "projects/angular-component-library/src/lib/components/table/table.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    render: () => ({\n        props: {\n          items: headerItemsTasks,\n          filters: filters,\n          filterRows: (event: any) => console.log('Filter Rows', event),\n          sortColumn: (event: any) => console.log('Sort Column', event),\n        },\n        template: defaultTemplateMock,\n      }),\n}"
+                },
+                {
+                    "name": "defaultTemplateMock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "`   <table-component [style.width]=\"'100%'\">\n            <div header></div>\n            <div content></div>\n        </table-component>\n     `"
+                },
+                {
+                    "name": "defaultTemplateMock2",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "`\n      <table-component>\n        <div header>\n          <table-header-component\n            [headerItemsTasks]=\"items\"\n            [searchFilters]=\"filters\"\n            (filterRowChange)=\"filterRows($event)\"\n            (sortColumnChange)=\"sortColumn($event)\">\n          </table-header-component>\n        </div>\n        <div content></div>\n      </table-component>\n    `"
+                },
+                {
+                    "name": "filters",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "getSearchFilters(headerItemsTasks)"
+                },
+                {
+                    "name": "headerItemsTasks",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ColumnHeaderItem[]",
+                    "defaultValue": "[\n    new ColumnHeaderItem('Id', 'job_id', ColumnType.STRING, false),\n    new ColumnHeaderItem('Email', 'client_email', ColumnType.STRING, true),\n    new ColumnHeaderItem('Name', 'client_id', ColumnType.STRING, true),\n]"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TableComponent>",
+                    "defaultValue": "{\n    title: 'Components/Table',\n    component: TableComponent,\n    decorators: [\n        moduleMetadata({\n          imports: [TableComponent, TableHeaderComponent],\n        }),\n      ],\n    parameters: {\n        docs: {\n            description: {\n                story: 'TabsView to switch between dfferent contents',\n              }\n        },\n    },\n    tags: ['autodocs']\n}"
+                }
+            ],
             "projects/angular-component-library/src/lib/components/tabs-view/tabs-view.stories.ts": [
                 {
                     "name": "Default",
@@ -1866,7 +1939,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    render: () => ({\n        template: templateMock\n    }),\n}"
+                    "defaultValue": "{\n    render: () => ({\n        props: {\n            selectedTabChange: (event: any) => alert('Selected tab changed to ' + event),\n        },\n        template: templateMock\n    }),\n}"
                 },
                 {
                     "name": "meta",
@@ -1876,7 +1949,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TabsViewComponent>",
-                    "defaultValue": "{\n    title: 'Components/TabsView',\n    component: TabsViewComponent,\n    decorators: [\n        moduleMetadata({\n          imports: [TabsViewComponent, TabComponent],\n        }),\n      ],\n    parameters: {\n        docs: {\n            description: {\n                story: 'TabsView to switch between dfferent contents',\n              }\n        },\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/TabsView',\n    component: TabsViewComponent,\n    decorators: [\n        moduleMetadata({\n          imports: [TabsViewComponent, TabComponent],\n        }),\n      ],\n    parameters: {\n        docs: {\n            description: {\n                story: 'TabsView to switch between dfferent contents',\n              }\n        },\n    },\n    args: { \n        selectedTabChanged: fn() \n    },\n    tags: ['autodocs']\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts": [
@@ -2162,7 +2235,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\r\n    parameters: {\r\n        layout: 'centered',\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n                color: ['../assets/styles.scss']\r\n            }\r\n        }\r\n    },\r\n    decorators: [\r\n        applicationConfig({\r\n            providers: [\r\n                {\r\n                    provide: TranslateLoader,\r\n                    useClass: FakeLoader\r\n                },\r\n                {\r\n                    provide: TranslateCompiler,\r\n                    useClass: TranslateFakeCompiler\r\n                },\r\n                {\r\n                    provide: TranslateParser,\r\n                    useClass: TranslateDefaultParser\r\n                },\r\n                {\r\n                    provide: MissingTranslationHandler,\r\n                    useValue: null\r\n                },\r\n                {\r\n                    provide: USE_DEFAULT_LANG,\r\n                    useValue: true\r\n                },\r\n                {\r\n                    provide: DEFAULT_LANGUAGE,\r\n                    useValue: true\r\n                },\r\n                {\r\n                    provide: USE_EXTEND,\r\n                    useValue: false\r\n                },\r\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\r\n                TranslateStore,\r\n                {\r\n                    provide: APP_INITIALIZER,\r\n                    useFactory: (translate: TranslateService) => () => {\r\n                        translate.setDefaultLang('de');\r\n                        translate.use('de');\r\n                        return Promise.resolve();\r\n                    },\r\n                    deps: [TranslateService],\r\n                    multi: true\r\n                }\r\n            ]\r\n        })\r\n    ]\r\n}"
+                    "defaultValue": "{\r\n    parameters: {\r\n        layout: 'centered',\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        actions: {\r\n            argTypesRegex:'Change$' \r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n                color: ['../assets/styles.scss']\r\n            }\r\n        }\r\n    },\r\n    decorators: [\r\n        applicationConfig({\r\n            providers: [\r\n                {\r\n                    provide: TranslateLoader,\r\n                    useClass: FakeLoader\r\n                },\r\n                {\r\n                    provide: TranslateCompiler,\r\n                    useClass: TranslateFakeCompiler\r\n                },\r\n                {\r\n                    provide: TranslateParser,\r\n                    useClass: TranslateDefaultParser\r\n                },\r\n                {\r\n                    provide: MissingTranslationHandler,\r\n                    useValue: null\r\n                },\r\n                {\r\n                    provide: USE_DEFAULT_LANG,\r\n                    useValue: true\r\n                },\r\n                {\r\n                    provide: DEFAULT_LANGUAGE,\r\n                    useValue: true\r\n                },\r\n                {\r\n                    provide: USE_EXTEND,\r\n                    useValue: false\r\n                },\r\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\r\n                TranslateStore,\r\n                {\r\n                    provide: APP_INITIALIZER,\r\n                    useFactory: (translate: TranslateService) => () => {\r\n                        translate.setDefaultLang('de');\r\n                        translate.use('de');\r\n                        return Promise.resolve();\r\n                    },\r\n                    deps: [TranslateService],\r\n                    multi: true\r\n                }\r\n            ]\r\n        })\r\n    ]\r\n}"
                 }
             ]
         },
@@ -2358,6 +2431,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<SelectComponent>",
                     "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/table/table.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TableComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -3128,37 +3214,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "activeBtn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "btnArray",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
                 "name": "Default",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "iconOptions",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -3235,6 +3291,76 @@
             },
             {
                 "filePath": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "defaultTemplateMock",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "defaultTemplateMock2",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "filters",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "headerItemsTasks",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

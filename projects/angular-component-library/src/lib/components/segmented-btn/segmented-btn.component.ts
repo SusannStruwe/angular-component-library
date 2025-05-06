@@ -1,9 +1,16 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
-
 import { CommonModule } from '@angular/common';
 import { SegmentedBtnItem } from '../../model/segmented-btn.model';
+import { Icons } from '../../model/icons';
+
+export const btnArray = [
+    new SegmentedBtnItem('btn.day', '1', true, false, Icons.faInfoCircle),
+    new SegmentedBtnItem('btn.week', '2', false, false, Icons.faInfoCircle),
+    new SegmentedBtnItem('btn.month', '3', false, false, Icons.faInfoCircle),
+];
+export const activeBtn: SegmentedBtnItem = btnArray[1];
 
 /**
  * Component to create segmented buttons.

@@ -1,0 +1,31 @@
+<div class="flex-column">
+    <div class="flex-row">
+        @for (item of headerItemsTasks; track item; let i = $index) {
+            <div class="flex-item" #cellWidthHeader>
+                <div
+                    sortColumn
+                    [sortable]="item"
+                    [sortDirection]="item.property === 'submitted_at' ? 'desc' : ''"
+                    (sort)="sortColumn($event)"
+                    [ngClass]="item.canFiltered ? 'sort withSelect' : 'sort'">
+                    <h2>{{ item.title }}</h2>
+                    <fa-icon [icon]="faSort"></fa-icon>
+                </div>
+            </div>
+        }
+    </div>
+    @if (searchFilters.length !== 0) {
+        <div class="flex-row">
+            @for (item of headerItemsTasks; track item; let i = $index) {
+                <div #cellWidthSubHeader class="center">
+                    <input
+                        type="text"
+                        class="search-input"
+                        [(ngModel)]="searchFilters[i].value"
+                        (ngModelChange)="filterRows()"
+                        placeholder="{{ 'general.search' | translate }}" />
+                </div>
+            }
+        </div>
+    }
+</div>

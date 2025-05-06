@@ -26,6 +26,9 @@ export class FakeLoader implements TranslateLoader {
                     day: 'Tag',
                     week: 'Woche',
                     month: 'Monat'
+                },
+                general: {
+                    search: 'Suchen ...'
                 }
             },
             de: {
@@ -50,6 +53,9 @@ export class FakeLoader implements TranslateLoader {
                     day: 'Tag',
                     week: 'Woche',
                     month: 'Monat'
+                },
+                general: {
+                    search: 'Search ...'
                 }
             }
         };

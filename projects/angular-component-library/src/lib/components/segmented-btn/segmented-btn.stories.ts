@@ -1,15 +1,5 @@
 import { Meta, StoryObj } from '@storybook/angular';
-import { Icons } from '../../model/icons';
-import { SegmentedBtnComponent } from './segmented-btn.component';
-import { SegmentedBtnItem } from '../../model/segmented-btn.model';
-
-
-const btnArray = [
-    new SegmentedBtnItem('btn.day', '1', true, false, Icons.faInfoCircle),
-    new SegmentedBtnItem('btn.week', '2', false, false, Icons.faInfoCircle),
-    new SegmentedBtnItem('btn.month', '3', false, false, Icons.faInfoCircle),
-];
-const activeBtn: SegmentedBtnItem = btnArray[1];
+import { activeBtn, btnArray, SegmentedBtnComponent } from './segmented-btn.component';
 
 
 const meta: Meta<SegmentedBtnComponent> = {
