@@ -37,13 +37,14 @@ const meta: Meta<MultiSelectComponent> = {
             options: Object.keys(iconOptions),
             mapping: iconOptions
         },
-        classStyle: { control: 'text' },
         withFilter: { control: 'boolean' },
         filterPlaceholder: { control: 'text' },
         backgroundColor: {control: 'text'},
         itemsSelected: { action: 'selected'}
     },
     args: {
+        label: '',
+        items: [],
         itemsSelected: fn()
     },
     tags: ['autodocs']

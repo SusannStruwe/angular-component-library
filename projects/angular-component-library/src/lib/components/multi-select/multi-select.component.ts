@@ -48,7 +48,6 @@ export class MultiSelectComponent implements OnChanges {
     @Input() faIcon?: IconDefinition;
     @Input() withFilter?: boolean;
     @Input() filterPlaceholder?: string;
-    @Input() classStyle?: string;
     @Input() backgroundColor?: string;
 
     @Output() itemsSelected = new EventEmitter<string[]>();
