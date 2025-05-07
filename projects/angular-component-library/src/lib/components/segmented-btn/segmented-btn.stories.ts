@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { activeBtn, btnArray, SegmentedBtnComponent } from './segmented-btn.component';
+import { fn } from '@storybook/test';
 
 
 const meta: Meta<SegmentedBtnComponent> = {
@@ -15,6 +16,12 @@ const meta: Meta<SegmentedBtnComponent> = {
     argTypes: {
         btnArray: {control: 'object'},
         activeBtn: {control: 'object'},
+        btnSelected: {action: 'selected'},
+        activeBtnChange: {action: 'activeBtn'},
+    },
+    args: { 
+        btnSelected: fn() ,
+        activeBtnChange: fn()
     },
     tags: ['autodocs']
 };

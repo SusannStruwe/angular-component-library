@@ -2,6 +2,7 @@ import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 import { AlertType } from '../../model/alert-type.enum';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { AlertComponent } from './alert.component';
+import { fn } from '@storybook/test';
 
 const types: typeof AlertType = AlertType;
 
@@ -40,8 +41,10 @@ const meta: Meta<AlertComponent> = {
         },
         visibleState: { control: 'boolean', value: false },
         navigationLink: { control: 'text', value: undefined },
-        navigationLinkLabel: { control: 'text', value: undefined }
-    }
+        navigationLinkLabel: { control: 'text', value: undefined },
+        visibleStateChange: { action: 'changed' }
+    },
+    args: { visibleStateChange: fn()}
 };
 export default meta;
 

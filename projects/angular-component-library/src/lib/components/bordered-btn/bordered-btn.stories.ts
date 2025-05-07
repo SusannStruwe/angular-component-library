@@ -10,6 +10,7 @@ import {
 import { Meta, StoryObj } from '@storybook/angular';
 import { HoverStyle } from '../../model/hover-style.enum';
 import { BorderedBtnComponent } from './bordered-btn.component';
+import { action } from '@storybook/addon-actions';
 
 const iconOptions: Record<string, IconDefinition> = {
     faCheck: faCheck,
@@ -18,7 +19,15 @@ const iconOptions: Record<string, IconDefinition> = {
     faSpinner: faSpinner,
     faTrash: faTrash
 };
+
 const hoverStyles: typeof HoverStyle = HoverStyle;
+
+const templateMock = 
+`   <bordered-btn-component
+        (click)="click($event)"
+        [label]="'Click me!'">
+    </bordered-btn-component>
+ `;
 
 const meta: Meta<BorderedBtnComponent> = {
     title: 'Components/Buttons/Bordered Btn',
@@ -59,8 +68,20 @@ type Story = StoryObj<BorderedBtnComponent>;
 export const Default: Story = {
     args: {
         label: 'Default',
-    }
+    },
 };
+
+export const WithAction: Story = {
+    render: (args) => ({
+        props: {
+          ...args,
+          click: () => {
+            action('do something')();
+          },
+        },
+        template: templateMock
+      }),
+}
 
 export const Active: Story = {
     args: {

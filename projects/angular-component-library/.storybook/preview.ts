@@ -29,7 +29,7 @@ const preview: Preview = {
             }
         },
         actions: {
-            argTypesRegex:'Change$' 
+            argTypesRegex: '(Change|Clicked|Selected)$'
         },
         designToken: {
             defaultTab: 'Colors',

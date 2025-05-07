@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { CheckboxComponent } from './checkbox.component';
 import { EditMode } from '../../model/edit-mode.enum';
+import { fn } from '@storybook/test';
 
 const types: typeof EditMode = EditMode;
 
@@ -18,8 +19,10 @@ const meta: Meta<CheckboxComponent> = {
             mapping: EditMode,
             value: EditMode.WRITE
         },
-        height: { control: 'number' }
-    }
+        height: { control: 'number' },
+        valueChange: { action: 'changed'}
+    },
+    args: { valueChange: fn() }
 };
 export default meta;
 

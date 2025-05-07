@@ -1,6 +1,7 @@
 import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 import { TabsViewComponent, templateMock } from './tabs-view.component';
 import { TabComponent } from './tab/tab.component';
+import { action } from '@storybook/addon-actions';
 import { fn } from '@storybook/test';
 
 
@@ -19,9 +20,10 @@ const meta: Meta<TabsViewComponent> = {
               }
         },
     },
-    args: { 
-        selectedTabChanged: fn() 
+    argTypes: {
+        selectedTabChanged: {action: 'changed'},
     },
+    args: { selectedTabChanged: fn() },
     tags: ['autodocs']
 };
 export default meta;
@@ -29,10 +31,22 @@ export default meta;
 type Story = StoryObj<TabsViewComponent>;
 
 export const Default: Story = {
-    render: () => ({
-        props: {
-            selectedTabChange: (event: any) => alert('Selected tab changed to ' + event),
-        },
-        template: templateMock
+    render: (args) => ({
+        props: args,
+        template: templateMock,
     }),
 };
+
+
+export const WithAlert: Story = {
+    render: (args) => ({
+        props: {
+          ...args,
+          selectedTabChanged: (payload: string) => {
+            alert(`ALERT: ${payload}`);
+            action('tabSwitched')(payload);
+          },
+        },
+        template: templateMock,
+      }),
+}

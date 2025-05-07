@@ -1,5 +1,7 @@
 import type { StorybookConfig } from '@storybook/angular';
 
+process.env.NODE_ENV = 'development';
+
 const config: StorybookConfig = {
     stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
     addons: [

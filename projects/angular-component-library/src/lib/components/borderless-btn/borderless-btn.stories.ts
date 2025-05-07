@@ -9,6 +9,7 @@ import {
 import { Meta, StoryObj } from '@storybook/angular';
 import { HoverStyle } from '../../model/hover-style.enum';
 import { BorderlessBtnComponent } from './borderless-btn.component';
+import { action } from '@storybook/addon-actions';
 
 const iconOptions: Record<string, IconDefinition> = {
     faCheck: faCheck,
@@ -18,6 +19,13 @@ const iconOptions: Record<string, IconDefinition> = {
     faTrash: faTrash
 };
 const hoverStyles: typeof HoverStyle = HoverStyle;
+
+const templateMock = 
+`   <borderless-btn-component
+        (click)="click($event)"
+        [label]="'Click me!'">
+    </borderless-btn-component>
+ `;
 
 const meta: Meta<BorderlessBtnComponent> = {
     title: 'Components/Buttons/Borderless Btn',
@@ -61,6 +69,18 @@ export const Default: Story = {
         isDisabled: false
     }
 };
+
+export const WithAction: Story = {
+    render: (args) => ({
+        props: {
+          ...args,
+          click: () => {
+            action('do something')();
+          },
+        },
+        template: templateMock
+      }),
+}
 
 export const Active: Story = {
     args: {
