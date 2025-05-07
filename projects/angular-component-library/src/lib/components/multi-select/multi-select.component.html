@@ -10,11 +10,13 @@
         (click)="toggleFilter()"
         class="filter-btn">
         @if (label) {
-        <span>{{ label }}</span>
-        } @if (faIcon) {
-        <fa-icon [icon]="faIcon"></fa-icon>
-        } @if (selectedItems.length !== 0) {
-        <p>{{ selectedItems.length }}</p>
+            <span>{{ label }}</span>
+        } 
+        @if (faIcon) {
+            <fa-icon [icon]="faIcon"></fa-icon>
+        } 
+        @if (selectedItems.length !== 0) {
+            <p>{{ selectedItems.length }}</p>
         }
     </button>
 

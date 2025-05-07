@@ -16,7 +16,7 @@ const meta: Meta<TabsViewComponent> = {
     parameters: {
         docs: {
             description: {
-                story: 'TabsView to switch between dfferent contents',
+                story: 'TabsView to switch content',
               }
         },
     },

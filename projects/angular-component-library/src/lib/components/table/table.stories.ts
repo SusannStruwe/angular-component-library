@@ -3,6 +3,8 @@ import { TableComponent } from './table.component';
 import { ColumnHeaderItem, ColumnType } from '../../model/column-header-item.model';
 import { getSearchFilters } from '../../model/util';
 import { TableHeaderComponent } from './table-header/table-header.component';
+import { action } from '@storybook/addon-actions';
+import { fn } from '@storybook/test';
 
 const headerItemsTasks: ColumnHeaderItem[] = [
     new ColumnHeaderItem('Id', 'id', ColumnType.STRING, false),
@@ -18,14 +20,13 @@ const defaultTemplateMock =
             <table-header-component 
                 [headerItemsTasks]="items" 
                 [searchFilters]="filters" 
-                (filterRowChange)="filterRows($event)" 
-                (sortColumnChange)="sortColumn($event)">
+                (filterRowChange)="filterRowChange($event)" 
+                (sortColumnChange)="sortColumnChange($event)">
             </table-header-component>
         </div>
         <div content></div>
     </table-component>
  `;
-
 
 
   
@@ -51,12 +52,13 @@ export default meta;
 type Story = StoryObj<TableComponent>;
 
 export const Default: Story = {
-    render: () => ({
+    render: (args) => ({
         props: {
-          items: headerItemsTasks,
-          filters: filters,
-          filterRows: (event: any) => console.log('Filter Rows', event),
-          sortColumn: (event: any) => console.log('Sort Column', event),
+            ...args,
+            items: headerItemsTasks,
+            filters: filters,
+            filterRowChange: (event: any) => { action('filter')(event) },
+            sortColumnChange: (event: any) =>  { action('sort')(event) },
         },
         template: defaultTemplateMock,
       }),

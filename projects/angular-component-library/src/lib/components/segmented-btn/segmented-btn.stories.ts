@@ -9,7 +9,7 @@ const meta: Meta<SegmentedBtnComponent> = {
     parameters: {
         docs: {
             description: {
-                story: '### Wichtig\n\nDieser Button ist für Primäraktionen gedacht.',
+                story: 'Component to switch content',
               }
         },
     },
@@ -37,7 +37,7 @@ export const Default: Story = {
     parameters: {
         docs: {
           description: {
-            story: 'Default component with items to select',
+            story: 'Component to switch content',
           },
         },
       },

@@ -88,17 +88,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Default',\n    }\n}"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Default',\n        isDisabled: false\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Default',\n    },\n}"
             },
             {
                 "name": "Default",
@@ -109,6 +99,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        value: true,\n        mode: EditMode.WRITE\n    }\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Default',\n        isDisabled: false\n    }\n}"
             },
             {
                 "name": "Default",
@@ -154,11 +154,41 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Label',\n        faIcon: faFilter,\n        items: selectItems,\n        backgroundColor: 'green'\n    },\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        translationKey: 'data.noData',\n    }\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        filter: '123456',\n    }\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        btnArray: btnArray,\n        activeBtn: activeBtn,\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Default component with items to select',\n          },\n        },\n      },\n}"
+                "defaultValue": "{\n    args: {\n        btnArray: btnArray,\n        activeBtn: activeBtn,\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Component to switch content',\n          },\n        },\n      },\n}"
             },
             {
                 "name": "Default",
@@ -168,7 +198,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Default component with items to select',\n          },\n        },\n      },\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Component to select items',\n          },\n        },\n      },\n}"
             },
             {
                 "name": "Default",
@@ -178,7 +208,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    render: () => ({\n        props: {\n          items: headerItemsTasks,\n          filters: filters,\n          filterRows: (event: any) => console.log('Filter Rows', event),\n          sortColumn: (event: any) => console.log('Sort Column', event),\n        },\n        template: defaultTemplateMock,\n      }),\n}"
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            items: headerItemsTasks,\n            filters: filters,\n            filterRowChange: (event: any) => { action('filter')(event) },\n            sortColumnChange: (event: any) =>  { action('sort')(event) },\n        },\n        template: defaultTemplateMock,\n      }),\n}"
             },
             {
                 "name": "Default",
@@ -188,7 +218,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    render: () => ({\n        props: {\n            selectedTabChange: (event: any) => alert('Selected tab changed to ' + event),\n        },\n        template: templateMock,\n        args: {\n            selectedTabChanged: (text: string) => {\n              alert(`ALERT: ${text}`);\n              action('message')(text); // zusätzlich ins Actions-Panel loggen\n            },\n          },\n    }),\n}"
+                "defaultValue": "{\n    render: (args) => ({\n        props: args,\n        template: templateMock,\n    }),\n}"
             },
             {
                 "name": "Default",
@@ -208,7 +238,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "`   <table-component [style.width]=\"'100%'\">\n        <div header>\n            <table-header-component \n                [headerItemsTasks]=\"items\" \n                [searchFilters]=\"filters\" \n                (filterRowChange)=\"filterRows($event)\" \n                (sortColumnChange)=\"sortColumn($event)\">\n            </table-header-component>\n        </div>\n        <div content></div>\n    </table-component>\n `"
+                "defaultValue": "`   <table-component [style.width]=\"'100%'\">\n        <div header>\n            <table-header-component \n                [headerItemsTasks]=\"items\" \n                [searchFilters]=\"filters\" \n                (filterRowChange)=\"filterRowChange($event)\" \n                (sortColumnChange)=\"sortColumnChange($event)\">\n            </table-header-component>\n        </div>\n        <div content></div>\n    </table-component>\n `"
             },
             {
                 "name": "Delete",
@@ -494,6 +524,16 @@
                 "name": "iconOptions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Record<string, IconDefinition>",
+                "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faFilter: faFilter,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash,\n}"
+            },
+            {
+                "name": "iconOptions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -614,21 +654,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<AlertComponent>",
-                "defaultValue": "{\n    title: 'Components/Alert',\n    component: AlertComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [RouterModule],\n            providers: [\n                {\n                    provide: ActivatedRoute,\n                    useValue: {\n                        snapshot: {\n                            paramMap: new Map([['id', '123']]),\n                            data: {}\n                        },\n                        params: [{ id: '123' }],\n                        queryParams: {}\n                    } // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n                }\n            ]\n        })\n    ],\n    tags: ['autodocs'],\n    argTypes: {\n        title: { control: 'text', value: '' },\n        message: { control: 'text', value: '' },\n        type: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: AlertType,\n            value: AlertType.SUCCESS\n        },\n        visibleState: { control: 'boolean', value: false },\n        navigationLink: { control: 'text', value: undefined },\n        navigationLinkLabel: { control: 'text', value: undefined }\n    }\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BadgeComponent>",
                 "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        classStyle: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ]\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<AlertComponent>",
+                "defaultValue": "{\n    title: 'Components/Alert',\n    component: AlertComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [RouterModule],\n            providers: [\n                {\n                    provide: ActivatedRoute,\n                    useValue: {\n                        snapshot: {\n                            paramMap: new Map([['id', '123']]),\n                            data: {}\n                        },\n                        params: [{ id: '123' }],\n                        queryParams: {}\n                    } // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n                }\n            ]\n        })\n    ],\n    tags: ['autodocs'],\n    argTypes: {\n        title: { control: 'text', value: '' },\n        message: { control: 'text', value: '' },\n        type: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: AlertType,\n            value: AlertType.SUCCESS\n        },\n        visibleState: { control: 'boolean', value: false },\n        navigationLink: { control: 'text', value: undefined },\n        navigationLinkLabel: { control: 'text', value: undefined },\n        visibleStateChange: { action: 'changed' }\n    },\n    args: { visibleStateChange: fn()}\n}"
             },
             {
                 "name": "meta",
@@ -644,21 +684,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<BorderlessBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                "type": "Meta<CheckboxComponent>",
+                "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' },\n        valueChange: { action: 'changed'}\n    },\n    args: { valueChange: fn() }\n}"
             },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<CheckboxComponent>",
-                "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' }\n    }\n}"
+                "type": "Meta<BorderlessBtnComponent>",
+                "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -704,11 +744,41 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<MultiSelectComponent>",
+                "defaultValue": "{\n    title: 'Components/Select/ Multi',\n    component: MultiSelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select multiple items.',\n              }\n        },\n    },\n    argTypes: {\n        items: {control: 'object'},\n        label: {control: 'text'},\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: { control: 'text' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        backgroundColor: {control: 'text'},\n        itemsSelected: { action: 'selected'}\n    },\n    args: {\n        itemsSelected: fn()\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<NoDataComponent>",
+                "defaultValue": "{\n    title: 'Components/No Data',\n    component: NoDataComponent,\n    argTypes: {\n        translationKey: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<SearchInputComponent>",
+                "defaultValue": "{\n    title: 'Components/Search Input',\n    component: SearchInputComponent,\n    argTypes: {\n        filter: {control: 'text'},\n        classStyles: {\n            control: 'select',\n            options: ['', 'no-radius', 'full-width', 'small left', 'small right']\n        },\n        placeholderText: {control: 'text'},\n        filterChange: { action: 'change'}\n    },\n    args: { filterChange: fn()},\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<SegmentedBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Segmented Btn',\n    component: SegmentedBtnComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\n              }\n        },\n    },\n    argTypes: {\n        btnArray: {control: 'object'},\n        activeBtn: {control: 'object'},\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Segmented Btn',\n    component: SegmentedBtnComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to switch content',\n              }\n        },\n    },\n    argTypes: {\n        btnArray: {control: 'object'},\n        activeBtn: {control: 'object'},\n        btnSelected: {action: 'selected'},\n        activeBtnChange: {action: 'activeBtn'},\n    },\n    args: { \n        btnSelected: fn() ,\n        activeBtnChange: fn()\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -718,7 +788,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<SelectComponent>",
-                "defaultValue": "{\n    title: 'Components/Select',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\n              }\n        },\n    },\n    argTypes: {\n        items: {control: 'object'},\n        selectedItem: {control: 'object'},\n        label: {control: 'text'},\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: { control: 'text' },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.',\n              }\n        },\n    },\n    argTypes: {\n        items: {control: 'object'},\n        selectedItem: {control: 'object'},\n        label: {control: 'text'},\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: { control: 'text' },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        showChange: { action: 'show'},\n        itemSelected: { action: 'selected'}\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -738,7 +808,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TabsViewComponent>",
-                "defaultValue": "{\n    title: 'Components/TabsView',\n    component: TabsViewComponent,\n    decorators: [\n        moduleMetadata({\n          imports: [TabsViewComponent, TabComponent],\n        }),\n      ],\n    parameters: {\n        docs: {\n            description: {\n                story: 'TabsView to switch between dfferent contents',\n              }\n        },\n        actions: {\n            argTypesRegex: 'Change$'\n        }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/TabsView',\n    component: TabsViewComponent,\n    decorators: [\n        moduleMetadata({\n          imports: [TabsViewComponent, TabComponent],\n        }),\n      ],\n    parameters: {\n        docs: {\n            description: {\n                story: 'TabsView to switch content',\n              }\n        },\n    },\n    argTypes: {\n        selectedTabChanged: {action: 'changed'},\n    },\n    args: { selectedTabChanged: fn() },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -854,6 +924,16 @@
                 "name": "selectItems",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[ 'item1', 'item2', 'item3']"
+            },
+            {
+                "name": "selectItems",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -951,6 +1031,36 @@
                 "defaultValue": "{\n    args: {\n        label: 'Tag 2',\n        backgroundColor: 'green'\n    }\n}"
             },
             {
+                "name": "templateMock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "`   <bordered-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </bordered-btn-component>\n `"
+            },
+            {
+                "name": "templateMock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "`   <borderless-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </borderless-btn-component>\n `"
+            },
+            {
+                "name": "templateMock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "`   <filled-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </filled-btn-component>\n `"
+            },
+            {
                 "name": "types",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -979,6 +1089,56 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        title: 'Warning Alert',\n        message: 'Warning Message',\n        type: AlertType.WARNING,\n        visibleState: true\n    }\n}"
+            },
+            {
+                "name": "WithAction",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n          ...args,\n          click: () => {\n            action('do something')();\n          },\n        },\n        template: templateMock\n      }),\n}"
+            },
+            {
+                "name": "WithAction",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n          ...args,\n          click: () => {\n            action('do something')();\n          },\n        },\n        template: templateMock\n      }),\n}"
+            },
+            {
+                "name": "WithAction",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n          ...args,\n          click: () => {\n            action('do something')();\n          },\n        },\n        template: templateMock\n      }),\n}"
+            },
+            {
+                "name": "WithAlert",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/tabs-view/tabs-view.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n          ...args,\n          selectedTabChanged: (payload: string) => {\n            alert(`ALERT: ${payload}`);\n            action('tabSwitched')(payload);\n          },\n        },\n        template: templateMock,\n      }),\n}"
+            },
+            {
+                "name": "WithFilter",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        faIcon: faFilter,\n        items: selectItems,\n        withFilter: true,\n        \n        filterPlaceholder: 'Select...',\n        backgroundColor: '#486bff'\n    },\n}"
             }
         ],
         "functions": [],
@@ -1031,8 +1191,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<AlertComponent>",
-                "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
+                "rawtype": "StoryObj<BadgeComponent>",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1042,8 +1202,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<BadgeComponent>",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "rawtype": "StoryObj<AlertComponent>",
+                "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1064,8 +1224,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<BorderlessBtnComponent>",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "rawtype": "StoryObj<CheckboxComponent>",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1075,8 +1235,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CheckboxComponent>",
-                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "rawtype": "StoryObj<BorderlessBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1121,6 +1281,39 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<FilledBtnComponent>",
                 "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<MultiSelectComponent>",
+                "file": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<NoDataComponent>",
+                "file": "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<SearchInputComponent>",
+                "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1225,7 +1418,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Default',\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Default',\n    },\n}"
                 },
                 {
                     "name": "Delete",
@@ -1326,6 +1519,26 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                },
+                {
+                    "name": "templateMock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "`   <bordered-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </bordered-btn-component>\n `"
+                },
+                {
+                    "name": "WithAction",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n          ...args,\n          click: () => {\n            action('do something')();\n          },\n        },\n        template: templateMock\n      }),\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts": [
@@ -1438,6 +1651,26 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                },
+                {
+                    "name": "templateMock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "`   <borderless-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </borderless-btn-component>\n `"
+                },
+                {
+                    "name": "WithAction",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n          ...args,\n          click: () => {\n            action('do something')();\n          },\n        },\n        template: templateMock\n      }),\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
@@ -1612,6 +1845,26 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                },
+                {
+                    "name": "templateMock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "`   <filled-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </filled-btn-component>\n `"
+                },
+                {
+                    "name": "WithAction",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n          ...args,\n          click: () => {\n            action('do something')();\n          },\n        },\n        template: templateMock\n      }),\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
@@ -1717,7 +1970,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CheckboxComponent>",
-                    "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' }\n    }\n}"
+                    "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' },\n        valueChange: { action: 'changed'}\n    },\n    args: { valueChange: fn() }\n}"
                 },
                 {
                     "name": "ReadMode",
@@ -1784,6 +2037,102 @@
                     "defaultValue": "{\r\n    title: 'Components/Dropzone',\r\n    component: DropzoneComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        choseFileLabel: {control: 'text'},\r\n        allowedExtension: { control: 'check', options: ['json'] },\r\n        fileArrayLength: { control: 'number' },\r\n        files: { control: { type: 'file', accept: '.json' } },\r\n        maxSizeOfFiles: { control: 'number'},\r\n        height: { control: 'text' },\r\n        width: { control: 'text' },\r\n    },\r\n    decorators: [\r\n        (story) => ({\r\n          template: `<div style=\"width: 300px;\">${story().template}</div>`,\r\n          props: story().props,\r\n        }),\r\n    ],\r\n}"
                 }
             ],
+            "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Label',\n        faIcon: faFilter,\n        items: selectItems,\n        backgroundColor: 'green'\n    },\n}"
+                },
+                {
+                    "name": "iconOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Record<string, IconDefinition>",
+                    "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faFilter: faFilter,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash,\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<MultiSelectComponent>",
+                    "defaultValue": "{\n    title: 'Components/Select/ Multi',\n    component: MultiSelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select multiple items.',\n              }\n        },\n    },\n    argTypes: {\n        items: {control: 'object'},\n        label: {control: 'text'},\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: { control: 'text' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        backgroundColor: {control: 'text'},\n        itemsSelected: { action: 'selected'}\n    },\n    args: {\n        itemsSelected: fn()\n    },\n    tags: ['autodocs']\n}"
+                },
+                {
+                    "name": "selectItems",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[ 'item1', 'item2', 'item3']"
+                },
+                {
+                    "name": "WithFilter",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        faIcon: faFilter,\n        items: selectItems,\n        withFilter: true,\n        \n        filterPlaceholder: 'Select...',\n        backgroundColor: '#486bff'\n    },\n}"
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        translationKey: 'data.noData',\n    }\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<NoDataComponent>",
+                    "defaultValue": "{\n    title: 'Components/No Data',\n    component: NoDataComponent,\n    argTypes: {\n        translationKey: {control: 'text'},\n    },\n    tags: ['autodocs']\n}"
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        filter: '123456',\n    }\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<SearchInputComponent>",
+                    "defaultValue": "{\n    title: 'Components/Search Input',\n    component: SearchInputComponent,\n    argTypes: {\n        filter: {control: 'text'},\n        classStyles: {\n            control: 'select',\n            options: ['', 'no-radius', 'full-width', 'small left', 'small right']\n        },\n        placeholderText: {control: 'text'},\n        filterChange: { action: 'change'}\n    },\n    args: { filterChange: fn()},\n    tags: ['autodocs']\n}"
+                }
+            ],
             "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts": [
                 {
                     "name": "Default",
@@ -1793,7 +2142,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        btnArray: btnArray,\n        activeBtn: activeBtn,\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Default component with items to select',\n          },\n        },\n      },\n}"
+                    "defaultValue": "{\n    args: {\n        btnArray: btnArray,\n        activeBtn: activeBtn,\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Component to switch content',\n          },\n        },\n      },\n}"
                 },
                 {
                     "name": "meta",
@@ -1803,7 +2152,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<SegmentedBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Segmented Btn',\n    component: SegmentedBtnComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\n              }\n        },\n    },\n    argTypes: {\n        btnArray: {control: 'object'},\n        activeBtn: {control: 'object'},\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Segmented Btn',\n    component: SegmentedBtnComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to switch content',\n              }\n        },\n    },\n    argTypes: {\n        btnArray: {control: 'object'},\n        activeBtn: {control: 'object'},\n        btnSelected: {action: 'selected'},\n        activeBtnChange: {action: 'activeBtn'},\n    },\n    args: { \n        btnSelected: fn() ,\n        activeBtnChange: fn()\n    },\n    tags: ['autodocs']\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/select/select.stories.ts": [
@@ -1815,7 +2164,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Default component with items to select',\n          },\n        },\n      },\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n          description: {\n            story: 'Component to select items',\n          },\n        },\n      },\n}"
                 },
                 {
                     "name": "iconOptions",
@@ -1835,7 +2184,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<SelectComponent>",
-                    "defaultValue": "{\n    title: 'Components/Select',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: '### Wichtig\\n\\nDieser Button ist für Primäraktionen gedacht.',\n              }\n        },\n    },\n    argTypes: {\n        items: {control: 'object'},\n        selectedItem: {control: 'object'},\n        label: {control: 'text'},\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: { control: 'text' },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.',\n              }\n        },\n    },\n    argTypes: {\n        items: {control: 'object'},\n        selectedItem: {control: 'object'},\n        label: {control: 'text'},\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: { control: 'text' },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        showChange: { action: 'show'},\n        itemSelected: { action: 'selected'}\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "selectedItem",
@@ -1867,7 +2216,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    render: () => ({\n        props: {\n          items: headerItemsTasks,\n          filters: filters,\n          filterRows: (event: any) => console.log('Filter Rows', event),\n          sortColumn: (event: any) => console.log('Sort Column', event),\n        },\n        template: defaultTemplateMock,\n      }),\n}"
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            items: headerItemsTasks,\n            filters: filters,\n            filterRowChange: (event: any) => { action('filter')(event) },\n            sortColumnChange: (event: any) =>  { action('sort')(event) },\n        },\n        template: defaultTemplateMock,\n      }),\n}"
                 },
                 {
                     "name": "defaultTemplateMock",
@@ -1877,7 +2226,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "`   <table-component [style.width]=\"'100%'\">\n        <div header>\n            <table-header-component \n                [headerItemsTasks]=\"items\" \n                [searchFilters]=\"filters\" \n                (filterRowChange)=\"filterRows($event)\" \n                (sortColumnChange)=\"sortColumn($event)\">\n            </table-header-component>\n        </div>\n        <div content></div>\n    </table-component>\n `"
+                    "defaultValue": "`   <table-component [style.width]=\"'100%'\">\n        <div header>\n            <table-header-component \n                [headerItemsTasks]=\"items\" \n                [searchFilters]=\"filters\" \n                (filterRowChange)=\"filterRowChange($event)\" \n                (sortColumnChange)=\"sortColumnChange($event)\">\n            </table-header-component>\n        </div>\n        <div content></div>\n    </table-component>\n `"
                 },
                 {
                     "name": "filters",
@@ -1919,7 +2268,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    render: () => ({\n        props: {\n            selectedTabChange: (event: any) => alert('Selected tab changed to ' + event),\n        },\n        template: templateMock,\n        args: {\n            selectedTabChanged: (text: string) => {\n              alert(`ALERT: ${text}`);\n              action('message')(text); // zusätzlich ins Actions-Panel loggen\n            },\n          },\n    }),\n}"
+                    "defaultValue": "{\n    render: (args) => ({\n        props: args,\n        template: templateMock,\n    }),\n}"
                 },
                 {
                     "name": "meta",
@@ -1929,7 +2278,17 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TabsViewComponent>",
-                    "defaultValue": "{\n    title: 'Components/TabsView',\n    component: TabsViewComponent,\n    decorators: [\n        moduleMetadata({\n          imports: [TabsViewComponent, TabComponent],\n        }),\n      ],\n    parameters: {\n        docs: {\n            description: {\n                story: 'TabsView to switch between dfferent contents',\n              }\n        },\n        actions: {\n            argTypesRegex: 'Change$'\n        }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/TabsView',\n    component: TabsViewComponent,\n    decorators: [\n        moduleMetadata({\n          imports: [TabsViewComponent, TabComponent],\n        }),\n      ],\n    parameters: {\n        docs: {\n            description: {\n                story: 'TabsView to switch content',\n              }\n        },\n    },\n    argTypes: {\n        selectedTabChanged: {action: 'changed'},\n    },\n    args: { selectedTabChanged: fn() },\n    tags: ['autodocs']\n}"
+                },
+                {
+                    "name": "WithAlert",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/tabs-view/tabs-view.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n          ...args,\n          selectedTabChanged: (payload: string) => {\n            alert(`ALERT: ${payload}`);\n            action('tabSwitched')(payload);\n          },\n        },\n        template: templateMock,\n      }),\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts": [
@@ -2025,7 +2384,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<AlertComponent>",
-                    "defaultValue": "{\n    title: 'Components/Alert',\n    component: AlertComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [RouterModule],\n            providers: [\n                {\n                    provide: ActivatedRoute,\n                    useValue: {\n                        snapshot: {\n                            paramMap: new Map([['id', '123']]),\n                            data: {}\n                        },\n                        params: [{ id: '123' }],\n                        queryParams: {}\n                    } // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n                }\n            ]\n        })\n    ],\n    tags: ['autodocs'],\n    argTypes: {\n        title: { control: 'text', value: '' },\n        message: { control: 'text', value: '' },\n        type: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: AlertType,\n            value: AlertType.SUCCESS\n        },\n        visibleState: { control: 'boolean', value: false },\n        navigationLink: { control: 'text', value: undefined },\n        navigationLinkLabel: { control: 'text', value: undefined }\n    }\n}"
+                    "defaultValue": "{\n    title: 'Components/Alert',\n    component: AlertComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [RouterModule],\n            providers: [\n                {\n                    provide: ActivatedRoute,\n                    useValue: {\n                        snapshot: {\n                            paramMap: new Map([['id', '123']]),\n                            data: {}\n                        },\n                        params: [{ id: '123' }],\n                        queryParams: {}\n                    } // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n                }\n            ]\n        })\n    ],\n    tags: ['autodocs'],\n    argTypes: {\n        title: { control: 'text', value: '' },\n        message: { control: 'text', value: '' },\n        type: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: AlertType,\n            value: AlertType.SUCCESS\n        },\n        visibleState: { control: 'boolean', value: false },\n        navigationLink: { control: 'text', value: undefined },\n        navigationLinkLabel: { control: 'text', value: undefined },\n        visibleStateChange: { action: 'changed' }\n    },\n    args: { visibleStateChange: fn()}\n}"
                 },
                 {
                     "name": "SuccessAlert",
@@ -2274,19 +2633,6 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/alert/alert.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<AlertComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
                 {
                     "name": "Story",
@@ -2294,6 +2640,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<BadgeComponent>",
                     "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/alert/alert.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<AlertComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2313,19 +2672,6 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<BorderlessBtnComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
                 {
                     "name": "Story",
@@ -2333,6 +2679,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CheckboxComponent>",
                     "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<BorderlessBtnComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2385,6 +2744,45 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<FilledBtnComponent>",
                     "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<MultiSelectComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<NoDataComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<SearchInputComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2761,6 +3159,26 @@
             },
             {
                 "filePath": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "templateMock",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithAction",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
@@ -2875,6 +3293,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Spinning",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "templateMock",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithAction",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -3181,6 +3619,146 @@
             },
             {
                 "filePath": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "templateMock",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithAction",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "iconOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "selectItems",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithFilter",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
@@ -3355,6 +3933,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/tabs-view/tabs-view.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithAlert",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

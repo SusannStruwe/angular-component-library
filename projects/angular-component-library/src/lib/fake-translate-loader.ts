@@ -29,6 +29,9 @@ export class FakeLoader implements TranslateLoader {
                 },
                 general: {
                     search: 'Suchen ...'
+                },
+                data: {
+                    noData: 'Keine Daten vorhanden'
                 }
             },
             de: {
@@ -56,6 +59,9 @@ export class FakeLoader implements TranslateLoader {
                 },
                 general: {
                     search: 'Search ...'
+                },
+                data: {
+                    noData: 'Keine Daten vorhanden'
                 }
             }
         };

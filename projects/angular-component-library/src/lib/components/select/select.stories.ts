@@ -4,6 +4,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faCheck, faChevronDown, faExclamation, faInfoCircle, faSpinner, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Icons } from '../../model/icons';
 import { SelectItem } from '../../model/select-item.model';
+import { fn } from '@storybook/test';
 
 
 const iconOptions: Record<string, IconDefinition> = {
@@ -23,12 +24,12 @@ const selectItems = [
 const selectedItem = new SelectItem('select1', undefined, Icons.faInfoCircle);
 
 const meta: Meta<SelectComponent> = {
-    title: 'Components/Select',
+    title: 'Components/Select/ Single',
     component: SelectComponent,
     parameters: {
         docs: {
             description: {
-                story: '### Wichtig\n\nDieser Button ist für Primäraktionen gedacht.',
+                story: 'Component to select items.',
               }
         },
     },
@@ -56,6 +57,12 @@ const meta: Meta<SelectComponent> = {
         withFilter: { control: 'boolean' },
         filterPlaceholder: { control: 'text' },
         show: { control: 'boolean' },
+        showChange: { action: 'show'},
+        itemSelected: { action: 'selected'}
+    },
+    args: {
+        showChange: fn(),
+        itemSelected: fn()
     },
     tags: ['autodocs']
 };
@@ -74,7 +81,7 @@ export const Default: Story = {
     parameters: {
         docs: {
           description: {
-            story: 'Default component with items to select',
+            story: 'Component to select items',
           },
         },
       },
