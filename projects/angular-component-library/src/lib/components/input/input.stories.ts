@@ -2,21 +2,26 @@ import { Meta, StoryObj } from '@storybook/angular';
 import { fn } from '@storybook/test';
 import { InputComponent } from './input.component';
 
-
 const meta: Meta<InputComponent> = {
     title: 'Components/Input',
     component: InputComponent,
     argTypes: {
-        input: {control: 'text'},
+        input: { control: 'text' },
         classStyles: {
             control: 'select',
-            options: ['', 'no-radius', 'full-width', 'small left', 'small right']
+            options: [
+                '',
+                'no-radius',
+                'full-width',
+                'small left',
+                'small right'
+            ]
         },
-        placeholderText: {control: 'text'},
-        type: {control: 'text'},
-        inputChange: { action: 'change'}
+        placeholderText: { control: 'text' },
+        type: { control: 'text' },
+        inputChange: { action: 'change' }
     },
-    args: { 
+    args: {
         type: 'text',
         inputChange: fn()
     },
@@ -28,7 +33,6 @@ type Story = StoryObj<InputComponent>;
 
 export const Default: Story = {
     args: {
-        input: '123456',
+        input: '123456'
     }
 };
-

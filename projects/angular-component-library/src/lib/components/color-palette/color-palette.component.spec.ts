@@ -4,7 +4,6 @@ import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testi
 import { By } from '@angular/platform-browser';
 import { Colors } from '../../model/colors';
 
-
 describe('ColorPaletteComponent', () => {
     let component: ColorPaletteComponent;
     let fixture: ComponentFixture<ColorPaletteComponent>;

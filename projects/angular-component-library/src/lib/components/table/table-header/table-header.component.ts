@@ -10,16 +10,17 @@ import { FormsModule } from '@angular/forms';
 import { SearchFilter } from '../../../model/search-filter.model';
 import { SortColumnEvent } from '../../../model/sort-column-event.model';
 
-
 /**
- * Component to create and show  table header
+ * Component to create and show table header
  *
  * @howToUse
  * ```
- * <table-header-component 
- *     [headerItemsTasks]="items" 
- *     [searchFilters]="filters" 
- *     (filterRowChange)="filterRows($event)" 
+ * <table-header-component
+ *     [headerItemsTasks]="items"
+ *     [searchFilters]="filters"
+ *     [multiSelectList]="multiSelectList"
+ *     (searchFilterChange)="searchFilterChange($event)"
+ *     (selectFilterChange)="selectFilterChange($event)"
  *     (sortColumnChange)="sortColumn($event)">
  * </table-header-component>
  */
@@ -27,11 +28,12 @@ import { SortColumnEvent } from '../../../model/sort-column-event.model';
     selector: 'table-header-component',
     standalone: true,
     imports: [
-        CommonModule, 
-        FontAwesomeModule, 
+        CommonModule,
+        FontAwesomeModule,
         TranslateModule,
         SortColumnDirective,
-        FormsModule
+        FormsModule,
+        MultiSelectComponent
     ],
     templateUrl: './table-header.component.html',
     styleUrls: ['./table-header.component.scss']
@@ -39,19 +41,24 @@ import { SortColumnEvent } from '../../../model/sort-column-event.model';
 export class TableHeaderComponent {
     @Input() headerItemsTasks: ColumnHeaderItem[] = [];
     @Input() searchFilters: SearchFilter[] = [];
+    @Input() multiSelectList: any = null;
 
-    @Output() filterRowChange = new EventEmitter<SearchFilter[]>();
+    @Output() searchFilterChange = new EventEmitter<SearchFilter[]>();
     @Output() sortColumnChange = new EventEmitter<SortColumnEvent>();
+    @Output() selectFilterChange = new EventEmitter<ColumnHeaderItem>();
 
     faSort = Icons.faSort;
     faFilter = Icons.faFilter;
 
-
-    filterRows(): void {
-        this.filterRowChange.emit(this.searchFilters);
+    filterRowsByInput(): void {
+        this.searchFilterChange.emit(this.searchFilters);
     }
 
     sortColumn(sortEvent: SortColumnEvent): void {
         this.sortColumnChange.emit(sortEvent);
+    }
+
+    filterRowsBySelect(headerItem: ColumnHeaderItem): void {
+        this.selectFilterChange.emit(headerItem);
     }
 }

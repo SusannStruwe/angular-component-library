@@ -38,16 +38,14 @@ The library includes a list of different interaction components:
 -   toggle-btn
 -   tooltip
 
-
-
 ## Development
 
 ### How to add new component
 
-- create new folder unter component
-- add component
-- add tests (spec and stories)
-- add component in public-api.ts
+-   create new folder unter component
+-   add component
+-   add tests (spec and stories)
+-   add component in public-api.ts
 
 ### Code scaffolding
 
@@ -55,8 +53,8 @@ Run `ng generate component component-name --project angular-component-library` t
 
 > Note: Don't forget to add `--project angular-component-library` or else it will be added to the default project in your `angular.json` file.
 
-
 ### Run development server
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ### Link library with target dev project
@@ -64,7 +62,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 Run `link:lib` script. After that a linked folder will be created in `AppData\Roaming\nvm\<version>\node_modules`. Now run the following command in the target project:
 
 > npm link angular-component-library
-
 
 ### Link and Watch Library
 
@@ -76,15 +73,11 @@ The built library’s /dist folder will later be used by the demo app. --watch m
 
 In the target project run `npm link angular-component-library` install the library if not already seen and then run `ng serve`.
 
-
-
-## Build 
-
+## Build
 
 ### Build lib for prod
 
 > ng build angular-component-library --configuration production"
-
 
 ### Build lib for prod and pack lib
 
@@ -98,7 +91,7 @@ cd dist/angular-component-library && npm pack
 
 Create a `lib` folder in the target project and copy packed lib into the folder.
 
-Install the library in the target project: 
+Install the library in the target project:
 `npm install libs\angular-component-library-0.0.1.tgz`
 
 Optional:
@@ -132,12 +125,9 @@ Navigate to `http://localhost:6006`
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-
 ## Publishing
 
 After building your library with `ng build angular-component-library`, go to the dist folder `cd dist/angular-component-library` and run `npm publish`.
-
-
 
 ## Version Infos
 

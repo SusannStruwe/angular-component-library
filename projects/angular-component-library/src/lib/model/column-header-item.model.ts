@@ -3,7 +3,7 @@ export class ColumnHeaderItem {
         public title: string,
         public property: string,
         public type: ColumnType,
-        public canFiltered: boolean,
+        public canFiltered: boolean
     ) {}
 }
 
@@ -12,5 +12,5 @@ export enum ColumnType {
     NUMBER = 'number',
     DATE = 'date',
     TIME_DURATION = 'timeDuration',
-    MAP = 'map',
+    MAP = 'map'
 }

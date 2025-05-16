@@ -44,7 +44,7 @@ const meta: Meta<AlertComponent> = {
         navigationLinkLabel: { control: 'text', value: undefined },
         visibleStateChange: { action: 'changed' }
     },
-    args: { visibleStateChange: fn()}
+    args: { visibleStateChange: fn() }
 };
 export default meta;
 

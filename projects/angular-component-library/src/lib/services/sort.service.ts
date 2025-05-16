@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { SortColumnEvent } from '../model/sort-column-event.model';
 
-
 /**
  * Sort service to get selected sort column event
  */

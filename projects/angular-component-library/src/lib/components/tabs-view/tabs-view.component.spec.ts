@@ -4,7 +4,6 @@ import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testi
 import { TabComponent } from './tab/tab.component';
 import { Component } from '@angular/core';
 
-
 @Component({
     selector: 'tabs-view-mock-component',
     template: templateMock

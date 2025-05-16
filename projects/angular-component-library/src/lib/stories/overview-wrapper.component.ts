@@ -1,9 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import {
-    IconDefinition,
-} from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { TranslateModule } from '@ngx-translate/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ToggleBtnComponent } from '../components/toggle-btn/toggle-btn.component';
@@ -58,10 +56,9 @@ import { AlertType } from '../model/alert-type.enum';
         FilledBtnComponent,
         CircleBtnComponent
     ],
-    templateUrl: './overview-wrapper.component.html',
+    templateUrl: './overview-wrapper.component.html'
 })
 export class OverviewWrapperComponent {
-
     faInfoCircle: IconDefinition = Icons.faInfoCircle;
     faFilter: IconDefinition = Icons.faFilter;
     faSpinner: IconDefinition = Icons.faLoader;
@@ -75,7 +72,7 @@ export class OverviewWrapperComponent {
     btnArray = [
         new SegmentedBtnItem('btn.day', '1', true, false, Icons.faInfoCircle),
         new SegmentedBtnItem('btn.week', '2', false, false, Icons.faInfoCircle),
-        new SegmentedBtnItem('btn.month', '3', false, false, Icons.faInfoCircle),
+        new SegmentedBtnItem('btn.month', '3', false, false, Icons.faInfoCircle)
     ];
     activeBtn: SegmentedBtnItem = this.btnArray[1];
 
@@ -83,7 +80,7 @@ export class OverviewWrapperComponent {
     selectItems = [
         new SelectItem('select1', undefined, Icons.faInfoCircle),
         new SelectItem('select2', undefined, Icons.faInfoCircle),
-        new SelectItem('select3'),
+        new SelectItem('select3')
     ];
     selectedItem = new SelectItem('select1', undefined, Icons.faInfoCircle);
     multiSelectItems = ['multi-select1', 'multi-select2'];
@@ -103,5 +100,4 @@ export class OverviewWrapperComponent {
     // checkbox
     checked = true;
     checked2 = false;
-
 }

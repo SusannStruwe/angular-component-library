@@ -1,5 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { activeBtn, btnArray, SegmentedBtnComponent } from './segmented-btn.component';
+import {
+    activeBtn,
+    btnArray,
+    SegmentedBtnComponent
+} from './segmented-btn.component';
 import { By } from '@angular/platform-browser';
 
 describe('SegmentedBtnComponent', () => {

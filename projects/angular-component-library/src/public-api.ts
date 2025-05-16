@@ -33,6 +33,8 @@ export * from './lib/components/navbar-btn/navbar-btn.component';
 export * from './lib/components/context-menu/context-menu.component';
 export * from './lib/components/popover/popover.component';
 export * from './lib/components/table/table.component';
+export * from './lib/components/table/table-header/table-header.component';
+export * from './lib/components/table/table-content/table-content.component';
 export * from './lib/components/tabs-view/tabs-view.component';
 export * from './lib/components/tabs-view/tab/tab.component';
 export * from './lib/components/sass-helper.component';

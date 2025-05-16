@@ -12,7 +12,11 @@ describe('NoDataComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [NoDataComponent, TranslateModule.forRoot(), FontAwesomeTestingModule],
+            imports: [
+                NoDataComponent,
+                TranslateModule.forRoot(),
+                FontAwesomeTestingModule
+            ],
             providers: []
         });
 

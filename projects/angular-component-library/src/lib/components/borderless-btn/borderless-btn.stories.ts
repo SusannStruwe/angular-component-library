@@ -20,8 +20,7 @@ const iconOptions: Record<string, IconDefinition> = {
 };
 const hoverStyles: typeof HoverStyle = HoverStyle;
 
-const templateMock = 
-`   <borderless-btn-component
+const templateMock = `   <borderless-btn-component
         (click)="click($event)"
         [label]="'Click me!'">
     </borderless-btn-component>
@@ -73,14 +72,14 @@ export const Default: Story = {
 export const WithAction: Story = {
     render: (args) => ({
         props: {
-          ...args,
-          click: () => {
-            action('do something')();
-          },
+            ...args,
+            click: () => {
+                action('do something')();
+            }
         },
         template: templateMock
-      }),
-}
+    })
+};
 
 export const Active: Story = {
     args: {

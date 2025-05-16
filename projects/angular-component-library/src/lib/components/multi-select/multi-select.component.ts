@@ -49,6 +49,7 @@ export class MultiSelectComponent implements OnChanges {
     @Input() withFilter?: boolean;
     @Input() filterPlaceholder?: string;
     @Input() backgroundColor?: string;
+    @Input() noPadding?: boolean = false;
 
     @Output() itemsSelected = new EventEmitter<string[]>();
 

@@ -1,11 +1,17 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { SelectComponent } from './select.component';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { faCheck, faChevronDown, faExclamation, faInfoCircle, faSpinner, faTrash } from '@fortawesome/free-solid-svg-icons';
+import {
+    faCheck,
+    faChevronDown,
+    faExclamation,
+    faInfoCircle,
+    faSpinner,
+    faTrash
+} from '@fortawesome/free-solid-svg-icons';
 import { Icons } from '../../model/icons';
 import { SelectItem } from '../../model/select-item.model';
 import { fn } from '@storybook/test';
-
 
 const iconOptions: Record<string, IconDefinition> = {
     faChevronDown: faChevronDown,
@@ -13,13 +19,13 @@ const iconOptions: Record<string, IconDefinition> = {
     faExclamation: faExclamation,
     faInfoCircle: faInfoCircle,
     faSpinner: faSpinner,
-    faTrash: faTrash,
+    faTrash: faTrash
 };
 
 const selectItems = [
     new SelectItem('select1', undefined, Icons.faInfoCircle),
     new SelectItem('select2', undefined, Icons.faInfoCircle),
-    new SelectItem('select3'),
+    new SelectItem('select3')
 ];
 const selectedItem = new SelectItem('select1', undefined, Icons.faInfoCircle);
 
@@ -29,14 +35,14 @@ const meta: Meta<SelectComponent> = {
     parameters: {
         docs: {
             description: {
-                story: 'Component to select items.',
-              }
-        },
+                story: 'Component to select items.'
+            }
+        }
     },
     argTypes: {
-        items: {control: 'object'},
-        selectedItem: {control: 'object'},
-        label: {control: 'text'},
+        items: { control: 'object' },
+        selectedItem: { control: 'object' },
+        label: { control: 'text' },
         faIcon: {
             control: {
                 type: 'select'
@@ -57,8 +63,8 @@ const meta: Meta<SelectComponent> = {
         withFilter: { control: 'boolean' },
         filterPlaceholder: { control: 'text' },
         show: { control: 'boolean' },
-        showChange: { action: 'show'},
-        itemSelected: { action: 'selected'}
+        showChange: { action: 'show' },
+        itemSelected: { action: 'selected' }
     },
     args: {
         showChange: fn(),
@@ -80,9 +86,9 @@ export const Default: Story = {
     },
     parameters: {
         docs: {
-          description: {
-            story: 'Component to select items',
-          },
-        },
-      },
+            description: {
+                story: 'Component to select items'
+            }
+        }
+    }
 };

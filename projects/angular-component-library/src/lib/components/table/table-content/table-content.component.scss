@@ -1,0 +1,33 @@
+:host {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+
+.table-row {
+    height: var(--row-height);
+
+    div {
+        text-align: left;
+        padding-left: 10px;
+    }
+}
+
+/************************************************
+Media query to add hover only on device which support hover
+*********************************************/
+
+@media (hover: hover) {
+    .table-row {
+        &:hover:not([disabled]):not(.inner-table) {
+            background-color: var(--row-highlight-color);
+            color: var(--primary-color);
+        }
+
+        &:active:not([disabled]) {
+            background-color: var(--accend-color-light);
+            color: var(--primary-color);
+        }
+    } 
+}

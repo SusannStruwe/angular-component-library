@@ -20,7 +20,7 @@ const meta: Meta<CheckboxComponent> = {
             value: EditMode.WRITE
         },
         height: { control: 'number' },
-        valueChange: { action: 'changed'}
+        valueChange: { action: 'changed' }
     },
     args: { valueChange: fn() }
 };

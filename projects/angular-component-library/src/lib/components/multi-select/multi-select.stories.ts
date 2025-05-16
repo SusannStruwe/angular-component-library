@@ -1,9 +1,15 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { faCheck, faChevronDown, faFilter, faInfoCircle, faSpinner, faTrash } from '@fortawesome/free-solid-svg-icons';
+import {
+    faCheck,
+    faChevronDown,
+    faFilter,
+    faInfoCircle,
+    faSpinner,
+    faTrash
+} from '@fortawesome/free-solid-svg-icons';
 import { fn } from '@storybook/test';
 import { MultiSelectComponent } from './multi-select.component';
-
 
 const iconOptions: Record<string, IconDefinition> = {
     faChevronDown: faChevronDown,
@@ -11,11 +17,10 @@ const iconOptions: Record<string, IconDefinition> = {
     faFilter: faFilter,
     faInfoCircle: faInfoCircle,
     faSpinner: faSpinner,
-    faTrash: faTrash,
+    faTrash: faTrash
 };
 
-const selectItems = [ 'item1', 'item2', 'item3'];
-
+const selectItems = ['item1', 'item2', 'item3'];
 
 const meta: Meta<MultiSelectComponent> = {
     title: 'Components/Select/ Multi',
@@ -23,13 +28,13 @@ const meta: Meta<MultiSelectComponent> = {
     parameters: {
         docs: {
             description: {
-                story: 'Component to select multiple items.',
-              }
-        },
+                story: 'Component to select multiple items.'
+            }
+        }
     },
     argTypes: {
-        items: {control: 'object'},
-        label: {control: 'text'},
+        items: { control: 'object' },
+        label: { control: 'text' },
         faIcon: {
             control: {
                 type: 'select'
@@ -39,8 +44,8 @@ const meta: Meta<MultiSelectComponent> = {
         },
         withFilter: { control: 'boolean' },
         filterPlaceholder: { control: 'text' },
-        backgroundColor: {control: 'text'},
-        itemsSelected: { action: 'selected'}
+        backgroundColor: { control: 'text' },
+        itemsSelected: { action: 'selected' }
     },
     args: {
         label: '',
@@ -59,7 +64,7 @@ export const Default: Story = {
         faIcon: faFilter,
         items: selectItems,
         backgroundColor: 'green'
-    },
+    }
 };
 
 export const WithFilter: Story = {
@@ -67,8 +72,8 @@ export const WithFilter: Story = {
         faIcon: faFilter,
         items: selectItems,
         withFilter: true,
-        
+
         filterPlaceholder: 'Select...',
         backgroundColor: '#486bff'
-    },
+    }
 };

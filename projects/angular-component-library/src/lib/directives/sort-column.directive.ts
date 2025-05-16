@@ -10,13 +10,24 @@ import {
     Output
 } from '@angular/core';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
-import { faSort, faSortDown, faSortUp } from '@fortawesome/free-solid-svg-icons';
+import {
+    faSort,
+    faSortDown,
+    faSortUp
+} from '@fortawesome/free-solid-svg-icons';
 import { Subscription } from 'rxjs';
-import { SortColumnEvent, SortDirection } from '../model/sort-column-event.model';
+import {
+    SortColumnEvent,
+    SortDirection
+} from '../model/sort-column-event.model';
 import { SortService } from '../services/sort.service';
 import { ColumnHeaderItem } from '../model/column-header-item.model';
 
-const rotate: { [key: string]: SortDirection } = { asc: 'desc', desc: '', '': 'asc' };
+const rotate: { [key: string]: SortDirection } = {
+    asc: 'desc',
+    desc: '',
+    '': 'asc'
+};
 
 /**
  * Attribute Directive to sorts column
@@ -33,7 +44,9 @@ const rotate: { [key: string]: SortDirection } = { asc: 'desc', desc: '', '': 'a
     selector: '[sortColumn]',
     standalone: true
 })
-export class SortColumnDirective implements OnInit, OnDestroy, AfterViewChecked {
+export class SortColumnDirective
+    implements OnInit, OnDestroy, AfterViewChecked
+{
     @Input() sortable?: ColumnHeaderItem;
     @Input() sortDirection: SortDirection = '';
 
@@ -46,16 +59,18 @@ export class SortColumnDirective implements OnInit, OnDestroy, AfterViewChecked 
     constructor(private sortService: SortService) {}
 
     ngOnInit(): void {
-        this.sortSubscription = this.sortService.columnSorted$.subscribe((event) => {
-            if (this.sortable?.title !== event.column.title) {
-                this.sortDirection = '';
+        this.sortSubscription = this.sortService.columnSorted$.subscribe(
+            (event) => {
+                if (this.sortable?.title !== event.column.title) {
+                    this.sortDirection = '';
 
-                if (this.sortIcon) {
-                    this.sortIcon.icon = faSort;
-                    this.sortIcon.render();
+                    if (this.sortIcon) {
+                        this.sortIcon.icon = faSort;
+                        this.sortIcon.render();
+                    }
                 }
             }
-        });
+        );
     }
 
     ngAfterViewChecked(): void {
@@ -73,8 +88,12 @@ export class SortColumnDirective implements OnInit, OnDestroy, AfterViewChecked 
         this.setSortDirection();
 
         if (this.sortable) {
-            this.sort.emit(new SortColumnEvent(this.sortable, this.sortDirection));
-            this.sortService.columnSorted(new SortColumnEvent(this.sortable, this.sortDirection));
+            this.sort.emit(
+                new SortColumnEvent(this.sortable, this.sortDirection)
+            );
+            this.sortService.columnSorted(
+                new SortColumnEvent(this.sortable, this.sortDirection)
+            );
         }
     }
 
@@ -84,8 +103,8 @@ export class SortColumnDirective implements OnInit, OnDestroy, AfterViewChecked 
                 this.sortDirection === 'desc'
                     ? faSortDown
                     : this.sortDirection === 'asc'
-                      ? faSortUp
-                      : faSort;
+                    ? faSortUp
+                    : faSort;
             this.sortIcon.render();
         }
     }

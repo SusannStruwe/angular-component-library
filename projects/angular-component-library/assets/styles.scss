@@ -280,7 +280,6 @@ a {
     box-shadow: var(--popup-shadow);
 }
 
-
 .grid-2-2-2 {
     position: relative;
     display: grid;
@@ -334,7 +333,6 @@ a {
     }
 }
 
-
 .custom-filled-style {
     background-color: green !important;
     color: var(--fa-icon-color) !important;
@@ -343,7 +341,10 @@ a {
     &.active {
         &:not([disabled]) {
             color: var(--fa-icon-color);
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.1)
+            );
         }
     }
 }
@@ -384,11 +385,10 @@ a {
     transform: none;
 }
 
-.docs-story div[scale="1"] {
+.docs-story div[scale='1'] {
     transform: none;
     min-height: 225px;
-} 
-
+}
 
 /*===================================================
 Media queries for small devices

@@ -10,8 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TabComponent } from './tab/tab.component';
 import { TooltipDirective } from '../../directives/tooltip.directive';
 
-export const templateMock = 
-`   <tabs-view-component [style.width.px]="200" [style.height.px]="100"
+export const templateMock = `   <tabs-view-component [style.width.px]="200" [style.height.px]="100"
         (selectedTabChanged)="selectedTabChanged($event)">
         <tab-component [tabTitle]="'Tab 1'"> <p> Inhalt 1 </p> </tab-component>
         <tab-component [tabTitle]="'Tab 2'"> <p> Inhalt 2 </p> </tab-component>

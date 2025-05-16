@@ -76,6 +76,10 @@ button {
         opacity: 0.5;
         cursor: not-allowed;
     }
+
+    &.no-padding {
+        padding: 0px;
+    }
 }
 
 .menu {

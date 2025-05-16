@@ -1,7 +1,10 @@
 import { Meta, StoryObj } from '@storybook/angular';
-import { activeBtn, btnArray, SegmentedBtnComponent } from './segmented-btn.component';
+import {
+    activeBtn,
+    btnArray,
+    SegmentedBtnComponent
+} from './segmented-btn.component';
 import { fn } from '@storybook/test';
-
 
 const meta: Meta<SegmentedBtnComponent> = {
     title: 'Components/Segmented Btn',
@@ -9,18 +12,18 @@ const meta: Meta<SegmentedBtnComponent> = {
     parameters: {
         docs: {
             description: {
-                story: 'Component to switch content',
-              }
-        },
+                story: 'Component to switch content'
+            }
+        }
     },
     argTypes: {
-        btnArray: {control: 'object'},
-        activeBtn: {control: 'object'},
-        btnSelected: {action: 'selected'},
-        activeBtnChange: {action: 'activeBtn'},
+        btnArray: { control: 'object' },
+        activeBtn: { control: 'object' },
+        btnSelected: { action: 'selected' },
+        activeBtnChange: { action: 'activeBtn' }
     },
-    args: { 
-        btnSelected: fn() ,
+    args: {
+        btnSelected: fn(),
         activeBtnChange: fn()
     },
     tags: ['autodocs']
@@ -32,13 +35,13 @@ type Story = StoryObj<SegmentedBtnComponent>;
 export const Default: Story = {
     args: {
         btnArray: btnArray,
-        activeBtn: activeBtn,
+        activeBtn: activeBtn
     },
     parameters: {
         docs: {
-          description: {
-            story: 'Component to switch content',
-          },
-        },
-      },
+            description: {
+                story: 'Component to switch content'
+            }
+        }
+    }
 };

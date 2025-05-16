@@ -61,7 +61,7 @@ export const Default: Story = {
         label: 'Default',
         borderRadius: 10,
         isDisabled: false,
-        postIcon: faCheck,
+        postIcon: undefined,
         preIcon: undefined
     }
 };

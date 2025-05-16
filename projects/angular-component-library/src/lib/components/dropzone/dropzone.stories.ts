@@ -6,20 +6,20 @@ const meta: Meta<DropzoneComponent> = {
     component: DropzoneComponent,
     tags: ['autodocs'],
     argTypes: {
-        choseFileLabel: {control: 'text'},
+        choseFileLabel: { control: 'text' },
         allowedExtension: { control: 'check', options: ['json'] },
         fileArrayLength: { control: 'number' },
         files: { control: { type: 'file', accept: '.json' } },
-        maxSizeOfFiles: { control: 'number'},
+        maxSizeOfFiles: { control: 'number' },
         height: { control: 'text' },
-        width: { control: 'text' },
+        width: { control: 'text' }
     },
     decorators: [
         (story) => ({
-          template: `<div style="width: 300px;">${story().template}</div>`,
-          props: story().props,
-        }),
-    ],
+            template: `<div style="width: 300px;">${story().template}</div>`,
+            props: story().props
+        })
+    ]
 };
 export default meta;
 

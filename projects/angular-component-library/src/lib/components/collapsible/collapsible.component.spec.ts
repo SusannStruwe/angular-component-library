@@ -4,7 +4,6 @@ import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testi
 import { TranslateModule } from '@ngx-translate/core';
 import { CollapsibleComponent } from './collapsible.component';
 
-
 describe('CollapsibleComponent', () => {
     let component: CollapsibleComponent;
     let fixture: ComponentFixture<CollapsibleComponent>;

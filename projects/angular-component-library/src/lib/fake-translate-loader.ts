@@ -14,7 +14,7 @@ export class FakeLoader implements TranslateLoader {
                 time: {
                     hoursShort: 'hours',
                     days: 'days',
-                    minutesShort: 'min',
+                    minutesShort: 'min'
                 },
                 validation: {
                     maxDuration: '365 Tage'
@@ -44,7 +44,7 @@ export class FakeLoader implements TranslateLoader {
                 time: {
                     hoursShort: 'hours',
                     days: 'days',
-                    minutesShort: 'min',
+                    minutesShort: 'min'
                 },
                 validation: {
                     maxDuration: '365 Tage'

@@ -2,7 +2,7 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
-- [MIT licensee](./projects/angular-component-library/LICENSE)
+-   [MIT licensee](./projects/angular-component-library/LICENSE)
 
 The library includes a list of different interaction components:
 
@@ -38,7 +38,8 @@ The library includes a list of different interaction components:
 -   toggle-btn
 -   tooltip
 
-## Further details 
+## Further details
+
 Further details can be found in [here](./projects/angular-component-library/README.md)
 
 ## Further help
