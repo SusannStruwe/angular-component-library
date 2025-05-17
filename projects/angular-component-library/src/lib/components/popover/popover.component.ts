@@ -18,8 +18,7 @@ import { Component, Input } from '@angular/core';
 })
 export class PopoverComponent {
     @Input() alignmentRight = false;
-
-    show = false;
+    @Input() show = false;
 
     /**
      * Toggle show state

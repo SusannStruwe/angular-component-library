@@ -4,7 +4,7 @@ import {
     ColumnHeaderItem,
     ColumnType
 } from '../../model/column-header-item.model';
-import { ContentItem, getSearchFilters, getSelectList, TableColumnType } from '../../model/util';
+import { ContentItem, getSearchFilters, getSelectList, TableColumnType } from '../../stories/util';
 import { TableHeaderComponent } from './table-header/table-header.component';
 import { action } from '@storybook/addon-actions';
 import { TableContentComponent } from './table-content/table-content.component';
@@ -26,7 +26,6 @@ const contentItems: ContentItem[] = [
 ];
 
 const multiSelectList = getSelectList(headerItems, contentItems);
-console.log(contentItems)
 
 const defaultTemplateMock = `   <table-component [style.width]="'100%'">
         <div header>
@@ -62,7 +61,25 @@ const meta: Meta<TableComponent> = {
     parameters: {
         docs: {
             description: {
-                story: 'Table component'
+                component: `
+A table component provides per default only a \`<div header></div>\` and \`<div content></div>\`, so you can fill the table how you want.
+
+You can also use a table component with a \`table-header-component\` and a \`table-content-component\`. 
+To use it you have to create the following items:
+
+table-header-component
+- headerItemsTasks from type \`ColumnHeaderItem\`
+- searchFilters from type  \`SearchFilter\`
+- multiSelectList from type \`{ [key: string]: TableColumnType[]}\`
+
+table-content-component
+- tableItems should have a parameter called \`columns\` from  type \`Map<string, TableColumnType>)\`
+
+Every logic to sort the content has to be implemented by yourself.
+
+<img src="https://img.shields.io/badge/version-1.0.2-blue" alt="Version: 1.0.2" />
+
+                `,
             }
         }
     },

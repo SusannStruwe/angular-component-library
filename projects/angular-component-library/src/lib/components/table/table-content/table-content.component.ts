@@ -5,7 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { CdkVirtualScrollViewport, ScrollingModule } from '@angular/cdk/scrolling';
 import { ColumnType } from '../../../model/column-header-item.model';
 import { DefaultColumKeys } from '../../../model/default-column-key.enum';
-import { TableColumnType } from '../../../model/util';
+import { TableColumnType } from '../../../stories/util';
 
 
 /**
@@ -33,7 +33,7 @@ import { TableColumnType } from '../../../model/util';
     templateUrl: './table-content.component.html',
     styleUrls: ['./table-content.component.scss']
 })
-export class TableContentComponent implements OnChanges{
+export class TableContentComponent {
 
     @Input() tableHeight: string = '275px';
     @Input() tableItems: any = [];
@@ -46,11 +46,6 @@ export class TableContentComponent implements OnChanges{
     
     defaultColumKeys: typeof DefaultColumKeys = DefaultColumKeys;
 
-    ngOnChanges(changes: SimpleChanges): void {
-        if (changes["tableItems"]) {
-            console.log(this.tableItems)
-        }
-    }
 
     tableItemClicked(item: any): void {
         this.tableItemSelected.emit(item);

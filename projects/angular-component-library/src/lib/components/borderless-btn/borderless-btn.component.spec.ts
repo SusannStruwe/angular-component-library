@@ -61,10 +61,7 @@ describe('BorderlessBtnComponent', () => {
 
     it('should be filled on active', fakeAsync(() => {
         const button = fixture.debugElement.query(By.css('.simple'));
-        console.log(button);
         const styles = window.getComputedStyle(button.nativeElement);
-
-        console.log(styles.backgroundColor);
 
         expect(styles.backgroundColor).toEqual('rgba(0, 0, 0, 0)');
 

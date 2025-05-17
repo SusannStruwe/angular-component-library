@@ -1,6 +1,6 @@
-import { ColumnHeaderItem } from './column-header-item.model';
-import { MultiSelectItem } from './multi-select.model';
-import { SearchFilter } from './search-filter.model';
+import { ColumnHeaderItem } from '../model/column-header-item.model';
+import { MultiSelectItem } from '../model/multi-select.model';
+import { SearchFilter } from '../model/search-filter.model';
 import { DateTime, Duration } from 'luxon';
 
 export type TableColumnType = string | DateTime | number | Duration;
@@ -41,7 +41,7 @@ export function getSearchFilters(
 export function getSelectList(
     headerItemsTasks: ColumnHeaderItem[],
     multiSelectList: any
-): any {
+): { [key: string]: TableColumnType[]} {
     const itemsWithMultiSelect: MultiSelectItem[] = headerItemsTasks
         .filter((item: ColumnHeaderItem) => item.canFiltered)
         .map((item: ColumnHeaderItem) => {
@@ -55,7 +55,7 @@ export function getSelectList(
         acc[cur.property] = cur.items;
         return acc;
     }, {});
-    console.log(multiSelectList)
+
     return multiSelectList;
 }
 

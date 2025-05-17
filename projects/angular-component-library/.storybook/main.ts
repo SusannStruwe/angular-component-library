@@ -9,7 +9,6 @@ const config: StorybookConfig = {
         '@storybook/addon-essentials',
         '@storybook/addon-onboarding',
         '@storybook/addon-interactions',
-        { name: 'storybook-design-token', options: { preserveCSSVars: true } }
     ],
     framework: {
         name: '@storybook/angular',
