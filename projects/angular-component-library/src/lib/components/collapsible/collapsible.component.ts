@@ -16,7 +16,7 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
  *
  * @howToUse
  * ```
- * <collapsible-component class="legend">
+ * <collapsible-component>
  *     <div header #collapsible>
  *         ...
  *     </div>
