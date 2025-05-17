@@ -64,7 +64,6 @@
     min-height: calc(var(--btn-height) + 5px);
 }
 
-
 .simple {
     user-select: none;
     ::ng-deep {
@@ -73,7 +72,6 @@
         }
     }
 }
-
 
 /***************************************************************
 Media query to hide hover effects for devices 
@@ -92,13 +90,13 @@ that do not support them, like touch displays
         }
 
         &.simple {
-             &:hover {
+            &:hover {
                 ::ng-deep {
                     color: var(--accent-color);
                     background-color: var(--row-highlight-color);
                     p {
                         color: var(--accent-color);
-                    }                   
+                    }
                 }
             }
         }

@@ -4,7 +4,12 @@ import {
     ColumnHeaderItem,
     ColumnType
 } from '../../model/column-header-item.model';
-import { ContentItem, getSearchFilters, getSelectList, TableColumnType } from '../../stories/util';
+import {
+    ContentItem,
+    getSearchFilters,
+    getSelectList,
+    TableColumnType
+} from '../../stories/util';
 import { TableHeaderComponent } from './table-header/table-header.component';
 import { action } from '@storybook/addon-actions';
 import { TableContentComponent } from './table-content/table-content.component';
@@ -12,17 +17,44 @@ import { TableContentComponent } from './table-content/table-content.component';
 const headerItems: ColumnHeaderItem[] = [
     new ColumnHeaderItem('Id', 'id', ColumnType.STRING, false),
     new ColumnHeaderItem('Name', 'name', ColumnType.STRING, true),
-    new ColumnHeaderItem('Email', 'email', ColumnType.STRING, true),
+    new ColumnHeaderItem('Email', 'email', ColumnType.STRING, true)
 ];
 const filters = getSearchFilters(headerItems);
 
 /**
- * Table cells are filled by column/ Map 
+ * Table cells are filled by column/ Map
  */
 const contentItems: ContentItem[] = [
-    new ContentItem("1", "user1", 'user1@localhost.de', new Map<string, TableColumnType>([ ["id", "1"], ["name", 'user1'], ["email", 'user1@localhost.de'] ])),
-    new ContentItem("2", "user2",'user2@localhost.de', new Map<string, TableColumnType>([ ["id", "2"], ["name", 'user2'], ["email", 'user2@localhost.de'] ])),
-    new ContentItem("3", "user3",'user3@localhost.de', new Map<string, TableColumnType>([ ["id", "3"], ["name", 'user3'], ["email", 'user3@localhost.de'] ])),
+    new ContentItem(
+        '1',
+        'user1',
+        'user1@localhost.de',
+        new Map<string, TableColumnType>([
+            ['id', '1'],
+            ['name', 'user1'],
+            ['email', 'user1@localhost.de']
+        ])
+    ),
+    new ContentItem(
+        '2',
+        'user2',
+        'user2@localhost.de',
+        new Map<string, TableColumnType>([
+            ['id', '2'],
+            ['name', 'user2'],
+            ['email', 'user2@localhost.de']
+        ])
+    ),
+    new ContentItem(
+        '3',
+        'user3',
+        'user3@localhost.de',
+        new Map<string, TableColumnType>([
+            ['id', '3'],
+            ['name', 'user3'],
+            ['email', 'user3@localhost.de']
+        ])
+    )
 ];
 
 const multiSelectList = getSelectList(headerItems, contentItems);
@@ -53,9 +85,10 @@ const meta: Meta<TableComponent> = {
     decorators: [
         moduleMetadata({
             imports: [
-                TableComponent, 
-                TableHeaderComponent, 
-                TableContentComponent]
+                TableComponent,
+                TableHeaderComponent,
+                TableContentComponent
+            ]
         })
     ],
     parameters: {
@@ -79,7 +112,7 @@ Every logic to sort the content has to be implemented by yourself.
 
 <img src="https://img.shields.io/badge/version-1.0.2-blue" alt="Version: 1.0.2" />
 
-                `,
+                `
             }
         }
     },

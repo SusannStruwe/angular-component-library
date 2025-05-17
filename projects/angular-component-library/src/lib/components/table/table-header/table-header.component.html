@@ -12,13 +12,13 @@
                 <fa-icon [icon]="faSort"></fa-icon>
             </div>
             @if (item.canFiltered && multiSelectList) {
-                <multi-select-component
-                    [items]="multiSelectList[item.property]"
-                    [faIcon]="faFilter"
-                    [withFilter]="true"
-                    [noPadding]="true"
-                    (itemsSelected)="filterRowsBySelect(item)">
-                </multi-select-component>
+            <multi-select-component
+                [items]="multiSelectList[item.property]"
+                [faIcon]="faFilter"
+                [withFilter]="true"
+                [noPadding]="true"
+                (itemsSelected)="filterRowsBySelect(item)">
+            </multi-select-component>
             }
         </div>
         }

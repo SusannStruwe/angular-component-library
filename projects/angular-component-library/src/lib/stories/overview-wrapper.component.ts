@@ -28,15 +28,14 @@ import { SegmentedBtnItem } from '../model/segmented-btn.model';
 import { SelectItem } from '../model/select-item.model';
 import { AlertType } from '../model/alert-type.enum';
 
-
 /**
- * This is a wrapper component to give an overview oever all components 
+ * This is a wrapper component to give an overview oever all components
  *
  * @howToUse
  * ```
  * <overview-wrapper-component></overview-wrapper-component>
  * ```
- */@Component({
+ */ @Component({
     selector: 'overview-wrapper-component',
     standalone: true,
     imports: [

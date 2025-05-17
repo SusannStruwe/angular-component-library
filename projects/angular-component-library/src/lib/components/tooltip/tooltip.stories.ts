@@ -14,7 +14,7 @@ Instead of this component you can use the tooltip directve \`[tooltip]=" 'text'"
 
 <img src="https://img.shields.io/badge/version-1.0.2-blue" alt="Version: 1.0.2" />
 
-                `,
+                `
             }
         }
     },

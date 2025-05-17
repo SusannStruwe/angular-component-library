@@ -6,8 +6,8 @@ const meta: Meta<OverviewWrapperComponent> = {
     component: OverviewWrapperComponent,
     parameters: {
         docs: {
-            disable: true, // 📛 verhindert die Nutzung von Compodoc-Daten
-        },
+            disable: true // 📛 verhindert die Nutzung von Compodoc-Daten
+        }
     },
     tags: ['autodocs']
 };

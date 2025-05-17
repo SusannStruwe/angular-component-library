@@ -5,20 +5,19 @@ import { Component } from '@angular/core';
 @Component({
     template: `<p [tooltip]="'Hello'">Hello Directive</p>`,
     standalone: true,
-    imports: [TooltipDirective],
+    imports: [TooltipDirective]
 })
 class TestComponent {}
 
 export default {
-  title: 'Directives/Tooltip',
-  component: TestComponent,
-  decorators: [
-    moduleMetadata({
-      imports: [TooltipDirective],
-    }),
-  ],
+    title: 'Directives/Tooltip',
+    component: TestComponent,
+    decorators: [
+        moduleMetadata({
+            imports: [TooltipDirective]
+        })
+    ]
 } as Meta;
-
 
 type Story = StoryObj;
 

@@ -14,7 +14,7 @@ A popover component .
 
 <img src="https://img.shields.io/badge/version-1.0.2-blue" alt="Version: 1.0.2" />
 
-                `,
+                `
             }
         }
     },

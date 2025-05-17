@@ -13,13 +13,14 @@ export class ContentItem {
         public id: string,
         public name: string,
         public email: string,
-        public columns: Map<string, TableColumnType>) {}
+        public columns: Map<string, TableColumnType>
+    ) {}
 }
 
 export enum DefaultColumKeys {
     id = 'id',
     name = 'name',
-    email = 'email',
+    email = 'email'
 }
 
 /**
@@ -41,7 +42,7 @@ export function getSearchFilters(
 export function getSelectList(
     headerItemsTasks: ColumnHeaderItem[],
     multiSelectList: any
-): { [key: string]: TableColumnType[]} {
+): { [key: string]: TableColumnType[] } {
     const itemsWithMultiSelect: MultiSelectItem[] = headerItemsTasks
         .filter((item: ColumnHeaderItem) => item.canFiltered)
         .map((item: ColumnHeaderItem) => {
