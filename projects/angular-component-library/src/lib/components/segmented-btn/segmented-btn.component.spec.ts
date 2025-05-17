@@ -5,6 +5,7 @@ import {
     SegmentedBtnComponent
 } from './segmented-btn.component';
 import { By } from '@angular/platform-browser';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('SegmentedBtnComponent', () => {
     let component: SegmentedBtnComponent;
@@ -12,7 +13,7 @@ describe('SegmentedBtnComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [SegmentedBtnComponent],
+            imports: [SegmentedBtnComponent, TranslateModule.forRoot(),],
             providers: []
         });
 
