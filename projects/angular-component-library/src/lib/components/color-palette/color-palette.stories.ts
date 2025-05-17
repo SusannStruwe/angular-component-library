@@ -10,6 +10,6 @@ export default meta;
 
 type Story = StoryObj<ColorPaletteComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     args: {}
 };

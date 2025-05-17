@@ -62,9 +62,9 @@ export default meta;
 
 type Story = StoryObj<FilledBtnComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     args: {
-        label: 'Default',
+        label: 'Sample',
         isDisabled: false
     }
 };

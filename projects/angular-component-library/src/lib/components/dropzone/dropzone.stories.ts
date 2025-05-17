@@ -25,7 +25,7 @@ export default meta;
 
 type Story = StoryObj<DropzoneComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     args: {
         height: '100px',
         width: '300px',

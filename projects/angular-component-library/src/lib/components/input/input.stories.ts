@@ -31,7 +31,7 @@ export default meta;
 
 type Story = StoryObj<InputComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     args: {
         input: '123456'
     }

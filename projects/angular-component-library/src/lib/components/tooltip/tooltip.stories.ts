@@ -24,7 +24,7 @@ export default meta;
 
 type Story = StoryObj<TooltipComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     render: () => ({
         template: `<tooltip-component [style.position]="'relative'"></tooltip-component>`
     })

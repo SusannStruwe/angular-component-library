@@ -64,9 +64,9 @@ export default meta;
 
 type Story = StoryObj<BorderedBtnComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     args: {
-        label: 'Default'
+        label: 'Sample'
     }
 };
 

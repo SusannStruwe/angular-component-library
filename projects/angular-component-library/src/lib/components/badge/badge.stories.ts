@@ -56,9 +56,9 @@ export default meta;
 
 type Story = StoryObj<BadgeComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     args: {
-        label: 'Default',
+        label: 'Sample',
         borderRadius: 10,
         isDisabled: false,
         postIcon: undefined,

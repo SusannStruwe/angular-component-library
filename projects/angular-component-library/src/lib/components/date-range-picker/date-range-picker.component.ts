@@ -13,8 +13,8 @@ import { DatePickerComponent } from '../date-picker/date-picker.component';
  * @howToUse
  * ```
  * <date-range-picker-component
- *   (startDateChanged)="startDateChanged($event)"
- *   (endDateChanged)="endDateChanged($event)">
+ *   (startDateChange)="startDateChanged($event)"
+ *   (endDateChange)="endDateChanged($event)">
  * </date-range-picker-component>
  * ```
  */

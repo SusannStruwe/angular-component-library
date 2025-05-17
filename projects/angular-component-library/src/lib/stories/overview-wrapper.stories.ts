@@ -15,4 +15,4 @@ export default meta;
 
 type Story = StoryObj<OverviewWrapperComponent>;
 
-export const Default: Story = {};
+export const Sample: Story = {};

@@ -32,7 +32,7 @@ export default meta;
 
 type Story = StoryObj<SegmentedBtnComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     args: {
         btnArray: btnArray,
         activeBtn: activeBtn

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { LoaderStyle } from '../../model/loader-style.enum';
+import { AnimationStyle, LoaderStyle } from '../../model/loader-style.enum';
 
 /**
  * Component to create and show a loader/ spinner.
@@ -25,7 +25,9 @@ import { LoaderStyle } from '../../model/loader-style.enum';
 export class LoaderComponent {
     @Input() loaderStyle?: LoaderStyle;
     //example -> linear, ease
-    @Input() animation?: string;
+    @Input() animation?: string | AnimationStyle;
 
     @Input() label?: string;
+
+    @Input() paddingTop?: string = '20%';
 }

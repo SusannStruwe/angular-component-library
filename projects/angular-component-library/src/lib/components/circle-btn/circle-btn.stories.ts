@@ -42,7 +42,7 @@ export default meta;
 
 type Story = StoryObj<CircleBtnComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     args: {
         isDisabled: false,
         faIcon: faCheck

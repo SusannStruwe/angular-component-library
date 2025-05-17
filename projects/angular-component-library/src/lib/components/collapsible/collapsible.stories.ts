@@ -66,7 +66,7 @@ export default meta;
 
 type Story = StoryObj<CollapsibleComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     render: (args) => ({
         props: {
             ...args

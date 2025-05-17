@@ -24,7 +24,7 @@ export default meta;
 
 type Story = StoryObj<PopoverComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     render: () => ({
         template: `<div [style.border]="'1px solid black'" [style.position]="'relative'" [style.height.px]="30" [style.width.px]="30"><popover-component [show]=true><p>Hello</p></popover-component></div>`
     })

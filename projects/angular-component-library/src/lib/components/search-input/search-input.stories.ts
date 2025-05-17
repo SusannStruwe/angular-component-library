@@ -27,7 +27,7 @@ export default meta;
 
 type Story = StoryObj<SearchInputComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     args: {
         filter: '123456'
     }

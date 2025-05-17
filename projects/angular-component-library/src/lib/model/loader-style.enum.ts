@@ -4,3 +4,9 @@ export enum LoaderStyle {
     DOT_LOADER = 'dot-loader',
     DOT_LOADER2 = 'dot-loader-2'
 }
+
+
+export enum AnimationStyle {
+    LINEAR = "linear",
+    EASE = "ease"
+}

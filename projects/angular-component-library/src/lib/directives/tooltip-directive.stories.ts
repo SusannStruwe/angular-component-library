@@ -21,4 +21,4 @@ export default {
 
 type Story = StoryObj;
 
-export const Default: Story = {};
+export const Sample: Story = {};

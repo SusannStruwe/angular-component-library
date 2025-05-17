@@ -76,7 +76,7 @@ export default meta;
 
 type Story = StoryObj<SelectComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     args: {
         label: 'Label: ',
         items: selectItems,

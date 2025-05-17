@@ -1,8 +1,9 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { DatePickerComponent } from './date-picker.component';
+import { fn } from '@storybook/test';
 
 const meta: Meta<DatePickerComponent> = {
-    title: 'Components/Date Picker',
+    title: 'Components/Date Picker/Date',
     component: DatePickerComponent,
     parameters: {
         docs: {
@@ -19,16 +20,17 @@ const meta: Meta<DatePickerComponent> = {
     argTypes: {
         date: { control: 'text' },
         withInput: { control: 'boolean' },
-        clear: { control: 'boolean' },
-        dateChanged: { action: 'changed' }
+        clear: { control: 'boolean', value: true },
+        dateChanged: { action: 'changed', value: true  }
     },
+    args: { dateChanged: fn() },
     tags: ['autodocs']
 };
 export default meta;
 
 type Story = StoryObj<DatePickerComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     args: {
         date: '2025-05-11',
         withInput: true

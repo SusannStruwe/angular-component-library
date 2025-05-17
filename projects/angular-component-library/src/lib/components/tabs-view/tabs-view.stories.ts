@@ -29,7 +29,7 @@ export default meta;
 
 type Story = StoryObj<TabsViewComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     render: (args) => ({
         props: args,
         template: templateMock

@@ -28,7 +28,7 @@ export default meta;
 
 type Story = StoryObj<CheckboxComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     args: {
         value: true,
         mode: EditMode.WRITE

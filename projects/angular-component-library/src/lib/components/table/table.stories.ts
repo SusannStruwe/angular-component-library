@@ -110,8 +110,6 @@ table-content-component
 
 Every logic to sort the content has to be implemented by yourself.
 
-<img src="https://img.shields.io/badge/version-1.0.2-blue" alt="Version: 1.0.2" />
-
                 `
             }
         }
@@ -122,7 +120,7 @@ export default meta;
 
 type Story = StoryObj<TableComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     render: (args) => ({
         props: {
             ...args,

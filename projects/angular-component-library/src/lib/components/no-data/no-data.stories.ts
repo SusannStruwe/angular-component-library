@@ -13,7 +13,7 @@ export default meta;
 
 type Story = StoryObj<NoDataComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     args: {
         translationKey: 'data.noData'
     }

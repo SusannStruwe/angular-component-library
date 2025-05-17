@@ -58,7 +58,7 @@ export default meta;
 
 type Story = StoryObj<MultiSelectComponent>;
 
-export const Default: Story = {
+export const Sample: Story = {
     args: {
         label: 'Label',
         faIcon: faFilter,
