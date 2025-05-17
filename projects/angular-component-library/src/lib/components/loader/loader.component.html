@@ -1,17 +1,19 @@
 <div class="loader-container">
     @if (loaderStyle && animation) {
-    <div [ngClass]="[loaderStyle, animation]">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    } @if (loaderStyle && !animation) {
-    <div [ngClass]="[loaderStyle]">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    } @if (label) {
-    <p>{{ label }}</p>
+        <div [ngClass]="[loaderStyle, animation]">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    }
+    @if (loaderStyle && !animation) {
+        <div [ngClass]="[loaderStyle]">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    }
+    @if (label) {
+        <p>{{ label }}</p>
     }
 </div>

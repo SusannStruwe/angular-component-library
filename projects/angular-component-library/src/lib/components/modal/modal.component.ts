@@ -70,7 +70,10 @@ export class ModalComponent implements OnInit, OnDestroy {
 
     subscriptionOnClose?: Subscription;
 
-    constructor(private modalService: ModalService, private el: ElementRef) {
+    constructor(
+        private modalService: ModalService,
+        private el: ElementRef
+    ) {
         this.element = this.el.nativeElement;
     }
 

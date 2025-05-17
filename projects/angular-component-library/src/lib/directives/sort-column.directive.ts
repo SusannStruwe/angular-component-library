@@ -103,8 +103,8 @@ export class SortColumnDirective
                 this.sortDirection === 'desc'
                     ? faSortDown
                     : this.sortDirection === 'asc'
-                    ? faSortUp
-                    : faSort;
+                      ? faSortUp
+                      : faSort;
             this.sortIcon.render();
         }
     }

@@ -5,8 +5,9 @@
     [disabled]="disabled"
     [class.active]="active">
     @if (faIcon) {
-    <fa-icon [icon]="faIcon"></fa-icon>
-    } @if (label) {
-    <span>{{ label }}</span>
+        <fa-icon [icon]="faIcon"></fa-icon>
+    }
+    @if (label) {
+        <span>{{ label }}</span>
     }
 </button>

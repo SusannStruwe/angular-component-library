@@ -26,22 +26,23 @@
     </div>
 </div>
 @for (file of files; track file; let ind = $index) {
-<div class="row file-item">
-    <div class="left">
-        <span>
-            <fa-icon [icon]="faFile"></fa-icon>
-        </span>
-        <p>
-            {{ file.name }} [{{
-                file.size / FILE_SIZE_CONVERTER | number : '1.2-2' : getLocale()
-            }}
-            KB]
-        </p>
+    <div class="row file-item">
+        <div class="left">
+            <span>
+                <fa-icon [icon]="faFile"></fa-icon>
+            </span>
+            <p>
+                {{ file.name }} [{{
+                    file.size / FILE_SIZE_CONVERTER
+                        | number: '1.2-2' : getLocale()
+                }}
+                KB]
+            </p>
+        </div>
+        <div class="right">
+            <span (click)="removeFile(file)">
+                <fa-icon [icon]="faRemove"></fa-icon>
+            </span>
+        </div>
     </div>
-    <div class="right">
-        <span (click)="removeFile(file)">
-            <fa-icon [icon]="faRemove"></fa-icon>
-        </span>
-    </div>
-</div>
 }

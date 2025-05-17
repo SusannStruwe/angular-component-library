@@ -44,7 +44,10 @@ export class NonModalComponent implements OnInit, OnDestroy {
 
     private element: any;
 
-    constructor(private modalService: ModalService, private el: ElementRef) {
+    constructor(
+        private modalService: ModalService,
+        private el: ElementRef
+    ) {
         this.element = this.el.nativeElement;
     }
 

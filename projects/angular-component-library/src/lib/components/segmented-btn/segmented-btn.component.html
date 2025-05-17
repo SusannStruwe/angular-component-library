@@ -1,16 +1,17 @@
 @for (item of btnArray; track item; let i = $index) {
-<button
-    [class.active]="item === activeBtn"
-    [disabled]="item.isDisabled"
-    (click)="btnClick($event, item)"
-    [attr.title]="item.text | translate"
-    [attr.aria-label]="item.text | translate">
-    @if (item.icon) {
-    <fa-icon [icon]="item.icon"></fa-icon>
-    } @if (item.text && !item.onlyIcons) {
-    <span [style.margin]="item.icon ? '0px 5px' : '0px'">{{
-        item.text | translate
-    }}</span>
-    }
-</button>
+    <button
+        [class.active]="item === activeBtn"
+        [disabled]="item.isDisabled"
+        (click)="btnClick($event, item)"
+        [attr.title]="item.text | translate"
+        [attr.aria-label]="item.text | translate">
+        @if (item.icon) {
+            <fa-icon [icon]="item.icon"></fa-icon>
+        }
+        @if (item.text && !item.onlyIcons) {
+            <span [style.margin]="item.icon ? '0px 5px' : '0px'">{{
+                item.text | translate
+            }}</span>
+        }
+    </button>
 }

@@ -12,8 +12,8 @@
         (ngModelChange)="filterChanged()"
         placeholder="{{ placeholderText }}" />
     @if (filter) {
-    <span class="icon right" (click)="clearFilter($event)">
-        <fa-icon [icon]="faCloseCircle"></fa-icon>
-    </span>
+        <span class="icon right" (click)="clearFilter($event)">
+            <fa-icon [icon]="faCloseCircle"></fa-icon>
+        </span>
     }
 </div>
