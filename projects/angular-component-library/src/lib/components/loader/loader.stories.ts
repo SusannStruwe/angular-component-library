@@ -37,10 +37,10 @@ const meta: Meta<LoaderComponent> = {
             mapping: AnimationStyle,
             value: AnimationStyle.LINEAR
         },
-        paddingTop: { control: 'text'},
+        paddingTop: { control: 'text' }
     },
     args: {
-        paddingTop: '20%',
+        paddingTop: '20%'
     }
 };
 export default meta;
@@ -49,9 +49,9 @@ type Story = StoryObj<LoaderComponent>;
 
 export const Sample: Story = {
     args: {
-       label: 'Loading...',
-       animation: AnimationStyle.EASE,
-       loaderStyle: LoaderStyle.SPINNER,
-       paddingTop: '0px'
+        label: 'Loading...',
+        animation: AnimationStyle.EASE,
+        loaderStyle: LoaderStyle.SPINNER,
+        paddingTop: '0px'
     }
 };

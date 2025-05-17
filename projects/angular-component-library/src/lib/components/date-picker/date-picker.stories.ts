@@ -21,7 +21,7 @@ const meta: Meta<DatePickerComponent> = {
         date: { control: 'text' },
         withInput: { control: 'boolean' },
         clear: { control: 'boolean', value: true },
-        dateChanged: { action: 'changed', value: true  }
+        dateChanged: { action: 'changed', value: true }
     },
     args: { dateChanged: fn() },
     tags: ['autodocs']

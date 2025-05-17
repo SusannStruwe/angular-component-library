@@ -2,7 +2,6 @@ import { Meta, StoryObj } from '@storybook/angular';
 import { DateRangePickerComponent } from './date-range-picker.component';
 import { fn } from '@storybook/test';
 
-
 const meta: Meta<DateRangePickerComponent> = {
     title: 'Components/Date Picker/Date Range',
     component: DateRangePickerComponent,
@@ -16,12 +15,12 @@ const meta: Meta<DateRangePickerComponent> = {
         }
     },
     argTypes: {
-        startDate: { control: 'date' , value: new Date()},
-        endDate: { control: 'date' , value: new Date()},
+        startDate: { control: 'date', value: new Date() },
+        endDate: { control: 'date', value: new Date() },
         startDateChange: { action: 'changed' },
-        endDateChange: { action: 'changed' },
+        endDateChange: { action: 'changed' }
     },
-    args: { 
+    args: {
         startDateChange: fn(),
         endDateChange: fn()
     },

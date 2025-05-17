@@ -23,13 +23,13 @@ const meta: Meta<DateTimePickerComponent> = {
     argTypes: {
         date: { control: 'text', value: '' },
         mode: {
-                control: {
-                        type: 'select'
-                    },
-                    options: Object.values(types),
-                    mapping: EditMode,
-                    value: EditMode.WRITE
-                },
+            control: {
+                type: 'select'
+            },
+            options: Object.values(types),
+            mapping: EditMode,
+            value: EditMode.WRITE
+        },
         height: { control: 'number' },
         minWidth: { control: 'number' },
         dateChange: { action: 'changed' }
