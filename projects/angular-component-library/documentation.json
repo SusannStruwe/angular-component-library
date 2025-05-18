@@ -384,21 +384,21 @@
                 "name": "iconOptions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Record<string, IconDefinition>",
-                "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfo: faInfo\n}"
-            },
-            {
-                "name": "iconOptions",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
                 "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfo: faInfo,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+            },
+            {
+                "name": "iconOptions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Record<string, IconDefinition>",
+                "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfo: faInfo\n}"
             },
             {
                 "name": "iconOptions",
@@ -604,21 +604,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<BadgeComponent>",
-                "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        classStyle: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ]\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BorderedBtnComponent>",
                 "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['gray', 'delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<BadgeComponent>",
+                "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        classStyle: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ]\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
             },
             {
                 "name": "meta",
@@ -634,21 +634,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<CircleBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CheckboxComponent>",
                 "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' },\n        valueChange: { action: 'changed' }\n    },\n    args: { valueChange: fn() }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CircleBtnComponent>",
+                "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -874,21 +874,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<TableHeaderComponent>",
-                "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TableContentComponent>",
                 "defaultValue": "{\n    title: 'Components/Table/Table Content',\n    component: TableContentComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table content component.\n                `\n            }\n        }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div [style.width.px]=\"'600'\">${story().template}</div>`,\n            props: story().props\n        })\n    ],\n    argTypes: {\n        tableItems: { control: 'object' },\n        tableHeight: { control: 'text' },\n        tableItemSelected: { action: 'select' }\n    },\n    args: {\n        tableItemSelected: fn(),\n        tableHeight: '275px'\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TableHeaderComponent>",
+                "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "Off",
@@ -974,21 +974,21 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Sample',\n        borderRadius: 10,\n        isDisabled: false,\n        postIcon: undefined,\n        preIcon: undefined\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Sample'\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Sample',\n        borderRadius: 10,\n        isDisabled: false,\n        postIcon: undefined,\n        preIcon: undefined\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1004,21 +1004,21 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faCheck\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        value: true,\n        mode: EditMode.WRITE\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faCheck\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1224,21 +1224,21 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        tableItems: contentItems,\n        tableHeight: '200px',\n        tableItemSelected: (event: any) => {\n            action('selected row')(event);\n        }\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
             },
             {
                 "name": "Secondary",
@@ -1593,8 +1593,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<BadgeComponent>",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "rawtype": "StoryObj<BorderedBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1604,8 +1604,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<BorderedBtnComponent>",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "rawtype": "StoryObj<BadgeComponent>",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1626,8 +1626,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CircleBtnComponent>",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                "rawtype": "StoryObj<CheckboxComponent>",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1637,8 +1637,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CheckboxComponent>",
-                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "rawtype": "StoryObj<CircleBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1890,8 +1890,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<TableHeaderComponent>",
-                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "rawtype": "StoryObj<TableContentComponent>",
+                "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1901,8 +1901,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<TableContentComponent>",
-                "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
+                "rawtype": "StoryObj<TableHeaderComponent>",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -3385,28 +3385,6 @@
                     "defaultValue": "{\n    render: () => ({\n        template: `<tooltip-component [style.position]=\"'relative'\"></tooltip-component>`\n    })\n}"
                 }
             ],
-            "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<TableHeaderComponent>",
-                    "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
-                },
-                {
-                    "name": "Sample",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
-                }
-            ],
             "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts": [
                 {
                     "name": "meta",
@@ -3427,6 +3405,28 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n        tableItems: contentItems,\n        tableHeight: '200px',\n        tableItemSelected: (event: any) => {\n            action('selected row')(event);\n        }\n    }\n}"
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TableHeaderComponent>",
+                    "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
+                },
+                {
+                    "name": "Sample",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
                 }
             ],
             "projects/angular-component-library/.storybook/preview.ts": [
@@ -3535,19 +3535,6 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<BadgeComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts": [
                 {
                     "name": "Story",
@@ -3555,6 +3542,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<BorderedBtnComponent>",
                     "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<BadgeComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -3574,19 +3574,6 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<CircleBtnComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
                 {
                     "name": "Story",
@@ -3594,6 +3581,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CheckboxComponent>",
                     "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CircleBtnComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -3886,19 +3886,6 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<TableHeaderComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts": [
                 {
                     "name": "Story",
@@ -3906,6 +3893,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<TableContentComponent>",
                     "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TableHeaderComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",

@@ -60,6 +60,7 @@
         "@storybook/blocks": "^8.6.12",
         "@storybook/test": "^8.6.12",
         "@types/jasmine": "~5.1.0",
+        "@types/webpack": "^5.28.5",
         "jasmine-core": "~5.1.0",
         "karma": "~6.4.3",
         "karma-chrome-launcher": "~3.2.0",
