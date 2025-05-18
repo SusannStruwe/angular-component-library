@@ -60,6 +60,8 @@ Table Header
     }
 
     ::ng-deep .flex-column {
+        row-gap: 0px;
+        
         & > div {
             border-right: 1px solid var(--border-color);
             cursor: pointer;

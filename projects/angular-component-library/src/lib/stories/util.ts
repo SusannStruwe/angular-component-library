@@ -1,4 +1,4 @@
-import { ColumnHeaderItem } from '../model/column-header-item.model';
+import { ColumnHeaderItem, ColumnType } from '../model/column-header-item.model';
 import { MultiSelectItem } from '../model/multi-select.model';
 import { SearchFilter } from '../model/search-filter.model';
 import { DateTime, Duration } from 'luxon';
@@ -22,6 +22,73 @@ export enum DefaultColumKeys {
     name = 'name',
     email = 'email'
 }
+
+export const headerItems: ColumnHeaderItem[] = [
+    new ColumnHeaderItem('Id', 'id', ColumnType.STRING, false),
+    new ColumnHeaderItem('Name', 'name', ColumnType.STRING, false),
+    new ColumnHeaderItem('Email', 'email', ColumnType.STRING, false)
+];
+
+export const filters = getSearchFilters(headerItems);
+
+/**
+ * Table cells are filled by column/ Map
+ */
+export const contentItems: ContentItem[] = [
+    new ContentItem(
+        '1',
+        'user1',
+        'user1@localhost.de',
+        new Map<string, TableColumnType>([
+            ['id', '1'],
+            ['name', 'user1'],
+            ['email', 'user1@localhost.de']
+        ])
+    ),
+    new ContentItem(
+        '2',
+        'user2',
+        'user2@localhost.de',
+        new Map<string, TableColumnType>([
+            ['id', '2'],
+            ['name', 'user2'],
+            ['email', 'user2@localhost.de']
+        ])
+    ),
+    new ContentItem(
+        '3',
+        'user3',
+        'user3@localhost.de',
+        new Map<string, TableColumnType>([
+            ['id', '3'],
+            ['name', 'user3'],
+            ['email', 'user3@localhost.de']
+        ])
+    ),
+    new ContentItem(
+        '4',
+        'user4',
+        'user4@localhost.de',
+        new Map<string, TableColumnType>([
+            ['id', '4'],
+            ['name', 'user4'],
+            ['email', 'user4@localhost.de']
+        ])
+    ),
+        new ContentItem(
+        '5',
+        'user5',
+        'user5@localhost.de',
+        new Map<string, TableColumnType>([
+            ['id', '5'],
+            ['name', 'user5'],
+            ['email', 'user5@localhost.de']
+        ])
+    )
+];
+
+
+export const multiSelectList = getSelectList(headerItems, contentItems);
 
 /**
  * Gets search filters to header items

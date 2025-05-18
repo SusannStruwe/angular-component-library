@@ -1,65 +1,12 @@
 import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 import { TableComponent } from './table.component';
-import {
-    ColumnHeaderItem,
-    ColumnType
-} from '../../model/column-header-item.model';
-import {
-    ContentItem,
-    getSearchFilters,
-    getSelectList,
-    TableColumnType
-} from '../../stories/util';
 import { TableHeaderComponent } from './table-header/table-header.component';
 import { action } from '@storybook/addon-actions';
 import { TableContentComponent } from './table-content/table-content.component';
+import { headerItems, filters, multiSelectList, contentItems } from '../../stories/util';
 
-const headerItems: ColumnHeaderItem[] = [
-    new ColumnHeaderItem('Id', 'id', ColumnType.STRING, false),
-    new ColumnHeaderItem('Name', 'name', ColumnType.STRING, true),
-    new ColumnHeaderItem('Email', 'email', ColumnType.STRING, true)
-];
-const filters = getSearchFilters(headerItems);
 
-/**
- * Table cells are filled by column/ Map
- */
-const contentItems: ContentItem[] = [
-    new ContentItem(
-        '1',
-        'user1',
-        'user1@localhost.de',
-        new Map<string, TableColumnType>([
-            ['id', '1'],
-            ['name', 'user1'],
-            ['email', 'user1@localhost.de']
-        ])
-    ),
-    new ContentItem(
-        '2',
-        'user2',
-        'user2@localhost.de',
-        new Map<string, TableColumnType>([
-            ['id', '2'],
-            ['name', 'user2'],
-            ['email', 'user2@localhost.de']
-        ])
-    ),
-    new ContentItem(
-        '3',
-        'user3',
-        'user3@localhost.de',
-        new Map<string, TableColumnType>([
-            ['id', '3'],
-            ['name', 'user3'],
-            ['email', 'user3@localhost.de']
-        ])
-    )
-];
-
-const multiSelectList = getSelectList(headerItems, contentItems);
-
-const defaultTemplateMock = `   <table-component [style.width]="'100%'">
+const defaultTemplateMock = `   <table-component [style.width]="'100%'" [scrollbarWidth]="15">
         <div header>
             <table-header-component 
                 [headerItemsTasks]="items" 
@@ -80,7 +27,7 @@ const defaultTemplateMock = `   <table-component [style.width]="'100%'">
  `;
 
 const meta: Meta<TableComponent> = {
-    title: 'Components/Table',
+    title: 'Components/Table/ Table',
     component: TableComponent,
     decorators: [
         moduleMetadata({
@@ -97,7 +44,7 @@ const meta: Meta<TableComponent> = {
                 component: `
 A table component provides per default only a \`<div header></div>\` and \`<div content></div>\`, so you can fill the table how you want.
 
-You can also use a table component with a \`table-header-component\` and a \`table-content-component\`. 
+You can also use the table component with a \`table-header-component\` and a \`table-content-component\`. 
 To use it you have to create the following items:
 
 table-header-component
@@ -108,7 +55,7 @@ table-header-component
 table-content-component
 - tableItems should have a parameter called \`columns\` from  type \`Map<string, TableColumnType>)\`
 
-Every logic to sort the content has to be implemented by yourself.
+Note: Every logic to sort the content has to be implemented by yourself. You have also to set scrollbarWidth, if table table can be scrolled.
 
                 `
             }

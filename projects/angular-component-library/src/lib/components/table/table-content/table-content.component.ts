@@ -45,7 +45,7 @@ import { TableColumnType } from '../../../stories/util';
     styleUrls: ['./table-content.component.scss']
 })
 export class TableContentComponent {
-    @Input() tableHeight: string = '275px';
+    @Input() tableHeight: string = '200px';
     @Input() tableItems: any = [];
 
     @Output() tableItemSelected = new EventEmitter<any>();

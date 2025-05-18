@@ -1,13 +1,127 @@
+
 :host {
-    display: inline-block;
+    font-weight: var(--font-weight-normal);
+    font-size: 0.8em;
     position: relative;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #aaa;
+}
+
+div {
     width: 100%;
 }
+
+.flex-column {
+    row-gap: 0px;
+
+    & > div {
+        border-right: 1px solid var(--border-color);
+        cursor: pointer;
+    }
+
+    .flex-item {
+        flex: 1 1 0;
+    }
+}
+
+.sort {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+
+    h2 {
+        margin: 0em;
+        line-height: var(--btn-height);
+        font-size: 1.15em;
+        color: white;
+        box-sizing: border-box;
+        // display: contents;
+        max-width: 150px !important;
+        font-weight: var(--font-weight-semibold);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &.withSelect {
+        width: calc(100% - 40px);
+    }
+}
+
+h4 {
+    color: white;
+    padding: 0.5em;
+}
+
 
 .flex-row {
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    & > div {
+        box-sizing: border-box;
+        flex-basis: 100%;
+        text-align: center;
+        text-overflow: ellipsis;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+        span {
+            width: 10px;
+        }
+
+        &.overflow {
+            overflow: hidden;
+            height: var(--btn-height);
+        }
+
+        &.center {
+            justify-content: center;
+        }
+    }
+
+    .flex-item {
+        flex: 1 1 0;
+        width: 0;
+        // overflow: hidden;
+    }
+
+    &:first-of-type {
+        background-color: var(--accent-color);
+    }
+
+    &:last-of-type {
+        border-bottom: 1px solid var(--border-color);
+
+        & > div {
+            border-right: 1px solid var(--border-color);
+
+            &:last-of-type {
+                border-right: none;
+            }
+        }
+    }
 }
 
-button {
-    padding: 0px !important;
+.search-input {
+    margin: 0.5em 0.5em;
+    height: 35px;
+    text-align: center;
+    min-width: 60px;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+
+    &:focus {
+        border: none;
+        border-bottom: var(--border-width) solid var(--accent-color);
+    }
 }
