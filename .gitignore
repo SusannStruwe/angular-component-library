@@ -29,6 +29,9 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
+# Storybook
+storybook-static
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/

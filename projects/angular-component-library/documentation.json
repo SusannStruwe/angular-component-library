@@ -111,18 +111,6 @@
                 "defaultValue": "{\n    args: {\n        label: 1,\n        borderRadius: 50,\n        classStyle: 'changes',\n        isDisabled: false\n    }\n}"
             },
             {
-                "name": "contentItems",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "ContentItem[]",
-                "defaultValue": "[\n    new ContentItem(\n        '1',\n        'user1',\n        'user1@localhost.de',\n        new Map<string, TableColumnType>([\n            ['id', '1'],\n            ['name', 'user1'],\n            ['email', 'user1@localhost.de']\n        ])\n    ),\n    new ContentItem(\n        '2',\n        'user2',\n        'user2@localhost.de',\n        new Map<string, TableColumnType>([\n            ['id', '2'],\n            ['name', 'user2'],\n            ['email', 'user2@localhost.de']\n        ])\n    ),\n    new ContentItem(\n        '3',\n        'user3',\n        'user3@localhost.de',\n        new Map<string, TableColumnType>([\n            ['id', '3'],\n            ['name', 'user3'],\n            ['email', 'user3@localhost.de']\n        ])\n    ),\n    new ContentItem(\n        '4',\n        'user4',\n        'user4@localhost.de',\n        new Map<string, TableColumnType>([\n            ['id', '4'],\n            ['name', 'user4'],\n            ['email', 'user4@localhost.de']\n        ])\n    ),\n        new ContentItem(\n        '5',\n        'user5',\n        'user5@localhost.de',\n        new Map<string, TableColumnType>([\n            ['id', '5'],\n            ['name', 'user5'],\n            ['email', 'user5@localhost.de']\n        ])\n    )\n]",
-                "rawdescription": "Table cells are filled by column/ Map",
-                "description": "<p>Table cells are filled by column/ Map</p>\n"
-            },
-            {
                 "name": "defaultTemplateMock",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -140,7 +128,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "`   <table-component [style.width]=\"'100%'\">\n        <div header>\n            <table-header-component \n                [headerItemsTasks]=\"items\" \n                [searchFilters]=\"filters\" \n                [multiSelectList]=\"multiSelectList\" \n                (searchFilterChange)=\"searchFilterChange($event)\" \n                (selectFilterChange)=\"selectFilterChange($event)\"\n                (sortColumnChange)=\"sortColumnChange($event)\">\n            </table-header-component>\n        </div>\n        <div content>\n            <table-content-component\n                [tableItems]=\"contentItems\" \n                (tableItemSelected)=\"tableItemSelected($event)\">\n            </table-content-component>\n        </div>\n    </table-component>\n `"
+                "defaultValue": "`   <table-component [style.width]=\"'100%'\" [scrollbarWidth]=\"15\">\n        <div header>\n            <table-header-component \n                [headerItemsTasks]=\"items\" \n                [searchFilters]=\"filters\" \n                [multiSelectList]=\"multiSelectList\" \n                (searchFilterChange)=\"searchFilterChange($event)\" \n                (selectFilterChange)=\"selectFilterChange($event)\"\n                (sortColumnChange)=\"sortColumnChange($event)\">\n            </table-header-component>\n        </div>\n        <div content>\n            <table-content-component\n                [tableItems]=\"contentItems\" \n                (tableItemSelected)=\"tableItemSelected($event)\">\n            </table-content-component>\n        </div>\n    </table-component>\n `"
             },
             {
                 "name": "Delete",
@@ -311,26 +299,6 @@
                 "deprecationMessage": "",
                 "type": "IconDefinition",
                 "defaultValue": "faChevronUp"
-            },
-            {
-                "name": "filters",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "getSearchFilters(headerItems)"
-            },
-            {
-                "name": "headerItems",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "ColumnHeaderItem[]",
-                "defaultValue": "[\n    new ColumnHeaderItem('Id', 'id', ColumnType.STRING, false),\n    new ColumnHeaderItem('Name', 'name', ColumnType.STRING, false),\n    new ColumnHeaderItem('Email', 'email', ColumnType.STRING, false)\n]"
             },
             {
                 "name": "hoverStyles",
@@ -636,16 +604,6 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<CircleBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -656,11 +614,11 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<ColorPaletteComponent>",
-                "defaultValue": "{\n    title: 'Components/ColorPalette',\n    component: ColorPaletteComponent,\n    tags: ['autodocs']\n}"
+                "type": "Meta<CircleBtnComponent>",
+                "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -671,6 +629,16 @@
                 "deprecationMessage": "",
                 "type": "Meta<CollapsibleComponent>",
                 "defaultValue": "{\n    title: 'Components/Collapsible',\n    component: CollapsibleComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\n \n                 `\n            }\n        }\n    },\n    decorators: [\n        (story) => {\n            const storyObj = story();\n            return {\n                moduleMetadata: {\n                    imports: [CollapsibleComponent, FontAwesomeModule]\n                },\n                template: storyObj.template,\n                props: storyObj.props\n            };\n        }\n    ],\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ColorPaletteComponent>",
+                "defaultValue": "{\n    title: 'Components/ColorPalette',\n    component: ColorPaletteComponent,\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -810,7 +778,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TableComponent>",
-                "defaultValue": "{\n    title: 'Components/Table/ Table',\n    component: TableComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [\n                TableComponent,\n                TableHeaderComponent,\n                TableContentComponent\n            ]\n        })\n    ],\n    subcomponents: { TableHeaderComponent, TableContentComponent},\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\nYou can also use a table component with a \\`table-header-component\\` and a \\`table-content-component\\`. \nTo use it you have to create the following items:\n\ntable-header-component\n- headerItemsTasks from type \\`ColumnHeaderItem\\`\n- searchFilters from type  \\`SearchFilter\\`\n- multiSelectList from type \\`{ [key: string]: TableColumnType[]}\\`\n\ntable-content-component\n- tableItems should have a parameter called \\`columns\\` from  type \\`Map<string, TableColumnType>)\\`\n\nEvery logic to sort the content has to be implemented by yourself.\n\n                `\n            }\n        }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Table/ Table',\n    component: TableComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [\n                TableComponent,\n                TableHeaderComponent,\n                TableContentComponent\n            ]\n        })\n    ],\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\nYou can also use the table component with a \\`table-header-component\\` and a \\`table-content-component\\`. \nTo use it you have to create the following items:\n\ntable-header-component\n- headerItemsTasks from type \\`ColumnHeaderItem\\`\n- searchFilters from type  \\`SearchFilter\\`\n- multiSelectList from type \\`{ [key: string]: TableColumnType[]}\\`\n\ntable-content-component\n- tableItems should have a parameter called \\`columns\\` from  type \\`Map<string, TableColumnType>)\\`\n\nNote: Every logic to sort the content has to be implemented by yourself. You have also to set scrollbarWidth, if table table can be scrolled.\n\n                `\n            }\n        }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -860,7 +828,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TableContentComponent>",
-                "defaultValue": "{\n    title: 'Components/Table/Table Content',\n    component: TableContentComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table content component.\n                `\n            }\n        }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div style=\"width: 600px;\">${story().template}</div>`,\n            props: story().props\n        })\n    ],\n    argTypes: {\n        tableItems: { control: 'object' },\n        tableHeight: { control: 'text' },\n        tableItemSelected: { action: 'select' },\n    },\n    args: { \n        tableItemSelected: fn(),\n        tableHeight: '275px',\n     },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Table/Table Content',\n    component: TableContentComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table content component.\n                `\n            }\n        }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div style=\"width: 600px;\">${story().template}</div>`,\n            props: story().props\n        })\n    ],\n    argTypes: {\n        tableItems: { control: 'object' },\n        tableHeight: { control: 'text' },\n        tableItemSelected: { action: 'select' }\n    },\n    args: {\n        tableItemSelected: fn(),\n        tableHeight: '275px'\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -870,17 +838,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TableHeaderComponent>",
-                "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' },\n    },\n    args: { \n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n     },\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "multiSelectList",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "getSelectList(headerItems, contentItems)"
+                "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "Off",
@@ -996,16 +954,6 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faCheck\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1016,11 +964,11 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {}\n}"
+                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faCheck\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1031,6 +979,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    })\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {}\n}"
             },
             {
                 "name": "Sample",
@@ -1200,7 +1158,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n     args: {\n        tableItems: contentItems,\n        tableHeight: '275px',\n        tableItemSelected: (event: any) => {\n            action('selected row')(event);\n        }\n    }\n}"
+                "defaultValue": "{\n    args: {\n        tableItems: contentItems,\n        tableHeight: '200px',\n        tableItemSelected: (event: any) => {\n            action('selected row')(event);\n        }\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1210,7 +1168,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n     args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        },\n    }\n}"
+                "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
             },
             {
                 "name": "Secondary",
@@ -1588,17 +1546,6 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CircleBtnComponent>",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
                 "rawtype": "StoryObj<CheckboxComponent>",
                 "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
@@ -1610,8 +1557,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ColorPaletteComponent>",
-                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "rawtype": "StoryObj<CircleBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1623,6 +1570,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<CollapsibleComponent>",
                 "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ColorPaletteComponent>",
+                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2423,40 +2381,6 @@
                     "defaultValue": "{\n    args: {\n        label: 'Success',\n        borderRadius: 10,\n        classStyle: 'success',\n        isDisabled: false,\n        postIcon: undefined,\n        preIcon: faInfo\n    }\n}"
                 }
             ],
-            "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts": [
-                {
-                    "name": "contentItems",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "ContentItem[]",
-                    "defaultValue": "[\n    new ContentItem(\n        '1',\n        'user1',\n        'user1@localhost.de',\n        new Map<string, TableColumnType>([\n            ['id', '1'],\n            ['name', 'user1'],\n            ['email', 'user1@localhost.de']\n        ])\n    ),\n    new ContentItem(\n        '2',\n        'user2',\n        'user2@localhost.de',\n        new Map<string, TableColumnType>([\n            ['id', '2'],\n            ['name', 'user2'],\n            ['email', 'user2@localhost.de']\n        ])\n    ),\n    new ContentItem(\n        '3',\n        'user3',\n        'user3@localhost.de',\n        new Map<string, TableColumnType>([\n            ['id', '3'],\n            ['name', 'user3'],\n            ['email', 'user3@localhost.de']\n        ])\n    ),\n    new ContentItem(\n        '4',\n        'user4',\n        'user4@localhost.de',\n        new Map<string, TableColumnType>([\n            ['id', '4'],\n            ['name', 'user4'],\n            ['email', 'user4@localhost.de']\n        ])\n    ),\n        new ContentItem(\n        '5',\n        'user5',\n        'user5@localhost.de',\n        new Map<string, TableColumnType>([\n            ['id', '5'],\n            ['name', 'user5'],\n            ['email', 'user5@localhost.de']\n        ])\n    )\n]",
-                    "rawdescription": "Table cells are filled by column/ Map",
-                    "description": "<p>Table cells are filled by column/ Map</p>\n"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<TableContentComponent>",
-                    "defaultValue": "{\n    title: 'Components/Table/Table Content',\n    component: TableContentComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table content component.\n                `\n            }\n        }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div style=\"width: 600px;\">${story().template}</div>`,\n            props: story().props\n        })\n    ],\n    argTypes: {\n        tableItems: { control: 'object' },\n        tableHeight: { control: 'text' },\n        tableItemSelected: { action: 'select' },\n    },\n    args: { \n        tableItemSelected: fn(),\n        tableHeight: '275px',\n     },\n    tags: ['autodocs']\n}"
-                },
-                {
-                    "name": "Sample",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n     args: {\n        tableItems: contentItems,\n        tableHeight: '275px',\n        tableItemSelected: (event: any) => {\n            action('selected row')(event);\n        }\n    }\n}"
-                }
-            ],
             "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts": [
                 {
                     "name": "defaultTemplateMock",
@@ -2548,7 +2472,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "`   <table-component [style.width]=\"'100%'\">\n        <div header>\n            <table-header-component \n                [headerItemsTasks]=\"items\" \n                [searchFilters]=\"filters\" \n                [multiSelectList]=\"multiSelectList\" \n                (searchFilterChange)=\"searchFilterChange($event)\" \n                (selectFilterChange)=\"selectFilterChange($event)\"\n                (sortColumnChange)=\"sortColumnChange($event)\">\n            </table-header-component>\n        </div>\n        <div content>\n            <table-content-component\n                [tableItems]=\"contentItems\" \n                (tableItemSelected)=\"tableItemSelected($event)\">\n            </table-content-component>\n        </div>\n    </table-component>\n `"
+                    "defaultValue": "`   <table-component [style.width]=\"'100%'\" [scrollbarWidth]=\"15\">\n        <div header>\n            <table-header-component \n                [headerItemsTasks]=\"items\" \n                [searchFilters]=\"filters\" \n                [multiSelectList]=\"multiSelectList\" \n                (searchFilterChange)=\"searchFilterChange($event)\" \n                (selectFilterChange)=\"selectFilterChange($event)\"\n                (sortColumnChange)=\"sortColumnChange($event)\">\n            </table-header-component>\n        </div>\n        <div content>\n            <table-content-component\n                [tableItems]=\"contentItems\" \n                (tableItemSelected)=\"tableItemSelected($event)\">\n            </table-content-component>\n        </div>\n    </table-component>\n `"
                 },
                 {
                     "name": "meta",
@@ -2558,17 +2482,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TableComponent>",
-                    "defaultValue": "{\n    title: 'Components/Table/ Table',\n    component: TableComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [\n                TableComponent,\n                TableHeaderComponent,\n                TableContentComponent\n            ]\n        })\n    ],\n    subcomponents: { TableHeaderComponent, TableContentComponent},\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\nYou can also use a table component with a \\`table-header-component\\` and a \\`table-content-component\\`. \nTo use it you have to create the following items:\n\ntable-header-component\n- headerItemsTasks from type \\`ColumnHeaderItem\\`\n- searchFilters from type  \\`SearchFilter\\`\n- multiSelectList from type \\`{ [key: string]: TableColumnType[]}\\`\n\ntable-content-component\n- tableItems should have a parameter called \\`columns\\` from  type \\`Map<string, TableColumnType>)\\`\n\nEvery logic to sort the content has to be implemented by yourself.\n\n                `\n            }\n        }\n    },\n    tags: ['autodocs']\n}"
-                },
-                {
-                    "name": "multiSelectList",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "getSelectList(headerItems, contentItems)"
+                    "defaultValue": "{\n    title: 'Components/Table/ Table',\n    component: TableComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [\n                TableComponent,\n                TableHeaderComponent,\n                TableContentComponent\n            ]\n        })\n    ],\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\nYou can also use the table component with a \\`table-header-component\\` and a \\`table-content-component\\`. \nTo use it you have to create the following items:\n\ntable-header-component\n- headerItemsTasks from type \\`ColumnHeaderItem\\`\n- searchFilters from type  \\`SearchFilter\\`\n- multiSelectList from type \\`{ [key: string]: TableColumnType[]}\\`\n\ntable-content-component\n- tableItems should have a parameter called \\`columns\\` from  type \\`Map<string, TableColumnType>)\\`\n\nNote: Every logic to sort the content has to be implemented by yourself. You have also to set scrollbarWidth, if table table can be scrolled.\n\n                `\n            }\n        }\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Sample",
@@ -2683,48 +2597,6 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n        title: 'Warning Alert',\n        message: 'Warning Message',\n        type: AlertType.WARNING,\n        visibleState: true\n    }\n}"
-                }
-            ],
-            "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
-                {
-                    "name": "filters",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "getSearchFilters(headerItems)"
-                },
-                {
-                    "name": "headerItems",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "ColumnHeaderItem[]",
-                    "defaultValue": "[\n    new ColumnHeaderItem('Id', 'id', ColumnType.STRING, false),\n    new ColumnHeaderItem('Name', 'name', ColumnType.STRING, false),\n    new ColumnHeaderItem('Email', 'email', ColumnType.STRING, false)\n]"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<TableHeaderComponent>",
-                    "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' },\n    },\n    args: { \n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n     },\n    tags: ['autodocs']\n}"
-                },
-                {
-                    "name": "Sample",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n     args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        },\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts": [
@@ -3327,6 +3199,50 @@
                     "defaultValue": "{\n    render: () => ({\n        template: `<tooltip-component [style.position]=\"'relative'\"></tooltip-component>`\n    })\n}"
                 }
             ],
+            "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TableContentComponent>",
+                    "defaultValue": "{\n    title: 'Components/Table/Table Content',\n    component: TableContentComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table content component.\n                `\n            }\n        }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div style=\"width: 600px;\">${story().template}</div>`,\n            props: story().props\n        })\n    ],\n    argTypes: {\n        tableItems: { control: 'object' },\n        tableHeight: { control: 'text' },\n        tableItemSelected: { action: 'select' }\n    },\n    args: {\n        tableItemSelected: fn(),\n        tableHeight: '275px'\n    },\n    tags: ['autodocs']\n}"
+                },
+                {
+                    "name": "Sample",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        tableItems: contentItems,\n        tableHeight: '200px',\n        tableItemSelected: (event: any) => {\n            action('selected row')(event);\n        }\n    }\n}"
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TableHeaderComponent>",
+                    "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
+                },
+                {
+                    "name": "Sample",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
+                }
+            ],
             "projects/angular-component-library/.storybook/preview.ts": [
                 {
                     "name": "preview",
@@ -3472,19 +3388,6 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<CircleBtnComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
                 {
                     "name": "Story",
@@ -3498,13 +3401,13 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts": [
+            "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<ColorPaletteComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                    "rawtype": "StoryObj<CircleBtnComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -3518,6 +3421,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CollapsibleComponent>",
                     "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ColorPaletteComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -5066,16 +4982,6 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "contentItems",
-                "coveragePercent": 100,
-                "coverageCount": "1/1",
-                "status": "very-good"
-            },
-            {
-                "filePath": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
                 "name": "meta",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -5097,26 +5003,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
                 "name": "Story",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "filters",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "headerItems",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -5167,16 +5053,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "multiSelectList",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
