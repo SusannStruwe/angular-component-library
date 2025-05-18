@@ -3,8 +3,12 @@ import { TableComponent } from './table.component';
 import { TableHeaderComponent } from './table-header/table-header.component';
 import { action } from '@storybook/addon-actions';
 import { TableContentComponent } from './table-content/table-content.component';
-import { headerItems, filters, multiSelectList, contentItems } from '../../stories/util';
-
+import {
+    headerItems,
+    filters,
+    multiSelectList,
+    contentItems
+} from '../../stories/util';
 
 const defaultTemplateMock = `   <table-component [style.width]="'100%'" [scrollbarWidth]="15">
         <div header>

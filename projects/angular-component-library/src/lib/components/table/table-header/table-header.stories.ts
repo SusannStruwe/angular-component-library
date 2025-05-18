@@ -4,7 +4,6 @@ import { filters, headerItems } from '../../../stories/util';
 import { TableHeaderComponent } from './table-header.component';
 import { fn } from '@storybook/test';
 
-
 const meta: Meta<TableHeaderComponent> = {
     title: 'Components/Table/Table Header',
     component: TableHeaderComponent,
@@ -23,13 +22,13 @@ A table header component.
         multiSelectList: { control: 'object' },
         searchFilterChange: { action: 'search' },
         sortColumnChange: { action: 'sort' },
-        selectFilterChange: { action: 'multi select' },
+        selectFilterChange: { action: 'multi select' }
     },
-    args: { 
+    args: {
         searchFilterChange: fn(),
         sortColumnChange: fn(),
         selectFilterChange: fn()
-     },
+    },
     tags: ['autodocs']
 };
 export default meta;
@@ -37,7 +36,7 @@ export default meta;
 type Story = StoryObj<TableHeaderComponent>;
 
 export const Sample: Story = {
-     args: {
+    args: {
         headerItemsTasks: headerItems,
         searchFilters: filters,
         searchFilterChange: (event: any) => {
@@ -48,6 +47,6 @@ export const Sample: Story = {
         },
         selectFilterChange: (event: any) => {
             action('select')(event);
-        },
+        }
     }
 };

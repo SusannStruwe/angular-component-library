@@ -13,7 +13,7 @@ describe('SegmentedBtnComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [SegmentedBtnComponent, TranslateModule.forRoot(),],
+            imports: [SegmentedBtnComponent, TranslateModule.forRoot()],
             providers: []
         });
 

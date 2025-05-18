@@ -1,4 +1,7 @@
-import { ColumnHeaderItem, ColumnType } from '../model/column-header-item.model';
+import {
+    ColumnHeaderItem,
+    ColumnType
+} from '../model/column-header-item.model';
 import { MultiSelectItem } from '../model/multi-select.model';
 import { SearchFilter } from '../model/search-filter.model';
 import { DateTime, Duration } from 'luxon';
@@ -75,7 +78,7 @@ export const contentItems: ContentItem[] = [
             ['email', 'user4@localhost.de']
         ])
     ),
-        new ContentItem(
+    new ContentItem(
         '5',
         'user5',
         'user5@localhost.de',
@@ -86,7 +89,6 @@ export const contentItems: ContentItem[] = [
         ])
     )
 ];
-
 
 export const multiSelectList = getSelectList(headerItems, contentItems);
 

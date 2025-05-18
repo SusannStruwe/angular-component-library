@@ -43,7 +43,6 @@ export class TableHeaderComponent {
     @Input() searchFilters: SearchFilter[] = [];
     @Input() multiSelectList: any = null;
     @Input() scrollbarWidth: number = 0;
-    
 
     @Output() searchFilterChange = new EventEmitter<SearchFilter[]>();
     @Output() sortColumnChange = new EventEmitter<SortColumnEvent>();

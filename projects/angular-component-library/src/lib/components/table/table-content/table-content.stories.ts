@@ -4,8 +4,6 @@ import { TableContentComponent } from './table-content.component';
 import { fn } from '@storybook/test';
 import { action } from '@storybook/addon-actions';
 
-
-
 const meta: Meta<TableContentComponent> = {
     title: 'Components/Table/Table Content',
     component: TableContentComponent,
@@ -27,12 +25,12 @@ A table content component.
     argTypes: {
         tableItems: { control: 'object' },
         tableHeight: { control: 'text' },
-        tableItemSelected: { action: 'select' },
+        tableItemSelected: { action: 'select' }
     },
-    args: { 
+    args: {
         tableItemSelected: fn(),
-        tableHeight: '275px',
-     },
+        tableHeight: '275px'
+    },
     tags: ['autodocs']
 };
 export default meta;
@@ -40,7 +38,7 @@ export default meta;
 type Story = StoryObj<TableContentComponent>;
 
 export const Sample: Story = {
-     args: {
+    args: {
         tableItems: contentItems,
         tableHeight: '200px',
         tableItemSelected: (event: any) => {
