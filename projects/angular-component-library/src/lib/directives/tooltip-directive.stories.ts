@@ -1,6 +1,6 @@
 import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
-import { TooltipDirective } from 'angular-component-library';
 import { Component } from '@angular/core';
+import { TooltipDirective } from './tooltip.directive';
 
 @Component({
     template: `<p [tooltip]="'Hello'">Hello Directive</p>`,
