@@ -34,6 +34,7 @@ jobs:
     prettier:
         name: Check formatting
         runs-on: ubuntu-latest
+        needs: install
         steps:
             - name: Checkout repo
               uses: actions/checkout@v4
@@ -52,6 +53,7 @@ jobs:
     test:
         name: Check karma tests
         runs-on: ubuntu-latest
+        needs: install
         steps:
             - name: Checkout repo
               uses: actions/checkout@v4
@@ -70,6 +72,7 @@ jobs:
     storybook:
         name: Build storybook
         runs-on: ubuntu-latest
+        needs: install
         steps:
             - name: Checkout repo
               uses: actions/checkout@v4
