@@ -9,7 +9,7 @@
     "components": [
         {
             "name": "TestComponent",
-            "id": "component-TestComponent-82d9e4fbe39e63163941a26028f15a1596f44a4561c2bb52c6bf469f08515e172431dbbe9532593fe1533c28dea03a3a1f0fc7b6727ad3437eb1c66b4b270738",
+            "id": "component-TestComponent-09cedf6119f720b22950a207a39d3a3225739f299003e4c263bebeebafd0ed71211a62c205fdf307814f06149c298e6fef99b7b140b3bca5a59e5558bd0175c9",
             "file": "projects/angular-component-library/src/lib/directives/tooltip-directive.stories.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -40,7 +40,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';\nimport { TooltipDirective } from 'angular-component-library';\nimport { Component } from '@angular/core';\n\n@Component({\n    template: `<p [tooltip]=\"'Hello'\">Hello Directive</p>`,\n    standalone: true,\n    imports: [TooltipDirective]\n})\nclass TestComponent {}\n\nexport default {\n    title: 'Directives/Tooltip',\n    component: TestComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [TooltipDirective]\n        })\n    ]\n} as Meta;\n\ntype Story = StoryObj;\n\nexport const Sample: Story = {};\n",
+            "sourceCode": "import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';\nimport { Component } from '@angular/core';\nimport { TooltipDirective } from './tooltip.directive';\n\n@Component({\n    template: `<p [tooltip]=\"'Hello'\">Hello Directive</p>`,\n    standalone: true,\n    imports: [TooltipDirective]\n})\nclass TestComponent {}\n\nexport default {\n    title: 'Directives/Tooltip',\n    component: TestComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [TooltipDirective]\n        })\n    ]\n} as Meta;\n\ntype Story = StoryObj;\n\nexport const Sample: Story = {};\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -89,6 +89,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+            },
+            {
+                "name": "Active",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        active: true,\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
                 "name": "animationStyles",
@@ -264,6 +274,16 @@
                 "name": "Disabled",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        disabled: true,\n        faIcon: faInfoCircle\n    }\n}"
+            },
+            {
+                "name": "Disabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -419,6 +439,16 @@
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
                 "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faFilter: faFilter,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+            },
+            {
+                "name": "iconOptions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Record<string, IconDefinition>",
+                "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
             },
             {
                 "name": "iconOptions",
@@ -684,6 +714,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DurationInputComponent>",
+                "defaultValue": "{\n    title: 'Components/Duration Input',\n    component: DurationInputComponent,\n    argTypes: {\n        seconds: { control: 'number' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        maxDuration: { control: 'number' },\n        height: { control: 'text' },\n        secondsChange: { action: 'change'}\n    },\n    args: {\n        secondsChange: fn()\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -719,6 +759,16 @@
                 "deprecationMessage": "",
                 "type": "Meta<MultiSelectComponent>",
                 "defaultValue": "{\n    title: 'Components/Select/ Multi',\n    component: MultiSelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select multiple items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        backgroundColor: { control: 'text' },\n        itemsSelected: { action: 'selected' }\n    },\n    args: {\n        label: '',\n        items: [],\n        itemsSelected: fn()\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<NavbarBtnComponent>",
+                "defaultValue": "{\n    title: 'Components/Buttons/Navbar Btn',\n    component: NavbarBtnComponent,\n    argTypes: {\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        disabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        active: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -1034,6 +1084,16 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        \n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1069,6 +1129,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Label',\n        faIcon: faFilter,\n        items: selectItems,\n        backgroundColor: 'green'\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        faIcon: faCheck\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1271,6 +1341,16 @@
                 "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
             },
             {
+                "name": "Spinning",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        disabled: false,\n        faIcon: faSpinner\n    }\n}"
+            },
+            {
                 "name": "SuccessAlert",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1365,6 +1445,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "EditMode"
+            },
+            {
+                "name": "types",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1634,6 +1724,17 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<DurationInputComponent>",
+                "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<FilledBtnComponent>",
                 "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
                 "deprecated": false,
@@ -1669,6 +1770,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<MultiSelectComponent>",
                 "file": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<NavbarBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2275,6 +2387,68 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            click: () => {\n                action('do something')();\n            }\n        },\n        template: templateMock\n    })\n}"
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts": [
+                {
+                    "name": "Active",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        active: true,\n        faIcon: faInfoCircle\n    }\n}"
+                },
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        disabled: true,\n        faIcon: faInfoCircle\n    }\n}"
+                },
+                {
+                    "name": "iconOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Record<string, IconDefinition>",
+                    "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<NavbarBtnComponent>",
+                    "defaultValue": "{\n    title: 'Components/Buttons/Navbar Btn',\n    component: NavbarBtnComponent,\n    argTypes: {\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        disabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        active: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                },
+                {
+                    "name": "Sample",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        faIcon: faCheck\n    }\n}"
+                },
+                {
+                    "name": "Spinning",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        disabled: false,\n        faIcon: faSpinner\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/loader/loader.stories.ts": [
@@ -3003,6 +3177,38 @@
                     "defaultValue": "{\n    args: {\n        height: '100px',\n        width: '300px',\n        choseFileLabel: 'Load Input files'\n    }\n}"
                 }
             ],
+            "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DurationInputComponent>",
+                    "defaultValue": "{\n    title: 'Components/Duration Input',\n    component: DurationInputComponent,\n    argTypes: {\n        seconds: { control: 'number' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        maxDuration: { control: 'number' },\n        height: { control: 'text' },\n        secondsChange: { action: 'change'}\n    },\n    args: {\n        secondsChange: fn()\n    },\n    tags: ['autodocs']\n}"
+                },
+                {
+                    "name": "Sample",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        \n    }\n}"
+                },
+                {
+                    "name": "types",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "EditMode"
+                }
+            ],
             "projects/angular-component-library/src/lib/components/input/input.stories.ts": [
                 {
                     "name": "meta",
@@ -3492,6 +3698,19 @@
                     "kind": 183
                 }
             ],
+            "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DurationInputComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts": [
                 {
                     "name": "Story",
@@ -3538,6 +3757,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<MultiSelectComponent>",
                     "file": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<NavbarBtnComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -4518,6 +4750,46 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Sample",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "types",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -4789,6 +5061,76 @@
             },
             {
                 "filePath": "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Active",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Disabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "iconOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Sample",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spinning",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

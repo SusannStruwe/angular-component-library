@@ -7,31 +7,31 @@ export class FakeLoader implements TranslateLoader {
             en: {
                 upload: {
                     dropElement: {
-                        choseFile: 'Datei wählen',
-                        dropIt: '... oder per Drag & Drop reinziehen'
+                        choseFile: 'Chose file',
+                        dropIt: '... or drag & drop them in'
                     }
                 },
                 time: {
-                    hoursShort: 'hours',
-                    days: 'days',
+                    hoursShort: 'hour',
+                    days: 'day(s)',
                     minutesShort: 'min'
                 },
                 validation: {
-                    maxDuration: '365 Tage'
+                    maxDuration: '365 Days'
                 },
                 scheduler: {
-                    clock: 'Uhr'
+                    clock: ''
                 },
                 btn: {
-                    day: 'Tag',
-                    week: 'Woche',
-                    month: 'Monat'
+                    day: 'Day',
+                    week: 'Week',
+                    month: 'Month'
                 },
                 general: {
-                    search: 'Suchen ...'
+                    search: 'Search ...'
                 },
                 data: {
-                    noData: 'Keine Daten vorhanden'
+                    noData: 'No data available'
                 }
             },
             de: {
@@ -42,9 +42,9 @@ export class FakeLoader implements TranslateLoader {
                     }
                 },
                 time: {
-                    hoursShort: 'hours',
-                    days: 'days',
-                    minutesShort: 'min'
+                    hoursShort: 'Stund(en)',
+                    days: 'Tag(e)',
+                    minutesShort: 'Min.'
                 },
                 validation: {
                     maxDuration: '365 Tage'
@@ -53,12 +53,12 @@ export class FakeLoader implements TranslateLoader {
                     clock: 'Uhr'
                 },
                 btn: {
-                    day: 'Tag',
+                    day: 'Day',
                     week: 'Woche',
                     month: 'Monat'
                 },
                 general: {
-                    search: 'Search ...'
+                    search: 'Suchen ...'
                 },
                 data: {
                     noData: 'Keine Daten vorhanden'

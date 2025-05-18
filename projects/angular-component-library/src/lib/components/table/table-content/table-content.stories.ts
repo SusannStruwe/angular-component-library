@@ -18,7 +18,7 @@ A table content component.
     },
     decorators: [
         (story) => ({
-            template: `<div style="width: 600px;">${story().template}</div>`,
+            template: `<div [style.width.px]="'600'">${story().template}</div>`,
             props: story().props
         })
     ],

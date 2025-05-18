@@ -26,7 +26,7 @@ export class NavbarBtnComponent {
 
     @Input() faIcon?: IconDefinition;
 
-    @Input() disabled?: boolean;
+    @Input() disabled?: boolean = false;
     // example --> gray, delete
     @Input() classStyle?: string = '';
 
