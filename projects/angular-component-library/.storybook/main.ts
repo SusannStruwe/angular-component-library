@@ -20,7 +20,8 @@ const config: StorybookConfig = {
             hints: false
         };
         return config;
-    }
+    },
+    staticDirs: ['static']
 };
 
 export default config;
