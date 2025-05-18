@@ -17,10 +17,10 @@ const config: StorybookConfig = {
     },
     webpackFinal: async (config) => {
         config.performance = {
-        hints: false,
+            hints: false
         };
         return config;
-    },
+    }
 };
 
 export default config;
