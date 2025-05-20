@@ -16,7 +16,9 @@
         "@ngx-translate/core": "^16.0.3",
         "@types/lodash.clonedeep": "^4.5.9",
         "lodash.clonedeep": "^4.5.0",
-        "date-fns": "^4.1.0"
+        "date-fns": "^4.1.0",
+        "@types/luxon": "^3.6.2",
+        "luxon": "^3.6.1"
     },
     "dependencies": {
         "tslib": "^2.8.1"
@@ -24,7 +26,6 @@
     "sideEffects": false,
     "exports": {
         ".": {
-            "default": "./public-api",
             "sass": "./assets/styles.scss"
         }
     }
