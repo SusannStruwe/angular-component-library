@@ -108,9 +108,7 @@ button {
 .menu {
     position: absolute;
     top: calc(var(--btn-height) + 5px);
-    min-width: 150px;
-    width: max-content;
-    max-width: var(--max-width-select);
+    min-width: 100%;
     height: auto;
     border-radius: 0;
     background: var(--menu-background);
@@ -132,7 +130,6 @@ button {
         transform-origin: top;
         transform: scaleY(1);
         transition: transform 0.2s ease-in-out;
-        min-width: 100%;
     }
 
     &.hide {
@@ -334,6 +331,14 @@ button {
                 }
             }
         }
+    }
+}
+
+.light {
+    @extend .scheduler;
+
+    button {
+        border: var(--border-width) solid var(--border-color);
     }
 }
 

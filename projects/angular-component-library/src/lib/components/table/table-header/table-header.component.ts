@@ -9,6 +9,8 @@ import { SortColumnDirective } from '../../../directives/sort-column.directive';
 import { FormsModule } from '@angular/forms';
 import { SearchFilter } from '../../../model/search-filter.model';
 import { SortColumnEvent } from '../../../model/sort-column-event.model';
+import { TableStyle } from '../../../model/table-style.enum';
+
 
 /**
  * Component to create and show table header
@@ -43,6 +45,8 @@ export class TableHeaderComponent {
     @Input() searchFilters: SearchFilter[] = [];
     @Input() multiSelectList: any = null;
     @Input() scrollbarWidth: number = 0;
+    @Input() showSearchLine: boolean = true;
+    @Input() tableStyle?: TableStyle;
 
     @Output() searchFilterChange = new EventEmitter<SearchFilter[]>();
     @Output() sortColumnChange = new EventEmitter<SortColumnEvent>();

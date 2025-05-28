@@ -20,7 +20,7 @@
                     <bordered-btn-component
                         [ariaLabel]="'Close'"
                         (click)="closeModal()"
-                        [label]="cancelBtnText">
+                        [label]="cancelBtnTxt">
                     </bordered-btn-component>
                 }
                 @if (deleteBtn && deleteBtnTxt) {
@@ -34,14 +34,14 @@
                         [label]="deleteBtnTxt">
                     </filled-btn-component>
                 }
-                @if (confirmBtn && confirmBtnText) {
+                @if (confirmBtn && confirmBtnTxt) {
                     <filled-btn-component
                         [ariaLabel]="'Confirm'"
                         [faIcon]="showConfirmBtnLoader ? faLoader : undefined"
                         [isDisabled]="confirmDisabled"
                         [isSpinning]="showConfirmBtnLoader"
                         (click)="confirmModal()"
-                        [label]="confirmBtnText">
+                        [label]="confirmBtnTxt">
                     </filled-btn-component>
                 }
             </div>

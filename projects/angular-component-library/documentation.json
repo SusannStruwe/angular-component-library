@@ -121,6 +121,16 @@
                 "defaultValue": "{\n    args: {\n        label: 1,\n        borderRadius: 50,\n        classStyle: 'changes',\n        isDisabled: false\n    }\n}"
             },
             {
+                "name": "DarkStyle",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        tableStyle: TableStyle.DARK,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
+            },
+            {
                 "name": "defaultTemplateMock",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -138,7 +148,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "`   <table-component [style.width]=\"'100%'\" [scrollbarWidth]=\"15\">\n        <div header>\n            <table-header-component \n                [headerItemsTasks]=\"items\" \n                [searchFilters]=\"filters\" \n                [multiSelectList]=\"multiSelectList\" \n                (searchFilterChange)=\"searchFilterChange($event)\" \n                (selectFilterChange)=\"selectFilterChange($event)\"\n                (sortColumnChange)=\"sortColumnChange($event)\">\n            </table-header-component>\n        </div>\n        <div content>\n            <table-content-component\n                [tableItems]=\"contentItems\" \n                (tableItemSelected)=\"tableItemSelected($event)\">\n            </table-content-component>\n        </div>\n    </table-component>\n `"
+                "defaultValue": "`   <table-component [style.width]=\"'600px'\" [scrollbarWidth]=\"15\">\r\n        <div header>\r\n            <table-header-component \r\n                [headerItemsTasks]=\"items\" \r\n                [searchFilters]=\"filters\" \r\n                [multiSelectList]=\"multiSelectList\" \r\n                [showSearchLine]=\"showSearchLine\"\r\n                [tableStyle]=\"tableStyle\"\r\n                (searchFilterChange)=\"searchFilterChange($event)\" \r\n                (selectFilterChange)=\"selectFilterChange($event)\"\r\n                (sortColumnChange)=\"sortColumnChange($event)\">\r\n            </table-header-component>\r\n        </div>\r\n        <div content>\r\n            <table-content-component\r\n                [tableItems]=\"contentItems\" \r\n                (tableItemSelected)=\"tableItemSelected($event)\">\r\n            </table-content-component>\r\n        </div>\r\n    </table-component>\r\n `"
             },
             {
                 "name": "Delete",
@@ -291,6 +301,26 @@
                 "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        checked: true,\n        isDisabled: true\n    }\n}"
             },
             {
+                "name": "DotLoader",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.DOT_LOADER,\r\n        paddingTop: '0px'\r\n    }\r\n}"
+            },
+            {
+                "name": "DotLoader2",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.DOT_LOADER2,\r\n        paddingTop: '0px'\r\n    }\r\n}"
+            },
+            {
                 "name": "ErrorWithLink",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -384,21 +414,21 @@
                 "name": "iconOptions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Record<string, IconDefinition>",
-                "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfo: faInfo\n}"
-            },
-            {
-                "name": "iconOptions",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
                 "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfo: faInfo,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+            },
+            {
+                "name": "iconOptions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Record<string, IconDefinition>",
+                "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfo: faInfo\n}"
             },
             {
                 "name": "iconOptions",
@@ -458,7 +488,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
-                "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+                "defaultValue": "{\r\n    faChevronDown: faChevronDown,\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfoCircle: faInfoCircle,\r\n    faSpinner: faSpinner,\r\n    faTrash: faTrash\r\n}"
             },
             {
                 "name": "iconTemplateMock",
@@ -499,6 +529,26 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        size: 'large',\n        label: 'Button'\n    }\n}"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Label: ',\r\n        items: selectItems,\r\n        selectedItem: selectedItem,\r\n        filterPlaceholder: 'Select...',\r\n        show: true,\r\n        classStyle: SelectStyle.LIGHT,\r\n        width: '600px',\r\n        menuHeight: '100px'\r\n    },\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                story: 'Component to select items'\r\n            }\r\n        }\r\n    }\r\n}"
+            },
+            {
+                "name": "LightStyle",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        tableStyle: TableStyle.LIGHT,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
             },
             {
                 "name": "loaderStyles",
@@ -578,7 +628,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<OverviewWrapperComponent>",
-                "defaultValue": "{\n    title: 'Overview',\n    component: OverviewWrapperComponent,\n    parameters: {\n        docs: {\n            disable: true // 📛 verhindert die Nutzung von Compodoc-Daten\n        }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\r\n    title: 'Overview',\r\n    component: OverviewWrapperComponent,\r\n    tags: ['autodocs']\r\n}"
             },
             {
                 "name": "meta",
@@ -604,21 +654,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<BadgeComponent>",
-                "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        classStyle: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ]\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BorderedBtnComponent>",
                 "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['gray', 'delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<BadgeComponent>",
+                "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        classStyle: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ]\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
             },
             {
                 "name": "meta",
@@ -748,7 +798,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<LoaderComponent>",
-                "defaultValue": "{\n    title: 'Components/Loader',\n    component: LoaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A loader component. \n                 `\n            }\n        }\n    },\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text', value: '' },\n        loaderStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(loaderStyles),\n            mapping: LoaderStyle,\n            value: LoaderStyle.DOT_LOADER\n        },\n        animation: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(animationStyles),\n            mapping: AnimationStyle,\n            value: AnimationStyle.LINEAR\n        },\n        paddingTop: { control: 'text' }\n    },\n    args: {\n        paddingTop: '20%'\n    }\n}"
+                "defaultValue": "{\r\n    title: 'Components/Loader',\r\n    component: LoaderComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\n A loader component. \r\n                 `\r\n            }\r\n        }\r\n    },\r\n    argTypes: {\r\n        label: { control: 'text', value: '' },\r\n        loaderStyle: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(loaderStyles),\r\n            mapping: LoaderStyle,\r\n            value: LoaderStyle.DOT_LOADER\r\n        },\r\n        animation: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(animationStyles),\r\n            mapping: AnimationStyle,\r\n            value: AnimationStyle.LINEAR\r\n        },\r\n        paddingTop: { control: 'text' }\r\n    },\r\n    args: {\r\n        paddingTop: '20%'\r\n    },\r\n    tags: ['autodocs']\r\n}"
             },
             {
                 "name": "meta",
@@ -818,7 +868,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<SelectComponent>",
-                "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: { control: 'text' },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\r\n    title: 'Components/Select/ Single',\r\n    component: SelectComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                story: 'Component to select items.'\r\n            }\r\n        }\r\n    },\r\n    argTypes: {\r\n        items: { control: 'object' },\r\n        selectedItem: { control: 'object' },\r\n        label: { control: 'text' },\r\n        faIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        faIconBefore: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        classStyle: {  \r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(selectStyle),\r\n             mapping: SelectStyle \r\n        },\r\n        withBlankOption: { control: 'boolean' },\r\n        withDeselect: { control: 'boolean' },\r\n        withFilter: { control: 'boolean' },\r\n        filterPlaceholder: { control: 'text' },\r\n        show: { control: 'boolean' },\r\n        width: { control: 'text' },\r\n        menuHeight: { control: 'text' },\r\n        showChange: { action: 'show' },\r\n        itemSelected: { action: 'selected' }\r\n    },\r\n    args: {\r\n        showChange: fn(),\r\n        itemSelected: fn()\r\n    },\r\n    tags: ['autodocs']\r\n}"
             },
             {
                 "name": "meta",
@@ -828,7 +878,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TableComponent>",
-                "defaultValue": "{\n    title: 'Components/Table/ Table',\n    component: TableComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [\n                TableComponent,\n                TableHeaderComponent,\n                TableContentComponent\n            ]\n        })\n    ],\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\nYou can also use the table component with a \\`table-header-component\\` and a \\`table-content-component\\`. \nTo use it you have to create the following items:\n\ntable-header-component\n- headerItemsTasks from type \\`ColumnHeaderItem\\`\n- searchFilters from type  \\`SearchFilter\\`\n- multiSelectList from type \\`{ [key: string]: TableColumnType[]}\\`\n\ntable-content-component\n- tableItems should have a parameter called \\`columns\\` from  type \\`Map<string, TableColumnType>)\\`\n\nNote: Every logic to sort the content has to be implemented by yourself. You have also to set scrollbarWidth, if table table can be scrolled.\n\n                `\n            }\n        }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\r\n    title: 'Components/Table/ Table',\r\n    component: TableComponent,\r\n    decorators: [\r\n        moduleMetadata({\r\n            imports: [\r\n                TableComponent,\r\n                TableHeaderComponent,\r\n                TableContentComponent\r\n            ]\r\n        })\r\n    ],\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\nA table component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\r\n\r\nYou can also use the table component with a \\`table-header-component\\` and a \\`table-content-component\\`. \r\nTo use it you have to create the following items:\r\n\r\ntable-header-component\r\n- headerItemsTasks from type \\`ColumnHeaderItem\\`\r\n- searchFilters from type  \\`SearchFilter\\`\r\n- multiSelectList from type \\`{ [key: string]: TableColumnType[]}\\`\r\n\r\ntable-content-component\r\n- tableItems should have a parameter called \\`columns\\` from  type \\`Map<string, TableColumnType>)\\`\r\n\r\nNote: Every logic to sort the content has to be implemented by yourself. You have also to set scrollbarWidth, if table table can be scrolled.\r\n\r\n                `\r\n            }\r\n        }\r\n    },\r\n    tags: ['autodocs']\r\n}"
             },
             {
                 "name": "meta",
@@ -888,7 +938,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TableHeaderComponent>",
-                "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\r\n    title: 'Components/Table/Table Header',\r\n    component: TableHeaderComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\nA table header component.\r\n                `\r\n            }\r\n        }\r\n    },\r\n    argTypes: {\r\n        headerItemsTasks: { control: 'object' },\r\n        searchFilters: { control: 'object' },\r\n        multiSelectList: { control: 'object' },\r\n        showSearchLine: {control: 'boolean'},\r\n        tableStyle: {  \r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(tableStyle),\r\n                mapping: TableStyle \r\n        },\r\n        searchFilterChange: { action: 'search' },\r\n        sortColumnChange: { action: 'sort' },\r\n        selectFilterChange: { action: 'multi select' }\r\n    },\r\n    args: {\r\n        searchFilterChange: fn(),\r\n        sortColumnChange: fn(),\r\n        selectFilterChange: fn()\r\n    },\r\n    tags: ['autodocs']\r\n}"
             },
             {
                 "name": "Off",
@@ -974,21 +1024,21 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Sample',\n        borderRadius: 10,\n        isDisabled: false,\n        postIcon: undefined,\n        preIcon: undefined\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Sample'\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Sample',\n        borderRadius: 10,\n        isDisabled: false,\n        postIcon: undefined,\n        preIcon: undefined\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1114,11 +1164,11 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/modal/modal.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Loading...',\n        animation: AnimationStyle.EASE,\n        loaderStyle: LoaderStyle.SPINNER,\n        paddingTop: '0px'\n    }\n}"
+                "defaultValue": "{\r\n  args: {},\r\n}"
             },
             {
                 "name": "Sample",
@@ -1188,7 +1238,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Label: ',\r\n        items: selectItems,\r\n        selectedItem: selectedItem,\r\n        filterPlaceholder: 'Select...',\r\n        show: true\r\n    },\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                story: 'Component to select items'\r\n            }\r\n        }\r\n    }\r\n}"
             },
             {
                 "name": "Sample",
@@ -1198,7 +1248,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            items: headerItems,\n            filters: filters,\n            multiSelectList: multiSelectList,\n            contentItems: contentItems,\n            searchFilterChange: (event: any) => {\n                action('filter')(event);\n            },\n            sortColumnChange: (event: any) => {\n                action('sort')(event);\n            },\n            selectFilterChange: (event: any) => {\n                action('select')(event);\n            },\n            tableItemSelected: (event: any) => {\n                action('selected row')(event);\n            }\n        },\n        template: defaultTemplateMock\n    })\n}"
+                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            items: headerItems,\r\n            filters: filters,\r\n            multiSelectList: multiSelectList,\r\n            contentItems: contentItems,\r\n            showSearchLine: true,\r\n            searchFilterChange: (event: any) => {\r\n                action('filter')(event);\r\n            },\r\n            sortColumnChange: (event: any) => {\r\n                action('sort')(event);\r\n            },\r\n            selectFilterChange: (event: any) => {\r\n                action('select')(event);\r\n            },\r\n            tableItemSelected: (event: any) => {\r\n                action('selected row')(event);\r\n            }\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
             },
             {
                 "name": "Sample",
@@ -1238,7 +1288,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
+                "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
             },
             {
                 "name": "Secondary",
@@ -1278,7 +1328,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\n    new SelectItem('select3')\n]"
+                "defaultValue": "[\r\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\r\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\r\n    new SelectItem('select3')\r\n]"
+            },
+            {
+                "name": "selectStyle",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "SelectStyle"
             },
             {
                 "name": "show",
@@ -1299,6 +1359,26 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        size: 'small',\n        label: 'Button'\n    }\n}"
+            },
+            {
+                "name": "Spinner",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.SPINNER,\r\n        paddingTop: '0px'\r\n    }\r\n}"
+            },
+            {
+                "name": "Spinner2",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.SPINNER2,\r\n        paddingTop: '0px'\r\n    }\r\n}"
             },
             {
                 "name": "Spinning",
@@ -1359,6 +1439,26 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Success',\n        borderRadius: 10,\n        classStyle: 'success',\n        isDisabled: false,\n        postIcon: undefined,\n        preIcon: faInfo\n    }\n}"
+            },
+            {
+                "name": "TableLightWithoutSearchLine",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            items: headerItems,\r\n            filters: filters,\r\n            multiSelectList: multiSelectList,\r\n            contentItems: contentItems,\r\n            showSearchLine: false,\r\n            tableStyle: TableStyle.LIGHT,\r\n            searchFilterChange: (event: any) => {\r\n                action('filter')(event);\r\n            },\r\n            sortColumnChange: (event: any) => {\r\n                action('sort')(event);\r\n            },\r\n            selectFilterChange: (event: any) => {\r\n                action('select')(event);\r\n            },\r\n            tableItemSelected: (event: any) => {\r\n                action('selected row')(event);\r\n            }\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+            },
+            {
+                "name": "tableStyle",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "TableStyle"
             },
             {
                 "name": "Tag",
@@ -1519,6 +1619,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            faUp: faUp,\n            faDown: faDown,\n            show: show\n        },\n        template: iconTemplateMock\n    })\n}"
+            },
+            {
+                "name": "WithoutSearchLine",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        showSearchLine: false,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
             }
         ],
         "functions": [],
@@ -1593,8 +1703,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<BadgeComponent>",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "rawtype": "StoryObj<BorderedBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1604,8 +1714,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<BorderedBtnComponent>",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "rawtype": "StoryObj<BadgeComponent>",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1749,6 +1859,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<LoaderComponent>",
                 "file": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ModalWrapperComponent>",
+                "file": "projects/angular-component-library/src/lib/components/modal/modal.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2443,6 +2564,26 @@
                     "defaultValue": "AnimationStyle"
                 },
                 {
+                    "name": "DotLoader",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.DOT_LOADER,\r\n        paddingTop: '0px'\r\n    }\r\n}"
+                },
+                {
+                    "name": "DotLoader2",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.DOT_LOADER2,\r\n        paddingTop: '0px'\r\n    }\r\n}"
+                },
+                {
                     "name": "loaderStyles",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -2460,17 +2601,27 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<LoaderComponent>",
-                    "defaultValue": "{\n    title: 'Components/Loader',\n    component: LoaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A loader component. \n                 `\n            }\n        }\n    },\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text', value: '' },\n        loaderStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(loaderStyles),\n            mapping: LoaderStyle,\n            value: LoaderStyle.DOT_LOADER\n        },\n        animation: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(animationStyles),\n            mapping: AnimationStyle,\n            value: AnimationStyle.LINEAR\n        },\n        paddingTop: { control: 'text' }\n    },\n    args: {\n        paddingTop: '20%'\n    }\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Loader',\r\n    component: LoaderComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\n A loader component. \r\n                 `\r\n            }\r\n        }\r\n    },\r\n    argTypes: {\r\n        label: { control: 'text', value: '' },\r\n        loaderStyle: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(loaderStyles),\r\n            mapping: LoaderStyle,\r\n            value: LoaderStyle.DOT_LOADER\r\n        },\r\n        animation: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(animationStyles),\r\n            mapping: AnimationStyle,\r\n            value: AnimationStyle.LINEAR\r\n        },\r\n        paddingTop: { control: 'text' }\r\n    },\r\n    args: {\r\n        paddingTop: '20%'\r\n    },\r\n    tags: ['autodocs']\r\n}"
                 },
                 {
-                    "name": "Sample",
+                    "name": "Spinner",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Loading...',\n        animation: AnimationStyle.EASE,\n        loaderStyle: LoaderStyle.SPINNER,\n        paddingTop: '0px'\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.SPINNER,\r\n        paddingTop: '0px'\r\n    }\r\n}"
+                },
+                {
+                    "name": "Spinner2",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.SPINNER2,\r\n        paddingTop: '0px'\r\n    }\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
@@ -2533,6 +2684,68 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n        label: 'Success',\n        borderRadius: 10,\n        classStyle: 'success',\n        isDisabled: false,\n        postIcon: undefined,\n        preIcon: faInfo\n    }\n}"
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
+                {
+                    "name": "DarkStyle",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        tableStyle: TableStyle.DARK,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
+                },
+                {
+                    "name": "LightStyle",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        tableStyle: TableStyle.LIGHT,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TableHeaderComponent>",
+                    "defaultValue": "{\r\n    title: 'Components/Table/Table Header',\r\n    component: TableHeaderComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\nA table header component.\r\n                `\r\n            }\r\n        }\r\n    },\r\n    argTypes: {\r\n        headerItemsTasks: { control: 'object' },\r\n        searchFilters: { control: 'object' },\r\n        multiSelectList: { control: 'object' },\r\n        showSearchLine: {control: 'boolean'},\r\n        tableStyle: {  \r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(tableStyle),\r\n                mapping: TableStyle \r\n        },\r\n        searchFilterChange: { action: 'search' },\r\n        sortColumnChange: { action: 'sort' },\r\n        selectFilterChange: { action: 'multi select' }\r\n    },\r\n    args: {\r\n        searchFilterChange: fn(),\r\n        sortColumnChange: fn(),\r\n        selectFilterChange: fn()\r\n    },\r\n    tags: ['autodocs']\r\n}"
+                },
+                {
+                    "name": "Sample",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
+                },
+                {
+                    "name": "tableStyle",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "TableStyle"
+                },
+                {
+                    "name": "WithoutSearchLine",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        showSearchLine: false,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts": [
@@ -2626,7 +2839,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "`   <table-component [style.width]=\"'100%'\" [scrollbarWidth]=\"15\">\n        <div header>\n            <table-header-component \n                [headerItemsTasks]=\"items\" \n                [searchFilters]=\"filters\" \n                [multiSelectList]=\"multiSelectList\" \n                (searchFilterChange)=\"searchFilterChange($event)\" \n                (selectFilterChange)=\"selectFilterChange($event)\"\n                (sortColumnChange)=\"sortColumnChange($event)\">\n            </table-header-component>\n        </div>\n        <div content>\n            <table-content-component\n                [tableItems]=\"contentItems\" \n                (tableItemSelected)=\"tableItemSelected($event)\">\n            </table-content-component>\n        </div>\n    </table-component>\n `"
+                    "defaultValue": "`   <table-component [style.width]=\"'600px'\" [scrollbarWidth]=\"15\">\r\n        <div header>\r\n            <table-header-component \r\n                [headerItemsTasks]=\"items\" \r\n                [searchFilters]=\"filters\" \r\n                [multiSelectList]=\"multiSelectList\" \r\n                [showSearchLine]=\"showSearchLine\"\r\n                [tableStyle]=\"tableStyle\"\r\n                (searchFilterChange)=\"searchFilterChange($event)\" \r\n                (selectFilterChange)=\"selectFilterChange($event)\"\r\n                (sortColumnChange)=\"sortColumnChange($event)\">\r\n            </table-header-component>\r\n        </div>\r\n        <div content>\r\n            <table-content-component\r\n                [tableItems]=\"contentItems\" \r\n                (tableItemSelected)=\"tableItemSelected($event)\">\r\n            </table-content-component>\r\n        </div>\r\n    </table-component>\r\n `"
                 },
                 {
                     "name": "meta",
@@ -2636,7 +2849,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TableComponent>",
-                    "defaultValue": "{\n    title: 'Components/Table/ Table',\n    component: TableComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [\n                TableComponent,\n                TableHeaderComponent,\n                TableContentComponent\n            ]\n        })\n    ],\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\nYou can also use the table component with a \\`table-header-component\\` and a \\`table-content-component\\`. \nTo use it you have to create the following items:\n\ntable-header-component\n- headerItemsTasks from type \\`ColumnHeaderItem\\`\n- searchFilters from type  \\`SearchFilter\\`\n- multiSelectList from type \\`{ [key: string]: TableColumnType[]}\\`\n\ntable-content-component\n- tableItems should have a parameter called \\`columns\\` from  type \\`Map<string, TableColumnType>)\\`\n\nNote: Every logic to sort the content has to be implemented by yourself. You have also to set scrollbarWidth, if table table can be scrolled.\n\n                `\n            }\n        }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Table/ Table',\r\n    component: TableComponent,\r\n    decorators: [\r\n        moduleMetadata({\r\n            imports: [\r\n                TableComponent,\r\n                TableHeaderComponent,\r\n                TableContentComponent\r\n            ]\r\n        })\r\n    ],\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\nA table component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\r\n\r\nYou can also use the table component with a \\`table-header-component\\` and a \\`table-content-component\\`. \r\nTo use it you have to create the following items:\r\n\r\ntable-header-component\r\n- headerItemsTasks from type \\`ColumnHeaderItem\\`\r\n- searchFilters from type  \\`SearchFilter\\`\r\n- multiSelectList from type \\`{ [key: string]: TableColumnType[]}\\`\r\n\r\ntable-content-component\r\n- tableItems should have a parameter called \\`columns\\` from  type \\`Map<string, TableColumnType>)\\`\r\n\r\nNote: Every logic to sort the content has to be implemented by yourself. You have also to set scrollbarWidth, if table table can be scrolled.\r\n\r\n                `\r\n            }\r\n        }\r\n    },\r\n    tags: ['autodocs']\r\n}"
                 },
                 {
                     "name": "Sample",
@@ -2646,7 +2859,17 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            items: headerItems,\n            filters: filters,\n            multiSelectList: multiSelectList,\n            contentItems: contentItems,\n            searchFilterChange: (event: any) => {\n                action('filter')(event);\n            },\n            sortColumnChange: (event: any) => {\n                action('sort')(event);\n            },\n            selectFilterChange: (event: any) => {\n                action('select')(event);\n            },\n            tableItemSelected: (event: any) => {\n                action('selected row')(event);\n            }\n        },\n        template: defaultTemplateMock\n    })\n}"
+                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            items: headerItems,\r\n            filters: filters,\r\n            multiSelectList: multiSelectList,\r\n            contentItems: contentItems,\r\n            showSearchLine: true,\r\n            searchFilterChange: (event: any) => {\r\n                action('filter')(event);\r\n            },\r\n            sortColumnChange: (event: any) => {\r\n                action('sort')(event);\r\n            },\r\n            selectFilterChange: (event: any) => {\r\n                action('select')(event);\r\n            },\r\n            tableItemSelected: (event: any) => {\r\n                action('selected row')(event);\r\n            }\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+                },
+                {
+                    "name": "TableLightWithoutSearchLine",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            items: headerItems,\r\n            filters: filters,\r\n            multiSelectList: multiSelectList,\r\n            contentItems: contentItems,\r\n            showSearchLine: false,\r\n            tableStyle: TableStyle.LIGHT,\r\n            searchFilterChange: (event: any) => {\r\n                action('filter')(event);\r\n            },\r\n            sortColumnChange: (event: any) => {\r\n                action('sort')(event);\r\n            },\r\n            selectFilterChange: (event: any) => {\r\n                action('select')(event);\r\n            },\r\n            tableItemSelected: (event: any) => {\r\n                action('selected row')(event);\r\n            }\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts": [
@@ -2814,7 +3037,17 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Record<string, IconDefinition>",
-                    "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+                    "defaultValue": "{\r\n    faChevronDown: faChevronDown,\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfoCircle: faInfoCircle,\r\n    faSpinner: faSpinner,\r\n    faTrash: faTrash\r\n}"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Label: ',\r\n        items: selectItems,\r\n        selectedItem: selectedItem,\r\n        filterPlaceholder: 'Select...',\r\n        show: true,\r\n        classStyle: SelectStyle.LIGHT,\r\n        width: '600px',\r\n        menuHeight: '100px'\r\n    },\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                story: 'Component to select items'\r\n            }\r\n        }\r\n    }\r\n}"
                 },
                 {
                     "name": "meta",
@@ -2824,7 +3057,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<SelectComponent>",
-                    "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: { control: 'text' },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Select/ Single',\r\n    component: SelectComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                story: 'Component to select items.'\r\n            }\r\n        }\r\n    },\r\n    argTypes: {\r\n        items: { control: 'object' },\r\n        selectedItem: { control: 'object' },\r\n        label: { control: 'text' },\r\n        faIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        faIconBefore: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        classStyle: {  \r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(selectStyle),\r\n             mapping: SelectStyle \r\n        },\r\n        withBlankOption: { control: 'boolean' },\r\n        withDeselect: { control: 'boolean' },\r\n        withFilter: { control: 'boolean' },\r\n        filterPlaceholder: { control: 'text' },\r\n        show: { control: 'boolean' },\r\n        width: { control: 'text' },\r\n        menuHeight: { control: 'text' },\r\n        showChange: { action: 'show' },\r\n        itemSelected: { action: 'selected' }\r\n    },\r\n    args: {\r\n        showChange: fn(),\r\n        itemSelected: fn()\r\n    },\r\n    tags: ['autodocs']\r\n}"
                 },
                 {
                     "name": "Sample",
@@ -2834,7 +3067,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Label: ',\r\n        items: selectItems,\r\n        selectedItem: selectedItem,\r\n        filterPlaceholder: 'Select...',\r\n        show: true\r\n    },\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                story: 'Component to select items'\r\n            }\r\n        }\r\n    }\r\n}"
                 },
                 {
                     "name": "selectedItem",
@@ -2854,7 +3087,17 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "[\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\n    new SelectItem('select3')\n]"
+                    "defaultValue": "[\r\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\r\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\r\n    new SelectItem('select3')\r\n]"
+                },
+                {
+                    "name": "selectStyle",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "SelectStyle"
                 }
             ],
             "projects/angular-component-library/src/lib/stories/button.stories.ts": [
@@ -2982,7 +3225,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<OverviewWrapperComponent>",
-                    "defaultValue": "{\n    title: 'Overview',\n    component: OverviewWrapperComponent,\n    parameters: {\n        docs: {\n            disable: true // 📛 verhindert die Nutzung von Compodoc-Daten\n        }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\r\n    title: 'Overview',\r\n    component: OverviewWrapperComponent,\r\n    tags: ['autodocs']\r\n}"
                 },
                 {
                     "name": "Sample",
@@ -3407,28 +3650,6 @@
                     "defaultValue": "{\n    args: {\n        tableItems: contentItems,\n        tableHeight: '200px',\n        tableItemSelected: (event: any) => {\n            action('selected row')(event);\n        }\n    }\n}"
                 }
             ],
-            "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<TableHeaderComponent>",
-                    "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
-                },
-                {
-                    "name": "Sample",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
-                }
-            ],
             "projects/angular-component-library/.storybook/preview.ts": [
                 {
                     "name": "preview",
@@ -3451,6 +3672,18 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{}"
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/modal/modal.stories.ts": [
+                {
+                    "name": "Sample",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/modal/modal.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {},\r\n}"
                 }
             ]
         },
@@ -3535,19 +3768,6 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<BadgeComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts": [
                 {
                     "name": "Story",
@@ -3555,6 +3775,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<BorderedBtnComponent>",
                     "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<BadgeComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -3724,6 +3957,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<LoaderComponent>",
                     "file": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/modal/modal.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ModalWrapperComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/modal/modal.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -4954,6 +5200,26 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "DotLoader",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DotLoader2",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "loaderStyles",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -4974,13 +5240,43 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Sample",
+                "name": "Spinner",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
                 "filePath": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Spinner2",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/modal/modal.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Sample",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/modal/modal.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
@@ -5244,6 +5540,16 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "Light",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "meta",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -5281,6 +5587,16 @@
             },
             {
                 "filePath": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "selectStyle",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
@@ -5324,6 +5640,26 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "DarkStyle",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LightStyle",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "meta",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -5335,6 +5671,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Sample",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "tableStyle",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithoutSearchLine",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -5375,6 +5731,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Sample",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TableLightWithoutSearchLine",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

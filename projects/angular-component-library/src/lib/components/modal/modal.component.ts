@@ -23,7 +23,14 @@ import { SassHelperComponent } from '../sass-helper.component';
  *
  * @howToUse
  * ```
- * <modal-component>
+ * <modal-component
+ *   [title]="title"
+ *   [sizeClass]="sizeClass"
+ *   [confirmBtn]="confirmBtn"
+ *   [confirmBtnText]="confirmBtnText">
+ *   <div>
+ *       <h2>Place your content inside</h2>
+ *   </div>
  * </modal-component>
  * ```
  */
@@ -45,11 +52,11 @@ export class ModalComponent implements OnInit, OnDestroy {
     @Input() id: string = '';
     @Input() title = ' ';
     @Input() confirmBtn = true;
-    @Input() confirmBtnText? = 'Ok';
+    @Input() confirmBtnTxt? = 'Ok';
     @Input() showConfirmBtnLoader = false;
     @Input() confirmDisabled? = false;
     @Input() cancelBtn? = false;
-    @Input() cancelBtnText? = 'Cancel';
+    @Input() cancelBtnTxt? = 'Cancel';
     @Input() deleteBtn? = false;
     @Input() deleteBtnTxt? = 'Delete';
     @Input() sizeClass = ['m'];

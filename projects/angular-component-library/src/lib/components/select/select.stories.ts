@@ -12,6 +12,7 @@ import {
 import { Icons } from '../../model/icons';
 import { SelectItem } from '../../model/select-item.model';
 import { fn } from '@storybook/test';
+import { SelectStyle } from '../../model/select-style.enum';
 
 const iconOptions: Record<string, IconDefinition> = {
     faChevronDown: faChevronDown,
@@ -21,6 +22,8 @@ const iconOptions: Record<string, IconDefinition> = {
     faSpinner: faSpinner,
     faTrash: faTrash
 };
+
+const selectStyle: typeof SelectStyle = SelectStyle;
 
 const selectItems = [
     new SelectItem('select1', undefined, Icons.faInfoCircle),
@@ -57,12 +60,20 @@ const meta: Meta<SelectComponent> = {
             options: Object.keys(iconOptions),
             mapping: iconOptions
         },
-        classStyle: { control: 'text' },
+        classStyle: {  
+            control: {
+                type: 'select'
+            },
+            options: Object.keys(selectStyle),
+             mapping: SelectStyle 
+        },
         withBlankOption: { control: 'boolean' },
         withDeselect: { control: 'boolean' },
         withFilter: { control: 'boolean' },
         filterPlaceholder: { control: 'text' },
         show: { control: 'boolean' },
+        width: { control: 'text' },
+        menuHeight: { control: 'text' },
         showChange: { action: 'show' },
         itemSelected: { action: 'selected' }
     },
@@ -83,6 +94,27 @@ export const Sample: Story = {
         selectedItem: selectedItem,
         filterPlaceholder: 'Select...',
         show: true
+    },
+    parameters: {
+        docs: {
+            description: {
+                story: 'Component to select items'
+            }
+        }
+    }
+};
+
+
+export const Light: Story = {
+    args: {
+        label: 'Label: ',
+        items: selectItems,
+        selectedItem: selectedItem,
+        filterPlaceholder: 'Select...',
+        show: true,
+        classStyle: SelectStyle.LIGHT,
+        width: '600px',
+        menuHeight: '100px'
     },
     parameters: {
         docs: {

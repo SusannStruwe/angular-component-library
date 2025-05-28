@@ -1,4 +1,4 @@
-@import './tooltip';
+@use './tooltip' as *;
 
 /**************************************************
   Variables
@@ -26,7 +26,8 @@ body {
     --tooltip-background: #262626;
     --modal-background: #fbfbfb;
     --menu-background: #fff;
-    --table-header-color: #fbfbfb;
+    --table-light-color: #e4e4e4;
+    --table-dark-color: #222;
     --tabs-background: #111;
     --tabs-content-color: #f3f3f3;
     --tab-color: #ccc;
@@ -291,6 +292,15 @@ a {
     margin: auto;
 }
 
+.grid-2-2 {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    margin: auto;
+}
+
 .flex-column {
     position: relative;
     display: flex;
@@ -312,6 +322,22 @@ a {
     p {
         margin: 0.5em 0;
     }
+}
+
+.custom-input {
+    height: var(--input-height);
+    width: 160px;
+    outline: none;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-normal);
+    color: var(--text-color);
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--input-radius);
+    padding-right: 35px;
+    padding-left: 20px;
+    box-sizing: border-box;
 }
 
 .custom-border-style {
