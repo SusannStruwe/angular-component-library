@@ -32,7 +32,6 @@ import { TableHeaderComponent } from '../components/table/table-header/table-hea
 import { filters, headerItems } from './util';
 import { TableStyle } from '../model/table-style.enum';
 
-
 /**
  * This is a wrapper component to give an overview oever all components
  *
@@ -67,7 +66,7 @@ import { TableStyle } from '../model/table-style.enum';
         BorderlessBtnComponent,
         FilledBtnComponent,
         CircleBtnComponent,
-        TableHeaderComponent,
+        TableHeaderComponent
     ],
     templateUrl: './overview-wrapper.component.html'
 })

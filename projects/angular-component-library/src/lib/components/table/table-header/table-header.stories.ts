@@ -7,7 +7,6 @@ import { TableStyle } from '../../../model/table-style.enum';
 
 const tableStyle: typeof TableStyle = TableStyle;
 
-
 const meta: Meta<TableHeaderComponent> = {
     title: 'Components/Table/Table Header',
     component: TableHeaderComponent,
@@ -24,13 +23,13 @@ A table header component.
         headerItemsTasks: { control: 'object' },
         searchFilters: { control: 'object' },
         multiSelectList: { control: 'object' },
-        showSearchLine: {control: 'boolean'},
-        tableStyle: {  
+        showSearchLine: { control: 'boolean' },
+        tableStyle: {
             control: {
                 type: 'select'
             },
             options: Object.keys(tableStyle),
-                mapping: TableStyle 
+            mapping: TableStyle
         },
         searchFilterChange: { action: 'search' },
         sortColumnChange: { action: 'sort' },
@@ -97,8 +96,6 @@ export const DarkStyle: Story = {
     }
 };
 
-
-
 export const WithoutSearchLine: Story = {
     args: {
         headerItemsTasks: headerItems,
@@ -115,4 +112,3 @@ export const WithoutSearchLine: Story = {
         }
     }
 };
-

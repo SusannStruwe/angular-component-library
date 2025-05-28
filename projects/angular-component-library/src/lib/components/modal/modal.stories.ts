@@ -1,18 +1,18 @@
-import { Meta, moduleMetadata, StoryObj } from "@storybook/angular";
-import { ModalComponent } from "./modal.component";
-import { ModalWrapperComponent } from "../../stories/modal-wrapper.component";
-import { ModalService } from "../../services/modal.service";
+import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
+import { ModalComponent } from './modal.component';
+import { ModalWrapperComponent } from '../../stories/modal-wrapper.component';
+import { ModalService } from '../../services/modal.service';
 
 export default {
     title: 'Components/Modal (via Service)',
     component: ModalWrapperComponent,
     decorators: [
         moduleMetadata({
-        imports: [ModalWrapperComponent, ModalComponent],
-        providers: [ModalService],
-        }),
+            imports: [ModalWrapperComponent, ModalComponent],
+            providers: [ModalService]
+        })
     ],
-        parameters: {
+    parameters: {
         docs: {
             description: {
                 component: `
@@ -113,5 +113,5 @@ A few examples are shown in the following:
 type Story = StoryObj<ModalWrapperComponent>;
 
 export const Sample: Story = {
-  args: {},
+    args: {}
 };

@@ -11,7 +11,6 @@ import { SearchFilter } from '../../../model/search-filter.model';
 import { SortColumnEvent } from '../../../model/sort-column-event.model';
 import { TableStyle } from '../../../model/table-style.enum';
 
-
 /**
  * Component to create and show table header
  *

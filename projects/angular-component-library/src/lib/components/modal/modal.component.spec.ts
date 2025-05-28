@@ -23,5 +23,4 @@ describe('ModalComponent', () => {
     it('should create modal component', () => {
         expect(component).toBeTruthy();
     });
-
 });

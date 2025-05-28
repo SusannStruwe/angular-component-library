@@ -60,12 +60,12 @@ const meta: Meta<SelectComponent> = {
             options: Object.keys(iconOptions),
             mapping: iconOptions
         },
-        classStyle: {  
+        classStyle: {
             control: {
                 type: 'select'
             },
             options: Object.keys(selectStyle),
-             mapping: SelectStyle 
+            mapping: SelectStyle
         },
         withBlankOption: { control: 'boolean' },
         withDeselect: { control: 'boolean' },
@@ -103,7 +103,6 @@ export const Sample: Story = {
         }
     }
 };
-
 
 export const Light: Story = {
     args: {

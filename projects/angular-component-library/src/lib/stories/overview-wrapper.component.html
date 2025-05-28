@@ -190,11 +190,11 @@
             <div class="flex-row">
                 <checkbox-component [(value)]="checked2"> </checkbox-component>
                 <p>Unchecked</p>
-            </div>         
+            </div>
         </div>
 
         <div class="flex-column" [style.min-width.px]="300">
-             <segmented-btn-component
+            <segmented-btn-component
                 [(activeBtn)]="activeBtn"
                 [btnArray]="btnArray"
                 [style.width]="'fit-content'"
@@ -240,7 +240,6 @@
             <date-range-picker-component></date-range-picker-component>
         </div>
         <div class="flex-column">
-        
             <div [style.margin-top.em]="1">
                 <badge-component
                     [label]="'Failed'"
@@ -352,18 +351,18 @@
     </div>
 
     <div class="grid-2-2" [style.column-gap.em]="1" [style.margin-top.em]="2">
-          <div class="flex-column">
-                <table-header-component
+        <div class="flex-column">
+            <table-header-component
                 [headerItemsTasks]="headerItems"
                 [searchFilters]="filters">
-                </table-header-component>
-            </div>
-            <div class="flex-column">
-                <table-header-component
-                    [tableStyle]="lightStyle"
-                    [headerItemsTasks]="headerItems"
-                    [searchFilters]="filters">
-                </table-header-component>
-          </div>
+            </table-header-component>
+        </div>
+        <div class="flex-column">
+            <table-header-component
+                [tableStyle]="lightStyle"
+                [headerItemsTasks]="headerItems"
+                [searchFilters]="filters">
+            </table-header-component>
+        </div>
     </div>
 </div>

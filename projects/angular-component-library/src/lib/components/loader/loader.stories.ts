@@ -56,7 +56,6 @@ export const Spinner: Story = {
     }
 };
 
-
 export const Spinner2: Story = {
     args: {
         label: 'Loading...',
@@ -66,7 +65,6 @@ export const Spinner2: Story = {
     }
 };
 
-
 export const DotLoader: Story = {
     args: {
         label: 'Loading...',
@@ -75,7 +73,6 @@ export const DotLoader: Story = {
         paddingTop: '0px'
     }
 };
-
 
 export const DotLoader2: Story = {
     args: {

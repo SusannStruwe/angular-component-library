@@ -1,6 +1,5 @@
- <div class="flex-column" [style.align-items]="'center'">
-
-     <filled-btn-component
+<div class="flex-column" [style.align-items]="'center'">
+    <filled-btn-component
         [ariaLabel]="'Modal 2'"
         (click)="openModal1()"
         [label]="'1. Modal with confirm btn'">
@@ -23,8 +22,7 @@
         (click)="openModal4()"
         [label]="'4. Modal with disabled delete and cancel btn'">
     </filled-btn-component>
-
- </div>
+</div>
 
 <modal-component
     [id]="modalId1"
@@ -36,7 +34,6 @@
         <p>Modal with confirm btn</p>
     </div>
 </modal-component>
-
 
 <modal-component
     [id]="modalId2"
@@ -50,7 +47,6 @@
         <p>Modal with confirm and cancel btn</p>
     </div>
 </modal-component>
-
 
 <modal-component
     [id]="modalId3"
@@ -78,9 +74,6 @@
     [cancelBtnTxt]="'Schließen'">
     <div>
         <p>Add some text to enable delete btn</p>
-       <input
-            class="custom-input"
-            type="text"
-            [(ngModel)]="inputText"/>
+        <input class="custom-input" type="text" [(ngModel)]="inputText" />
     </div>
 </modal-component>
