@@ -292,6 +292,15 @@ a {
     margin: auto;
 }
 
+.grid-2-2 {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    margin: auto;
+}
+
 .flex-column {
     position: relative;
     display: flex;

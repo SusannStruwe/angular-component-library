@@ -190,9 +190,11 @@
             <div class="flex-row">
                 <checkbox-component [(value)]="checked2"> </checkbox-component>
                 <p>Unchecked</p>
-            </div>
+            </div>         
+        </div>
 
-            <segmented-btn-component
+        <div class="flex-column" [style.min-width.px]="300">
+             <segmented-btn-component
                 [(activeBtn)]="activeBtn"
                 [btnArray]="btnArray"
                 [style.width]="'fit-content'"
@@ -203,13 +205,98 @@
                 <tag-btn-component [label]="'Filter 1'"> </tag-btn-component>
                 <tag-btn-component [label]="'Filter 2'"> </tag-btn-component>
             </div>
+        </div>
+    </div>
 
-            <div [style.margin-top.em]="1"></div>
+    <div class="grid-2-2-2" [style.column-gap.em]="1" [style.margin-top.em]="2">
+        <div class="flex-column">
+            <search-input-component
+                [classStyles]="'full-width'"
+                [placeholderText]="'Search...'">
+            </search-input-component>
+            <input-component
+                [input]="username"
+                [classStyles]="'full-width'"
+                [placeholderText]="'Username'"></input-component>
+            <input-component
+                [input]="username"
+                [placeholderText]="'Password'"
+                [type]="'password'"
+                [icon]="faEyeSlash">
+            </input-component>
+
+            <duration-input-component
+                [(seconds)]="duration"
+                [maxDuration]="31536000">
+            </duration-input-component>
+        </div>
+        <div class="flex-column">
+            <date-picker-component
+                [date]="selectedDate"></date-picker-component>
+
+            <date-time-picker-component
+                [(date)]="selectedDatetime"></date-time-picker-component>
+
+            <date-range-picker-component></date-range-picker-component>
+        </div>
+        <div class="flex-column">
+        
+            <div [style.margin-top.em]="1">
+                <badge-component
+                    [label]="'Failed'"
+                    [classStyle]="'failed'"
+                    [borderRadius]="15"
+                    [style.margin.em]="'0.5'">
+                </badge-component>
+                <badge-component
+                    [label]="'Running'"
+                    [classStyle]="'running'"
+                    [borderRadius]="15"
+                    [style.margin.em]="'0.5'">
+                </badge-component>
+                <badge-component
+                    [label]="'Success'"
+                    [classStyle]="'success'"
+                    [borderRadius]="15"
+                    [style.margin.em]="'0.5'">
+                </badge-component>
+                <badge-component
+                    [label]="'Pending'"
+                    [classStyle]="'pending'"
+                    [borderRadius]="15"
+                    [style.margin.em]="'0.5'">
+                </badge-component>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-2-2" [style.column-gap.em]="1" [style.margin-top.em]="2">
+        <div class="flex-column">
+            <alert-component
+                [(visibleState)]="showAlert"
+                [message]="'Attention, please note ...'"
+                [type]="alertTypes.ERROR">
+            </alert-component>
+            <alert-component
+                [(visibleState)]="showAlert"
+                [message]="'Attention, please note ...'"
+                [type]="alertTypes.WARNING">
+            </alert-component>
+            <alert-component
+                [(visibleState)]="showAlert"
+                [message]="'Please note ...'"
+                [type]="alertTypes.INFO">
+            </alert-component>
+            <alert-component
+                [(visibleState)]="showAlert"
+                [message]="'Data successfully processed..'"
+                [type]="alertTypes.SUCCESS">
+            </alert-component>
         </div>
 
-        <div class="flex-column" [style.min-width.px]="300">
+        <div class="flex-column">
             <select-component
-                [style.width]="'100%'"
+                [width]="'300px'"
                 [items]="selectItems"
                 [selectedItem]="selectedItem"
                 [withFilter]="true"
@@ -218,8 +305,8 @@
             </select-component>
 
             <select-component
-                [style.width]="'100%'"
-                [classStyle]="'scheduler'"
+                [width]="'300px'"
+                [classStyle]="selectStyle"
                 [faIconBefore]="faPalette"
                 [items]="selectItems"
                 [faIcon]="faChevronDown"
@@ -264,85 +351,19 @@
         </div>
     </div>
 
-    <div class="grid-2-2-2" [style.column-gap.em]="1" [style.margin-top.em]="2">
-        <div class="flex-column">
-            <alert-component
-                [(visibleState)]="showAlert"
-                [message]="'Attention, please note ...'"
-                [type]="alertTypes.ERROR">
-            </alert-component>
-            <alert-component
-                [(visibleState)]="showAlert"
-                [message]="'Attention, please note ...'"
-                [type]="alertTypes.WARNING">
-            </alert-component>
-            <alert-component
-                [(visibleState)]="showAlert"
-                [message]="'Please note ...'"
-                [type]="alertTypes.INFO">
-            </alert-component>
-            <alert-component
-                [(visibleState)]="showAlert"
-                [message]="'Data successfully processed..'"
-                [type]="alertTypes.SUCCESS">
-            </alert-component>
-        </div>
-        <div class="flex-column">
-            <search-input-component
-                [classStyles]="'full-width'"
-                [placeholderText]="'Search...'">
-            </search-input-component>
-            <input-component
-                [input]="username"
-                [classStyles]="'full-width'"
-                [placeholderText]="'Username'"></input-component>
-            <input-component
-                [input]="username"
-                [placeholderText]="'Password'"
-                [type]="'password'"
-                [icon]="faEyeSlash">
-            </input-component>
-
-            <duration-input-component
-                [(seconds)]="duration"
-                [maxDuration]="31536000">
-            </duration-input-component>
-        </div>
-        <div class="flex-column">
-            <date-picker-component
-                [date]="selectedDate"></date-picker-component>
-
-            <date-time-picker-component
-                [(date)]="selectedDatetime"></date-time-picker-component>
-
-            <date-range-picker-component></date-range-picker-component>
-
-            <div [style.margin-top.em]="1">
-                <badge-component
-                    [label]="'Failed'"
-                    [classStyle]="'failed'"
-                    [borderRadius]="15"
-                    [style.margin.em]="'0.5'">
-                </badge-component>
-                <badge-component
-                    [label]="'Running'"
-                    [classStyle]="'running'"
-                    [borderRadius]="15"
-                    [style.margin.em]="'0.5'">
-                </badge-component>
-                <badge-component
-                    [label]="'Success'"
-                    [classStyle]="'success'"
-                    [borderRadius]="15"
-                    [style.margin.em]="'0.5'">
-                </badge-component>
-                <badge-component
-                    [label]="'Pending'"
-                    [classStyle]="'pending'"
-                    [borderRadius]="15"
-                    [style.margin.em]="'0.5'">
-                </badge-component>
+    <div class="grid-2-2" [style.column-gap.em]="1" [style.margin-top.em]="2">
+          <div class="flex-column">
+                <table-header-component
+                [headerItemsTasks]="headerItems"
+                [searchFilters]="filters">
+                </table-header-component>
             </div>
-        </div>
+            <div class="flex-column">
+                <table-header-component
+                    [tableStyle]="lightStyle"
+                    [headerItemsTasks]="headerItems"
+                    [searchFilters]="filters">
+                </table-header-component>
+          </div>
     </div>
 </div>

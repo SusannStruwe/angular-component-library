@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { TranslateModule } from '@ngx-translate/core';
@@ -27,6 +27,11 @@ import { Icons } from '../model/icons';
 import { SegmentedBtnItem } from '../model/segmented-btn.model';
 import { SelectItem } from '../model/select-item.model';
 import { AlertType } from '../model/alert-type.enum';
+import { SelectStyle } from '../model/select-style.enum';
+import { TableHeaderComponent } from '../components/table/table-header/table-header.component';
+import { filters, headerItems } from './util';
+import { TableStyle } from '../model/table-style.enum';
+
 
 /**
  * This is a wrapper component to give an overview oever all components
@@ -61,7 +66,8 @@ import { AlertType } from '../model/alert-type.enum';
         BorderedBtnComponent,
         BorderlessBtnComponent,
         FilledBtnComponent,
-        CircleBtnComponent
+        CircleBtnComponent,
+        TableHeaderComponent,
     ],
     templateUrl: './overview-wrapper.component.html'
 })
@@ -96,6 +102,8 @@ export class OverviewWrapperComponent {
     showAlert = true;
     alertTypes: typeof AlertType = AlertType;
 
+    selectStyle: SelectStyle = SelectStyle.SCHEDULER;
+
     // inputs
     duration = 7400;
     username = '';
@@ -107,4 +115,9 @@ export class OverviewWrapperComponent {
     // checkbox
     checked = true;
     checked2 = false;
+
+    //table header
+    headerItems = headerItems;
+    filters = filters;
+    lightStyle = TableStyle.LIGHT;
 }

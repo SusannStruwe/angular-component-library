@@ -18,7 +18,6 @@ const meta: Meta<LoaderComponent> = {
             }
         }
     },
-    tags: ['autodocs'],
     argTypes: {
         label: { control: 'text', value: '' },
         loaderStyle: {
@@ -41,17 +40,48 @@ const meta: Meta<LoaderComponent> = {
     },
     args: {
         paddingTop: '20%'
-    }
+    },
+    tags: ['autodocs']
 };
 export default meta;
 
 type Story = StoryObj<LoaderComponent>;
 
-export const Sample: Story = {
+export const Spinner: Story = {
     args: {
         label: 'Loading...',
         animation: AnimationStyle.EASE,
         loaderStyle: LoaderStyle.SPINNER,
+        paddingTop: '0px'
+    }
+};
+
+
+export const Spinner2: Story = {
+    args: {
+        label: 'Loading...',
+        animation: AnimationStyle.EASE,
+        loaderStyle: LoaderStyle.SPINNER2,
+        paddingTop: '0px'
+    }
+};
+
+
+export const DotLoader: Story = {
+    args: {
+        label: 'Loading...',
+        animation: AnimationStyle.EASE,
+        loaderStyle: LoaderStyle.DOT_LOADER,
+        paddingTop: '0px'
+    }
+};
+
+
+export const DotLoader2: Story = {
+    args: {
+        label: 'Loading...',
+        animation: AnimationStyle.EASE,
+        loaderStyle: LoaderStyle.DOT_LOADER2,
         paddingTop: '0px'
     }
 };
