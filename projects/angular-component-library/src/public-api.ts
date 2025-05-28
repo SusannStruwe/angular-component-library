@@ -63,6 +63,8 @@ export * from './lib/model/segmented-btn.model';
 export * from './lib/model/column-header-item.model';
 export * from './lib/model/sort-column-event.model';
 export * from './lib/model/search-filter.model';
+export * from './lib/model/select-style.enum';
+export * from './lib/model/table-style.enum';
 
 export * from './lib/directives/click-outside.directive';
 export * from './lib/directives/drag-drop-file.directive';

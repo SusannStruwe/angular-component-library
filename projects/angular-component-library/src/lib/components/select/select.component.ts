@@ -18,13 +18,7 @@ import { cloneDeep } from 'lodash';
 import { SearchInputComponent } from '../search-input/search-input.component';
 import { FormsModule } from '@angular/forms';
 import { Icons } from '../../model/icons';
-
-export enum SelectStyle {
-    LIGHT = 'light',
-    SCHEDULER = 'scheduler',
-    SIDEBAR = 'sidebar',
-}
-
+import { SelectStyle } from '../../model/select-style.enum';
 
 /**
  * Component to create and show  select

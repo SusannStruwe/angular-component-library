@@ -17,7 +17,8 @@ export const bgColors: string[] = [
 export const compColors: string[] = [
     '--text-color',
     '--fa-icon-color',
-    '--table-header-color',
+    '--table-light-color',
+    '--table-dark-color',
     '--toggle-btn-background',
     '--tooltip-background',
     '--modal-background',

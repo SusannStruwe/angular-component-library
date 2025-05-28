@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/angular';
-import { SelectComponent, SelectStyle } from './select.component';
+import { SelectComponent } from './select.component';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import {
     faCheck,
@@ -12,6 +12,7 @@ import {
 import { Icons } from '../../model/icons';
 import { SelectItem } from '../../model/select-item.model';
 import { fn } from '@storybook/test';
+import { SelectStyle } from '../../model/select-style.enum';
 
 const iconOptions: Record<string, IconDefinition> = {
     faChevronDown: faChevronDown,

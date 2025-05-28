@@ -91,6 +91,7 @@ h4 {
     .flex-item {
         flex: 1 1 0;
         width: 0;
+        min-width: 75px;
         // overflow: hidden;
     }
 
@@ -118,10 +119,61 @@ h4 {
     min-width: 60px;
     border: none;
     width: 100%;
-    border-bottom: 1px solid var(--border-color);
+    border: 2px solid transparent;
+}
 
-    &:focus {
-        border: none;
-        border-bottom: var(--border-width) solid var(--accent-color);
+
+.light {
+
+    .sort {
+        h2 {
+            color: var(--text-color);
+        }
+
+        fa-icon {
+             color: var(--text-color);
+        }
+    }
+    
+    .flex-row {
+
+        &:first-of-type {
+            background-color: var(--table-light-color);
+        }
+    }
+}
+
+
+.dark {
+
+    .sort {
+        h2 {
+            color: var(--fa-icon-color);
+        }
+
+        fa-icon {
+             color: var(--fa-icon-color);
+        }
+    }
+    
+    .flex-row {
+
+        &:first-of-type {
+            background-color: var(--table-dark-color);
+        }
+    }
+}
+
+/************************************************
+Media query to add hover only on device which support hover
+*********************************************/
+
+@media (hover: hover) {
+    .search-input  {
+
+        &:hover, &:focus, &:focus-visible {
+            outline:none;
+            border: 2px solid var(--accent-color);
+        }
     }
 }
