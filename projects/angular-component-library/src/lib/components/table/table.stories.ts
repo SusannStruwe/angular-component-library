@@ -9,13 +9,16 @@ import {
     multiSelectList,
     contentItems
 } from '../../stories/util';
+import { TableStyle } from '../../model/table-style.enum';
 
-const defaultTemplateMock = `   <table-component [style.width]="'100%'" [scrollbarWidth]="15">
+const defaultTemplateMock = `   <table-component [style.width]="'600px'" [scrollbarWidth]="15">
         <div header>
             <table-header-component 
                 [headerItemsTasks]="items" 
                 [searchFilters]="filters" 
                 [multiSelectList]="multiSelectList" 
+                [showSearchLine]="showSearchLine"
+                [tableStyle]="tableStyle"
                 (searchFilterChange)="searchFilterChange($event)" 
                 (selectFilterChange)="selectFilterChange($event)"
                 (sortColumnChange)="sortColumnChange($event)">
@@ -79,6 +82,35 @@ export const Sample: Story = {
             filters: filters,
             multiSelectList: multiSelectList,
             contentItems: contentItems,
+            showSearchLine: true,
+            searchFilterChange: (event: any) => {
+                action('filter')(event);
+            },
+            sortColumnChange: (event: any) => {
+                action('sort')(event);
+            },
+            selectFilterChange: (event: any) => {
+                action('select')(event);
+            },
+            tableItemSelected: (event: any) => {
+                action('selected row')(event);
+            }
+        },
+        template: defaultTemplateMock
+    })
+};
+
+
+export const TableLightWithoutSearchLine: Story = {
+    render: (args) => ({
+        props: {
+            ...args,
+            items: headerItems,
+            filters: filters,
+            multiSelectList: multiSelectList,
+            contentItems: contentItems,
+            showSearchLine: false,
+            tableStyle: TableStyle.LIGHT,
             searchFilterChange: (event: any) => {
                 action('filter')(event);
             },

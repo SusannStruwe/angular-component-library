@@ -58,12 +58,13 @@ h4 {
 }
 
 
-.flex-row {
+.table-row {
     display: flex;
     flex-direction: row;
     position: relative;
     top: 0;
     left: 0;
+    column-gap: 0;
 
     & > div {
         box-sizing: border-box;
@@ -92,7 +93,6 @@ h4 {
         flex: 1 1 0;
         width: 0;
         min-width: 75px;
-        // overflow: hidden;
     }
 
     &:first-of-type {
@@ -103,8 +103,6 @@ h4 {
         border-bottom: 1px solid var(--border-color);
 
         & > div {
-            border-right: 1px solid var(--border-color);
-
             &:last-of-type {
                 border-right: none;
             }
@@ -135,7 +133,7 @@ h4 {
         }
     }
     
-    .flex-row {
+    .table-row {
 
         &:first-of-type {
             background-color: var(--table-light-color);
@@ -156,7 +154,7 @@ h4 {
         }
     }
     
-    .flex-row {
+    .table-row {
 
         &:first-of-type {
             background-color: var(--table-dark-color);
