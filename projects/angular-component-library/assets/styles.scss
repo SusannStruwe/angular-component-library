@@ -115,7 +115,7 @@ body {
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
 
-    --font-size: 15px;
+    --font-size: 17px;
     --ic-font-size: 1.2em;
 
     /**
@@ -185,7 +185,7 @@ html,
 body {
     text-rendering: optimizeLegibility;
     font-family: var(--font-family);
-    font-size: 15px;
+    font-size: var(--font-size);
     line-height: normal;
     font-weight: var(--font-weight-light);
     margin: 0;

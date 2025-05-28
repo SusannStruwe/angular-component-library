@@ -2,7 +2,8 @@ import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 import { AlertType } from '../../model/alert-type.enum';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { AlertComponent } from './alert.component';
-import { fn } from '@storybook/test';
+import { fn, userEvent, waitFor, within, expect } from '@storybook/test';
+
 
 const types: typeof AlertType = AlertType;
 
@@ -58,7 +59,17 @@ export const InfoAlert: Story = {
         visibleState: true,
         navigationLink: 'pailot.com',
         navigationLinkLabel: 'Further informations under pailto.com '
-    }
+    },
+    play: async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
+
+        const closeIcon = await canvas.findByTestId('close-alert');
+        await userEvent.click(closeIcon);
+
+        await waitFor(() => {
+            expect(canvas.queryByTestId('close-alert')).toBeNull();
+        });
+    },
 };
 
 export const ErrorWithLink: Story = {

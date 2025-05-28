@@ -128,7 +128,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        tableStyle: TableStyle.DARK,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
+                "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        tableStyle: TableStyle.DARK,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
             },
             {
                 "name": "defaultTemplateMock",
@@ -148,7 +148,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "`   <table-component [style.width]=\"'600px'\" [scrollbarWidth]=\"15\">\r\n        <div header>\r\n            <table-header-component \r\n                [headerItemsTasks]=\"items\" \r\n                [searchFilters]=\"filters\" \r\n                [multiSelectList]=\"multiSelectList\" \r\n                [showSearchLine]=\"showSearchLine\"\r\n                [tableStyle]=\"tableStyle\"\r\n                (searchFilterChange)=\"searchFilterChange($event)\" \r\n                (selectFilterChange)=\"selectFilterChange($event)\"\r\n                (sortColumnChange)=\"sortColumnChange($event)\">\r\n            </table-header-component>\r\n        </div>\r\n        <div content>\r\n            <table-content-component\r\n                [tableItems]=\"contentItems\" \r\n                (tableItemSelected)=\"tableItemSelected($event)\">\r\n            </table-content-component>\r\n        </div>\r\n    </table-component>\r\n `"
+                "defaultValue": "`   <table-component [style.width]=\"'600px'\" [scrollbarWidth]=\"15\">\n        <div header>\n            <table-header-component \n                [headerItemsTasks]=\"items\" \n                [searchFilters]=\"filters\" \n                [multiSelectList]=\"multiSelectList\" \n                [showSearchLine]=\"showSearchLine\"\n                [tableStyle]=\"tableStyle\"\n                (searchFilterChange)=\"searchFilterChange($event)\" \n                (selectFilterChange)=\"selectFilterChange($event)\"\n                (sortColumnChange)=\"sortColumnChange($event)\">\n            </table-header-component>\n        </div>\n        <div content>\n            <table-content-component\n                [tableItems]=\"contentItems\" \n                (tableItemSelected)=\"tableItemSelected($event)\">\n            </table-content-component>\n        </div>\n    </table-component>\n `"
             },
             {
                 "name": "Delete",
@@ -308,7 +308,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.DOT_LOADER,\r\n        paddingTop: '0px'\r\n    }\r\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Loading...',\n        animation: AnimationStyle.EASE,\n        loaderStyle: LoaderStyle.DOT_LOADER,\n        paddingTop: '0px'\n    }\n}"
             },
             {
                 "name": "DotLoader2",
@@ -318,7 +318,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.DOT_LOADER2,\r\n        paddingTop: '0px'\r\n    }\r\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Loading...',\n        animation: AnimationStyle.EASE,\n        loaderStyle: LoaderStyle.DOT_LOADER2,\n        paddingTop: '0px'\n    }\n}"
             },
             {
                 "name": "ErrorWithLink",
@@ -488,7 +488,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
-                "defaultValue": "{\r\n    faChevronDown: faChevronDown,\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfoCircle: faInfoCircle,\r\n    faSpinner: faSpinner,\r\n    faTrash: faTrash\r\n}"
+                "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
             },
             {
                 "name": "iconTemplateMock",
@@ -508,7 +508,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        title: 'Info Alert',\n        message: 'Info  Message',\n        type: AlertType.INFO,\n        visibleState: true,\n        navigationLink: 'pailot.com',\n        navigationLinkLabel: 'Further informations under pailto.com '\n    }\n}"
+                "defaultValue": "{\n    args: {\n        title: 'Info Alert',\n        message: 'Info  Message',\n        type: AlertType.INFO,\n        visibleState: true,\n        navigationLink: 'pailot.com',\n        navigationLinkLabel: 'Further informations under pailto.com '\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const closeIcon = await canvas.findByTestId('close-alert');\n        await userEvent.click(closeIcon);\n\n        await waitFor(() => {\n            expect(canvas.queryByTestId('close-alert')).toBeNull();\n        });\n    },\n}"
             },
             {
                 "name": "Inverted",
@@ -538,7 +538,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    args: {\r\n        label: 'Label: ',\r\n        items: selectItems,\r\n        selectedItem: selectedItem,\r\n        filterPlaceholder: 'Select...',\r\n        show: true,\r\n        classStyle: SelectStyle.LIGHT,\r\n        width: '600px',\r\n        menuHeight: '100px'\r\n    },\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                story: 'Component to select items'\r\n            }\r\n        }\r\n    }\r\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true,\n        classStyle: SelectStyle.LIGHT,\n        width: '600px',\n        menuHeight: '100px'\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
             },
             {
                 "name": "LightStyle",
@@ -548,7 +548,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        tableStyle: TableStyle.LIGHT,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
+                "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        tableStyle: TableStyle.LIGHT,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
             },
             {
                 "name": "loaderStyles",
@@ -628,7 +628,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<OverviewWrapperComponent>",
-                "defaultValue": "{\r\n    title: 'Overview',\r\n    component: OverviewWrapperComponent,\r\n    tags: ['autodocs']\r\n}"
+                "defaultValue": "{\n    title: 'Overview',\n    component: OverviewWrapperComponent,\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -798,7 +798,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<LoaderComponent>",
-                "defaultValue": "{\r\n    title: 'Components/Loader',\r\n    component: LoaderComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\n A loader component. \r\n                 `\r\n            }\r\n        }\r\n    },\r\n    argTypes: {\r\n        label: { control: 'text', value: '' },\r\n        loaderStyle: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(loaderStyles),\r\n            mapping: LoaderStyle,\r\n            value: LoaderStyle.DOT_LOADER\r\n        },\r\n        animation: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(animationStyles),\r\n            mapping: AnimationStyle,\r\n            value: AnimationStyle.LINEAR\r\n        },\r\n        paddingTop: { control: 'text' }\r\n    },\r\n    args: {\r\n        paddingTop: '20%'\r\n    },\r\n    tags: ['autodocs']\r\n}"
+                "defaultValue": "{\n    title: 'Components/Loader',\n    component: LoaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A loader component. \n                 `\n            }\n        }\n    },\n    argTypes: {\n        label: { control: 'text', value: '' },\n        loaderStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(loaderStyles),\n            mapping: LoaderStyle,\n            value: LoaderStyle.DOT_LOADER\n        },\n        animation: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(animationStyles),\n            mapping: AnimationStyle,\n            value: AnimationStyle.LINEAR\n        },\n        paddingTop: { control: 'text' }\n    },\n    args: {\n        paddingTop: '20%'\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -868,7 +868,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<SelectComponent>",
-                "defaultValue": "{\r\n    title: 'Components/Select/ Single',\r\n    component: SelectComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                story: 'Component to select items.'\r\n            }\r\n        }\r\n    },\r\n    argTypes: {\r\n        items: { control: 'object' },\r\n        selectedItem: { control: 'object' },\r\n        label: { control: 'text' },\r\n        faIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        faIconBefore: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        classStyle: {  \r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(selectStyle),\r\n             mapping: SelectStyle \r\n        },\r\n        withBlankOption: { control: 'boolean' },\r\n        withDeselect: { control: 'boolean' },\r\n        withFilter: { control: 'boolean' },\r\n        filterPlaceholder: { control: 'text' },\r\n        show: { control: 'boolean' },\r\n        width: { control: 'text' },\r\n        menuHeight: { control: 'text' },\r\n        showChange: { action: 'show' },\r\n        itemSelected: { action: 'selected' }\r\n    },\r\n    args: {\r\n        showChange: fn(),\r\n        itemSelected: fn()\r\n    },\r\n    tags: ['autodocs']\r\n}"
+                "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(selectStyle),\n            mapping: SelectStyle\n        },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        width: { control: 'text' },\n        menuHeight: { control: 'text' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -878,7 +878,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TableComponent>",
-                "defaultValue": "{\r\n    title: 'Components/Table/ Table',\r\n    component: TableComponent,\r\n    decorators: [\r\n        moduleMetadata({\r\n            imports: [\r\n                TableComponent,\r\n                TableHeaderComponent,\r\n                TableContentComponent\r\n            ]\r\n        })\r\n    ],\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\nA table component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\r\n\r\nYou can also use the table component with a \\`table-header-component\\` and a \\`table-content-component\\`. \r\nTo use it you have to create the following items:\r\n\r\ntable-header-component\r\n- headerItemsTasks from type \\`ColumnHeaderItem\\`\r\n- searchFilters from type  \\`SearchFilter\\`\r\n- multiSelectList from type \\`{ [key: string]: TableColumnType[]}\\`\r\n\r\ntable-content-component\r\n- tableItems should have a parameter called \\`columns\\` from  type \\`Map<string, TableColumnType>)\\`\r\n\r\nNote: Every logic to sort the content has to be implemented by yourself. You have also to set scrollbarWidth, if table table can be scrolled.\r\n\r\n                `\r\n            }\r\n        }\r\n    },\r\n    tags: ['autodocs']\r\n}"
+                "defaultValue": "{\n    title: 'Components/Table/ Table',\n    component: TableComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [\n                TableComponent,\n                TableHeaderComponent,\n                TableContentComponent\n            ]\n        })\n    ],\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\nYou can also use the table component with a \\`table-header-component\\` and a \\`table-content-component\\`. \nTo use it you have to create the following items:\n\ntable-header-component\n- headerItemsTasks from type \\`ColumnHeaderItem\\`\n- searchFilters from type  \\`SearchFilter\\`\n- multiSelectList from type \\`{ [key: string]: TableColumnType[]}\\`\n\ntable-content-component\n- tableItems should have a parameter called \\`columns\\` from  type \\`Map<string, TableColumnType>)\\`\n\nNote: Every logic to sort the content has to be implemented by yourself. You have also to set scrollbarWidth, if table table can be scrolled.\n\n                `\n            }\n        }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -938,7 +938,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TableHeaderComponent>",
-                "defaultValue": "{\r\n    title: 'Components/Table/Table Header',\r\n    component: TableHeaderComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\nA table header component.\r\n                `\r\n            }\r\n        }\r\n    },\r\n    argTypes: {\r\n        headerItemsTasks: { control: 'object' },\r\n        searchFilters: { control: 'object' },\r\n        multiSelectList: { control: 'object' },\r\n        showSearchLine: {control: 'boolean'},\r\n        tableStyle: {  \r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(tableStyle),\r\n                mapping: TableStyle \r\n        },\r\n        searchFilterChange: { action: 'search' },\r\n        sortColumnChange: { action: 'sort' },\r\n        selectFilterChange: { action: 'multi select' }\r\n    },\r\n    args: {\r\n        searchFilterChange: fn(),\r\n        sortColumnChange: fn(),\r\n        selectFilterChange: fn()\r\n    },\r\n    tags: ['autodocs']\r\n}"
+                "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        showSearchLine: { control: 'boolean' },\n        tableStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(tableStyle),\n            mapping: TableStyle\n        },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "Off",
@@ -968,7 +968,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        }\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                {\n                    provide: TranslateLoader,\n                    useClass: FakeLoader\n                },\n                {\n                    provide: TranslateCompiler,\n                    useClass: TranslateFakeCompiler\n                },\n                {\n                    provide: TranslateParser,\n                    useClass: TranslateDefaultParser\n                },\n                {\n                    provide: MissingTranslationHandler,\n                    useValue: null\n                },\n                {\n                    provide: USE_DEFAULT_LANG,\n                    useValue: true\n                },\n                {\n                    provide: DEFAULT_LANGUAGE,\n                    useValue: true\n                },\n                {\n                    provide: USE_EXTEND,\n                    useValue: false\n                },\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\n                TranslateStore,\n                {\n                    provide: APP_INITIALIZER,\n                    useFactory: (translate: TranslateService) => () => {\n                        translate.setDefaultLang('de');\n                        translate.use('de');\n                        return Promise.resolve();\n                    },\n                    deps: [TranslateService],\n                    multi: true\n                }\n            ]\n        })\n    ]\n}"
+                "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                * Opt in to running WCAG 2.x AAA rules\n                * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice', 'wcag2aaa'],\n            },\n        },\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                {\n                    provide: TranslateLoader,\n                    useClass: FakeLoader\n                },\n                {\n                    provide: TranslateCompiler,\n                    useClass: TranslateFakeCompiler\n                },\n                {\n                    provide: TranslateParser,\n                    useClass: TranslateDefaultParser\n                },\n                {\n                    provide: MissingTranslationHandler,\n                    useValue: null\n                },\n                {\n                    provide: USE_DEFAULT_LANG,\n                    useValue: true\n                },\n                {\n                    provide: DEFAULT_LANGUAGE,\n                    useValue: true\n                },\n                {\n                    provide: USE_EXTEND,\n                    useValue: false\n                },\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\n                TranslateStore,\n                {\n                    provide: APP_INITIALIZER,\n                    useFactory: (translate: TranslateService) => () => {\n                        translate.setDefaultLang('de');\n                        translate.use('de');\n                        return Promise.resolve();\n                    },\n                    deps: [TranslateService],\n                    multi: true\n                }\n            ]\n        })\n    ]\n}"
             },
             {
                 "name": "Primary",
@@ -1168,7 +1168,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {},\r\n}"
+                "defaultValue": "{\n    args: {}\n}"
             },
             {
                 "name": "Sample",
@@ -1238,7 +1238,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    args: {\r\n        label: 'Label: ',\r\n        items: selectItems,\r\n        selectedItem: selectedItem,\r\n        filterPlaceholder: 'Select...',\r\n        show: true\r\n    },\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                story: 'Component to select items'\r\n            }\r\n        }\r\n    }\r\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1248,7 +1248,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            items: headerItems,\r\n            filters: filters,\r\n            multiSelectList: multiSelectList,\r\n            contentItems: contentItems,\r\n            showSearchLine: true,\r\n            searchFilterChange: (event: any) => {\r\n                action('filter')(event);\r\n            },\r\n            sortColumnChange: (event: any) => {\r\n                action('sort')(event);\r\n            },\r\n            selectFilterChange: (event: any) => {\r\n                action('select')(event);\r\n            },\r\n            tableItemSelected: (event: any) => {\r\n                action('selected row')(event);\r\n            }\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            items: headerItems,\n            filters: filters,\n            multiSelectList: multiSelectList,\n            contentItems: contentItems,\n            showSearchLine: true,\n            searchFilterChange: (event: any) => {\n                action('filter')(event);\n            },\n            sortColumnChange: (event: any) => {\n                action('sort')(event);\n            },\n            selectFilterChange: (event: any) => {\n                action('select')(event);\n            },\n            tableItemSelected: (event: any) => {\n                action('selected row')(event);\n            }\n        },\n        template: defaultTemplateMock\n    })\n}"
             },
             {
                 "name": "Sample",
@@ -1288,7 +1288,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
+                "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
             },
             {
                 "name": "Secondary",
@@ -1328,7 +1328,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\r\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\r\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\r\n    new SelectItem('select3')\r\n]"
+                "defaultValue": "[\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\n    new SelectItem('select3')\n]"
             },
             {
                 "name": "selectStyle",
@@ -1368,7 +1368,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.SPINNER,\r\n        paddingTop: '0px'\r\n    }\r\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Loading...',\n        animation: AnimationStyle.EASE,\n        loaderStyle: LoaderStyle.SPINNER,\n        paddingTop: '0px'\n    }\n}"
             },
             {
                 "name": "Spinner2",
@@ -1378,7 +1378,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.SPINNER2,\r\n        paddingTop: '0px'\r\n    }\r\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Loading...',\n        animation: AnimationStyle.EASE,\n        loaderStyle: LoaderStyle.SPINNER2,\n        paddingTop: '0px'\n    }\n}"
             },
             {
                 "name": "Spinning",
@@ -1448,7 +1448,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            items: headerItems,\r\n            filters: filters,\r\n            multiSelectList: multiSelectList,\r\n            contentItems: contentItems,\r\n            showSearchLine: false,\r\n            tableStyle: TableStyle.LIGHT,\r\n            searchFilterChange: (event: any) => {\r\n                action('filter')(event);\r\n            },\r\n            sortColumnChange: (event: any) => {\r\n                action('sort')(event);\r\n            },\r\n            selectFilterChange: (event: any) => {\r\n                action('select')(event);\r\n            },\r\n            tableItemSelected: (event: any) => {\r\n                action('selected row')(event);\r\n            }\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            items: headerItems,\n            filters: filters,\n            multiSelectList: multiSelectList,\n            contentItems: contentItems,\n            showSearchLine: false,\n            tableStyle: TableStyle.LIGHT,\n            searchFilterChange: (event: any) => {\n                action('filter')(event);\n            },\n            sortColumnChange: (event: any) => {\n                action('sort')(event);\n            },\n            selectFilterChange: (event: any) => {\n                action('select')(event);\n            },\n            tableItemSelected: (event: any) => {\n                action('selected row')(event);\n            }\n        },\n        template: defaultTemplateMock\n    })\n}"
             },
             {
                 "name": "tableStyle",
@@ -1628,7 +1628,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        showSearchLine: false,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
+                "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        showSearchLine: false,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
             }
         ],
         "functions": [],
@@ -2571,7 +2571,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.DOT_LOADER,\r\n        paddingTop: '0px'\r\n    }\r\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Loading...',\n        animation: AnimationStyle.EASE,\n        loaderStyle: LoaderStyle.DOT_LOADER,\n        paddingTop: '0px'\n    }\n}"
                 },
                 {
                     "name": "DotLoader2",
@@ -2581,7 +2581,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.DOT_LOADER2,\r\n        paddingTop: '0px'\r\n    }\r\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Loading...',\n        animation: AnimationStyle.EASE,\n        loaderStyle: LoaderStyle.DOT_LOADER2,\n        paddingTop: '0px'\n    }\n}"
                 },
                 {
                     "name": "loaderStyles",
@@ -2601,7 +2601,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<LoaderComponent>",
-                    "defaultValue": "{\r\n    title: 'Components/Loader',\r\n    component: LoaderComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\n A loader component. \r\n                 `\r\n            }\r\n        }\r\n    },\r\n    argTypes: {\r\n        label: { control: 'text', value: '' },\r\n        loaderStyle: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(loaderStyles),\r\n            mapping: LoaderStyle,\r\n            value: LoaderStyle.DOT_LOADER\r\n        },\r\n        animation: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(animationStyles),\r\n            mapping: AnimationStyle,\r\n            value: AnimationStyle.LINEAR\r\n        },\r\n        paddingTop: { control: 'text' }\r\n    },\r\n    args: {\r\n        paddingTop: '20%'\r\n    },\r\n    tags: ['autodocs']\r\n}"
+                    "defaultValue": "{\n    title: 'Components/Loader',\n    component: LoaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A loader component. \n                 `\n            }\n        }\n    },\n    argTypes: {\n        label: { control: 'text', value: '' },\n        loaderStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(loaderStyles),\n            mapping: LoaderStyle,\n            value: LoaderStyle.DOT_LOADER\n        },\n        animation: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(animationStyles),\n            mapping: AnimationStyle,\n            value: AnimationStyle.LINEAR\n        },\n        paddingTop: { control: 'text' }\n    },\n    args: {\n        paddingTop: '20%'\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Spinner",
@@ -2611,7 +2611,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.SPINNER,\r\n        paddingTop: '0px'\r\n    }\r\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Loading...',\n        animation: AnimationStyle.EASE,\n        loaderStyle: LoaderStyle.SPINNER,\n        paddingTop: '0px'\n    }\n}"
                 },
                 {
                     "name": "Spinner2",
@@ -2621,7 +2621,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    args: {\r\n        label: 'Loading...',\r\n        animation: AnimationStyle.EASE,\r\n        loaderStyle: LoaderStyle.SPINNER2,\r\n        paddingTop: '0px'\r\n    }\r\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Loading...',\n        animation: AnimationStyle.EASE,\n        loaderStyle: LoaderStyle.SPINNER2,\n        paddingTop: '0px'\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
@@ -2695,7 +2695,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        tableStyle: TableStyle.DARK,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
+                    "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        tableStyle: TableStyle.DARK,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
                 },
                 {
                     "name": "LightStyle",
@@ -2705,7 +2705,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        tableStyle: TableStyle.LIGHT,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
+                    "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        tableStyle: TableStyle.LIGHT,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
                 },
                 {
                     "name": "meta",
@@ -2715,7 +2715,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TableHeaderComponent>",
-                    "defaultValue": "{\r\n    title: 'Components/Table/Table Header',\r\n    component: TableHeaderComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\nA table header component.\r\n                `\r\n            }\r\n        }\r\n    },\r\n    argTypes: {\r\n        headerItemsTasks: { control: 'object' },\r\n        searchFilters: { control: 'object' },\r\n        multiSelectList: { control: 'object' },\r\n        showSearchLine: {control: 'boolean'},\r\n        tableStyle: {  \r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(tableStyle),\r\n                mapping: TableStyle \r\n        },\r\n        searchFilterChange: { action: 'search' },\r\n        sortColumnChange: { action: 'sort' },\r\n        selectFilterChange: { action: 'multi select' }\r\n    },\r\n    args: {\r\n        searchFilterChange: fn(),\r\n        sortColumnChange: fn(),\r\n        selectFilterChange: fn()\r\n    },\r\n    tags: ['autodocs']\r\n}"
+                    "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        showSearchLine: { control: 'boolean' },\n        tableStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(tableStyle),\n            mapping: TableStyle\n        },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Sample",
@@ -2725,7 +2725,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
+                    "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
                 },
                 {
                     "name": "tableStyle",
@@ -2745,7 +2745,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    args: {\r\n        headerItemsTasks: headerItems,\r\n        searchFilters: filters,\r\n        showSearchLine: false,\r\n        searchFilterChange: (event: any) => {\r\n            action('filter')(event);\r\n        },\r\n        sortColumnChange: (event: any) => {\r\n            action('sort')(event);\r\n        },\r\n        selectFilterChange: (event: any) => {\r\n            action('select')(event);\r\n        }\r\n    }\r\n}"
+                    "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        showSearchLine: false,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts": [
@@ -2839,7 +2839,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "`   <table-component [style.width]=\"'600px'\" [scrollbarWidth]=\"15\">\r\n        <div header>\r\n            <table-header-component \r\n                [headerItemsTasks]=\"items\" \r\n                [searchFilters]=\"filters\" \r\n                [multiSelectList]=\"multiSelectList\" \r\n                [showSearchLine]=\"showSearchLine\"\r\n                [tableStyle]=\"tableStyle\"\r\n                (searchFilterChange)=\"searchFilterChange($event)\" \r\n                (selectFilterChange)=\"selectFilterChange($event)\"\r\n                (sortColumnChange)=\"sortColumnChange($event)\">\r\n            </table-header-component>\r\n        </div>\r\n        <div content>\r\n            <table-content-component\r\n                [tableItems]=\"contentItems\" \r\n                (tableItemSelected)=\"tableItemSelected($event)\">\r\n            </table-content-component>\r\n        </div>\r\n    </table-component>\r\n `"
+                    "defaultValue": "`   <table-component [style.width]=\"'600px'\" [scrollbarWidth]=\"15\">\n        <div header>\n            <table-header-component \n                [headerItemsTasks]=\"items\" \n                [searchFilters]=\"filters\" \n                [multiSelectList]=\"multiSelectList\" \n                [showSearchLine]=\"showSearchLine\"\n                [tableStyle]=\"tableStyle\"\n                (searchFilterChange)=\"searchFilterChange($event)\" \n                (selectFilterChange)=\"selectFilterChange($event)\"\n                (sortColumnChange)=\"sortColumnChange($event)\">\n            </table-header-component>\n        </div>\n        <div content>\n            <table-content-component\n                [tableItems]=\"contentItems\" \n                (tableItemSelected)=\"tableItemSelected($event)\">\n            </table-content-component>\n        </div>\n    </table-component>\n `"
                 },
                 {
                     "name": "meta",
@@ -2849,7 +2849,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TableComponent>",
-                    "defaultValue": "{\r\n    title: 'Components/Table/ Table',\r\n    component: TableComponent,\r\n    decorators: [\r\n        moduleMetadata({\r\n            imports: [\r\n                TableComponent,\r\n                TableHeaderComponent,\r\n                TableContentComponent\r\n            ]\r\n        })\r\n    ],\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\nA table component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\r\n\r\nYou can also use the table component with a \\`table-header-component\\` and a \\`table-content-component\\`. \r\nTo use it you have to create the following items:\r\n\r\ntable-header-component\r\n- headerItemsTasks from type \\`ColumnHeaderItem\\`\r\n- searchFilters from type  \\`SearchFilter\\`\r\n- multiSelectList from type \\`{ [key: string]: TableColumnType[]}\\`\r\n\r\ntable-content-component\r\n- tableItems should have a parameter called \\`columns\\` from  type \\`Map<string, TableColumnType>)\\`\r\n\r\nNote: Every logic to sort the content has to be implemented by yourself. You have also to set scrollbarWidth, if table table can be scrolled.\r\n\r\n                `\r\n            }\r\n        }\r\n    },\r\n    tags: ['autodocs']\r\n}"
+                    "defaultValue": "{\n    title: 'Components/Table/ Table',\n    component: TableComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [\n                TableComponent,\n                TableHeaderComponent,\n                TableContentComponent\n            ]\n        })\n    ],\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\nYou can also use the table component with a \\`table-header-component\\` and a \\`table-content-component\\`. \nTo use it you have to create the following items:\n\ntable-header-component\n- headerItemsTasks from type \\`ColumnHeaderItem\\`\n- searchFilters from type  \\`SearchFilter\\`\n- multiSelectList from type \\`{ [key: string]: TableColumnType[]}\\`\n\ntable-content-component\n- tableItems should have a parameter called \\`columns\\` from  type \\`Map<string, TableColumnType>)\\`\n\nNote: Every logic to sort the content has to be implemented by yourself. You have also to set scrollbarWidth, if table table can be scrolled.\n\n                `\n            }\n        }\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Sample",
@@ -2859,7 +2859,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            items: headerItems,\r\n            filters: filters,\r\n            multiSelectList: multiSelectList,\r\n            contentItems: contentItems,\r\n            showSearchLine: true,\r\n            searchFilterChange: (event: any) => {\r\n                action('filter')(event);\r\n            },\r\n            sortColumnChange: (event: any) => {\r\n                action('sort')(event);\r\n            },\r\n            selectFilterChange: (event: any) => {\r\n                action('select')(event);\r\n            },\r\n            tableItemSelected: (event: any) => {\r\n                action('selected row')(event);\r\n            }\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            items: headerItems,\n            filters: filters,\n            multiSelectList: multiSelectList,\n            contentItems: contentItems,\n            showSearchLine: true,\n            searchFilterChange: (event: any) => {\n                action('filter')(event);\n            },\n            sortColumnChange: (event: any) => {\n                action('sort')(event);\n            },\n            selectFilterChange: (event: any) => {\n                action('select')(event);\n            },\n            tableItemSelected: (event: any) => {\n                action('selected row')(event);\n            }\n        },\n        template: defaultTemplateMock\n    })\n}"
                 },
                 {
                     "name": "TableLightWithoutSearchLine",
@@ -2869,7 +2869,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            items: headerItems,\r\n            filters: filters,\r\n            multiSelectList: multiSelectList,\r\n            contentItems: contentItems,\r\n            showSearchLine: false,\r\n            tableStyle: TableStyle.LIGHT,\r\n            searchFilterChange: (event: any) => {\r\n                action('filter')(event);\r\n            },\r\n            sortColumnChange: (event: any) => {\r\n                action('sort')(event);\r\n            },\r\n            selectFilterChange: (event: any) => {\r\n                action('select')(event);\r\n            },\r\n            tableItemSelected: (event: any) => {\r\n                action('selected row')(event);\r\n            }\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            items: headerItems,\n            filters: filters,\n            multiSelectList: multiSelectList,\n            contentItems: contentItems,\n            showSearchLine: false,\n            tableStyle: TableStyle.LIGHT,\n            searchFilterChange: (event: any) => {\n                action('filter')(event);\n            },\n            sortColumnChange: (event: any) => {\n                action('sort')(event);\n            },\n            selectFilterChange: (event: any) => {\n                action('select')(event);\n            },\n            tableItemSelected: (event: any) => {\n                action('selected row')(event);\n            }\n        },\n        template: defaultTemplateMock\n    })\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts": [
@@ -2933,7 +2933,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        title: 'Info Alert',\n        message: 'Info  Message',\n        type: AlertType.INFO,\n        visibleState: true,\n        navigationLink: 'pailot.com',\n        navigationLinkLabel: 'Further informations under pailto.com '\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        title: 'Info Alert',\n        message: 'Info  Message',\n        type: AlertType.INFO,\n        visibleState: true,\n        navigationLink: 'pailot.com',\n        navigationLinkLabel: 'Further informations under pailto.com '\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const closeIcon = await canvas.findByTestId('close-alert');\n        await userEvent.click(closeIcon);\n\n        await waitFor(() => {\n            expect(canvas.queryByTestId('close-alert')).toBeNull();\n        });\n    },\n}"
                 },
                 {
                     "name": "meta",
@@ -3037,7 +3037,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Record<string, IconDefinition>",
-                    "defaultValue": "{\r\n    faChevronDown: faChevronDown,\r\n    faCheck: faCheck,\r\n    faExclamation: faExclamation,\r\n    faInfoCircle: faInfoCircle,\r\n    faSpinner: faSpinner,\r\n    faTrash: faTrash\r\n}"
+                    "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
                 },
                 {
                     "name": "Light",
@@ -3047,7 +3047,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    args: {\r\n        label: 'Label: ',\r\n        items: selectItems,\r\n        selectedItem: selectedItem,\r\n        filterPlaceholder: 'Select...',\r\n        show: true,\r\n        classStyle: SelectStyle.LIGHT,\r\n        width: '600px',\r\n        menuHeight: '100px'\r\n    },\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                story: 'Component to select items'\r\n            }\r\n        }\r\n    }\r\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true,\n        classStyle: SelectStyle.LIGHT,\n        width: '600px',\n        menuHeight: '100px'\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
                 },
                 {
                     "name": "meta",
@@ -3057,7 +3057,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<SelectComponent>",
-                    "defaultValue": "{\r\n    title: 'Components/Select/ Single',\r\n    component: SelectComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                story: 'Component to select items.'\r\n            }\r\n        }\r\n    },\r\n    argTypes: {\r\n        items: { control: 'object' },\r\n        selectedItem: { control: 'object' },\r\n        label: { control: 'text' },\r\n        faIcon: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        faIconBefore: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(iconOptions),\r\n            mapping: iconOptions\r\n        },\r\n        classStyle: {  \r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.keys(selectStyle),\r\n             mapping: SelectStyle \r\n        },\r\n        withBlankOption: { control: 'boolean' },\r\n        withDeselect: { control: 'boolean' },\r\n        withFilter: { control: 'boolean' },\r\n        filterPlaceholder: { control: 'text' },\r\n        show: { control: 'boolean' },\r\n        width: { control: 'text' },\r\n        menuHeight: { control: 'text' },\r\n        showChange: { action: 'show' },\r\n        itemSelected: { action: 'selected' }\r\n    },\r\n    args: {\r\n        showChange: fn(),\r\n        itemSelected: fn()\r\n    },\r\n    tags: ['autodocs']\r\n}"
+                    "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(selectStyle),\n            mapping: SelectStyle\n        },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        width: { control: 'text' },\n        menuHeight: { control: 'text' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Sample",
@@ -3067,7 +3067,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    args: {\r\n        label: 'Label: ',\r\n        items: selectItems,\r\n        selectedItem: selectedItem,\r\n        filterPlaceholder: 'Select...',\r\n        show: true\r\n    },\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                story: 'Component to select items'\r\n            }\r\n        }\r\n    }\r\n}"
+                    "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
                 },
                 {
                     "name": "selectedItem",
@@ -3087,7 +3087,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "[\r\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\r\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\r\n    new SelectItem('select3')\r\n]"
+                    "defaultValue": "[\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\n    new SelectItem('select3')\n]"
                 },
                 {
                     "name": "selectStyle",
@@ -3225,7 +3225,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<OverviewWrapperComponent>",
-                    "defaultValue": "{\r\n    title: 'Overview',\r\n    component: OverviewWrapperComponent,\r\n    tags: ['autodocs']\r\n}"
+                    "defaultValue": "{\n    title: 'Overview',\n    component: OverviewWrapperComponent,\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Sample",
@@ -3659,7 +3659,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        }\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                {\n                    provide: TranslateLoader,\n                    useClass: FakeLoader\n                },\n                {\n                    provide: TranslateCompiler,\n                    useClass: TranslateFakeCompiler\n                },\n                {\n                    provide: TranslateParser,\n                    useClass: TranslateDefaultParser\n                },\n                {\n                    provide: MissingTranslationHandler,\n                    useValue: null\n                },\n                {\n                    provide: USE_DEFAULT_LANG,\n                    useValue: true\n                },\n                {\n                    provide: DEFAULT_LANGUAGE,\n                    useValue: true\n                },\n                {\n                    provide: USE_EXTEND,\n                    useValue: false\n                },\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\n                TranslateStore,\n                {\n                    provide: APP_INITIALIZER,\n                    useFactory: (translate: TranslateService) => () => {\n                        translate.setDefaultLang('de');\n                        translate.use('de');\n                        return Promise.resolve();\n                    },\n                    deps: [TranslateService],\n                    multi: true\n                }\n            ]\n        })\n    ]\n}"
+                    "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                * Opt in to running WCAG 2.x AAA rules\n                * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice', 'wcag2aaa'],\n            },\n        },\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                {\n                    provide: TranslateLoader,\n                    useClass: FakeLoader\n                },\n                {\n                    provide: TranslateCompiler,\n                    useClass: TranslateFakeCompiler\n                },\n                {\n                    provide: TranslateParser,\n                    useClass: TranslateDefaultParser\n                },\n                {\n                    provide: MissingTranslationHandler,\n                    useValue: null\n                },\n                {\n                    provide: USE_DEFAULT_LANG,\n                    useValue: true\n                },\n                {\n                    provide: DEFAULT_LANGUAGE,\n                    useValue: true\n                },\n                {\n                    provide: USE_EXTEND,\n                    useValue: false\n                },\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\n                TranslateStore,\n                {\n                    provide: APP_INITIALIZER,\n                    useFactory: (translate: TranslateService) => () => {\n                        translate.setDefaultLang('de');\n                        translate.use('de');\n                        return Promise.resolve();\n                    },\n                    deps: [TranslateService],\n                    multi: true\n                }\n            ]\n        })\n    ]\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/directives/tooltip-directive.stories.ts": [
@@ -3683,7 +3683,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {},\r\n}"
+                    "defaultValue": "{\n    args: {}\n}"
                 }
             ]
         },

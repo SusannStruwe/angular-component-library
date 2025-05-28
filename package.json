@@ -52,6 +52,7 @@
         "@angular/cli": "^18.1.1",
         "@angular/compiler-cli": "^18.2.11",
         "@compodoc/compodoc": "^1.1.26",
+        "@storybook/addon-a11y": "^8.0.6",
         "@storybook/addon-docs": "^8.6.12",
         "@storybook/addon-essentials": "^8.6.12",
         "@storybook/addon-interactions": "^8.6.12",
