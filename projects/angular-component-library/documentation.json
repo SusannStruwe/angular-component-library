@@ -501,6 +501,16 @@
                 "defaultValue": "{\n    args: {\n        size: 'large',\n        label: 'Button'\n    }\n}"
             },
             {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true,\n        classStyle: SelectStyle.LIGHT,\n        btnWidth: '600px',\n        maxMenuHeight: '100px'\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
+            },
+            {
                 "name": "loaderStyles",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -818,7 +828,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<SelectComponent>",
-                "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: { control: 'text' },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: {  \n            control: {\n                type: 'select'\n            },\n            options: Object.keys(selectStyle),\n             mapping: SelectStyle \n        },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        btnWidth: { control: 'text' },\n        maxMenuHeight: { control: 'text' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -1279,6 +1289,16 @@
                 "deprecationMessage": "",
                 "type": "[]",
                 "defaultValue": "[\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\n    new SelectItem('select3')\n]"
+            },
+            {
+                "name": "selectStyle",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "SelectStyle"
             },
             {
                 "name": "show",
@@ -2817,6 +2837,16 @@
                     "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
                 },
                 {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true,\n        classStyle: SelectStyle.LIGHT,\n        btnWidth: '600px',\n        maxMenuHeight: '100px'\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
+                },
+                {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -2824,7 +2854,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<SelectComponent>",
-                    "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: { control: 'text' },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: {  \n            control: {\n                type: 'select'\n            },\n            options: Object.keys(selectStyle),\n             mapping: SelectStyle \n        },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        btnWidth: { control: 'text' },\n        maxMenuHeight: { control: 'text' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Sample",
@@ -2855,6 +2885,16 @@
                     "deprecationMessage": "",
                     "type": "[]",
                     "defaultValue": "[\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\n    new SelectItem('select3')\n]"
+                },
+                {
+                    "name": "selectStyle",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "SelectStyle"
                 }
             ],
             "projects/angular-component-library/src/lib/stories/button.stories.ts": [
@@ -5244,6 +5284,16 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "Light",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "meta",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -5275,6 +5325,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "selectItems",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "selectStyle",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

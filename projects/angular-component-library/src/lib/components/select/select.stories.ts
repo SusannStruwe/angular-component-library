@@ -71,8 +71,8 @@ const meta: Meta<SelectComponent> = {
         withFilter: { control: 'boolean' },
         filterPlaceholder: { control: 'text' },
         show: { control: 'boolean' },
-        btnWidth: { control: 'text' },
-        maxMenuHeight: { control: 'text' },
+        width: { control: 'text' },
+        menuHeight: { control: 'text' },
         showChange: { action: 'show' },
         itemSelected: { action: 'selected' }
     },
@@ -112,8 +112,8 @@ export const Light: Story = {
         filterPlaceholder: 'Select...',
         show: true,
         classStyle: SelectStyle.LIGHT,
-        btnWidth: '600px',
-        maxMenuHeight: '100px'
+        width: '600px',
+        menuHeight: '100px'
     },
     parameters: {
         docs: {

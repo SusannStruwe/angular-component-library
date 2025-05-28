@@ -11,8 +11,9 @@
             [attr.aria-label]="'Select'"
             [attr.aria-haspopup]="'menu'"
             [attr.aria-expanded]="show"
-            [style.max-width]="btnWidth"
-            [style.width]="btnWidth"
+            [style.max-width]="width"
+            [style.min-width]="width"
+            [style.width]="width"
             (click)="toggleMenu()">
             @if (faIconBefore) {
                 <span class="icon-before">
@@ -36,7 +37,8 @@
             class="menu popup-shadow"
             [class.show]="show"
             [class.hide]="!show"
-            [style.max-height]="maxMenuHeight"
+            [style.width]="width"
+            [style.max-height]="menuHeight"
             [ngClass]="alignmentLeft() ? 'left' : 'right'">
             @if (withFilter) {
                 <search-input-component
