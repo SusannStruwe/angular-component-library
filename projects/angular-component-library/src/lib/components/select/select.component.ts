@@ -18,7 +18,13 @@ import { cloneDeep } from 'lodash';
 import { SearchInputComponent } from '../search-input/search-input.component';
 import { FormsModule } from '@angular/forms';
 import { Icons } from '../../model/icons';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
+export enum SelectStyle {
+    LIGHT = 'light',
+    SCHEDULER = 'scheduler',
+    SIDEBAR = 'sidebar',
+}
+
 
 /**
  * Component to create and show  select
@@ -57,10 +63,12 @@ export class SelectComponent implements OnInit, OnChanges {
     @Input() faIconBefore?: IconDefinition;
     @Input() withFilter?: boolean;
     @Input() filterPlaceholder?: string;
-    @Input() classStyle?: string;
+    @Input() classStyle?: SelectStyle;
     @Input() withBlankOption = false;
     @Input() withDeselect = true;
     @Input() show? = false;
+    @Input() btnWidth = '500px';
+    @Input() maxMenuHeight = '500px';
 
     @Output() showChange = new EventEmitter<boolean>();
     @Output() itemSelected = new EventEmitter<SelectItem>();

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/angular';
-import { SelectComponent } from './select.component';
+import { SelectComponent, SelectStyle } from './select.component';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import {
     faCheck,
@@ -21,6 +21,8 @@ const iconOptions: Record<string, IconDefinition> = {
     faSpinner: faSpinner,
     faTrash: faTrash
 };
+
+const selectStyle: typeof SelectStyle = SelectStyle;
 
 const selectItems = [
     new SelectItem('select1', undefined, Icons.faInfoCircle),
@@ -57,12 +59,20 @@ const meta: Meta<SelectComponent> = {
             options: Object.keys(iconOptions),
             mapping: iconOptions
         },
-        classStyle: { control: 'text' },
+        classStyle: {  
+            control: {
+                type: 'select'
+            },
+            options: Object.keys(selectStyle),
+             mapping: SelectStyle 
+        },
         withBlankOption: { control: 'boolean' },
         withDeselect: { control: 'boolean' },
         withFilter: { control: 'boolean' },
         filterPlaceholder: { control: 'text' },
         show: { control: 'boolean' },
+        btnWidth: { control: 'text' },
+        maxMenuHeight: { control: 'text' },
         showChange: { action: 'show' },
         itemSelected: { action: 'selected' }
     },
@@ -83,6 +93,27 @@ export const Sample: Story = {
         selectedItem: selectedItem,
         filterPlaceholder: 'Select...',
         show: true
+    },
+    parameters: {
+        docs: {
+            description: {
+                story: 'Component to select items'
+            }
+        }
+    }
+};
+
+
+export const Light: Story = {
+    args: {
+        label: 'Label: ',
+        items: selectItems,
+        selectedItem: selectedItem,
+        filterPlaceholder: 'Select...',
+        show: true,
+        classStyle: SelectStyle.LIGHT,
+        btnWidth: '600px',
+        maxMenuHeight: '100px'
     },
     parameters: {
         docs: {

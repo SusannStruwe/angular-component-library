@@ -337,6 +337,14 @@ button {
     }
 }
 
+.light {
+    @extend .scheduler;
+
+    button {
+        border: var(--border-width) solid var(--border-color);
+    }
+}
+
 .sidebar {
     @extend .scheduler;
 
