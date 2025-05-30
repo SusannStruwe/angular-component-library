@@ -100,7 +100,7 @@ jobs:
     storybook:
         name: Build storybook
         runs-on: ubuntu-latest
-        needs: prettier
+        needs: storybook-test
         steps:
             - name: Checkout repo
               uses: actions/checkout@v4
