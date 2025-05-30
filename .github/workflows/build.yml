@@ -86,7 +86,7 @@ jobs:
                   key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
             - name: Start Storybook
-              run: nohup npx start-storybook -p 6006 > storybook.log 2>&1 &
+              run: nohup npm run start-storybook > storybook.log 2>&1 &
 
             - name: Wait for Storybook to be ready
               run: |

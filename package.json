@@ -13,6 +13,7 @@
         "test": "ng test",
         "prettier": "npx prettier --write .",
         "storybook": "ng run angular-component-library:storybook",
+        "start-storybook": "start-storybook -p 6006",
         "test-storybook": "test-storybook --config-dir projects/angular-component-library/.storybook --url http://localhost:6006",
         "build-storybook": "ng run angular-component-library:build-storybook",
         "update:devkit": "ng update @angular-devkit/build-angular",
