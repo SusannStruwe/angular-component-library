@@ -89,11 +89,17 @@ jobs:
               run: npx start-storybook -p 6006 &
 
             - name: Wait for Storybook to be ready
-              uses: jakejarvis/wait-action@v0.1.1
-              with:
-                  entryPoint: curl
-                  args: --fail --silent http://127.0.0.1:6006
-                  time: 60
+              run: |
+                  for i in {1..30}; do
+                    if curl --silent --fail http://127.0.0.1:6006; then
+                      echo "Storybook is up!"
+                      exit 0
+                    fi
+                    echo "Waiting for Storybook to start..."
+                    sleep 2
+                  done
+                  echo "Storybook did not start in time."
+                  exit 1
 
             - name: Run Storybook Interaction Tests
               run: npm run test-storybook
