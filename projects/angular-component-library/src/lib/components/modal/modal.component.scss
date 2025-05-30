@@ -115,7 +115,8 @@
 
         ::ng-deep .modal-body {
             margin: 0px;
-            padding: 0.5em 2em 70px 2em;
+            margin-bottom: 75px;
+            padding: 0.5em 2em 1em;
             border-top: 1px solid var(--border-color-light);
             overflow-y: auto;
             position: absolute;

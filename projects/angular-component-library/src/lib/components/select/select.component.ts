@@ -61,7 +61,7 @@ export class SelectComponent implements OnInit, OnChanges {
     @Input() withBlankOption = false;
     @Input() withDeselect = true;
     @Input() show? = false;
-    @Input() width = '500px';
+    @Input() width?: string;
     @Input() menuHeight = '500px';
 
     @Output() showChange = new EventEmitter<boolean>();

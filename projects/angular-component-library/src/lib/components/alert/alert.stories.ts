@@ -4,7 +4,6 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { AlertComponent } from './alert.component';
 import { fn, userEvent, waitFor, within, expect } from '@storybook/test';
 
-
 const types: typeof AlertType = AlertType;
 
 const meta: Meta<AlertComponent> = {
@@ -69,7 +68,7 @@ export const InfoAlert: Story = {
         await waitFor(() => {
             expect(canvas.queryByTestId('close-alert')).toBeNull();
         });
-    },
+    }
 };
 
 export const ErrorWithLink: Story = {

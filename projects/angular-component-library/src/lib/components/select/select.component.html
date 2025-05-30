@@ -11,9 +11,9 @@
             [attr.aria-label]="'Select'"
             [attr.aria-haspopup]="'menu'"
             [attr.aria-expanded]="show"
-            [style.max-width]="width"
-            [style.min-width]="width"
-            [style.width]="width"
+            [style.max-width]="width ?? ''"
+            [style.min-width]="width ?? ''"
+            [style.width]="width ?? ''"
             (click)="toggleMenu()">
             @if (faIconBefore) {
                 <span class="icon-before">

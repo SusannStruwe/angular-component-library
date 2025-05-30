@@ -12,7 +12,9 @@
                     <fa-icon [icon]="faClose"></fa-icon>
                 </button>
             </div>
-            <div class="modal-body">
+            <div
+                class="modal-body"
+                [style.overflow-y]="noOverflow ? 'visible' : 'auto'">
                 <ng-content> </ng-content>
             </div>
             <div class="modal-footer">
@@ -64,7 +66,10 @@
                     <fa-icon [icon]="faClose"></fa-icon>
                 </button>
             </div>
-            <div class="modal-body" [style.text-align]="'center'">
+            <div
+                class="modal-body"
+                [style.text-align]="'center'"
+                [style.overflow-y]="noOverflow ? 'visible' : 'auto'">
                 @if (type === modalType.info) {
                     <div class="info-icon">
                         <fa-icon [icon]="faCircleInfo"></fa-icon>
