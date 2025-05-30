@@ -31,7 +31,7 @@ yarn-error.log
 
 # Storybook
 storybook-static
-/documentation.json
+storybook-static/documentation.json
 
 # Miscellaneous
 /.angular/cache
