@@ -22,7 +22,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
     styleUrls: ['./circle-btn.component.scss']
 })
 export class CircleBtnComponent {
-    @Input() ariaLabel: string = '';
+    @Input() ariaLabel: string = 'circle-btn';
 
     @Input() faIcon?: IconDefinition;
 

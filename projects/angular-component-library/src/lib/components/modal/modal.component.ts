@@ -60,7 +60,6 @@ export class ModalComponent implements OnInit, OnDestroy {
     @Input() deleteBtn? = false;
     @Input() deleteBtnTxt? = 'Delete';
     @Input() sizeClass = ['m'];
-    @Input() noOverflow?: boolean;
 
     faLoader: IconDefinition = Icons.faLoader;
     faClose: IconDefinition = Icons.faXmark;

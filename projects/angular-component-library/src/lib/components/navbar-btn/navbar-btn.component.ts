@@ -22,7 +22,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
     styleUrls: ['./navbar-btn.component.scss']
 })
 export class NavbarBtnComponent {
-    @Input() label?: string;
+    @Input() label?: string = 'navbar-btn';
 
     @Input() faIcon?: IconDefinition;
 

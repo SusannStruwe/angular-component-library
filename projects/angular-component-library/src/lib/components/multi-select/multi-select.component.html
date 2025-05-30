@@ -2,7 +2,7 @@
     <button
         #btn
         [attr.title]="'MultiSelect'"
-        [attr.aria-label]="'MultiSelect'"
+        [attr.aria-label]="'multi-select'"
         [attr.aria-haspopup]="'menu'"
         [attr.aria-expanded]="show"
         [style.background-color]="backgroundColor"
@@ -36,23 +36,25 @@
                 (filterChange)="filterAndSort()">
             </search-input-component>
         }
-        <ul class="selected-items">
+        <ul class="selected-items" tabindex="0">
             @for (selectedItem of selectedItems; track i; let i = $index) {
                 <li (click)="removeElement(selectedItem)">
                     <input
                         id="ms-s-items-{{ randomId }}-{{ i }}"
                         type="checkbox"
+                        [attr.aria-label]="'checkbox'"
                         [checked]="isInFilterArray(selectedItem)" />
                     <span class="checkmark"></span>
                     <span class="text">{{ selectedItem }}</span>
                 </li>
             }
         </ul>
-        <ul [style.max-height.px]="300">
+        <ul [style.max-height.px]="300" tabindex="0">
             @for (item of items; track i; let i = $index) {
                 <li (click)="selectElement(item)">
                     <input
                         id="ms-items-{{ randomId }}-{{ i }}"
+                        [attr.aria-label]="'checkbox'"
                         type="checkbox" />
                     <span class="checkmark"></span>
                     <span class="text">{{ item }}</span>

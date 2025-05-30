@@ -14,6 +14,7 @@
     flex-direction: row;
     margin: 5px 5px;
     border: 1px solid var(--border-color);
+    border-radius: var(--table-border-radius);
     min-height: 50px;
 
     ::ng-deep .text-left {
@@ -47,7 +48,6 @@ Table Header
     position: relative;
     top: 0;
     left: 0;
-    border-bottom: 1px solid #aaa;
 
     div {
         width: 100%;

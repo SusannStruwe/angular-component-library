@@ -24,8 +24,10 @@ button {
 
     &.active:not([disabled]) {
         background-color: black;
+        color: var(--accent-color);
+
         fa-icon {
-            color: var(--accent-color-dark);
+            color: var(--accent-color);
         }
     }
 
@@ -77,7 +79,7 @@ Media query to add hover only on device which support hover
         &.active:not([disabled]) {
             background-color: black;
             fa-icon {
-                color: var(--accent-color-dark);
+                color: var(--accent-color);
             }
         }
     }

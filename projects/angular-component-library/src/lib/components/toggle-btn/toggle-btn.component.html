@@ -10,6 +10,7 @@
         id="toggle-btn-{{ randomId }}"
         type="checkbox"
         class="checkbox"
+        [attr.aria-label]="'toggle-btn'"
         [disabled]="isDisabled"
         [(ngModel)]="checked"
         (ngModelChange)="toggleState()" />

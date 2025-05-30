@@ -27,7 +27,8 @@ const defaultTemplateMock = `   <table-component [style.width]="'600px'" [scroll
         <div content>
             <table-content-component
                 [tableItems]="contentItems" 
-                (tableItemSelected)="tableItemSelected($event)">
+                (tableItemSelected)="tableItemSelected($event)"
+                [tableStyle]="tableStyle">
             </table-content-component>
         </div>
     </table-component>
@@ -110,6 +111,33 @@ export const TableLightWithoutSearchLine: Story = {
             contentItems: contentItems,
             showSearchLine: false,
             tableStyle: TableStyle.LIGHT,
+            searchFilterChange: (event: any) => {
+                action('filter')(event);
+            },
+            sortColumnChange: (event: any) => {
+                action('sort')(event);
+            },
+            selectFilterChange: (event: any) => {
+                action('select')(event);
+            },
+            tableItemSelected: (event: any) => {
+                action('selected row')(event);
+            }
+        },
+        template: defaultTemplateMock
+    })
+};
+
+export const TableDarkWithoutSearchLine: Story = {
+    render: (args) => ({
+        props: {
+            ...args,
+            items: headerItems,
+            filters: filters,
+            multiSelectList: multiSelectList,
+            contentItems: contentItems,
+            showSearchLine: false,
+            tableStyle: TableStyle.DARK,
             searchFilterChange: (event: any) => {
                 action('filter')(event);
             },

@@ -2,10 +2,11 @@
     <div class="datepicker">
         <input
             #dateTimePicker
+            [attr.data-testid]="'date-input-' + randomId"
             [style.display]="withInput ? 'block' : 'none'"
             [style.height.px]="height ?? 40"
             [style.min-width.px]="minWidth ?? 'auto'"
-            [attr.aria-labelledby]="'date-time-input'"
+            [attr.aria-label]="'date-time-input'"
             id="date-time-input-{{ randomId }}"
             type="datetime-local"
             [(ngModel)]="date" />

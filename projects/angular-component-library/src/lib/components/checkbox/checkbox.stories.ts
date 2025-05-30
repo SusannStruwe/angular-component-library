@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { CheckboxComponent } from './checkbox.component';
 import { EditMode } from '../../model/edit-mode.enum';
-import { fn } from '@storybook/test';
+import { fn, userEvent, waitFor, within, expect } from '@storybook/test';
 
 const types: typeof EditMode = EditMode;
 
@@ -30,8 +30,23 @@ type Story = StoryObj<CheckboxComponent>;
 
 export const Sample: Story = {
     args: {
-        value: true,
+        value: false,
         mode: EditMode.WRITE
+    },
+    play: async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
+
+        const checkbox = (await canvas.findByTestId(
+            'checkbox'
+        )) as HTMLInputElement;
+
+        const wasChecked = checkbox.checked;
+
+        await userEvent.click(checkbox);
+
+        await waitFor(() => {
+            expect(checkbox.checked).not.toBe(wasChecked);
+        });
     }
 };
 

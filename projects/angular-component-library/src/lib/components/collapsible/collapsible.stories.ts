@@ -6,8 +6,9 @@ import {
     IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { within, expect, waitFor, userEvent } from '@storybook/test';
 
-const defaultTemplateMock = `   <collapsible-component [show]="true" [classStyles]="'simple'">
+const defaultTemplateMock = `   <collapsible-component [show]="false" [classStyles]="'simple'">
         <div header>
             <p [style.width.px]="200">Header</p>
         </div>
@@ -72,7 +73,27 @@ export const Sample: Story = {
             ...args
         },
         template: defaultTemplateMock
-    })
+    }),
+    play: async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
+
+        const header = (await canvas.findByTestId(
+            'collapse-header'
+        )) as HTMLInputElement;
+        const content = (await canvas.findByTestId(
+            'collapse-content'
+        )) as HTMLInputElement;
+
+        expect(content.classList.contains('hide')).toBe(true);
+        expect(content.classList.contains('show')).toBe(false);
+
+        await userEvent.click(header);
+
+        await waitFor(() => {
+            expect(content.classList.contains('show')).toBe(true);
+            expect(content.classList.contains('hide')).toBe(false);
+        });
+    }
 };
 
 export const WithIcon: Story = {
@@ -84,5 +105,25 @@ export const WithIcon: Story = {
             show: show
         },
         template: iconTemplateMock
-    })
+    }),
+    play: async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
+
+        const header = (await canvas.findByTestId(
+            'collapse-header'
+        )) as HTMLInputElement;
+        const content = (await canvas.findByTestId(
+            'collapse-content'
+        )) as HTMLInputElement;
+
+        expect(content.classList.contains('hide')).toBe(true);
+        expect(content.classList.contains('show')).toBe(false);
+
+        await userEvent.click(header);
+
+        await waitFor(() => {
+            expect(content.classList.contains('show')).toBe(true);
+            expect(content.classList.contains('hide')).toBe(false);
+        });
+    }
 };

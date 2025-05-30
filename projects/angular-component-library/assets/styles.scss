@@ -26,17 +26,18 @@ body {
     --tooltip-background: #262626;
     --modal-background: #fbfbfb;
     --menu-background: #fff;
-    --table-light-color: #e4e4e4;
+    --table-light-bg-color: #fff;
+    --table-light-color: #67768E;
     --table-dark-color: #222;
     --tabs-background: #111;
     --tabs-content-color: #f3f3f3;
-    --tab-color: #ccc;
+    --tab-color: #cccccc;
     --text-color: #2c2f33;
-    --placeholder-color: #999;
-    --fa-icon-color: white;
+    --placeholder-color: #999999;
+    --fa-icon-color: #ffffff;
     --collapse-background: #f3f3f3;
     --border-color-rgb: 000, 000, 000;
-    --border-color: #ccc;
+    --border-color: #c2c8d2;
     --border-color-light: #e4e4e4;
 
     --required-color: #f44118;
@@ -139,6 +140,7 @@ body {
     --alert-radius: 0px;
     --input-radius: 0px;
     --tag-btn-radius: 15px;
+    --table-border-radius: 0px;
     --border-radius: 0px;
     --border-width: 1px;
 
@@ -167,14 +169,14 @@ body.dark-theme {
     --table-header-color: #222;
     --tabs-background: #111;
     --tabs-content-color: #f3f3f3;
-    --tab-color: #444;
-    --text-color: white;
+    --tab-color: #444444;
+    --text-color: #ffffff;
     --placeholder-color: #999;
-    --fa-icon-color: white;
+    --fa-icon-color: #ffffff;
     --tooltip-background: rgb(183, 183, 183);
 
     --border-color-rgb: 255, 255, 255;
-    --border-color: #ccc;
+    --border-color: #cccccc;
     --border-color-light: #e4e4e4;
 
     --row-highlight-color: rgba(223, 251, 255, 0.5);
@@ -248,14 +250,14 @@ span {
 
 i,
 fa-icon {
-    color: white;
+    color: #ffffff;
     font-size: 1.1em;
     display: contents;
     color: var(--fa-icon-color);
 }
 
 a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     cursor: pointer;
 
@@ -332,7 +334,7 @@ a {
     font-family: var(--font-family);
     font-weight: var(--font-weight-normal);
     color: var(--text-color);
-    background: white;
+    background: #ffffff;
     border: 1px solid var(--border-color);
     border-radius: var(--input-radius);
     padding-right: 35px;

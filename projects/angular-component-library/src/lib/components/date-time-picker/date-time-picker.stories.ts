@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { DateTimePickerComponent } from './date-time-picker.component';
 import { EditMode } from '../../model/edit-mode.enum';
-import { fn } from '@storybook/test';
+import { fn, userEvent, waitFor, within, expect } from '@storybook/test';
 
 const types: typeof EditMode = EditMode;
 
@@ -32,6 +32,7 @@ const meta: Meta<DateTimePickerComponent> = {
         },
         height: { control: 'number' },
         minWidth: { control: 'number' },
+        randomId: { control: 'text' },
         dateChange: { action: 'changed' }
     },
     args: { dateChange: fn() },
@@ -44,6 +45,26 @@ type Story = StoryObj<DateTimePickerComponent>;
 export const Sample: Story = {
     args: {
         date: '2025-05-11',
-        withInput: true
+        withInput: true,
+        randomId: 'test123'
+    },
+    play: async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
+
+        const input = (await canvas.findByTestId(
+            'date-input-test123'
+        )) as HTMLInputElement;
+
+        const newDate = '2025-06-01T14:30';
+
+        await userEvent.clear(input);
+        await userEvent.type(input, newDate);
+
+        // trigger ngModelChange
+        await userEvent.tab();
+
+        await waitFor(() => {
+            expect(input.value).toBe(newDate);
+        });
     }
 };

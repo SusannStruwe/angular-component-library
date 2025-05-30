@@ -50,6 +50,9 @@ export class DateTimePickerComponent implements OnInit {
     @Input() mode: EditMode = EditMode.WRITE;
     @Input() height?: number;
     @Input() minWidth?: number;
+    @Input() randomId?: string = Math.floor(Math.random() * 16777215).toString(
+        16
+    );
 
     @Output() dateChange = new EventEmitter<string | null>();
     @Output() pickerClosed = new EventEmitter<boolean>();
@@ -58,7 +61,6 @@ export class DateTimePickerComponent implements OnInit {
 
     faCalender: IconDefinition = Icons.faCalendar;
     showOverlayBtn = true;
-    randomId: string = Math.floor(Math.random() * 16777215).toString(16);
 
     modes: typeof EditMode = EditMode;
 

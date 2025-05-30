@@ -1,5 +1,9 @@
-<div content>
-    <cdk-virtual-scroll-viewport itemSize="46" [style.min-height]="tableHeight">
+<div content [ngClass]="[tableStyle ?? '']">
+    <cdk-virtual-scroll-viewport
+        itemSize="46"
+        [style.min-height]="tableHeight"
+        tabindex="0"
+        role="region">
         <div
             class="table-row"
             *cdkVirtualFor="let item of tableItems"

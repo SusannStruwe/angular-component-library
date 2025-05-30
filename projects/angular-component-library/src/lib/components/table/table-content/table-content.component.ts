@@ -1,12 +1,9 @@
 import { CommonModule, KeyValue } from '@angular/common';
 import {
-    AfterViewInit,
     Component,
     EventEmitter,
     Input,
-    OnChanges,
     Output,
-    SimpleChanges,
     ViewChild
 } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -15,9 +12,9 @@ import {
     CdkVirtualScrollViewport,
     ScrollingModule
 } from '@angular/cdk/scrolling';
-import { ColumnType } from '../../../model/column-header-item.model';
 import { DefaultColumKeys } from '../../../model/default-column-key.enum';
 import { TableColumnType } from '../../../stories/util';
+import { TableStyle } from '../../../model/table-style.enum';
 
 /**
  * Component to create and show  table content
@@ -47,6 +44,7 @@ import { TableColumnType } from '../../../stories/util';
 export class TableContentComponent {
     @Input() tableHeight: string = '200px';
     @Input() tableItems: any = [];
+    @Input() tableStyle?: TableStyle;
 
     @Output() tableItemSelected = new EventEmitter<any>();
 

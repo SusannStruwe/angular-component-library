@@ -24,7 +24,7 @@ import { HoverStyle } from '../../model/hover-style.enum';
     styleUrls: ['./bordered-btn.component.scss']
 })
 export class BorderedBtnComponent {
-    @Input() ariaLabel: string = '';
+    @Input() ariaLabel: string = 'no-title';
 
     @Input() label?: string;
 

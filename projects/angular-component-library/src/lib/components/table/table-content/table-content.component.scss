@@ -137,7 +137,74 @@
 }
 
 
+.light {
+    
+    .table-row,
+    .table-row-collapse {
 
+        & > div {
+            border-right: none;
+
+            &:last-of-type {
+                border-right: 1px solid var(--border-color);
+            }
+        }
+
+        .collapsible-table {
+
+            .collapsible-header {
+                border: none;
+            }
+
+            .collapsible-table-header {
+
+                & > div {
+
+                    border-right: none;
+
+                    &:last-of-type {
+                        border-right: 1px solid var(--border-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.dark {
+
+    .table-row,
+    .table-row-collapse {
+
+        & > div {
+            border-right: none;
+
+            &:last-of-type {
+                border-right: 1px solid var(--border-color);
+            }
+        }
+
+        .collapsible-table {
+
+            .collapsible-header {
+                border: none;
+            }
+
+            .collapsible-table-header {
+
+                & > div {
+
+                    border-right: none;
+
+                    &:last-of-type {
+                        border-right: 1px solid var(--border-color);
+                    }
+                }
+            }
+        }
+    }
+}
 
 /************************************************
 Media query to add hover only on device which support hover

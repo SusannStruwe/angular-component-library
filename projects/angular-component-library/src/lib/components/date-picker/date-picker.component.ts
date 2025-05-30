@@ -31,12 +31,14 @@ export class DatePickerComponent implements OnInit {
     @Input() date?: Date | string; // date is string after change in date picker
     @Input() withInput?: boolean = true;
     @Input() clear?: boolean = true;
+    @Input() randomId?: string = Math.floor(Math.random() * 16777215).toString(
+        16
+    );
 
     @Output() dateChanged = new EventEmitter<Date>();
 
     faCalender: IconDefinition = Icons.faCalendar;
     showOverlayBtn = true;
-    randomId: string = Math.floor(Math.random() * 16777215).toString(16);
 
     dateBefore: Date | string = '';
 
