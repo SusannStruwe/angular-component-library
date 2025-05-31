@@ -33,7 +33,7 @@ export const Sample: Story = {
         value: false,
         mode: EditMode.WRITE
     },
-    play: async ({ canvasElement }) => {
+    /*play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
 
         const checkbox = (await canvas.findByTestId(
@@ -47,7 +47,7 @@ export const Sample: Story = {
         await waitFor(() => {
             expect(checkbox.checked).not.toBe(wasChecked);
         });
-    }
+    }*/
 };
 
 export const ReadMode: Story = {

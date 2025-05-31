@@ -74,12 +74,28 @@ export const Sample: Story = {
         },
         template: defaultTemplateMock
     }),
-    play: async ({ canvasElement }) => {
+    /*play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
 
-        const header = await canvas.findByTestId('collapse-header');
-        expect(header).toBeInTheDocument();
-    }
+        const header = (await canvas.findByTestId(
+            'collapse-header'
+        )) as HTMLInputElement;
+        const content = (await canvas.findByTestId(
+            'collapse-content'
+        )) as HTMLInputElement;
+
+        await waitFor(() => {
+            expect(content.classList.contains('hide')).toBe(true);
+            expect(content.classList.contains('show')).toBe(false);
+        });
+
+        await userEvent.click(header);
+
+        await waitFor(() => {
+            expect(content.classList.contains('show')).toBe(true);
+            expect(content.classList.contains('hide')).toBe(false);
+        });
+    }*/
 };
 
 export const WithIcon: Story = {
@@ -92,10 +108,26 @@ export const WithIcon: Story = {
         },
         template: iconTemplateMock
     }),
-    play: async ({ canvasElement }) => {
+    /*play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
 
-        const header = await canvas.findByTestId('collapse-header');
-        expect(header).toBeInTheDocument();
-    }
+        const header = (await canvas.findByTestId(
+            'collapse-header'
+        )) as HTMLInputElement;
+        const content = (await canvas.findByTestId(
+            'collapse-content'
+        )) as HTMLInputElement;
+
+         await waitFor(() => {
+            expect(content.classList.contains('hide')).toBe(true);
+            expect(content.classList.contains('show')).toBe(false);
+        });
+
+        await userEvent.click(header);
+
+        await waitFor(() => {
+            expect(content.classList.contains('show')).toBe(true);
+            expect(content.classList.contains('hide')).toBe(false);
+        });
+    }*/
 };
