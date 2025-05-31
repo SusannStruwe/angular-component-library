@@ -32,7 +32,7 @@ yarn-error.log
 # Storybook
 storybook-static
 storybook-static/documentation.json
-projects/angular-component-library/documentation.json
+/projects/angular-component-library/documentation.json
 
 # Miscellaneous
 /.angular/cache

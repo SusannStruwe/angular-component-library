@@ -84,8 +84,10 @@ export const Sample: Story = {
             'collapse-content'
         )) as HTMLInputElement;
 
-        expect(content.classList.contains('hide')).toBe(true);
-        expect(content.classList.contains('show')).toBe(false);
+        await waitFor(() => {
+            expect(content.classList.contains('hide')).toBe(true);
+            expect(content.classList.contains('show')).toBe(false);
+        });
 
         await userEvent.click(header);
 
