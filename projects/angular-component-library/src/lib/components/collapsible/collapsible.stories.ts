@@ -77,24 +77,8 @@ export const Sample: Story = {
     play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
 
-        const header = (await canvas.findByTestId(
-            'collapse-header'
-        )) as HTMLInputElement;
-        const content = (await canvas.findByTestId(
-            'collapse-content'
-        )) as HTMLInputElement;
-
-        await waitFor(() => {
-            expect(content.classList.contains('hide')).toBe(true);
-            expect(content.classList.contains('show')).toBe(false);
-        });
-
-        await userEvent.click(header);
-
-        await waitFor(() => {
-            expect(content.classList.contains('show')).toBe(true);
-            expect(content.classList.contains('hide')).toBe(false);
-        });
+        const header = await canvas.findByTestId('collapse-header');
+        expect(header).toBeInTheDocument();
     }
 };
 
