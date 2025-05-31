@@ -571,16 +571,6 @@
                 "defaultValue": "{\n    args: {\n        user: {\n            name: 'Jane Doe'\n        }\n    }\n}"
             },
             {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/stories/page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n        const loginButton = canvas.getByRole('button', { name: /Log in/i });\n        await expect(loginButton).toBeInTheDocument();\n        await userEvent.click(loginButton);\n        await expect(loginButton).not.toBeInTheDocument();\n\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n        await expect(logoutButton).toBeInTheDocument();\n    }\n}"
-            },
-            {
                 "name": "LoggedOut",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -684,16 +674,6 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<CircleBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -704,11 +684,11 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<ColorPaletteComponent>",
-                "defaultValue": "{\n    title: 'Components/ColorPalette',\n    component: ColorPaletteComponent,\n    tags: ['autodocs']\n}"
+                "type": "Meta<CircleBtnComponent>",
+                "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -719,6 +699,16 @@
                 "deprecationMessage": "",
                 "type": "Meta<CollapsibleComponent>",
                 "defaultValue": "{\n    title: 'Components/Collapsible',\n    component: CollapsibleComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\n \n                 `\n            }\n        }\n    },\n    decorators: [\n        (story) => {\n            const storyObj = story();\n            return {\n                moduleMetadata: {\n                    imports: [CollapsibleComponent, FontAwesomeModule]\n                },\n                template: storyObj.template,\n                props: storyObj.props\n            };\n        }\n    ],\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ColorPaletteComponent>",
+                "defaultValue": "{\n    title: 'Components/ColorPalette',\n    component: ColorPaletteComponent,\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -924,21 +914,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<TableContentComponent>",
-                "defaultValue": "{\n    title: 'Components/Table/Table Content',\n    component: TableContentComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table content component.\n                `\n            }\n        }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div [style.width.px]=\"'600'\">${story().template}</div>`,\n            props: story().props\n        })\n    ],\n    argTypes: {\n        tableItems: { control: 'object' },\n        tableHeight: { control: 'text' },\n        tableItemSelected: { action: 'select' }\n    },\n    args: {\n        tableItemSelected: fn(),\n        tableHeight: '275px'\n    },\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TableHeaderComponent>",
                 "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        showSearchLine: { control: 'boolean' },\n        tableStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(tableStyle),\n            mapping: TableStyle\n        },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TableContentComponent>",
+                "defaultValue": "{\n    title: 'Components/Table/Table Content',\n    component: TableContentComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table content component.\n                `\n            }\n        }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div [style.width.px]=\"'600'\">${story().template}</div>`,\n            props: story().props\n        })\n    ],\n    argTypes: {\n        tableItems: { control: 'object' },\n        tableHeight: { control: 'text' },\n        tableItemSelected: { action: 'select' }\n    },\n    args: {\n        tableItemSelected: fn(),\n        tableHeight: '275px'\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "Off",
@@ -1054,6 +1044,16 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        value: false,\n        mode: EditMode.WRITE\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const checkbox = (await canvas.findByTestId(\n            'checkbox'\n        )) as HTMLInputElement;\n\n        const wasChecked = checkbox.checked;\n\n        await userEvent.click(checkbox);\n\n        await waitFor(() => {\n            expect(checkbox.checked).not.toBe(wasChecked);\n        });\n    }*/\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1064,11 +1064,11 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        value: false,\n        mode: EditMode.WRITE\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const checkbox = (await canvas.findByTestId(\n            'checkbox'\n        )) as HTMLInputElement;\n\n        const wasChecked = checkbox.checked;\n\n        await userEvent.click(checkbox);\n\n        await waitFor(() => {\n            expect(checkbox.checked).not.toBe(wasChecked);\n        });\n    }\n}"
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    })\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }*/\n}"
             },
             {
                 "name": "Sample",
@@ -1084,21 +1084,11 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = await canvas.findByTestId('collapse-header');\n        expect(header).toBeInTheDocument();\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/date-picker/date-picker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        randomId: 'test123',\n        withInput: true\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }\n}"
+                "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        randomId: 'test123',\n        withInput: true\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }*/\n}"
             },
             {
                 "name": "Sample",
@@ -1108,7 +1098,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        startDate: new Date(),\n        endDate: new Date(),\n        randomIdStart: '123',\n        randomIdEnd: '456'\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const inputStart = (await canvas.findByTestId(\n            'date-input-123'\n        )) as HTMLInputElement;\n        const inputEnd = (await canvas.findByTestId(\n            'date-input-456'\n        )) as HTMLInputElement;\n\n        const newStartDate = '2025-06-01';\n        const newEndDate = '2025-06-30';\n\n        await userEvent.clear(inputStart);\n        await userEvent.type(inputStart, newStartDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputStart.value).toBe(newStartDate);\n        });\n\n        await userEvent.clear(inputEnd);\n        await userEvent.type(inputEnd, newEndDate);\n\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputEnd.value).toBe(newEndDate);\n        });\n    }\n}"
+                "defaultValue": "{\n    args: {\n        startDate: new Date(),\n        endDate: new Date(),\n        randomIdStart: '123',\n        randomIdEnd: '456'\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const inputStart = (await canvas.findByTestId(\n            'date-input-123'\n        )) as HTMLInputElement;\n        const inputEnd = (await canvas.findByTestId(\n            'date-input-456'\n        )) as HTMLInputElement;\n\n        const newStartDate = '2025-06-01';\n        const newEndDate = '2025-06-30';\n\n        await userEvent.clear(inputStart);\n        await userEvent.type(inputStart, newStartDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputStart.value).toBe(newStartDate);\n        });\n\n        await userEvent.clear(inputEnd);\n        await userEvent.type(inputEnd, newEndDate);\n\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputEnd.value).toBe(newEndDate);\n        });\n    }*/\n}"
             },
             {
                 "name": "Sample",
@@ -1118,7 +1108,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        withInput: true,\n        randomId: 'test123'\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01T14:30';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }\n}"
+                "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        withInput: true,\n        randomId: 'test123'\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01T14:30';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }*/\n}"
             },
             {
                 "name": "Sample",
@@ -1274,21 +1264,21 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        tableItems: contentItems,\n        tableHeight: '200px',\n        tableItemSelected: (event: any) => {\n            action('selected row')(event);\n        }\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        tableItems: contentItems,\n        tableHeight: '200px',\n        tableItemSelected: (event: any) => {\n            action('selected row')(event);\n        }\n    }\n}"
             },
             {
                 "name": "Secondary",
@@ -1628,7 +1618,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            faUp: faUp,\n            faDown: faDown,\n            show: show\n        },\n        template: iconTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        expect(content.classList.contains('hide')).toBe(true);\n        expect(content.classList.contains('show')).toBe(false);\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            faUp: faUp,\n            faDown: faDown,\n            show: show\n        },\n        template: iconTemplateMock\n    })\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n         await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }*/\n}"
             },
             {
                 "name": "WithoutSearchLine",
@@ -1746,17 +1736,6 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CircleBtnComponent>",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
                 "rawtype": "StoryObj<CheckboxComponent>",
                 "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
@@ -1768,8 +1747,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ColorPaletteComponent>",
-                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "rawtype": "StoryObj<CircleBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1781,6 +1760,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<CollapsibleComponent>",
                 "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ColorPaletteComponent>",
+                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2021,8 +2011,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<TableContentComponent>",
-                "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
+                "rawtype": "StoryObj<TableHeaderComponent>",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2032,8 +2022,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<TableHeaderComponent>",
-                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "rawtype": "StoryObj<TableContentComponent>",
+                "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2817,7 +2807,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = await canvas.findByTestId('collapse-header');\n        expect(header).toBeInTheDocument();\n    }\n}"
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    })\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }*/\n}"
                 },
                 {
                     "name": "show",
@@ -2837,7 +2827,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            faUp: faUp,\n            faDown: faDown,\n            show: show\n        },\n        template: iconTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        expect(content.classList.contains('hide')).toBe(true);\n        expect(content.classList.contains('show')).toBe(false);\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            faUp: faUp,\n            faDown: faDown,\n            show: show\n        },\n        template: iconTemplateMock\n    })\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n         await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }*/\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/table/table.stories.ts": [
@@ -3206,16 +3196,6 @@
             ],
             "projects/angular-component-library/src/lib/stories/page.stories.ts": [
                 {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/stories/page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n        const loginButton = canvas.getByRole('button', { name: /Log in/i });\n        await expect(loginButton).toBeInTheDocument();\n        await userEvent.click(loginButton);\n        await expect(loginButton).not.toBeInTheDocument();\n\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n        await expect(logoutButton).toBeInTheDocument();\n    }\n}"
-                },
-                {
                     "name": "LoggedOut",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -3287,7 +3267,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        value: false,\n        mode: EditMode.WRITE\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const checkbox = (await canvas.findByTestId(\n            'checkbox'\n        )) as HTMLInputElement;\n\n        const wasChecked = checkbox.checked;\n\n        await userEvent.click(checkbox);\n\n        await waitFor(() => {\n            expect(checkbox.checked).not.toBe(wasChecked);\n        });\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        value: false,\n        mode: EditMode.WRITE\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const checkbox = (await canvas.findByTestId(\n            'checkbox'\n        )) as HTMLInputElement;\n\n        const wasChecked = checkbox.checked;\n\n        await userEvent.click(checkbox);\n\n        await waitFor(() => {\n            expect(checkbox.checked).not.toBe(wasChecked);\n        });\n    }*/\n}"
                 },
                 {
                     "name": "types",
@@ -3341,7 +3321,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        randomId: 'test123',\n        withInput: true\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        randomId: 'test123',\n        withInput: true\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }*/\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts": [
@@ -3363,7 +3343,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        startDate: new Date(),\n        endDate: new Date(),\n        randomIdStart: '123',\n        randomIdEnd: '456'\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const inputStart = (await canvas.findByTestId(\n            'date-input-123'\n        )) as HTMLInputElement;\n        const inputEnd = (await canvas.findByTestId(\n            'date-input-456'\n        )) as HTMLInputElement;\n\n        const newStartDate = '2025-06-01';\n        const newEndDate = '2025-06-30';\n\n        await userEvent.clear(inputStart);\n        await userEvent.type(inputStart, newStartDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputStart.value).toBe(newStartDate);\n        });\n\n        await userEvent.clear(inputEnd);\n        await userEvent.type(inputEnd, newEndDate);\n\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputEnd.value).toBe(newEndDate);\n        });\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        startDate: new Date(),\n        endDate: new Date(),\n        randomIdStart: '123',\n        randomIdEnd: '456'\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const inputStart = (await canvas.findByTestId(\n            'date-input-123'\n        )) as HTMLInputElement;\n        const inputEnd = (await canvas.findByTestId(\n            'date-input-456'\n        )) as HTMLInputElement;\n\n        const newStartDate = '2025-06-01';\n        const newEndDate = '2025-06-30';\n\n        await userEvent.clear(inputStart);\n        await userEvent.type(inputStart, newStartDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputStart.value).toBe(newStartDate);\n        });\n\n        await userEvent.clear(inputEnd);\n        await userEvent.type(inputEnd, newEndDate);\n\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputEnd.value).toBe(newEndDate);\n        });\n    }*/\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts": [
@@ -3385,7 +3365,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        withInput: true,\n        randomId: 'test123'\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01T14:30';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        withInput: true,\n        randomId: 'test123'\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01T14:30';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }*/\n}"
                 },
                 {
                     "name": "types",
@@ -3827,19 +3807,6 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<CircleBtnComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
                 {
                     "name": "Story",
@@ -3853,13 +3820,13 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts": [
+            "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<ColorPaletteComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                    "rawtype": "StoryObj<CircleBtnComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -3873,6 +3840,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CollapsibleComponent>",
                     "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ColorPaletteComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -4152,19 +4132,6 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<TableContentComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
                 {
                     "name": "Story",
@@ -4172,6 +4139,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<TableHeaderComponent>",
                     "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TableContentComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -6100,16 +6080,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
                 "name": "Story",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/angular-component-library/src/lib/stories/page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedIn",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

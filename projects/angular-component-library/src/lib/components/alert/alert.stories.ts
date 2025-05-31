@@ -65,9 +65,7 @@ export const InfoAlert: Story = {
         const closeIcon = await canvas.findByTestId('close-alert');
         await userEvent.click(closeIcon);
 
-        await waitFor(() => {
-            expect(canvas.queryByTestId('close-alert')).toBeNull();
-        });
+        await expect(canvas.queryByTestId('close-alert')).toBeNull();
     }
 };
 
