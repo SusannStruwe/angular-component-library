@@ -32,7 +32,7 @@ export const Sample: Story = {
     args: {
         value: false,
         mode: EditMode.WRITE
-    },
+    }
     /*play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
 

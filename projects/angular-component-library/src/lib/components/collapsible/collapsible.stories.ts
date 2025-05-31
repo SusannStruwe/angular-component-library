@@ -73,7 +73,7 @@ export const Sample: Story = {
             ...args
         },
         template: defaultTemplateMock
-    }),
+    })
     /*play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
 
@@ -107,7 +107,7 @@ export const WithIcon: Story = {
             show: show
         },
         template: iconTemplateMock
-    }),
+    })
     /*play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
 

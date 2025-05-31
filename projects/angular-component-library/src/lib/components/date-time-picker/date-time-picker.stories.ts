@@ -47,7 +47,7 @@ export const Sample: Story = {
         date: '2025-05-11',
         withInput: true,
         randomId: 'test123'
-    },
+    }
     /*play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
 

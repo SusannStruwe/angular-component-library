@@ -38,7 +38,7 @@ export const Sample: Story = {
         endDate: new Date(),
         randomIdStart: '123',
         randomIdEnd: '456'
-    },
+    }
     /*play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
 
