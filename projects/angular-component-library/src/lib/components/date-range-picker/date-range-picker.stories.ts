@@ -38,8 +38,8 @@ export const Sample: Story = {
         endDate: new Date(),
         randomIdStart: '123',
         randomIdEnd: '456'
-    }
-    /*play: async ({ canvasElement }) => {
+    },
+    play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
 
         const inputStart = (await canvas.findByTestId(
@@ -70,5 +70,5 @@ export const Sample: Story = {
         await waitFor(() => {
             expect(inputEnd.value).toBe(newEndDate);
         });
-    }*/
+    }
 };

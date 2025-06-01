@@ -73,8 +73,8 @@ export const Sample: Story = {
             ...args
         },
         template: defaultTemplateMock
-    })
-    /*play: async ({ canvasElement }) => {
+    }),
+    play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
 
         const header = (await canvas.findByTestId(
@@ -95,7 +95,7 @@ export const Sample: Story = {
             expect(content.classList.contains('show')).toBe(true);
             expect(content.classList.contains('hide')).toBe(false);
         });
-    }*/
+    }
 };
 
 export const WithIcon: Story = {
@@ -107,8 +107,8 @@ export const WithIcon: Story = {
             show: show
         },
         template: iconTemplateMock
-    })
-    /*play: async ({ canvasElement }) => {
+    }),
+    play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
 
         const header = (await canvas.findByTestId(
@@ -118,7 +118,7 @@ export const WithIcon: Story = {
             'collapse-content'
         )) as HTMLInputElement;
 
-         await waitFor(() => {
+        await waitFor(() => {
             expect(content.classList.contains('hide')).toBe(true);
             expect(content.classList.contains('show')).toBe(false);
         });
@@ -129,5 +129,5 @@ export const WithIcon: Story = {
             expect(content.classList.contains('show')).toBe(true);
             expect(content.classList.contains('hide')).toBe(false);
         });
-    }*/
+    }
 };

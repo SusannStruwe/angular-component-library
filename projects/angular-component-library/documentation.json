@@ -508,7 +508,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        title: 'Info Alert',\n        message: 'Info  Message',\n        type: AlertType.INFO,\n        visibleState: true,\n        navigationLink: 'pailot.com',\n        navigationLinkLabel: 'Further informations under pailto.com '\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const closeIcon = await canvas.findByTestId('close-alert');\n        await userEvent.click(closeIcon);\n\n        await waitFor(() => {\n            expect(canvas.queryByTestId('close-alert')).toBeNull();\n        });\n    }\n}"
+                "defaultValue": "{\n    args: {\n        title: 'Info Alert',\n        message: 'Info  Message',\n        type: AlertType.INFO,\n        visibleState: true,\n        navigationLink: 'pailot.com',\n        navigationLinkLabel: 'Further informations under pailto.com '\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const closeIcon = await canvas.findByTestId('close-alert');\n        await userEvent.click(closeIcon);\n\n        await expect(canvas.queryByTestId('close-alert')).toBeNull();\n    }\n}"
             },
             {
                 "name": "Inverted",
@@ -569,6 +569,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        user: {\n            name: 'Jane Doe'\n        }\n    }\n}"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/stories/page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n        const loginButton = canvas.getByRole('button', { name: /Log in/i });\n        await expect(loginButton).toBeInTheDocument();\n        await userEvent.click(loginButton);\n        await expect(loginButton).not.toBeInTheDocument();\n\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n        await expect(logoutButton).toBeInTheDocument();\n    }\n}"
             },
             {
                 "name": "LoggedOut",
@@ -1048,7 +1058,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        value: false,\n        mode: EditMode.WRITE\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const checkbox = (await canvas.findByTestId(\n            'checkbox'\n        )) as HTMLInputElement;\n\n        const wasChecked = checkbox.checked;\n\n        await userEvent.click(checkbox);\n\n        await waitFor(() => {\n            expect(checkbox.checked).not.toBe(wasChecked);\n        });\n    }*/\n}"
+                "defaultValue": "{\n    args: {\n        value: false,\n        mode: EditMode.WRITE\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const checkbox = (await canvas.findByTestId(\n            'checkbox'\n        )) as HTMLInputElement;\n\n        const wasChecked = checkbox.checked;\n\n        await userEvent.click(checkbox);\n\n        await waitFor(() => {\n            expect(checkbox.checked).not.toBe(wasChecked);\n        });\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1068,7 +1078,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    })\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }*/\n}"
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1088,7 +1098,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        randomId: 'test123',\n        withInput: true\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }*/\n}"
+                "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        randomId: 'test123',\n        withInput: true\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1098,7 +1108,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        startDate: new Date(),\n        endDate: new Date(),\n        randomIdStart: '123',\n        randomIdEnd: '456'\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const inputStart = (await canvas.findByTestId(\n            'date-input-123'\n        )) as HTMLInputElement;\n        const inputEnd = (await canvas.findByTestId(\n            'date-input-456'\n        )) as HTMLInputElement;\n\n        const newStartDate = '2025-06-01';\n        const newEndDate = '2025-06-30';\n\n        await userEvent.clear(inputStart);\n        await userEvent.type(inputStart, newStartDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputStart.value).toBe(newStartDate);\n        });\n\n        await userEvent.clear(inputEnd);\n        await userEvent.type(inputEnd, newEndDate);\n\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputEnd.value).toBe(newEndDate);\n        });\n    }*/\n}"
+                "defaultValue": "{\n    args: {\n        startDate: new Date(),\n        endDate: new Date(),\n        randomIdStart: '123',\n        randomIdEnd: '456'\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const inputStart = (await canvas.findByTestId(\n            'date-input-123'\n        )) as HTMLInputElement;\n        const inputEnd = (await canvas.findByTestId(\n            'date-input-456'\n        )) as HTMLInputElement;\n\n        const newStartDate = '2025-06-01';\n        const newEndDate = '2025-06-30';\n\n        await userEvent.clear(inputStart);\n        await userEvent.type(inputStart, newStartDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputStart.value).toBe(newStartDate);\n        });\n\n        await userEvent.clear(inputEnd);\n        await userEvent.type(inputEnd, newEndDate);\n\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputEnd.value).toBe(newEndDate);\n        });\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1108,7 +1118,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        withInput: true,\n        randomId: 'test123'\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01T14:30';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }*/\n}"
+                "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        withInput: true,\n        randomId: 'test123'\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01T14:30';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1618,7 +1628,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            faUp: faUp,\n            faDown: faDown,\n            show: show\n        },\n        template: iconTemplateMock\n    })\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n         await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }*/\n}"
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            faUp: faUp,\n            faDown: faDown,\n            show: show\n        },\n        template: iconTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
             },
             {
                 "name": "WithoutSearchLine",
@@ -2807,7 +2817,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    })\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }*/\n}"
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
                 },
                 {
                     "name": "show",
@@ -2827,7 +2837,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            faUp: faUp,\n            faDown: faDown,\n            show: show\n        },\n        template: iconTemplateMock\n    })\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n         await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }*/\n}"
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            faUp: faUp,\n            faDown: faDown,\n            show: show\n        },\n        template: iconTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/table/table.stories.ts": [
@@ -2943,7 +2953,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        title: 'Info Alert',\n        message: 'Info  Message',\n        type: AlertType.INFO,\n        visibleState: true,\n        navigationLink: 'pailot.com',\n        navigationLinkLabel: 'Further informations under pailto.com '\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const closeIcon = await canvas.findByTestId('close-alert');\n        await userEvent.click(closeIcon);\n\n        await waitFor(() => {\n            expect(canvas.queryByTestId('close-alert')).toBeNull();\n        });\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        title: 'Info Alert',\n        message: 'Info  Message',\n        type: AlertType.INFO,\n        visibleState: true,\n        navigationLink: 'pailot.com',\n        navigationLinkLabel: 'Further informations under pailto.com '\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const closeIcon = await canvas.findByTestId('close-alert');\n        await userEvent.click(closeIcon);\n\n        await expect(canvas.queryByTestId('close-alert')).toBeNull();\n    }\n}"
                 },
                 {
                     "name": "meta",
@@ -3196,6 +3206,16 @@
             ],
             "projects/angular-component-library/src/lib/stories/page.stories.ts": [
                 {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/stories/page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n        const loginButton = canvas.getByRole('button', { name: /Log in/i });\n        await expect(loginButton).toBeInTheDocument();\n        await userEvent.click(loginButton);\n        await expect(loginButton).not.toBeInTheDocument();\n\n        const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n        await expect(logoutButton).toBeInTheDocument();\n    }\n}"
+                },
+                {
                     "name": "LoggedOut",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -3267,7 +3287,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        value: false,\n        mode: EditMode.WRITE\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const checkbox = (await canvas.findByTestId(\n            'checkbox'\n        )) as HTMLInputElement;\n\n        const wasChecked = checkbox.checked;\n\n        await userEvent.click(checkbox);\n\n        await waitFor(() => {\n            expect(checkbox.checked).not.toBe(wasChecked);\n        });\n    }*/\n}"
+                    "defaultValue": "{\n    args: {\n        value: false,\n        mode: EditMode.WRITE\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const checkbox = (await canvas.findByTestId(\n            'checkbox'\n        )) as HTMLInputElement;\n\n        const wasChecked = checkbox.checked;\n\n        await userEvent.click(checkbox);\n\n        await waitFor(() => {\n            expect(checkbox.checked).not.toBe(wasChecked);\n        });\n    }\n}"
                 },
                 {
                     "name": "types",
@@ -3321,7 +3341,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        randomId: 'test123',\n        withInput: true\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }*/\n}"
+                    "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        randomId: 'test123',\n        withInput: true\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts": [
@@ -3343,7 +3363,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        startDate: new Date(),\n        endDate: new Date(),\n        randomIdStart: '123',\n        randomIdEnd: '456'\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const inputStart = (await canvas.findByTestId(\n            'date-input-123'\n        )) as HTMLInputElement;\n        const inputEnd = (await canvas.findByTestId(\n            'date-input-456'\n        )) as HTMLInputElement;\n\n        const newStartDate = '2025-06-01';\n        const newEndDate = '2025-06-30';\n\n        await userEvent.clear(inputStart);\n        await userEvent.type(inputStart, newStartDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputStart.value).toBe(newStartDate);\n        });\n\n        await userEvent.clear(inputEnd);\n        await userEvent.type(inputEnd, newEndDate);\n\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputEnd.value).toBe(newEndDate);\n        });\n    }*/\n}"
+                    "defaultValue": "{\n    args: {\n        startDate: new Date(),\n        endDate: new Date(),\n        randomIdStart: '123',\n        randomIdEnd: '456'\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const inputStart = (await canvas.findByTestId(\n            'date-input-123'\n        )) as HTMLInputElement;\n        const inputEnd = (await canvas.findByTestId(\n            'date-input-456'\n        )) as HTMLInputElement;\n\n        const newStartDate = '2025-06-01';\n        const newEndDate = '2025-06-30';\n\n        await userEvent.clear(inputStart);\n        await userEvent.type(inputStart, newStartDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputStart.value).toBe(newStartDate);\n        });\n\n        await userEvent.clear(inputEnd);\n        await userEvent.type(inputEnd, newEndDate);\n\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputEnd.value).toBe(newEndDate);\n        });\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts": [
@@ -3365,7 +3385,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        withInput: true,\n        randomId: 'test123'\n    }\n    /*play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01T14:30';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }*/\n}"
+                    "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        withInput: true,\n        randomId: 'test123'\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01T14:30';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }\n}"
                 },
                 {
                     "name": "types",
@@ -6080,6 +6100,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
                 "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/stories/page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
