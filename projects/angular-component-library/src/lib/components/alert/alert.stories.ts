@@ -27,7 +27,7 @@ const meta: Meta<AlertComponent> = {
             ]
         })
     ],
-    tags: ['autodocs'],
+    tags: ['autodocs', 'test-only'],
     argTypes: {
         title: { control: 'text', value: '' },
         message: { control: 'text', value: '' },

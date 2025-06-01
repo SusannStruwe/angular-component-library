@@ -5,11 +5,11 @@ const config: TestRunnerConfig = {
     setup() {
         // Add your configuration here.
     },
-    /*tags: {
+    tags: {
         include: ['test-only', 'pages'],
         exclude: ['no-tests', 'tokens'],
         skip: ['skip-test', 'layout']
-    },*/
+    },
     /* Hook to execute before a story is initially visited before being rendered in the browser.
      * The page argument is the Playwright's page object for the story.
      * The context argument is a Storybook object containing the story's id, title, and name.
