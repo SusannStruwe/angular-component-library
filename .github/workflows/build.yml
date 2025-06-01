@@ -96,7 +96,7 @@ jobs:
                   npx http-server storybook-static --port 6006 --silent &
                   npx wait-on http://localhost:6006
                   npm run test-storybook || (echo "❌ Storybook Tests fehlgeschlagen" && exit 1)
-                
+
             - name: Show Storybook Logs on Failure
               if: failure()
               run: cat storybook.log
