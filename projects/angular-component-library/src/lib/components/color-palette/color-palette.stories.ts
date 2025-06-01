@@ -4,7 +4,7 @@ import { ColorPaletteComponent } from './color-palette.component';
 const meta: Meta<ColorPaletteComponent> = {
     title: 'Components/ColorPalette',
     component: ColorPaletteComponent,
-    tags: ['autodocs']
+    tags: ['autodocs', 'test-only']
 };
 export default meta;
 

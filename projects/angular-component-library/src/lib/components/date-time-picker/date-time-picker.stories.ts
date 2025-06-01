@@ -36,7 +36,7 @@ const meta: Meta<DateTimePickerComponent> = {
         dateChange: { action: 'changed' }
     },
     args: { dateChange: fn() },
-    tags: ['autodocs']
+    tags: ['autodocs', 'test-only']
 };
 export default meta;
 

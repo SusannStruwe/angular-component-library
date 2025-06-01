@@ -25,7 +25,7 @@ const meta: Meta<InputComponent> = {
         type: 'text',
         inputChange: fn()
     },
-    tags: ['autodocs']
+    tags: ['autodocs', 'test-only']
 };
 export default meta;
 

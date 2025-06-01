@@ -18,7 +18,7 @@ Instead of this component you can use the tooltip directve \`[tooltip]=" 'text'"
             }
         }
     },
-    tags: ['autodocs']
+    tags: ['autodocs', 'test-only']
 };
 export default meta;
 

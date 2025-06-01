@@ -4,7 +4,7 @@ import { OverviewWrapperComponent } from './overview-wrapper.component';
 const meta: Meta<OverviewWrapperComponent> = {
     title: 'Overview',
     component: OverviewWrapperComponent,
-    tags: ['autodocs']
+    tags: ['autodocs', 'test-only']
 };
 export default meta;
 

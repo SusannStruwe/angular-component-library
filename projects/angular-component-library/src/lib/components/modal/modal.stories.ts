@@ -107,7 +107,7 @@ A few examples are shown in the following:
             }
         }
     },
-    tags: ['autodocs']
+    tags: ['autodocs', 'test-only']
 } as Meta;
 
 type Story = StoryObj<ModalWrapperComponent>;

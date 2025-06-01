@@ -31,7 +31,7 @@ A table content component.
         tableItemSelected: fn(),
         tableHeight: '275px'
     },
-    tags: ['autodocs']
+    tags: ['autodocs', 'test-only']
 };
 export default meta;
 

@@ -25,7 +25,7 @@ const meta: Meta<DurationInputComponent> = {
     args: {
         secondsChange: fn()
     },
-    tags: ['autodocs']
+    tags: ['autodocs', 'test-only']
 };
 export default meta;
 

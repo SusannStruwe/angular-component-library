@@ -52,7 +52,7 @@ const meta: Meta<MultiSelectComponent> = {
         items: [],
         itemsSelected: fn()
     },
-    tags: ['autodocs']
+    tags: ['autodocs', 'test-only']
 };
 export default meta;
 

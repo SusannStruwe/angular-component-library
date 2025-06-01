@@ -18,7 +18,7 @@ A popover component .
             }
         }
     },
-    tags: ['autodocs']
+    tags: ['autodocs', 'test-only']
 };
 export default meta;
 

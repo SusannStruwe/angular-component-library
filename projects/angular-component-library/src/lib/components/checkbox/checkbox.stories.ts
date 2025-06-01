@@ -8,7 +8,7 @@ const types: typeof EditMode = EditMode;
 const meta: Meta<CheckboxComponent> = {
     title: 'Components/Checkbox',
     component: CheckboxComponent,
-    tags: ['autodocs'],
+    tags: ['autodocs', 'test-only'],
     argTypes: {
         value: { control: 'boolean' },
         mode: {

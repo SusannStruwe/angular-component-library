@@ -23,7 +23,7 @@ const meta: Meta<TabsViewComponent> = {
         selectedTabChanged: { action: 'changed' }
     },
     args: { selectedTabChanged: fn() },
-    tags: ['autodocs']
+    tags: ['autodocs', 'test-only']
 };
 export default meta;
 

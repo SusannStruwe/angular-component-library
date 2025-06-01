@@ -39,7 +39,7 @@ const meta: Meta<NavbarBtnComponent> = {
         classStyle: { control: 'text' },
         active: { control: 'boolean' }
     },
-    tags: ['autodocs']
+    tags: ['autodocs', 'test-only']
 };
 export default meta;
 

@@ -56,7 +56,7 @@ const meta: Meta<FilledBtnComponent> = {
         isSpinning: { control: 'boolean' },
         isActive: { control: 'boolean' }
     },
-    tags: ['autodocs']
+    tags: ['autodocs', 'test-only']
 };
 export default meta;
 

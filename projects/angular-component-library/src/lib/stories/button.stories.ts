@@ -7,7 +7,7 @@ import { ButtonComponent } from './button.component';
 const meta: Meta<ButtonComponent> = {
     title: 'Example/Button',
     component: ButtonComponent,
-    tags: ['autodocs'],
+     tags: ['autodocs', 'test-only'],,
     argTypes: {
         backgroundColor: {
             control: 'color'

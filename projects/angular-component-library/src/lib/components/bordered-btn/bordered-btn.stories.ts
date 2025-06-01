@@ -31,6 +31,7 @@ const templateMock = `   <bordered-btn-component
 const meta: Meta<BorderedBtnComponent> = {
     title: 'Components/Buttons/Bordered Btn',
     component: BorderedBtnComponent,
+    tags: ['autodocs', 'test-only'],
     argTypes: {
         ariaLabel: { control: 'text' },
         label: { control: 'text' },
@@ -57,8 +58,7 @@ const meta: Meta<BorderedBtnComponent> = {
         width: { control: 'text' },
         isSpinning: { control: 'boolean' },
         isActive: { control: 'boolean' }
-    },
-    tags: ['autodocs']
+    }
 };
 export default meta;
 

@@ -4,7 +4,7 @@ import { DropzoneComponent } from './dropzone.component';
 const meta: Meta<DropzoneComponent> = {
     title: 'Components/Dropzone',
     component: DropzoneComponent,
-    tags: ['autodocs'],
+     tags: ['autodocs', 'test-only'],,
     argTypes: {
         choseFileLabel: { control: 'text' },
         allowedExtension: { control: 'check', options: ['json'] },

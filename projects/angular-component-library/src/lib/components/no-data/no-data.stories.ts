@@ -7,7 +7,7 @@ const meta: Meta<NoDataComponent> = {
     argTypes: {
         translationKey: { control: 'text' }
     },
-    tags: ['autodocs']
+    tags: ['autodocs', 'test-only']
 };
 export default meta;
 

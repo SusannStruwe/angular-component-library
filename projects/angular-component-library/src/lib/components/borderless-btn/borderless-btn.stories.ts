@@ -29,6 +29,7 @@ const templateMock = `   <borderless-btn-component
 const meta: Meta<BorderlessBtnComponent> = {
     title: 'Components/Buttons/Borderless Btn',
     component: BorderlessBtnComponent,
+    tags: ['autodocs', 'test-only'],
     argTypes: {
         ariaLabel: { control: 'text' },
         label: { control: 'text' },
@@ -55,8 +56,7 @@ const meta: Meta<BorderlessBtnComponent> = {
         width: { control: 'text' },
         isSpinning: { control: 'boolean' },
         isActive: { control: 'boolean' }
-    },
-    tags: ['autodocs']
+    }
 };
 export default meta;
 
