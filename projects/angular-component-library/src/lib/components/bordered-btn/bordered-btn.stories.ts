@@ -31,7 +31,7 @@ const templateMock = `   <bordered-btn-component
 const meta: Meta<BorderedBtnComponent> = {
     title: 'Components/Buttons/Bordered Btn',
     component: BorderedBtnComponent,
-    tags: ['autodocs', 'test-only'],
+    tags: ['autodocs'],
     argTypes: {
         ariaLabel: { control: 'text' },
         label: { control: 'text' },

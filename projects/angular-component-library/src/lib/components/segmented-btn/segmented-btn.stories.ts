@@ -26,7 +26,7 @@ const meta: Meta<SegmentedBtnComponent> = {
         btnSelected: fn(),
         activeBtnChange: fn()
     },
-    tags: ['autodocs', 'test-only']
+    tags: ['autodocs']
 };
 export default meta;
 

@@ -29,7 +29,7 @@ const templateMock = `   <borderless-btn-component
 const meta: Meta<BorderlessBtnComponent> = {
     title: 'Components/Buttons/Borderless Btn',
     component: BorderlessBtnComponent,
-    tags: ['autodocs', 'test-only'],
+    tags: ['autodocs'],
     argTypes: {
         ariaLabel: { control: 'text' },
         label: { control: 'text' },

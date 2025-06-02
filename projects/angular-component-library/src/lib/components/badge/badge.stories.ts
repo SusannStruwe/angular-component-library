@@ -16,7 +16,7 @@ const iconOptions: Record<string, IconDefinition> = {
 const meta: Meta<BadgeComponent> = {
     title: 'Components/Badge',
     component: BadgeComponent,
-    tags: ['autodocs', 'test-only'],
+    tags: ['autodocs'],
     argTypes: {
         label: { control: 'text' },
         borderRadius: { control: 'number' },

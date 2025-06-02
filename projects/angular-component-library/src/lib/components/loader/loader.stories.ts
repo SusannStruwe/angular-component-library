@@ -41,7 +41,7 @@ const meta: Meta<LoaderComponent> = {
     args: {
         paddingTop: '20%'
     },
-    tags: ['autodocs', 'test-only']
+    tags: ['autodocs']
 };
 export default meta;
 

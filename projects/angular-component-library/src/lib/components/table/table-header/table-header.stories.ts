@@ -40,7 +40,7 @@ A table header component.
         sortColumnChange: fn(),
         selectFilterChange: fn()
     },
-    tags: ['autodocs', 'test-only']
+    tags: ['autodocs']
 };
 export default meta;
 

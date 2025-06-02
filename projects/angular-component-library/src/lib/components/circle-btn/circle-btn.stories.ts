@@ -20,7 +20,7 @@ const iconOptions: Record<string, IconDefinition> = {
 const meta: Meta<CircleBtnComponent> = {
     title: 'Components/Buttons/Circle Btn',
     component: CircleBtnComponent,
-    tags: ['autodocs', 'test-only'],
+    tags: ['autodocs'],
     argTypes: {
         ariaLabel: { control: 'text' },
         faIcon: {

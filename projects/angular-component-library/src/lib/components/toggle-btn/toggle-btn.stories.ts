@@ -13,7 +13,7 @@ const meta: Meta<ToggleBtnComponent> = {
         checkedChange: { action: 'changed' }
     },
     args: { checkedChange: fn() },
-    tags: ['autodocs', 'test-only']
+    tags: ['autodocs']
 };
 export default meta;
 

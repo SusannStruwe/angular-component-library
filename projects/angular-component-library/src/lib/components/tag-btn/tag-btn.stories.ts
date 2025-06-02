@@ -11,7 +11,7 @@ const meta: Meta<TagBtnComponent> = {
         removeTagSelected: { action: 'changed' }
     },
     args: { removeTagSelected: fn() },
-    tags: ['autodocs', 'test-only']
+    tags: ['autodocs']
 };
 export default meta;
 

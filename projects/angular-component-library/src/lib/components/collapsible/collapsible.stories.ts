@@ -61,7 +61,7 @@ const meta: Meta<CollapsibleComponent> = {
             };
         }
     ],
-    tags: ['autodocs', 'test-only']
+    tags: ['autodocs']
 };
 export default meta;
 

@@ -25,7 +25,7 @@ const meta: Meta<DatePickerComponent> = {
         dateChanged: { action: 'changed', value: true }
     },
     args: { dateChanged: fn() },
-    tags: ['autodocs', 'test-only']
+    tags: ['autodocs']
 };
 export default meta;
 

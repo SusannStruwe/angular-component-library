@@ -21,7 +21,7 @@ const meta: Meta<SearchInputComponent> = {
         filterChange: { action: 'change' }
     },
     args: { filterChange: fn() },
-    tags: ['autodocs', 'test-only']
+    tags: ['autodocs']
 };
 export default meta;
 

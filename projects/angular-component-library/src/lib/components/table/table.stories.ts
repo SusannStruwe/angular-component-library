@@ -69,7 +69,7 @@ Note: Every logic to sort the content has to be implemented by yourself. You hav
             }
         }
     },
-    tags: ['autodocs', 'test-only']
+    tags: ['autodocs']
 };
 export default meta;
 
