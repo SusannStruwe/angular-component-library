@@ -352,17 +352,26 @@
 
     <div class="grid-2-2" [style.column-gap.em]="1" [style.margin-top.em]="2">
         <div class="flex-column">
-            <table-header-component
-                [headerItemsTasks]="headerItems"
-                [searchFilters]="filters">
-            </table-header-component>
+            <table-component [style.width]="'400px'" [scrollbarWidth]="15">
+                <div header>
+                    <table-header-component
+                        [headerItemsTasks]="headerItems"
+                        [tableStyle]="lightStyle"
+                        [searchFilters]="filters">
+                    </table-header-component>
+                </div>
+            </table-component>
+           
         </div>
         <div class="flex-column">
-            <table-header-component
-                [tableStyle]="lightStyle"
-                [headerItemsTasks]="headerItems"
-                [searchFilters]="filters">
-            </table-header-component>
+            <table-component [style.width]="'400px'" [scrollbarWidth]="15">
+                <div header>
+                    <table-header-component
+                        [headerItemsTasks]="headerItems"
+                        [searchFilters]="filters">
+                    </table-header-component>
+                </div>
+            </table-component>
         </div>
     </div>
 </div>

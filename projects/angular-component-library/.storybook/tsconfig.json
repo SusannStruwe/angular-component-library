@@ -9,7 +9,7 @@
     "include": [
         "../src/**/*.stories.*",
         "./preview.ts",
-        "../src/lib/tokens/Color.mdx"
+        "../src/lib/tokens/*.mdx"
     ],
     "files": ["./typings.d.ts"]
 }

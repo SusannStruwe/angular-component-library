@@ -31,6 +31,7 @@ import { SelectStyle } from '../model/select-style.enum';
 import { TableHeaderComponent } from '../components/table/table-header/table-header.component';
 import { filters, headerItems } from './util';
 import { TableStyle } from '../model/table-style.enum';
+import { TableComponent } from 'angular-component-library';
 
 /**
  * This is a wrapper component to give an overview oever all components
@@ -66,6 +67,7 @@ import { TableStyle } from '../model/table-style.enum';
         BorderlessBtnComponent,
         FilledBtnComponent,
         CircleBtnComponent,
+        TableComponent,
         TableHeaderComponent
     ],
     templateUrl: './overview-wrapper.component.html'
@@ -119,4 +121,5 @@ export class OverviewWrapperComponent {
     headerItems = headerItems;
     filters = filters;
     lightStyle = TableStyle.LIGHT;
+    tableStyle = TableStyle.DARK;
 }
