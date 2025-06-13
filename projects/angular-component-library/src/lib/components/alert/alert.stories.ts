@@ -57,7 +57,7 @@ export const InfoAlert: Story = {
         type: AlertType.INFO,
         visibleState: true,
         navigationLink: 'pailot.com',
-        navigationLinkLabel: 'Further informations under pailto.com '
+        navigationLinkLabel: 'Further informations under pailot.com '
     },
     play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
