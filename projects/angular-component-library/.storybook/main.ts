@@ -8,7 +8,8 @@ const config: StorybookConfig = {
         '@storybook/addon-essentials',
         '@storybook/addon-onboarding',
         '@storybook/addon-interactions',
-        '@storybook/addon-a11y'
+        '@storybook/addon-a11y',
+        { name: 'storybook-design-token', options: { preserveCSSVars: true } }
     ],
     framework: {
         name: '@storybook/angular',
@@ -23,9 +24,9 @@ const config: StorybookConfig = {
                 ? configType.toLowerCase()
                 : 'development';
 
-        config.performance = {
+        /*config.performance = {
             hints: false
-        };
+        };*/
         // Remove old DefinePlugin with NODE_ENV
         config.plugins = config.plugins?.filter(
             (plugin) =>
