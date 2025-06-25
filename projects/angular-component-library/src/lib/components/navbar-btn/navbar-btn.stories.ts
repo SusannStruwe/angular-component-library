@@ -47,12 +47,14 @@ type Story = StoryObj<NavbarBtnComponent>;
 
 export const Sample: Story = {
     args: {
+        label: 'navbar-btn',
         faIcon: faCheck
     }
 };
 
 export const Active: Story = {
     args: {
+        label: 'navbar-btn',
         active: true,
         faIcon: faInfoCircle
     }
@@ -60,6 +62,7 @@ export const Active: Story = {
 
 export const Disabled: Story = {
     args: {
+        label: 'navbar-btn',
         disabled: true,
         faIcon: faInfoCircle
     }

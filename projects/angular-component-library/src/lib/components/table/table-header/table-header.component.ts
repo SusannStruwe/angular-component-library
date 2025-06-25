@@ -12,8 +12,8 @@ import { SortColumnEvent } from '../../../model/sort-column-event.model';
 import { TableStyle } from '../../../model/table-style.enum';
 
 export interface SelectFilterChangeEvent {
-  filteredValues: string[];            
-  headerItem: ColumnHeaderItem;
+    filteredValues: string[];
+    headerItem: ColumnHeaderItem;
 }
 
 /**
@@ -67,7 +67,13 @@ export class TableHeaderComponent {
         this.sortColumnChange.emit(sortEvent);
     }
 
-    filterRowsBySelect(filteredValues: string[], headerItem: ColumnHeaderItem): void {
-        this.selectFilterChange.emit({ filteredValues: filteredValues, headerItem: headerItem});
+    filterRowsBySelect(
+        filteredValues: string[],
+        headerItem: ColumnHeaderItem
+    ): void {
+        this.selectFilterChange.emit({
+            filteredValues: filteredValues,
+            headerItem: headerItem
+        });
     }
 }
