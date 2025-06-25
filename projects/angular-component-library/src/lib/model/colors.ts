@@ -1,5 +1,3 @@
-import { Injectable } from '@angular/core';
-
 /**
  * Color class to manage colors
  */
