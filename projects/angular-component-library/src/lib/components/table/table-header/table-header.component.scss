@@ -122,8 +122,15 @@ h4 {
     border: none;
     width: 100%;
     border: 2px solid transparent;
+    font-family: var(--font-family);
 }
 
+::ng-deep .multi-select {
+
+    .filter-btn {
+        border: none;
+    }
+}
 
 .light {
 
@@ -151,6 +158,16 @@ h4 {
             background-color: var(--table-light-bg-color);
         }
     }
+
+    ::ng-deep .multi-select {
+
+        .filter-btn {
+            fa-icon {
+                color: var(--table-light-color);
+            }
+        }
+    }
+
 }
 
 
@@ -177,7 +194,16 @@ h4 {
         }       
 
         &:first-of-type {
-            background-color: var(--table-dark-color);
+            background-color: var(--table-dark-bg-color);
+        }
+    }
+
+    ::ng-deep .multi-select {
+
+        .filter-btn {
+            fa-icon {
+                color: var(--fa-icon-color);
+            }
         }
     }
 }
@@ -187,6 +213,25 @@ Media query to add hover only on device which support hover
 *********************************************/
 
 @media (hover: hover) {
+    .dark, .light {
+
+        ::ng-deep .multi-select {
+
+            .filter-btn {
+                &:hover, &:focus, &:focus-visible {
+                    background-color: transparent !important;
+                    border: none !important;
+
+                    fa-icon {
+                        color: var(--accent-color);
+                    }
+                }
+
+            }
+        }
+    }
+
+
     .search-input  {
 
         &:hover, &:focus, &:focus-visible {

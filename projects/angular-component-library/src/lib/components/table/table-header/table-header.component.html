@@ -19,7 +19,7 @@
                         [faIcon]="faFilter"
                         [withFilter]="true"
                         [noPadding]="true"
-                        (itemsSelected)="filterRowsBySelect(item)">
+                        (itemsSelected)="filterRowsBySelect($event, item)">
                     </multi-select-component>
                 }
             </div>

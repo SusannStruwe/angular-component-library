@@ -28,7 +28,7 @@ body {
     --menu-background: #fff;
     --table-light-bg-color: #fff;
     --table-light-color: #67768E;
-    --table-dark-color: #222;
+    --table-dark-bg-color: #222;
     --tabs-background: #111;
     --tabs-content-color: #f3f3f3;
     --tab-color: #cccccc;
@@ -116,7 +116,7 @@ body {
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
 
-    --font-size: 17px;
+    --font-size: 16px;
     --ic-font-size: 1.2em;
 
     /**
@@ -245,7 +245,7 @@ p {
 }
 
 span {
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-light);
 }
 
 i,

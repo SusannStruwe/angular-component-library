@@ -11,6 +11,11 @@ import { SearchFilter } from '../../../model/search-filter.model';
 import { SortColumnEvent } from '../../../model/sort-column-event.model';
 import { TableStyle } from '../../../model/table-style.enum';
 
+export interface SelectFilterChangeEvent {
+  filteredValues: string[];            
+  headerItem: ColumnHeaderItem;
+}
+
 /**
  * Component to create and show table header
  *
@@ -49,7 +54,7 @@ export class TableHeaderComponent {
 
     @Output() searchFilterChange = new EventEmitter<SearchFilter[]>();
     @Output() sortColumnChange = new EventEmitter<SortColumnEvent>();
-    @Output() selectFilterChange = new EventEmitter<ColumnHeaderItem>();
+    @Output() selectFilterChange = new EventEmitter<SelectFilterChangeEvent>();
 
     faSort = Icons.faSort;
     faFilter = Icons.faFilter;
@@ -62,7 +67,7 @@ export class TableHeaderComponent {
         this.sortColumnChange.emit(sortEvent);
     }
 
-    filterRowsBySelect(headerItem: ColumnHeaderItem): void {
-        this.selectFilterChange.emit(headerItem);
+    filterRowsBySelect(filteredValues: string[], headerItem: ColumnHeaderItem): void {
+        this.selectFilterChange.emit({ filteredValues: filteredValues, headerItem: headerItem});
     }
 }

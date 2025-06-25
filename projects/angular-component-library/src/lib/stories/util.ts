@@ -29,7 +29,7 @@ export enum DefaultColumKeys {
 export const headerItems: ColumnHeaderItem[] = [
     new ColumnHeaderItem('Id', 'id', ColumnType.STRING, false),
     new ColumnHeaderItem('Name', 'name', ColumnType.STRING, false),
-    new ColumnHeaderItem('Email', 'email', ColumnType.STRING, false)
+    new ColumnHeaderItem('Email', 'email', ColumnType.STRING, true)
 ];
 
 export const filters = getSearchFilters(headerItems);
