@@ -1,15 +1,12 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { NoDataComponent } from './no-data.component';
 
-
 const defaultTemplateMock = `   <no-data-component>
         <div content>
             <p> Inner Content </p>
         </div>
     </no-data-component>
  `;
-
-
 
 const meta: Meta<NoDataComponent> = {
     title: 'Components/No Data',
@@ -28,7 +25,6 @@ export const Sample: Story = {
         translationKey: 'data.noData'
     }
 };
-
 
 export const SampleNgContent: Story = {
     render: () => ({
