@@ -25,7 +25,9 @@ const config: StorybookConfig = {
                 : 'development';
 
         config.performance = {
-            hints:false
+            // hints:false
+            maxAssetSize: 5000000, // 5MB
+            maxEntrypointSize: 5000000
         };
         // Remove old DefinePlugin with NODE_ENV
         config.plugins = config.plugins?.filter(
