@@ -8,7 +8,11 @@ import { Component } from '@angular/core';
     selector: 'tabs-view-mock-component',
     template: templateMock
 })
-class TabsViewMockComponent {}
+class TabsViewMockComponent {
+    selectedTabChanged(_: any): void {
+        // no-op
+    }
+}
 
 describe('TabsViewComponent', () => {
     let component: TabsViewMockComponent;

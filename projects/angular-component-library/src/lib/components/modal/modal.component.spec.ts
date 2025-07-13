@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
 import { ModalComponent } from './modal.component';
 
@@ -16,6 +15,7 @@ describe('ModalComponent', () => {
         fixture = TestBed.createComponent(ModalComponent);
 
         component = fixture.componentInstance;
+        component.id = 'test-modal';
 
         fixture.detectChanges();
     });
