@@ -31,7 +31,7 @@ import { SelectStyle } from '../model/select-style.enum';
 import { TableHeaderComponent } from '../components/table/table-header/table-header.component';
 import { filters, headerItems } from './util';
 import { TableStyle } from '../model/table-style.enum';
-import { TableComponent } from 'angular-component-library';
+import { TableComponent } from '../components/table/table.component';
 
 /**
  * This is a wrapper component to give an overview oever all components

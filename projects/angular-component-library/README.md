@@ -115,6 +115,8 @@ On export error delete cache in .angular folder
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+Run `ng test --code-coverage` to get test coverage summary
+
 ### Running storybook
 
 Run `ng run angular-component-library:storybook`
