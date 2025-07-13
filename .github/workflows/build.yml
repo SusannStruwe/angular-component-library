@@ -14,22 +14,26 @@ jobs:
             - name: Checkout repo
               uses: actions/checkout@v4
 
-            - name: Cache node modules
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+
+            - name: Cache node modules and Playwright browsers
               id: cache-node
               uses: actions/cache@v3
               with:
                   path: |
                       ~/.npm
                       node_modules
-                  key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: 20
+                      ~/.cache/ms-playwright
+                  key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}-playwright
 
             - name: Install npm dependencies
               run: npm install
+
+            - name: Install Playwright Browsers
+              run: npx playwright install --with-deps
 
     prettier:
         name: Check formatting
@@ -77,16 +81,14 @@ jobs:
             - name: Checkout repo
               uses: actions/checkout@v4
 
-            - name: Restore node modules cache
+            - name: Restore cache
               uses: actions/cache@v3
               with:
                   path: |
                       ~/.npm
                       node_modules
-                  key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-
-            - name: Install Playwright
-              run: npx playwright install --with-deps
+                      ~/.cache/ms-playwright
+                  key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}-playwright
 
             - name: Build Storybook
               run: npm run build-storybook --quiet > storybook.log 2>&1
