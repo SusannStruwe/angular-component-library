@@ -71,7 +71,7 @@ jobs:
                   key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
             - name: Run Karma tests (Headless Chrome)
-              run: npm run test -- --watch=false --browsers=ChromeHeadless
+              run: npx ng test --watch=false --browsers=ChromeHeadless
 
     storybook-test:
         name: Run storybook tests
