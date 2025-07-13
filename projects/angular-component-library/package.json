@@ -26,7 +26,8 @@
     "sideEffects": false,
     "exports": {
         ".": {
-            "sass": "./assets/styles.scss"
+            "sass": "./assets/styles.scss",
+            "default": "./public-api"
         }
     }
 }
