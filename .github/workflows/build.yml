@@ -100,11 +100,11 @@ jobs:
             - name: Show Storybook Logs on Failure
               if: failure()
               run: cat storybook.log
-              
+
             - name: Debug Log Output
               if: always()
               run: |
-                echo "====== STORYBOOK LOG ======"
-                cat storybook.log || echo "Log not found"
-                echo "====== STORYBOOK STATIC DIR ======"
-                ls -la storybook-static || echo "Directory not found"
+                  echo "====== STORYBOOK LOG ======"
+                  cat storybook.log || echo "Log not found"
+                  echo "====== STORYBOOK STATIC DIR ======"
+                  ls -la storybook-static || echo "Directory not found"
