@@ -55,7 +55,7 @@ jobs:
                   path: |
                       ~/.npm
                       node_modules
-                  key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+                  key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}-playwright
 
             - name: Check code formatting with Prettier
               run: npx prettier --check .
@@ -74,7 +74,7 @@ jobs:
                   path: |
                       ~/.npm
                       node_modules
-                  key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+                  key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}-playwright
 
             - name: Show ng binary
               run: ls -la node_modules/.bin/ng
