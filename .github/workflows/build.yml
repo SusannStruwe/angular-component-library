@@ -35,12 +35,6 @@ jobs:
             - name: Install Playwright Browsers
               run: npx playwright install --with-deps
 
-            - name: Show installed binaries
-              run: ls -la node_modules/.bin
-
-            - name: Run tests
-              run: npm run test -- --watch=false --browsers=ChromeHeadless
-
     prettier:
         name: Check formatting
         runs-on: ubuntu-latest
@@ -56,9 +50,6 @@ jobs:
                       ~/.npm
                       node_modules
                   key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}-playwright
-
-            - name: Show installed binaries
-              run: ls -la node_modules/.bin
 
             - name: Check code formatting with Prettier
               run: npx prettier --check .
@@ -77,10 +68,8 @@ jobs:
                   path: |
                       ~/.npm
                       node_modules
+                      ~/.cache/ms-playwright
                   key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}-playwright
-
-            - name: Show installed binaries
-              run: ls -la node_modules/.bin
 
             - name: Run Karma tests (Headless Chrome)
               run: npm run test -- --watch=false --browsers=ChromeHeadless
