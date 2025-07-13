@@ -13,7 +13,7 @@ describe('ModalComponent', () => {
         }).compileComponents();
 
         fixture = TestBed.createComponent(ModalComponent);
-        
+
         component = fixture.componentInstance;
         component.id = 'test-modal';
 
