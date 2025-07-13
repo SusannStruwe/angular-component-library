@@ -76,14 +76,11 @@ jobs:
                       node_modules
                   key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}-playwright
 
-            - name: Show ng binary
-              run: ls -la node_modules/.bin/ng
+            - name: Show installed binaries
+              run: ls -la node_modules/.bin
 
             - name: Run Karma tests (Headless Chrome)
-              run: npx ng test --watch=false --browsers=ChromeHeadless
-
-            - name: Run Karma tests
-              run: ./node_modules/.bin/ng test --watch=false --browsers=ChromeHeadless
+              run: npm run test -- --watch=false --browsers=ChromeHeadless
 
     storybook-test:
         name: Run storybook tests
