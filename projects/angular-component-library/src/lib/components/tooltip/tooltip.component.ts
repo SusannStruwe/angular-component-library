@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 /**
@@ -11,14 +11,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
  * ```
  */
 @Component({
-  selector: 'tooltip-component',
-  standalone: true,
-  imports: [FontAwesomeModule],
-  templateUrl: './tooltip.component.html',
-  styleUrls: ['./tooltip.component.scss'],
+    selector: 'tooltip-component',
+    standalone: true,
+    imports: [FontAwesomeModule],
+    templateUrl: './tooltip.component.html',
+    styleUrls: ['./tooltip.component.scss']
 })
 export class TooltipComponent {
-  tooltip = '';
-  left = 0;
-  top = 0;
+    tooltip = 'Tooltip';
+    left = 0;
+    top = 0;
 }

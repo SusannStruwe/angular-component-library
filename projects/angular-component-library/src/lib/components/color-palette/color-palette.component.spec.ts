@@ -2,34 +2,33 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ColorPaletteComponent } from './color-palette.component';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
 import { By } from '@angular/platform-browser';
-import { ColorService } from '../../services/color.service';
+import { Colors } from '../../model/colors';
 
 describe('ColorPaletteComponent', () => {
-  let component: ColorPaletteComponent;
-  let fixture: ComponentFixture<ColorPaletteComponent>;
-  const colorService = new ColorService();
-  const colorLength = colorService.getColors().length;
+    let component: ColorPaletteComponent;
+    let fixture: ComponentFixture<ColorPaletteComponent>;
+    const colorLength = Colors.standard.concat(Colors.cssColors).length;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [ColorPaletteComponent, FontAwesomeTestingModule],
-      providers: [ColorService],
-    }).compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [ColorPaletteComponent, FontAwesomeTestingModule],
+            providers: []
+        }).compileComponents();
 
-    fixture = TestBed.createComponent(ColorPaletteComponent);
+        fixture = TestBed.createComponent(ColorPaletteComponent);
 
-    component = fixture.componentInstance;
-    component.colors = colorService.getColors();
+        component = fixture.componentInstance;
+        component.colors = Colors.standard.concat(Colors.cssColors);
 
-    fixture.detectChanges();
-  });
+        fixture.detectChanges();
+    });
 
-  it('should create color palette component', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create color palette component', () => {
+        expect(component).toBeTruthy();
+    });
 
-  it('color items length should equal to color service colors length', () => {
-    const items = fixture.debugElement.queryAll(By.css('.color-item'));
-    expect(items.length).toEqual(colorLength);
-  });
+    it('color items length should equal to color service colors length', () => {
+        const items = fixture.debugElement.queryAll(By.css('.color-item'));
+        expect(items.length).toEqual(colorLength);
+    });
 });

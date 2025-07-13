@@ -1,144 +1,146 @@
 :host {
-  display: inline-block;
+    display: inline-block;
 }
 
 button {
-  position: relative;
-  height: var(--btn-height);
-  line-height: var(--btn-height);
-  padding: var(--btn-padding);
-  border: 0;
-  border-radius: var(--border-radius);
-  font-weight: var(--font-weight-light);
-  font-size: var(--font-size);
-  background: white;
-  color: var(--accent-color);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-
-  fa-icon {
+    position: relative;
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    padding: var(--btn-padding);
+    border: 0;
+    border-radius: var(--border-radius);
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    background: white;
     color: var(--accent-color);
-  }
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 
-  span {
-    margin: 0px 5px;
-  }
+    fa-icon {
+        color: var(--accent-color);
+    }
 
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
+    span {
+        margin: 0px 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
 }
 
 /************************************
 Filling
 **************************************/
 .filling {
-  color: var(--accent-color);
-  background: transparent;
-  background-image: linear-gradient(var(--accent-color), var(--accent-color));
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  transition:
-    background-size 0.5s,
-    color 0.5s;
-
-  fa-icon {
     color: var(--accent-color);
-  }
+    background: transparent;
+    background-image: linear-gradient(var(--accent-color), var(--accent-color));
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.5s, color 0.5s;
 
-  &:hover,
-  &.active {
-    &:not([disabled]) {
-      background-size: 100% 100%;
-      color: var(--fa-icon-color);
-
-      fa-icon {
-        color: var(--fa-icon-color);
-      }
+    fa-icon {
+        color: var(--accent-color);
     }
-  }
+
+    &:hover,
+    &.active {
+        &:not([disabled]) {
+            background-size: 100% 100%;
+            color: var(--fa-icon-color);
+
+            fa-icon {
+                color: var(--fa-icon-color);
+            }
+        }
+    }
 }
 
 .filling.gray {
-  color: var(var(--btn-color));
-  background-image: linear-gradient(
-    var(var(--btn-color)),
-    var(var(--btn-color))
-  );
-
-  fa-icon {
     color: var(var(--btn-color));
-  }
+    background-image: linear-gradient(
+        var(var(--btn-color)),
+        var(var(--btn-color))
+    );
 
-  &:hover,
-  &.active {
-    &:not([disabled]) {
-      color: var(--accent-color);
-
-      fa-icon {
-        color: var(--accent-color);
-      }
+    fa-icon {
+        color: var(var(--btn-color));
     }
-  }
+
+    &:hover,
+    &.active {
+        &:not([disabled]) {
+            color: var(--accent-color);
+
+            fa-icon {
+                color: var(--accent-color);
+            }
+        }
+    }
 }
 
 /***************************
 Simple hover
 ********************************/
 .simple {
-  color: var(--accent-color);
-  background: transparent;
-
-  fa-icon {
     color: var(--accent-color);
-  }
+    background: transparent;
 
-  &:active,
-  &.active {
-    &:not([disabled]) {
-      background-color: var(--accent-color);
-      color: var(--fa-icon-color);
-      background-image: var(--darken-gradient);
-
-      fa-icon {
-        color: var(--fa-icon-color);
-      }
+    fa-icon {
+        color: var(--accent-color);
     }
-  }
+
+    &:active,
+    &.active {
+        &:not([disabled]) {
+            background-color: var(--accent-color);
+            color: var(--fa-icon-color);
+            background-image: var(--darken-gradient);
+
+            fa-icon {
+                color: var(--fa-icon-color);
+            }
+        }
+    }
 }
 
 /************************************
 Deleted
 **************************************/
 .delete {
-  color: var(--delete-color);
-  background: transparent;
-
-  fa-icon {
     color: var(--delete-color);
-  }
+    background: transparent;
 
-  &:active {
-    &:not([disabled]) {
-      background-color: var(--delete-color);
-      color: var(--fa-icon-color);
-
-      fa-icon {
-        color: var(--fa-icon-color);
-      }
+    fa-icon {
+        color: var(--delete-color);
     }
-  }
+
+    &:active {
+        &:not([disabled]) {
+            background-color: var(--delete-color);
+            color: var(--fa-icon-color);
+
+            fa-icon {
+                color: var(--fa-icon-color);
+            }
+        }
+    }
 }
 
 .small {
-  height: var(--btn-small-height);
-  line-height: var(--btn-small-height);
-  padding: var(--btn-small-padding);
+    height: var(--btn-small-height);
+    line-height: var(--btn-small-height);
+    padding: var(--btn-small-padding);
 }
 
 /************************************
@@ -146,15 +148,15 @@ Disabled
 **************************************/
 button:disabled,
 button[disabled] {
-  opacity: 0.5;
-  background-size: 0% 100%;
-  cursor: not-allowed;
+    opacity: 0.5;
+    background-size: 0% 100%;
+    cursor: not-allowed;
 
-  &:hover::before,
-  &:hover::after {
-    width: 0%;
-    height: 0%;
-  }
+    &:hover::before,
+    &:hover::after {
+        width: 0%;
+        height: 0%;
+    }
 }
 
 /***************************************************************
@@ -162,38 +164,38 @@ Media query to hide hover effects for devices
 that do not support them, like touch displays
 **************************************************************/
 @media (hover: hover) {
-  .simple {
-    &:hover,
-    &.active {
-      &:not([disabled]) {
-        background-color: var(--accent-color);
-        color: var(--fa-icon-color);
-        background-image: var(--darken-gradient);
+    .simple {
+        &:hover,
+        &.active {
+            &:not([disabled]) {
+                background-color: var(--accent-color);
+                color: var(--fa-icon-color);
+                background-image: var(--darken-gradient);
 
-        fa-icon {
-          color: var(--fa-icon-color);
+                fa-icon {
+                    color: var(--fa-icon-color);
+                }
+            }
         }
-      }
-    }
-    &:active:not([disabled]) {
-      background-color: var(--accent-color-dark);
-    }
-  }
-
-  .delete {
-    &:hover,
-    &.active {
-      &:not([disabled]) {
-        background-color: var(--delete-color);
-        color: var(--fa-icon-color);
-
-        fa-icon {
-          color: var(--fa-icon-color);
+        &:active:not([disabled]) {
+            background-color: var(--accent-color-dark);
         }
-      }
     }
-    &:active:not([disabled]) {
-      background-color: var(--delete-color);
+
+    .delete {
+        &:hover,
+        &.active {
+            &:not([disabled]) {
+                background-color: var(--delete-color);
+                color: var(--fa-icon-color);
+
+                fa-icon {
+                    color: var(--fa-icon-color);
+                }
+            }
+        }
+        &:active:not([disabled]) {
+            background-color: var(--delete-color);
+        }
     }
-  }
 }

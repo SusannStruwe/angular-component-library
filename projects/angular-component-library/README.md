@@ -15,7 +15,7 @@ The library includes a list of different interaction components:
 - collapsible
 - color-palette
 - context-menu
-- costum-select
+- custom-select
 - date-picker
 - date-range-picker
 - date-time-picker
@@ -38,31 +38,32 @@ The library includes a list of different interaction components:
 - toggle-btn
 - tooltip
 
-## Link library with target dev project
+## Development
 
-Run `link:lib` script. After that a linked folder will be created in `AppData\Roaming\nvm\<version>\node_modules`. Now run the following command in the target project:
+### How to add new component
 
-> npm link angular-component-library
+- create new folder unter component
+- add component
+- add tests (spec and stories)
+- add component in public-api.ts
 
-## Code scaffolding
+### Code scaffolding
 
 Run `ng generate component component-name --project angular-component-library` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project angular-component-library`.
 
 > Note: Don't forget to add `--project angular-component-library` or else it will be added to the default project in your `angular.json` file.
 
-## Build
+### Run development server
 
-Run `ng build angular-component-library` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Publishing
+### Link library with target dev project
 
-After building your library with `ng build angular-component-library`, go to the dist folder `cd dist/angular-component-library` and run `npm publish`.
+Run `link:lib` script. After that a linked folder will be created in `AppData\Roaming\nvm\<version>\node_modules`. Now run the following command in the target project:
 
-## Running unit tests
+> npm link angular-component-library
 
-Run `ng test angular-component-library` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Link and Watch Library
+### Link and Watch Library
 
 Run `cd dist/angular-component-library && npm link` to create a link.
 
@@ -72,9 +73,63 @@ The built library’s /dist folder will later be used by the demo app. --watch m
 
 In the target project run `npm link angular-component-library` install the library if not already seen and then run `ng serve`.
 
-## Further help
+## Build
 
-Run `ng build --configuration production` to build lib and run `cd dist/angular-component-library && npm pack` to pack and create lib in dist folder
+### Build lib for prod
+
+> ng build angular-component-library --configuration production"
+
+### Build lib for prod and pack lib
+
+```
+ng build angular-component-library --configuration production
+
+cd dist/angular-component-library && npm pack
+```
+
+## Use lib in target project and run:
+
+Create a `lib` folder in the target project and copy packed lib into the folder.
+
+Install the library in the target project:
+`npm install libs\angular-component-library-0.0.1.tgz`
+
+Optional:
+Add `"preserveSymlinks": true` to build -> options in angular.json.
+
+```
+"build": {
+    "builder": "@angular-devkit/build-angular:application",
+    "options": {
+    "outputPath": "dist/test-imp",
+    "index": "src/index.html",
+    "browser": "src/main.ts",
+    "preserveSymlinks": true,
+```
+
+On export error delete cache in .angular folder
+
+## Running
+
+### Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+Run `ng test --code-coverage` to get test coverage summary
+
+### Running storybook
+
+Run `ng run angular-component-library:storybook`
+
+Navigate to `http://localhost:6006`
+
+### Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Publishing
+
+After building your library with `ng build angular-component-library`, go to the dist folder `cd dist/angular-component-library` and run `npm publish`.
 
 ## Version Infos
 

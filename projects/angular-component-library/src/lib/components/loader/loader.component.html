@@ -1,19 +1,19 @@
-<div class="loader-container">
-  @if (loaderStyle && animation) {
-    <div [ngClass]="[loaderStyle, animation]">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  }
-  @if (loaderStyle && !animation) {
-    <div [ngClass]="[loaderStyle]">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  }
-  @if (label) {
-    <p>{{ label }}</p>
-  }
+<div class="loader-container" [style.padding-top]="paddingTop">
+    @if (loaderStyle && animation) {
+        <div [ngClass]="[loaderStyle, animation]">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    }
+    @if (loaderStyle && !animation) {
+        <div [ngClass]="[loaderStyle]">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    }
+    @if (label) {
+        <p>{{ label }}</p>
+    }
 </div>

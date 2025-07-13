@@ -15,21 +15,21 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
  * ```
  */
 @Component({
-  selector: 'navbar-btn-component',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
-  templateUrl: './navbar-btn.component.html',
-  styleUrls: ['./navbar-btn.component.scss'],
+    selector: 'navbar-btn-component',
+    standalone: true,
+    imports: [CommonModule, FontAwesomeModule],
+    templateUrl: './navbar-btn.component.html',
+    styleUrls: ['./navbar-btn.component.scss']
 })
 export class NavbarBtnComponent {
-  @Input() label?: string;
+    @Input() label?: string;
 
-  @Input() faIcon?: IconDefinition;
+    @Input() faIcon?: IconDefinition;
 
-  @Input() disabled?: boolean;
-  // example --> gray, delete
-  @Input() classStyle?: string = '';
+    @Input() disabled?: boolean = false;
+    // example --> gray, delete
+    @Input() classStyle?: string = '';
 
-  // example --> active or not
-  @Input() active?: boolean;
+    // example --> active or not
+    @Input() active?: boolean;
 }

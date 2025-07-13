@@ -1,75 +1,80 @@
 @if (selectedItem) {
-  <div
-    class="flex"
-    (clickOutside)="handleClickOutside()"
-    [ngClass]="[show ? 'selected' : '', classStyle ?? '']">
-    <button
-      id="select-component"
-      #btn
-      [ngClass]="[show ? 'selected' : '', classStyle ?? '']"
-      [attr.title]="'Select'"
-      [attr.aria-label]="'Select'"
-      [attr.aria-haspopup]="'menu'"
-      [attr.aria-expanded]="show"
-      (click)="toggleMenu()">
-      @if (faIconBefore) {
-        <span class="icon-before">
-          <fa-icon [icon]="faIconBefore"></fa-icon>
-        </span>
-      }
-      @if (label) {
-        <span class="label-before">{{ label }}</span>
-      }
-      @if (selectedItem.text || selectedItem.displayBtnText) {
-        <span class="select-text">
-          {{ selectedItem.displayBtnText ?? selectedItem.text }}</span
-        >
-      }
-      <span>
-        @if (faIcon) {
-          <fa-icon [icon]="faIcon"> </fa-icon>
-        }
-      </span>
-    </button>
     <div
-      #menu
-      class="menu popup-shadow"
-      [class.show]="show"
-      [class.hide]="!show"
-      [ngClass]="alignmentLeft() ? 'left' : 'right'">
-      @if (withFilter) {
-        <search-input-component
-          [style.margin.em]="'0.25'"
-          [classStyles]="'full-width no-radius'"
-          [placeholderText]="filterPlaceholder"
-          [(filter)]="filter"
-          (filterChange)="filterAndSort()">
-        </search-input-component>
-      }
-      <ul>
-        @if (withBlankOption) {
-          <li
-            (click)="selectEmptyElement()"
-            [class.active]="'' === selectedItem.text">
-            <span class="text"></span>
-          </li>
-        }
-        @for (item of items; track i; let i = $index) {
-          <li
-            id="s-item-{{ i }}"
-            (click)="selectElement(item)"
-            [ngClass]="item.icon && item.localTimestamp ? 'grid' : 'flex'"
-            [class.active]="
-              item.text === selectedItem.text &&
-              item.localTimestamp === selectedItem.localTimestamp
-            ">
-            @if (item.icon) {
-              <fa-icon [icon]="item.icon"></fa-icon>
+        class="flex"
+        (clickOutside)="handleClickOutside()"
+        [ngClass]="[show ? 'selected' : '', classStyle ?? '']">
+        <button
+            id="select-component"
+            #btn
+            [ngClass]="[show ? 'selected' : '', classStyle ?? '']"
+            [attr.title]="'Select'"
+            [attr.aria-label]="'Select'"
+            [attr.aria-haspopup]="'menu'"
+            [attr.aria-expanded]="show"
+            [style.max-width]="width ?? ''"
+            [style.min-width]="width ?? ''"
+            [style.width]="width ?? ''"
+            (click)="toggleMenu()">
+            @if (faIconBefore) {
+                <span class="icon-before">
+                    <fa-icon [icon]="faIconBefore"></fa-icon>
+                </span>
             }
-            <span class="text">{{ item.text }}</span>
-          </li>
-        }
-      </ul>
+            @if (label) {
+                <span class="label-before">{{ label }}</span>
+            }
+            @if (selectedItem.text || selectedItem.displayBtnText) {
+                <span class="select-text">
+                    {{ selectedItem.displayBtnText ?? selectedItem.text }}</span
+                >
+            }
+            <span>
+                <fa-icon [icon]="faIcon"> </fa-icon>
+            </span>
+        </button>
+        <div
+            #menu
+            class="menu popup-shadow"
+            [class.show]="show"
+            [class.hide]="!show"
+            [style.width]="width"
+            [style.max-height]="menuHeight"
+            [ngClass]="alignmentLeft() ? 'left' : 'right'">
+            @if (withFilter) {
+                <search-input-component
+                    [style.margin.em]="'0.25'"
+                    [classStyles]="'full-width no-radius'"
+                    [placeholderText]="filterPlaceholder"
+                    [(filter)]="filter"
+                    (filterChange)="filterAndSort()">
+                </search-input-component>
+            }
+            <ul tabindex="0">
+                @if (withBlankOption) {
+                    <li
+                        (click)="selectEmptyElement()"
+                        [class.active]="'' === selectedItem.text">
+                        <span class="text"></span>
+                    </li>
+                }
+                @for (item of items; track i; let i = $index) {
+                    <li
+                        id="s-item-{{ i }}"
+                        (click)="selectElement(item)"
+                        [ngClass]="
+                            item.icon && item.localTimestamp ? 'grid' : 'flex'
+                        "
+                        [class.active]="
+                            item.text === selectedItem.text &&
+                            item.localTimestamp === selectedItem.localTimestamp
+                        ">
+                        @if (item.icon) {
+                            <fa-icon [icon]="item.icon"></fa-icon>
+                        }
+                        <span class="text">{{ item.text }}</span>
+                    </li>
+                }
+            </ul>
+        </div>
     </div>
-  </div>
 }

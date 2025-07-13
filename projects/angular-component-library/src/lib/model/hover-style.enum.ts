@@ -1,7 +1,6 @@
 export enum HoverStyle {
-  SHINING = 'shining',
-  FILLING = 'filling',
-  SIMPLE = 'simple',
-  RIPPLE = 'ripple',
-  INVERTED = 'inverted',
+    SHINING = 'shining',
+    FILLING = 'filling',
+    SIMPLE = 'simple',
+    INVERTED = 'inverted'
 }

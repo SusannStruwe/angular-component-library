@@ -1,0 +1,20 @@
+<div content [ngClass]="[tableStyle ?? '']">
+    <cdk-virtual-scroll-viewport
+        itemSize="46"
+        [style.min-height]="tableHeight"
+        tabindex="0"
+        role="region">
+        <div
+            class="table-row"
+            *cdkVirtualFor="let item of tableItems"
+            [class.active]="item.id === selectedTableItem"
+            (click)="tableItemClicked(item)">
+            @for (
+                extension of item.columns | keyvalue: asIsOrder;
+                track extension
+            ) {
+                <div>{{ extension.value }}</div>
+            }
+        </div>
+    </cdk-virtual-scroll-viewport>
+</div>

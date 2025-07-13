@@ -1,11 +1,13 @@
 <date-picker-component
-  [date]="startDate"
-  (startDateChange)="startChanged($event)">
+    [date]="startDate"
+    [randomId]="randomIdStart"
+    (startDateChange)="startChanged($event)">
 </date-picker-component>
 
 <p>-</p>
 
 <date-picker-component
-  [date]="startDate"
-  (startDateChange)="endChanged($event)">
+    [date]="endDate"
+    [randomId]="randomIdEnd"
+    (startDateChange)="endChanged($event)">
 </date-picker-component>

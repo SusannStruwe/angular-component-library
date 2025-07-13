@@ -1,21 +1,21 @@
 :host {
-  display: inline-block;
+    display: inline-block;
 }
 
 .no-data {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  column-gap: 10px;
-  padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    padding: 25px;
 
-  span {
-    color: var(--text-color);
-  }
+    span {
+        color: var(--text-color);
+    }
 
-  fa-icon {
-    color: var(--text-color);
-    font-size: 2em;
-  }
+    fa-icon {
+        color: var(--text-color);
+        font-size: 2em;
+    }
 }

@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
 import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  ElementRef,
-  EventEmitter,
-  Input,
-  OnChanges,
-  Output,
-  ViewChild,
+    ChangeDetectionStrategy,
+    ChangeDetectorRef,
+    Component,
+    ElementRef,
+    EventEmitter,
+    Input,
+    OnChanges,
+    Output,
+    ViewChild
 } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
@@ -29,132 +29,133 @@ import { FormsModule } from '@angular/forms';
  * ```
  */
 @Component({
-  selector: 'multi-select-component',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FontAwesomeModule,
-    FormsModule,
-    ClickOutsideDirective,
-    SearchInputComponent,
-  ],
-  templateUrl: './multi-select.component.html',
-  styleUrls: ['./multi-select.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'multi-select-component',
+    standalone: true,
+    imports: [
+        CommonModule,
+        FontAwesomeModule,
+        FormsModule,
+        ClickOutsideDirective,
+        SearchInputComponent
+    ],
+    templateUrl: './multi-select.component.html',
+    styleUrls: ['./multi-select.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MultiSelectComponent implements OnChanges {
-  @Input() items: string[] = [];
-  @Input() label = '';
-  @Input() faIcon?: IconDefinition;
-  @Input() withFilter?: boolean;
-  @Input() filterPlaceholder?: string;
-  @Input() classStyle?: string;
-  @Input() backgroundColor?: string;
+    @Input() items: string[] = [];
+    @Input() label = '';
+    @Input() faIcon?: IconDefinition;
+    @Input() withFilter?: boolean;
+    @Input() filterPlaceholder?: string;
+    @Input() backgroundColor?: string;
+    @Input() noPadding?: boolean = false;
 
-  @Output() itemsSelected = new EventEmitter<string[]>();
+    @Output() itemsSelected = new EventEmitter<string[]>();
 
-  @ViewChild('filterInput') filterInput?: ElementRef<HTMLDivElement>;
-  @ViewChild('btn') btn?: ElementRef<HTMLDivElement>;
-  @ViewChild('menu') menu?: ElementRef<HTMLDivElement>;
+    @ViewChild('filterInput') filterInput?: ElementRef<HTMLDivElement>;
+    @ViewChild('btn') btn?: ElementRef<HTMLDivElement>;
+    @ViewChild('menu') menu?: ElementRef<HTMLDivElement>;
 
-  itemsBefore: string[] = [];
-  selectedItems: string[] = [];
-  filter = '';
-  show = false;
+    itemsBefore: string[] = [];
+    selectedItems: string[] = [];
+    filter = '';
+    show = false;
 
-  randomId: string = Math.floor(Math.random() * 16777215).toString(16);
+    randomId: string = Math.floor(Math.random() * 16777215).toString(16);
 
-  constructor(private changedDetectorRef: ChangeDetectorRef) {}
+    constructor(private changedDetectorRef: ChangeDetectorRef) {}
 
-  ngOnChanges() {
-    this.selectedItems = [];
-    this.itemsBefore = JSON.parse(JSON.stringify(this.items));
-  }
-
-  /**
-   * Toggle show state of menu
-   */
-  toggleFilter(): void {
-    this.show = !this.show;
-  }
-
-  /**
-   * Updates alignment of menu to left or right according to the available space
-   * @returns
-   */
-  alignmentLeft(): boolean {
-    const boundingMenu = this.menu?.nativeElement.getBoundingClientRect();
-    const boundingBtn = this.btn?.nativeElement.getBoundingClientRect();
-
-    if (boundingBtn && boundingMenu) {
-      const right = document.body.scrollWidth - boundingBtn.right;
-      //as long as there is enough space on the right, align it to the left
-      return right > boundingMenu.width;
-    } else {
-      return false;
+    ngOnChanges() {
+        this.selectedItems = [];
+        this.itemsBefore = JSON.parse(JSON.stringify(this.items));
     }
-  }
 
-  /**
-   * Handles click outside of menu to close menu
-   */
-  handleClickOutside(): void {
-    if (this.show) {
-      this.show = !this.show;
+    /**
+     * Toggle show state of menu
+     */
+    toggleFilter(): void {
+        this.show = !this.show;
     }
-  }
 
-  /**
-   * Removes selected element
-   * @param item
-   */
-  removeElement(item: string): void {
-    this.selectedItems = this.selectedItems.filter((el) => el !== item);
-    this.items.push(item);
-    this.items = this.getSortedList(this.items);
-    this.changedDetectorRef.detectChanges();
-    this.itemsSelected.emit(this.selectedItems);
-  }
+    /**
+     * Updates alignment of menu to left or right according to the available space
+     * @returns
+     */
+    alignmentLeft(): boolean {
+        const boundingMenu = this.menu?.nativeElement.getBoundingClientRect();
+        const boundingBtn = this.btn?.nativeElement.getBoundingClientRect();
 
-  /**
-   * Select element
-   * @param item
-   */
-  selectElement(item: string): void {
-    this.selectedItems.push(item);
-    this.items = this.items.filter((el) => el !== item);
-    this.items = this.getSortedList(this.items);
-    this.changedDetectorRef.detectChanges();
-    this.itemsSelected.emit(this.selectedItems);
-  }
+        if (boundingBtn && boundingMenu) {
+            const right = document.body.scrollWidth - boundingBtn.right;
+            //as long as there is enough space on the right, align it to the left
+            return right > boundingMenu.width;
+        } else {
+            return false;
+        }
+    }
 
-  /**
-   * Compares elements in menu alphabetically by text param
-   * @param list
-   * @returns
-   */
-  getSortedList(list: string[]): string[] {
-    list = list.sort((a, b) => a.localeCompare(b));
-    return list;
-  }
+    /**
+     * Handles click outside of menu to close menu
+     */
+    handleClickOutside(): void {
+        if (this.show) {
+            this.show = !this.show;
+        }
+    }
 
-  /**
-   * Checks if item is in filtered array
-   * @param item
-   * @returns
-   */
-  isInFilterArray(item: string): boolean {
-    return this.selectedItems.some((el: string) => el === item);
-  }
+    /**
+     * Removes selected element
+     * @param item
+     */
+    removeElement(item: string): void {
+        this.selectedItems = this.selectedItems.filter((el) => el !== item);
+        this.items.push(item);
+        this.items = this.getSortedList(this.items);
+        this.changedDetectorRef.detectChanges();
+        this.itemsSelected.emit(this.selectedItems);
+    }
 
-  /**
-   * Filters list
-   */
-  filterAndSort(): void {
-    this.items = this.itemsBefore.filter(
-      (item: string) =>
-        !this.filter || item.toLowerCase().includes(this.filter.toLowerCase()),
-    );
-    this.items = this.items.filter((el) => !this.isInFilterArray(el));
-  }
+    /**
+     * Select element
+     * @param item
+     */
+    selectElement(item: string): void {
+        this.selectedItems.push(item);
+        this.items = this.items.filter((el) => el !== item);
+        this.items = this.getSortedList(this.items);
+        this.changedDetectorRef.detectChanges();
+        this.itemsSelected.emit(this.selectedItems);
+    }
+
+    /**
+     * Compares elements in menu alphabetically by text param
+     * @param list
+     * @returns
+     */
+    getSortedList(list: string[]): string[] {
+        list = list.sort((a, b) => a.localeCompare(b));
+        return list;
+    }
+
+    /**
+     * Checks if item is in filtered array
+     * @param item
+     * @returns
+     */
+    isInFilterArray(item: string): boolean {
+        return this.selectedItems.some((el: string) => el === item);
+    }
+
+    /**
+     * Filters list
+     */
+    filterAndSort(): void {
+        this.items = this.itemsBefore.filter(
+            (item: string) =>
+                !this.filter ||
+                item.toLowerCase().includes(this.filter.toLowerCase())
+        );
+        this.items = this.items.filter((el) => !this.isInFilterArray(el));
+    }
 }

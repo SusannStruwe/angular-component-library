@@ -2,9 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
-import { AlertType } from '../../model/alert-type.enum';
 import { RouterModule } from '@angular/router';
-import { IconService } from '../../services/icon.service';
+import { Icons } from '../../model/icons';
+import { AlertType } from '../../model/alert-type.enum';
 
 /**
  * Component to create and show alert.
@@ -19,43 +19,37 @@ import { IconService } from '../../services/icon.service';
  * ```
  */
 @Component({
-  selector: 'alert-component',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule, RouterModule],
-  templateUrl: './alert.component.html',
-  styleUrls: ['./alert.component.scss'],
+    selector: 'alert-component',
+    standalone: true,
+    imports: [CommonModule, FontAwesomeModule, RouterModule],
+    templateUrl: './alert.component.html',
+    styleUrls: ['./alert.component.scss']
 })
 export class AlertComponent {
-  @Input() title = '';
-  // message to display, realized as htmlInput
-  @Input() message = '';
-  // info, success, error, waring
-  @Input() type: AlertType = AlertType.SUCCESS;
-  // if state is true, alert is shown
-  @Input() visibleState = false;
+    @Input() title = '';
+    // message to display, realized as htmlInput
+    @Input() message = '';
+    // info, success, error, waring
+    @Input() type: AlertType = AlertType.SUCCESS;
+    // if state is true, alert is shown
+    @Input() visibleState = false;
 
-  @Input() navigationLink?: string;
-  @Input() navigationLinkLabel?: string;
+    @Input() navigationLink?: string;
+    @Input() navigationLinkLabel?: string;
 
-  //with 'Change' add the end you can realize two-way-binding
-  @Output() visibleStateChange = new EventEmitter<boolean>();
+    //with 'Change' add the end you can realize two-way-binding
+    @Output() visibleStateChange = new EventEmitter<boolean>();
 
-  faErrorIcon: IconDefinition;
-  faWarningIcon: IconDefinition;
-  faSuccessIcon: IconDefinition;
-  faInfoIcon: IconDefinition;
-  faClose: IconDefinition;
+    faErrorIcon: IconDefinition = Icons.faError;
+    faWarningIcon: IconDefinition = Icons.faWarning;
+    faSuccessIcon: IconDefinition = Icons.faSuccess;
+    faInfoIcon: IconDefinition = Icons.faInfo;
+    faClose: IconDefinition = Icons.faXmark;
 
-  constructor(private iconService: IconService) {
-    this.faErrorIcon = this.iconService.faError;
-    this.faWarningIcon = this.iconService.faWarning;
-    this.faSuccessIcon = this.iconService.faSuccess;
-    this.faInfoIcon = this.iconService.faInfo;
-    this.faClose = this.iconService.faXmark;
-  }
+    AlertType = AlertType;
 
-  removeAlert(): void {
-    this.visibleState = false;
-    this.visibleStateChange.emit(this.visibleState);
-  }
+    removeAlert(): void {
+        this.visibleState = false;
+        this.visibleStateChange.emit(this.visibleState);
+    }
 }

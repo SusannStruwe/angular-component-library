@@ -1,0 +1,240 @@
+
+:host {
+    font-weight: var(--font-weight-normal);
+    font-size: 0.8em;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-top-right-radius: var(--table-border-radius);
+    border-top-left-radius: var(--table-border-radius);
+}
+
+div {
+    width: 100%;
+}
+
+.flex-column {
+    row-gap: 0px;
+    border-top-right-radius: var(--table-border-radius);
+    border-top-left-radius: var(--table-border-radius);
+
+    & > div {
+        border-right: 1px solid var(--border-color);
+        cursor: pointer;
+    }
+
+    .flex-item {
+        flex: 1 1 0;
+    }
+}
+
+.sort {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+
+    h2 {
+        margin: 0em;
+        line-height: var(--btn-height);
+        color: white;
+        box-sizing: border-box;
+        max-width: 150px !important;
+        font-weight: var(--font-weight-semibold);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &.withSelect {
+        width: calc(100% - 40px);
+    }
+}
+
+h4 {
+    color: white;
+    padding: 0.5em;
+}
+
+
+.table-row {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    left: 0;
+    column-gap: 0;
+    border-top-left-radius: var(--table-border-radius);
+
+    & > div {
+        box-sizing: border-box;
+        flex-basis: 100%;
+        text-align: center;
+        text-overflow: ellipsis;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+        span {
+            width: 10px;
+        }
+
+        &.overflow {
+            overflow: hidden;
+            height: var(--btn-height);
+        }
+
+        &.center {
+            justify-content: center;
+        }
+    }
+
+    .flex-item {
+        flex: 1 1 0;
+        width: 0;
+        min-width: 75px;
+    }
+
+    &:first-of-type {
+        background-color: var(--accent-color);
+    }
+
+    &:last-of-type {
+        border-bottom: 1px solid var(--border-color);
+
+        & > div {
+            &:last-of-type {
+                border-right: none;
+            }
+        }
+    }
+}
+
+.search-input {
+    margin: 0.5em 0.5em;
+    height: 35px;
+    text-align: center;
+    min-width: 60px;
+    border: none;
+    width: 100%;
+    border: 2px solid transparent;
+    font-family: var(--font-family);
+}
+
+::ng-deep .multi-select {
+
+    .filter-btn {
+        border: none;
+    }
+}
+
+.light {
+
+    .sort {
+        h2 {
+            color: var(--table-light-color);
+        }
+
+        fa-icon {
+             color: var(--table-light-color);
+        }
+    }
+    
+    .table-row {
+
+        .flex-item {
+            padding: 0em 0.5em;
+
+            & > div {
+                justify-content: flex-start;
+            }
+        }       
+
+        &:first-of-type {
+            background-color: var(--table-light-bg-color);
+        }
+    }
+
+    ::ng-deep .multi-select {
+
+        .filter-btn {
+            fa-icon {
+                color: var(--table-light-color);
+            }
+        }
+    }
+
+}
+
+
+.dark {
+
+    .sort {
+        h2 {
+            color: var(--fa-icon-color);
+        }
+
+        fa-icon {
+             color: var(--fa-icon-color);
+        }
+    }
+    
+    .table-row {
+
+        .flex-item {
+            padding: 0em 0.5em;
+            
+            & > div {
+                justify-content: flex-start;
+            }
+        }       
+
+        &:first-of-type {
+            background-color: var(--table-dark-bg-color);
+        }
+    }
+
+    ::ng-deep .multi-select {
+
+        .filter-btn {
+            fa-icon {
+                color: var(--fa-icon-color);
+            }
+        }
+    }
+}
+
+/************************************************
+Media query to add hover only on device which support hover
+*********************************************/
+
+@media (hover: hover) {
+    .dark, .light {
+
+        ::ng-deep .multi-select {
+
+            .filter-btn {
+                &:hover, &:focus, &:focus-visible {
+                    background-color: transparent !important;
+                    border: none !important;
+
+                    fa-icon {
+                        color: var(--accent-color);
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    .search-input  {
+
+        &:hover, &:focus, &:focus-visible {
+            outline:none;
+            border: 2px solid var(--accent-color);
+        }
+    }
+}

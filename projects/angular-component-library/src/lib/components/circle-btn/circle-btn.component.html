@@ -1,12 +1,12 @@
 <button
-  [ngClass]="[styleClass]"
-  [style.background]="backgroundColor"
-  [class.active]="isActive"
-  [attr.title]="ariaLabel"
-  [attr.aria-label]="ariaLabel"
-  [disabled]="isDisabled">
-  @if (faIcon) {
-    <fa-icon [icon]="faIcon" [animation]="isSpinning ? 'spin' : undefined">
-    </fa-icon>
-  }
+    [ngClass]="[classStyle]"
+    [style.background]="backgroundColor"
+    [class.active]="isActive"
+    [attr.title]="ariaLabel"
+    [attr.aria-label]="ariaLabel"
+    [disabled]="isDisabled">
+    @if (faIcon) {
+        <fa-icon [icon]="faIcon" [animation]="isSpinning ? 'spin' : undefined">
+        </fa-icon>
+    }
 </button>

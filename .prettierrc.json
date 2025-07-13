@@ -1,4 +1,15 @@
 {
-  "singleQuote": true,
-  "bracketSameLine": true
+    "singleQuote": true,
+    "bracketSameLine": true,
+    "useTabs": false,
+    "trailingComma": "none",
+    "tabWidth": 4,
+    "overrides": [
+        {
+            "files": "*.html",
+            "options": {
+                "parser": "angular"
+            }
+        }
+    ]
 }

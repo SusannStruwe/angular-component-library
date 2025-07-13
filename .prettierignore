@@ -1,0 +1,7 @@
+
+# Ignore all SASS files:
+*.scss
+
+# Ignore .angular and dist folder
+.angular/
+dist

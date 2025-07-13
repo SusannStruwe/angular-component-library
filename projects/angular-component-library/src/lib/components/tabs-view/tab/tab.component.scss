@@ -1,22 +1,22 @@
 :host {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
 }
 
 .tab-content {
-  display: inline-block;
-  position: absolute;
-  top: var(--tab-bg-height);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: auto;
-  text-align: center;
-  background-color: var(--tabs-content-color);
-  border-top: 1px solid var(--tabs-background);
+    display: inline-block;
+    position: absolute;
+    top: var(--tab-bg-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    text-align: center;
+    background-color: var(--tabs-content-color);
+    border-top: 1px solid var(--tabs-background);
 }
 
 [hidden] {
-  display: none !important;
+    display: none !important;
 }

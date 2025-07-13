@@ -29,6 +29,11 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
+# Storybook
+storybook-static
+storybook-static/documentation.json
+/projects/angular-component-library/documentation.json
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/
@@ -41,3 +46,5 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+*storybook.log

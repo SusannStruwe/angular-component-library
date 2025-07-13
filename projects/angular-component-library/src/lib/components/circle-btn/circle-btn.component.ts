@@ -15,28 +15,28 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
  * ```
  */
 @Component({
-  selector: 'circle-btn-component',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
-  templateUrl: './circle-btn.component.html',
-  styleUrls: ['./circle-btn.component.scss'],
+    selector: 'circle-btn-component',
+    standalone: true,
+    imports: [CommonModule, FontAwesomeModule],
+    templateUrl: './circle-btn.component.html',
+    styleUrls: ['./circle-btn.component.scss']
 })
 export class CircleBtnComponent {
-  @Input() ariaLabel: string = '';
+    @Input() ariaLabel: string = 'circle-btn';
 
-  @Input() faIcon?: IconDefinition;
+    @Input() faIcon?: IconDefinition;
 
-  @Input() isDisabled?: boolean;
-  // example --> spin or not
-  @Input() isSpinning = false;
-  // example --> active or not
-  @Input() isActive?: boolean;
+    @Input() isDisabled?: boolean;
+    // example --> spin or not
+    @Input() isSpinning = false;
+    // example --> active or not
+    @Input() isActive?: boolean;
 
-  @Input() backgroundColor?: string;
+    @Input() backgroundColor?: string;
 
-  // example --> gray, delete
-  @Input() styleClass?: string = '';
+    // example --> gray, delete
+    @Input() classStyle?: string = '';
 
-  // example --> 100% or not
-  @Input() width?: string;
+    // example --> 100% or not
+    @Input() width?: string;
 }

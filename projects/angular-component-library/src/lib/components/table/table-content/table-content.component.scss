@@ -1,0 +1,225 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.table-row {
+    height: var(--row-height);
+
+    div {
+        text-align: left;
+        padding-left: 10px;
+    }
+}
+
+
+.table-row,
+.table-row-collapse {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+
+    &:active:not([disabled]),
+    &.active {
+        background-image: linear-gradient(
+            var(--row-highlight-color),
+            var(--row-highlight-color)
+        ) !important;
+        color: var(--accent-color);
+    }
+
+    &.no-hover {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    & > div {
+        flex-basis: 100%;
+        border-right: 1px solid var(--border-color);
+        box-sizing: border-box;
+        height: var(--row-height);
+        line-height: var(--row-height);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding: 0em 0.5em;
+        line-height: 45px;
+        font-size: 0.9em;
+        white-space: nowrap;
+
+        span {
+            font-weight: var(--font-weight-light);
+        }
+
+        &:last-of-type {
+            border-right: 1px solid var(--border-color);
+        }
+    }
+
+    /** collapsable redesign *****/
+    .collapsible-table {
+        width: 100%;
+
+        .collapsible-header {
+            width: 100%;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .collapsible-table-header {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            box-sizing: border-box;
+            height: var(--btn-height);
+
+            & > div {
+                flex-basis: 100%;
+                border-right: 1px solid var(--border-color);
+                box-sizing: border-box;
+                height: calc(var(--row-height) - 3px);
+                line-height: calc(var(--row-height) - 3px);
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding: 0em 0.5em;
+                font-size: 0.9em;
+                align-items: center;
+                word-wrap: break-word;
+
+                span {
+                    font-weight: var(--font-weight-light);
+                }
+
+                &:last-of-type {
+                    border-right: 1px solid var(--border-color);
+                }
+            }
+
+            &.active {
+                background-color: var(--row-highlight-color);
+                color: var(--accent-color);
+                fa-icon {
+                    color: var(--accent-color);
+                }
+            }
+        }
+
+        .collapse-cell {
+            display: grid;
+            grid-template-columns: 0.5fr 3fr;
+            justify-items: center;
+            align-items: center;
+
+            fa-icon {
+                color: var(--text-color);
+                width: var(--btn-height);
+            }
+        }
+
+        .collapsible-content {
+            margin: 0;
+            background-color: white;
+            border: none;
+            border-top: 1px solid var(--border-color);
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+
+.light {
+    
+    .table-row,
+    .table-row-collapse {
+
+        & > div {
+            border-right: none;
+
+            &:last-of-type {
+                border-right: 1px solid var(--border-color);
+            }
+        }
+
+        .collapsible-table {
+
+            .collapsible-header {
+                border: none;
+            }
+
+            .collapsible-table-header {
+
+                & > div {
+
+                    border-right: none;
+
+                    &:last-of-type {
+                        border-right: 1px solid var(--border-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.dark {
+
+    .table-row,
+    .table-row-collapse {
+
+        & > div {
+            border-right: none;
+
+            &:last-of-type {
+                border-right: 1px solid var(--border-color);
+            }
+        }
+
+        .collapsible-table {
+
+            .collapsible-header {
+                border: none;
+            }
+
+            .collapsible-table-header {
+
+                & > div {
+
+                    border-right: none;
+
+                    &:last-of-type {
+                        border-right: 1px solid var(--border-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/************************************************
+Media query to add hover only on device which support hover
+*********************************************/
+
+@media (hover: hover) {
+    .table-row {
+        &:hover:not([disabled]):not(.inner-table) {
+            background-color: var(--row-highlight-color);
+            color: var(--primary-color);
+        }
+
+        &:active:not([disabled]) {
+            background-color: var(--accend-color-light);
+            color: var(--primary-color);
+        }
+    }
+}

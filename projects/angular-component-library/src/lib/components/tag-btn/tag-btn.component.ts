@@ -1,8 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { faClose } from '@fortawesome/free-solid-svg-icons';
-import { IconService } from '../../services/icon.service';
+import { Icons } from '../../model/icons';
 
 /**
  * Component to create a tag.
@@ -15,29 +14,25 @@ import { IconService } from '../../services/icon.service';
  * ```
  */
 @Component({
-  selector: 'tag-btn-component',
-  standalone: true,
-  imports: [FontAwesomeModule],
-  templateUrl: './tag-btn.component.html',
-  styleUrls: ['./tag-btn.component.scss'],
+    selector: 'tag-btn-component',
+    standalone: true,
+    imports: [FontAwesomeModule],
+    templateUrl: './tag-btn.component.html',
+    styleUrls: ['./tag-btn.component.scss']
 })
 export class TagBtnComponent {
-  @Input() label?: string;
+    @Input() label?: string;
 
-  @Input() backgroundColor?: string;
+    @Input() backgroundColor?: string;
 
-  @Output() removeTagSelected = new EventEmitter<string>();
+    @Output() removeTagSelected = new EventEmitter<string>();
 
-  faClose: IconDefinition = faClose;
+    faClose: IconDefinition = Icons.faXmark;
 
-  constructor(private iconService: IconService) {
-    this.faClose = this.iconService.faXmark;
-  }
-
-  /**
-   * Remove tag
-   */
-  removeTag() {
-    this.removeTagSelected.emit(this.label);
-  }
+    /**
+     * Remove tag
+     */
+    removeTag() {
+        this.removeTagSelected.emit(this.label);
+    }
 }

@@ -1,0 +1,42 @@
+<div class="flex-column" [ngClass]="[tableStyle ?? '']">
+    <div class="table-row">
+        @for (item of headerItemsTasks; track item; let i = $index) {
+            <div class="flex-item" #cellWidthHeader>
+                <div
+                    sortColumn
+                    [sortable]="item"
+                    [sortDirection]="
+                        item.property === 'submitted_at' ? 'desc' : ''
+                    "
+                    (sort)="sortColumn($event)"
+                    [ngClass]="item.canFiltered ? 'sort withSelect' : 'sort'">
+                    <h2>{{ item.title }}</h2>
+                    <fa-icon [icon]="faSort"></fa-icon>
+                </div>
+                @if (item.canFiltered && multiSelectList) {
+                    <multi-select-component
+                        [items]="multiSelectList[item.property]"
+                        [faIcon]="faFilter"
+                        [withFilter]="true"
+                        [noPadding]="true"
+                        (itemsSelected)="filterRowsBySelect($event, item)">
+                    </multi-select-component>
+                }
+            </div>
+        }
+    </div>
+    @if (searchFilters.length !== 0 && showSearchLine) {
+        <div class="table-row">
+            @for (item of headerItemsTasks; track item; let i = $index) {
+                <div #cellWidthSubHeader class="center">
+                    <input
+                        type="text"
+                        class="search-input"
+                        [(ngModel)]="searchFilters[i].value"
+                        (ngModelChange)="filterRowsByInput()"
+                        placeholder="{{ 'general.search' | translate }}" />
+                </div>
+            }
+        </div>
+    }
+</div>

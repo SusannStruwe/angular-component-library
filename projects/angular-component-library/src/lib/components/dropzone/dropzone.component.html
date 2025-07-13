@@ -1,46 +1,48 @@
 <div
-  class="dropzone"
-  [style.height.px]="dropHeight"
-  dragDropFile
-  (filesChangeEmitter)="onFileChange($event)">
-  <div class="text-wrapper">
-    <div class="centered">
-      <input
-        id="file-{{ randomId }}"
-        type="file"
-        name="file-{{ randomId }}"
-        (change)="onInputFileChange($event)"
-        multiple />
-      <label for="file-{{ randomId }}">
-        <span class="upload-btn ripple">
-          <fa-icon [icon]="faUpload"></fa-icon>
-          {{ 'upload.dropElement.choseFile' | translate }}</span
-        >
-        {{ 'upload.dropElement.dropIt' | translate }}
-      </label>
-      <p>
-        ( Format: {{ allowedExtension }} , max {{ maxSizeOfFiles / 1000 }} MB)
-      </p>
+    class="dropzone"
+    [style.height]="height"
+    [style.width]="width"
+    dragDropFile
+    (filesChangeEmitter)="onFileChange($event)">
+    <div class="text-wrapper">
+        <div class="centered">
+            <input
+                id="file-{{ randomId }}"
+                type="file"
+                name="file-{{ randomId }}"
+                (change)="onInputFileChange($event)"
+                multiple />
+            <label for="file-{{ randomId }}">
+                <span class="upload-btn ripple">
+                    <fa-icon [icon]="faUpload"></fa-icon>
+                    {{ choseFileLabel }}
+                </span>
+            </label>
+            <p>
+                ( Format: {{ allowedExtension }} , max
+                {{ maxSizeOfFiles / 1000 }} MB)
+            </p>
+        </div>
     </div>
-  </div>
 </div>
 @for (file of files; track file; let ind = $index) {
-  <div class="row file-item">
-    <div class="left">
-      <span>
-        <fa-icon [icon]="faFile"></fa-icon>
-      </span>
-      <p>
-        {{ file.name }} [{{
-          file.size / FILE_SIZE_CONVERTER | number: '1.2-2' : getLocale()
-        }}
-        KB]
-      </p>
+    <div class="row file-item">
+        <div class="left">
+            <span>
+                <fa-icon [icon]="faFile"></fa-icon>
+            </span>
+            <p>
+                {{ file.name }} [{{
+                    file.size / FILE_SIZE_CONVERTER
+                        | number: '1.2-2' : getLocale()
+                }}
+                KB]
+            </p>
+        </div>
+        <div class="right">
+            <span (click)="removeFile(file)">
+                <fa-icon [icon]="faRemove"></fa-icon>
+            </span>
+        </div>
     </div>
-    <div class="right">
-      <span (click)="removeFile(file)">
-        <fa-icon [icon]="faRemove"></fa-icon>
-      </span>
-    </div>
-  </div>
 }

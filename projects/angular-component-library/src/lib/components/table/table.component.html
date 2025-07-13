@@ -1,9 +1,9 @@
 <div [ngClass]="['table-container', classStyle ?? '']">
-  <div class="table-header" [style.padding-right.px]="scrollbarWidth">
-    <ng-content select="[header]"></ng-content>
-  </div>
+    <div class="table-header" [style.padding-right.px]="scrollbarWidth">
+        <ng-content select="[header]"></ng-content>
+    </div>
 
-  <div class="table-content">
-    <ng-content select="[content]"></ng-content>
-  </div>
+    <div class="table-content">
+        <ng-content select="[content]"></ng-content>
+    </div>
 </div>

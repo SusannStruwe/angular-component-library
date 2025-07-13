@@ -1,19 +1,19 @@
 <div class="input-container" [ngClass]="[classStyles ?? '']">
-  <span class="icon left">
-    <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
-  </span>
-  <input
-    id="search-field-{{ randomId }}"
-    class="form-control"
-    type="text"
-    [attr.aria-label]="'search-field-{{randomId}}'"
-    [(ngModel)]="filter"
-    (click)="$event.stopPropagation()"
-    (ngModelChange)="filterChanged()"
-    placeholder="{{ placeholderText }}" />
-  @if (filter) {
-    <span class="icon right" (click)="clearFilter($event)">
-      <fa-icon [icon]="faCloseCircle"></fa-icon>
+    <span class="icon left">
+        <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
     </span>
-  }
+    <input
+        id="search-field-{{ randomId }}"
+        class="form-control"
+        type="text"
+        [attr.aria-label]="'search-field-{{randomId}}'"
+        [(ngModel)]="filter"
+        (click)="$event.stopPropagation()"
+        (ngModelChange)="filterChanged()"
+        placeholder="{{ placeholderText }}" />
+    @if (filter) {
+        <span class="icon right" (click)="clearFilter($event)">
+            <fa-icon [icon]="faCloseCircle"></fa-icon>
+        </span>
+    }
 </div>

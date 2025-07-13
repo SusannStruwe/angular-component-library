@@ -17,32 +17,32 @@ import { HoverStyle } from '../../model/hover-style.enum';
  * ```
  */
 @Component({
-  selector: 'filled-btn-component',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
-  templateUrl: './filled-btn.component.html',
-  styleUrls: ['./filled-btn.component.scss'],
+    selector: 'filled-btn-component',
+    standalone: true,
+    imports: [CommonModule, FontAwesomeModule],
+    templateUrl: './filled-btn.component.html',
+    styleUrls: ['./filled-btn.component.scss']
 })
 export class FilledBtnComponent {
-  @Input() ariaLabel: string = '';
+    @Input() ariaLabel: string = 'no-title';
 
-  @Input() label?: string;
+    @Input() label?: string;
 
-  @Input() faIcon?: IconDefinition;
+    @Input() faIcon?: IconDefinition;
 
-  @Input() showIcon = true;
-  // example --> spin or not
-  @Input() isSpinning = false;
+    @Input() showIcon = true;
+    // example --> spin or not
+    @Input() isSpinning = false;
 
-  @Input() isDisabled?: boolean;
+    @Input() isDisabled?: boolean = false;
 
-  // example --> active or not
-  @Input() isActive?: boolean;
+    // example --> active or not
+    @Input() isActive?: boolean;
 
-  // example --> gray, delete
-  @Input() styleClass?: string = '';
-  // example --> filling or shining
-  @Input() hoverStyle = HoverStyle.RIPPLE;
-  // example --> 100% or not
-  @Input() width?: string;
+    // example --> gray, delete
+    @Input() classStyle?: string = '';
+    // example --> filling or shining
+    @Input() hoverStyle = HoverStyle.SIMPLE;
+    // example --> 100% or not
+    @Input() width?: string;
 }

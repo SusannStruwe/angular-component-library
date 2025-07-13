@@ -1,13 +1,13 @@
 <div class="tabs-view">
-  <ul>
-    @for (tab of tabs; track tab) {
-      <li
-        (click)="selectTab(tab)"
-        [class.active]="tab.active"
-        [tooltip]="tab.tooltip">
-        {{ tab.tabTitle }}
-      </li>
-    }
-  </ul>
-  <ng-content></ng-content>
+    <ul tabindex="0">
+        @for (tab of tabs; track tab) {
+            <li
+                (click)="selectTab(tab)"
+                [class.active]="tab.active"
+                [tooltip]="tab.tooltip">
+                {{ tab.tabTitle }}
+            </li>
+        }
+    </ul>
+    <ng-content></ng-content>
 </div>

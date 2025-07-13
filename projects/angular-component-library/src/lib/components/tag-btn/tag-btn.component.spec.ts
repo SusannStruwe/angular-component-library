@@ -4,37 +4,37 @@ import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testi
 import { By } from '@angular/platform-browser';
 
 describe('TagBtnComponent', () => {
-  let component: TagBtnComponent;
-  let fixture: ComponentFixture<TagBtnComponent>;
+    let component: TagBtnComponent;
+    let fixture: ComponentFixture<TagBtnComponent>;
 
-  const text = 'Tip';
+    const text = 'Tip';
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [TagBtnComponent, FontAwesomeTestingModule],
-      providers: [],
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [TagBtnComponent, FontAwesomeTestingModule],
+            providers: []
+        });
+
+        fixture = TestBed.createComponent(TagBtnComponent);
+
+        component = fixture.componentInstance;
+        component.label = text;
+
+        fixture.detectChanges();
     });
 
-    fixture = TestBed.createComponent(TagBtnComponent);
+    it('should create tag button component', () => {
+        expect(component).toBeTruthy();
+    });
 
-    component = fixture.componentInstance;
-    component.label = text;
+    it('should have tag text', () => {
+        const tagBtn = fixture.debugElement.query(By.css('span'));
+        expect(tagBtn).toBeTruthy();
+    });
 
-    fixture.detectChanges();
-  });
-
-  it('should create tag button component', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it('should have tag text', () => {
-    const tagBtn = fixture.debugElement.query(By.css('span'));
-    expect(tagBtn).toBeTruthy();
-  });
-
-  it('tag text should be', () => {
-    const tagBtn = fixture.debugElement.query(By.css('span'));
-    const content = tagBtn.nativeElement.textContent;
-    expect(content).toBe(text);
-  });
+    it('tag text should be', () => {
+        const tagBtn = fixture.debugElement.query(By.css('span'));
+        const content = tagBtn.nativeElement.textContent;
+        expect(content).toBe(text);
+    });
 });
