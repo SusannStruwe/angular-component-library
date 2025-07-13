@@ -35,6 +35,12 @@ jobs:
             - name: Install Playwright Browsers
               run: npx playwright install --with-deps
 
+            - name: Show installed binaries
+              run: ls -la node_modules/.bin
+
+            - name: Run tests
+              run: npm run test -- --watch=false --browsers=ChromeHeadless
+
     prettier:
         name: Check formatting
         runs-on: ubuntu-latest
@@ -70,8 +76,14 @@ jobs:
                       node_modules
                   key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
+            - name: Show ng binary
+              run: ls -la node_modules/.bin/ng
+
             - name: Run Karma tests (Headless Chrome)
               run: npx ng test --watch=false --browsers=ChromeHeadless
+
+            - name: Run Karma tests
+              run: ./node_modules/.bin/ng test --watch=false --browsers=ChromeHeadless
 
     storybook-test:
         name: Run storybook tests
