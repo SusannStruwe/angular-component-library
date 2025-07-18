@@ -33,6 +33,8 @@ export class AlertComponent {
     @Input() type: AlertType = AlertType.SUCCESS;
     // if state is true, alert is shown
     @Input() visibleState = false;
+    
+    @Input() hideCloseBtn = false;
 
     @Input() navigationLink?: string;
     @Input() navigationLinkLabel?: string;
