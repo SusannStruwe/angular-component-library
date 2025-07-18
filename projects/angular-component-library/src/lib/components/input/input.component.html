@@ -2,6 +2,7 @@
     <input
         id="input-field-{{ randomId }}"
         class="form-control"
+        [ngClass]="!icon ? 'no-padding-right': ''"
         [style.min-width]="width"
         [style.width]="width"
         type="{{ type }}"

@@ -35,7 +35,12 @@
         right: 10px;
         top: calc((var(--input-height) - 20px) / 2);
     }
+
+    .no-padding-right {
+        padding-right: 10px;
+    }
 }
+
 
 .no-radius {
     input {
