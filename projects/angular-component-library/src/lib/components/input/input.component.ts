@@ -22,13 +22,14 @@ import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
     styleUrls: ['./input.component.scss']
 })
 export class InputComponent {
-    @Input() input = '';
+    @Input() input: string | number = '';
     @Input() classStyles?: string;
     @Input() placeholderText? = '';
     @Input() type = 'text';
+    @Input() width = '160px';
     @Input() icon?: IconDefinition;
 
-    @Output() inputChange = new EventEmitter<string>();
+    @Output() inputChange = new EventEmitter<string | number>();
 
     randomId: string = Math.floor(Math.random() * 16777215).toString(16);
 
