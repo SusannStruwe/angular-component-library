@@ -25,10 +25,11 @@ A table content component.
     argTypes: {
         tableItems: { control: 'object' },
         tableHeight: { control: 'text' },
-        tableItemSelected: { action: 'select' }
+        selectedTableItem: {control: 'object'},
+        selectedTableItemChange: { action: 'select' }
     },
     args: {
-        tableItemSelected: fn(),
+        selectedTableItemChange: fn(),
         tableHeight: '275px'
     },
     tags: ['autodocs']
@@ -41,7 +42,7 @@ export const Sample: Story = {
     args: {
         tableItems: contentItems,
         tableHeight: '200px',
-        tableItemSelected: (event: any) => {
+        selectedTableItemChange: (event: any) => {
             action('selected row')(event);
         }
     }

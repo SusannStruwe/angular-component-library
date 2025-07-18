@@ -45,17 +45,16 @@ export class TableContentComponent {
     @Input() tableHeight: string = '200px';
     @Input() tableItems: any = [];
     @Input() tableStyle?: TableStyle;
+    @Input() selectedTableItem: any | null = null;
 
-    @Output() tableItemSelected = new EventEmitter<any>();
+    @Output() selectedTableItemChange = new EventEmitter<any>();
 
     @ViewChild(CdkVirtualScrollViewport) viewport!: CdkVirtualScrollViewport;
-
-    selectedTableItem = null;
 
     defaultColumKeys: typeof DefaultColumKeys = DefaultColumKeys;
 
     tableItemClicked(item: any): void {
-        this.tableItemSelected.emit(item);
+        this.selectedTableItemChange.emit(item);
     }
 
     /**
