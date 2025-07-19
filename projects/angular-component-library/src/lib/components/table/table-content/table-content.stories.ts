@@ -25,7 +25,7 @@ A table content component.
     argTypes: {
         tableItems: { control: 'object' },
         tableHeight: { control: 'text' },
-        selectedTableItem: {control: 'object'},
+        selectedTableItem: { control: 'object' },
         selectedTableItemChange: { action: 'select' }
     },
     args: {

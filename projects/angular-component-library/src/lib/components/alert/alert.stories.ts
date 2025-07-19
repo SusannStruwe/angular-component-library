@@ -40,7 +40,7 @@ const meta: Meta<AlertComponent> = {
             value: AlertType.SUCCESS
         },
         visibleState: { control: 'boolean', value: false },
-        hideCloseBtn: { control: 'boolean', value: false},
+        hideCloseBtn: { control: 'boolean', value: false },
         navigationLink: { control: 'text', value: undefined },
         navigationLinkLabel: { control: 'text', value: undefined },
         visibleStateChange: { action: 'changed' }
