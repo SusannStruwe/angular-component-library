@@ -126,8 +126,6 @@ export class ModalComponent implements OnInit, OnDestroy {
      * @param reason
      */
     confirmModal(): void {
-        this.modalService.confirmModal(this.id);
-
         this.subscriptionOnClose = this.modalService.onClose$.subscribe(
             (modalId) => {
                 if (this.id === modalId && this.subscriptionOnClose) {
@@ -136,6 +134,8 @@ export class ModalComponent implements OnInit, OnDestroy {
                 }
             }
         );
+
+        this.modalService.confirmModal(this.id);
     }
 
     /**
