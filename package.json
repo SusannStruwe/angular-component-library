@@ -19,8 +19,9 @@
     "update:angular": "ng update @angular/cli@19 @angular/core@19",
     "update:angular/cdk": "ng update @angular/cdk@19 @ngx-translate/core",
     "update:fortawesome": "ng update @fortawesome/angular-fontawesome@1 @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons",
-    "update:util": "ng update date-fns @types/lodash.clonedeep lodash.clonedeep rxjs tslib",
-    "update:karma": "ng update karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter"
+    "update:util": "ng update date-fns @types/lodash.clonedeep lodash.clonedeep luxon rxjs tslib zone.js",
+    "update:karma": "ng update karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter",
+    "update:storybook": "ng update @storybook/addon-a11y @storybook/addon-docs @storybook/addon-essentials @storybook/addon-interactions @storybook/addon-onboarding @storybook/angular @storybook/blocks @storybook/test @storybook/test-runner storybook storybook-design-token"
   },
   "private": true,
   "dependencies": {
