@@ -8,10 +8,18 @@ import {
     Output
 } from '@angular/core';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
-import { faSort, faSortDown, faSortUp } from '@fortawesome/free-solid-svg-icons';
+import {
+    faSort,
+    faSortDown,
+    faSortUp
+} from '@fortawesome/free-solid-svg-icons';
 import { SortDirection } from 'angular-component-library';
 
-const rotate: { [key: string]: SortDirection } = { asc: 'desc', desc: '', '': 'asc' };
+const rotate: { [key: string]: SortDirection } = {
+    asc: 'desc',
+    desc: '',
+    '': 'asc'
+};
 
 /**
  * Attribute Directive to sorts resizeable column
@@ -34,11 +42,9 @@ export class SortResizeableColumnDirective implements AfterViewChecked {
 
     @ContentChild(FaIconComponent) sortIcon?: FaIconComponent;
 
-
     ngAfterViewChecked(): void {
         this.setSortDirection();
     }
-
 
     @HostListener('click')
     public click() {

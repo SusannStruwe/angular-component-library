@@ -1,4 +1,11 @@
-import { Directive, ElementRef, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import {
+    Directive,
+    ElementRef,
+    EventEmitter,
+    HostListener,
+    Input,
+    Output
+} from '@angular/core';
 
 /**
  * Attribute Directive to resize column
@@ -17,7 +24,10 @@ import { Directive, ElementRef, EventEmitter, HostListener, Input, Output } from
 })
 export class ResizableColumnDirective {
     @Input() columnKey!: string;
-    @Output() resizeStart = new EventEmitter<{ column: string; startX: number }>();
+    @Output() resizeStart = new EventEmitter<{
+        column: string;
+        startX: number;
+    }>();
 
     resizing = false;
 
@@ -25,12 +35,16 @@ export class ResizableColumnDirective {
 
     @HostListener('pointerdown', ['$event'])
     onPointerDown(event: PointerEvent) {
-        if (!(event.target as HTMLElement).classList.contains('resizer')) return;
+        if (!(event.target as HTMLElement).classList.contains('resizer'))
+            return;
 
         event.stopPropagation();
         event.preventDefault();
 
         this.resizing = true;
-        this.resizeStart.emit({ column: this.columnKey, startX: event.clientX });
+        this.resizeStart.emit({
+            column: this.columnKey,
+            startX: event.clientX
+        });
     }
 }

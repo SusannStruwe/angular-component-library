@@ -37,7 +37,6 @@ export class ResizableTableComponent implements AfterViewInit {
     @Input() tableHeight: string = '300px';
     @Input() tableStyle?: TableStyle;
 
-
     @Output() selectedRowchange: EventEmitter<any> = new EventEmitter();
 
     @ViewChild('tableContainer') tableContainer?: ElementRef<HTMLDivElement>;
@@ -55,7 +54,8 @@ export class ResizableTableComponent implements AfterViewInit {
         if (this.tableContainer) {
             setTimeout(() => {
                 const containerWidth =
-                    this.tableContainer!.nativeElement.getBoundingClientRect().width - 30;
+                    this.tableContainer!.nativeElement.getBoundingClientRect()
+                        .width - 30;
                 const colCount = this.columns.length;
 
                 this.columnWidths = this.columns.reduce(
@@ -73,7 +73,7 @@ export class ResizableTableComponent implements AfterViewInit {
 
     /**
      * Sets row selected
-     * @param row 
+     * @param row
      */
     setRowSelected(row: any): void {
         this.selectedRow = row;
@@ -82,10 +82,13 @@ export class ResizableTableComponent implements AfterViewInit {
 
     /**
      * Starts resize event
-     * @param event 
-     * @param column 
+     * @param event
+     * @param column
      */
-    onResizeStart(event: { column: string; startX: number }, column: string): void {
+    onResizeStart(
+        event: { column: string; startX: number },
+        column: string
+    ): void {
         const startX = event.startX;
         const startWidth = this.columnWidths[column];
 
@@ -107,7 +110,7 @@ export class ResizableTableComponent implements AfterViewInit {
 
     /**
      * Updates croll index
-     * @param index 
+     * @param index
      */
     onScrolledIndexChange(index: number): void {
         if (index + 10 > this.data.length) {
@@ -160,7 +163,8 @@ export class ResizableTableComponent implements AfterViewInit {
 
         const deDateTimeRegex = /^(\d{2})\.(\d{2})\.(\d{4}) (\d{2}):(\d{2})$/;
         if (deDateTimeRegex.test(value)) {
-            const [, day, month, year, hour, minute] = value.match(deDateTimeRegex)!;
+            const [, day, month, year, hour, minute] =
+                value.match(deDateTimeRegex)!;
             const date = new Date(
                 Number(year),
                 Number(month) - 1,
