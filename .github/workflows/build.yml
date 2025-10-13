@@ -2,9 +2,9 @@ name: GitHub Actions
 
 on:
     push:
-        branches: [main, update, storybook]
+        branches: [main, update, angular-19]
     pull_request:
-        branches: [main, update, storybook]
+        branches: [main, update, angular-19]
 
 jobs:
     install:

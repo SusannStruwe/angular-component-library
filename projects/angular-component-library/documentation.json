@@ -714,21 +714,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<CollapsibleComponent>",
-                "defaultValue": "{\n    title: 'Components/Collapsible',\n    component: CollapsibleComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\n \n                 `\n            }\n        }\n    },\n    decorators: [\n        (story) => {\n            const storyObj = story();\n            return {\n                moduleMetadata: {\n                    imports: [CollapsibleComponent, FontAwesomeModule]\n                },\n                template: storyObj.template,\n                props: storyObj.props\n            };\n        }\n    ],\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ColorPaletteComponent>",
                 "defaultValue": "{\n    title: 'Components/ColorPalette',\n    component: ColorPaletteComponent,\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CollapsibleComponent>",
+                "defaultValue": "{\n    title: 'Components/Collapsible',\n    component: CollapsibleComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\n \n                 `\n            }\n        }\n    },\n    decorators: [\n        (story) => {\n            const storyObj = story();\n            return {\n                moduleMetadata: {\n                    imports: [CollapsibleComponent, FontAwesomeModule]\n                },\n                template: storyObj.template,\n                props: storyObj.props\n            };\n        }\n    ],\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -934,21 +934,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<TableHeaderComponent>",
-                "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        showSearchLine: { control: 'boolean' },\n        tableStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(tableStyle),\n            mapping: TableStyle\n        },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TableContentComponent>",
                 "defaultValue": "{\r\n    title: 'Components/Table/Table Content',\r\n    component: TableContentComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\nA table content component.\r\n                `\r\n            }\r\n        }\r\n    },\r\n    decorators: [\r\n        (story) => ({\r\n            template: `<div [style.width.px]=\"'600'\">${story().template}</div>`,\r\n            props: story().props\r\n        })\r\n    ],\r\n    argTypes: {\r\n        tableItems: { control: 'object' },\r\n        tableHeight: { control: 'text' },\r\n        selectedTableItem: { control: 'object' },\r\n        selectedTableItemChange: { action: 'select' }\r\n    },\r\n    args: {\r\n        selectedTableItemChange: fn(),\r\n        tableHeight: '275px'\r\n    },\r\n    tags: ['autodocs']\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TableHeaderComponent>",
+                "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        showSearchLine: { control: 'boolean' },\n        tableStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(tableStyle),\n            mapping: TableStyle\n        },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "Off",
@@ -978,7 +978,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                 * Opt in to running WCAG 2.x AAA rules\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                 */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\n            }\n        }\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                {\n                    provide: TranslateLoader,\n                    useClass: FakeLoader\n                },\n                {\n                    provide: TranslateCompiler,\n                    useClass: TranslateFakeCompiler\n                },\n                {\n                    provide: TranslateParser,\n                    useClass: TranslateDefaultParser\n                },\n                {\n                    provide: MissingTranslationHandler,\n                    useValue: null\n                },\n                {\n                    provide: USE_DEFAULT_LANG,\n                    useValue: true\n                },\n                {\n                    provide: DEFAULT_LANGUAGE,\n                    useValue: true\n                },\n                {\n                    provide: USE_EXTEND,\n                    useValue: false\n                },\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\n                TranslateStore,\n                {\n                    provide: APP_INITIALIZER,\n                    useFactory: (translate: TranslateService) => () => {\n                        translate.setDefaultLang('de');\n                        translate.use('de');\n                        return Promise.resolve();\n                    },\n                    deps: [TranslateService],\n                    multi: true\n                }\n            ]\n        })\n    ]\n}"
+                "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                 * Opt in to running WCAG 2.x AAA rules\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                 */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\n            }\n        }\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                { provide: TranslateLoader, useClass: FakeLoader },\n                { provide: TranslateCompiler, useClass: FakeCompiler },\n                TranslateService\n            ]\n        })\n    ]\n}"
             },
             {
                 "name": "Primary",
@@ -1084,21 +1084,21 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {}\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1284,21 +1284,21 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n    args: {\r\n        tableItems: contentItems,\r\n        tableHeight: '200px',\r\n        selectedTableItemChange: (event: any) => {\r\n            action('selected row')(event);\r\n        }\r\n    }\r\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
             },
             {
                 "name": "SampleNgContent",
@@ -1788,8 +1788,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CollapsibleComponent>",
-                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
+                "rawtype": "StoryObj<ColorPaletteComponent>",
+                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1799,8 +1799,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ColorPaletteComponent>",
-                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "rawtype": "StoryObj<CollapsibleComponent>",
+                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2041,8 +2041,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<TableHeaderComponent>",
-                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "rawtype": "StoryObj<TableContentComponent>",
+                "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2052,8 +2052,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<TableContentComponent>",
-                "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
+                "rawtype": "StoryObj<TableHeaderComponent>",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -3719,7 +3719,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                 * Opt in to running WCAG 2.x AAA rules\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                 */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\n            }\n        }\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                {\n                    provide: TranslateLoader,\n                    useClass: FakeLoader\n                },\n                {\n                    provide: TranslateCompiler,\n                    useClass: TranslateFakeCompiler\n                },\n                {\n                    provide: TranslateParser,\n                    useClass: TranslateDefaultParser\n                },\n                {\n                    provide: MissingTranslationHandler,\n                    useValue: null\n                },\n                {\n                    provide: USE_DEFAULT_LANG,\n                    useValue: true\n                },\n                {\n                    provide: DEFAULT_LANGUAGE,\n                    useValue: true\n                },\n                {\n                    provide: USE_EXTEND,\n                    useValue: false\n                },\n                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },\n                TranslateStore,\n                {\n                    provide: APP_INITIALIZER,\n                    useFactory: (translate: TranslateService) => () => {\n                        translate.setDefaultLang('de');\n                        translate.use('de');\n                        return Promise.resolve();\n                    },\n                    deps: [TranslateService],\n                    multi: true\n                }\n            ]\n        })\n    ]\n}"
+                    "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                 * Opt in to running WCAG 2.x AAA rules\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                 */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\n            }\n        }\n    },\n    decorators: [\n        applicationConfig({\n            providers: [\n                { provide: TranslateLoader, useClass: FakeLoader },\n                { provide: TranslateCompiler, useClass: FakeCompiler },\n                TranslateService\n            ]\n        })\n    ]\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/directives/tooltip-directive.stories.ts": [
@@ -3893,19 +3893,6 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<CollapsibleComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts": [
                 {
                     "name": "Story",
@@ -3913,6 +3900,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ColorPaletteComponent>",
                     "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CollapsibleComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -4192,19 +4192,6 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<TableHeaderComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts": [
                 {
                     "name": "Story",
@@ -4212,6 +4199,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<TableContentComponent>",
                     "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TableHeaderComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
