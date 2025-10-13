@@ -57,7 +57,7 @@
     "@compodoc/compodoc": "^1.1.26",
     "@storybook/addon-docs": "^8.6.12",
     "@storybook/addon-onboarding": "^8.6.12",
-    "@storybook/angular": "^9.1.10",
+    "@storybook/angular": "^8.6.12",
     "@storybook/test-runner": "^0.22.0",
     "@types/jasmine": "~5.1.0",
     "@types/webpack": "^5.28.5",
