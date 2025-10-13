@@ -18,7 +18,6 @@ import { HoverStyle } from '../../model/hover-style.enum';
  */
 @Component({
     selector: 'borderless-btn-component',
-    standalone: true,
     imports: [CommonModule, FontAwesomeModule],
     templateUrl: './borderless-btn.component.html',
     styleUrls: ['./borderless-btn.component.scss']

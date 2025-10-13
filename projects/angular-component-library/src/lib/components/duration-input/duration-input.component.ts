@@ -26,7 +26,6 @@ import { EditMode } from '../../model/edit-mode.enum';
  */
 @Component({
     selector: 'duration-input-component',
-    standalone: true,
     imports: [TranslateModule, FormsModule, ReactiveFormsModule],
     templateUrl: './duration-input.component.html',
     styleUrls: ['./duration-input.component.scss']

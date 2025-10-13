@@ -22,7 +22,6 @@ import { Icons } from '../../model/icons';
  */
 @Component({
     selector: 'dropzone-component',
-    standalone: true,
     imports: [
         CommonModule,
         FontAwesomeModule,

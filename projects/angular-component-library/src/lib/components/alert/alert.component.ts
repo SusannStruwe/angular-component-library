@@ -20,7 +20,6 @@ import { AlertType } from '../../model/alert-type.enum';
  */
 @Component({
     selector: 'alert-component',
-    standalone: true,
     imports: [CommonModule, FontAwesomeModule, RouterModule],
     templateUrl: './alert.component.html',
     styleUrls: ['./alert.component.scss']

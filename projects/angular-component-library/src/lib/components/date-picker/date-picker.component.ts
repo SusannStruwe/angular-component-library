@@ -22,7 +22,6 @@ import { Icons } from '../../model/icons';
  */
 @Component({
     selector: 'date-picker-component',
-    standalone: true,
     imports: [CommonModule, FormsModule, FontAwesomeModule, PlatformModule],
     templateUrl: './date-picker.component.html',
     styleUrls: ['./date-picker.component.scss']

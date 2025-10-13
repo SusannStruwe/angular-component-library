@@ -16,7 +16,6 @@ import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
  */
 @Component({
     selector: 'input-component',
-    standalone: true,
     imports: [CommonModule, FontAwesomeModule, FormsModule],
     templateUrl: './input.component.html',
     styleUrls: ['./input.component.scss']

@@ -11,7 +11,6 @@ import { Component, Input } from '@angular/core';
  */
 @Component({
     selector: 'popover-component',
-    standalone: true,
     imports: [],
     templateUrl: './popover.component.html',
     styleUrls: ['./popover.component.scss']

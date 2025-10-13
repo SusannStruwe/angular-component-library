@@ -31,7 +31,6 @@ import { TableStyle } from '../../../model/table-style.enum';
  */
 @Component({
     selector: 'table-content-component',
-    standalone: true,
     imports: [
         CommonModule,
         FontAwesomeModule,

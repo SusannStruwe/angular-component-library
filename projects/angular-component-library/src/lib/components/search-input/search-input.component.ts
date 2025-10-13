@@ -17,7 +17,6 @@ import { Icons } from '../../model/icons';
  */
 @Component({
     selector: 'search-input-component',
-    standalone: true,
     imports: [CommonModule, FontAwesomeModule, FormsModule],
     templateUrl: './search-input.component.html',
     styleUrls: ['./search-input.component.scss']

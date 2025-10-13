@@ -37,7 +37,6 @@ import { SelectStyle } from '../../model/select-style.enum';
  */
 @Component({
     selector: 'select-component',
-    standalone: true,
     imports: [
         CommonModule,
         FontAwesomeModule,

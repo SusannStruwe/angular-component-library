@@ -16,7 +16,6 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
  */
 @Component({
     selector: 'navbar-btn-component',
-    standalone: true,
     imports: [CommonModule, FontAwesomeModule],
     templateUrl: './navbar-btn.component.html',
     styleUrls: ['./navbar-btn.component.scss']

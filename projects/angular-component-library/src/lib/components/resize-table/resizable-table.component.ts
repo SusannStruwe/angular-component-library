@@ -24,7 +24,6 @@ import { ResizableColumnDirective } from '../../directives/resize-column.directi
         SortResizeableColumnDirective,
         ResizableColumnDirective
     ],
-    standalone: true,
     templateUrl: './resizable-table.component.html',
     styleUrls: ['./resizable-table.component.scss']
 })

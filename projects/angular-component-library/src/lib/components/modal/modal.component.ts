@@ -36,7 +36,6 @@ import { SassHelperComponent } from '../sass-helper.component';
  */
 @Component({
     selector: 'modal-component',
-    standalone: true,
     imports: [
         CommonModule,
         FilledBtnComponent,

@@ -18,7 +18,6 @@ import { CommonModule } from '@angular/common';
  */
 @Component({
     selector: 'toggle-btn-component',
-    standalone: true,
     imports: [CommonModule, FontAwesomeModule, FormsModule],
     templateUrl: './toggle-btn.component.html',
     styleUrls: ['./toggle-btn.component.scss']

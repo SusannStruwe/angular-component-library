@@ -4,7 +4,6 @@ import { TooltipDirective } from './tooltip.directive';
 
 @Component({
     template: `<p [tooltip]="'Hello'">Hello Directive</p>`,
-    standalone: true,
     imports: [TooltipDirective]
 })
 class TestComponent {}

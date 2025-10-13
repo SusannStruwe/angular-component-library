@@ -25,7 +25,6 @@ import { Icons } from '../../model/icons';
  */
 @Component({
     selector: 'non-modal-component',
-    standalone: true,
     imports: [CommonModule, FontAwesomeModule, DragDropModule],
     templateUrl: './non-modal.component.html',
     styleUrls: ['./non-modal.component.scss']

@@ -18,7 +18,6 @@ import { HoverStyle } from '../../model/hover-style.enum';
  */
 @Component({
     selector: 'bordered-btn-component',
-    standalone: true,
     imports: [CommonModule, FontAwesomeModule],
     templateUrl: './bordered-btn.component.html',
     styleUrls: ['./bordered-btn.component.scss']

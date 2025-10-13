@@ -15,7 +15,6 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
  */
 @Component({
     selector: 'badge-component',
-    standalone: true,
     imports: [CommonModule, FontAwesomeModule],
     templateUrl: './badge.component.html',
     styleUrls: ['./badge.component.scss']

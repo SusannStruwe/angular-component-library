@@ -32,7 +32,6 @@ export interface SelectFilterChangeEvent {
  */
 @Component({
     selector: 'table-header-component',
-    standalone: true,
     imports: [
         CommonModule,
         FontAwesomeModule,
