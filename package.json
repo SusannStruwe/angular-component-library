@@ -18,7 +18,7 @@
     "update:devkit": "ng update @angular-devkit/build-angular",
     "update:angular": "ng update @angular/cli@19 @angular/core@19",
     "update:angular/cdk": "ng update @angular/cdk@19 @ngx-translate/core",
-    "update:fortawesome": "ng update @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons",
+    "update:fortawesome": "ng update @fortawesome/angular-fontawesome@1 @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons",
     "update:util": "ng update date-fns @types/lodash.clonedeep lodash.clonedeep rxjs tslib",
     "update:karma": "ng update karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter"
   },
