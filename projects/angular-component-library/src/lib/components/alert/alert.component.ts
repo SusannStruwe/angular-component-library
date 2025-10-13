@@ -34,6 +34,8 @@ export class AlertComponent {
     // if state is true, alert is shown
     @Input() visibleState = false;
 
+    @Input() hideCloseBtn = false;
+
     @Input() navigationLink?: string;
     @Input() navigationLinkLabel?: string;
 

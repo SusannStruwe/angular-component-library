@@ -19,6 +19,7 @@ const meta: Meta<InputComponent> = {
         },
         placeholderText: { control: 'text' },
         type: { control: 'text' },
+        width: { control: 'text' },
         inputChange: { action: 'change' }
     },
     args: {
@@ -33,6 +34,7 @@ type Story = StoryObj<InputComponent>;
 
 export const Sample: Story = {
     args: {
-        input: '123456'
+        input: '123456',
+        width: '160px'
     }
 };

@@ -1,0 +1,119 @@
+.table-wrapper {
+    overflow: hidden;
+    border: var(--border-width) solid var(--border-color);
+    margin-bottom: 1em;
+}
+
+.table-header {
+    display: flex;
+    background-color: var(--table-dark-bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-bottom: var(--border-width) solid var(--border-color);
+    height: var(--row-height);
+
+    .th {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-sizing: border-box;
+        cursor: pointer;
+        user-select: none;
+
+        .sort {
+            display: flex;
+            align-items: center;
+        }
+
+        h3 {
+            color: var(--fa-icon-color);
+            font-size: 0.9rem;
+            font-weight: var(--font-weight-semibold);
+            margin: 0px;
+            margin-right: 10px;
+            padding: 0px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        fa-icon {
+            color: var(--text-color);
+            font-size: 0.8rem;
+        }
+
+        .resizer {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            cursor: col-resize;
+            user-select: none;
+            margin-right: 0px;
+            padding: 0px;
+        }
+    }
+}
+
+.viewport {
+    height: calc(100% - var(--row-height));
+    overflow: auto;
+}
+
+.table-row {
+    display: flex;
+    border-bottom: var(--border-width) solid var(--border-color);
+    cursor: pointer;
+
+    .td {
+        padding: 8px;
+        box-sizing: border-box;
+        font-weight: var(--font-weight-light);
+        border-right: var(--border-width) solid var(--border-color);
+    }
+}
+
+.dark {
+    .table-header {
+        display: flex;
+        background-color: var(--table-dark-bg-color);
+    }
+    span,
+    fa-icon {
+        color: var(--text-color);
+    }
+}
+
+.light {
+    .table-header {
+        display: flex;
+        background-color: var(--table-light-bg-color);
+
+        span,
+        fa-icon {
+            color: var(--table-light-color);
+        }
+    }
+}
+
+
+.active {
+    color: var(--accent-color);
+    background-color: var(--row-highlight-color);
+}
+
+/************************************************
+Media query to add hover only on device which support hover
+*********************************************/
+
+@media (hover: hover) {
+    .table-row {
+        &:hover {
+            color: var(--accent-color);
+            background-color: var(--row-highlight-color);
+        }
+    }
+}

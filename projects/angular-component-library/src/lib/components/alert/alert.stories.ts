@@ -40,6 +40,7 @@ const meta: Meta<AlertComponent> = {
             value: AlertType.SUCCESS
         },
         visibleState: { control: 'boolean', value: false },
+        hideCloseBtn: { control: 'boolean', value: false },
         navigationLink: { control: 'text', value: undefined },
         navigationLinkLabel: { control: 'text', value: undefined },
         visibleStateChange: { action: 'changed' }
@@ -56,6 +57,7 @@ export const InfoAlert: Story = {
         message: 'Info  Message',
         type: AlertType.INFO,
         visibleState: true,
+        hideCloseBtn: false,
         navigationLink: 'pailot.com',
         navigationLinkLabel: 'Further informations under pailot.com '
     },
