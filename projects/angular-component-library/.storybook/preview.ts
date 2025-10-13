@@ -8,11 +8,15 @@ import {
     TranslateLoader,
     TranslateParser,
     TranslateService,
-    TranslateStore,
+    TranslateStore
 } from '@ngx-translate/core';
 import { provideAppInitializer } from '@angular/core';
 setCompodocJson(docJson);
-import { FakeCompiler, FakeLoader, NoopMissingTranslationHandler } from '../src/lib/fake-translate-helper';
+import {
+    FakeCompiler,
+    FakeLoader,
+    NoopMissingTranslationHandler
+} from '../src/lib/fake-translate-helper';
 
 const preview: Preview = {
     parameters: {
@@ -49,7 +53,10 @@ const preview: Preview = {
                 { provide: TranslateLoader, useClass: FakeLoader },
                 { provide: TranslateCompiler, useClass: FakeCompiler },
                 { provide: TranslateParser, useClass: TranslateDefaultParser },
-                { provide: MissingTranslationHandler, useClass: NoopMissingTranslationHandler },
+                {
+                    provide: MissingTranslationHandler,
+                    useClass: NoopMissingTranslationHandler
+                },
                 TranslateStore,
                 TranslateService
             ]

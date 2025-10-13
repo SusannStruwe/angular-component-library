@@ -1,36 +1,42 @@
-import { TranslateCompiler, InterpolatableTranslation } from '@ngx-translate/core';
-import { MissingTranslationHandler, MissingTranslationHandlerParams } from '@ngx-translate/core';
+import {
+    TranslateCompiler,
+    InterpolatableTranslation
+} from '@ngx-translate/core';
+import {
+    MissingTranslationHandler,
+    MissingTranslationHandlerParams
+} from '@ngx-translate/core';
 import { TranslateLoader } from '@ngx-translate/core';
 import { Observable, of } from 'rxjs';
 
-
 export class FakeCompiler implements TranslateCompiler {
-  compile(value: string, lang: string): InterpolatableTranslation {
-    // do nothing
-    return value;
-  }
-
-  compileTranslations(translations: any, lang: string): any {
-    const result: any = {};
-    for (const key of Object.keys(translations)) {
-      const value = translations[key];
-      if (typeof value === 'string') {
-        result[key] = this.compile(value, lang);
-      } else if (typeof value === 'object') {
-        result[key] = this.compileTranslations(value, lang);
-      } else {
-        result[key] = value;
-      }
+    compile(value: string, lang: string): InterpolatableTranslation {
+        // do nothing
+        return value;
     }
-    return result;
-  }
+
+    compileTranslations(translations: any, lang: string): any {
+        const result: any = {};
+        for (const key of Object.keys(translations)) {
+            const value = translations[key];
+            if (typeof value === 'string') {
+                result[key] = this.compile(value, lang);
+            } else if (typeof value === 'object') {
+                result[key] = this.compileTranslations(value, lang);
+            } else {
+                result[key] = value;
+            }
+        }
+        return result;
+    }
 }
 
-
-export class NoopMissingTranslationHandler implements MissingTranslationHandler {
-  handle(params: MissingTranslationHandlerParams) {
-    return params.key; 
-  }
+export class NoopMissingTranslationHandler
+    implements MissingTranslationHandler
+{
+    handle(params: MissingTranslationHandlerParams) {
+        return params.key;
+    }
 }
 
 export class FakeLoader implements TranslateLoader {
