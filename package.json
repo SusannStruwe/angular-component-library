@@ -42,7 +42,7 @@
     "@ngx-translate/core": "^17.0.0",
     "@storybook/addon-a11y": "^8.6.12",
     "@types/lodash.clonedeep": "^4.5.9",
-    "@types/luxon": "^3.6.2",
+    "@types/luxon": "^3.7.1",
     "date-fns": "^4.1.0",
     "lodash.clonedeep": "^4.5.0",
     "luxon": "^3.7.2",
