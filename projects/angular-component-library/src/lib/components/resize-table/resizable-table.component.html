@@ -1,0 +1,43 @@
+<div #tableContainer class="table-wrapper" [ngClass]="[tableStyle ?? '']">
+    <div class="table-header">
+        @if (columnLabels) {
+            @for (col of columns; track col) {
+                <div class="th" [style.width.px]="columnWidths[col]">
+                    <span class="sort" sortResizeableColumn (sort)="sortData($event, col)">
+                        <h3 [style.width.px]="columnWidths[col] - 50">{{ columnLabels[col] }}</h3>
+                        <fa-icon [icon]="faSort"></fa-icon>
+                    </span>
+
+                    @if(!disableResize){
+                        <span
+                            class="resizer"
+                            resizableColumn
+                            [columnKey]="col"
+                            (resizeStart)="onResizeStart($event, col)">
+                        </span>
+                    }
+                </div>
+            }
+        }
+    </div>
+
+    <cdk-virtual-scroll-viewport
+        itemSize="46"
+        class="viewport"
+        tabindex="0"
+        role="region"
+        [style.min-height]="tableHeight"
+        (scrolledIndexChange)="onScrolledIndexChange($event)">
+        @for (row of data; track row.id) {
+            <div class="table-row"
+                [class.active]="selectedRow === row"
+                (click)="setRowSelected(row)">
+                @for (col of columns; track col) {
+                    <div class="td" [style.width.px]="columnWidths[col]">
+                        {{ row[col] }}
+                    </div>
+                }
+            </div>
+        }
+    </cdk-virtual-scroll-viewport>
+</div>
