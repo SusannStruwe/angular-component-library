@@ -67,7 +67,7 @@ const preview: Preview = {
                 {
                     provide: LOCALE_ID,
                     useValue: 'de-DE'
-                },
+                }
             ]
         })
     ]

@@ -22,11 +22,7 @@ import { Icons } from '../../model/icons';
  */
 @Component({
     selector: 'dropzone-component',
-    imports: [
-        CommonModule,
-        FontAwesomeModule,
-        FileDragNDropDirective
-    ],
+    imports: [CommonModule, FontAwesomeModule, FileDragNDropDirective],
     templateUrl: './dropzone.component.html',
     styleUrls: ['./dropzone.component.scss']
 })
