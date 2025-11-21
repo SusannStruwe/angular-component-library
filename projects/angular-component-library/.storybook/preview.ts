@@ -10,13 +10,18 @@ import {
     TranslateService,
     TranslateStore
 } from '@ngx-translate/core';
-import { provideAppInitializer } from '@angular/core';
+import { LOCALE_ID } from '@angular/core';
 setCompodocJson(docJson);
 import {
     FakeCompiler,
     FakeLoader,
     NoopMissingTranslationHandler
 } from '../src/lib/fake-translate-helper';
+import { registerLocaleData } from '@angular/common';
+import localeDe from '@angular/common/locales/de';
+import localeEn from '@angular/common/locales/en';
+
+registerLocaleData(localeDe, localeEn);
 
 const preview: Preview = {
     parameters: {
@@ -58,7 +63,11 @@ const preview: Preview = {
                     useClass: NoopMissingTranslationHandler
                 },
                 TranslateStore,
-                TranslateService
+                TranslateService,
+                {
+                    provide: LOCALE_ID,
+                    useValue: 'de-DE'
+                },
             ]
         })
     ]

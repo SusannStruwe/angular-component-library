@@ -16,7 +16,7 @@ const meta: Meta<DropzoneComponent> = {
     },
     decorators: [
         (story) => ({
-            template: `<div style="width: 300px;">${story().template}</div>`,
+            template: `<div style="width: 600px;">${story().template}</div>`,
             props: story().props
         })
     ]
@@ -28,7 +28,8 @@ type Story = StoryObj<DropzoneComponent>;
 export const Sample: Story = {
     args: {
         height: '100px',
-        width: '300px',
-        choseFileLabel: 'Load Input files'
+        width: '600px',
+        choseFileLabel: 'Load Input files',
+        maxSizeOfFiles: 20000
     }
 };
