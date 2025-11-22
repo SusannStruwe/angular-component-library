@@ -4,7 +4,7 @@ import {
     btnArray,
     SegmentedBtnComponent
 } from './segmented-btn.component';
-import { fn } from '@storybook/test';
+import { fn } from 'storybook/test';
 
 const meta: Meta<SegmentedBtnComponent> = {
     title: 'Components/Segmented Btn',

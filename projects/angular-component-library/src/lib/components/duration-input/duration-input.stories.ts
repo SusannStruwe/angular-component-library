@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/angular';
-import { fn } from '@storybook/test';
+import { fn } from 'storybook/test';
 import { DurationInputComponent } from './duration-input.component';
 import { EditMode } from '../../model/edit-mode.enum';
 

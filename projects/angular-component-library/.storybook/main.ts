@@ -1,23 +1,34 @@
 import type { StorybookConfig } from '@storybook/angular';
-import * as webpack from 'webpack';
 
 const config: StorybookConfig = {
-    stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+    stories: [
+        //'../src/**/*.mdx', -> needs storybook-design-token
+        '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'
+    ],
+
     addons: [
         '@storybook/addon-docs',
-        '@storybook/addon-essentials',
         '@storybook/addon-onboarding',
-        '@storybook/addon-interactions',
-        '@storybook/addon-a11y',
-        { name: 'storybook-design-token', options: { preserveCSSVars: true } }
+        '@storybook/addon-a11y'
+        //{ name: 'storybook-design-token', options: { preserveCSSVars: true } } version 4 needs storybook 9!
+        // note @angular-devkit/build-angular" only needed for storybook version. angular upgrade removed this lib
     ],
+
     framework: {
         name: '@storybook/angular',
         options: {}
     },
-    docs: {
-        autodocs: true
+
+    core: {
+        builder: {
+            name: '@storybook/builder-webpack5',
+            options: {
+                fsCache: true,
+                lazyCompilation: true
+            }
+        }
     },
+
     webpackFinal: async (config, { configType }) => {
         const mode =
             typeof configType === 'string'
@@ -25,27 +36,27 @@ const config: StorybookConfig = {
                 : 'development';
 
         config.performance = {
-            // hints:false
-            maxAssetSize: 5000000, // 5MB
+            maxAssetSize: 5000000,
             maxEntrypointSize: 5000000
         };
-        // Remove old DefinePlugin with NODE_ENV
+
+        // stop lazy loading
+        config.experiments = {
+            ...config.experiments,
+            lazyCompilation: false
+        };
+
         config.plugins = config.plugins?.filter(
-            (plugin) =>
+            (plugin: any) =>
                 !(
-                    plugin instanceof webpack.DefinePlugin &&
-                    'process.env.NODE_ENV' in (plugin.definitions || {})
+                    plugin?.constructor?.name === 'DefinePlugin' &&
+                    plugin?.definitions?.['process.env.NODE_ENV'] !== undefined
                 )
-        );
-        // Add new DefinePlugin with consistent NODE_ENV
-        config.plugins?.push(
-            new webpack.DefinePlugin({
-                'process.env.NODE_ENV': JSON.stringify(mode)
-            })
         );
 
         return config;
     },
+
     staticDirs: ['static']
 };
 

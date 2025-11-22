@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/angular';
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 import { filters, headerItems } from '../../../stories/util';
 import { TableHeaderComponent } from './table-header.component';
-import { fn } from '@storybook/test';
+import { fn } from 'storybook/test';
 import { TableStyle } from '../../../model/table-style.enum';
 
 const tableStyle: typeof TableStyle = TableStyle;

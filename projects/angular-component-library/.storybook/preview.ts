@@ -52,6 +52,7 @@ const preview: Preview = {
             }
         }
     },
+
     decorators: [
         applicationConfig({
             providers: [
@@ -70,7 +71,9 @@ const preview: Preview = {
                 }
             ]
         })
-    ]
+    ],
+
+    tags: ['autodocs']
 };
 
 export default preview;

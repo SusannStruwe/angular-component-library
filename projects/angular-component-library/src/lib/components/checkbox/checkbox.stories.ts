@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { CheckboxComponent } from './checkbox.component';
 import { EditMode } from '../../model/edit-mode.enum';
-import { fn, userEvent, waitFor, within, expect } from '@storybook/test';
+import { fn, userEvent, waitFor, within, expect } from 'storybook/test';
 
 const types: typeof EditMode = EditMode;
 

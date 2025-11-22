@@ -11,7 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { Icons } from '../../model/icons';
 import { SelectItem } from '../../model/select-item.model';
-import { fn } from '@storybook/test';
+import { fn } from 'storybook/test';
 import { SelectStyle } from '../../model/select-style.enum';
 
 const iconOptions: Record<string, IconDefinition> = {

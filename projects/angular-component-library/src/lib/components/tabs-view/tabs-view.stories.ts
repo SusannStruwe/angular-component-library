@@ -1,8 +1,8 @@
 import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 import { TabsViewComponent, templateMock } from './tabs-view.component';
 import { TabComponent } from './tab/tab.component';
-import { action } from '@storybook/addon-actions';
-import { fn } from '@storybook/test';
+import { action } from 'storybook/actions';
+import { fn } from 'storybook/test';
 
 const meta: Meta<TabsViewComponent> = {
     title: 'Components/TabsView',

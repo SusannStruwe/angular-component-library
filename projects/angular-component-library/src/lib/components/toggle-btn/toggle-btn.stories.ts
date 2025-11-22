@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { ToggleBtnComponent } from './toggle-btn.component';
-import { fn } from '@storybook/test';
+import { fn } from 'storybook/test';
 
 const meta: Meta<ToggleBtnComponent> = {
     title: 'Components/Toggle Btn',
