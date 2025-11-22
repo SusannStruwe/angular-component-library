@@ -1,15 +1,17 @@
 import {
-    AfterViewChecked,
-    ContentChild,
     Directive,
     EventEmitter,
     HostListener,
     Input,
     OnDestroy,
     OnInit,
-    Output
+    Output,
+    ViewContainerRef
 } from '@angular/core';
-import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import {
+    FaIconComponent,
+    IconDefinition
+} from '@fortawesome/angular-fontawesome';
 import {
     faSort,
     faSortDown,
@@ -42,17 +44,18 @@ const rotate: { [key: string]: SortDirection } = {
  */
 @Directive({
     selector: '[sortColumn]',
-    standalone: true
+    standalone: true,
+    exportAs: 'sortColumn'
 })
-export class SortColumnDirective
-    implements OnInit, OnDestroy, AfterViewChecked
-{
+export class SortColumnDirective implements OnInit, OnDestroy {
     @Input() sortable?: ColumnHeaderItem;
     @Input() sortDirection: SortDirection = '';
 
     @Output() sort = new EventEmitter<SortColumnEvent>();
 
-    @ContentChild(FaIconComponent) sortIcon?: FaIconComponent;
+    //@ContentChild(FaIconComponent) sortIcon?: FaIconComponent;
+
+    public directiveIcon: IconDefinition = faSort;
 
     private sortSubscription?: Subscription;
 
@@ -63,18 +66,11 @@ export class SortColumnDirective
             (event) => {
                 if (this.sortable?.title !== event.column.title) {
                     this.sortDirection = '';
-
-                    if (this.sortIcon) {
-                        this.sortIcon.icon = faSort;
-                        this.sortIcon.render();
-                    }
+                    this.updateIcon();
                 }
             }
         );
-    }
-
-    ngAfterViewChecked(): void {
-        this.setSortDirection();
+        this.updateIcon();
     }
 
     ngOnDestroy(): void {
@@ -85,7 +81,7 @@ export class SortColumnDirective
     public click() {
         this.sortDirection = rotate[this.sortDirection];
 
-        this.setSortDirection();
+        this.updateIcon();
 
         if (this.sortable) {
             this.sort.emit(
@@ -97,15 +93,16 @@ export class SortColumnDirective
         }
     }
 
-    setSortDirection(): void {
-        if (this.sortIcon) {
-            this.sortIcon.icon =
-                this.sortDirection === 'desc'
-                    ? faSortDown
-                    : this.sortDirection === 'asc'
-                      ? faSortUp
-                      : faSort;
-            this.sortIcon.render();
+    private updateIcon() {
+        switch (this.sortDirection) {
+            case 'asc':
+                this.directiveIcon = faSortUp;
+                break;
+            case 'desc':
+                this.directiveIcon = faSortDown;
+                break;
+            default:
+                this.directiveIcon = faSort;
         }
     }
 }

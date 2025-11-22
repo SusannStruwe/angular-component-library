@@ -714,21 +714,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<ColorPaletteComponent>",
-                "defaultValue": "{\n    title: 'Components/ColorPalette',\n    component: ColorPaletteComponent,\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CircleBtnComponent>",
                 "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ColorPaletteComponent>",
+                "defaultValue": "{\n    title: 'Components/ColorPalette',\n    component: ColorPaletteComponent,\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -768,7 +768,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<DropzoneComponent>",
-                "defaultValue": "{\r\n    title: 'Components/Dropzone',\r\n    component: DropzoneComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        choseFileLabel: { control: 'text' },\r\n        allowedExtension: { control: 'check', options: ['json'] },\r\n        fileArrayLength: { control: 'number' },\r\n        files: { control: { type: 'file', accept: '.json' } },\r\n        maxSizeOfFiles: { control: 'number' },\r\n        height: { control: 'text' },\r\n        width: { control: 'text' }\r\n    },\r\n    decorators: [\r\n        (story) => ({\r\n            template: `<div style=\"width: 600px;\">${story().template}</div>`,\r\n            props: story().props\r\n        })\r\n    ]\r\n}"
+                "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        choseFileLabel: { control: 'text' },\n        allowedExtension: { control: 'check', options: ['json'] },\n        fileArrayLength: { control: 'number' },\n        files: { control: { type: 'file', accept: '.json' } },\n        maxSizeOfFiles: { control: 'number' },\n        height: { control: 'text' },\n        width: { control: 'text' }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div style=\"width: 600px;\">${story().template}</div>`,\n            props: story().props\n        })\n    ]\n}"
             },
             {
                 "name": "meta",
@@ -978,7 +978,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\r\n    parameters: {\r\n        layout: 'centered',\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        actions: {\r\n            argTypesRegex: '(Change|Clicked|Selected)$'\r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n                color: ['../assets/styles.scss']\r\n            }\r\n        },\r\n        a11y: {\r\n            options: {\r\n                /*\r\n                 * Opt in to running WCAG 2.x AAA rules\r\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\r\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\r\n                 */\r\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\r\n            }\r\n        }\r\n    },\r\n\r\n    decorators: [\r\n        applicationConfig({\r\n            providers: [\r\n                { provide: TranslateLoader, useClass: FakeLoader },\r\n                { provide: TranslateCompiler, useClass: FakeCompiler },\r\n                { provide: TranslateParser, useClass: TranslateDefaultParser },\r\n                {\r\n                    provide: MissingTranslationHandler,\r\n                    useClass: NoopMissingTranslationHandler\r\n                },\r\n                TranslateStore,\r\n                TranslateService,\r\n                {\r\n                    provide: LOCALE_ID,\r\n                    useValue: 'de-DE'\r\n                }\r\n            ]\r\n        })\r\n    ],\r\n\r\n    tags: ['autodocs']\r\n}"
+                "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                 * Opt in to running WCAG 2.x AAA rules\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                 */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\n            }\n        }\n    },\n\n    decorators: [\n        applicationConfig({\n            providers: [\n                { provide: TranslateLoader, useClass: FakeLoader },\n                { provide: TranslateCompiler, useClass: FakeCompiler },\n                { provide: TranslateParser, useClass: TranslateDefaultParser },\n                {\n                    provide: MissingTranslationHandler,\n                    useClass: NoopMissingTranslationHandler\n                },\n                TranslateStore,\n                TranslateService,\n                {\n                    provide: LOCALE_ID,\n                    useValue: 'de-DE'\n                }\n            ]\n        })\n    ],\n\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "Primary",
@@ -1084,21 +1084,21 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {}\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faCheck\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {}\n}"
             },
             {
                 "name": "Sample",
@@ -1138,7 +1138,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    args: {\r\n        height: '100px',\r\n        width: '600px',\r\n        choseFileLabel: 'Load Input files',\r\n        maxSizeOfFiles: 20000\r\n    }\r\n}"
+                "defaultValue": "{\n    args: {\n        height: '100px',\n        width: '600px',\n        choseFileLabel: 'Load Input files',\n        maxSizeOfFiles: 20000\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1788,8 +1788,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ColorPaletteComponent>",
-                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "rawtype": "StoryObj<CircleBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1799,8 +1799,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CircleBtnComponent>",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                "rawtype": "StoryObj<ColorPaletteComponent>",
+                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -3469,7 +3469,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<DropzoneComponent>",
-                    "defaultValue": "{\r\n    title: 'Components/Dropzone',\r\n    component: DropzoneComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        choseFileLabel: { control: 'text' },\r\n        allowedExtension: { control: 'check', options: ['json'] },\r\n        fileArrayLength: { control: 'number' },\r\n        files: { control: { type: 'file', accept: '.json' } },\r\n        maxSizeOfFiles: { control: 'number' },\r\n        height: { control: 'text' },\r\n        width: { control: 'text' }\r\n    },\r\n    decorators: [\r\n        (story) => ({\r\n            template: `<div style=\"width: 600px;\">${story().template}</div>`,\r\n            props: story().props\r\n        })\r\n    ]\r\n}"
+                    "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        choseFileLabel: { control: 'text' },\n        allowedExtension: { control: 'check', options: ['json'] },\n        fileArrayLength: { control: 'number' },\n        files: { control: { type: 'file', accept: '.json' } },\n        maxSizeOfFiles: { control: 'number' },\n        height: { control: 'text' },\n        width: { control: 'text' }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div style=\"width: 600px;\">${story().template}</div>`,\n            props: story().props\n        })\n    ]\n}"
                 },
                 {
                     "name": "Sample",
@@ -3479,7 +3479,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    args: {\r\n        height: '100px',\r\n        width: '600px',\r\n        choseFileLabel: 'Load Input files',\r\n        maxSizeOfFiles: 20000\r\n    }\r\n}"
+                    "defaultValue": "{\n    args: {\n        height: '100px',\n        width: '600px',\n        choseFileLabel: 'Load Input files',\n        maxSizeOfFiles: 20000\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts": [
@@ -3719,7 +3719,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\r\n    parameters: {\r\n        layout: 'centered',\r\n        controls: {\r\n            matchers: {\r\n                color: /(background|color)$/i,\r\n                date: /Date$/i\r\n            }\r\n        },\r\n        actions: {\r\n            argTypesRegex: '(Change|Clicked|Selected)$'\r\n        },\r\n        designToken: {\r\n            defaultTab: 'Colors',\r\n            tokens: {\r\n                color: ['../assets/styles.scss']\r\n            }\r\n        },\r\n        a11y: {\r\n            options: {\r\n                /*\r\n                 * Opt in to running WCAG 2.x AAA rules\r\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\r\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\r\n                 */\r\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\r\n            }\r\n        }\r\n    },\r\n\r\n    decorators: [\r\n        applicationConfig({\r\n            providers: [\r\n                { provide: TranslateLoader, useClass: FakeLoader },\r\n                { provide: TranslateCompiler, useClass: FakeCompiler },\r\n                { provide: TranslateParser, useClass: TranslateDefaultParser },\r\n                {\r\n                    provide: MissingTranslationHandler,\r\n                    useClass: NoopMissingTranslationHandler\r\n                },\r\n                TranslateStore,\r\n                TranslateService,\r\n                {\r\n                    provide: LOCALE_ID,\r\n                    useValue: 'de-DE'\r\n                }\r\n            ]\r\n        })\r\n    ],\r\n\r\n    tags: ['autodocs']\r\n}"
+                    "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                 * Opt in to running WCAG 2.x AAA rules\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                 */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\n            }\n        }\n    },\n\n    decorators: [\n        applicationConfig({\n            providers: [\n                { provide: TranslateLoader, useClass: FakeLoader },\n                { provide: TranslateCompiler, useClass: FakeCompiler },\n                { provide: TranslateParser, useClass: TranslateDefaultParser },\n                {\n                    provide: MissingTranslationHandler,\n                    useClass: NoopMissingTranslationHandler\n                },\n                TranslateStore,\n                TranslateService,\n                {\n                    provide: LOCALE_ID,\n                    useValue: 'de-DE'\n                }\n            ]\n        })\n    ],\n\n    tags: ['autodocs']\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/directives/tooltip-directive.stories.ts": [
@@ -3893,19 +3893,6 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ColorPaletteComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
                 {
                     "name": "Story",
@@ -3913,6 +3900,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CircleBtnComponent>",
                     "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ColorPaletteComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
