@@ -7,9 +7,7 @@ import {
     Input,
     Output
 } from '@angular/core';
-import {
-    IconDefinition
-} from '@fortawesome/angular-fontawesome';
+import { IconDefinition } from '@fortawesome/angular-fontawesome';
 import {
     faSort,
     faSortDown,

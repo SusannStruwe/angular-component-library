@@ -1,6 +1,7 @@
 import {
     TranslateCompiler,
-    InterpolatableTranslation
+    InterpolatableTranslation,
+    TranslateService
 } from '@ngx-translate/core';
 import {
     MissingTranslationHandler,

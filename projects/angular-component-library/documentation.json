@@ -54,7 +54,7 @@
                 "name": "Active",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -64,7 +64,7 @@
                 "name": "Active",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -138,7 +138,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "`   <collapsible-component [show]=\"false\" [classStyles]=\"'simple'\">\n        <div header>\n            <p [style.width.px]=\"200\">Header</p>\n        </div>\n        <div content>\n            <p [style.padding-left.px]=\"15\">Your Content</p>\n        </div>\n    </collapsible-component>\n `"
+                "defaultValue": "`   <collapsible-component [show]=\"false\" [classStyles]=\"'simple'\">\r\n        <div header>\r\n            <p [style.width.px]=\"200\">Header</p>\r\n        </div>\r\n        <div content>\r\n            <p [style.padding-left.px]=\"15\">Your Content</p>\r\n        </div>\r\n    </collapsible-component>\r\n `"
             },
             {
                 "name": "defaultTemplateMock",
@@ -164,7 +164,7 @@
                 "name": "Delete",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -174,7 +174,7 @@
                 "name": "Delete",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -189,16 +189,6 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Delete',\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
-            },
-            {
-                "name": "DeleteActive",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
             },
             {
                 "name": "DeleteActive",
@@ -214,6 +204,16 @@
                 "name": "DeleteActive",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+            },
+            {
+                "name": "DeleteActive",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -224,7 +224,7 @@
                 "name": "DeleteDisabled",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -234,7 +234,7 @@
                 "name": "DeleteDisabled",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -254,7 +254,7 @@
                 "name": "Disabled",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -264,7 +264,7 @@
                 "name": "Disabled",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -364,7 +364,7 @@
                 "name": "hoverStyles",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -374,7 +374,7 @@
                 "name": "hoverStyles",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -394,7 +394,7 @@
                 "name": "Icon",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -404,7 +404,7 @@
                 "name": "Icon",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -434,21 +434,21 @@
                 "name": "iconOptions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Record<string, IconDefinition>",
-                "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfo: faInfo,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
-            },
-            {
-                "name": "iconOptions",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
                 "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+            },
+            {
+                "name": "iconOptions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Record<string, IconDefinition>",
+                "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfo: faInfo,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
             },
             {
                 "name": "iconOptions",
@@ -508,7 +508,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "`   <collapsible-component [(show)]=\"show\" [classStyles]=\"'simple'\">\n        <div header>\n            <div class=\"flex-row\">\n                <p [style.width.px]=\"200\">Header with icon</p>\n                <fa-icon [icon]=\"show ? faUp : faDown\"> </fa-icon>\n            </div>\n        </div>\n        <div content>\n            <p [style.padding-left.px]=\"15\">Your Content</p>\n        </div>\n    </collapsible-component>\n `"
+                "defaultValue": "`   <collapsible-component [(show)]=\"show\" [classStyles]=\"'simple'\">\r\n        <div header>\r\n            <div class=\"flex-row\">\r\n                <p [style.width.px]=\"200\">Header with icon</p>\r\n                <fa-icon [icon]=\"show ? faUp : faDown\"> </fa-icon>\r\n            </div>\r\n        </div>\r\n        <div content>\r\n            <p [style.padding-left.px]=\"15\">Your Content</p>\r\n        </div>\r\n    </collapsible-component>\r\n `"
             },
             {
                 "name": "InfoAlert",
@@ -674,16 +674,6 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<BorderedBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['gray', 'delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -694,21 +684,11 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<CheckboxComponent>",
-                "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' },\n        valueChange: { action: 'changed' }\n    },\n    args: { valueChange: fn() }\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<CollapsibleComponent>",
-                "defaultValue": "{\n    title: 'Components/Collapsible',\n    component: CollapsibleComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\n \n                 `\n            }\n        }\n    },\n    decorators: [\n        (story) => {\n            const storyObj = story();\n            return {\n                moduleMetadata: {\n                    imports: [CollapsibleComponent, FontAwesomeModule]\n                },\n                template: storyObj.template,\n                props: storyObj.props\n            };\n        }\n    ],\n    tags: ['autodocs']\n}"
+                "type": "Meta<BorderedBtnComponent>",
+                "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['gray', 'delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
             },
             {
                 "name": "meta",
@@ -719,6 +699,26 @@
                 "deprecationMessage": "",
                 "type": "Meta<CircleBtnComponent>",
                 "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CollapsibleComponent>",
+                "defaultValue": "{\r\n    title: 'Components/Collapsible',\r\n    component: CollapsibleComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\r\n\r\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\r\n \r\n                 `\r\n            }\r\n        }\r\n    },\r\n    decorators: [\r\n        (story) => {\r\n            const storyObj = story();\r\n            return {\r\n                moduleMetadata: {\r\n                    imports: [CollapsibleComponent, FontAwesomeModule]\r\n                },\r\n                template: storyObj.template,\r\n                props: storyObj.props\r\n            };\r\n        }\r\n    ],\r\n    tags: ['autodocs']\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CheckboxComponent>",
+                "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' },\n        valueChange: { action: 'changed' }\n    },\n    args: { valueChange: fn() }\n}"
             },
             {
                 "name": "meta",
@@ -934,21 +934,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<TableHeaderComponent>",
-                "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        showSearchLine: { control: 'boolean' },\n        tableStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(tableStyle),\n            mapping: TableStyle\n        },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TableContentComponent>",
                 "defaultValue": "{\n    title: 'Components/Table/Table Content',\n    component: TableContentComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table content component.\n                `\n            }\n        }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div [style.width.px]=\"'600'\">${story().template}</div>`,\n            props: story().props\n        })\n    ],\n    argTypes: {\n        tableItems: { control: 'object' },\n        tableHeight: { control: 'text' },\n        selectedTableItem: { control: 'object' },\n        selectedTableItemChange: { action: 'select' }\n    },\n    args: {\n        selectedTableItemChange: fn(),\n        tableHeight: '275px'\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TableHeaderComponent>",
+                "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        showSearchLine: { control: 'boolean' },\n        tableStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(tableStyle),\n            mapping: TableStyle\n        },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "Off",
@@ -978,7 +978,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                 * Opt in to running WCAG 2.x AAA rules\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                 */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\n            }\n        }\n    },\n\n    decorators: [\n        applicationConfig({\n            providers: [\n                { provide: TranslateLoader, useClass: FakeLoader },\n                { provide: TranslateCompiler, useClass: FakeCompiler },\n                { provide: TranslateParser, useClass: TranslateDefaultParser },\n                {\n                    provide: MissingTranslationHandler,\n                    useClass: NoopMissingTranslationHandler\n                },\n                TranslateStore,\n                TranslateService,\n                {\n                    provide: LOCALE_ID,\n                    useValue: 'de-DE'\n                }\n            ]\n        })\n    ],\n\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                 * Opt in to running WCAG 2.x AAA rules\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                 */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\n            }\n        }\n    },\n\n    decorators: [\n        applicationConfig({\n            providers: [\n                importProvidersFrom(\n                    TranslateModule.forRoot({\n                        loader: { provide: TranslateLoader, useClass: FakeLoader },\n                        compiler: { provide: TranslateCompiler, useClass: FakeCompiler },\n                        parser: { provide: TranslateParser, useClass: TranslateDefaultParser },\n                        missingTranslationHandler: { provide: MissingTranslationHandler, useClass: NoopMissingTranslationHandler }\n                    })\n                ),\n                TranslateStore,\n                {\n                    provide: LOCALE_ID,\n                    useValue: 'de'\n                },\n                {\n          provide: 'STORYBOOK_TRANSLATE_INIT',\n          useFactory: (ts: TranslateService) => {\n            console.log('FACTORY RUNNING — TranslateService', ts?.currentLang);\n            ts.setFallbackLang('de');\n            ts.use('de'); // <- sollte FakeLoader.getTranslation('de') triggern\n            console.log('AFTER USE', ts.currentLang);\n            return true;\n          },\n          deps: [TranslateService]\n        }\n            ],\n        \n        })\n    ],\n\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "Primary",
@@ -1044,16 +1044,6 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Sample'\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1064,21 +1054,11 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        value: false,\n        mode: EditMode.WRITE\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const checkbox = (await canvas.findByTestId(\n            'checkbox'\n        )) as HTMLInputElement;\n\n        const wasChecked = checkbox.checked;\n\n        await userEvent.click(checkbox);\n\n        await waitFor(() => {\n            expect(checkbox.checked).not.toBe(wasChecked);\n        });\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Sample'\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1089,6 +1069,26 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faCheck\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args\r\n        },\r\n        template: defaultTemplateMock\r\n    }),\r\n    play: async ({ canvasElement }) => {\r\n        const canvas = within(canvasElement);\r\n\r\n        const header = (await canvas.findByTestId(\r\n            'collapse-header'\r\n        )) as HTMLInputElement;\r\n        const content = (await canvas.findByTestId(\r\n            'collapse-content'\r\n        )) as HTMLInputElement;\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('hide')).toBe(true);\r\n            expect(content.classList.contains('show')).toBe(false);\r\n        });\r\n\r\n        await userEvent.click(header);\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('show')).toBe(true);\r\n            expect(content.classList.contains('hide')).toBe(false);\r\n        });\r\n    }\r\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        value: false,\n        mode: EditMode.WRITE\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const checkbox = (await canvas.findByTestId(\n            'checkbox'\n        )) as HTMLInputElement;\n\n        const wasChecked = checkbox.checked;\n\n        await userEvent.click(checkbox);\n\n        await waitFor(() => {\n            expect(checkbox.checked).not.toBe(wasChecked);\n        });\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1284,21 +1284,21 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        tableItems: contentItems,\n        tableHeight: '200px',\n        selectedTableItemChange: (event: any) => {\n            action('selected row')(event);\n        }\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
             },
             {
                 "name": "SampleNgContent",
@@ -1404,7 +1404,7 @@
                 "name": "Spinning",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -1414,7 +1414,7 @@
                 "name": "Spinning",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -1514,21 +1514,21 @@
                 "name": "templateMock",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "`   <bordered-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </bordered-btn-component>\n `"
-            },
-            {
-                "name": "templateMock",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "`   <borderless-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </borderless-btn-component>\n `"
+            },
+            {
+                "name": "templateMock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "`   <bordered-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </bordered-btn-component>\n `"
             },
             {
                 "name": "templateMock",
@@ -1594,7 +1594,7 @@
                 "name": "WithAction",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -1604,7 +1604,7 @@
                 "name": "WithAction",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -1648,7 +1648,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            faUp: faUp,\n            faDown: faDown,\n            show: show\n        },\n        template: iconTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
+                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            faUp: faUp,\r\n            faDown: faDown,\r\n            show: show\r\n        },\r\n        template: iconTemplateMock\r\n    }),\r\n    play: async ({ canvasElement }) => {\r\n        const canvas = within(canvasElement);\r\n\r\n        const header = (await canvas.findByTestId(\r\n            'collapse-header'\r\n        )) as HTMLInputElement;\r\n        const content = (await canvas.findByTestId(\r\n            'collapse-content'\r\n        )) as HTMLInputElement;\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('hide')).toBe(true);\r\n            expect(content.classList.contains('show')).toBe(false);\r\n        });\r\n\r\n        await userEvent.click(header);\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('show')).toBe(true);\r\n            expect(content.classList.contains('hide')).toBe(false);\r\n        });\r\n    }\r\n}"
             },
             {
                 "name": "WithoutSearchLine",
@@ -1744,17 +1744,6 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<BorderedBtnComponent>",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
                 "rawtype": "StoryObj<BorderlessBtnComponent>",
                 "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
@@ -1766,8 +1755,19 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CheckboxComponent>",
-                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "rawtype": "StoryObj<BorderedBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<CircleBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1788,8 +1788,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CircleBtnComponent>",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                "rawtype": "StoryObj<CheckboxComponent>",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2041,8 +2041,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<TableHeaderComponent>",
-                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "rawtype": "StoryObj<TableContentComponent>",
+                "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2052,8 +2052,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<TableContentComponent>",
-                "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
+                "rawtype": "StoryObj<TableHeaderComponent>",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2062,6 +2062,138 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts": [
+                {
+                    "name": "Active",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                },
+                {
+                    "name": "Delete",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                },
+                {
+                    "name": "DeleteActive",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                },
+                {
+                    "name": "DeleteDisabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
+                },
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
+                },
+                {
+                    "name": "hoverStyles",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "HoverStyle"
+                },
+                {
+                    "name": "Icon",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        faIcon: faInfoCircle\n    }\n}"
+                },
+                {
+                    "name": "iconOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Record<string, IconDefinition>",
+                    "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<BorderlessBtnComponent>",
+                    "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
+                },
+                {
+                    "name": "Sample",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Sample',\n        isDisabled: false\n    }\n}"
+                },
+                {
+                    "name": "Spinning",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+                },
+                {
+                    "name": "templateMock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "`   <borderless-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </borderless-btn-component>\n `"
+                },
+                {
+                    "name": "WithAction",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            click: () => {\n                action('do something')();\n            }\n        },\n        template: templateMock\n    })\n}"
+                }
+            ],
             "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts": [
                 {
                     "name": "Active",
@@ -2198,138 +2330,6 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            click: () => {\n                action('do something')();\n            }\n        },\n        template: templateMock\n    })\n}"
-                }
-            ],
-            "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts": [
-                {
-                    "name": "Active",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
-                },
-                {
-                    "name": "Delete",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Delete',\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
-                },
-                {
-                    "name": "DeleteActive",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteActive',\n        isDisabled: false,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
-                },
-                {
-                    "name": "DeleteDisabled",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'DeleteDisabled',\n        isDisabled: true,\n        isActive: true,\n        faIcon: faTrash,\n        classStyle: 'delete',\n        width: '200px'\n    }\n}"
-                },
-                {
-                    "name": "Disabled",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
-                },
-                {
-                    "name": "hoverStyles",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "HoverStyle"
-                },
-                {
-                    "name": "Icon",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        faIcon: faInfoCircle\n    }\n}"
-                },
-                {
-                    "name": "iconOptions",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Record<string, IconDefinition>",
-                    "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<BorderlessBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
-                },
-                {
-                    "name": "Sample",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Sample',\n        isDisabled: false\n    }\n}"
-                },
-                {
-                    "name": "Spinning",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
-                },
-                {
-                    "name": "templateMock",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "`   <borderless-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </borderless-btn-component>\n `"
-                },
-                {
-                    "name": "WithAction",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -2787,7 +2787,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "`   <collapsible-component [show]=\"false\" [classStyles]=\"'simple'\">\n        <div header>\n            <p [style.width.px]=\"200\">Header</p>\n        </div>\n        <div content>\n            <p [style.padding-left.px]=\"15\">Your Content</p>\n        </div>\n    </collapsible-component>\n `"
+                    "defaultValue": "`   <collapsible-component [show]=\"false\" [classStyles]=\"'simple'\">\r\n        <div header>\r\n            <p [style.width.px]=\"200\">Header</p>\r\n        </div>\r\n        <div content>\r\n            <p [style.padding-left.px]=\"15\">Your Content</p>\r\n        </div>\r\n    </collapsible-component>\r\n `"
                 },
                 {
                     "name": "faDown",
@@ -2817,7 +2817,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "`   <collapsible-component [(show)]=\"show\" [classStyles]=\"'simple'\">\n        <div header>\n            <div class=\"flex-row\">\n                <p [style.width.px]=\"200\">Header with icon</p>\n                <fa-icon [icon]=\"show ? faUp : faDown\"> </fa-icon>\n            </div>\n        </div>\n        <div content>\n            <p [style.padding-left.px]=\"15\">Your Content</p>\n        </div>\n    </collapsible-component>\n `"
+                    "defaultValue": "`   <collapsible-component [(show)]=\"show\" [classStyles]=\"'simple'\">\r\n        <div header>\r\n            <div class=\"flex-row\">\r\n                <p [style.width.px]=\"200\">Header with icon</p>\r\n                <fa-icon [icon]=\"show ? faUp : faDown\"> </fa-icon>\r\n            </div>\r\n        </div>\r\n        <div content>\r\n            <p [style.padding-left.px]=\"15\">Your Content</p>\r\n        </div>\r\n    </collapsible-component>\r\n `"
                 },
                 {
                     "name": "meta",
@@ -2827,7 +2827,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CollapsibleComponent>",
-                    "defaultValue": "{\n    title: 'Components/Collapsible',\n    component: CollapsibleComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\n \n                 `\n            }\n        }\n    },\n    decorators: [\n        (story) => {\n            const storyObj = story();\n            return {\n                moduleMetadata: {\n                    imports: [CollapsibleComponent, FontAwesomeModule]\n                },\n                template: storyObj.template,\n                props: storyObj.props\n            };\n        }\n    ],\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\r\n    title: 'Components/Collapsible',\r\n    component: CollapsibleComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\r\n\r\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\r\n \r\n                 `\r\n            }\r\n        }\r\n    },\r\n    decorators: [\r\n        (story) => {\r\n            const storyObj = story();\r\n            return {\r\n                moduleMetadata: {\r\n                    imports: [CollapsibleComponent, FontAwesomeModule]\r\n                },\r\n                template: storyObj.template,\r\n                props: storyObj.props\r\n            };\r\n        }\r\n    ],\r\n    tags: ['autodocs']\r\n}"
                 },
                 {
                     "name": "Sample",
@@ -2837,7 +2837,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
+                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args\r\n        },\r\n        template: defaultTemplateMock\r\n    }),\r\n    play: async ({ canvasElement }) => {\r\n        const canvas = within(canvasElement);\r\n\r\n        const header = (await canvas.findByTestId(\r\n            'collapse-header'\r\n        )) as HTMLInputElement;\r\n        const content = (await canvas.findByTestId(\r\n            'collapse-content'\r\n        )) as HTMLInputElement;\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('hide')).toBe(true);\r\n            expect(content.classList.contains('show')).toBe(false);\r\n        });\r\n\r\n        await userEvent.click(header);\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('show')).toBe(true);\r\n            expect(content.classList.contains('hide')).toBe(false);\r\n        });\r\n    }\r\n}"
                 },
                 {
                     "name": "show",
@@ -2857,7 +2857,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            faUp: faUp,\n            faDown: faDown,\n            show: show\n        },\n        template: iconTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
+                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            faUp: faUp,\r\n            faDown: faDown,\r\n            show: show\r\n        },\r\n        template: iconTemplateMock\r\n    }),\r\n    play: async ({ canvasElement }) => {\r\n        const canvas = within(canvasElement);\r\n\r\n        const header = (await canvas.findByTestId(\r\n            'collapse-header'\r\n        )) as HTMLInputElement;\r\n        const content = (await canvas.findByTestId(\r\n            'collapse-content'\r\n        )) as HTMLInputElement;\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('hide')).toBe(true);\r\n            expect(content.classList.contains('show')).toBe(false);\r\n        });\r\n\r\n        await userEvent.click(header);\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('show')).toBe(true);\r\n            expect(content.classList.contains('hide')).toBe(false);\r\n        });\r\n    }\r\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts": [
@@ -3719,7 +3719,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                 * Opt in to running WCAG 2.x AAA rules\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                 */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\n            }\n        }\n    },\n\n    decorators: [\n        applicationConfig({\n            providers: [\n                { provide: TranslateLoader, useClass: FakeLoader },\n                { provide: TranslateCompiler, useClass: FakeCompiler },\n                { provide: TranslateParser, useClass: TranslateDefaultParser },\n                {\n                    provide: MissingTranslationHandler,\n                    useClass: NoopMissingTranslationHandler\n                },\n                TranslateStore,\n                TranslateService,\n                {\n                    provide: LOCALE_ID,\n                    useValue: 'de-DE'\n                }\n            ]\n        })\n    ],\n\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                 * Opt in to running WCAG 2.x AAA rules\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                 */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\n            }\n        }\n    },\n\n    decorators: [\n        applicationConfig({\n            providers: [\n                importProvidersFrom(\n                    TranslateModule.forRoot({\n                        loader: { provide: TranslateLoader, useClass: FakeLoader },\n                        compiler: { provide: TranslateCompiler, useClass: FakeCompiler },\n                        parser: { provide: TranslateParser, useClass: TranslateDefaultParser },\n                        missingTranslationHandler: { provide: MissingTranslationHandler, useClass: NoopMissingTranslationHandler }\n                    })\n                ),\n                TranslateStore,\n                {\n                    provide: LOCALE_ID,\n                    useValue: 'de'\n                },\n                {\n          provide: 'STORYBOOK_TRANSLATE_INIT',\n          useFactory: (ts: TranslateService) => {\n            console.log('FACTORY RUNNING — TranslateService', ts?.currentLang);\n            ts.setFallbackLang('de');\n            ts.use('de'); // <- sollte FakeLoader.getTranslation('de') triggern\n            console.log('AFTER USE', ts.currentLang);\n            return true;\n          },\n          deps: [TranslateService]\n        }\n            ],\n        \n        })\n    ],\n\n    tags: ['autodocs']\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/directives/tooltip-directive.stories.ts": [
@@ -3841,19 +3841,6 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<BorderedBtnComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts": [
                 {
                     "name": "Story",
@@ -3867,13 +3854,26 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
+            "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<CheckboxComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                    "rawtype": "StoryObj<BorderedBtnComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CircleBtnComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -3893,13 +3893,13 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
+            "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<CircleBtnComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                    "rawtype": "StoryObj<CheckboxComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -4192,19 +4192,6 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<TableHeaderComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts": [
                 {
                     "name": "Story",
@@ -4212,6 +4199,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<TableContentComponent>",
                     "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TableHeaderComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",

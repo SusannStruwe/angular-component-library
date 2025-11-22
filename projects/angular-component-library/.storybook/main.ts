@@ -23,8 +23,8 @@ const config: StorybookConfig = {
         builder: {
             name: '@storybook/builder-webpack5',
             options: {
-                fsCache: true,
-                lazyCompilation: true
+                fsCache: false,
+                lazyCompilation: false
             }
         }
     },
