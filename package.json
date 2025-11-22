@@ -15,7 +15,7 @@
         "storybook": "ng run angular-component-library:storybook",
         "test-storybook": "test-storybook --config-dir projects/angular-component-library/.storybook --url http://localhost:6006",
         "build-storybook": "ng run angular-component-library:build-storybook",
-        "update:devkit": "ng update @angular-devkit/build-angular@20",
+        "update:devkit": "ng update @angular-devkit/build-angular@20.0.0",
         "update:angular": "ng update @angular/cli@20 @angular/core@20",
         "update:angular/cdk": "ng update @angular/cdk@20 @ngx-translate/core",
         "update:fortawesome": "ng update @fortawesome/angular-fontawesome@1 @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons",
