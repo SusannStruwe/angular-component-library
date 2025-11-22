@@ -19,8 +19,7 @@ import {
  */
 
 @Directive({
-    selector: '[resizableColumn]',
-    standalone: true
+    selector: '[resizableColumn]'
 })
 export class ResizableColumnDirective {
     @Input() columnKey!: string;

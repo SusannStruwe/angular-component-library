@@ -9,7 +9,6 @@ import {
     ViewContainerRef
 } from '@angular/core';
 import {
-    FaIconComponent,
     IconDefinition
 } from '@fortawesome/angular-fontawesome';
 import {
@@ -44,7 +43,6 @@ const rotate: { [key: string]: SortDirection } = {
  */
 @Directive({
     selector: '[sortColumn]',
-    standalone: true,
     exportAs: 'sortColumn'
 })
 export class SortColumnDirective implements OnInit, OnDestroy {
@@ -52,8 +50,6 @@ export class SortColumnDirective implements OnInit, OnDestroy {
     @Input() sortDirection: SortDirection = '';
 
     @Output() sort = new EventEmitter<SortColumnEvent>();
-
-    //@ContentChild(FaIconComponent) sortIcon?: FaIconComponent;
 
     public directiveIcon: IconDefinition = faSort;
 

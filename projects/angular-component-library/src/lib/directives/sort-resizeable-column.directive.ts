@@ -7,7 +7,9 @@ import {
     Input,
     Output
 } from '@angular/core';
-import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import {
+    IconDefinition
+} from '@fortawesome/angular-fontawesome';
 import {
     faSort,
     faSortDown,
@@ -33,14 +35,14 @@ const rotate: { [key: string]: SortDirection } = {
  */
 @Directive({
     selector: '[sortResizeableColumn]',
-    standalone: true
+    exportAs: 'sortResizeableColumn'
 })
 export class SortResizeableColumnDirective implements AfterViewChecked {
     @Input() sortDirection: SortDirection = '';
 
     @Output() sort = new EventEmitter<SortDirection>();
 
-    @ContentChild(FaIconComponent) sortIcon?: FaIconComponent;
+    public directiveIcon: IconDefinition = faSort;
 
     ngAfterViewChecked(): void {
         this.setSortDirection();
@@ -54,14 +56,15 @@ export class SortResizeableColumnDirective implements AfterViewChecked {
     }
 
     setSortDirection(): void {
-        if (this.sortIcon) {
-            this.sortIcon.icon =
-                this.sortDirection === 'desc'
-                    ? faSortDown
-                    : this.sortDirection === 'asc'
-                      ? faSortUp
-                      : faSort;
-            this.sortIcon.render();
+        switch (this.sortDirection) {
+            case 'asc':
+                this.directiveIcon = faSortUp;
+                break;
+            case 'desc':
+                this.directiveIcon = faSortDown;
+                break;
+            default:
+                this.directiveIcon = faSort;
         }
     }
 }

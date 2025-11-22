@@ -7,7 +7,6 @@ export const PREFIX = '--';
  */
 @Component({
     selector: 'sass-helper',
-    standalone: true,
     template: '<div></div>'
 })
 export class SassHelperComponent {

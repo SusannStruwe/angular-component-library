@@ -15,8 +15,7 @@ import {
  * ```
  */
 @Directive({
-    selector: '[tooltip]',
-    standalone: true
+    selector: '[tooltip]'
 })
 export class TooltipDirective implements OnDestroy {
     @Input() tooltip = ''; // The text for the tooltip to display

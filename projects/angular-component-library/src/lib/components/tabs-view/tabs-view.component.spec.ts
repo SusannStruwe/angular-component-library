@@ -6,8 +6,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'tabs-view-mock-component',
-    template: templateMock,
-    standalone: false
+    template: templateMock
 })
 class TabsViewMockComponent {
     selectedTabChanged(_: any): void {

@@ -15,8 +15,7 @@ import {
  * ```
  */
 @Directive({
-    selector: '[dragDropFile]',
-    standalone: true
+    selector: '[dragDropFile]'
 })
 export class FileDragNDropDirective {
     @Output() filesChangeEmitter: EventEmitter<File[]> = new EventEmitter();
