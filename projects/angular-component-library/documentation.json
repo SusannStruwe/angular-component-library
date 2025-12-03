@@ -138,7 +138,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "`   <collapsible-component [show]=\"false\" [classStyles]=\"'simple'\">\r\n        <div header>\r\n            <p [style.width.px]=\"200\">Header</p>\r\n        </div>\r\n        <div content>\r\n            <p [style.padding-left.px]=\"15\">Your Content</p>\r\n        </div>\r\n    </collapsible-component>\r\n `"
+                "defaultValue": "`   <collapsible-component [show]=\"false\" [classStyles]=\"'simple'\">\n        <div header>\n            <p [style.width.px]=\"200\">Header</p>\n        </div>\n        <div content>\n            <p [style.padding-left.px]=\"15\">Your Content</p>\n        </div>\n    </collapsible-component>\n `"
             },
             {
                 "name": "defaultTemplateMock",
@@ -508,7 +508,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "`   <collapsible-component [(show)]=\"show\" [classStyles]=\"'simple'\">\r\n        <div header>\r\n            <div class=\"flex-row\">\r\n                <p [style.width.px]=\"200\">Header with icon</p>\r\n                <fa-icon [icon]=\"show ? faUp : faDown\"> </fa-icon>\r\n            </div>\r\n        </div>\r\n        <div content>\r\n            <p [style.padding-left.px]=\"15\">Your Content</p>\r\n        </div>\r\n    </collapsible-component>\r\n `"
+                "defaultValue": "`   <collapsible-component [(show)]=\"show\" [classStyles]=\"'simple'\">\n        <div header>\n            <div class=\"flex-row\">\n                <p [style.width.px]=\"200\">Header with icon</p>\n                <fa-icon [icon]=\"show ? faUp : faDown\"> </fa-icon>\n            </div>\n        </div>\n        <div content>\n            <p [style.padding-left.px]=\"15\">Your Content</p>\n        </div>\n    </collapsible-component>\n `"
             },
             {
                 "name": "InfoAlert",
@@ -684,6 +684,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CheckboxComponent>",
+                "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' },\n        valueChange: { action: 'changed' }\n    },\n    args: { valueChange: fn() }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -708,17 +718,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CollapsibleComponent>",
-                "defaultValue": "{\r\n    title: 'Components/Collapsible',\r\n    component: CollapsibleComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\r\n\r\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\r\n \r\n                 `\r\n            }\r\n        }\r\n    },\r\n    decorators: [\r\n        (story) => {\r\n            const storyObj = story();\r\n            return {\r\n                moduleMetadata: {\r\n                    imports: [CollapsibleComponent, FontAwesomeModule]\r\n                },\r\n                template: storyObj.template,\r\n                props: storyObj.props\r\n            };\r\n        }\r\n    ],\r\n    tags: ['autodocs']\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<CheckboxComponent>",
-                "defaultValue": "{\n    title: 'Components/Checkbox',\n    component: CheckboxComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        value: { control: 'boolean' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' },\n        valueChange: { action: 'changed' }\n    },\n    args: { valueChange: fn() }\n}"
+                "defaultValue": "{\n    title: 'Components/Collapsible',\n    component: CollapsibleComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\n \n                 `\n            }\n        }\n    },\n    decorators: [\n        (story) => {\n            const storyObj = story();\n            return {\n                moduleMetadata: {\n                    imports: [CollapsibleComponent, FontAwesomeModule]\n                },\n                template: storyObj.template,\n                props: storyObj.props\n            };\n        }\n    ],\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -978,7 +978,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                 * Opt in to running WCAG 2.x AAA rules\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                 */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\n            }\n        }\n    },\n\n    decorators: [\n        applicationConfig({\n            providers: [\n                importProvidersFrom(\n                    TranslateModule.forRoot({\n                        loader: { provide: TranslateLoader, useClass: FakeLoader },\n                        compiler: { provide: TranslateCompiler, useClass: FakeCompiler },\n                        parser: { provide: TranslateParser, useClass: TranslateDefaultParser },\n                        missingTranslationHandler: { provide: MissingTranslationHandler, useClass: NoopMissingTranslationHandler }\n                    })\n                ),\n                TranslateStore,\n                {\n                    provide: LOCALE_ID,\n                    useValue: 'de'\n                },\n                {\n          provide: 'STORYBOOK_TRANSLATE_INIT',\n          useFactory: (ts: TranslateService) => {\n            console.log('FACTORY RUNNING — TranslateService', ts?.currentLang);\n            ts.setFallbackLang('de');\n            ts.use('de'); // <- sollte FakeLoader.getTranslation('de') triggern\n            console.log('AFTER USE', ts.currentLang);\n            return true;\n          },\n          deps: [TranslateService]\n        }\n            ],\n        \n        })\n    ],\n\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                 * Opt in to running WCAG 2.x AAA rules\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                 */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\n            }\n        }\n    },\n\n    decorators: [\n        applicationConfig({\n            providers: [\n                TranslateStore,\n                TranslateService,\n                { provide: TranslateLoader, useClass: FakeLoader },\n                { provide: TranslateCompiler, useClass: FakeCompiler },\n                { provide: TranslateParser, useClass: TranslateDefaultParser },\n                {\n                    provide: MissingTranslationHandler,\n                    useClass: NoopMissingTranslationHandler\n                },\n                {\n                    provide: LOCALE_ID,\n                    useValue: 'de'\n                },\n                provideAppInitializer(() => {\n                    const ts = inject(TranslateService);\n                    ts.setFallbackLang('de');\n                    ts.use('de');\n                })\n            ]\n        })\n    ],\n\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "Primary",
@@ -1054,6 +1054,16 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        value: false,\n        mode: EditMode.WRITE\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const checkbox = (await canvas.findByTestId(\n            'checkbox'\n        )) as HTMLInputElement;\n\n        const wasChecked = checkbox.checked;\n\n        await userEvent.click(checkbox);\n\n        await waitFor(() => {\n            expect(checkbox.checked).not.toBe(wasChecked);\n        });\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1078,17 +1088,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args\r\n        },\r\n        template: defaultTemplateMock\r\n    }),\r\n    play: async ({ canvasElement }) => {\r\n        const canvas = within(canvasElement);\r\n\r\n        const header = (await canvas.findByTestId(\r\n            'collapse-header'\r\n        )) as HTMLInputElement;\r\n        const content = (await canvas.findByTestId(\r\n            'collapse-content'\r\n        )) as HTMLInputElement;\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('hide')).toBe(true);\r\n            expect(content.classList.contains('show')).toBe(false);\r\n        });\r\n\r\n        await userEvent.click(header);\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('show')).toBe(true);\r\n            expect(content.classList.contains('hide')).toBe(false);\r\n        });\r\n    }\r\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        value: false,\n        mode: EditMode.WRITE\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const checkbox = (await canvas.findByTestId(\n            'checkbox'\n        )) as HTMLInputElement;\n\n        const wasChecked = checkbox.checked;\n\n        await userEvent.click(checkbox);\n\n        await waitFor(() => {\n            expect(checkbox.checked).not.toBe(wasChecked);\n        });\n    }\n}"
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1648,7 +1648,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            faUp: faUp,\r\n            faDown: faDown,\r\n            show: show\r\n        },\r\n        template: iconTemplateMock\r\n    }),\r\n    play: async ({ canvasElement }) => {\r\n        const canvas = within(canvasElement);\r\n\r\n        const header = (await canvas.findByTestId(\r\n            'collapse-header'\r\n        )) as HTMLInputElement;\r\n        const content = (await canvas.findByTestId(\r\n            'collapse-content'\r\n        )) as HTMLInputElement;\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('hide')).toBe(true);\r\n            expect(content.classList.contains('show')).toBe(false);\r\n        });\r\n\r\n        await userEvent.click(header);\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('show')).toBe(true);\r\n            expect(content.classList.contains('hide')).toBe(false);\r\n        });\r\n    }\r\n}"
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            faUp: faUp,\n            faDown: faDown,\n            show: show\n        },\n        template: iconTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
             },
             {
                 "name": "WithoutSearchLine",
@@ -1755,6 +1755,17 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<CheckboxComponent>",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<BorderedBtnComponent>",
                 "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
@@ -1779,17 +1790,6 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<CollapsibleComponent>",
                 "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<CheckboxComponent>",
-                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2787,7 +2787,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "`   <collapsible-component [show]=\"false\" [classStyles]=\"'simple'\">\r\n        <div header>\r\n            <p [style.width.px]=\"200\">Header</p>\r\n        </div>\r\n        <div content>\r\n            <p [style.padding-left.px]=\"15\">Your Content</p>\r\n        </div>\r\n    </collapsible-component>\r\n `"
+                    "defaultValue": "`   <collapsible-component [show]=\"false\" [classStyles]=\"'simple'\">\n        <div header>\n            <p [style.width.px]=\"200\">Header</p>\n        </div>\n        <div content>\n            <p [style.padding-left.px]=\"15\">Your Content</p>\n        </div>\n    </collapsible-component>\n `"
                 },
                 {
                     "name": "faDown",
@@ -2817,7 +2817,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "`   <collapsible-component [(show)]=\"show\" [classStyles]=\"'simple'\">\r\n        <div header>\r\n            <div class=\"flex-row\">\r\n                <p [style.width.px]=\"200\">Header with icon</p>\r\n                <fa-icon [icon]=\"show ? faUp : faDown\"> </fa-icon>\r\n            </div>\r\n        </div>\r\n        <div content>\r\n            <p [style.padding-left.px]=\"15\">Your Content</p>\r\n        </div>\r\n    </collapsible-component>\r\n `"
+                    "defaultValue": "`   <collapsible-component [(show)]=\"show\" [classStyles]=\"'simple'\">\n        <div header>\n            <div class=\"flex-row\">\n                <p [style.width.px]=\"200\">Header with icon</p>\n                <fa-icon [icon]=\"show ? faUp : faDown\"> </fa-icon>\n            </div>\n        </div>\n        <div content>\n            <p [style.padding-left.px]=\"15\">Your Content</p>\n        </div>\n    </collapsible-component>\n `"
                 },
                 {
                     "name": "meta",
@@ -2827,7 +2827,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CollapsibleComponent>",
-                    "defaultValue": "{\r\n    title: 'Components/Collapsible',\r\n    component: CollapsibleComponent,\r\n    parameters: {\r\n        docs: {\r\n            description: {\r\n                component: `\r\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\r\n\r\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\r\n \r\n                 `\r\n            }\r\n        }\r\n    },\r\n    decorators: [\r\n        (story) => {\r\n            const storyObj = story();\r\n            return {\r\n                moduleMetadata: {\r\n                    imports: [CollapsibleComponent, FontAwesomeModule]\r\n                },\r\n                template: storyObj.template,\r\n                props: storyObj.props\r\n            };\r\n        }\r\n    ],\r\n    tags: ['autodocs']\r\n}"
+                    "defaultValue": "{\n    title: 'Components/Collapsible',\n    component: CollapsibleComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\n \n                 `\n            }\n        }\n    },\n    decorators: [\n        (story) => {\n            const storyObj = story();\n            return {\n                moduleMetadata: {\n                    imports: [CollapsibleComponent, FontAwesomeModule]\n                },\n                template: storyObj.template,\n                props: storyObj.props\n            };\n        }\n    ],\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Sample",
@@ -2837,7 +2837,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args\r\n        },\r\n        template: defaultTemplateMock\r\n    }),\r\n    play: async ({ canvasElement }) => {\r\n        const canvas = within(canvasElement);\r\n\r\n        const header = (await canvas.findByTestId(\r\n            'collapse-header'\r\n        )) as HTMLInputElement;\r\n        const content = (await canvas.findByTestId(\r\n            'collapse-content'\r\n        )) as HTMLInputElement;\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('hide')).toBe(true);\r\n            expect(content.classList.contains('show')).toBe(false);\r\n        });\r\n\r\n        await userEvent.click(header);\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('show')).toBe(true);\r\n            expect(content.classList.contains('hide')).toBe(false);\r\n        });\r\n    }\r\n}"
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
                 },
                 {
                     "name": "show",
@@ -2857,7 +2857,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            faUp: faUp,\r\n            faDown: faDown,\r\n            show: show\r\n        },\r\n        template: iconTemplateMock\r\n    }),\r\n    play: async ({ canvasElement }) => {\r\n        const canvas = within(canvasElement);\r\n\r\n        const header = (await canvas.findByTestId(\r\n            'collapse-header'\r\n        )) as HTMLInputElement;\r\n        const content = (await canvas.findByTestId(\r\n            'collapse-content'\r\n        )) as HTMLInputElement;\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('hide')).toBe(true);\r\n            expect(content.classList.contains('show')).toBe(false);\r\n        });\r\n\r\n        await userEvent.click(header);\r\n\r\n        await waitFor(() => {\r\n            expect(content.classList.contains('show')).toBe(true);\r\n            expect(content.classList.contains('hide')).toBe(false);\r\n        });\r\n    }\r\n}"
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            faUp: faUp,\n            faDown: faDown,\n            show: show\n        },\n        template: iconTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts": [
@@ -3719,7 +3719,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                 * Opt in to running WCAG 2.x AAA rules\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                 */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\n            }\n        }\n    },\n\n    decorators: [\n        applicationConfig({\n            providers: [\n                importProvidersFrom(\n                    TranslateModule.forRoot({\n                        loader: { provide: TranslateLoader, useClass: FakeLoader },\n                        compiler: { provide: TranslateCompiler, useClass: FakeCompiler },\n                        parser: { provide: TranslateParser, useClass: TranslateDefaultParser },\n                        missingTranslationHandler: { provide: MissingTranslationHandler, useClass: NoopMissingTranslationHandler }\n                    })\n                ),\n                TranslateStore,\n                {\n                    provide: LOCALE_ID,\n                    useValue: 'de'\n                },\n                {\n          provide: 'STORYBOOK_TRANSLATE_INIT',\n          useFactory: (ts: TranslateService) => {\n            console.log('FACTORY RUNNING — TranslateService', ts?.currentLang);\n            ts.setFallbackLang('de');\n            ts.use('de'); // <- sollte FakeLoader.getTranslation('de') triggern\n            console.log('AFTER USE', ts.currentLang);\n            return true;\n          },\n          deps: [TranslateService]\n        }\n            ],\n        \n        })\n    ],\n\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    parameters: {\n        layout: 'centered',\n        controls: {\n            matchers: {\n                color: /(background|color)$/i,\n                date: /Date$/i\n            }\n        },\n        actions: {\n            argTypesRegex: '(Change|Clicked|Selected)$'\n        },\n        designToken: {\n            defaultTab: 'Colors',\n            tokens: {\n                color: ['../assets/styles.scss']\n            }\n        },\n        a11y: {\n            options: {\n                /*\n                 * Opt in to running WCAG 2.x AAA rules\n                 * Note that you must explicitly re-specify the defaults (all but the last array entry)\n                 * See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#options-parameter-examples for more details\n                 */\n                runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']\n            }\n        }\n    },\n\n    decorators: [\n        applicationConfig({\n            providers: [\n                TranslateStore,\n                TranslateService,\n                { provide: TranslateLoader, useClass: FakeLoader },\n                { provide: TranslateCompiler, useClass: FakeCompiler },\n                { provide: TranslateParser, useClass: TranslateDefaultParser },\n                {\n                    provide: MissingTranslationHandler,\n                    useClass: NoopMissingTranslationHandler\n                },\n                {\n                    provide: LOCALE_ID,\n                    useValue: 'de'\n                },\n                provideAppInitializer(() => {\n                    const ts = inject(TranslateService);\n                    ts.setFallbackLang('de');\n                    ts.use('de');\n                })\n            ]\n        })\n    ],\n\n    tags: ['autodocs']\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/directives/tooltip-directive.stories.ts": [
@@ -3854,6 +3854,19 @@
                     "kind": 183
                 }
             ],
+            "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CheckboxComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts": [
                 {
                     "name": "Story",
@@ -3887,19 +3900,6 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CollapsibleComponent>",
                     "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<CheckboxComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
