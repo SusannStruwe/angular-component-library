@@ -13,7 +13,8 @@ import {
     faSortDown,
     faSortUp
 } from '@fortawesome/free-solid-svg-icons';
-import { SortDirection } from 'angular-component-library';
+import { SortDirection } from '../model/sort-column-event.model';
+
 
 const rotate: { [key: string]: SortDirection } = {
     asc: 'desc',
