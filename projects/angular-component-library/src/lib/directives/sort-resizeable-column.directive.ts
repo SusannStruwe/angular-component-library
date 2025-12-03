@@ -15,7 +15,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { SortDirection } from '../model/sort-column-event.model';
 
-
 const rotate: { [key: string]: SortDirection } = {
     asc: 'desc',
     desc: '',
