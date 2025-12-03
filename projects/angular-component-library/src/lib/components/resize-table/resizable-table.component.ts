@@ -10,10 +10,12 @@ import {
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { Icons, SortDirection, TableStyle } from 'angular-component-library';
 import { CommonModule } from '@angular/common';
 import { SortResizeableColumnDirective } from '../../directives/sort-resizeable-column.directive';
 import { ResizableColumnDirective } from '../../directives/resize-column.directive';
+import { TableStyle } from '../../model/table-style.enum';
+import { SortDirection } from '../../model/sort-column-event.model';
+import { Icons } from '../../model/icons';
 
 @Component({
     selector: 'resizable-table',
