@@ -32,9 +32,7 @@ export class FakeCompiler implements TranslateCompiler {
     }
 }
 
-export class NoopMissingTranslationHandler
-    implements MissingTranslationHandler
-{
+export class NoopMissingTranslationHandler implements MissingTranslationHandler {
     handle(params: MissingTranslationHandlerParams) {
         return params.key;
     }
