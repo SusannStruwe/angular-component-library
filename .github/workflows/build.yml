@@ -100,9 +100,6 @@ jobs:
                       ~/.cache/ms-playwright
                   key: ${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('package-lock.json') }}-playwright
 
-            - name: Clean install
-              run: npm clean-install
-
             - name: Debug SWC
               run: |
                   echo "=== SWC install target ==="
