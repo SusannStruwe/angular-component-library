@@ -100,15 +100,6 @@ jobs:
                       ~/.cache/ms-playwright
                   key: ${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('package-lock.json') }}-playwright
 
-            - name: Debug SWC
-              run: |
-                  echo "=== SWC install target ==="
-                  ls -R node_modules/@swc/core* || echo "SWC not installed"
-
-            - name: Show SWC target binary
-              run: |
-                  find node_modules/@swc -name "*.node" -maxdepth 4
-
             - name: Build Storybook
               run: npm run build-storybook --quiet > storybook.log 2>&1
 
