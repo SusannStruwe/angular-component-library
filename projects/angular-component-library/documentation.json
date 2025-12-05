@@ -64,21 +64,21 @@
                 "name": "Active",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
-            },
-            {
-                "name": "Active",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+            },
+            {
+                "name": "Active",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
                 "name": "Active",
@@ -264,21 +264,21 @@
                 "name": "Disabled",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
-            },
-            {
-                "name": "Disabled",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
+            },
+            {
+                "name": "Disabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
                 "name": "Disabled",
@@ -444,7 +444,7 @@
                 "name": "iconOptions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
@@ -454,7 +454,7 @@
                 "name": "iconOptions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
@@ -654,16 +654,6 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<BadgeComponent>",
-                "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        classStyle: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ]\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -674,11 +664,31 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<BadgeComponent>",
+                "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        classStyle: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ]\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BorderedBtnComponent>",
                 "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['gray', 'delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<BorderlessBtnComponent>",
+                "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
             },
             {
                 "name": "meta",
@@ -719,16 +729,6 @@
                 "deprecationMessage": "",
                 "type": "Meta<ColorPaletteComponent>",
                 "defaultValue": "{\n    title: 'Components/ColorPalette',\n    component: ColorPaletteComponent,\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<BorderlessBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
             },
             {
                 "name": "meta",
@@ -1054,6 +1054,16 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Sample',\n        isDisabled: false\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1089,16 +1099,6 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {}\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Sample',\n        isDisabled: false\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1414,21 +1414,21 @@
                 "name": "Spinning",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
-            },
-            {
-                "name": "Spinning",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+            },
+            {
+                "name": "Spinning",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
             },
             {
                 "name": "Spinning",
@@ -1722,17 +1722,6 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<BadgeComponent>",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
                 "rawtype": "StoryObj<AlertComponent>",
                 "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                 "deprecated": false,
@@ -1744,8 +1733,30 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<BadgeComponent>",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<BorderedBtnComponent>",
                 "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<BorderlessBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1790,17 +1801,6 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<ColorPaletteComponent>",
                 "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<BorderlessBtnComponent>",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2204,68 +2204,6 @@
                     "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            click: () => {\n                action('do something')();\n            }\n        },\n        template: templateMock\n    })\n}"
                 }
             ],
-            "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
-                {
-                    "name": "Active",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
-                },
-                {
-                    "name": "Disabled",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
-                },
-                {
-                    "name": "iconOptions",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Record<string, IconDefinition>",
-                    "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<CircleBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
-                },
-                {
-                    "name": "Sample",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faCheck\n    }\n}"
-                },
-                {
-                    "name": "Spinning",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
-                }
-            ],
             "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts": [
                 {
                     "name": "Active",
@@ -2396,6 +2334,68 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            click: () => {\n                action('do something')();\n            }\n        },\n        template: templateMock\n    })\n}"
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
+                {
+                    "name": "Active",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                },
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
+                },
+                {
+                    "name": "iconOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Record<string, IconDefinition>",
+                    "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CircleBtnComponent>",
+                    "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
+                },
+                {
+                    "name": "Sample",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faCheck\n    }\n}"
+                },
+                {
+                    "name": "Spinning",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts": [
@@ -3815,19 +3815,6 @@
                     "kind": 183
                 }
             ],
-            "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<BadgeComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/angular-component-library/src/lib/components/alert/alert.stories.ts": [
                 {
                     "name": "Story",
@@ -3841,6 +3828,19 @@
                     "kind": 183
                 }
             ],
+            "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<BadgeComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts": [
                 {
                     "name": "Story",
@@ -3848,6 +3848,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<BorderedBtnComponent>",
                     "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<BorderlessBtnComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -3900,19 +3913,6 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ColorPaletteComponent>",
                     "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<BorderlessBtnComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
