@@ -1,5 +1,8 @@
 name: GitHub Actions
 
+env:
+    NODE_VERSION: '22'
+
 on:
     push:
     pull_request:
@@ -15,7 +18,7 @@ jobs:
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
-                  node-version: 22
+                  node-version: ${{ env.NODE_VERSION }}
 
             - name: Cache node modules and Playwright browsers
               id: cache-node
@@ -25,7 +28,7 @@ jobs:
                       ~/.npm
                       node_modules
                       ~/.cache/ms-playwright
-                  key: ${{ runner.os }}-node-22-${{ hashFiles('package-lock.json') }}-playwright
+                  key: ${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('package-lock.json') }}-playwright
 
             - name: Install npm dependencies
               run: npm install
@@ -47,7 +50,7 @@ jobs:
                   path: |
                       ~/.npm
                       node_modules
-                  key: ${{ runner.os }}-node-22-${{ hashFiles('package-lock.json') }}-playwright
+                  key: ${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('package-lock.json') }}-playwright
 
             - name: Check code formatting with Prettier
               run: npx prettier --check .
@@ -67,7 +70,7 @@ jobs:
                       ~/.npm
                       node_modules
                       ~/.cache/ms-playwright
-                  key: ${{ runner.os }}-node-22-${{ hashFiles('package-lock.json') }}-playwright
+                  key: ${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('package-lock.json') }}-playwright
 
             - name: Run Karma tests (Headless Chrome)
               run: npm run test -- --watch=false --browsers=ChromeHeadless
@@ -87,7 +90,7 @@ jobs:
                       ~/.npm
                       node_modules
                       ~/.cache/ms-playwright
-                  key: ${{ runner.os }}-node-22-${{ hashFiles('package-lock.json') }}-playwright
+                  key: ${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('package-lock.json') }}-playwright
 
             - name: Build Storybook
               run: npm run build-storybook --quiet > storybook.log 2>&1
