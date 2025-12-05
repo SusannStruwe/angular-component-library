@@ -100,10 +100,8 @@ jobs:
                       ~/.cache/ms-playwright
                   key: ${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('package-lock.json') }}-playwright
 
-            - name: Force clean install for SWC
-              run: |
-                  rm -rf node_modules
-                  npm ci --no-audit --no-fund
+            - name: Clean install
+              run: npm clean-install
 
             - name: Debug SWC
               run: |
