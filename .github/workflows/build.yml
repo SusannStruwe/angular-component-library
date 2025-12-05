@@ -78,15 +78,10 @@ jobs:
     storybook-test:
         name: Run storybook tests
         runs-on: ubuntu-latest
-        needs: karma-test
+        needs: prettier
         steps:
             - name: Checkout repo
               uses: actions/checkout@v4
-
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ env.NODE_VERSION }}
 
             - name: Log Node.js version
               run: node -v
