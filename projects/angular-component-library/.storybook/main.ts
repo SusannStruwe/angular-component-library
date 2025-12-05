@@ -8,8 +8,8 @@ const config: StorybookConfig = {
 
     addons: [
         '@storybook/addon-docs',
-        '@storybook/addon-onboarding'
-        //'@storybook/addon-a11y'
+        '@storybook/addon-onboarding',
+        '@storybook/addon-a11y'
         //{ name: 'storybook-design-token', options: { preserveCSSVars: true } } version 4 needs storybook 9!
         // note @angular-devkit/build-angular" only needed for storybook version. angular upgrade removed this lib
     ],

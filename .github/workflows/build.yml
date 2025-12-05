@@ -44,11 +44,6 @@ jobs:
             - name: Checkout repo
               uses: actions/checkout@v4
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ env.NODE_VERSION }}
-
             - name: Restore node modules cache
               uses: actions/cache@v3
               with:
@@ -67,11 +62,6 @@ jobs:
         steps:
             - name: Checkout repo
               uses: actions/checkout@v4
-
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ env.NODE_VERSION }}
 
             - name: Restore node modules cache
               uses: actions/cache@v3
@@ -93,11 +83,6 @@ jobs:
             - name: Checkout repo
               uses: actions/checkout@v4
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ env.NODE_VERSION }}
-
             - name: Restore cache
               uses: actions/cache@v3
               with:
@@ -106,6 +91,15 @@ jobs:
                       node_modules
                       ~/.cache/ms-playwright
                   key: ${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('package-lock.json') }}-playwright
+
+            - name: Debug SWC
+              run: |
+                  echo "=== SWC install target ==="
+                  ls -R node_modules/@swc/core* || echo "SWC not installed"
+
+            - name: Show SWC target binary
+              run: |
+                  find node_modules/@swc -name "*.node" -maxdepth 3
 
             - name: Build Storybook
               run: npm run build-storybook --quiet > storybook.log 2>&1
