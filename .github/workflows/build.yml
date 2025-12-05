@@ -100,8 +100,10 @@ jobs:
                       ~/.cache/ms-playwright
                   key: ${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('package-lock.json') }}-playwright
 
-            - name: Install dependencies
-              run: npm ci
+            - name: Force clean install for SWC
+              run: |
+                  rm -rf node_modules
+                  npm ci --no-audit --no-fund
 
             - name: Debug SWC
               run: |
@@ -110,7 +112,7 @@ jobs:
 
             - name: Show SWC target binary
               run: |
-                  find node_modules/@swc -name "*.node" -maxdepth 3
+                  find node_modules/@swc -name "*.node" -maxdepth 4
 
             - name: Build Storybook
               run: npm run build-storybook --quiet > storybook.log 2>&1
