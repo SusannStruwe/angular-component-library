@@ -44,6 +44,11 @@ jobs:
             - name: Checkout repo
               uses: actions/checkout@v4
 
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
+
             - name: Restore node modules cache
               uses: actions/cache@v3
               with:
@@ -62,6 +67,11 @@ jobs:
         steps:
             - name: Checkout repo
               uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
 
             - name: Restore node modules cache
               uses: actions/cache@v3
@@ -82,6 +92,11 @@ jobs:
         steps:
             - name: Checkout repo
               uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
 
             - name: Restore cache
               uses: actions/cache@v3
