@@ -36,6 +36,7 @@ export class ResizableTableComponent implements AfterViewInit {
     @Input() selectedRow: any | null = null;
     @Input() disableResize: boolean = false;
     @Input() tableHeight: string = '300px';
+    @Input() tableWidth?: string;
     @Input() tableStyle?: TableStyle;
 
     @Output() selectedRowchange: EventEmitter<any> = new EventEmitter();
