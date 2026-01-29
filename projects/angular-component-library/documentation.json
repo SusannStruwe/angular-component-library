@@ -107,7 +107,7 @@
                 "file": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "AnimationStyle"
             },
             {
@@ -119,6 +119,26 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 1,\n        borderRadius: 50,\n        classStyle: 'changes',\n        isDisabled: false\n    }\n}"
+            },
+            {
+                "name": "columnLabels",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "getColumnKeys(resizeableTableData[0])"
+            },
+            {
+                "name": "columns",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "getColumns(resizeableTableData[0])"
             },
             {
                 "name": "DarkStyle",
@@ -137,7 +157,7 @@
                 "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "`   <collapsible-component [show]=\"false\" [classStyles]=\"'simple'\">\n        <div header>\n            <p [style.width.px]=\"200\">Header</p>\n        </div>\n        <div content>\n            <p [style.padding-left.px]=\"15\">Your Content</p>\n        </div>\n    </collapsible-component>\n `"
             },
             {
@@ -147,8 +167,18 @@
                 "file": "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "`   <no-data-component>\n        <div content>\n            <p> Inner Content </p>\n        </div>\n    </no-data-component>\n `"
+            },
+            {
+                "name": "defaultTemplateMock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "`   <resizable-table [tableWidth]=\"'600px'\"\r\n        [columnLabels]=\"columnLabels\"\r\n        [data]=\"data\"\r\n        [columns]=\"columns\"\r\n        [tableStyle]=\"tableStyle\">\r\n    </resizable-table>\r\n `"
             },
             {
                 "name": "defaultTemplateMock",
@@ -157,7 +187,7 @@
                 "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "`   <table-component [style.width]=\"'600px'\" [scrollbarWidth]=\"15\">\n        <div header>\n            <table-header-component \n                [headerItemsTasks]=\"items\" \n                [searchFilters]=\"filters\" \n                [multiSelectList]=\"multiSelectList\" \n                [showSearchLine]=\"showSearchLine\"\n                [tableStyle]=\"tableStyle\"\n                (searchFilterChange)=\"searchFilterChange($event)\" \n                (selectFilterChange)=\"selectFilterChange($event)\"\n                (sortColumnChange)=\"sortColumnChange($event)\">\n            </table-header-component>\n        </div>\n        <div content>\n            <table-content-component\n                [tableItems]=\"contentItems\" \n                (tableItemSelected)=\"tableItemSelected($event)\"\n                [tableStyle]=\"tableStyle\">\n            </table-content-component>\n        </div>\n    </table-component>\n `"
             },
             {
@@ -367,7 +397,7 @@
                 "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "HoverStyle"
             },
             {
@@ -377,7 +407,7 @@
                 "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "HoverStyle"
             },
             {
@@ -387,7 +417,7 @@
                 "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "HoverStyle"
             },
             {
@@ -507,7 +537,7 @@
                 "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "`   <collapsible-component [(show)]=\"show\" [classStyles]=\"'simple'\">\n        <div header>\n            <div class=\"flex-row\">\n                <p [style.width.px]=\"200\">Header with icon</p>\n                <fa-icon [icon]=\"show ? faUp : faDown\"> </fa-icon>\n            </div>\n        </div>\n        <div content>\n            <p [style.padding-left.px]=\"15\">Your Content</p>\n        </div>\n    </collapsible-component>\n `"
             },
             {
@@ -567,7 +597,7 @@
                 "file": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "LoaderStyle"
             },
             {
@@ -849,6 +879,16 @@
                 "deprecationMessage": "",
                 "type": "Meta<PopoverComponent>",
                 "defaultValue": "{\n    title: 'Components/Popover',\n    component: PopoverComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA popover.\n\nA popover component .\n\n<img src=\"https://img.shields.io/badge/version-1.0.2-blue\" alt=\"Version: 1.0.2\" />\n\n                `\n            }\n        }\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ResizableTableComponent>",
+                "defaultValue": "{\r\n    title: 'Components/Table/ ResizeTable',\r\n    component: ResizableTableComponent,\r\n    argTypes: {\r\n        columns: { control: 'object' },\r\n        columnLabels: { control: 'object' },\r\n        data: { control: 'object' }\r\n    },\r\n    tags: ['autodocs']\r\n}"
             },
             {
                 "name": "meta",
@@ -1224,6 +1264,16 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            columnLabels: columnLabels,\r\n            data: resizeableTableData,\r\n            columns: columns\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1327,7 +1377,7 @@
                 "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "new SelectItem('select1', undefined, Icons.faInfoCircle)"
             },
             {
@@ -1357,7 +1407,7 @@
                 "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "SelectStyle"
             },
             {
@@ -1367,7 +1417,7 @@
                 "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "false"
             },
             {
@@ -1464,11 +1514,31 @@
                 "name": "TableDarkWithoutSearchLine",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            columnLabels: columnLabels,\r\n            data: resizeableTableData,\r\n            columns: columns,\r\n            tableStyle: TableStyle.DARK\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+            },
+            {
+                "name": "TableDarkWithoutSearchLine",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            items: headerItems,\n            filters: filters,\n            multiSelectList: multiSelectList,\n            contentItems: contentItems,\n            showSearchLine: false,\n            tableStyle: TableStyle.DARK,\n            searchFilterChange: (event: any) => {\n                action('filter')(event);\n            },\n            sortColumnChange: (event: any) => {\n                action('sort')(event);\n            },\n            selectFilterChange: (event: any) => {\n                action('select')(event);\n            },\n            tableItemSelected: (event: any) => {\n                action('selected row')(event);\n            }\n        },\n        template: defaultTemplateMock\n    })\n}"
+            },
+            {
+                "name": "TableLightWithoutSearchLine",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            columnLabels: columnLabels,\r\n            data: resizeableTableData,\r\n            columns: columns,\r\n            tableStyle: TableStyle.LIGHT\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
             },
             {
                 "name": "TableLightWithoutSearchLine",
@@ -1487,7 +1557,7 @@
                 "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "TableStyle"
             },
             {
@@ -1517,7 +1587,7 @@
                 "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "`   <bordered-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </bordered-btn-component>\n `"
             },
             {
@@ -1527,7 +1597,7 @@
                 "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "`   <borderless-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </borderless-btn-component>\n `"
             },
             {
@@ -1537,7 +1607,7 @@
                 "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "`   <filled-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </filled-btn-component>\n `"
             },
             {
@@ -1547,7 +1617,7 @@
                 "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "AlertType"
             },
             {
@@ -1557,7 +1627,7 @@
                 "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "EditMode"
             },
             {
@@ -1567,7 +1637,7 @@
                 "file": "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "EditMode"
             },
             {
@@ -1577,7 +1647,7 @@
                 "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
+                "type": "unknown",
                 "defaultValue": "EditMode"
             },
             {
@@ -1672,7 +1742,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1683,7 +1753,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1694,7 +1764,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1705,7 +1775,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1716,7 +1786,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1727,7 +1797,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1738,7 +1808,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1749,7 +1819,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1760,7 +1830,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1771,7 +1841,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1782,7 +1852,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1793,7 +1863,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1804,7 +1874,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1815,7 +1885,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1826,7 +1896,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1837,7 +1907,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1848,7 +1918,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1859,7 +1929,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1870,7 +1940,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1881,7 +1951,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1892,7 +1962,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1903,7 +1973,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1914,7 +1984,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1925,7 +1995,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1936,7 +2006,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1947,7 +2017,18 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ResizableTableComponent>",
+                "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1958,7 +2039,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1969,7 +2050,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1980,7 +2061,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -1991,7 +2072,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -2002,7 +2083,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -2013,7 +2094,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -2024,7 +2105,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -2035,7 +2116,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -2046,7 +2127,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             },
             {
                 "name": "Story",
@@ -2057,7 +2138,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
+                "kind": 184
             }
         ],
         "enumerations": [],
@@ -2120,7 +2201,7 @@
                     "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "HoverStyle"
                 },
                 {
@@ -2190,7 +2271,7 @@
                     "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "`   <bordered-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </bordered-btn-component>\n `"
                 },
                 {
@@ -2262,7 +2343,7 @@
                     "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "HoverStyle"
                 },
                 {
@@ -2322,7 +2403,7 @@
                     "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "`   <borderless-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </borderless-btn-component>\n `"
                 },
                 {
@@ -2456,7 +2537,7 @@
                     "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "HoverStyle"
                 },
                 {
@@ -2516,7 +2597,7 @@
                     "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "`   <filled-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </filled-btn-component>\n `"
                 },
                 {
@@ -2590,7 +2671,7 @@
                     "file": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "AnimationStyle"
                 },
                 {
@@ -2620,7 +2701,7 @@
                     "file": "projects/angular-component-library/src/lib/components/loader/loader.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "LoaderStyle"
                 },
                 {
@@ -2716,6 +2797,78 @@
                     "defaultValue": "{\n    args: {\n        label: 'Success',\n        borderRadius: 10,\n        classStyle: 'success',\n        isDisabled: false,\n        postIcon: undefined,\n        preIcon: faInfo\n    }\n}"
                 }
             ],
+            "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts": [
+                {
+                    "name": "columnLabels",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "getColumnKeys(resizeableTableData[0])"
+                },
+                {
+                    "name": "columns",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "getColumns(resizeableTableData[0])"
+                },
+                {
+                    "name": "defaultTemplateMock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "`   <resizable-table [tableWidth]=\"'600px'\"\r\n        [columnLabels]=\"columnLabels\"\r\n        [data]=\"data\"\r\n        [columns]=\"columns\"\r\n        [tableStyle]=\"tableStyle\">\r\n    </resizable-table>\r\n `"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ResizableTableComponent>",
+                    "defaultValue": "{\r\n    title: 'Components/Table/ ResizeTable',\r\n    component: ResizableTableComponent,\r\n    argTypes: {\r\n        columns: { control: 'object' },\r\n        columnLabels: { control: 'object' },\r\n        data: { control: 'object' }\r\n    },\r\n    tags: ['autodocs']\r\n}"
+                },
+                {
+                    "name": "Sample",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            columnLabels: columnLabels,\r\n            data: resizeableTableData,\r\n            columns: columns\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+                },
+                {
+                    "name": "TableDarkWithoutSearchLine",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            columnLabels: columnLabels,\r\n            data: resizeableTableData,\r\n            columns: columns,\r\n            tableStyle: TableStyle.DARK\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+                },
+                {
+                    "name": "TableLightWithoutSearchLine",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            columnLabels: columnLabels,\r\n            data: resizeableTableData,\r\n            columns: columns,\r\n            tableStyle: TableStyle.LIGHT\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+                }
+            ],
             "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
                 {
                     "name": "DarkStyle",
@@ -2764,7 +2917,7 @@
                     "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "TableStyle"
                 },
                 {
@@ -2786,7 +2939,7 @@
                     "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "`   <collapsible-component [show]=\"false\" [classStyles]=\"'simple'\">\n        <div header>\n            <p [style.width.px]=\"200\">Header</p>\n        </div>\n        <div content>\n            <p [style.padding-left.px]=\"15\">Your Content</p>\n        </div>\n    </collapsible-component>\n `"
                 },
                 {
@@ -2816,7 +2969,7 @@
                     "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "`   <collapsible-component [(show)]=\"show\" [classStyles]=\"'simple'\">\n        <div header>\n            <div class=\"flex-row\">\n                <p [style.width.px]=\"200\">Header with icon</p>\n                <fa-icon [icon]=\"show ? faUp : faDown\"> </fa-icon>\n            </div>\n        </div>\n        <div content>\n            <p [style.padding-left.px]=\"15\">Your Content</p>\n        </div>\n    </collapsible-component>\n `"
                 },
                 {
@@ -2846,7 +2999,7 @@
                     "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "false"
                 },
                 {
@@ -2868,7 +3021,7 @@
                     "file": "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "`   <no-data-component>\n        <div content>\n            <p> Inner Content </p>\n        </div>\n    </no-data-component>\n `"
                 },
                 {
@@ -2910,7 +3063,7 @@
                     "file": "projects/angular-component-library/src/lib/components/table/table.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "`   <table-component [style.width]=\"'600px'\" [scrollbarWidth]=\"15\">\n        <div header>\n            <table-header-component \n                [headerItemsTasks]=\"items\" \n                [searchFilters]=\"filters\" \n                [multiSelectList]=\"multiSelectList\" \n                [showSearchLine]=\"showSearchLine\"\n                [tableStyle]=\"tableStyle\"\n                (searchFilterChange)=\"searchFilterChange($event)\" \n                (selectFilterChange)=\"selectFilterChange($event)\"\n                (sortColumnChange)=\"sortColumnChange($event)\">\n            </table-header-component>\n        </div>\n        <div content>\n            <table-content-component\n                [tableItems]=\"contentItems\" \n                (tableItemSelected)=\"tableItemSelected($event)\"\n                [tableStyle]=\"tableStyle\">\n            </table-content-component>\n        </div>\n    </table-component>\n `"
                 },
                 {
@@ -3044,7 +3197,7 @@
                     "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "AlertType"
                 },
                 {
@@ -3158,7 +3311,7 @@
                     "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "new SelectItem('select1', undefined, Icons.faInfoCircle)"
                 },
                 {
@@ -3178,7 +3331,7 @@
                     "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "SelectStyle"
                 }
             ],
@@ -3358,7 +3511,7 @@
                     "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "EditMode"
                 }
             ],
@@ -3456,7 +3609,7 @@
                     "file": "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "EditMode"
                 }
             ],
@@ -3510,7 +3663,7 @@
                     "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "unknown",
                     "defaultValue": "EditMode"
                 }
             ],
@@ -3760,7 +3913,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/stories/button.stories.ts": [
@@ -3773,7 +3926,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/stories/header.stories.ts": [
@@ -3786,7 +3939,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/stories/overview-wrapper.stories.ts": [
@@ -3799,7 +3952,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/stories/page.stories.ts": [
@@ -3812,7 +3965,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/alert/alert.stories.ts": [
@@ -3825,7 +3978,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
@@ -3838,7 +3991,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts": [
@@ -3851,7 +4004,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts": [
@@ -3864,7 +4017,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
@@ -3877,7 +4030,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
@@ -3890,7 +4043,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts": [
@@ -3903,7 +4056,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts": [
@@ -3916,7 +4069,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/date-picker/date-picker.stories.ts": [
@@ -3929,7 +4082,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts": [
@@ -3942,7 +4095,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts": [
@@ -3955,7 +4108,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts": [
@@ -3968,7 +4121,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts": [
@@ -3981,7 +4134,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts": [
@@ -3994,7 +4147,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/input/input.stories.ts": [
@@ -4007,7 +4160,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/loader/loader.stories.ts": [
@@ -4020,7 +4173,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/modal/modal.stories.ts": [
@@ -4033,7 +4186,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts": [
@@ -4046,7 +4199,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/navbar-btn/navbar-btn.stories.ts": [
@@ -4059,7 +4212,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/no-data/no-data.stories.ts": [
@@ -4072,7 +4225,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/popover/popover.stories.ts": [
@@ -4085,7 +4238,20 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ResizableTableComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts": [
@@ -4098,7 +4264,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts": [
@@ -4111,7 +4277,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/select/select.stories.ts": [
@@ -4124,7 +4290,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/table/table.stories.ts": [
@@ -4137,7 +4303,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/tabs-view/tabs-view.stories.ts": [
@@ -4150,7 +4316,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/tag-btn/tag-btn.stories.ts": [
@@ -4163,7 +4329,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts": [
@@ -4176,7 +4342,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/tooltip/tooltip.stories.ts": [
@@ -4189,7 +4355,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts": [
@@ -4202,7 +4368,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ],
             "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
@@ -4215,12 +4381,16 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
+                    "kind": 184
                 }
             ]
         }
     },
-    "routes": [],
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "children": []
+    },
     "coverage": {
         "count": 0,
         "status": "low",
@@ -5537,6 +5707,86 @@
             },
             {
                 "filePath": "projects/angular-component-library/src/lib/components/popover/popover.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "columnLabels",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "columns",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "defaultTemplateMock",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Sample",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TableDarkWithoutSearchLine",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TableLightWithoutSearchLine",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/resize-table/resizeable-table.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

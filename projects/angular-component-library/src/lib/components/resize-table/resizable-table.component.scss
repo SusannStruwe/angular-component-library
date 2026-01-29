@@ -40,7 +40,7 @@
         }
 
         fa-icon {
-            color: var(--text-color);
+            color: var(--fa-icon-color);
             font-size: 0.8rem;
         }
 
@@ -81,9 +81,11 @@
         display: flex;
         background-color: var(--table-dark-bg-color);
     }
+
+    h3,
     span,
     fa-icon {
-        color: var(--text-color);
+        color: var(--fa-icon-color);
     }
 }
 
@@ -92,6 +94,7 @@
         display: flex;
         background-color: var(--table-light-bg-color);
 
+        h3,
         span,
         fa-icon {
             color: var(--table-light-color);

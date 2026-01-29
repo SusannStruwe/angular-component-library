@@ -1,4 +1,8 @@
-<div #tableContainer class="table-wrapper" [ngClass]="[tableStyle ?? '']">
+<div
+    #tableContainer
+    class="table-wrapper"
+    [ngClass]="[tableStyle ?? '']"
+    [style.width]="tableWidth ?? 'auto'">
     <div class="table-header">
         @if (columnLabels) {
             @for (col of columns; track col) {
@@ -37,7 +41,7 @@
         role="region"
         [style.min-height]="tableHeight"
         (scrolledIndexChange)="onScrolledIndexChange($event)">
-        @for (row of data; track row.id) {
+        @for (row of data; track row) {
             <div
                 class="table-row"
                 [class.active]="selectedRow === row"
