@@ -28,7 +28,6 @@ export const activeBtn: SegmentedBtnItem = btnArray[1];
  */
 @Component({
     selector: 'segmented-btn-component',
-    standalone: true,
     imports: [CommonModule, FontAwesomeModule, TranslateModule],
     templateUrl: './segmented-btn.component.html',
     styleUrls: ['./segmented-btn.component.scss']

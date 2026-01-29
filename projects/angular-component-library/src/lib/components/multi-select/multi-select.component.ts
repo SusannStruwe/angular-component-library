@@ -30,7 +30,6 @@ import { FormsModule } from '@angular/forms';
  */
 @Component({
     selector: 'multi-select-component',
-    standalone: true,
     imports: [
         CommonModule,
         FontAwesomeModule,

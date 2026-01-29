@@ -15,7 +15,6 @@ import { Icons } from '../../model/icons';
  */
 @Component({
     selector: 'tag-btn-component',
-    standalone: true,
     imports: [FontAwesomeModule],
     templateUrl: './tag-btn.component.html',
     styleUrls: ['./tag-btn.component.scss']

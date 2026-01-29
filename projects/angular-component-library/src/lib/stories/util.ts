@@ -92,6 +92,49 @@ export const contentItems: ContentItem[] = [
 
 export const multiSelectList = getSelectList(headerItems, contentItems);
 
+export const resizeableTableData = [
+    {
+        id: '123456',
+        tardiness: '83 day(s)',
+        start_at: '12.03.2026 07:00',
+        finish_at: '24.05.2026 08:03',
+        latest_end: '02.03.2026 00:00'
+    },
+    {
+        id: '789101',
+        tardiness: '69 day(s)',
+        start_at: '15.12.2025 05:02',
+        finish_at: '15.12.2025 05:03',
+        latest_end: '07.10.2025 00:00'
+    },
+    {
+        id: '112345',
+        tardiness: '54 day(s)',
+        start_at: '09.02.2026 07:00',
+        finish_at: '09.02.2026 07:05',
+        latest_end: '17.12.2025 00:00'
+    }
+];
+
+export function formatLabel(key: string): string {
+    return key
+        .replace(/_/g, ' ') // snake_case → "snake case"
+        .replace(/([a-z])([A-Z])/g, '$1 $2') // camelCase → "camel Case"
+        .replace(/\b\w/g, (char) => char.toUpperCase()); // capitalize words
+}
+
+export function getColumns(entry: any): string[] {
+    return Object.keys(entry);
+}
+
+export function getColumnKeys(entry: any): any {
+    const columnKeys: any = {};
+    for (const key of Object.keys(entry)) {
+        columnKeys[key] = formatLabel(key);
+    }
+    return columnKeys;
+}
+
 /**
  * Gets search filters to header items
  */

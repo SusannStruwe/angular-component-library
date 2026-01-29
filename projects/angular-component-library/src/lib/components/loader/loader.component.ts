@@ -17,7 +17,6 @@ import { AnimationStyle, LoaderStyle } from '../../model/loader-style.enum';
  */
 @Component({
     selector: 'loader-component',
-    standalone: true,
     imports: [CommonModule, FontAwesomeModule],
     templateUrl: './loader.component.html',
     styleUrls: ['./loader.component.scss']

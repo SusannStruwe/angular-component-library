@@ -2,9 +2,7 @@ name: GitHub Actions
 
 on:
     push:
-        branches: [main, update, storybook]
     pull_request:
-        branches: [main, update, storybook]
 
 jobs:
     install:

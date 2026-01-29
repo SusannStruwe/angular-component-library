@@ -12,7 +12,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
  */
 @Component({
     selector: 'tooltip-component',
-    standalone: true,
     imports: [FontAwesomeModule],
     templateUrl: './tooltip.component.html',
     styleUrls: ['./tooltip.component.scss']

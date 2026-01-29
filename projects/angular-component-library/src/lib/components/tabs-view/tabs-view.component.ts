@@ -38,7 +38,6 @@ export const templateMock = `   <tabs-view-component [style.width.px]="200" [sty
  */
 @Component({
     selector: 'tabs-view-component',
-    standalone: true,
     imports: [FontAwesomeModule, TooltipDirective],
     templateUrl: './tabs-view.component.html',
     styleUrls: ['./tabs-view.component.scss']

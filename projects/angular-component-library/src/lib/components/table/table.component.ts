@@ -17,7 +17,6 @@ import { Component, Input } from '@angular/core';
  */
 @Component({
     selector: 'table-component',
-    standalone: true,
     imports: [CommonModule],
     templateUrl: './table.component.html',
     styleUrls: ['./table.component.scss']

@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { FileDragNDropDirective } from '../../directives/drag-drop-file.directive';
 import { Icons } from '../../model/icons';
@@ -22,13 +22,7 @@ import { Icons } from '../../model/icons';
  */
 @Component({
     selector: 'dropzone-component',
-    standalone: true,
-    imports: [
-        CommonModule,
-        FontAwesomeModule,
-        FileDragNDropDirective,
-        TranslateModule
-    ],
+    imports: [CommonModule, FontAwesomeModule, FileDragNDropDirective],
     templateUrl: './dropzone.component.html',
     styleUrls: ['./dropzone.component.scss']
 })
@@ -61,7 +55,7 @@ export class DropzoneComponent {
      * Provides the current lang
      */
     getLocale() {
-        return this.translate.currentLang;
+        return this.translate.getCurrentLang();
     }
 
     /**
@@ -101,8 +95,10 @@ export class DropzoneComponent {
      * Adds file to array
      * @param event
      */
-    addFile(files: File[]): void {
-        files.forEach((file: File) => {
+    addFile(files: File[] | FileList): void {
+        const fileArray = Array.from(files);
+
+        fileArray.forEach((file: File) => {
             if (
                 !this.fileExists(file) &&
                 this.isAllowedFileType(file) &&

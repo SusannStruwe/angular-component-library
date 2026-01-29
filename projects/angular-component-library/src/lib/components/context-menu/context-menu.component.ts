@@ -28,7 +28,6 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
  */
 @Component({
     selector: 'context-menu-component',
-    standalone: true,
     imports: [CommonModule, FontAwesomeModule, ClickOutsideDirective],
     templateUrl: './context-menu.component.html',
     styleUrls: ['./context-menu.component.scss'],

@@ -33,7 +33,6 @@ import { Icons } from '../../model/icons';
  */
 @Component({
     selector: 'date-time-picker-component',
-    standalone: true,
     imports: [
         CommonModule,
         FormsModule,

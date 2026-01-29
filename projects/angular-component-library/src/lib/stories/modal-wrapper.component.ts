@@ -17,7 +17,6 @@ import { FormsModule } from '@angular/forms';
  */
 @Component({
     selector: 'modal-wrapper-component',
-    standalone: true,
     imports: [
         CommonModule,
         FontAwesomeModule,

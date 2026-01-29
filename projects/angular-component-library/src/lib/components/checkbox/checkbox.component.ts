@@ -16,7 +16,6 @@ import { EditMode } from '../../model/edit-mode.enum';
  */
 @Component({
     selector: 'checkbox-component',
-    standalone: true,
     imports: [FontAwesomeModule],
     templateUrl: './checkbox.component.html',
     styleUrls: ['./checkbox.component.scss']

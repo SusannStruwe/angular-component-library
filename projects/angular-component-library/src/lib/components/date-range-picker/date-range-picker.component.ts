@@ -20,7 +20,6 @@ import { DatePickerComponent } from '../date-picker/date-picker.component';
  */
 @Component({
     selector: 'date-range-picker-component',
-    standalone: true,
     imports: [
         CommonModule,
         FormsModule,

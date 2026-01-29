@@ -42,7 +42,6 @@ import { TableComponent } from '../components/table/table.component';
  * ```
  */ @Component({
     selector: 'overview-wrapper-component',
-    standalone: true,
     imports: [
         CommonModule,
         RouterModule,

@@ -11,7 +11,6 @@ import { Colors } from '../../model/colors';
  */
 @Component({
     selector: 'color-palette-component',
-    standalone: true,
     imports: [],
     templateUrl: './color-palette.component.html',
     styleUrls: ['./color-palette.component.scss']

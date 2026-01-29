@@ -34,7 +34,6 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
  */
 @Component({
     selector: 'custom-select-component',
-    standalone: true,
     imports: [
         CommonModule,
         FontAwesomeModule,

@@ -22,7 +22,6 @@ import { Icons } from '../../model/icons';
  */
 @Component({
     selector: 'date-picker-component',
-    standalone: true,
     imports: [CommonModule, FormsModule, FontAwesomeModule, PlatformModule],
     templateUrl: './date-picker.component.html',
     styleUrls: ['./date-picker.component.scss']
@@ -83,9 +82,9 @@ export class DatePickerComponent implements OnInit {
                     document.querySelector('#date-input-' + this.randomId);
 
                 const localeId =
-                    this.translateService.currentLang +
+                    this.translateService.getCurrentLang() +
                     '-' +
-                    this.translateService.currentLang.toUpperCase();
+                    this.translateService.getCurrentLang().toUpperCase();
 
                 if (inputDateElement) {
                     inputDateElement.value = formatDate(

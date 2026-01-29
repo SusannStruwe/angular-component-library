@@ -16,7 +16,6 @@ import { Icons } from '../../model/icons';
  */
 @Component({
     selector: 'no-data-component',
-    standalone: true,
     imports: [FontAwesomeModule, TranslateModule],
     templateUrl: './no-data.component.html',
     styleUrls: ['./no-data.component.scss']

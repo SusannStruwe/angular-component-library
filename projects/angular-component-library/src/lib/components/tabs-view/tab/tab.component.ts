@@ -16,7 +16,6 @@ import { CommonModule } from '@angular/common';
  */
 @Component({
     selector: 'tab-component',
-    standalone: true,
     imports: [CommonModule, FontAwesomeModule],
     templateUrl: './tab.component.html',
     styleUrls: ['./tab.component.scss']

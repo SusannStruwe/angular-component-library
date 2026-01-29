@@ -16,7 +16,6 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
  */
 @Component({
     selector: 'circle-btn-component',
-    standalone: true,
     imports: [CommonModule, FontAwesomeModule],
     templateUrl: './circle-btn.component.html',
     styleUrls: ['./circle-btn.component.scss']

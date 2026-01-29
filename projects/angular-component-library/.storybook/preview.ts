@@ -2,22 +2,26 @@ import { applicationConfig, type Preview } from '@storybook/angular';
 import { setCompodocJson } from '@storybook/addon-docs/angular';
 import docJson from '../documentation.json';
 import {
-    DEFAULT_LANGUAGE,
-    ISOALTE_TRANSLATE_SERVICE,
     MissingTranslationHandler,
     TranslateCompiler,
     TranslateDefaultParser,
-    TranslateFakeCompiler,
     TranslateLoader,
     TranslateParser,
     TranslateService,
-    TranslateStore,
-    USE_DEFAULT_LANG,
-    USE_EXTEND
+    TranslateStore
 } from '@ngx-translate/core';
-import { APP_INITIALIZER } from '@angular/core';
+import { LOCALE_ID } from '@angular/core';
 setCompodocJson(docJson);
-import { FakeLoader } from '../src/lib/fake-translate-loader';
+import {
+    FakeCompiler,
+    FakeLoader,
+    NoopMissingTranslationHandler
+} from '../src/lib/fake-translate-helper';
+import { registerLocaleData } from '@angular/common';
+import localeDe from '@angular/common/locales/de';
+import localeEn from '@angular/common/locales/en';
+
+registerLocaleData(localeDe, localeEn);
 
 const preview: Preview = {
     parameters: {
@@ -51,45 +55,18 @@ const preview: Preview = {
     decorators: [
         applicationConfig({
             providers: [
-                {
-                    provide: TranslateLoader,
-                    useClass: FakeLoader
-                },
-                {
-                    provide: TranslateCompiler,
-                    useClass: TranslateFakeCompiler
-                },
-                {
-                    provide: TranslateParser,
-                    useClass: TranslateDefaultParser
-                },
+                { provide: TranslateLoader, useClass: FakeLoader },
+                { provide: TranslateCompiler, useClass: FakeCompiler },
+                { provide: TranslateParser, useClass: TranslateDefaultParser },
                 {
                     provide: MissingTranslationHandler,
-                    useValue: null
+                    useClass: NoopMissingTranslationHandler
                 },
-                {
-                    provide: USE_DEFAULT_LANG,
-                    useValue: true
-                },
-                {
-                    provide: DEFAULT_LANGUAGE,
-                    useValue: true
-                },
-                {
-                    provide: USE_EXTEND,
-                    useValue: false
-                },
-                { provide: ISOALTE_TRANSLATE_SERVICE, useValue: false },
                 TranslateStore,
+                TranslateService,
                 {
-                    provide: APP_INITIALIZER,
-                    useFactory: (translate: TranslateService) => () => {
-                        translate.setDefaultLang('de');
-                        translate.use('de');
-                        return Promise.resolve();
-                    },
-                    deps: [TranslateService],
-                    multi: true
+                    provide: LOCALE_ID,
+                    useValue: 'de-DE'
                 }
             ]
         })

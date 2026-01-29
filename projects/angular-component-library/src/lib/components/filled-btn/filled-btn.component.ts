@@ -18,7 +18,6 @@ import { HoverStyle } from '../../model/hover-style.enum';
  */
 @Component({
     selector: 'filled-btn-component',
-    standalone: true,
     imports: [CommonModule, FontAwesomeModule],
     templateUrl: './filled-btn.component.html',
     styleUrls: ['./filled-btn.component.scss']
