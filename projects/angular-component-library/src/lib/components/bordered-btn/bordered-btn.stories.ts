@@ -10,7 +10,7 @@ import {
 import { Meta, StoryObj } from '@storybook/angular';
 import { HoverStyle } from '../../model/hover-style.enum';
 import { BorderedBtnComponent } from './bordered-btn.component';
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 
 const iconOptions: Record<string, IconDefinition> = {
     faCheck: faCheck,

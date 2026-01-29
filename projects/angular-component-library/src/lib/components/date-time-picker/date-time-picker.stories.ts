@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { DateTimePickerComponent } from './date-time-picker.component';
 import { EditMode } from '../../model/edit-mode.enum';
-import { fn, userEvent, waitFor, within, expect } from '@storybook/test';
+import { fn, userEvent, waitFor, within, expect } from 'storybook/test';
 
 const types: typeof EditMode = EditMode;
 

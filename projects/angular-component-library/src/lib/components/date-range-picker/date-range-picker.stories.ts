@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { DateRangePickerComponent } from './date-range-picker.component';
-import { fn, userEvent, waitFor, within, expect } from '@storybook/test';
+import { fn, userEvent, waitFor, within, expect } from 'storybook/test';
 
 const meta: Meta<DateRangePickerComponent> = {
     title: 'Components/Date Picker/Date Range',

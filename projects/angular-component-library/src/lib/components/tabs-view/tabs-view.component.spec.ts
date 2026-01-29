@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'tabs-view-mock-component',
-    template: templateMock,
-    standalone: false
+    standalone: true,
+    imports: [TabsViewComponent, TabComponent, FontAwesomeTestingModule],
+    template: templateMock
 })
 class TabsViewMockComponent {
     selectedTabChanged(_: any): void {
@@ -21,8 +22,9 @@ describe('TabsViewComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [TabsViewMockComponent],
+            declarations: [],
             imports: [
+                TabsViewMockComponent,
                 TabsViewComponent,
                 FontAwesomeTestingModule,
                 TabComponent

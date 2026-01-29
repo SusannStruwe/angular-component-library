@@ -10,11 +10,15 @@
                     <span
                         class="sort"
                         sortResizeableColumn
+                        #sortColumnDirective="sortResizeableColumn"
                         (sort)="sortData($event, col)">
                         <h3 [style.width.px]="columnWidths[col] - 50">
                             {{ columnLabels[col] }}
                         </h3>
-                        <fa-icon [icon]="faSort"></fa-icon>
+                        <fa-icon
+                            [icon]="
+                                sortColumnDirective.directiveIcon
+                            "></fa-icon>
                     </span>
 
                     @if (!disableResize) {

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { TagBtnComponent } from './tag-btn.component';
-import { fn } from '@storybook/test';
+import { fn } from 'storybook/test';
 
 const meta: Meta<TagBtnComponent> = {
     title: 'Components/Tag',

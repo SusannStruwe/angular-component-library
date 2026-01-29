@@ -1,7 +1,7 @@
 import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 import { TableComponent } from './table.component';
 import { TableHeaderComponent } from './table-header/table-header.component';
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 import { TableContentComponent } from './table-content/table-content.component';
 import {
     headerItems,

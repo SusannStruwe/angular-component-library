@@ -6,7 +6,7 @@ import {
     IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { within, expect, waitFor, userEvent } from '@storybook/test';
+import { within, expect, waitFor, userEvent } from 'storybook/test';
 
 const defaultTemplateMock = `   <collapsible-component [show]="false" [classStyles]="'simple'">
         <div header>

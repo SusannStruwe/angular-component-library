@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { SearchInputComponent } from './search-input.component';
-import { fn } from '@storybook/test';
+import { fn } from 'storybook/test';
 
 const meta: Meta<SearchInputComponent> = {
     title: 'Components/Search Input',

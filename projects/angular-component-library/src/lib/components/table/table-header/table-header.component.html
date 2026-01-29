@@ -4,6 +4,7 @@
             <div class="flex-item" #cellWidthHeader>
                 <div
                     sortColumn
+                    #sortColumnDirective="sortColumn"
                     [sortable]="item"
                     [sortDirection]="
                         item.property === 'submitted_at' ? 'desc' : ''
@@ -11,7 +12,8 @@
                     (sort)="sortColumn($event)"
                     [ngClass]="item.canFiltered ? 'sort withSelect' : 'sort'">
                     <h2>{{ item.title }}</h2>
-                    <fa-icon [icon]="faSort"></fa-icon>
+                    <fa-icon
+                        [icon]="sortColumnDirective.directiveIcon"></fa-icon>
                 </div>
                 @if (item.canFiltered && multiSelectList) {
                     <multi-select-component

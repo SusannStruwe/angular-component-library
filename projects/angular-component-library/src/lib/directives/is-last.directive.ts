@@ -9,8 +9,7 @@ import { Directive, EventEmitter, Input, OnInit, Output } from '@angular/core';
  * ```
  */
 @Directive({
-    selector: '[isLast]',
-    standalone: true
+    selector: '[isLast]'
 })
 export class IsLastDirective implements OnInit {
     @Input() isLast = false;

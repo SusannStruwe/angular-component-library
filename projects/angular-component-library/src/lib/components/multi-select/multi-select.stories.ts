@@ -8,7 +8,7 @@ import {
     faSpinner,
     faTrash
 } from '@fortawesome/free-solid-svg-icons';
-import { fn } from '@storybook/test';
+import { fn } from 'storybook/test';
 import { MultiSelectComponent } from './multi-select.component';
 
 const iconOptions: Record<string, IconDefinition> = {

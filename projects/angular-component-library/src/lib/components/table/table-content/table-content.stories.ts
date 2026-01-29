@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { contentItems } from '../../../stories/util';
 import { TableContentComponent } from './table-content.component';
-import { fn } from '@storybook/test';
-import { action } from '@storybook/addon-actions';
+import { fn } from 'storybook/test';
+import { action } from 'storybook/actions';
 
 const meta: Meta<TableContentComponent> = {
     title: 'Components/Table/Table Content',

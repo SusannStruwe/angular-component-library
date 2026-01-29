@@ -6,11 +6,12 @@ import {
     TranslateCompiler,
     TranslateDefaultParser,
     TranslateLoader,
+    TranslateModule,
     TranslateParser,
     TranslateService,
     TranslateStore
 } from '@ngx-translate/core';
-import { LOCALE_ID } from '@angular/core';
+import { inject, LOCALE_ID, provideAppInitializer } from '@angular/core';
 setCompodocJson(docJson);
 import {
     FakeCompiler,
@@ -52,9 +53,12 @@ const preview: Preview = {
             }
         }
     },
+
     decorators: [
         applicationConfig({
             providers: [
+                TranslateStore,
+                TranslateService,
                 { provide: TranslateLoader, useClass: FakeLoader },
                 { provide: TranslateCompiler, useClass: FakeCompiler },
                 { provide: TranslateParser, useClass: TranslateDefaultParser },
@@ -62,15 +66,20 @@ const preview: Preview = {
                     provide: MissingTranslationHandler,
                     useClass: NoopMissingTranslationHandler
                 },
-                TranslateStore,
-                TranslateService,
                 {
                     provide: LOCALE_ID,
-                    useValue: 'de-DE'
-                }
+                    useValue: 'de'
+                },
+                provideAppInitializer(() => {
+                    const ts = inject(TranslateService);
+                    ts.setFallbackLang('de');
+                    ts.use('de');
+                })
             ]
         })
-    ]
+    ],
+
+    tags: ['autodocs']
 };
 
 export default preview;
