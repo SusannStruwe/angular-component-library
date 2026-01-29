@@ -178,7 +178,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "unknown",
-                "defaultValue": "`   <resizable-table [tableWidth]=\"'600px'\"\r\n        [columnLabels]=\"columnLabels\"\r\n        [data]=\"data\"\r\n        [columns]=\"columns\"\r\n        [tableStyle]=\"tableStyle\">\r\n    </resizable-table>\r\n `"
+                "defaultValue": "`   <resizable-table [tableWidth]=\"'600px'\"\n        [columnLabels]=\"columnLabels\"\n        [data]=\"data\"\n        [columns]=\"columns\"\n        [tableStyle]=\"tableStyle\">\n    </resizable-table>\n `"
             },
             {
                 "name": "defaultTemplateMock",
@@ -684,21 +684,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<AlertComponent>",
-                "defaultValue": "{\n    title: 'Components/Alert',\n    component: AlertComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [RouterModule],\n            providers: [\n                {\n                    provide: ActivatedRoute,\n                    useValue: {\n                        snapshot: {\n                            paramMap: new Map([['id', '123']]),\n                            data: {}\n                        },\n                        params: [{ id: '123' }],\n                        queryParams: {}\n                    } // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n                }\n            ]\n        })\n    ],\n    tags: ['autodocs'],\n    argTypes: {\n        title: { control: 'text', value: '' },\n        message: { control: 'text', value: '' },\n        type: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: AlertType,\n            value: AlertType.SUCCESS\n        },\n        visibleState: { control: 'boolean', value: false },\n        hideCloseBtn: { control: 'boolean', value: false },\n        navigationLink: { control: 'text', value: undefined },\n        navigationLinkLabel: { control: 'text', value: undefined },\n        visibleStateChange: { action: 'changed' }\n    },\n    args: { visibleStateChange: fn() }\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BadgeComponent>",
                 "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        classStyle: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ]\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<AlertComponent>",
+                "defaultValue": "{\n    title: 'Components/Alert',\n    component: AlertComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [RouterModule],\n            providers: [\n                {\n                    provide: ActivatedRoute,\n                    useValue: {\n                        snapshot: {\n                            paramMap: new Map([['id', '123']]),\n                            data: {}\n                        },\n                        params: [{ id: '123' }],\n                        queryParams: {}\n                    } // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n                }\n            ]\n        })\n    ],\n    tags: ['autodocs'],\n    argTypes: {\n        title: { control: 'text', value: '' },\n        message: { control: 'text', value: '' },\n        type: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: AlertType,\n            value: AlertType.SUCCESS\n        },\n        visibleState: { control: 'boolean', value: false },\n        hideCloseBtn: { control: 'boolean', value: false },\n        navigationLink: { control: 'text', value: undefined },\n        navigationLinkLabel: { control: 'text', value: undefined },\n        visibleStateChange: { action: 'changed' }\n    },\n    args: { visibleStateChange: fn() }\n}"
             },
             {
                 "name": "meta",
@@ -734,6 +734,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ColorPaletteComponent>",
+                "defaultValue": "{\n    title: 'Components/ColorPalette',\n    component: ColorPaletteComponent,\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -749,16 +759,6 @@
                 "deprecationMessage": "",
                 "type": "Meta<CollapsibleComponent>",
                 "defaultValue": "{\n    title: 'Components/Collapsible',\n    component: CollapsibleComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\n \n                 `\n            }\n        }\n    },\n    decorators: [\n        (story) => {\n            const storyObj = story();\n            return {\n                moduleMetadata: {\n                    imports: [CollapsibleComponent, FontAwesomeModule]\n                },\n                template: storyObj.template,\n                props: storyObj.props\n            };\n        }\n    ],\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<ColorPaletteComponent>",
-                "defaultValue": "{\n    title: 'Components/ColorPalette',\n    component: ColorPaletteComponent,\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -888,7 +888,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ResizableTableComponent>",
-                "defaultValue": "{\r\n    title: 'Components/Table/ ResizeTable',\r\n    component: ResizableTableComponent,\r\n    argTypes: {\r\n        columns: { control: 'object' },\r\n        columnLabels: { control: 'object' },\r\n        data: { control: 'object' }\r\n    },\r\n    tags: ['autodocs']\r\n}"
+                "defaultValue": "{\n    title: 'Components/Table/ ResizeTable',\n    component: ResizableTableComponent,\n    argTypes: {\n        columns: { control: 'object' },\n        columnLabels: { control: 'object' },\n        data: { control: 'object' }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -1114,6 +1114,16 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {}\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1129,16 +1139,6 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {}\n}"
             },
             {
                 "name": "Sample",
@@ -1268,7 +1268,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            columnLabels: columnLabels,\r\n            data: resizeableTableData,\r\n            columns: columns\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            columnLabels: columnLabels,\n            data: resizeableTableData,\n            columns: columns\n        },\n        template: defaultTemplateMock\n    })\n}"
             },
             {
                 "name": "Sample",
@@ -1518,7 +1518,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            columnLabels: columnLabels,\r\n            data: resizeableTableData,\r\n            columns: columns,\r\n            tableStyle: TableStyle.DARK\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            columnLabels: columnLabels,\n            data: resizeableTableData,\n            columns: columns,\n            tableStyle: TableStyle.DARK\n        },\n        template: defaultTemplateMock\n    })\n}"
             },
             {
                 "name": "TableDarkWithoutSearchLine",
@@ -1538,7 +1538,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            columnLabels: columnLabels,\r\n            data: resizeableTableData,\r\n            columns: columns,\r\n            tableStyle: TableStyle.LIGHT\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            columnLabels: columnLabels,\n            data: resizeableTableData,\n            columns: columns,\n            tableStyle: TableStyle.LIGHT\n        },\n        template: defaultTemplateMock\n    })\n}"
             },
             {
                 "name": "TableLightWithoutSearchLine",
@@ -1792,8 +1792,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<AlertComponent>",
-                "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
+                "rawtype": "StoryObj<BadgeComponent>",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1803,8 +1803,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<BadgeComponent>",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "rawtype": "StoryObj<AlertComponent>",
+                "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1847,6 +1847,17 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<ColorPaletteComponent>",
+                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<CircleBtnComponent>",
                 "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
@@ -1860,17 +1871,6 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<CollapsibleComponent>",
                 "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 184
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<ColorPaletteComponent>",
-                "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2826,7 +2826,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "unknown",
-                    "defaultValue": "`   <resizable-table [tableWidth]=\"'600px'\"\r\n        [columnLabels]=\"columnLabels\"\r\n        [data]=\"data\"\r\n        [columns]=\"columns\"\r\n        [tableStyle]=\"tableStyle\">\r\n    </resizable-table>\r\n `"
+                    "defaultValue": "`   <resizable-table [tableWidth]=\"'600px'\"\n        [columnLabels]=\"columnLabels\"\n        [data]=\"data\"\n        [columns]=\"columns\"\n        [tableStyle]=\"tableStyle\">\n    </resizable-table>\n `"
                 },
                 {
                     "name": "meta",
@@ -2836,7 +2836,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ResizableTableComponent>",
-                    "defaultValue": "{\r\n    title: 'Components/Table/ ResizeTable',\r\n    component: ResizableTableComponent,\r\n    argTypes: {\r\n        columns: { control: 'object' },\r\n        columnLabels: { control: 'object' },\r\n        data: { control: 'object' }\r\n    },\r\n    tags: ['autodocs']\r\n}"
+                    "defaultValue": "{\n    title: 'Components/Table/ ResizeTable',\n    component: ResizableTableComponent,\n    argTypes: {\n        columns: { control: 'object' },\n        columnLabels: { control: 'object' },\n        data: { control: 'object' }\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Sample",
@@ -2846,7 +2846,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            columnLabels: columnLabels,\r\n            data: resizeableTableData,\r\n            columns: columns\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            columnLabels: columnLabels,\n            data: resizeableTableData,\n            columns: columns\n        },\n        template: defaultTemplateMock\n    })\n}"
                 },
                 {
                     "name": "TableDarkWithoutSearchLine",
@@ -2856,7 +2856,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            columnLabels: columnLabels,\r\n            data: resizeableTableData,\r\n            columns: columns,\r\n            tableStyle: TableStyle.DARK\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            columnLabels: columnLabels,\n            data: resizeableTableData,\n            columns: columns,\n            tableStyle: TableStyle.DARK\n        },\n        template: defaultTemplateMock\n    })\n}"
                 },
                 {
                     "name": "TableLightWithoutSearchLine",
@@ -2866,7 +2866,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    render: (args) => ({\r\n        props: {\r\n            ...args,\r\n            columnLabels: columnLabels,\r\n            data: resizeableTableData,\r\n            columns: columns,\r\n            tableStyle: TableStyle.LIGHT\r\n        },\r\n        template: defaultTemplateMock\r\n    })\r\n}"
+                    "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            columnLabels: columnLabels,\n            data: resizeableTableData,\n            columns: columns,\n            tableStyle: TableStyle.LIGHT\n        },\n        template: defaultTemplateMock\n    })\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
@@ -3968,19 +3968,6 @@
                     "kind": 184
                 }
             ],
-            "projects/angular-component-library/src/lib/components/alert/alert.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<AlertComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 184
-                }
-            ],
             "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
                 {
                     "name": "Story",
@@ -3988,6 +3975,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<BadgeComponent>",
                     "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/alert/alert.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<AlertComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -4033,6 +4033,19 @@
                     "kind": 184
                 }
             ],
+            "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ColorPaletteComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
             "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
                 {
                     "name": "Story",
@@ -4053,19 +4066,6 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CollapsibleComponent>",
                     "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 184
-                }
-            ],
-            "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ColorPaletteComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",

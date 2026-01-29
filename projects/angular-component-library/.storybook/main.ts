@@ -1,16 +1,13 @@
 import type { StorybookConfig } from '@storybook/angular';
 
 const config: StorybookConfig = {
-    stories: [
-        //'../src/**/*.mdx', -> needs storybook-design-token
-        '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'
-    ],
+    stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
 
     addons: [
         '@storybook/addon-docs',
         '@storybook/addon-onboarding',
-        '@storybook/addon-a11y'
-        //{ name: 'storybook-design-token', options: { preserveCSSVars: true } } version 4 needs storybook 9!
+        '@storybook/addon-a11y',
+        { name: 'storybook-design-token', options: { preserveCSSVars: true } }
         // note @angular-devkit/build-angular" only needed for storybook version. angular upgrade removed this lib
     ],
 
