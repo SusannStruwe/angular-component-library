@@ -125,7 +125,11 @@ export class SelectComponent implements OnInit, OnChanges {
      * Select element in menu
      * @param item
      */
-    selectElement(item: SelectItem): void {
+    selectElement(item: SelectItem, event?: Event): void {
+        if (event) {
+            event.stopPropagation();
+        }
+
         if (this.selectedItem) {
             if (
                 this.selectedItem.text === item.text &&
