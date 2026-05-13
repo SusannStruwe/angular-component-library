@@ -724,21 +724,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<CheckboxComponent>",
-                "defaultValue": "{\r\n    title: 'Components/Checkbox',\r\n    component: CheckboxComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        value: { control: 'boolean' },\r\n        mode: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(types),\r\n            mapping: EditMode,\r\n            value: EditMode.WRITE\r\n        },\r\n        height: { control: 'number' },\r\n        valueChange: { action: 'changed' }\r\n    },\r\n    args: { valueChange: fn() }\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CircleBtnComponent>",
                 "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        classStyle: { control: 'text' },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CheckboxComponent>",
+                "defaultValue": "{\r\n    title: 'Components/Checkbox',\r\n    component: CheckboxComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        value: { control: 'boolean' },\r\n        mode: {\r\n            control: {\r\n                type: 'select'\r\n            },\r\n            options: Object.values(types),\r\n            mapping: EditMode,\r\n            value: EditMode.WRITE\r\n        },\r\n        height: { control: 'number' },\r\n        valueChange: { action: 'changed' }\r\n    },\r\n    args: { valueChange: fn() }\r\n}"
             },
             {
                 "name": "meta",
@@ -1104,21 +1104,21 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n    args: {\r\n        value: false,\r\n        mode: EditMode.WRITE\r\n    },\r\n    play: async ({ canvasElement }) => {\r\n        const canvas = within(canvasElement);\r\n\r\n        const checkbox = (await canvas.findByTestId(\r\n            'checkbox'\r\n        )) as HTMLInputElement;\r\n\r\n        const wasChecked = checkbox.checked;\r\n\r\n        await userEvent.click(checkbox);\r\n\r\n        await waitFor(() => {\r\n            expect(checkbox.checked).not.toBe(wasChecked);\r\n        });\r\n    }\r\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faCheck\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        value: false,\r\n        mode: EditMode.WRITE\r\n    },\r\n    play: async ({ canvasElement }) => {\r\n        const canvas = within(canvasElement);\r\n\r\n        const checkbox = (await canvas.findByTestId(\r\n            'checkbox'\r\n        )) as HTMLInputElement;\r\n\r\n        const wasChecked = checkbox.checked;\r\n\r\n        await userEvent.click(checkbox);\r\n\r\n        await waitFor(() => {\r\n            expect(checkbox.checked).not.toBe(wasChecked);\r\n        });\r\n    }\r\n}"
             },
             {
                 "name": "Sample",
@@ -1836,8 +1836,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CheckboxComponent>",
-                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "rawtype": "StoryObj<CircleBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1847,8 +1847,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CircleBtnComponent>",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                "rawtype": "StoryObj<CheckboxComponent>",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -4020,19 +4020,6 @@
                     "kind": 184
                 }
             ],
-            "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<CheckboxComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 184
-                }
-            ],
             "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
                 {
                     "name": "Story",
@@ -4040,6 +4027,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CircleBtnComponent>",
                     "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CheckboxComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
