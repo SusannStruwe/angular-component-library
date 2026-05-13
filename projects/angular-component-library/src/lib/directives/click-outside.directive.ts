@@ -29,10 +29,7 @@ export class ClickOutsideDirective {
         const childNodes = this.elementRef.nativeElement.childNodes;
         this.getAllChilds(childNodes);
         // const clickedInside = this.elementRef.nativeElement.contains(targetElement);
-        if (
-            this.nestedChilds.filter((item) => item === target)
-                .length === 0
-        ) {
+        if (this.nestedChilds.filter((item) => item === target).length === 0) {
             this.outsideClick.emit();
         }
     }
