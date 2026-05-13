@@ -15,7 +15,7 @@
     "storybook": "ng run angular-component-library:storybook",
     "test-storybook": "test-storybook --config-dir projects/angular-component-library/.storybook --url http://localhost:6006",
     "build-storybook": "ng run angular-component-library:build-storybook",
-    "update:devkit": "ng update @angular-devkit/build-angular@21",
+    "update:devkit": "ng update @angular-devkit/build-angular@21.2.11",
     "update:angular": "ng update @angular/cli@21 @angular/core@21",
     "update:angular/cdk": "ng update @angular/cdk@21 @ngx-translate/core",
     "update:fortawesome": "ng update @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons",
@@ -54,6 +54,9 @@
     "zone.js": "~0.16.2"
   },
   "devDependencies": {
+    "@angular-devkit/architect": "^0.2102.11",
+    "@angular-devkit/build-angular": "^21.2.11",
+    "@angular-devkit/core": "^21.2.11",
     "@angular/build": "^21.2.11",
     "@angular/cli": "^21.2.11",
     "@angular/compiler-cli": "^21.2.12",
