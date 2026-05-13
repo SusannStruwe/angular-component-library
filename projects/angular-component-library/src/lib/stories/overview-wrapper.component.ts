@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
@@ -43,7 +42,6 @@ import { TableComponent } from '../components/table/table.component';
  */ @Component({
     selector: 'overview-wrapper-component',
     imports: [
-        CommonModule,
         RouterModule,
         FontAwesomeModule,
         TranslateModule,

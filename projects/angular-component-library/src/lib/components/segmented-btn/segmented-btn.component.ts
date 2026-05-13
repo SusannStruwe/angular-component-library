@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
-import { CommonModule } from '@angular/common';
+
 import { SegmentedBtnItem } from '../../model/segmented-btn.model';
 import { Icons } from '../../model/icons';
 
@@ -28,7 +28,7 @@ export const activeBtn: SegmentedBtnItem = btnArray[1];
  */
 @Component({
     selector: 'segmented-btn-component',
-    imports: [CommonModule, FontAwesomeModule, TranslateModule],
+    imports: [FontAwesomeModule, TranslateModule],
     templateUrl: './segmented-btn.component.html',
     styleUrls: ['./segmented-btn.component.scss']
 })
