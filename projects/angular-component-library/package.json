@@ -2,7 +2,7 @@
     "name": "angular-component-library",
     "version": "4.0.0",
     "peerDependencies": {
-        "@angular/cdk": "^21.2.10",
+        "@angular/cdk": "^21.2.11",
         "@angular/common": "^21.2.13",
         "@angular/core": "^21.2.13",
         "@angular/compiler": "^21.2.13",
