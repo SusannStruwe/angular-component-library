@@ -6,7 +6,6 @@ import {
     TranslateCompiler,
     TranslateDefaultParser,
     TranslateLoader,
-    TranslateModule,
     TranslateParser,
     TranslateService,
     TranslateStore
