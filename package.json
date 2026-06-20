@@ -15,14 +15,15 @@
         "storybook": "ng run angular-component-library:storybook",
         "test-storybook": "test-storybook --config-dir projects/angular-component-library/.storybook --url http://localhost:6006",
         "build-storybook": "ng run angular-component-library:build-storybook",
+        "pipeline:update-all": "npx ng update @angular/cli @angular/core @angular-devkit/build-angular @angular/cdk --allow-dirty --force && npx ng update @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core --allow-dirty --force && npx ng update @storybook/angular storybook --allow-dirty --force && npm update",
+        "sync:lib": "node sync-versions.js && ng build angular-component-library --configuration production",
         "update:devkit": "ng update @angular-devkit/build-angular@21.2.11",
         "update:angular": "ng update @angular/cli@21 @angular/core@21",
         "update:angular/cdk": "ng update @angular/cdk@21 @ngx-translate/core",
         "update:fortawesome": "ng update @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-brands-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons",
         "update:util": "ng update date-fns @types/lodash.clonedeep lodash.clonedeep luxon @types/luxon rxjs tslib zone.js prettier ng-packagr playwright",
         "update:karma": "ng update karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter",
-        "update:storybook": "ng update @storybook/angular@^10 storybook@^10 @storybook/addon-docs@^10 @storybook/addon-onboarding@^10 @storybook/test-runner storybook-design-token @compodoc/compodoc",
-        "pipeline:update-all": "npx ng update @angular/cli @angular/core @angular-devkit/build-angular @angular/cdk --allow-dirty --force && npx ng update @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core --allow-dirty --force && npx ng update @storybook/angular storybook --allow-dirty --force && npm update"
+        "update:storybook": "ng update @storybook/angular@^10 storybook@^10 @storybook/addon-docs@^10 @storybook/addon-onboarding@^10 @storybook/test-runner storybook-design-token @compodoc/compodoc"
     },
     "private": true,
     "dependencies": {
