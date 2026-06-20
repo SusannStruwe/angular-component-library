@@ -1,21 +1,25 @@
-name: Monthly Angular Update
+name: Monthly Ecosystem Update
+
+on:
+    schedule:
+        # Läuft jeden 1. des Monats um 03:00 Uhr nachts (UTC)
+        - cron: '0 3 1 * *'
+    workflow_dispatch: # Erlaubt es dir, das Update jederzeit manuell im GitHub-UI zu starten
 
 env:
     NODE_VERSION: '22'
 
-on:
-    schedule:
-        - cron: '0 3 1 * *' # Jeden 1. des Monats um 03:00 Uhr
-    workflow_dispatch: # Erlaubt dir, das Update manuell im GitHub-UI zu starten
-
 jobs:
-    angular-upgrade:
-        name: Run Angular Update & Create PR
+    dependencies-upgrade:
+        name: Run Update Script & Create PR
         runs-on: ubuntu-latest
+
         steps:
-            - name: Checkout repo
+            - name: Checkout Repository
               uses: actions/checkout@v4
               with:
+                  # Nutzt dein hinterlegtes Secret, damit der neue PR
+                  # automatisch deine CI-Test-Pipeline triggert
                   token: ${{ secrets.UPDATE_BOT_TOKEN }}
 
             - name: Setup Node.js
@@ -26,17 +30,27 @@ jobs:
             - name: Install current npm dependencies
               run: npm install
 
-            - name: Run Angular Migration & Update
-              run: npx ng update @angular/core @angular/cli --allow-dirty --force
+            - name: Run Complete Ecosystem Update
+              # Führt das kombinierte Mammut-Skript aus deiner package.json aus
+              run: npm run pipeline:update-all
 
             - name: Create Update Branch and Pull Request
               uses: peter-evans/create-pull-request@v6
               with:
                   token: ${{ secrets.UPDATE_BOT_TOKEN }}
-                  commit-message: 'chore(deps): monatliches Angular- & Migrations-Update'
-                  branch: 'automation/angular-update'
-                  delete-branch: true
-                  title: '🚀 Monatliches Angular- & Code-Update'
+                  commit-message: 'chore(deps): monatliches Angular- & Ecosystem-Update'
+                  branch: 'automation/angular-update' # In diesen neuen Branch wird der Code geschoben
+                  delete-branch: true # Löscht den Branch automatisch, wenn der PR gemergt wird
+                  title: '🚀 Automated: Monatliches Dependency- & Migrations-Update'
                   body: |
-                      Dieses automatisierte Update wurde vom monatlichen Pipeline-Cronjob ausgelöst.
-                      Bitte überprüfe die Änderungen und die Testergebnisse dieser Pipeline, bevor du den PR merges!
+                      Dieses automatisierte Update wurde von der monatlichen Update-Pipeline ausgelöst.
+
+                      **Ausgeführte Änderungen:**
+                      - Angular Framework (CLI, Core, Devkit, CDK) wurde aktualisiert & Code-Migrationen wurden ausgeführt.
+                      - Partner-Frameworks (Storybook & FontAwesome) wurden über `ng update` migriert.
+                      - Alle restlichen Utilities und devDependencies wurden via `npm update` hochgezogen.
+
+                      Bitte überprüfe die Änderungen und die Ergebnisse der Test-Pipeline, bevor du diesen PR via **Squash and merge** in den `main`-Branch übernimmst!
+                  labels: |
+                      dependencies
+                      automated-pr
