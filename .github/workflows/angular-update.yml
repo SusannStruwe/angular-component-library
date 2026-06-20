@@ -1,0 +1,43 @@
+name: Monthly Angular Update
+
+env:
+    NODE_VERSION: '22'
+
+on:
+  schedule:
+    - cron: '0 3 1 * *' # Jeden 1. des Monats um 03:00 Uhr
+  workflow_dispatch: # Erlaubt dir, das Update manuell im GitHub-UI zu starten
+
+jobs:
+  angular-upgrade:
+    name: Run Angular Update & Create PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.UPDATE_BOT_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install current npm dependencies
+        run: npm install
+
+      - name: Run Angular Migration & Update
+        run: npx ng update @angular/core @angular/cli --allow-dirty --force
+
+      - name: Create Update Branch and Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.UPDATE_BOT_TOKEN }}
+          commit-message: "chore(deps): monatliches Angular- & Migrations-Update"
+          branch: "automation/angular-update"
+          delete-branch: true
+          title: "🚀 Monatliches Angular- & Code-Update"
+          body: |
+            Dieses automatisierte Update wurde vom monatlichen Pipeline-Cronjob ausgelöst.
+            Bitte überprüfe die Änderungen und die Testergebnisse dieser Pipeline, bevor du den PR merges!
+    
