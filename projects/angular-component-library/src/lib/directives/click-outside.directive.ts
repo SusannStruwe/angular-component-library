@@ -24,15 +24,12 @@ export class ClickOutsideDirective {
     constructor(private elementRef: ElementRef) {}
 
     @HostListener('document:click', ['$event', '$event.target'])
-    onClick(event: Event, targetElement: HTMLElement): void {
+    onClick(event: Event, target: EventTarget | null): void {
         event.stopPropagation();
         const childNodes = this.elementRef.nativeElement.childNodes;
         this.getAllChilds(childNodes);
         // const clickedInside = this.elementRef.nativeElement.contains(targetElement);
-        if (
-            this.nestedChilds.filter((item) => item === targetElement)
-                .length === 0
-        ) {
+        if (this.nestedChilds.filter((item) => item === target).length === 0) {
             this.outsideClick.emit();
         }
     }

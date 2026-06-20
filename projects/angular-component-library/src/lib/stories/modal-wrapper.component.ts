@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ModalService } from '../services/modal.service';
@@ -18,7 +17,6 @@ import { FormsModule } from '@angular/forms';
 @Component({
     selector: 'modal-wrapper-component',
     imports: [
-        CommonModule,
         FontAwesomeModule,
         FormsModule,
         ModalComponent,

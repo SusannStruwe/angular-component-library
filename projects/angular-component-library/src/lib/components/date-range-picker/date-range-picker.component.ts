@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -21,7 +20,6 @@ import { DatePickerComponent } from '../date-picker/date-picker.component';
 @Component({
     selector: 'date-range-picker-component',
     imports: [
-        CommonModule,
         FormsModule,
         FontAwesomeModule,
         PlatformModule,
