@@ -1,4 +1,4 @@
-name: Monthly Ecosystem Update
+name: Monthly Update
 
 on:
     schedule:
