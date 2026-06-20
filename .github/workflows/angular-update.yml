@@ -5,6 +5,9 @@ on:
         # Läuft jeden 1. des Monats um 03:00 Uhr nachts (UTC)
         - cron: '0 3 1 * *'
     workflow_dispatch: # Erlaubt es dir, das Update jederzeit manuell im GitHub-UI zu starten
+    push:
+        branches:
+            - update-pipeline
 
 env:
     NODE_VERSION: '22'
