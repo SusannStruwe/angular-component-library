@@ -38,7 +38,7 @@
         }
         <ul class="selected-items" tabindex="0">
             @for (selectedItem of selectedItems; track i; let i = $index) {
-                <li 
+                <li
                     role="button"
                     tabindex="0"
                     (keydown.enter)="removeElement(selectedItem)"
@@ -56,7 +56,7 @@
         </ul>
         <ul [style.max-height.px]="300" tabindex="0">
             @for (item of items; track i; let i = $index) {
-                <li 
+                <li
                     role="button"
                     tabindex="0"
                     (keydown.enter)="selectElement(item)"
