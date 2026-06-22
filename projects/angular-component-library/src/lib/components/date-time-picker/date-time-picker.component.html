@@ -11,13 +11,14 @@
             type="datetime-local"
             [(ngModel)]="date" />
         @if (showOverlayBtn) {
-            <div
+            <button
+                type="button"
                 class="btn-overlay"
                 [style.position]="withInput ? 'absolute' : 'relative'"
                 [style.height.px]="height ?? 40"
                 (click)="showDatePicker()">
                 <fa-icon [icon]="faCalender"></fa-icon>
-            </div>
+            </button>
         }
     </div>
 }

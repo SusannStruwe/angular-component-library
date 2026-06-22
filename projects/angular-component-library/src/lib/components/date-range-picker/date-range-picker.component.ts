@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition, faCalendar } from '@fortawesome/free-solid-svg-icons';
@@ -29,6 +29,8 @@ import { DatePickerComponent } from '../date-picker/date-picker.component';
     styleUrls: ['./date-range-picker.component.scss']
 })
 export class DateRangePickerComponent {
+    platform = inject(Platform);
+
     @Input() startDate: Date = new Date();
     @Input() endDate: Date = new Date();
     @Input() randomIdStart?: string = Math.floor(
@@ -43,8 +45,6 @@ export class DateRangePickerComponent {
 
     faCalender: IconDefinition = faCalendar;
     randomId: string = Math.floor(Math.random() * 16777215).toString(16);
-
-    constructor(public platform: Platform) {}
 
     /**
      * Changes selected date

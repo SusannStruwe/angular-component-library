@@ -40,6 +40,7 @@
         box-sizing: border-box;
         border-top-right-radius: var(--input-radius);
         border-bottom-right-radius: var(--input-radius);
+        font: inherit;
 
         fa-icon {
             color: var(--btn-color);

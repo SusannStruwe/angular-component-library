@@ -5,7 +5,8 @@ import {
     Input,
     OnDestroy,
     OnInit,
-    ViewChild
+    ViewChild,
+    inject
 } from '@angular/core';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -30,6 +31,9 @@ import { Icons } from '../../model/icons';
     styleUrls: ['./non-modal.component.scss']
 })
 export class NonModalComponent implements OnInit, OnDestroy {
+    private modalService = inject(ModalService);
+    private el = inject(ElementRef);
+
     @Input() id: string = '';
     @Input() title = ' ';
     @Input() sizeClass = 'm';
@@ -43,10 +47,7 @@ export class NonModalComponent implements OnInit, OnDestroy {
 
     private element: any;
 
-    constructor(
-        private modalService: ModalService,
-        private el: ElementRef
-    ) {
+    constructor() {
         this.element = this.el.nativeElement;
     }
 

@@ -38,7 +38,12 @@
         }
         <ul class="selected-items" tabindex="0">
             @for (selectedItem of selectedItems; track i; let i = $index) {
-                <li (click)="removeElement(selectedItem)">
+                <li
+                    role="button"
+                    tabindex="0"
+                    (keydown.enter)="removeElement(selectedItem)"
+                    (keydown.space)="removeElement(selectedItem)"
+                    (click)="removeElement(selectedItem)">
                     <input
                         id="ms-s-items-{{ randomId }}-{{ i }}"
                         type="checkbox"
@@ -51,7 +56,12 @@
         </ul>
         <ul [style.max-height.px]="300" tabindex="0">
             @for (item of items; track i; let i = $index) {
-                <li (click)="selectElement(item)">
+                <li
+                    role="button"
+                    tabindex="0"
+                    (keydown.enter)="selectElement(item)"
+                    (keydown.space)="selectElement(item)"
+                    (click)="selectElement(item)">
                     <input
                         id="ms-items-{{ randomId }}-{{ i }}"
                         [attr.aria-label]="'checkbox'"

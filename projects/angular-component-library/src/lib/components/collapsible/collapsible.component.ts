@@ -5,7 +5,8 @@ import {
     EventEmitter,
     Input,
     OnInit,
-    Output
+    Output,
+    inject
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -33,12 +34,12 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
     styleUrls: ['./collapsible.component.scss']
 })
 export class CollapsibleComponent implements OnInit {
+    private changeDetector = inject(ChangeDetectorRef);
+
     @Input() classStyles = '';
     @Input() show = false;
 
     @Output() showChange = new EventEmitter<boolean>();
-
-    constructor(private changeDetector: ChangeDetectorRef) {}
 
     ngOnInit(): void {
         this.changeDetector.detectChanges();

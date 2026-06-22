@@ -1,7 +1,10 @@
 <div
     data-testid="collapse-header"
+    tabindex="0"
     [ngClass]="['collapsible-header', classStyles]"
-    (click)="collapseContent()">
+    (click)="collapseContent()"
+    (keydown.enter)="collapseContent()"
+    (keydown.space)="collapseContent()">
     <ng-content select="[header]"></ng-content>
 </div>
 

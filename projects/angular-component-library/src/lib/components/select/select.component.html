@@ -53,6 +53,10 @@
             <ul tabindex="0">
                 @if (withBlankOption) {
                     <li
+                        role="button"
+                        tabindex="0"
+                        (keydown.enter)="selectEmptyElement()"
+                        (keydown.space)="selectEmptyElement()"
                         (click)="selectEmptyElement()"
                         [class.active]="'' === selectedItem.text">
                         <span class="text"></span>
@@ -61,6 +65,10 @@
                 @for (item of items; track i; let i = $index) {
                     <li
                         id="s-item-{{ i }}"
+                        role="button"
+                        tabindex="0"
+                        (keydown.enter)="selectEmptyElement()"
+                        (keydown.space)="selectEmptyElement()"
                         (click)="selectElement(item)"
                         [ngClass]="
                             item.icon && item.localTimestamp ? 'grid' : 'flex'

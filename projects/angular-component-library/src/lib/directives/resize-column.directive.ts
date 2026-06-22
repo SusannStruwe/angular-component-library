@@ -4,7 +4,8 @@ import {
     EventEmitter,
     HostListener,
     Input,
-    Output
+    Output,
+    inject
 } from '@angular/core';
 
 /**
@@ -22,6 +23,8 @@ import {
     selector: '[resizableColumn]'
 })
 export class ResizableColumnDirective {
+    private el = inject(ElementRef);
+
     @Input() columnKey!: string;
     @Output() resizeStart = new EventEmitter<{
         column: string;
@@ -29,8 +32,6 @@ export class ResizableColumnDirective {
     }>();
 
     resizing = false;
-
-    constructor(private el: ElementRef) {}
 
     @HostListener('pointerdown', ['$event'])
     onPointerDown(event: PointerEvent) {

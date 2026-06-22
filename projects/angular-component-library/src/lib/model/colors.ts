@@ -244,7 +244,11 @@ export function getColors(): string[] {
  */
 export function getRandomColor(): string {
     let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    randomColor.length === 5 ? (randomColor = randomColor + 'f') : null;
+
+    if (randomColor.length === 5) {
+        randomColor = randomColor + 'f';
+    }
+
     return '#' + randomColor;
 }
 

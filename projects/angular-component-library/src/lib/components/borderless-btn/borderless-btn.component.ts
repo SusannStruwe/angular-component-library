@@ -23,6 +23,8 @@ import { HoverStyle } from '../../model/hover-style.enum';
     styleUrls: ['./borderless-btn.component.scss']
 })
 export class BorderlessBtnComponent {
+    @Input() type: 'button' | 'submit' | 'reset' = 'button';
+
     @Input() ariaLabel: string = 'no-title';
 
     @Input() label?: string;
