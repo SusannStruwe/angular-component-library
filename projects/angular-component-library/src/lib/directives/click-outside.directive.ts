@@ -3,7 +3,8 @@ import {
     ElementRef,
     EventEmitter,
     HostListener,
-    Output
+    Output,
+    inject
 } from '@angular/core';
 
 /**
@@ -18,10 +19,10 @@ import {
     selector: '[clickOutside]'
 })
 export class ClickOutsideDirective {
+    private elementRef = inject(ElementRef);
+
     @Output('clickOutside') outsideClick = new EventEmitter<MouseEvent>();
     nestedChilds: any[] = [];
-
-    constructor(private elementRef: ElementRef) {}
 
     @HostListener('document:click', ['$event', '$event.target'])
     onClick(event: Event, target: EventTarget | null): void {

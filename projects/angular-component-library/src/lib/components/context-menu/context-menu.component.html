@@ -29,7 +29,11 @@
         <ul>
             @for (item of items; track item) {
                 <li
+                    role="button"
+                    tabindex="0"
                     (click)="selectElement(item)"
+                    (keydown.enter)="selectElement(item)"
+                    (keydown.space)="selectElement(item)"
                     [ngClass]="item.icon ? 'grid' : 'flex'">
                     @if (item.icon) {
                         <fa-icon [icon]="item.icon"></fa-icon>

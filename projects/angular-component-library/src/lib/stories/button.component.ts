@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
     imports: [CommonModule],
     template: ` <button
         type="button"
-        (click)="onClick.emit($event)"
+        (click)="clickBtn.emit($event)"
         [ngClass]="classes"
         [ngStyle]="{ 'background-color': backgroundColor }">
         {{ label }}
@@ -36,7 +36,7 @@ export class ButtonComponent {
 
     /** Optional click handler */
     @Output()
-    onClick = new EventEmitter<Event>();
+    clickBtn = new EventEmitter<Event>();
 
     public get classes(): string[] {
         const mode = this.primary

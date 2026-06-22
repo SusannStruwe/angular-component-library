@@ -6,7 +6,8 @@ import {
     OnDestroy,
     OnInit,
     Output,
-    ViewContainerRef
+    ViewContainerRef,
+    inject
 } from '@angular/core';
 import { IconDefinition } from '@fortawesome/angular-fontawesome';
 import {
@@ -44,6 +45,8 @@ const rotate: { [key: string]: SortDirection } = {
     exportAs: 'sortColumn'
 })
 export class SortColumnDirective implements OnInit, OnDestroy {
+    private sortService = inject(SortService);
+
     @Input() sortable?: ColumnHeaderItem;
     @Input() sortDirection: SortDirection = '';
 
@@ -52,8 +55,6 @@ export class SortColumnDirective implements OnInit, OnDestroy {
     public directiveIcon: IconDefinition = faSort;
 
     private sortSubscription?: Subscription;
-
-    constructor(private sortService: SortService) {}
 
     ngOnInit(): void {
         this.sortSubscription = this.sortService.columnSorted$.subscribe(

@@ -4,7 +4,7 @@ import {
 } from '../model/column-header-item.model';
 import { MultiSelectItem } from '../model/multi-select.model';
 import { SearchFilter } from '../model/search-filter.model';
-import { DateTime, Duration } from 'luxon';
+import type { DateTime, Duration } from 'luxon';
 
 export type TableColumnType = string | DateTime | number | Duration;
 

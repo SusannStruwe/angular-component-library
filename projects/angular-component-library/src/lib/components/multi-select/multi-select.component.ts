@@ -8,7 +8,8 @@ import {
     Input,
     OnChanges,
     Output,
-    ViewChild
+    ViewChild,
+    inject
 } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
@@ -42,6 +43,8 @@ import { FormsModule } from '@angular/forms';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MultiSelectComponent implements OnChanges {
+    private changedDetectorRef = inject(ChangeDetectorRef);
+
     @Input() items: string[] = [];
     @Input() label = '';
     @Input() faIcon?: IconDefinition;
@@ -62,8 +65,6 @@ export class MultiSelectComponent implements OnChanges {
     show = false;
 
     randomId: string = Math.floor(Math.random() * 16777215).toString(16);
-
-    constructor(private changedDetectorRef: ChangeDetectorRef) {}
 
     ngOnChanges() {
         this.selectedItems = [];

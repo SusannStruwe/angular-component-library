@@ -2,7 +2,11 @@
     <ul tabindex="0">
         @for (tab of tabs; track tab) {
             <li
+                role="button"
+                tabindex="0"
                 (click)="selectTab(tab)"
+                (keydown.enter)="selectTab(tab)"
+                (keydown.space)="selectTab(tab)"
                 [class.active]="tab.active"
                 [tooltip]="'Tooltip'">
                 {{ tab.tabTitle }}

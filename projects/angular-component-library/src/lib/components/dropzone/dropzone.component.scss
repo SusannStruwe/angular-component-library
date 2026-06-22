@@ -77,7 +77,11 @@ input[type='file'] {
     .right {
         cursor: pointer;
 
-        span {
+        .remove-file-btn {
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            font: inherit;
             padding: var(--btn-padding);
         }
 

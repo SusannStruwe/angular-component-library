@@ -7,7 +7,8 @@ import {
     Input,
     OnInit,
     Output,
-    ViewChild
+    ViewChild,
+    inject
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -44,6 +45,8 @@ import { Icons } from '../../model/icons';
     styleUrls: ['./date-time-picker.component.scss']
 })
 export class DateTimePickerComponent implements OnInit {
+    platform = inject(Platform);
+
     @Input() date: string | null = '';
     @Input() withInput?: boolean = true; // shows only calender btn
     @Input() mode: EditMode = EditMode.WRITE;
@@ -62,8 +65,6 @@ export class DateTimePickerComponent implements OnInit {
     showOverlayBtn = true;
 
     modes: typeof EditMode = EditMode;
-
-    constructor(public platform: Platform) {}
 
     ngOnInit() {
         //hide overlay button on ios, safari or webkit because it does not work

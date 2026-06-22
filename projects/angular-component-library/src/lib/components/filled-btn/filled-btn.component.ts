@@ -23,6 +23,8 @@ import { HoverStyle } from '../../model/hover-style.enum';
     styleUrls: ['./filled-btn.component.scss']
 })
 export class FilledBtnComponent {
+    @Input() type: 'button' | 'submit' | 'reset' = 'button';
+
     @Input() ariaLabel: string = 'no-title';
 
     @Input() label?: string;

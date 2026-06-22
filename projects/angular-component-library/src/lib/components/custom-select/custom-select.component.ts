@@ -8,7 +8,8 @@ import {
     Input,
     OnInit,
     Output,
-    ViewChild
+    ViewChild,
+    inject
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -45,14 +46,14 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CustomSelectComponent implements OnInit {
+    private changeDetector = inject(ChangeDetectorRef);
+
     @Input() show? = false;
 
     @Output() showChange = new EventEmitter<boolean>();
 
     @ViewChild('btn') btn?: ElementRef<HTMLDivElement>;
     @ViewChild('menu') menu?: ElementRef<HTMLDivElement>;
-
-    constructor(private changeDetector: ChangeDetectorRef) {}
 
     ngOnInit(): void {
         this.changeDetector.detectChanges();
