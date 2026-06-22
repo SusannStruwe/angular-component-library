@@ -38,7 +38,6 @@ export * from './lib/components/table/table-content/table-content.component';
 export * from './lib/components/tabs-view/tabs-view.component';
 export * from './lib/components/tabs-view/tab/tab.component';
 export * from './lib/components/sass-helper.component';
-export * from './lib/components/resize-table/resizable-table.component';
 
 export * from './lib/services/modal.service';
 export * from './lib/services/loader.service';
@@ -70,8 +69,6 @@ export * from './lib/model/table-style.enum';
 export * from './lib/directives/click-outside.directive';
 export * from './lib/directives/drag-drop-file.directive';
 export * from './lib/directives/is-last.directive';
-export * from './lib/directives/resize-column.directive';
 export * from './lib/directives/sort-column.directive';
-export * from './lib/directives/sort-resizeable-column.directive';
 export * from './lib/directives/tooltip.directive';
 export * from './lib/directives/sort-column.directive';

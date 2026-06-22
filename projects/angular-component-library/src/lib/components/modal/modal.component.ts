@@ -5,7 +5,8 @@ import {
     Input,
     OnDestroy,
     OnInit,
-    ViewChild
+    ViewChild,
+    inject
 } from '@angular/core';
 import { FilledBtnComponent } from '../filled-btn/filled-btn.component';
 import { BorderedBtnComponent } from '../bordered-btn/bordered-btn.component';
@@ -46,6 +47,9 @@ import { SassHelperComponent } from '../sass-helper.component';
     styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit, OnDestroy {
+    private modalService = inject(ModalService);
+    private el = inject(ElementRef);
+
     @ViewChild(SassHelperComponent) sassHelper?: SassHelperComponent;
 
     @Input() id: string = '';
@@ -76,10 +80,7 @@ export class ModalComponent implements OnInit, OnDestroy {
 
     subscriptionOnClose?: Subscription;
 
-    constructor(
-        private modalService: ModalService,
-        private el: ElementRef
-    ) {
+    constructor() {
         this.element = this.el.nativeElement;
     }
 

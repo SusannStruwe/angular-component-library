@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
 import { OverviewWrapperComponent } from './overview-wrapper.component';
 
 const meta: Meta<OverviewWrapperComponent> = {

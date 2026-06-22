@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { TranslateService } from '@ngx-translate/core';
@@ -27,6 +27,8 @@ import { Icons } from '../../model/icons';
     styleUrls: ['./dropzone.component.scss']
 })
 export class DropzoneComponent {
+    private translate = inject(TranslateService);
+
     @Input() allowedExtension: string[] = ['json'];
     @Input() choseFileLabel: string = '';
     @Input() fileArrayLength = 100;
@@ -48,8 +50,6 @@ export class DropzoneComponent {
     onLangChangeSubscription?: Subscription;
 
     FILE_SIZE_CONVERTER = 1024;
-
-    constructor(private translate: TranslateService) {}
 
     /**
      * Provides the current lang

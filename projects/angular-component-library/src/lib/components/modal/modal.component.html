@@ -52,6 +52,8 @@
     <div
         class="modal"
         [style.z-index]="zIndex"
+        role="button"
+        tabindex="0"
         (click)="handleClickOutside($event)">
         <div class="modal-content" [ngClass]="sizeClass">
             <div class="modal-header">

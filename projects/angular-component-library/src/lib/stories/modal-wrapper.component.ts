@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ModalService } from '../services/modal.service';
 import { ModalComponent } from '../components/modal/modal.component';
@@ -25,14 +25,14 @@ import { FormsModule } from '@angular/forms';
     templateUrl: './modal-wrapper.component.html'
 })
 export class ModalWrapperComponent {
+    modalService = inject(ModalService);
+
     modalId1: string = Math.random().toString();
     modalId2: string = Math.random().toString();
     modalId3: string = Math.random().toString();
     modalId4: string = Math.random().toString();
 
     inputText: string | null = null;
-
-    constructor(public modalService: ModalService) {}
 
     openModal1() {
         this.modalService.showCustomModal(this.modalId1);

@@ -1,5 +1,12 @@
 import { CommonModule, formatDate } from '@angular/common';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+    Component,
+    EventEmitter,
+    Input,
+    OnInit,
+    Output,
+    inject
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
@@ -27,6 +34,9 @@ import { Icons } from '../../model/icons';
     styleUrls: ['./date-picker.component.scss']
 })
 export class DatePickerComponent implements OnInit {
+    platform = inject(Platform);
+    private translateService = inject(TranslateService);
+
     @Input() date?: Date | string; // date is string after change in date picker
     @Input() withInput?: boolean = true;
     @Input() clear?: boolean = true;
@@ -40,11 +50,6 @@ export class DatePickerComponent implements OnInit {
     showOverlayBtn = true;
 
     dateBefore: Date | string = '';
-
-    constructor(
-        public platform: Platform,
-        private translateService: TranslateService
-    ) {}
 
     ngOnInit() {
         //hide overlay button on ios, safari or webkit because it does not work

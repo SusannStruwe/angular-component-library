@@ -3,7 +3,8 @@ import {
     ElementRef,
     HostListener,
     Input,
-    OnDestroy
+    OnDestroy,
+    inject
 } from '@angular/core';
 
 /**
@@ -18,14 +19,14 @@ import {
     selector: '[tooltip]'
 })
 export class TooltipDirective implements OnDestroy {
+    private el = inject(ElementRef);
+
     @Input() tooltip = ''; // The text for the tooltip to display
     @Input() placement? = 'bottom';
     @Input() delay? = 100;
 
     timer: any = 0;
     private tooltipEl: HTMLElement | null = null;
-
-    constructor(private el: ElementRef) {}
 
     ngOnDestroy() {
         if (this.tooltipEl) {

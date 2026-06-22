@@ -35,6 +35,15 @@
                         "karmaConfig": "projects/angular-component-library/karma.conf.cjs"
                     }
                 },
+                "lint": {
+                    "builder": "@angular-eslint/builder:lint",
+                    "options": {
+                        "lintFilePatterns": [
+                            "projects/angular-component-library/**/*.ts",
+                            "projects/angular-component-library/**/*.html"
+                        ]
+                    }
+                },
                 "storybook": {
                     "builder": "@storybook/angular:start-storybook",
                     "options": {
@@ -75,7 +84,8 @@
         }
     },
     "cli": {
-        "analytics": false
+        "analytics": false,
+        "schematicCollections": ["angular-eslint"]
     },
     "schematics": {
         "@schematics/angular:component": {

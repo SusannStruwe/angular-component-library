@@ -1,7 +1,6 @@
 @if (mode === modes.WRITE) {
-    <span
+    <label
         class="checkbox"
-        (click)="toggleValue()"
         [style.height.px]="height ?? 30"
         [style.width.px]="height ?? 30">
         <input
@@ -9,6 +8,7 @@
             data-testid="checkbox"
             [attr.aria-label]="'checkbox'"
             type="checkbox"
+            (change)="toggleValue()"
             [checked]="value" />
 
         <span
@@ -19,7 +19,7 @@
                 <fa-icon [icon]="faCheck"> </fa-icon>
             }
         </span>
-    </span>
+    </label>
 }
 @if (mode === modes.READ) {
     <span class="read">

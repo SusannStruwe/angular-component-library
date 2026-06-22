@@ -8,6 +8,10 @@
             class="table-row"
             *cdkVirtualFor="let item of tableItems"
             [class.active]="item.id === selectedTableItem"
+            role="button"
+            tabindex="0"
+            (keydown.enter)="tableItemClicked(item)"
+            (keydown.space)="tableItemClicked(item)"
             (click)="tableItemClicked(item)">
             @for (
                 extension of item.columns | keyvalue: asIsOrder;
