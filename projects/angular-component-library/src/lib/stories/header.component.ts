@@ -38,7 +38,7 @@ import type { User } from './user';
                         @if (user) {
                             <storybook-button
                                 size="small"
-                                (onClick)="logout.emit($event)"
+                                (clickBtn)="logout.emit($event)"
                                 label="Log out"></storybook-button>
                         }
                     </div>
@@ -49,7 +49,7 @@ import type { User } from './user';
                             <storybook-button
                                 size="small"
                                 class="margin-left"
-                                (onClick)="login.emit($event)"
+                                (clickBtn)="login.emit($event)"
                                 label="Log in"></storybook-button>
                         }
                         @if (!user) {
@@ -57,7 +57,7 @@ import type { User } from './user';
                                 size="small"
                                 [primary]="true"
                                 class="margin-left"
-                                (onClick)="createAccount.emit($event)"
+                                (clickBtn)="createAccount.emit($event)"
                                 label="Sign up"></storybook-button>
                         }
                     </div>
