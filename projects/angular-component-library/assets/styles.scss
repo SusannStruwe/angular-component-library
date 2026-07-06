@@ -177,12 +177,6 @@ body.dark-theme {
     --fa-icon-color: #ffffff;
     --tooltip-background: rgb(183, 183, 183);
 
-    --border-color-rgb: 255, 255, 255;
-    --border-color: #cccccc;
-    --border-color-light: #e4e4e4;
-
-    --row-highlight-color: rgba(223, 251, 255, 0.5);
-    --header-bg-color: rgb(000, 000, 000, 0.03);
 }
 
 html,
@@ -279,7 +273,7 @@ a {
 }
 
 .popup-shadow {
-    border: solid 1px #ddd;
+    border: solid 1px var(--border-color-light);
     box-shadow: var(--popup-shadow);
 }
 

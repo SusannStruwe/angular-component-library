@@ -339,6 +339,10 @@ button {
 
     button {
         border: var(--border-width) solid var(--border-color);
+
+        span:last-of-type {
+            background: transparent;
+        }
     }
 }
 
