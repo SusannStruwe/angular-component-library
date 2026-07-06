@@ -10,9 +10,15 @@ const meta: Meta<ToggleBtnComponent> = {
         checked: { control: 'boolean' },
         isDisabled: { control: 'boolean' },
         classStyle: { control: 'text' },
+        appearance: { control: 'radio', options: ['default', 'custom'] },
+        toggleHeight: { control: 'radio', options: [30, 25] },
         checkedChange: { action: 'changed' }
     },
-    args: { checkedChange: fn() },
+    args: {
+        checkedChange: fn(),
+        appearance: 'default',
+        toggleHeight: 30
+    },
     tags: ['autodocs']
 };
 export default meta;
@@ -38,5 +44,23 @@ export const Disabled: Story = {
         label: 'Disabled',
         checked: true,
         isDisabled: true
+    }
+};
+
+export const Custom: Story = {
+    args: {
+        label: 'Enabled',
+        checked: true,
+        appearance: 'custom',
+        toggleHeight: 30
+    }
+};
+
+export const CustomSmall: Story = {
+    args: {
+        label: 'Compact',
+        checked: false,
+        appearance: 'custom',
+        toggleHeight: 25
     }
 };

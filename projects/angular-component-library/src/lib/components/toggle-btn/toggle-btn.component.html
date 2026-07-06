@@ -3,7 +3,7 @@
 }
 
 <div
-    class="toggle"
+    [ngClass]="['toggle', classStyle ?? '', appearanceClass, sizeClass]"
     [style.margin-left.em]="label ? '0.25' : '0'"
     [class.disabled]="isDisabled">
     <input

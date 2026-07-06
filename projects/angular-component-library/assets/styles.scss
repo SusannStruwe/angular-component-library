@@ -20,9 +20,16 @@ body {
     --accent-color-dark: #293dd8; // 3044b5
     --accent-color-rgb: 3, 147, 160;
 
+    /* General button colors: buttons, select, context-menu */
     --btn-color: #3b3c3e;
     --btn-border-color: #3b3c3e;
-    --toggle-btn-background: #3b3c3e;
+
+    /* Toggle variant overrides: toggle-btn custom appearance */
+    --toggle-btn-custom-unchecked-background: #aaaaaa;
+    --toggle-btn-custom-checked-background: #2bba28;
+    --toggle-btn-custom-slider-background: #ffffff;
+
+    /* Surface and text colors: modals, menus, tabs, inputs, typography */
     --tooltip-background: #262626;
     --modal-background: #fbfbfb;
     --menu-background: #fff;
@@ -40,13 +47,14 @@ body {
     --border-color: #c2c8d2;
     --border-color-light: #e4e4e4;
 
-    --required-color: #f44118;
+    /* Neutral and destructive states: badges, buttons, tables */
     --not-emphrazed-color: #aaaaaa;
     --not-emphrazed-color-dark: #999999;
     --delete-color-light: #be432210;
     --delete-color: #be4322;
     --delete-color-dark: #863018;
 
+    /* Toast and alert colors: alert component, ngx-toastr */
     --toast-info-color-light: #f6f9fd; // #2571c610;
     --toast-info-color: #2571c6;
     --toast-info-color-dark: #1a5496;
@@ -60,13 +68,11 @@ body {
     --toast-warning-color: #ff9c07;
     --toast-warning-color-dark: #de8602;
 
-    --job-pending-color: #999999;
-    --job-successful-color: #2bba28;
-    --job-running-color: #72b5f5;
-    --job-failed-color: #e24e1d;
-
-    --level-warning-color: #ff9c07;
-    --level-error-color: #e24e1d;
+    /* Generic status colors: badge, select, context-menu */
+    --pending-state-color: #999999;
+    --successful-state-color: #2bba28;
+    --running-state-color: #72b5f5;
+    --failed-state-color: #e24e1d;
 
     --modified-data-color: #e2761d;
     --added-data-color-light-rgb: rgba(53, 200, 50, 0.1);
@@ -122,20 +128,18 @@ body {
     /**
     * @tokens Others
     */
-    --z-index-1: 9; // availabilities
-    --z-index-2: 10; // scheduler background active states, buttons in navbar
-    --z-index-3: 11; // scheduler events
     --z-index-4: 100; // downtimes, select, multiselect, tabs
     --z-index-5: 101; //frozen zone, loader, sub-navbar
     --z-index-6: 1000; //modals, non-modals, popovers, tooltips
-    --z-index-7: 1010; // navbar
 
+    /* Shared sizing tokens: most form controls, buttons, tables, tabs */
     --navbar-height: 45px;
     --btn-height: 40px;
     --input-height: 40px;
     --sub-navbar-height: 45px;
     --tab-bg-height: 45px;
 
+    /* Shared radius/border tokens: alerts, badges, inputs, tables, tags */
     --badge-radius: 20px;
     --alert-radius: 0px;
     --input-radius: 0px;
@@ -144,14 +148,12 @@ body {
     --border-radius: 0px;
     --border-width: 1px;
 
+    /* Shared layout tokens: buttons, tables, modal/content widths */
     --btn-padding: 0px 15px;
-    --min-container-height: 300px;
     --row-height: 45px;
     --btn-small-height: 35px;
     --btn-small-padding: 0px 10px;
     --max-width-select: 500px;
-    --badge-height: 30px;
-    --sidebar-width: 50px;
     --max-width: 500px;
 
     /**
@@ -167,7 +169,6 @@ body.dark-theme {
     --btn-color: #b0b1b3;
     --btn-border-color: #b0b1b3;
     --input-border-color: #b0b1b3;
-    --table-header-color: #222;
     --tabs-background: #111;
     --tabs-content-color: #f3f3f3;
     --tab-color: #444444;

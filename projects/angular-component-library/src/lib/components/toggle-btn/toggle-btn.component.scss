@@ -1,9 +1,6 @@
 /*
-CSS Variables -> --accent-color for changing theme
+CSS Variables -> use --toggle-btn-* variables for styling custom variants
 */
-$toggle-btn-width: 65px;
-$toggle-btn-height: calc(var(--btn-height) - 10px);
-$slider-height: calc($toggle-btn-height / 2);
 
 :host {
     position: relative;
@@ -25,11 +22,60 @@ span {
 }
 
 .toggle {
+    --toggle-height-current: 30px;
+    --toggle-width-current: 65px;
+    --toggle-slider-size-current: 22px;
+    --toggle-slider-offset-left: 3px;
+    --toggle-slider-offset-right: 4px;
+    --toggle-track-unchecked-background: transparent;
+    --toggle-track-unchecked-border-color: var(--btn-border-color);
+    --toggle-track-checked-background: var(--accent-color);
+    --toggle-track-checked-border-color: var(--toggle-track-checked-background);
+    --toggle-track-hover-border-color: var(--accent-color-light);
+    --toggle-track-hover-checked-border-color: var(--accent-color-light);
+    --toggle-track-hover-checked-background: var(--accent-color-light);
+    --toggle-slider-background: var(--btn-color);
+    --toggle-slider-checked-background: var(--fa-icon-color);
+    --toggle-slider-hover-background: var(--accent-color);
+    --toggle-slider-hover-checked-background: var(--fa-icon-color);
+
     position: relative;
-    width: $toggle-btn-width;
-    height: $toggle-btn-height;
+    width: var(--toggle-width-current);
+    height: var(--toggle-height-current);
     overflow: hidden;
     border-radius: 100px;
+
+    &.size-25 {
+        --toggle-height-current: 25px;
+        --toggle-width-current: 54px;
+        --toggle-slider-size-current: 18px;
+    }
+
+    &.appearance-custom {
+        --toggle-track-unchecked-background: var(--toggle-btn-custom-unchecked-background);
+        --toggle-track-unchecked-border-color: var(--toggle-track-unchecked-background);
+        --toggle-track-checked-background: var(--toggle-btn-custom-checked-background);
+        --toggle-track-checked-border-color: var(--toggle-track-checked-background);
+        --toggle-track-hover-border-color: color-mix(
+            in srgb,
+            var(--toggle-track-unchecked-border-color) 85%,
+            black
+        );
+        --toggle-track-hover-checked-border-color: color-mix(
+            in srgb,
+            var(--toggle-track-checked-border-color) 85%,
+            black
+        );
+        --toggle-track-hover-checked-background: color-mix(
+            in srgb,
+            var(--toggle-track-checked-background) 85%,
+            black
+        );
+        --toggle-slider-background: var(--toggle-btn-custom-slider-background);
+        --toggle-slider-checked-background: var(--toggle-slider-background);
+        --toggle-slider-hover-background: var(--toggle-slider-background);
+        --toggle-slider-hover-checked-background: var(--toggle-slider-background);
+    }
 
     .slider,
     .layer {
@@ -58,12 +104,13 @@ span {
     .layer {
         width: auto;
         transition: 0.3s ease all;
-        border: 1px solid var(--btn-border-color);
+        border: 1px solid var(--toggle-track-unchecked-border-color);
+        background-color: var(--toggle-track-unchecked-background);
         z-index: 1;
         border-radius: 100px;
 
         &.active {
-            border: 1px solid var(--accent-color);
+            border: 1px solid var(--toggle-track-checked-border-color);
         }
     }
 
@@ -71,16 +118,21 @@ span {
     .slider:before {
         content: ' ';
         position: absolute;
-        left: 3px;
-        bottom: 4px;
-        width: 22px;
-        height: 22px;
+        left: var(--toggle-slider-offset-left);
+        top: calc(
+            (
+                    var(--toggle-height-current) -
+                        var(--toggle-slider-size-current)
+                ) / 2
+        );
+        width: var(--toggle-slider-size-current);
+        height: var(--toggle-slider-size-current);
         color: var(--fa-icon-color);
         font-size: 1.1em;
         line-height: 0.7em;
         font-weight: var(--font-weight-medium);
         text-align: center;
-        background-color: var(--toggle-btn-background);
+        background-color: var(--toggle-slider-background);
         border-radius: 50%;
         transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
     }
@@ -91,12 +143,15 @@ span {
         font-size: 1.1em;
         line-height: 0.9em;
         font-weight: var(--font-weight-medium);
-        left: calc($toggle-btn-width - $toggle-btn-height + 4px);
-        background-color: var(--fa-icon-color);
+        left: calc(
+            var(--toggle-width-current) - var(--toggle-slider-size-current) -
+                var(--toggle-slider-offset-right)
+        );
+        background-color: var(--toggle-slider-checked-background);
     }
 
     .checkbox:checked ~ .layer {
-        background-color: var(--accent-color);
+        background-color: var(--toggle-track-checked-background);
     }
 
     .checkbox:disabled {
@@ -123,22 +178,23 @@ Media query to add hover only on device which support hover
     .toggle {
         &:hover {
             .layer {
-                border: 1px solid var(--accent-color-light);
+                border: 1px solid var(--toggle-track-hover-border-color);
             }
 
             /* toggle 1 */
             .slider:before {
                 color: var(--fa-icon-color);
-                background-color: var(--accent-color);
+                background-color: var(--toggle-slider-hover-background);
             }
 
             .checkbox:checked + .slider:before {
                 color: var(--accent-color);
-                background-color: var(--fa-icon-color);
+                background-color: var(--toggle-slider-hover-checked-background);
             }
 
             .checkbox:checked ~ .layer {
-                background-color: var(--accent-color-light);
+                border-color: var(--toggle-track-hover-checked-border-color);
+                background-color: var(--toggle-track-hover-checked-background);
             }
         }
     }
