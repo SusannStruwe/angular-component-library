@@ -52,7 +52,9 @@ describe('ToggleBtnComponent', () => {
         fixture.detectChanges();
 
         const labelEl = fixture.debugElement.query(By.css('p')).nativeElement;
-        const toggleEl = fixture.debugElement.query(By.css('.toggle')).nativeElement;
+        const toggleEl = fixture.debugElement.query(
+            By.css('.toggle')
+        ).nativeElement;
 
         expect(labelEl.classList.contains('success-toggle')).toBeTrue();
         expect(labelEl.classList.contains('settings')).toBeTrue();
@@ -65,7 +67,9 @@ describe('ToggleBtnComponent', () => {
         component.toggleHeight = '25';
         fixture.detectChanges();
 
-        const toggleEl = fixture.debugElement.query(By.css('.toggle')).nativeElement;
+        const toggleEl = fixture.debugElement.query(
+            By.css('.toggle')
+        ).nativeElement;
 
         expect(toggleEl.classList.contains('appearance-custom')).toBeTrue();
         expect(toggleEl.classList.contains('size-25')).toBeTrue();
