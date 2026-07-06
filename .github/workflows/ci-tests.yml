@@ -1,4 +1,4 @@
-name: GitHub Actions
+name: CI Tests
 
 env:
     NODE_VERSION: '22'

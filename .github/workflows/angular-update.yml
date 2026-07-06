@@ -1,0 +1,58 @@
+name: Monthly Update
+
+on:
+    schedule:
+        # Runs on the 1st of every month at 3:00 a.m. (UTC)
+        - cron: '0 3 1 * *'
+    workflow_dispatch: # Allows you to manually trigger the update at any time in the GitHub UI
+
+env:
+    NODE_VERSION: '22'
+
+jobs:
+    dependencies-upgrade:
+        name: Run Update Script & Create PR
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+              with:
+                  # Use your stored secret so that the new PR
+                  # automatically triggers CI test pipeline
+                  token: ${{ secrets.UPDATE_BOT_TOKEN }}
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
+
+            - name: Install current npm dependencies
+              run: npm install
+
+            - name: Run Complete Ecosystem Updates
+              run: npm run pipeline:update-all
+
+            - name: Sync Library package.json Versions
+              run: node sync-versions.js
+
+            - name: Create Update Branch and Pull Request
+              uses: peter-evans/create-pull-request@v6
+              with:
+                  token: ${{ secrets.UPDATE_BOT_TOKEN }}
+                  commit-message: 'chore(deps): monatliches Angular- & Ecosystem-Update'
+                  branch: 'automation/angular-update' # code will be pushed to this new branch
+                  delete-branch: true # Automatically deletes the branch when the PR is merged
+                  title: '🚀 Automated: Monthly Dependency- & Migrations-Update'
+                  body: |
+                      This automated update was triggered by the monthly update pipeline.
+
+                      **Changes Made:**
+                      - The Angular Framework (CLI, Core, Devkit, CDK) was updated, and code migrations were performed.
+                      - Frameworks (Storybook & FontAwesome) were migrated using `ng update`.
+                      - All remaining utilities and devDependencies were updated via `npm update`.
+
+                      Please review the changes and the results of the test pipeline before merging this PR into the `main` branch via **Squash and merge**!
+                  labels: |
+                      dependencies
+                      automated-pr

@@ -16,6 +16,8 @@
         "storybook": "ng run angular-component-library:storybook",
         "test-storybook": "test-storybook --config-dir projects/angular-component-library/.storybook --url http://localhost:6006",
         "build-storybook": "ng run angular-component-library:build-storybook",
+        "pipeline:update-all": "npx ng update @angular/cli @angular/core @angular-devkit/build-angular @angular/cdk --allow-dirty --force && npx ng update @fortawesome/angular-fontawesome @fortawesome/fontawesome-svg-core --allow-dirty --force && npx ng update @storybook/angular storybook --allow-dirty --force && npm update",
+        "sync:lib": "node sync-versions.js && ng build angular-component-library --configuration production",
         "update:devkit": "ng update @angular-devkit/build-angular@21.2.11",
         "update:angular": "ng update @angular/cli@21 @angular/core@21",
         "update:angular/cdk": "ng update @angular/cdk@21 @ngx-translate/core",
