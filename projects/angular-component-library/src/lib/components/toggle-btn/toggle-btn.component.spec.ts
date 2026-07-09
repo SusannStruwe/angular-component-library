@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing';
 import { ToggleBtnComponent } from './toggle-btn.component';
-import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
 import { By } from '@angular/platform-browser';
 
 describe('ToggleBtnComponent', () => {
@@ -11,7 +10,7 @@ describe('ToggleBtnComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [ToggleBtnComponent, FontAwesomeTestingModule],
+            imports: [ToggleBtnComponent],
             providers: []
         });
 
@@ -84,5 +83,16 @@ describe('ToggleBtnComponent', () => {
         ).nativeElement;
 
         expect(toggleEl.classList.contains('size-20')).toBeTrue();
+    });
+
+    it('should accept a numeric binding for toggle height', () => {
+        component.toggleHeight = 25;
+        fixture.detectChanges();
+
+        const toggleEl = fixture.debugElement.query(
+            By.css('.toggle')
+        ).nativeElement;
+
+        expect(toggleEl.classList.contains('size-25')).toBeTrue();
     });
 });

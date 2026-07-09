@@ -85,6 +85,10 @@ p {
         opacity: 0.5;
     }
 
+    input {
+        min-width: auto;
+    }
+
     .checkbox {
         position: absolute;
         inset: 0;

@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 export type ToggleBtnAppearance = 'default' | 'custom';
 export const TOGGLE_BTN_HEIGHTS = [20, 25, 30] as const;
 export type ToggleBtnHeightValue = (typeof TOGGLE_BTN_HEIGHTS)[number];
-export type ToggleBtnHeight = ToggleBtnHeightValue | `${ToggleBtnHeightValue}`;
+export type ToggleBtnHeight = ToggleBtnHeightValue | number | `${number}`;
 
 const DEFAULT_TOGGLE_BTN_HEIGHT: ToggleBtnHeightValue = 30;
 
@@ -37,10 +37,12 @@ export class ToggleBtnComponent {
 
     @Input()
     set toggleHeight(value: ToggleBtnHeight | null | undefined) {
-        const normalizedHeight = Number(value) as ToggleBtnHeightValue;
+        const normalizedHeight = Number(value);
 
-        this._toggleHeight = TOGGLE_BTN_HEIGHTS.includes(normalizedHeight)
-            ? normalizedHeight
+        this._toggleHeight = TOGGLE_BTN_HEIGHTS.includes(
+            normalizedHeight as ToggleBtnHeightValue
+        )
+            ? (normalizedHeight as ToggleBtnHeightValue)
             : DEFAULT_TOGGLE_BTN_HEIGHT;
     }
 
