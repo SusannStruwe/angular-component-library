@@ -1,12 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { Icons } from '../../model/icons';
 import { CommonModule } from '@angular/common';
 
 export type ToggleBtnAppearance = 'default' | 'custom';
-export type ToggleBtnHeight = 25 | 30 | '25' | '30';
+export const TOGGLE_BTN_HEIGHTS = [20, 25, 30] as const;
+export type ToggleBtnHeightValue = (typeof TOGGLE_BTN_HEIGHTS)[number];
+export type ToggleBtnHeight = ToggleBtnHeightValue | `${ToggleBtnHeightValue}`;
+
+const DEFAULT_TOGGLE_BTN_HEIGHT: ToggleBtnHeightValue = 30;
 
 /**
  * Component to create segmented buttons.
@@ -21,7 +22,7 @@ export type ToggleBtnHeight = 25 | 30 | '25' | '30';
  */
 @Component({
     selector: 'toggle-btn-component',
-    imports: [CommonModule, FontAwesomeModule, FormsModule],
+    imports: [CommonModule, FormsModule],
     templateUrl: './toggle-btn.component.html',
     styleUrls: ['./toggle-btn.component.scss']
 })
@@ -32,22 +33,22 @@ export class ToggleBtnComponent {
     @Input() classStyle?: string;
     @Input() appearance: ToggleBtnAppearance = 'default';
 
-    private _toggleHeight: 25 | 30 = 30;
+    private _toggleHeight: ToggleBtnHeightValue = DEFAULT_TOGGLE_BTN_HEIGHT;
 
     @Input()
     set toggleHeight(value: ToggleBtnHeight | null | undefined) {
-        this._toggleHeight = value === 25 || value === '25' ? 25 : 30;
+        const normalizedHeight = Number(value) as ToggleBtnHeightValue;
+
+        this._toggleHeight = TOGGLE_BTN_HEIGHTS.includes(normalizedHeight)
+            ? normalizedHeight
+            : DEFAULT_TOGGLE_BTN_HEIGHT;
     }
 
-    get toggleHeight(): 25 | 30 {
+    get toggleHeight(): ToggleBtnHeightValue {
         return this._toggleHeight;
     }
 
     @Output() checkedChange = new EventEmitter<boolean>();
-
-    faCheck: IconDefinition = Icons.faCheck;
-
-    randomId: string = Math.floor(Math.random() * 16777215).toString(16);
 
     get appearanceClass(): string {
         return `appearance-${this.appearance}`;

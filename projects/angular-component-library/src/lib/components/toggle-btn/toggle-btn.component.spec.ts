@@ -74,4 +74,15 @@ describe('ToggleBtnComponent', () => {
         expect(toggleEl.classList.contains('appearance-custom')).toBeTrue();
         expect(toggleEl.classList.contains('size-25')).toBeTrue();
     });
+
+    it('should apply the tiny size class', () => {
+        component.toggleHeight = '20';
+        fixture.detectChanges();
+
+        const toggleEl = fixture.debugElement.query(
+            By.css('.toggle')
+        ).nativeElement;
+
+        expect(toggleEl.classList.contains('size-20')).toBeTrue();
+    });
 });
