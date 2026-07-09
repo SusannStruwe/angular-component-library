@@ -7,10 +7,9 @@ CSS Variables -> use --toggle-btn-* variables for styling custom variants
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    height: var(--btn-height);
 }
 
-span {
+p {
     font-size: var(--font-size);
     margin: 0;
     margin-right: 5px;

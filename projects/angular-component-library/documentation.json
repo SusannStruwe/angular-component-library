@@ -674,21 +674,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<BadgeComponent>",
-                "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        classStyle: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ]\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<AlertComponent>",
                 "defaultValue": "{\n    title: 'Components/Alert',\n    component: AlertComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [RouterModule],\n            providers: [\n                {\n                    provide: ActivatedRoute,\n                    useValue: {\n                        snapshot: {\n                            paramMap: new Map([['id', '123']]),\n                            data: {}\n                        },\n                        params: [{ id: '123' }],\n                        queryParams: {}\n                    } // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n                }\n            ]\n        })\n    ],\n    tags: ['autodocs'],\n    argTypes: {\n        title: { control: 'text', value: '' },\n        message: { control: 'text', value: '' },\n        type: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: AlertType,\n            value: AlertType.SUCCESS\n        },\n        visibleState: { control: 'boolean', value: false },\n        hideCloseBtn: { control: 'boolean', value: false },\n        navigationLink: { control: 'text', value: undefined },\n        navigationLinkLabel: { control: 'text', value: undefined },\n        visibleStateChange: { action: 'changed' }\n    },\n    args: { visibleStateChange: fn() }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<BadgeComponent>",
+                "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        classStyle: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ]\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
             },
             {
                 "name": "meta",
@@ -1742,8 +1742,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<BadgeComponent>",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "rawtype": "StoryObj<AlertComponent>",
+                "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1753,8 +1753,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<AlertComponent>",
-                "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
+                "rawtype": "StoryObj<BadgeComponent>",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -3855,19 +3855,6 @@
                     "kind": 184
                 }
             ],
-            "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<BadgeComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 184
-                }
-            ],
             "projects/angular-component-library/src/lib/components/alert/alert.stories.ts": [
                 {
                     "name": "Story",
@@ -3875,6 +3862,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<AlertComponent>",
                     "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<BadgeComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
