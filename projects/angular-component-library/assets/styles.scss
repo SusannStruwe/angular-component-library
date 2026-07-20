@@ -40,6 +40,7 @@ body {
     --tabs-content-color: #f3f3f3;
     --tab-color: #cccccc;
     --text-color: #2c2f33;
+    --sub-text-color: #67768E;
     --placeholder-color: #999999;
     --fa-icon-color: #ffffff;
     --collapse-background: #f3f3f3;
@@ -162,9 +163,10 @@ body {
 }
 
 body.dark-theme {
-    --accent-color-light: #00c3d4;
-    --accent-color: #0393a0;
-    --accent-color-dark: #02707a;
+    --accent-color-light: #d9deff; //#c7cefa;
+    --accent-color: #486bff; //#324bff;
+    --accent-color-dark: #293dd8; // 3044b5
+    --accent-color-rgb: 3, 147, 160;
 
     --btn-color: #b0b1b3;
     --btn-border-color: #b0b1b3;
@@ -217,7 +219,6 @@ h3 {
 h1 {
     font-size: 1.4em;
     color: var(--accent-color);
-    text-transform: uppercase;
 }
 
 h2 {

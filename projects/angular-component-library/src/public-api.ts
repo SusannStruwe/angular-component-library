@@ -58,6 +58,7 @@ export * from './lib/model/default-column-key.enum';
 export * from './lib/model/multi-select.model';
 export * from './lib/model/context-menu-item.model';
 export * from './lib/model/feature.enum';
+export * from './lib/model/file-list-display-mode.type';
 export * from './lib/model/tab-view-type.enum';
 export * from './lib/model/segmented-btn.model';
 export * from './lib/model/column-header-item.model';
