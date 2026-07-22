@@ -47,17 +47,20 @@ button {
         display: inline-flex;
         align-items: center;
         align-self: stretch;
-        margin-left: auto;
+        margin: auto;
+
+        &.with-label {
+            margin-left: auto;
+        }
     }
 
     .count-badge {
         min-width: 24px;
         height: 24px;
-        margin: auto 6px auto 0;
-        padding: 0 6px;
+        margin: auto 0px auto 2px;
         border-radius: 999px;
-        background: var(--header-bg-color);
-        color: inherit;
+        background: var(--accent-color-light);
+        color: var(--accent-color);
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -69,8 +72,9 @@ button {
 
     .icon-slot {
         width: var(--btn-height);
+        height: var(--btn-height);
         padding: 0 10px;
-        background: var(--select-chevron-background, transparent);
+        background: var(--select-chevron-bg, transparent);
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -83,11 +87,11 @@ button {
 
     &.selected {
         border-color: var(--select-selected-border-color, var(--text-color));
-        background-color: var(--select-selected-background, transparent);
+        background-color: var(--select-selected-bg, transparent);
 
         .icon-slot {
             background: var(
-                --select-selected-chevron-background,
+                --select-selected-chevron-bg,
                 transparent
             );
         }
@@ -137,8 +141,7 @@ button {
     width: max-content;
     max-width: var(--max-width-select);
     height: auto;
-    border-radius: var(--select-menu-border-radius, var(--input-radius));
-    background: var(--menu-background);
+    background: var(--menu-bg);
     z-index: var(--select-menu-z-index, var(--z-index-5));
     box-sizing: border-box;
     display: flex;
@@ -198,7 +201,6 @@ button {
         padding: 0;
         margin: 0;
         overflow-y: auto;
-        border-radius: var(--select-menu-border-radius, var(--input-radius));
         border-top: 1px solid
             var(--control-menu-border-color, var(--border-color));
 
@@ -290,7 +292,7 @@ button {
             &:active,
             &.active {
                 background-color: var(
-                    --control-menu-item-hover-background,
+                    --control-menu-item-hover-bg,
                     var(--row-highlight-color)
                 );
                 color: var(
@@ -358,7 +360,7 @@ that do not support them, like touch displays
     button {
         &:hover {
             border-color: var(--select-hover-border-color, var(--text-color));
-            background-color: var(--select-hover-background, transparent);
+            background-color: var(--select-hover-bg, transparent);
 
             fa-icon,
             span {
@@ -367,9 +369,35 @@ that do not support them, like touch displays
 
             .icon-slot {
                 background: var(
-                    --select-hover-chevron-background,
+                    --select-hover-chevron-bg,
                     transparent
                 );
+            }
+
+            &.selected {
+                border-color: var(
+                    --select-selected-border-color,
+                    var(--text-color)
+                );
+                background-color: var(
+                    --select-selected-bg,
+                    transparent
+                );
+
+                fa-icon,
+                span {
+                    color: var(
+                        --select-selected-text-color,
+                        var(--text-color)
+                    );
+                }
+
+                .icon-slot {
+                    background: var(
+                        --select-selected-chevron-bg,
+                        transparent
+                    );
+                }
             }
 
             &.colored {
@@ -389,7 +417,7 @@ that do not support them, like touch displays
             li {
                 &:hover {
                     background-color: var(
-                        --control-menu-item-hover-background,
+                        --control-menu-item-hover-bg,
                         var(--row-highlight-color)
                     );
                     color: var(

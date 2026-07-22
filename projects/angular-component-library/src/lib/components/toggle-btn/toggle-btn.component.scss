@@ -13,6 +13,7 @@ p {
     margin: 0 5px 0 0;
     font-size: var(--font-size);
     font-weight: var(--font-weight-normal);
+    font-family: var(--font-family);
 }
 
 .navbar {
@@ -25,17 +26,17 @@ p {
     --toggle-thumb-size-current: 22px;
     --toggle-thumb-offset-start: 3px;
     --toggle-thumb-offset-end: 4px;
-    --toggle-track-background: transparent;
+    --toggle-track-bg: transparent;
     --toggle-track-border-color: var(--btn-border-color);
-    --toggle-track-active-background: var(--accent-color);
+    --toggle-track-active-bg: var(--accent-color);
     --toggle-track-active-border-color: var(--accent-color);
     --toggle-track-hover-border-color: var(--accent-color-light);
-    --toggle-track-hover-active-background: var(--accent-color-light);
+    --toggle-track-hover-active-bg: var(--accent-color-light);
     --toggle-track-hover-active-border-color: var(--accent-color-light);
-    --toggle-thumb-background: var(--btn-color);
-    --toggle-thumb-active-background: var(--fa-icon-color);
-    --toggle-thumb-hover-background: var(--accent-color);
-    --toggle-thumb-hover-active-background: var(--fa-icon-color);
+    --toggle-thumb-bg: var(--btn-color);
+    --toggle-thumb-active-bg: var(--fa-icon-color);
+    --toggle-thumb-hover-bg: var(--accent-color);
+    --toggle-thumb-hover-active-bg: var(--fa-icon-color);
 
     position: relative;
     width: var(--toggle-width-current);
@@ -56,50 +57,50 @@ p {
     }
 
     &.appearance-brand {
-        --toggle-track-background: var(
-            --toggle-btn-brand-unchecked-background,
-            var(--toggle-btn-custom-unchecked-background)
+        --toggle-track-bg: var(
+            --toggle-btn-brand-unchecked-bg,
+            var(--toggle-btn-custom-unchecked-bg)
         );
         --toggle-track-border-color: var(
-            --toggle-btn-brand-unchecked-background,
-            var(--toggle-btn-custom-unchecked-background)
+            --toggle-btn-brand-unchecked-bg,
+            var(--toggle-btn-custom-unchecked-bg)
         );
-        --toggle-track-active-background: var(
-            --toggle-btn-brand-checked-background,
-            var(--toggle-btn-custom-checked-background)
+        --toggle-track-active-bg: var(
+            --toggle-btn-brand-checked-bg,
+            var(--toggle-btn-custom-checked-bg)
         );
         --toggle-track-active-border-color: var(
-            --toggle-btn-brand-checked-background,
-            var(--toggle-btn-custom-checked-background)
+            --toggle-btn-brand-checked-bg,
+            var(--toggle-btn-custom-checked-bg)
         );
         --toggle-track-hover-border-color: color-mix(
             in srgb,
             var(--toggle-track-border-color) 85%,
             black
         );
-        --toggle-track-hover-active-background: color-mix(
+        --toggle-track-hover-active-bg: color-mix(
             in srgb,
-            var(--toggle-track-active-background) 85%,
+            var(--toggle-track-active-bg) 85%,
             black
         );
         --toggle-track-hover-active-border-color: var(
-            --toggle-track-hover-active-background
+            --toggle-track-hover-active-bg
         );
-        --toggle-thumb-background: var(
-            --toggle-btn-brand-slider-background,
-            var(--toggle-btn-custom-slider-background)
+        --toggle-thumb-bg: var(
+            --toggle-btn-brand-slider-bg,
+            var(--toggle-btn-custom-slider-bg)
         );
-        --toggle-thumb-active-background: var(
-            --toggle-btn-brand-slider-background,
-            var(--toggle-btn-custom-slider-background)
+        --toggle-thumb-active-bg: var(
+            --toggle-btn-brand-slider-bg,
+            var(--toggle-btn-custom-slider-bg)
         );
-        --toggle-thumb-hover-background: var(
-            --toggle-btn-brand-slider-background,
-            var(--toggle-btn-custom-slider-background)
+        --toggle-thumb-hover-bg: var(
+            --toggle-btn-brand-slider-bg,
+            var(--toggle-btn-custom-slider-bg)
         );
-        --toggle-thumb-hover-active-background: var(
-            --toggle-btn-brand-slider-background,
-            var(--toggle-btn-custom-slider-background)
+        --toggle-thumb-hover-active-bg: var(
+            --toggle-btn-brand-slider-bg,
+            var(--toggle-btn-custom-slider-bg)
         );
     }
 
@@ -129,7 +130,7 @@ p {
         inset: 0;
         border: 1px solid var(--toggle-track-border-color);
         border-radius: inherit;
-        background-color: var(--toggle-track-background);
+        background-color: var(--toggle-track-bg);
         transition:
             border-color 0.3s ease,
             background-color 0.3s ease;
@@ -143,7 +144,7 @@ p {
         width: var(--toggle-thumb-size-current);
         height: var(--toggle-thumb-size-current);
         border-radius: 50%;
-        background-color: var(--toggle-thumb-background);
+        background-color: var(--toggle-thumb-bg);
         transform: translateY(-50%);
         transition:
             left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15),
@@ -152,7 +153,7 @@ p {
 
     .checkbox:checked + .track {
         border-color: var(--toggle-track-active-border-color);
-        background-color: var(--toggle-track-active-background);
+        background-color: var(--toggle-track-active-bg);
     }
 
     .checkbox:checked + .track::before {
@@ -160,7 +161,7 @@ p {
             var(--toggle-width-current) - var(--toggle-thumb-size-current) -
                 var(--toggle-thumb-offset-end)
         );
-        background-color: var(--toggle-thumb-active-background);
+        background-color: var(--toggle-thumb-active-bg);
     }
 }
 
@@ -171,16 +172,16 @@ p {
         }
 
         .track::before {
-            background-color: var(--toggle-thumb-hover-background);
+            background-color: var(--toggle-thumb-hover-bg);
         }
 
         .checkbox:checked + .track {
             border-color: var(--toggle-track-hover-active-border-color);
-            background-color: var(--toggle-track-hover-active-background);
+            background-color: var(--toggle-track-hover-active-bg);
         }
 
         .checkbox:checked + .track::before {
-            background-color: var(--toggle-thumb-hover-active-background);
+            background-color: var(--toggle-thumb-hover-active-bg);
         }
     }
 }

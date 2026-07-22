@@ -5,4 +5,13 @@ export const SELECT_APPEARANCES = [
     'sidebar'
 ] as const;
 
-export type SelectAppearance = (typeof SELECT_APPEARANCES)[number];
+/**
+ * @deprecated Use theme-based select styling or another non-scheduler appearance.
+ */
+export type DeprecatedSchedulerSelectAppearance = 'scheduler';
+
+export type SelectAppearance =
+    | 'light'
+    | 'light-gray'
+    | DeprecatedSchedulerSelectAppearance
+    | 'sidebar';

@@ -16,9 +16,15 @@
         border-radius: var(--input-radius);
         outline: none;
         color: var(--field-text-color, var(--text-color));
-        background: var(--search-field-background, transparent);
+        background: var(--search-field-bg, transparent);
         box-sizing: border-box;
-        border: var(--border-width) solid var(--outlined-btn-border-color, var(--btn-border-color));
+        border: var(--border-width) solid var(--bordered-btn-border-color, var(--btn-border-color));
+
+        &::placeholder {
+            font-family: var(--font-family);
+            font-weight: var(--font-weight-normal);
+            color: var(--placeholder-color);
+        }
     }
 
     .icon {

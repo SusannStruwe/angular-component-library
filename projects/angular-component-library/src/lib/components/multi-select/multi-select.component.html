@@ -14,7 +14,7 @@
         @if (label) {
             <span class="label">{{ label }}</span>
         }
-        <span class="actions">
+        <span class="actions" [class.with-label]="!!label">
             @if (selectedItems.length !== 0) {
                 <span class="count-badge">{{ selectedItems.length }}</span>
             }

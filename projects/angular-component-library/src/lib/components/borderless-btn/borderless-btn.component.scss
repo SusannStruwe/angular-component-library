@@ -94,29 +94,29 @@ Filling
 Simple hover
 ********************************/
 .simple {
-    color: var(--ghost-btn-text-color, var(--accent-color));
+    color: var(--borderless-btn-text-color, var(--accent-color));
     background: transparent;
 
     fa-icon {
-        color: var(--ghost-btn-icon-color, var(--accent-color));
+        color: var(--borderless-btn-icon-color, var(--accent-color));
     }
 
     &:active,
     &.active {
         &:not([disabled]) {
             background-color: var(
-                --ghost-btn-active-background,
+                --borderless-btn-active-bg,
                 var(--accent-color)
             );
-            color: var(--ghost-btn-active-text-color, var(--fa-icon-color));
+            color: var(--borderless-btn-active-text-color, var(--fa-icon-color));
             background-image: var(
-                --ghost-btn-active-background-image,
+                --borderless-btn-active-bg-image,
                 var(--darken-gradient)
             );
 
             fa-icon {
                 color: var(
-                    --ghost-btn-active-icon-color,
+                    --borderless-btn-active-icon-color,
                     var(--fa-icon-color)
                 );
             }
@@ -180,18 +180,18 @@ that do not support them, like touch displays
         &.active {
             &:not([disabled]) {
                 background-color: var(
-                    --ghost-btn-active-background,
+                    --borderless-btn-active-bg,
                     var(--accent-color)
                 );
-                color: var(--ghost-btn-active-text-color, var(--fa-icon-color));
+                color: var(--borderless-btn-active-text-color, var(--fa-icon-color));
                 background-image: var(
-                    --ghost-btn-active-background-image,
+                    --borderless-btn-active-bg-image,
                     var(--darken-gradient)
                 );
 
                 fa-icon {
                     color: var(
-                        --ghost-btn-active-icon-color,
+                        --borderless-btn-active-icon-color,
                         var(--fa-icon-color)
                     );
                 }

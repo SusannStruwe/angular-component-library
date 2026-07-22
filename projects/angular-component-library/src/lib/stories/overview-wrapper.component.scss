@@ -1,6 +1,9 @@
+p {
+    font-family: var(--font-family);
+}
 .overview-wrapper {
     border: 1px solid var(--border-color-light);
-    background: var(--modal-background);
+    background: var(--modal-bg);
     color: var(--text-color);
 }
 

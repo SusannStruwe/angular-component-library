@@ -67,7 +67,7 @@ button {
     span:last-of-type {
         width: var(--btn-height);
         padding: 15px;
-        background: var(--select-chevron-background, transparent);
+        background: var(--select-chevron-bg, transparent);
         border-left: none;
         display: inline-flex;
         align-items: center;
@@ -76,7 +76,7 @@ button {
 
         &:active:not([disabled]) {
             background-color: var(
-                --select-selected-chevron-background,
+                --select-selected-chevron-bg,
                 transparent
             );
         }
@@ -90,7 +90,7 @@ button {
     &.active,
     &.selected {
         border-color: var(--select-selected-border-color, var(--text-color));
-        background-color: var(--select-selected-background, transparent);
+        background-color: var(--select-selected-bg, transparent);
 
         span,
         fa-icon {
@@ -99,7 +99,7 @@ button {
 
         span:last-of-type {
             background-color: var(
-                --select-selected-chevron-background,
+                --select-selected-chevron-bg,
                 transparent
             );
 
@@ -127,8 +127,7 @@ button {
     top: calc(var(--btn-height) + 5px);
     min-width: 100%;
     height: auto;
-    border-radius: var(--select-menu-border-radius, var(--input-radius));
-    background: var(--menu-background);
+    background: var(--menu-bg);
     z-index: var(--select-menu-z-index, var(--z-index-5));
     box-sizing: border-box;
     display: flex;
@@ -181,7 +180,6 @@ button {
         max-height: 500px;
         width: 100%;
         overflow-y: auto;
-        border-radius: var(--select-menu-border-radius, var(--input-radius));
         border-top: 1px solid
             var(--control-menu-border-color, var(--border-color));
 
@@ -255,7 +253,7 @@ button {
             &:active,
             &.active {
                 background-color: var(
-                    --control-menu-item-hover-background,
+                    --control-menu-item-hover-bg,
                     var(--row-highlight-color)
                 );
                 color: var(
@@ -342,13 +340,13 @@ button {
         &:hover,
         &.active,
         &.selected {
-            border-color: var(--accent-color-light);
+            border-color: var(--accent-color);
 
             span:last-of-type {
                 background-color: var(--accent-color-light);
 
                 fa-icon {
-                    color: var(--accent-color);
+                    color: var(--accent-color-dark);
                 }
             }
 
@@ -443,7 +441,7 @@ button {
 
                 &:active,
                 &.active {
-                    background-color: var(--header-bg-color);
+                    background-color: var(--surface-subtle-bg);
                     color: var(--text-color);
 
                     fa-icon {
@@ -495,7 +493,7 @@ Media query to add hover only on device which support hover
         // complete button design
         &:hover {
             border-color: var(--select-hover-border-color, var(--text-color));
-            background-color: var(--select-hover-background, transparent);
+            background-color: var(--select-hover-bg, transparent);
 
             span,
             fa-icon {
@@ -504,7 +502,7 @@ Media query to add hover only on device which support hover
 
             span:last-of-type {
                 background-color: var(
-                    --select-hover-chevron-background,
+                    --select-hover-chevron-bg,
                     transparent
                 );
 
@@ -532,7 +530,7 @@ Media query to add hover only on device which support hover
             li {
                 &:hover {
                     background-color: var(
-                        --control-menu-item-hover-background,
+                        --control-menu-item-hover-bg,
                         var(--row-highlight-color)
                     );
                     color: var(
@@ -646,7 +644,7 @@ Media query to add hover only on device which support hover
             }
 
             &:hover {
-                background-color: var(--header-bg-color);
+                background-color: var(--surface-subtle-bg);
                 border-color: var(--border-color);
             }
 
@@ -669,7 +667,7 @@ Media query to add hover only on device which support hover
             ul {
                 li {
                     &:hover {
-                        background-color: var(--header-bg-color);
+                        background-color: var(--surface-subtle-bg);
                         color: var(--text-color);
 
                         fa-icon {

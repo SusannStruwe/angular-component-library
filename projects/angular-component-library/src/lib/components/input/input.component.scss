@@ -14,12 +14,18 @@
         font-family: var(--font-family);
         font-weight: var(--font-weight-normal);
         color: var(--field-text-color, var(--text-color));
-        background: var(--field-background, white);
-        border: var(--border-width) solid var(--outlined-btn-border-color, var(--btn-border-color));
+        background: var(--field-bg, white);
+        border: var(--border-width) solid var(--bordered-btn-border-color, var(--btn-border-color));
         border-radius: var(--input-radius);
         padding-right: 35px;
         padding-left: 20px;
         box-sizing: border-box;
+
+        &::placeholder {
+            font-family: var(--font-family);
+            font-weight: var(--font-weight-normal);
+            color: var(--placeholder-color);
+        }
     }
 
     .icon {

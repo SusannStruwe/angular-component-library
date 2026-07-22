@@ -17,7 +17,7 @@ button {
     font-size: var(--font-size);
     font-family: var(--font-family);
     transition: background 400ms;
-    background: var(--filled-btn-background, var(--accent-color));
+    background: var(--filled-btn-bg, var(--accent-color));
     color: var(--filled-btn-text-color, var(--fa-icon-color));
     cursor: pointer;
     display: flex;
@@ -49,11 +49,11 @@ button {
     &.active,
     &:active:not([disabled]) {
         background-color: var(
-            --filled-btn-active-background,
+            --filled-btn-active-bg,
             var(--accent-color-dark)
         );
         color: var(--filled-btn-active-text-color, var(--fa-icon-color));
-        background-image: var(--filled-btn-active-background-image, none);
+        background-image: var(--filled-btn-active-bg-image, none);
 
         fa-icon,
         span {
@@ -113,15 +113,15 @@ that do not support them, like touch displays
         &.active {
             &:not([disabled]) {
                 background-color: var(
-                    --filled-btn-hover-background,
-                    var(--filled-btn-background, var(--accent-color))
+                    --filled-btn-hover-bg,
+                    var(--filled-btn-bg, var(--accent-color))
                 );
                 color: var(
                     --filled-btn-hover-text-color,
                     var(--fa-icon-color)
                 );
                 background-image: var(
-                    --filled-btn-hover-background-image,
+                    --filled-btn-hover-bg-image,
                     var(--darken-gradient)
                 );
 

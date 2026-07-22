@@ -26,13 +26,8 @@ import { Icons } from '../model/icons';
 import { SegmentedBtnItem } from '../model/segmented-btn.model';
 import { SelectItem } from '../model/select-item.model';
 import { AlertType } from '../model/alert-type.enum';
-import { SelectAppearance } from '../model/select-appearance.type';
-import { TableHeaderComponent } from '../components/table/table-header/table-header.component';
-import { filters, headerItems } from './util';
-import { TableStyle } from '../model/table-style.enum';
-import { TableComponent } from '../components/table/table.component';
 
-type OverviewThemeClass = '' | 'theme-light-gray';
+type OverviewThemeClass = '' | 'theme-light-gray' | 'theme-pail';
 
 /**
  * This is a wrapper component to give an overview oever all components
@@ -65,9 +60,7 @@ type OverviewThemeClass = '' | 'theme-light-gray';
         BorderedBtnComponent,
         BorderlessBtnComponent,
         FilledBtnComponent,
-        CircleBtnComponent,
-        TableComponent,
-        TableHeaderComponent
+        CircleBtnComponent
     ],
     templateUrl: './overview-wrapper.component.html',
     styleUrls: ['./overview-wrapper.component.scss']
@@ -83,9 +76,10 @@ export class OverviewWrapperComponent {
 
     themeOptions: Array<{ label: string; value: OverviewThemeClass }> = [
         { label: 'Default', value: '' },
-        { label: 'Light Gray', value: 'theme-light-gray' }
+        { label: 'Light Gray', value: 'theme-light-gray' },
+        { label: 'Pailot', value: 'theme-pail' }
     ];
-    activeThemeClass: OverviewThemeClass = '';
+    activeThemeClass: OverviewThemeClass = 'theme-pail';
 
     open = false;
 
@@ -109,8 +103,6 @@ export class OverviewWrapperComponent {
     showAlert = true;
     alertTypes: typeof AlertType = AlertType;
 
-    selectAppearance: SelectAppearance = 'scheduler';
-
     // inputs
     duration = 7400;
     username = '';
@@ -122,12 +114,6 @@ export class OverviewWrapperComponent {
     // checkbox
     checked = true;
     checked2 = false;
-
-    //table header
-    headerItems = headerItems;
-    filters = filters;
-    lightStyle = TableStyle.LIGHT;
-    tableStyle = TableStyle.DARK;
 
     setTheme(themeClass: OverviewThemeClass): void {
         this.activeThemeClass = themeClass;

@@ -1,6 +1,7 @@
 :host {
     display: flex;
-    border: var(--border-width) solid var(--outlined-btn-border-color, var(--btn-border-color));
+    border: var(--border-width) solid
+        var(--segmented-btn-border-color, var(--bordered-btn-border-color, var(--btn-border-color)));
     border-radius: var(--border-radius);
     height: var(--btn-height);
     box-sizing: border-box;
@@ -18,7 +19,7 @@ button {
     font-size: var(--font-size);
     font-family: var(--font-family);
     background: transparent;
-    color: var(--btn-color);
+    color: var(--segmented-btn-text-color, var(--btn-color));
     transition: 0.25s;
     cursor: pointer;
     border: 0;
@@ -33,7 +34,7 @@ button {
     }
 
     fa-icon {
-        color: var(--btn-color);
+        color: var(--segmented-btn-icon-color, var(--btn-color));
     }
 
     span {
@@ -41,25 +42,55 @@ button {
     }
 
     &.active:not([disabled]) {
-        background-color: var(--accent-color);
-        color: var(--fa-icon-color);
+        background-color: var(
+            --segmented-btn-active-bg,
+            var(--accent-color)
+        );
+        color: var(
+            --segmented-btn-active-text-color,
+            var(--fa-icon-color)
+        );
 
         fa-icon {
-            color: var(--fa-icon-color);
+            color: var(
+                --segmented-btn-active-icon-color,
+                var(--fa-icon-color)
+            );
         }
     }
     &.focus {
-        background-color: var(--accent-color-light);
-        color: var(--accent-color);
+        background-color: var(
+            --segmented-btn-hover-bg,
+            var(--accent-color-light)
+        );
+        color: var(--segmented-btn-hover-text-color, var(--accent-color));
 
         fa-icon {
-            color: var(--accent-color);
+            color: var(--segmented-btn-hover-icon-color, var(--accent-color));
         }
     }
 
     &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
+    }
+}
+
+:host-context(.theme-pail) {
+    background: var(--field-bg, #ffffff);
+    box-shadow: var(--box-shadow);
+
+    button {
+        margin: 0;
+        height: calc(var(--btn-height) - 2px);
+        line-height: calc(var(--btn-height) - 2px);
+        padding: 0 24px;
+        border-radius: 0;
+        font-weight: var(--font-weight-normal);
+
+        &:last-of-type {
+            margin-right: 0;
+        }
     }
 }
 
@@ -70,11 +101,14 @@ Media query to add hover only on device which support hover
 @media (hover: hover) {
     button {
         &:hover:not([disabled]) {
-            background-color: var(--accent-color-light);
-            color: var(--accent-color);
+            background-color: var(
+                --segmented-btn-hover-bg,
+                var(--accent-color-light)
+            );
+            color: var(--segmented-btn-hover-text-color, var(--accent-color));
 
             fa-icon {
-                color: var(--accent-color);
+                color: var(--segmented-btn-hover-icon-color, var(--accent-color));
             }
         }
     }

@@ -17,15 +17,28 @@
         font-size: var(--font-size);
         outline: none;
         font-family: var(--font-family);
+        font-weight: var(--font-weight-normal);
         border: var(--border-width) solid
             var(--date-input-border-color, var(--btn-border-color));
         cursor: pointer;
         color: var(--date-input-text-color, var(--btn-color));
-        background: var(--date-input-background, transparent);
+        background: var(--date-input-bg, transparent);
         box-sizing: border-box;
         border-radius: var(--input-radius);
-        padding: 2px 16px 2px 5px;
+        padding: 2px 16px 2px 10px;
         -webkit-padding-end: 5px;
+
+        &::-webkit-datetime-edit {
+            font-family: var(--font-family);
+            font-weight: var(--font-weight-normal);
+            color: var(--date-input-text-color, var(--btn-color));
+        }
+
+        &::placeholder {
+            font-family: var(--font-family);
+            font-weight: var(--font-weight-normal);
+            color: var(--placeholder-color);
+        }
 
         &.readonly {
             border: none;
@@ -42,8 +55,9 @@
         top: 0;
         right: 0px;
         z-index: 1;
-        background: var(--date-input-overlay-background, var(--fa-icon-color));
+        background: var(--date-input-overlay-bg, var(--fa-icon-color));
         border: none;
+        border-radius: var(--input-radius);
         padding: 2px 10px;
         cursor: pointer;
         display: flex;

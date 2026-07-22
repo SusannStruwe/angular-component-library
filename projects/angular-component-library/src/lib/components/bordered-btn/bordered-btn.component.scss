@@ -180,34 +180,34 @@ Filling
 Simple hover
 ********************************/
 .simple {
-    color: var(--outlined-btn-text-color, var(--btn-color));
+    color: var(--bordered-btn-text-color, var(--btn-color));
     border: var(--border-width) solid
-        var(--outlined-btn-border-color, var(--btn-border-color));
+        var(--bordered-btn-border-color, var(--btn-border-color));
     background: transparent;
 
     fa-icon {
-        color: var(--outlined-btn-text-color, var(--btn-color));
+        color: var(--bordered-btn-text-color, var(--btn-color));
     }
 
     &:active,
     &.active {
         &:not([disabled]) {
             border-color: var(
-                --outlined-btn-hover-border-color,
+                --bordered-btn-hover-border-color,
                 transparent
             );
             background-color: var(
-                --outlined-btn-hover-background,
+                --bordered-btn-hover-bg,
                 var(--accent-color-light)
             );
-            color: var(--outlined-btn-hover-text-color, var(--accent-color));
+            color: var(--bordered-btn-hover-text-color, var(--accent-color));
 
             fa-icon {
-                color: var(--outlined-btn-hover-icon-color, var(--accent-color));
+                color: var(--bordered-btn-hover-icon-color, var(--accent-color));
             }
 
             ::ng-deep .pailot-icon {
-                color: var(--outlined-btn-hover-icon-color, var(--accent-color));
+                color: var(--bordered-btn-hover-icon-color, var(--accent-color));
             }
         }
     }
@@ -217,41 +217,41 @@ Simple hover
 Inverted hover
 ********************************/
 .inverted {
-    color: var(--outlined-btn-text-color, var(--btn-color));
+    color: var(--bordered-btn-text-color, var(--btn-color));
     border: var(--border-width) solid
-        var(--outlined-btn-border-color, var(--btn-border-color));
+        var(--bordered-btn-border-color, var(--btn-border-color));
     background: transparent;
 
     fa-icon {
-        color: var(--outlined-btn-text-color, var(--btn-color));
+        color: var(--bordered-btn-text-color, var(--btn-color));
     }
 
     &:active,
     &.active {
         &:not([disabled]) {
             border-color: var(
-                --outlined-btn-inverted-hover-border-color,
+                --bordered-btn-inverted-hover-border-color,
                 transparent
             );
             background-color: var(
-                --outlined-btn-inverted-hover-background,
+                --bordered-btn-inverted-hover-bg,
                 var(--btn-color)
             );
             color: var(
-                --outlined-btn-inverted-hover-text-color,
+                --bordered-btn-inverted-hover-text-color,
                 var(--fa-icon-color)
             );
 
             fa-icon {
                 color: var(
-                    --outlined-btn-inverted-hover-icon-color,
+                    --bordered-btn-inverted-hover-icon-color,
                     var(--fa-icon-color)
                 );
             }
 
             ::ng-deep .pailot-icon {
                 color: var(
-                    --outlined-btn-inverted-hover-icon-color,
+                    --bordered-btn-inverted-hover-icon-color,
                     var(--fa-icon-color)
                 );
             }
@@ -347,21 +347,21 @@ that do not support them, like touch displays
         &.active {
             &:not([disabled]) {
                 border-color: var(
-                    --outlined-btn-hover-border-color,
+                    --bordered-btn-hover-border-color,
                     transparent
                 );
                 background-color: var(
-                    --outlined-btn-hover-background,
+                    --bordered-btn-hover-bg,
                     var(--accent-color-light)
                 );
-                color: var(--outlined-btn-hover-text-color, var(--accent-color));
+                color: var(--bordered-btn-hover-text-color, var(--accent-color));
 
                 fa-icon {
-                    color: var(--outlined-btn-hover-icon-color, var(--accent-color));
+                    color: var(--bordered-btn-hover-icon-color, var(--accent-color));
                 }
 
                 ::ng-deep .pailot-icon {
-                    color: var(--outlined-btn-hover-icon-color, var(--accent-color));
+                    color: var(--bordered-btn-hover-icon-color, var(--accent-color));
                 }
             }
         }
@@ -391,21 +391,21 @@ that do not support them, like touch displays
         &.active {
             &:not([disabled]) {
                 border-color: var(
-                    --outlined-btn-inverted-hover-border-color,
+                    --bordered-btn-inverted-hover-border-color,
                     transparent
                 );
                 background-color: var(
-                    --outlined-btn-inverted-hover-background,
+                    --bordered-btn-inverted-hover-bg,
                     var(--btn-color)
                 );
                 color: var(
-                    --outlined-btn-inverted-hover-text-color,
+                    --bordered-btn-inverted-hover-text-color,
                     var(--fa-icon-color)
                 );
 
                 fa-icon {
                     color: var(
-                        --outlined-btn-inverted-hover-icon-color,
+                        --bordered-btn-inverted-hover-icon-color,
                         var(--fa-icon-color)
                     );
                 }

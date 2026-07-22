@@ -1,6 +1,7 @@
 <div
     class="overview-wrapper"
-    [class.theme-light-gray]="activeThemeClass === 'theme-light-gray'">
+    [class.theme-light-gray]="activeThemeClass === 'theme-light-gray'"
+    [class.theme-pail]="activeThemeClass === 'theme-pail'">
     <div class="theme-toolbar">
         <p>Theme preview:</p>
         <div class="theme-buttons">
@@ -354,7 +355,6 @@
 
                 <select-component
                     [width]="'300px'"
-                    [appearance]="selectAppearance"
                     [faIconBefore]="faPalette"
                     [items]="selectItems"
                     [faIcon]="faChevronDown"
@@ -373,7 +373,7 @@
                     [items]="multiSelectItems"
                     [withFilter]="true"
                     [faIcon]="faFilter"
-                    [style.width.px]="55">
+                    [style.width.px]="60">
                 </multi-select-component>
 
                 <collapsible-component [(show)]="open">
@@ -394,33 +394,6 @@
                         </div>
                     </div>
                 </collapsible-component>
-            </div>
-        </div>
-
-        <div
-            class="grid-2-2"
-            [style.column-gap.em]="1"
-            [style.margin-top.em]="2">
-            <div class="flex-column">
-                <table-component [style.width]="'400px'" [scrollbarWidth]="15">
-                    <div header>
-                        <table-header-component
-                            [headerItemsTasks]="headerItems"
-                            [tableStyle]="lightStyle"
-                            [searchFilters]="filters">
-                        </table-header-component>
-                    </div>
-                </table-component>
-            </div>
-            <div class="flex-column">
-                <table-component [style.width]="'400px'" [scrollbarWidth]="15">
-                    <div header>
-                        <table-header-component
-                            [headerItemsTasks]="headerItems"
-                            [searchFilters]="filters">
-                        </table-header-component>
-                    </div>
-                </table-component>
             </div>
         </div>
     </div>
