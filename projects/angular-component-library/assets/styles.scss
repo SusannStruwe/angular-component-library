@@ -23,10 +23,79 @@ body {
     /* General button colors: buttons, select, context-menu */
     --btn-color: #3b3c3e;
     --btn-border-color: #3b3c3e;
+    --input-border-color: var(--border-color);
+
+    /* Shared control tokens: select, search-input, input, neutral button variants */
+    --control-text-color: var(--btn-color);
+    --control-border-color: var(--btn-border-color);
+    --control-hover-text-color: var(--accent-color);
+    --control-hover-border-color: var(--accent-color);
+    --control-hover-background: transparent;
+    --control-active-text-color: var(--accent-color);
+    --control-active-border-color: var(--accent-color);
+    --control-active-background: transparent;
+    --control-icon-color: var(--btn-color);
+    --control-chevron-background: var(--btn-color);
+    --control-chevron-icon-color: var(--fa-icon-color);
+    --control-hover-chevron-background: var(--accent-color);
+    --control-hover-chevron-icon-color: var(--fa-icon-color);
+    --control-active-chevron-background: var(--accent-color);
+    --control-active-chevron-icon-color: var(--fa-icon-color);
+    --control-menu-border-color: var(--border-color);
+    --control-menu-item-text-color: var(--text-color);
+    --control-menu-item-icon-color: var(--btn-color);
+    --control-menu-item-hover-background: var(--row-highlight-color);
+    --control-menu-item-hover-text-color: var(--accent-color);
+    --control-menu-item-hover-icon-color: var(--accent-color);
+    --field-text-color: var(--text-color);
+    --field-border-color: var(--input-border-color);
+    --field-hover-border-color: var(--accent-color);
+    --field-background: #ffffff;
+    --search-field-background: transparent;
+    --field-icon-color: #999999;
+    --field-icon-hover-color: var(--accent-color);
+
+    /* Outlined button tokens: used by bordered/simple and bordered/inverted variants */
+    --outlined-btn-text-color: var(--btn-color);
+    --outlined-btn-border-color: var(--btn-border-color);
+    --outlined-btn-hover-background: var(--accent-color-light);
+    --outlined-btn-hover-border-color: transparent;
+    --outlined-btn-hover-text-color: var(--accent-color);
+    --outlined-btn-hover-icon-color: var(--accent-color);
+    --outlined-btn-inverted-hover-background: var(--btn-color);
+    --outlined-btn-inverted-hover-border-color: transparent;
+    --outlined-btn-inverted-hover-text-color: var(--fa-icon-color);
+    --outlined-btn-inverted-hover-icon-color: var(--fa-icon-color);
+    --ghost-btn-text-color: var(--accent-color);
+    --ghost-btn-icon-color: var(--accent-color);
+    --ghost-btn-active-background: var(--accent-color);
+    --ghost-btn-active-text-color: var(--fa-icon-color);
+    --ghost-btn-active-icon-color: var(--fa-icon-color);
+    --ghost-btn-active-background-image: var(--darken-gradient);
+    --filled-btn-background: var(--accent-color);
+    --filled-btn-text-color: var(--fa-icon-color);
+    --filled-btn-hover-background: var(--accent-color);
+    --filled-btn-hover-text-color: var(--fa-icon-color);
+    --filled-btn-hover-background-image: var(--darken-gradient);
+    --filled-btn-active-background: var(--accent-color-dark);
+    --filled-btn-active-text-color: var(--fa-icon-color);
+
+    /* Filled button tokens: primary button surface and interaction states */
+    --filled-btn-background: var(--accent-color);
+    --filled-btn-text-color: var(--fa-icon-color);
+    --filled-btn-icon-color: var(--fa-icon-color);
+    --filled-btn-hover-background: var(--accent-color);
+    --filled-btn-hover-text-color: var(--fa-icon-color);
+    --filled-btn-hover-icon-color: var(--fa-icon-color);
+    --filled-btn-hover-background-image: var(--darken-gradient);
+    --filled-btn-active-background: var(--accent-color-dark);
+    --filled-btn-active-text-color: var(--fa-icon-color);
+    --filled-btn-active-icon-color: var(--fa-icon-color);
+    --filled-btn-active-background-image: none;
 
     /* Toggle variant overrides: toggle-btn custom appearance */
     --toggle-btn-custom-unchecked-background: #aaaaaa;
-    --toggle-btn-custom-checked-background: #2bba28;
+    --toggle-btn-custom-checked-background: #b028ba;
     --toggle-btn-custom-slider-background: #ffffff;
 
     /* Surface and text colors: modals, menus, tabs, inputs, typography */
@@ -162,7 +231,9 @@ body {
     */
 }
 
-body.dark-theme {
+body.dark-theme,
+.dark-theme {
+    /* Existing dark placeholder theme: not yet fully wired for all components */
     --accent-color-light: #d9deff; //#c7cefa;
     --accent-color: #486bff; //#324bff;
     --accent-color-dark: #293dd8; // 3044b5
@@ -179,6 +250,61 @@ body.dark-theme {
     --fa-icon-color: #ffffff;
     --tooltip-background: rgb(183, 183, 183);
 
+}
+
+body.theme-light-gray,
+.theme-light-gray {
+    /* Neutral preview theme: removes accent-heavy control styling in favor of gray surfaces */
+    --control-text-color: var(--text-color);
+    --control-border-color: var(--border-color-light);
+    --control-hover-text-color: var(--text-color);
+    --control-hover-border-color: var(--border-color);
+    --control-hover-background: var(--header-bg-color);
+    --control-active-text-color: var(--text-color);
+    --control-active-border-color: var(--border-color-light);
+    --control-active-background: transparent;
+    --control-icon-color: var(--text-color);
+    --control-chevron-background: transparent;
+    --control-chevron-icon-color: var(--text-color);
+    --control-hover-chevron-background: transparent;
+    --control-hover-chevron-icon-color: var(--text-color);
+    --control-active-chevron-background: transparent;
+    --control-active-chevron-icon-color: var(--text-color);
+    --control-menu-border-color: var(--border-color-light);
+    --control-menu-item-text-color: var(--text-color);
+    --control-menu-item-icon-color: var(--text-color);
+    --control-menu-item-hover-background: var(--header-bg-color);
+    --control-menu-item-hover-text-color: var(--text-color);
+    --control-menu-item-hover-icon-color: var(--text-color);
+    --field-border-color: var(--border-color-light);
+    --field-hover-border-color: var(--border-color);
+    --field-background: #ffffff;
+    --search-field-background: #ffffff;
+    --field-icon-color:  #999999;
+    --field-icon-hover-color: var(--text-color);
+    --outlined-btn-text-color: var(--text-color);
+    --outlined-btn-border-color: var(--border-color-light);
+    --outlined-btn-hover-background: var(--header-bg-color);
+    --outlined-btn-hover-border-color: var(--border-color);
+    --outlined-btn-hover-text-color: var(--text-color);
+    --outlined-btn-hover-icon-color: var(--text-color);
+    --outlined-btn-inverted-hover-background: var(--text-color);
+    --outlined-btn-inverted-hover-border-color: var(--text-color);
+    --outlined-btn-inverted-hover-text-color: var(--fa-icon-color);
+    --outlined-btn-inverted-hover-icon-color: var(--fa-icon-color);
+    --ghost-btn-text-color: var(--outlined-btn-text-color);
+    --ghost-btn-icon-color: var(--outlined-btn-text-color);
+    --ghost-btn-active-background: var(--outlined-btn-hover-background);
+    --ghost-btn-active-text-color: var(--outlined-btn-hover-text-color);
+    --ghost-btn-active-icon-color: var(--outlined-btn-hover-icon-color);
+    --ghost-btn-active-background-image: none;
+    --filled-btn-background: var(--accent-color);
+    --filled-btn-text-color: var(--fa-icon-color);
+    --filled-btn-hover-background: var(--accent-color);
+    --filled-btn-hover-text-color: var(--fa-icon-color);
+    --filled-btn-hover-background-image: var(--darken-gradient);
+    --filled-btn-active-background: var(--accent-color-dark);
+    --filled-btn-active-text-color: var(--fa-icon-color);
 }
 
 html,

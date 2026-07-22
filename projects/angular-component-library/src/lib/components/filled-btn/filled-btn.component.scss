@@ -17,8 +17,8 @@ button {
     font-size: var(--font-size);
     font-family: var(--font-family);
     transition: background 400ms;
-    background: var(--accent-color);
-    color: var(--fa-icon-color);
+    background: var(--filled-btn-background, var(--accent-color));
+    color: var(--filled-btn-text-color, var(--fa-icon-color));
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -26,11 +26,11 @@ button {
     box-sizing: border-box;
 
     fa-icon {
-        color: var(--fa-icon-color);
+        color: var(--filled-btn-icon-color, var(--fa-icon-color));
     }
 
     span {
-        color: var(--fa-icon-color);
+        color: inherit;
         margin: 0px 5px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -48,7 +48,17 @@ button {
 
     &.active,
     &:active:not([disabled]) {
-        background-color: var(--accent-color-dark);
+        background-color: var(
+            --filled-btn-active-background,
+            var(--accent-color-dark)
+        );
+        color: var(--filled-btn-active-text-color, var(--fa-icon-color));
+        background-image: var(--filled-btn-active-background-image, none);
+
+        fa-icon,
+        span {
+            color: var(--filled-btn-active-icon-color, var(--fa-icon-color));
+        }
     }
 }
 
@@ -99,8 +109,30 @@ that do not support them, like touch displays
 **************************************************************/
 @media (hover: hover) {
     .simple {
-        &:hover:not([disabled]) {
-            background-image: var(--darken-gradient);
+        &:hover,
+        &.active {
+            &:not([disabled]) {
+                background-color: var(
+                    --filled-btn-hover-background,
+                    var(--filled-btn-background, var(--accent-color))
+                );
+                color: var(
+                    --filled-btn-hover-text-color,
+                    var(--fa-icon-color)
+                );
+                background-image: var(
+                    --filled-btn-hover-background-image,
+                    var(--darken-gradient)
+                );
+
+                fa-icon,
+                span {
+                    color: var(
+                        --filled-btn-hover-icon-color,
+                        var(--fa-icon-color)
+                    );
+                }
+            }
         }
     }
 

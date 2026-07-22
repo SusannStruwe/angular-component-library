@@ -15,10 +15,10 @@
         padding-left: 40px;
         border-radius: var(--input-radius);
         outline: none;
-        color: var(--text-color);
-        background: transparent;
+        color: var(--field-text-color, var(--text-color));
+        background: var(--search-field-background, transparent);
         box-sizing: border-box;
-        border: 1px solid var(--border-color);
+        border: var(--border-width) solid var(--field-border-color, var(--border-color));
     }
 
     .icon {
@@ -29,7 +29,7 @@
         width: 20px;
 
         fa-icon {
-            color: #999;
+            color: var(--field-icon-color, #999);
         }
     }
 
@@ -115,14 +115,14 @@ Media query to add hover only on device which support hover
         .right {
             &:hover {
                 fa-icon {
-                    color: var(--accent-color);
+                    color: var(--field-icon-hover-color, var(--accent-color));
                 }
             }
         }
 
         &:hover {
             input {
-                border: 2px solid var(--accent-color);
+                border: var(--border-width) solid var(--field-hover-border-color, var(--accent-color));
             }
         }
     }

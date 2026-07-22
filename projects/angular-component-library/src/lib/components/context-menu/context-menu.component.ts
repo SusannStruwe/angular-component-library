@@ -38,6 +38,8 @@ export class ContextMenuComponent {
     @Input() label = '';
     @Input() ariaLabel: string = '';
     @Input() faIcon?: IconDefinition;
+    @Input() customClass?: string;
+    /** @deprecated Use customClass instead. */
     @Input() classStyle?: string;
     @Input() minWidth? = 0;
 
@@ -47,6 +49,10 @@ export class ContextMenuComponent {
     @ViewChild('menu') menu?: ElementRef<HTMLDivElement>;
 
     show = false;
+
+    get customClassName(): string {
+        return this.customClass ?? this.classStyle ?? '';
+    }
 
     /**
      * Toggle show state of menu

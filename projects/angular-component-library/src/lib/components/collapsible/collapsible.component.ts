@@ -36,6 +36,8 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
 export class CollapsibleComponent implements OnInit {
     private changeDetector = inject(ChangeDetectorRef);
 
+    @Input() customClass = '';
+    /** @deprecated Use customClass instead. */
     @Input() classStyles = '';
     @Input() show = false;
 
@@ -43,6 +45,10 @@ export class CollapsibleComponent implements OnInit {
 
     ngOnInit(): void {
         this.changeDetector.detectChanges();
+    }
+
+    get customClassName(): string {
+        return this.customClass || this.classStyles;
     }
 
     collapseContent(): void {

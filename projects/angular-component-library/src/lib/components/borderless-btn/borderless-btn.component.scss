@@ -12,8 +12,8 @@ button {
     font-weight: var(--font-weight-light);
     font-size: var(--font-size);
     font-family: var(--font-family);
-    background: white;
-    color: var(--accent-color);
+    background: transparent;
+    color: inherit;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -21,10 +21,11 @@ button {
     box-sizing: border-box;
 
     fa-icon {
-        color: var(--accent-color);
+        color: inherit;
     }
 
     span {
+        color: inherit;
         margin: 0px 5px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -93,22 +94,31 @@ Filling
 Simple hover
 ********************************/
 .simple {
-    color: var(--accent-color);
+    color: var(--ghost-btn-text-color, var(--accent-color));
     background: transparent;
 
     fa-icon {
-        color: var(--accent-color);
+        color: var(--ghost-btn-icon-color, var(--accent-color));
     }
 
     &:active,
     &.active {
         &:not([disabled]) {
-            background-color: var(--accent-color);
-            color: var(--fa-icon-color);
-            background-image: var(--darken-gradient);
+            background-color: var(
+                --ghost-btn-active-background,
+                var(--accent-color)
+            );
+            color: var(--ghost-btn-active-text-color, var(--fa-icon-color));
+            background-image: var(
+                --ghost-btn-active-background-image,
+                var(--darken-gradient)
+            );
 
             fa-icon {
-                color: var(--fa-icon-color);
+                color: var(
+                    --ghost-btn-active-icon-color,
+                    var(--fa-icon-color)
+                );
             }
         }
     }
@@ -166,19 +176,26 @@ that do not support them, like touch displays
 @media (hover: hover) {
     .simple {
         &:hover,
+        &:active,
         &.active {
             &:not([disabled]) {
-                background-color: var(--accent-color);
-                color: var(--fa-icon-color);
-                background-image: var(--darken-gradient);
+                background-color: var(
+                    --ghost-btn-active-background,
+                    var(--accent-color)
+                );
+                color: var(--ghost-btn-active-text-color, var(--fa-icon-color));
+                background-image: var(
+                    --ghost-btn-active-background-image,
+                    var(--darken-gradient)
+                );
 
                 fa-icon {
-                    color: var(--fa-icon-color);
+                    color: var(
+                        --ghost-btn-active-icon-color,
+                        var(--fa-icon-color)
+                    );
                 }
             }
-        }
-        &:active:not([disabled]) {
-            background-color: var(--accent-color-dark);
         }
     }
 

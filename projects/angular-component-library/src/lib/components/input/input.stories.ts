@@ -7,7 +7,7 @@ const meta: Meta<InputComponent> = {
     component: InputComponent,
     argTypes: {
         input: { control: 'text' },
-        classStyles: {
+        customClass: {
             control: 'select',
             options: [
                 '',
@@ -16,6 +16,10 @@ const meta: Meta<InputComponent> = {
                 'small left',
                 'small right'
             ]
+        },
+        classStyles: {
+            control: false,
+            description: 'Deprecated: use customClass instead.'
         },
         placeholderText: { control: 'text' },
         type: { control: 'text' },

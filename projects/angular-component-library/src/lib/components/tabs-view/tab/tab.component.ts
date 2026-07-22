@@ -25,5 +25,11 @@ export class TabComponent {
     @Input() tabIcon?: IconDefinition;
     @Input() active = false;
     @Input() tooltip = '';
+    @Input() customClass: string = '';
+    /** @deprecated Use customClass instead. */
     @Input() classStyle: string = '';
+
+    get customClassName(): string {
+        return this.customClass || this.classStyle;
+    }
 }

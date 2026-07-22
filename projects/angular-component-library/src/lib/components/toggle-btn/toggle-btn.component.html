@@ -1,9 +1,9 @@
 @if (label) {
-    <p [ngClass]="classStyle">{{ label }}</p>
+    <p [ngClass]="customClassName">{{ label }}</p>
 }
 
 <div
-    [ngClass]="['toggle', classStyle ?? '', appearanceClass, sizeClass]"
+    [ngClass]="['toggle', customClassName, appearanceClass, sizeClass]"
     [style.margin-left.em]="label ? '0.25' : '0'"
     [class.disabled]="isDisabled">
     <input

@@ -35,6 +35,8 @@ export class BorderedBtnComponent {
 
     @Input() isDisabled?: boolean = false;
     // example --> gray, delete
+    @Input() customClass?: string = '';
+    /** @deprecated Use customClass instead. */
     @Input() classStyle?: string = '';
     // example --> filling or shining
     @Input() hoverStyle = HoverStyle.SIMPLE;
@@ -44,4 +46,8 @@ export class BorderedBtnComponent {
     @Input() isActive?: boolean;
     // example --> 100% or not
     @Input() width?: string;
+
+    get customClassName(): string {
+        return this.customClass ?? this.classStyle ?? '';
+    }
 }

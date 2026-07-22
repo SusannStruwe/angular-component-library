@@ -161,6 +161,16 @@
                 "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        tableStyle: TableStyle.DARK,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
+            },
+            {
                 "name": "defaultTemplateMock",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -584,11 +594,41 @@
                 "name": "Light",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Light',\n        faIcon: faInfoCircle,\n        classStyle: 'light',\n        width: '200px'\n    }\n}"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Light',\n        faIcon: faInfoCircle,\n        classStyle: 'light',\n        width: '200px'\n    }\n}"
+            },
+            {
+                "name": "Light",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true,\n        classStyle: SelectStyle.LIGHT,\n        width: '600px',\n        menuHeight: '100px'\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
+                "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true,\n        selectStyle: SelectStyle.LIGHT,\n        width: '600px',\n        menuHeight: '100px'\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
+            },
+            {
+                "name": "LightGray",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true,\n        selectStyle: SelectStyle.LIGHT_GRAY,\n        width: '600px',\n        menuHeight: '100px'\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
             },
             {
                 "name": "LightStyle",
@@ -694,16 +734,6 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<AlertComponent>",
-                "defaultValue": "{\n    title: 'Components/Alert',\n    component: AlertComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [RouterModule],\n            providers: [\n                {\n                    provide: ActivatedRoute,\n                    useValue: {\n                        snapshot: {\n                            paramMap: new Map([['id', '123']]),\n                            data: {}\n                        },\n                        params: [{ id: '123' }],\n                        queryParams: {}\n                    } // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n                }\n            ]\n        })\n    ],\n    tags: ['autodocs'],\n    argTypes: {\n        title: { control: 'text', value: '' },\n        message: { control: 'text', value: '' },\n        type: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: AlertType,\n            value: AlertType.SUCCESS\n        },\n        visibleState: { control: 'boolean', value: false },\n        hideCloseBtn: { control: 'boolean', value: false },\n        navigationLink: { control: 'text', value: undefined },\n        navigationLinkLabel: { control: 'text', value: undefined },\n        visibleStateChange: { action: 'changed' }\n    },\n    args: { visibleStateChange: fn() }\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -714,11 +744,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<AlertComponent>",
+                "defaultValue": "{\n    title: 'Components/Alert',\n    component: AlertComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [RouterModule],\n            providers: [\n                {\n                    provide: ActivatedRoute,\n                    useValue: {\n                        snapshot: {\n                            paramMap: new Map([['id', '123']]),\n                            data: {}\n                        },\n                        params: [{ id: '123' }],\n                        queryParams: {}\n                    } // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n                }\n            ]\n        })\n    ],\n    tags: ['autodocs'],\n    argTypes: {\n        title: { control: 'text', value: '' },\n        message: { control: 'text', value: '' },\n        type: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: AlertType,\n            value: AlertType.SUCCESS\n        },\n        visibleState: { control: 'boolean', value: false },\n        hideCloseBtn: { control: 'boolean', value: false },\n        navigationLink: { control: 'text', value: undefined },\n        navigationLinkLabel: { control: 'text', value: undefined },\n        visibleStateChange: { action: 'changed' }\n    },\n    args: { visibleStateChange: fn() }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<BorderedBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['gray', 'delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
+                "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['light', 'gray', 'delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
             },
             {
                 "name": "meta",
@@ -754,16 +794,6 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<CollapsibleComponent>",
-                "defaultValue": "{\n    title: 'Components/Collapsible',\n    component: CollapsibleComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\n \n                 `\n            }\n        }\n    },\n    decorators: [\n        (story) => {\n            const storyObj = story();\n            return {\n                moduleMetadata: {\n                    imports: [CollapsibleComponent, FontAwesomeModule]\n                },\n                template: storyObj.template,\n                props: storyObj.props\n            };\n        }\n    ],\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -774,11 +804,11 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<DateRangePickerComponent>",
-                "defaultValue": "{\n    title: 'Components/Date Picker/Date Range',\n    component: DateRangePickerComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A date range picker component. \n                 `\n            }\n        }\n    },\n    argTypes: {\n        startDate: { control: 'date', value: new Date() },\n        endDate: { control: 'date', value: new Date() },\n        randomIdStart: { control: 'text' },\n        randomIdEnd: { control: 'text' },\n        startDateChange: { action: 'changed' },\n        endDateChange: { action: 'changed' }\n    },\n    args: {\n        startDateChange: fn(),\n        endDateChange: fn()\n    },\n    tags: ['autodocs']\n}"
+                "type": "Meta<CollapsibleComponent>",
+                "defaultValue": "{\n    title: 'Components/Collapsible',\n    component: CollapsibleComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\n \n                 `\n            }\n        }\n    },\n    decorators: [\n        (story) => {\n            const storyObj = story();\n            return {\n                moduleMetadata: {\n                    imports: [CollapsibleComponent, FontAwesomeModule]\n                },\n                template: storyObj.template,\n                props: storyObj.props\n            };\n        }\n    ],\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -794,11 +824,11 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<DurationInputComponent>",
-                "defaultValue": "{\n    title: 'Components/Duration Input',\n    component: DurationInputComponent,\n    argTypes: {\n        seconds: { control: 'number' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        maxDuration: { control: 'number' },\n        height: { control: 'text' },\n        secondsChange: { action: 'change' }\n    },\n    args: {\n        secondsChange: fn()\n    },\n    tags: ['autodocs']\n}"
+                "type": "Meta<DateRangePickerComponent>",
+                "defaultValue": "{\n    title: 'Components/Date Picker/Date Range',\n    component: DateRangePickerComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A date range picker component. \n                 `\n            }\n        }\n    },\n    argTypes: {\n        startDate: { control: 'date', value: new Date() },\n        endDate: { control: 'date', value: new Date() },\n        randomIdStart: { control: 'text' },\n        randomIdEnd: { control: 'text' },\n        startDateChange: { action: 'changed' },\n        endDateChange: { action: 'changed' }\n    },\n    args: {\n        startDateChange: fn(),\n        endDateChange: fn()\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -818,7 +848,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<DropzoneComponent>",
-                "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        choseFileLabel: { control: 'text' },\n        title: { control: 'text' },\n        subtitle: { control: 'text' },\n        icon: {\n            control: 'select',\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        fileListDisplay: {\n            control: 'select',\n            options: ['detailed', 'summary', 'none']\n        },\n        showButtonIcon: { control: 'boolean' },\n        showFileList: { control: 'boolean' },\n        allowedExtension: { control: 'text', options: ['json'] },\n        fileArrayLength: { control: 'number' },\n        files: { control: { type: 'file', accept: '.json' } },\n        maxSizeOfFiles: { control: 'number' },\n        height: { control: 'text' },\n        width: { control: 'text' }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div style=\"width: 600px;\">${story().template}</div>`,\n            props: story().props\n        })\n    ]\n}"
+                "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        choseFileLabel: { control: 'text' },\n        title: { control: 'text' },\n        subtitle: { control: 'text' },\n        icon: {\n            control: 'select',\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        fileListDisplay: {\n            control: 'select',\n            options: ['detailed', 'summary', 'none']\n        },\n        showButtonIcon: { control: 'boolean' },\n        allowedExtension: { control: 'object' },\n        fileArrayLength: { control: 'number' },\n        files: { control: { type: 'file', accept: '.json' } },\n        maxSizeOfFiles: { control: 'number' },\n        height: { control: 'text' },\n        width: { control: 'text' }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div style=\"width: 600px;\">${story().template}</div>`,\n            props: story().props\n        })\n    ]\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DurationInputComponent>",
+                "defaultValue": "{\n    title: 'Components/Duration Input',\n    component: DurationInputComponent,\n    argTypes: {\n        seconds: { control: 'number' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        maxDuration: { control: 'number' },\n        height: { control: 'text' },\n        secondsChange: { action: 'change' }\n    },\n    args: {\n        secondsChange: fn()\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -828,7 +868,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<FilledBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Filled Btn',\n    component: FilledBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete', 'not-emphrazed', 'navbar-btn']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Buttons/Filled Btn',\n    component: FilledBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['light', 'delete', 'not-emphrazed', 'navbar-btn']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -884,21 +924,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<SearchInputComponent>",
-                "defaultValue": "{\n    title: 'Components/Search Input',\n    component: SearchInputComponent,\n    argTypes: {\n        filter: { control: 'text' },\n        classStyles: {\n            control: 'select',\n            options: [\n                '',\n                'no-radius',\n                'full-width',\n                'small left',\n                'small right'\n            ]\n        },\n        placeholderText: { control: 'text' },\n        filterChange: { action: 'change' }\n    },\n    args: { filterChange: fn() },\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/popover/popover.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<PopoverComponent>",
                 "defaultValue": "{\n    title: 'Components/Popover',\n    component: PopoverComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA popover.\n\nA popover component .\n\n<img src=\"https://img.shields.io/badge/version-1.0.2-blue\" alt=\"Version: 1.0.2\" />\n\n                `\n            }\n        }\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<SearchInputComponent>",
+                "defaultValue": "{\n    title: 'Components/Search Input',\n    component: SearchInputComponent,\n    argTypes: {\n        filter: { control: 'text' },\n        classStyles: {\n            control: 'select',\n            options: [\n                '',\n                'no-radius',\n                'full-width',\n                'small left',\n                'small right'\n            ]\n        },\n        placeholderText: { control: 'text' },\n        filterChange: { action: 'change' }\n    },\n    args: { filterChange: fn() },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -918,7 +958,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<SelectComponent>",
-                "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(selectStyle),\n            mapping: SelectStyle\n        },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        width: { control: 'text' },\n        menuHeight: { control: 'text' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        selectStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(selectStyle),\n            mapping: SelectStyle\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use selectStyle instead.'\n        },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        width: { control: 'text' },\n        menuHeight: { control: 'text' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -974,21 +1014,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<TableHeaderComponent>",
-                "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        showSearchLine: { control: 'boolean' },\n        tableStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(tableStyle),\n            mapping: TableStyle\n        },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TableContentComponent>",
                 "defaultValue": "{\n    title: 'Components/Table/Table Content',\n    component: TableContentComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table content component.\n                `\n            }\n        }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div [style.width.px]=\"'600'\">${story().template}</div>`,\n            props: story().props\n        })\n    ],\n    argTypes: {\n        tableItems: { control: 'object' },\n        tableHeight: { control: 'text' },\n        selectedTableItem: { control: 'object' },\n        selectedTableItemChange: { action: 'select' }\n    },\n    args: {\n        selectedTableItemChange: fn(),\n        tableHeight: '275px'\n    },\n    tags: ['autodocs']\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TableHeaderComponent>",
+                "defaultValue": "{\n    title: 'Components/Table/Table Header',\n    component: TableHeaderComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\nA table header component.\n                `\n            }\n        }\n    },\n    argTypes: {\n        headerItemsTasks: { control: 'object' },\n        searchFilters: { control: 'object' },\n        multiSelectList: { control: 'object' },\n        showSearchLine: { control: 'boolean' },\n        tableStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(tableStyle),\n            mapping: TableStyle\n        },\n        searchFilterChange: { action: 'search' },\n        sortColumnChange: { action: 'sort' },\n        selectFilterChange: { action: 'multi select' }\n    },\n    args: {\n        searchFilterChange: fn(),\n        sortColumnChange: fn(),\n        selectFilterChange: fn()\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "Off",
@@ -1124,16 +1164,6 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1144,11 +1174,11 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        startDate: new Date(),\n        endDate: new Date(),\n        randomIdStart: '123',\n        randomIdEnd: '456'\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const inputStart = (await canvas.findByTestId(\n            'date-input-123'\n        )) as HTMLInputElement;\n        const inputEnd = (await canvas.findByTestId(\n            'date-input-456'\n        )) as HTMLInputElement;\n\n        const newStartDate = '2025-06-01';\n        const newEndDate = '2025-06-30';\n\n        await userEvent.clear(inputStart);\n        await userEvent.type(inputStart, newStartDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputStart.value).toBe(newStartDate);\n        });\n\n        await userEvent.clear(inputEnd);\n        await userEvent.type(inputEnd, newEndDate);\n\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputEnd.value).toBe(newEndDate);\n        });\n    }\n}"
+                "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1164,11 +1194,11 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {}\n}"
+                "defaultValue": "{\n    args: {\n        startDate: new Date(),\n        endDate: new Date(),\n        randomIdStart: '123',\n        randomIdEnd: '456'\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const inputStart = (await canvas.findByTestId(\n            'date-input-123'\n        )) as HTMLInputElement;\n        const inputEnd = (await canvas.findByTestId(\n            'date-input-456'\n        )) as HTMLInputElement;\n\n        const newStartDate = '2025-06-01';\n        const newEndDate = '2025-06-30';\n\n        await userEvent.clear(inputStart);\n        await userEvent.type(inputStart, newStartDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputStart.value).toBe(newStartDate);\n        });\n\n        await userEvent.clear(inputEnd);\n        await userEvent.type(inputEnd, newEndDate);\n\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputEnd.value).toBe(newEndDate);\n        });\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1188,7 +1218,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        height: '220px',\n        width: '600px',\n        title: 'JSON-Dateien hierher ziehen',\n        subtitle: 'Mehrere Dateien koennen gleichzeitig ausgewaehlt werden.',\n        icon: Icons.faUpload,\n        showButtonIcon: false,\n        fileListDisplay: 'summary',\n        showFileList: true,\n        choseFileLabel: 'Load Input files',\n        maxSizeOfFiles: null\n    }\n}"
+                "defaultValue": "{\n    args: {\n        height: '220px',\n        width: '600px',\n        title: 'JSON-Dateien hierher ziehen',\n        subtitle: 'Mehrere Dateien koennen gleichzeitig ausgewaehlt werden.',\n        icon: Icons.faUpload,\n        showButtonIcon: false,\n        fileListDisplay: 'summary',\n        allowedExtension: ['json'],\n        choseFileLabel: 'Load Input files',\n        maxSizeOfFiles: null\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {}\n}"
             },
             {
                 "name": "Sample",
@@ -1254,16 +1294,6 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        filter: '123456'\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/popover/popover.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1274,21 +1304,21 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        btnArray: btnArray,\n        activeBtn: activeBtn\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to switch content'\n            }\n        }\n    }\n}"
+                "defaultValue": "{\n    args: {\n        filter: '123456'\n    }\n}"
             },
             {
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
+                "defaultValue": "{\n    args: {\n        btnArray: btnArray,\n        activeBtn: activeBtn\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to switch content'\n            }\n        }\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1324,21 +1354,21 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        tableItems: contentItems,\n        tableHeight: '200px',\n        selectedTableItemChange: (event: any) => {\n            action('selected row')(event);\n        }\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
             },
             {
                 "name": "SampleNgContent",
@@ -1604,7 +1634,7 @@
                 "name": "types",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "unknown",
@@ -1614,7 +1644,7 @@
                 "name": "types",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "unknown",
@@ -1762,8 +1792,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<AlertComponent>",
-                "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
+                "rawtype": "StoryObj<BadgeComponent>",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1773,8 +1803,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<BadgeComponent>",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "rawtype": "StoryObj<AlertComponent>",
+                "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1828,17 +1858,6 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CollapsibleComponent>",
-                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 184
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
                 "rawtype": "StoryObj<ColorPaletteComponent>",
                 "file": "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts",
                 "deprecated": false,
@@ -1850,8 +1869,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<DateRangePickerComponent>",
-                "file": "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts",
+                "rawtype": "StoryObj<CollapsibleComponent>",
+                "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1872,8 +1891,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<DurationInputComponent>",
-                "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                "rawtype": "StoryObj<DateRangePickerComponent>",
+                "file": "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1896,6 +1915,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<DropzoneComponent>",
                 "file": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<DurationInputComponent>",
+                "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1982,8 +2012,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<SearchInputComponent>",
-                "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
+                "rawtype": "StoryObj<PopoverComponent>",
+                "file": "projects/angular-component-library/src/lib/components/popover/popover.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1993,8 +2023,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<PopoverComponent>",
-                "file": "projects/angular-component-library/src/lib/components/popover/popover.stories.ts",
+                "rawtype": "StoryObj<SearchInputComponent>",
+                "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2081,8 +2111,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<TableHeaderComponent>",
-                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
+                "rawtype": "StoryObj<TableContentComponent>",
+                "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2092,8 +2122,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<TableContentComponent>",
-                "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
+                "rawtype": "StoryObj<TableHeaderComponent>",
+                "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2194,6 +2224,16 @@
                     "defaultValue": "{\n    args: {\n        label: 'Inverted',\n        faIcon: faInfoCircle,\n        hoverStyle: HoverStyle.INVERTED\n    }\n}"
                 },
                 {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Light',\n        faIcon: faInfoCircle,\n        classStyle: 'light',\n        width: '200px'\n    }\n}"
+                },
+                {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -2201,7 +2241,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<BorderedBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['gray', 'delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
+                    "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['light', 'gray', 'delete']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
                 },
                 {
                     "name": "Sample",
@@ -2520,6 +2560,16 @@
                     "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
                 },
                 {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Light',\n        faIcon: faInfoCircle,\n        classStyle: 'light',\n        width: '200px'\n    }\n}"
+                },
+                {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -2527,7 +2577,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<FilledBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Filled Btn',\n    component: FilledBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['delete', 'not-emphrazed', 'navbar-btn']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Buttons/Filled Btn',\n    component: FilledBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        classStyle: {\n            control: 'select',\n            options: ['light', 'delete', 'not-emphrazed', 'navbar-btn']\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Sample",
@@ -2890,6 +2940,88 @@
                     "defaultValue": "{\n    args: {\n        headerItemsTasks: headerItems,\n        searchFilters: filters,\n        showSearchLine: false,\n        searchFilterChange: (event: any) => {\n            action('filter')(event);\n        },\n        sortColumnChange: (event: any) => {\n            action('sort')(event);\n        },\n        selectFilterChange: (event: any) => {\n            action('select')(event);\n        }\n    }\n}"
                 }
             ],
+            "projects/angular-component-library/src/lib/components/select/select.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
+                },
+                {
+                    "name": "iconOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Record<string, IconDefinition>",
+                    "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+                },
+                {
+                    "name": "Light",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true,\n        selectStyle: SelectStyle.LIGHT,\n        width: '600px',\n        menuHeight: '100px'\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
+                },
+                {
+                    "name": "LightGray",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true,\n        selectStyle: SelectStyle.LIGHT_GRAY,\n        width: '600px',\n        menuHeight: '100px'\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<SelectComponent>",
+                    "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        selectStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(selectStyle),\n            mapping: SelectStyle\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use selectStyle instead.'\n        },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        width: { control: 'text' },\n        menuHeight: { control: 'text' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
+                },
+                {
+                    "name": "selectedItem",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "new SelectItem('select1', undefined, Icons.faInfoCircle)"
+                },
+                {
+                    "name": "selectItems",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\n    new SelectItem('select3')\n]"
+                },
+                {
+                    "name": "selectStyle",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "SelectStyle"
+                }
+            ],
             "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts": [
                 {
                     "name": "defaultTemplateMock",
@@ -3147,7 +3279,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<DropzoneComponent>",
-                    "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        choseFileLabel: { control: 'text' },\n        title: { control: 'text' },\n        subtitle: { control: 'text' },\n        icon: {\n            control: 'select',\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        fileListDisplay: {\n            control: 'select',\n            options: ['detailed', 'summary', 'none']\n        },\n        showButtonIcon: { control: 'boolean' },\n        showFileList: { control: 'boolean' },\n        allowedExtension: { control: 'text', options: ['json'] },\n        fileArrayLength: { control: 'number' },\n        files: { control: { type: 'file', accept: '.json' } },\n        maxSizeOfFiles: { control: 'number' },\n        height: { control: 'text' },\n        width: { control: 'text' }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div style=\"width: 600px;\">${story().template}</div>`,\n            props: story().props\n        })\n    ]\n}"
+                    "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        choseFileLabel: { control: 'text' },\n        title: { control: 'text' },\n        subtitle: { control: 'text' },\n        icon: {\n            control: 'select',\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        fileListDisplay: {\n            control: 'select',\n            options: ['detailed', 'summary', 'none']\n        },\n        showButtonIcon: { control: 'boolean' },\n        allowedExtension: { control: 'object' },\n        fileArrayLength: { control: 'number' },\n        files: { control: { type: 'file', accept: '.json' } },\n        maxSizeOfFiles: { control: 'number' },\n        height: { control: 'text' },\n        width: { control: 'text' }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div style=\"width: 600px;\">${story().template}</div>`,\n            props: story().props\n        })\n    ]\n}"
                 },
                 {
                     "name": "Sample",
@@ -3157,7 +3289,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n        height: '220px',\n        width: '600px',\n        title: 'JSON-Dateien hierher ziehen',\n        subtitle: 'Mehrere Dateien koennen gleichzeitig ausgewaehlt werden.',\n        icon: Icons.faUpload,\n        showButtonIcon: false,\n        fileListDisplay: 'summary',\n        showFileList: true,\n        choseFileLabel: 'Load Input files',\n        maxSizeOfFiles: null\n    }\n}"
+                    "defaultValue": "{\n    args: {\n        height: '220px',\n        width: '600px',\n        title: 'JSON-Dateien hierher ziehen',\n        subtitle: 'Mehrere Dateien koennen gleichzeitig ausgewaehlt werden.',\n        icon: Icons.faUpload,\n        showButtonIcon: false,\n        fileListDisplay: 'summary',\n        allowedExtension: ['json'],\n        choseFileLabel: 'Load Input files',\n        maxSizeOfFiles: null\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/multi-select/multi-select.stories.ts": [
@@ -3210,78 +3342,6 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n        faIcon: faFilter,\n        items: selectItems,\n        withFilter: true,\n\n        filterPlaceholder: 'Select...',\n        backgroundColor: '#486bff'\n    }\n}"
-                }
-            ],
-            "projects/angular-component-library/src/lib/components/select/select.stories.ts": [
-                {
-                    "name": "iconOptions",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Record<string, IconDefinition>",
-                    "defaultValue": "{\n    faChevronDown: faChevronDown,\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
-                },
-                {
-                    "name": "Light",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true,\n        classStyle: SelectStyle.LIGHT,\n        width: '600px',\n        menuHeight: '100px'\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<SelectComponent>",
-                    "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        classStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(selectStyle),\n            mapping: SelectStyle\n        },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        width: { control: 'text' },\n        menuHeight: { control: 'text' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
-                },
-                {
-                    "name": "Sample",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
-                },
-                {
-                    "name": "selectedItem",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "unknown",
-                    "defaultValue": "new SelectItem('select1', undefined, Icons.faInfoCircle)"
-                },
-                {
-                    "name": "selectItems",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "[]",
-                    "defaultValue": "[\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\n    new SelectItem('select3')\n]"
-                },
-                {
-                    "name": "selectStyle",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "unknown",
-                    "defaultValue": "SelectStyle"
                 }
             ],
             "projects/angular-component-library/src/lib/stories/button.stories.ts": [
@@ -3486,28 +3546,6 @@
                     "defaultValue": "{\n    args: {}\n}"
                 }
             ],
-            "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts": [
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<DateRangePickerComponent>",
-                    "defaultValue": "{\n    title: 'Components/Date Picker/Date Range',\n    component: DateRangePickerComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A date range picker component. \n                 `\n            }\n        }\n    },\n    argTypes: {\n        startDate: { control: 'date', value: new Date() },\n        endDate: { control: 'date', value: new Date() },\n        randomIdStart: { control: 'text' },\n        randomIdEnd: { control: 'text' },\n        startDateChange: { action: 'changed' },\n        endDateChange: { action: 'changed' }\n    },\n    args: {\n        startDateChange: fn(),\n        endDateChange: fn()\n    },\n    tags: ['autodocs']\n}"
-                },
-                {
-                    "name": "Sample",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        startDate: new Date(),\n        endDate: new Date(),\n        randomIdStart: '123',\n        randomIdEnd: '456'\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const inputStart = (await canvas.findByTestId(\n            'date-input-123'\n        )) as HTMLInputElement;\n        const inputEnd = (await canvas.findByTestId(\n            'date-input-456'\n        )) as HTMLInputElement;\n\n        const newStartDate = '2025-06-01';\n        const newEndDate = '2025-06-30';\n\n        await userEvent.clear(inputStart);\n        await userEvent.type(inputStart, newStartDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputStart.value).toBe(newStartDate);\n        });\n\n        await userEvent.clear(inputEnd);\n        await userEvent.type(inputEnd, newEndDate);\n\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputEnd.value).toBe(newEndDate);\n        });\n    }\n}"
-                }
-            ],
             "projects/angular-component-library/src/lib/components/date-picker/date-picker.stories.ts": [
                 {
                     "name": "meta",
@@ -3530,36 +3568,26 @@
                     "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        randomId: 'test123',\n        withInput: true\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }\n}"
                 }
             ],
-            "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts": [
+            "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts": [
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<DurationInputComponent>",
-                    "defaultValue": "{\n    title: 'Components/Duration Input',\n    component: DurationInputComponent,\n    argTypes: {\n        seconds: { control: 'number' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        maxDuration: { control: 'number' },\n        height: { control: 'text' },\n        secondsChange: { action: 'change' }\n    },\n    args: {\n        secondsChange: fn()\n    },\n    tags: ['autodocs']\n}"
+                    "type": "Meta<DateRangePickerComponent>",
+                    "defaultValue": "{\n    title: 'Components/Date Picker/Date Range',\n    component: DateRangePickerComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A date range picker component. \n                 `\n            }\n        }\n    },\n    argTypes: {\n        startDate: { control: 'date', value: new Date() },\n        endDate: { control: 'date', value: new Date() },\n        randomIdStart: { control: 'text' },\n        randomIdEnd: { control: 'text' },\n        startDateChange: { action: 'changed' },\n        endDateChange: { action: 'changed' }\n    },\n    args: {\n        startDateChange: fn(),\n        endDateChange: fn()\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Sample",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                    "file": "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {}\n}"
-                },
-                {
-                    "name": "types",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "unknown",
-                    "defaultValue": "EditMode"
+                    "defaultValue": "{\n    args: {\n        startDate: new Date(),\n        endDate: new Date(),\n        randomIdStart: '123',\n        randomIdEnd: '456'\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const inputStart = (await canvas.findByTestId(\n            'date-input-123'\n        )) as HTMLInputElement;\n        const inputEnd = (await canvas.findByTestId(\n            'date-input-456'\n        )) as HTMLInputElement;\n\n        const newStartDate = '2025-06-01';\n        const newEndDate = '2025-06-30';\n\n        await userEvent.clear(inputStart);\n        await userEvent.type(inputStart, newStartDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputStart.value).toBe(newStartDate);\n        });\n\n        await userEvent.clear(inputEnd);\n        await userEvent.type(inputEnd, newEndDate);\n\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(inputEnd.value).toBe(newEndDate);\n        });\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts": [
@@ -3594,6 +3622,38 @@
                     "defaultValue": "EditMode"
                 }
             ],
+            "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DurationInputComponent>",
+                    "defaultValue": "{\n    title: 'Components/Duration Input',\n    component: DurationInputComponent,\n    argTypes: {\n        seconds: { control: 'number' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        maxDuration: { control: 'number' },\n        height: { control: 'text' },\n        secondsChange: { action: 'change' }\n    },\n    args: {\n        secondsChange: fn()\n    },\n    tags: ['autodocs']\n}"
+                },
+                {
+                    "name": "Sample",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {}\n}"
+                },
+                {
+                    "name": "types",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "EditMode"
+                }
+            ],
             "projects/angular-component-library/src/lib/components/input/input.stories.ts": [
                 {
                     "name": "meta",
@@ -3616,28 +3676,6 @@
                     "defaultValue": "{\n    args: {\n        input: '123456',\n        width: '160px'\n    }\n}"
                 }
             ],
-            "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts": [
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<SearchInputComponent>",
-                    "defaultValue": "{\n    title: 'Components/Search Input',\n    component: SearchInputComponent,\n    argTypes: {\n        filter: { control: 'text' },\n        classStyles: {\n            control: 'select',\n            options: [\n                '',\n                'no-radius',\n                'full-width',\n                'small left',\n                'small right'\n            ]\n        },\n        placeholderText: { control: 'text' },\n        filterChange: { action: 'change' }\n    },\n    args: { filterChange: fn() },\n    tags: ['autodocs']\n}"
-                },
-                {
-                    "name": "Sample",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        filter: '123456'\n    }\n}"
-                }
-            ],
             "projects/angular-component-library/src/lib/components/popover/popover.stories.ts": [
                 {
                     "name": "meta",
@@ -3658,6 +3696,28 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    render: () => ({\n        template: `<div [style.border]=\"'1px solid black'\" [style.position]=\"'relative'\" [style.height.px]=\"30\" [style.width.px]=\"30\"><popover-component [show]=true><p>Hello</p></popover-component></div>`\n    })\n}"
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<SearchInputComponent>",
+                    "defaultValue": "{\n    title: 'Components/Search Input',\n    component: SearchInputComponent,\n    argTypes: {\n        filter: { control: 'text' },\n        classStyles: {\n            control: 'select',\n            options: [\n                '',\n                'no-radius',\n                'full-width',\n                'small left',\n                'small right'\n            ]\n        },\n        placeholderText: { control: 'text' },\n        filterChange: { action: 'change' }\n    },\n    args: { filterChange: fn() },\n    tags: ['autodocs']\n}"
+                },
+                {
+                    "name": "Sample",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        filter: '123456'\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/segmented-btn/segmented-btn.stories.ts": [
@@ -3895,19 +3955,6 @@
                     "kind": 184
                 }
             ],
-            "projects/angular-component-library/src/lib/components/alert/alert.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<AlertComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 184
-                }
-            ],
             "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
                 {
                     "name": "Story",
@@ -3915,6 +3962,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<BadgeComponent>",
                     "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/alert/alert.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<AlertComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -3973,19 +4033,6 @@
                     "kind": 184
                 }
             ],
-            "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<CollapsibleComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 184
-                }
-            ],
             "projects/angular-component-library/src/lib/components/color-palette/color-palette.stories.ts": [
                 {
                     "name": "Story",
@@ -3999,13 +4046,13 @@
                     "kind": 184
                 }
             ],
-            "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts": [
+            "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<DateRangePickerComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts",
+                    "rawtype": "StoryObj<CollapsibleComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -4025,13 +4072,13 @@
                     "kind": 184
                 }
             ],
-            "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts": [
+            "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<DurationInputComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
+                    "rawtype": "StoryObj<DateRangePickerComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/date-range-picker/date-range-picker.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -4058,6 +4105,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<DropzoneComponent>",
                     "file": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DurationInputComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/duration-input/duration-input.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -4155,19 +4215,6 @@
                     "kind": 184
                 }
             ],
-            "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<SearchInputComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 184
-                }
-            ],
             "projects/angular-component-library/src/lib/components/popover/popover.stories.ts": [
                 {
                     "name": "Story",
@@ -4175,6 +4222,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<PopoverComponent>",
                     "file": "projects/angular-component-library/src/lib/components/popover/popover.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<SearchInputComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/search-input/search-input.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -4272,19 +4332,6 @@
                     "kind": 184
                 }
             ],
-            "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<TableHeaderComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 184
-                }
-            ],
             "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts": [
                 {
                     "name": "Story",
@@ -4292,6 +4339,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<TableContentComponent>",
                     "file": "projects/angular-component-library/src/lib/components/table/table-content/table-content.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TableHeaderComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/table/table-header/table-header.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -4545,6 +4605,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Inverted",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Light",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -5245,6 +5315,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "iconOptions",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Light",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -5704,6 +5784,16 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/select/select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "iconOptions",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -5724,7 +5814,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "meta",
+                "name": "LightGray",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -5734,7 +5824,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Sample",
+                "name": "meta",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

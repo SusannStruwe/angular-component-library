@@ -48,7 +48,7 @@ that do not support them, like touch displays
 @media (hover: hover) {
     input {
         &:hover {
-            border: 2px solid var(--accent-color);
+            border: var(--border-width) solid var(--accent-color);
         }
     }
 }

@@ -23,6 +23,8 @@ import { Icons } from '../../model/icons';
 })
 export class SearchInputComponent {
     @Input() filter = '';
+    @Input() customClass?: string;
+    /** @deprecated Use customClass instead. */
     @Input() classStyles?: string;
     @Input() placeholderText? = '';
 
@@ -32,6 +34,10 @@ export class SearchInputComponent {
     faCloseCircle: IconDefinition = Icons.faCircleXmark;
 
     randomId: string = Math.floor(Math.random() * 16777215).toString(16);
+
+    get customClassName(): string {
+        return this.customClass ?? this.classStyles ?? '';
+    }
 
     /**
      * Filter string has changed

@@ -23,5 +23,11 @@ import { Component, Input } from '@angular/core';
 })
 export class TableComponent {
     @Input() scrollbarWidth = 0;
+    @Input() customClass?: string;
+    /** @deprecated Use customClass instead. */
     @Input() classStyle?: string;
+
+    get customClassName(): string {
+        return this.customClass ?? this.classStyle ?? '';
+    }
 }

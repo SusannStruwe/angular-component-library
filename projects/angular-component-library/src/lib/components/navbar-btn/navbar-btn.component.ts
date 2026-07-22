@@ -27,8 +27,14 @@ export class NavbarBtnComponent {
 
     @Input() disabled?: boolean = false;
     // example --> gray, delete
+    @Input() customClass?: string = '';
+    /** @deprecated Use customClass instead. */
     @Input() classStyle?: string = '';
 
     // example --> active or not
     @Input() active?: boolean;
+
+    get customClassName(): string {
+        return this.customClass ?? this.classStyle ?? '';
+    }
 }

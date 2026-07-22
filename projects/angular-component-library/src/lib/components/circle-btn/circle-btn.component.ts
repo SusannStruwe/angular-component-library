@@ -34,8 +34,14 @@ export class CircleBtnComponent {
     @Input() backgroundColor?: string;
 
     // example --> gray, delete
+    @Input() customClass?: string = '';
+    /** @deprecated Use customClass instead. */
     @Input() classStyle?: string = '';
 
     // example --> 100% or not
     @Input() width?: string;
+
+    get customClassName(): string {
+        return this.customClass ?? this.classStyle ?? '';
+    }
 }

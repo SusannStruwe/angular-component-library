@@ -32,6 +32,8 @@ import { filters, headerItems } from './util';
 import { TableStyle } from '../model/table-style.enum';
 import { TableComponent } from '../components/table/table.component';
 
+type OverviewThemeClass = '' | 'theme-light-gray';
+
 /**
  * This is a wrapper component to give an overview oever all components
  *
@@ -67,7 +69,8 @@ import { TableComponent } from '../components/table/table.component';
         TableComponent,
         TableHeaderComponent
     ],
-    templateUrl: './overview-wrapper.component.html'
+    templateUrl: './overview-wrapper.component.html',
+    styleUrls: ['./overview-wrapper.component.scss']
 })
 export class OverviewWrapperComponent {
     faInfoCircle: IconDefinition = Icons.faInfoCircle;
@@ -77,6 +80,12 @@ export class OverviewWrapperComponent {
     faChevronUp: IconDefinition = Icons.faChevronUp;
     faPalette: IconDefinition = Icons.faPalette;
     faEyeSlash: IconDefinition = Icons.faEyeSlash;
+
+    themeOptions: Array<{ label: string; value: OverviewThemeClass }> = [
+        { label: 'Default', value: '' },
+        { label: 'Light Gray', value: 'theme-light-gray' }
+    ];
+    activeThemeClass: OverviewThemeClass = '';
 
     open = false;
 
@@ -100,7 +109,7 @@ export class OverviewWrapperComponent {
     showAlert = true;
     alertTypes: typeof AlertType = AlertType;
 
-    selectStyle: SelectStyle = SelectStyle.SCHEDULER;
+    selectAppearance: SelectStyle = SelectStyle.SCHEDULER;
 
     // inputs
     duration = 7400;
@@ -119,4 +128,8 @@ export class OverviewWrapperComponent {
     filters = filters;
     lightStyle = TableStyle.LIGHT;
     tableStyle = TableStyle.DARK;
+
+    setTheme(themeClass: OverviewThemeClass): void {
+        this.activeThemeClass = themeClass;
+    }
 }

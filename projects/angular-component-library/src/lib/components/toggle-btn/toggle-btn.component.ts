@@ -30,6 +30,8 @@ export class ToggleBtnComponent {
     @Input() label?: string;
     @Input() checked = true;
     @Input() isDisabled = false;
+    @Input() customClass?: string;
+    /** @deprecated Use customClass instead. */
     @Input() classStyle?: string;
     @Input() appearance: ToggleBtnAppearance = 'default';
 
@@ -58,6 +60,10 @@ export class ToggleBtnComponent {
 
     get sizeClass(): string {
         return `size-${this.toggleHeight}`;
+    }
+
+    get customClassName(): string {
+        return this.customClass ?? this.classStyle ?? '';
     }
 
     toggleState(): void {

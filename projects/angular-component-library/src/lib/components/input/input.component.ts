@@ -22,6 +22,8 @@ import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 })
 export class InputComponent {
     @Input() input: string | number = '';
+    @Input() customClass?: string;
+    /** @deprecated Use customClass instead. */
     @Input() classStyles?: string;
     @Input() placeholderText? = '';
     @Input() type = 'text';
@@ -31,6 +33,10 @@ export class InputComponent {
     @Output() inputChange = new EventEmitter<string | number>();
 
     randomId: string = Math.floor(Math.random() * 16777215).toString(16);
+
+    get customClassName(): string {
+        return this.customClass ?? this.classStyles ?? '';
+    }
 
     /**
      * Input string has changed

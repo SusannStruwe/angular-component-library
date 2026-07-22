@@ -30,7 +30,7 @@
         @if (withFilter) {
             <search-input-component
                 [style.margin.em]="'0.25'"
-                [classStyles]="'full-width no-radius'"
+                [customClass]="'full-width no-radius'"
                 [placeholderText]="filterPlaceholder"
                 [(filter)]="filter"
                 (filterChange)="filterAndSort()">

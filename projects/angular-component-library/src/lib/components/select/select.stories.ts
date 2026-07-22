@@ -23,7 +23,7 @@ const iconOptions: Record<string, IconDefinition> = {
     faTrash: faTrash
 };
 
-const selectStyle: typeof SelectStyle = SelectStyle;
+const selectAppearances: typeof SelectStyle = SelectStyle;
 
 const selectItems = [
     new SelectItem('select1', undefined, Icons.faInfoCircle),
@@ -60,12 +60,20 @@ const meta: Meta<SelectComponent> = {
             options: Object.keys(iconOptions),
             mapping: iconOptions
         },
-        classStyle: {
+        appearance: {
             control: {
                 type: 'select'
             },
-            options: Object.keys(selectStyle),
+            options: Object.keys(selectAppearances),
             mapping: SelectStyle
+        },
+        selectStyle: {
+            control: false,
+            description: 'Deprecated: use appearance instead.'
+        },
+        classStyle: {
+            control: false,
+            description: 'Deprecated legacy alias: use appearance instead.'
         },
         withBlankOption: { control: 'boolean' },
         withDeselect: { control: 'boolean' },
@@ -87,7 +95,7 @@ export default meta;
 
 type Story = StoryObj<SelectComponent>;
 
-export const Sample: Story = {
+export const Default: Story = {
     args: {
         label: 'Label: ',
         items: selectItems,
@@ -111,7 +119,27 @@ export const Light: Story = {
         selectedItem: selectedItem,
         filterPlaceholder: 'Select...',
         show: true,
-        classStyle: SelectStyle.LIGHT,
+        appearance: SelectStyle.LIGHT,
+        width: '600px',
+        menuHeight: '100px'
+    },
+    parameters: {
+        docs: {
+            description: {
+                story: 'Component to select items'
+            }
+        }
+    }
+};
+
+export const LightGray: Story = {
+    args: {
+        label: 'Label: ',
+        items: selectItems,
+        selectedItem: selectedItem,
+        filterPlaceholder: 'Select...',
+        show: true,
+        appearance: SelectStyle.LIGHT_GRAY,
         width: '600px',
         menuHeight: '100px'
     },

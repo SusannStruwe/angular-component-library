@@ -9,7 +9,11 @@ const meta: Meta<ToggleBtnComponent> = {
         label: { control: 'text' },
         checked: { control: 'boolean' },
         isDisabled: { control: 'boolean' },
-        classStyle: { control: 'text' },
+        customClass: { control: 'text' },
+        classStyle: {
+            control: false,
+            description: 'Deprecated: use customClass instead.'
+        },
         appearance: { control: 'radio', options: ['default', 'custom'] },
         toggleHeight: {
             control: 'radio',

@@ -8,7 +8,7 @@ import {
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { within, expect, waitFor, userEvent } from 'storybook/test';
 
-const defaultTemplateMock = `   <collapsible-component [show]="false" [classStyles]="'simple'">
+const defaultTemplateMock = `   <collapsible-component [show]="false" [customClass]="'simple'">
         <div header>
             <p [style.width.px]="200">Header</p>
         </div>
@@ -21,7 +21,7 @@ const defaultTemplateMock = `   <collapsible-component [show]="false" [classStyl
 const faUp: IconDefinition = faChevronUp;
 const faDown: IconDefinition = faChevronDown;
 const show = false;
-const iconTemplateMock = `   <collapsible-component [(show)]="show" [classStyles]="'simple'">
+const iconTemplateMock = `   <collapsible-component [(show)]="show" [customClass]="'simple'">
         <div header>
             <div class="flex-row">
                 <p [style.width.px]="200">Header with icon</p>

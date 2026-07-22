@@ -33,6 +33,8 @@ export const activeBtn: SegmentedBtnItem = btnArray[1];
     styleUrls: ['./segmented-btn.component.scss']
 })
 export class SegmentedBtnComponent {
+    @Input() customClass: string = '';
+    /** @deprecated Use customClass instead. */
     @Input() classStyle: string = '';
     // example ->   buttons = [{text:"left", value: "", isDisabled: false, icon: faXing}]
     @Input() btnArray: SegmentedBtnItem[] = [];
@@ -41,6 +43,10 @@ export class SegmentedBtnComponent {
 
     @Output() btnSelected = new EventEmitter<SegmentedBtnItem>();
     @Output() activeBtnChange = new EventEmitter<SegmentedBtnItem>();
+
+    get customClassName(): string {
+        return this.customClass || this.classStyle;
+    }
 
     btnClick(event: Event, item: SegmentedBtnItem): void {
         event.stopPropagation();

@@ -56,6 +56,10 @@ export class SelectComponent implements OnInit, OnChanges {
     @Input() faIconBefore?: IconDefinition;
     @Input() withFilter?: boolean;
     @Input() filterPlaceholder?: string;
+    @Input() appearance?: SelectStyle;
+    /** @deprecated Use appearance instead. */
+    @Input() selectStyle?: SelectStyle;
+    /** @deprecated Use appearance instead. */
     @Input() classStyle?: SelectStyle;
     @Input() withBlankOption = false;
     @Input() withDeselect = true;
@@ -72,6 +76,10 @@ export class SelectComponent implements OnInit, OnChanges {
 
     itemsBefore: SelectItem[] = [];
     filter = '';
+
+    get appearanceClass(): SelectStyle | undefined {
+        return this.appearance ?? this.selectStyle ?? this.classStyle;
+    }
 
     ngOnInit(): void {
         this.itemsBefore = cloneDeep(this.items);

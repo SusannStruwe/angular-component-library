@@ -41,9 +41,15 @@ export class FilledBtnComponent {
     @Input() isActive?: boolean;
 
     // example --> gray, delete
+    @Input() customClass?: string = '';
+    /** @deprecated Use customClass instead. */
     @Input() classStyle?: string = '';
     // example --> filling or shining
     @Input() hoverStyle = HoverStyle.SIMPLE;
     // example --> 100% or not
     @Input() width?: string;
+
+    get customClassName(): string {
+        return this.customClass ?? this.classStyle ?? '';
+    }
 }

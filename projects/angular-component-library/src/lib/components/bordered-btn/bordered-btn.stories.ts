@@ -51,9 +51,13 @@ const meta: Meta<BorderedBtnComponent> = {
         },
         showIcon: { control: 'boolean' },
         isDisabled: { control: 'boolean' },
-        classStyle: {
+        customClass: {
             control: 'select',
             options: ['gray', 'delete']
+        },
+        classStyle: {
+            control: false,
+            description: 'Deprecated: use customClass instead.'
         },
         width: { control: 'text' },
         isSpinning: { control: 'boolean' },
@@ -102,7 +106,7 @@ export const Delete: Story = {
     args: {
         label: 'Delete',
         faIcon: faTrash,
-        classStyle: 'delete',
+        customClass: 'delete',
         width: '200px'
     }
 };
@@ -112,7 +116,7 @@ export const DeleteActive: Story = {
         label: 'DeleteActive',
         isActive: true,
         faIcon: faTrash,
-        classStyle: 'delete',
+        customClass: 'delete',
         width: '200px'
     }
 };
@@ -123,7 +127,7 @@ export const DeleteDisabled: Story = {
         isDisabled: true,
         isActive: true,
         faIcon: faTrash,
-        classStyle: 'delete',
+        customClass: 'delete',
         width: '200px'
     }
 };

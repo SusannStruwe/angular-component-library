@@ -22,8 +22,14 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 export class BadgeComponent {
     @Input() label: string | number = '';
     @Input() borderRadius: number = 0;
+    @Input() customClass?: string;
+    /** @deprecated Use customClass instead. */
     @Input() classStyle?: string;
     @Input() isDisabled? = false;
     @Input() postIcon?: IconDefinition;
     @Input() preIcon?: IconDefinition;
+
+    get customClassName(): string {
+        return this.customClass ?? this.classStyle ?? '';
+    }
 }

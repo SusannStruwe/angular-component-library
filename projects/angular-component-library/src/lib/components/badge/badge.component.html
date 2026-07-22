@@ -2,7 +2,7 @@
     class="badge"
     [attr.aria-label]="label"
     [attr.role]="'button'"
-    [ngClass]="classStyle ?? ''"
+    [ngClass]="customClassName"
     [style.border-radius.px]="borderRadius"
     [class.disabled]="isDisabled">
     @if (preIcon) {

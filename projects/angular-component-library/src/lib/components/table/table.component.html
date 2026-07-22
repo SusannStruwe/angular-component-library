@@ -1,4 +1,4 @@
-<div [ngClass]="['table-container', classStyle ?? '']">
+<div [ngClass]="['table-container', customClassName]">
     <div class="table-header" [style.padding-right.px]="scrollbarWidth">
         <ng-content select="[header]"></ng-content>
     </div>
