@@ -128,14 +128,6 @@ body {
     --segmented-btn-active-text-color: var(--fa-icon-color);
     --segmented-btn-active-icon-color: var(--fa-icon-color);
 
-    /* Toggle variant overrides: toggle-btn brand appearance */
-    --toggle-btn-brand-unchecked-bg: #aaaaaa;
-    --toggle-btn-brand-checked-bg: #b028ba;
-    --toggle-btn-brand-slider-bg: #ffffff;
-    /* Deprecated aliases for the former "custom" toggle appearance */
-    --toggle-btn-custom-unchecked-bg: #aaaaaa;
-    --toggle-btn-custom-checked-bg: #b028ba;
-    --toggle-btn-custom-slider-bg: #ffffff;
     /**
     * @tokens-end
     */
@@ -258,14 +250,14 @@ body {
     --z-index-6: 1000; //modals, non-modals, popovers, tooltips
     --z-index-7: 1001; // select menus and overlays inside higher-level surfaces
 
-    /* Shared sizing tokens: most form controls, buttons, tables, tabs */
+    /* Shared sizing tokens: most form controls, buttons, tabs */
     --navbar-height: 45px;
     --btn-height: 40px;
     --input-height: 40px;
     --sub-navbar-height: 45px;
     --tab-bg-height: 45px;
 
-    /* Shared radius/border tokens: alerts, badges, inputs, tables, tags */
+    /* Shared radius/border tokens: alerts, badges, inputs, tags */
     --badge-radius: 20px;
     --alert-radius: 0px;
     --input-radius: 0px;
@@ -273,7 +265,7 @@ body {
     --border-radius: 0px;
     --border-width: 1px;
 
-    /* Shared layout tokens: buttons, tables, modal/content widths */
+    /* Shared layout tokens: buttons, modal/content widths */
     --btn-padding: 0px 15px;
     --btn-small-height: 35px;
     --btn-small-padding: 0px 10px;

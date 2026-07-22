@@ -10,9 +10,17 @@ import { AnimationStyle, LoaderStyle } from '../../model/loader-style.enum';
  * ```
  * <loader-component
  *   [style.border]="'1px solid #ddd'"
- *   [loaderStyle]="dotLoader2"
- *   [label]="'Daten werden geladen...'">
+ *   [loaderStyle]="loaderStyleDotLoader2"
+ *   [animation]="'linear'"
+ *   [label]="'Loading data...'"
+ *   [paddingTop]="'80px'">
  * </loader-component>
+ *
+ * Key inputs:
+ * - `loaderStyle` controls the visual loader variant.
+ * - `animation` controls the timing function.
+ * - `label` adds optional descriptive text.
+ * - `paddingTop` controls the vertical spacing around the loader.
  * ```
  */
 @Component({

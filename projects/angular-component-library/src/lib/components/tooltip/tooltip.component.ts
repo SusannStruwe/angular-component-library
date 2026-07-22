@@ -8,6 +8,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
  * ```
  * <tooltip-component>
  * </tooltip-component>
+ *
+ * Key behavior:
+ * - This component is positioned and filled internally by the tooltip directive logic.
+ * - It does not expose public inputs and is typically not configured directly in templates.
  * ```
  */
 @Component({

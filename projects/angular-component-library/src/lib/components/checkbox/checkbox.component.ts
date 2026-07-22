@@ -10,8 +10,15 @@ import { EditMode } from '../../model/edit-mode.enum';
  * @howToUse
  * ```
  * <checkbox-component
- *   [(value)]="checked">
+ *   [(value)]="acceptTerms"
+ *   [mode]="editModeWrite"
+ *   [height]="20">
  * </checkbox-component>
+ *
+ * Key inputs:
+ * - `value` enables two-way binding for the checked state.
+ * - `mode` switches between interactive and read-only behavior.
+ * - `height` controls the rendered checkbox size.
  * ```
  */
 @Component({

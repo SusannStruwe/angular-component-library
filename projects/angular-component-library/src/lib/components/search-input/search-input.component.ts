@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+    Component,
+    EventEmitter,
+    HostBinding,
+    Input,
+    Output
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
@@ -13,8 +19,14 @@ import { Icons } from '../../model/icons';
  * <search-input-component
  *   [(filter)]="filter"
  *   [placeholderText]="'Search...'"
- *   customClass="full-width">
+ *   (filterChange)="onFilterChanged($event)"
+ *   [customClass]="'full-width my-app-search'">
  * </search-input-component>
+ *
+ * Key inputs:
+ * - `filter` enables two-way binding for the current search value.
+ * - `placeholderText` customizes the input prompt.
+ * - `customClass` can be used to pass additional project-specific classes.
  * ```
  */
 @Component({
@@ -25,6 +37,7 @@ import { Icons } from '../../model/icons';
 })
 export class SearchInputComponent {
     @Input() filter = '';
+    /** Optional custom CSS classes for project-specific styling. */
     @Input() customClass?: string;
     /** @deprecated Use customClass instead. */
     @Input() classStyles?: string;
@@ -39,6 +52,11 @@ export class SearchInputComponent {
 
     get customClassName(): string {
         return this.customClass ?? this.classStyles ?? '';
+    }
+
+    @HostBinding('class')
+    get hostClassName(): string {
+        return this.customClassName;
     }
 
     /**

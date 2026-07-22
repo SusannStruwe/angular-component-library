@@ -7,6 +7,10 @@ import { Colors } from '../../model/colors';
  * @howToUse
  * ```
  * <color-palette-component></color-palette-component>
+ *
+ * Key behavior:
+ * - This component has no public inputs.
+ * - It renders the standard library colors and CSS colors as a visual reference grid.
  * ```
  */
 @Component({

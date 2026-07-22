@@ -36,7 +36,11 @@ const meta: Meta<NavbarBtnComponent> = {
             mapping: iconOptions
         },
         disabled: { control: 'boolean' },
-        customClass: { control: 'text' },
+        customClass: {
+            control: 'text',
+            description:
+                'Optional custom CSS classes for project-specific styling.'
+        },
         classStyle: {
             control: false,
             description: 'Deprecated: use customClass instead.'

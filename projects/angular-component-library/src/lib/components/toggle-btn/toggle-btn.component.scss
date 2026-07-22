@@ -1,7 +1,3 @@
-/*
-CSS Variables -> use --toggle-btn-* variables for styling custom variants
-*/
-
 :host {
     position: relative;
     display: flex;
@@ -54,54 +50,6 @@ p {
         --toggle-width-current: 43px;
         --toggle-thumb-size-current: 13px;
         --toggle-thumb-offset-end: 4px;
-    }
-
-    &.appearance-brand {
-        --toggle-track-bg: var(
-            --toggle-btn-brand-unchecked-bg,
-            var(--toggle-btn-custom-unchecked-bg)
-        );
-        --toggle-track-border-color: var(
-            --toggle-btn-brand-unchecked-bg,
-            var(--toggle-btn-custom-unchecked-bg)
-        );
-        --toggle-track-active-bg: var(
-            --toggle-btn-brand-checked-bg,
-            var(--toggle-btn-custom-checked-bg)
-        );
-        --toggle-track-active-border-color: var(
-            --toggle-btn-brand-checked-bg,
-            var(--toggle-btn-custom-checked-bg)
-        );
-        --toggle-track-hover-border-color: color-mix(
-            in srgb,
-            var(--toggle-track-border-color) 85%,
-            black
-        );
-        --toggle-track-hover-active-bg: color-mix(
-            in srgb,
-            var(--toggle-track-active-bg) 85%,
-            black
-        );
-        --toggle-track-hover-active-border-color: var(
-            --toggle-track-hover-active-bg
-        );
-        --toggle-thumb-bg: var(
-            --toggle-btn-brand-slider-bg,
-            var(--toggle-btn-custom-slider-bg)
-        );
-        --toggle-thumb-active-bg: var(
-            --toggle-btn-brand-slider-bg,
-            var(--toggle-btn-custom-slider-bg)
-        );
-        --toggle-thumb-hover-bg: var(
-            --toggle-btn-brand-slider-bg,
-            var(--toggle-btn-custom-slider-bg)
-        );
-        --toggle-thumb-hover-active-bg: var(
-            --toggle-btn-brand-slider-bg,
-            var(--toggle-btn-custom-slider-bg)
-        );
     }
 
     &.disabled {

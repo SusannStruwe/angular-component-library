@@ -23,11 +23,21 @@ import { FormsModule } from '@angular/forms';
  * @howToUse
  * ```
  * <multi-select-component
- *   [items]="items"
- *   [label]="'Select items'"
+ *   [items]="statusOptions"
+ *   [label]="'Select statuses'"
  *   [faIcon]="faChevronDown"
  *   [withFilter]="true"
+ *   filterPlaceholder="Filter statuses"
+ *   [backgroundColor]="'#ffffff'"
+ *   [noPadding]="false"
+ *   (itemsSelected)="onStatusesSelected($event)"
  * ></multi-select-component>
+ *
+ * Key inputs:
+ * - `items` defines the available selectable values.
+ * - `withFilter` and `filterPlaceholder` control search behavior.
+ * - `backgroundColor` and `noPadding` adjust the visual layout.
+ * - `itemsSelected` emits the currently selected values.
  * ```
  */
 @Component({

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { HoverStyle } from '../../model/hover-style.enum';
@@ -19,11 +19,24 @@ function isBorderedBtnAppearance(
  * @howToUse
  * ```
  * <bordered-btn-component
+ *   type="button"
  *   [ariaLabel]="'Delete item'"
- *   [label]="'Delete'"
+ *   [label]="'Delete item'"
  *   [faIcon]="faTrash"
- *   appearance="delete">
+ *   [showIcon]="true"
+ *   appearance="delete"
+ *   hoverStyle="simple"
+ *   [isDisabled]="false"
+ *   [isActive]="false"
+ *   width="220px"
+ *   [customClass]="'my-app-btn'">
  * </bordered-btn-component>
+ *
+ * Key inputs:
+ * - `appearance` controls the built-in visual variant.
+ * - `hoverStyle` controls the interaction behavior.
+ * - `customClass` can be used to pass additional project-specific classes.
+ * - `isActive`, `isDisabled`, and `width` control state and layout.
  * ```
  */
 @Component({
@@ -39,7 +52,9 @@ export class BorderedBtnComponent {
     @Input() faIcon?: IconDefinition;
     @Input() showIcon = true;
     @Input() isDisabled?: boolean = false;
+    /** Built-in appearance variant of the component. */
     @Input() appearance: BorderedBtnAppearance = 'default';
+    /** Optional custom CSS classes for project-specific styling. */
     @Input() customClass?: string = '';
     /** @deprecated Use appearance or customClass instead. */
     @Input() classStyle?: string = '';
@@ -68,5 +83,10 @@ export class BorderedBtnComponent {
         return this.classStyle && !isBorderedBtnAppearance(this.classStyle)
             ? this.classStyle
             : '';
+    }
+
+    @HostBinding('class')
+    get hostClassName(): string {
+        return this.customClassName;
     }
 }

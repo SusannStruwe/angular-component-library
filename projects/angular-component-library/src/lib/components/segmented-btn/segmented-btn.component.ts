@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+    Component,
+    EventEmitter,
+    HostBinding,
+    Input,
+    Output
+} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -20,10 +26,17 @@ export const activeBtn: SegmentedBtnItem = btnArray[1];
  * @howToUse
  * ```
  * <segmented-btn-component
- *    [btnArray] = "buttons"
+ *    [btnArray]="timeRangeButtons"
  *    [(activeBtn)]="activeTimeSpanBtn"
+ *    [customClass]="'my-app-segmented-btn'"
  *    (btnSelected)="timeSpanBtnClicked($event)">
  *  </segmented-btn-component>
+ *
+ * Key inputs:
+ * - `btnArray` defines the available segmented button items.
+ * - `activeBtn` enables two-way binding for the current selection.
+ * - `btnSelected` emits the selected item on click.
+ * - `customClass` can be used to pass additional project-specific classes.
  * ```
  */
 @Component({
@@ -33,6 +46,7 @@ export const activeBtn: SegmentedBtnItem = btnArray[1];
     styleUrls: ['./segmented-btn.component.scss']
 })
 export class SegmentedBtnComponent {
+    /** Optional custom CSS classes for project-specific styling. */
     @Input() customClass: string = '';
     /** @deprecated Use customClass instead. */
     @Input() classStyle: string = '';
@@ -46,6 +60,11 @@ export class SegmentedBtnComponent {
 
     get customClassName(): string {
         return this.customClass || this.classStyle;
+    }
+
+    @HostBinding('class')
+    get hostClassName(): string {
+        return this.customClassName;
     }
 
     btnClick(event: Event, item: SegmentedBtnItem): void {

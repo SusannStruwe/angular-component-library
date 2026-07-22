@@ -15,17 +15,25 @@ import { FileListDisplayMode } from '../../model/file-list-display-mode.type';
  * ```
  * <dropzone-component
  *   [files]="planningInputFiles"
- *   choseFileLabel="Dateien auswaehlen"
- *   title="ZIP-Dateien oder JSON-Dateien hierher ziehen"
- *   subtitle="Mehrere Dateien koennen gleichzeitig ausgewaehlt werden."
- *   [icon]="Icons.faUpload"
- *   [showButtonIcon]="false"
+ *   choseFileLabel="Choose files"
+ *   title="Drop ZIP or JSON files here"
+ *   subtitle="Multiple files can be selected at the same time."
+ *   [icon]="faUpload"
+ *   [showButtonIcon]="true"
  *   fileListDisplay="summary"
- *   [allowedExtension]="['json']"
+ *   [allowedExtension]="['zip', 'json']"
  *   [fileArrayLength]="100"
- *   [maxSizeOfFiles]="null"
+ *   [maxSizeOfFiles]="5000"
+ *   height="140px"
+ *   width="100%"
  *   (filesChanged)="filesChanged($event)">
  * </dropzone-component>
+ *
+ * Key inputs:
+ * - `files` contains the current file list.
+ * - `allowedExtension`, `fileArrayLength`, and `maxSizeOfFiles` validate incoming files.
+ * - `title`, `subtitle`, `icon`, and `showButtonIcon` control the visible dropzone content.
+ * - `fileListDisplay`, `height`, and `width` control presentation and layout.
  * ```
  */
 @Component({

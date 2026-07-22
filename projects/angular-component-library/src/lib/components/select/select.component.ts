@@ -26,14 +26,28 @@ import { SelectAppearance } from '../../model/select-appearance.type';
  * @howToUse
  * ```
  * <select-component
- *   [items]="selectItems"
- *   [selectedItem]="selectedItem"
- *   [label]="'Plan:'"
+ *   [items]="planOptions"
+ *   [selectedItem]="selectedPlan"
+ *   label="Plan"
  *   [faIcon]="faChevronDown"
+ *   [faIconBefore]="faLayerGroup"
  *   [withFilter]="true"
+ *   filterPlaceholder="Filter plans"
  *   appearance="light-gray"
- *   (itemSelected)="onSelectItem($event)">
+ *   [withBlankOption]="true"
+ *   [withDeselect]="false"
+ *   [show]="isPlanSelectOpen"
+ *   width="320px"
+ *   menuHeight="240px"
+ *   (showChange)="isPlanSelectOpen = $event"
+ *   (itemSelected)="onPlanSelected($event)">
  * </select-component>
+ *
+ * Key inputs:
+ * - `items` and `selectedItem` define the available options and current value.
+ * - `appearance` controls the built-in visual variant.
+ * - `withFilter`, `filterPlaceholder`, `withBlankOption`, and `withDeselect` control selection behavior.
+ * - `width`, `menuHeight`, and `show` control layout and open state.
  * ```
  */
 @Component({
@@ -57,6 +71,7 @@ export class SelectComponent implements OnInit, OnChanges {
     @Input() faIconBefore?: IconDefinition;
     @Input() withFilter?: boolean;
     @Input() filterPlaceholder?: string;
+    /** Built-in appearance variant of the component. */
     @Input() appearance?: SelectAppearance;
     /** @deprecated Use appearance instead. */
     @Input() classStyle?: SelectAppearance;

@@ -15,7 +15,9 @@ const meta: Meta<SearchInputComponent> = {
                 'full-width',
                 'small left',
                 'small right'
-            ]
+            ],
+            description:
+                'Optional custom CSS classes for project-specific styling.'
         },
         classStyles: {
             control: false,

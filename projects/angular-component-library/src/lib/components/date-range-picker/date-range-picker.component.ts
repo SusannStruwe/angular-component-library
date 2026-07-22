@@ -12,9 +12,18 @@ import { DatePickerComponent } from '../date-picker/date-picker.component';
  * @howToUse
  * ```
  * <date-range-picker-component
+ *   [startDate]="startDate"
+ *   [endDate]="endDate"
+ *   [randomIdStart]="'range-start'"
+ *   [randomIdEnd]="'range-end'"
  *   (startDateChange)="startDateChanged($event)"
  *   (endDateChange)="endDateChanged($event)">
  * </date-range-picker-component>
+ *
+ * Key inputs:
+ * - `startDate` and `endDate` define the selected range.
+ * - `startDateChange` and `endDateChange` emit updates independently.
+ * - `randomIdStart` and `randomIdEnd` can be set explicitly for stable DOM ids.
  * ```
  */
 @Component({

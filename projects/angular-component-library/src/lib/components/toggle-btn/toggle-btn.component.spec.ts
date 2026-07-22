@@ -61,8 +61,7 @@ describe('ToggleBtnComponent', () => {
         expect(toggleEl.classList.contains('settings')).toBeTrue();
     });
 
-    it('should apply brand appearance and compact size classes', () => {
-        component.appearance = 'brand';
+    it('should apply the compact size class', () => {
         component.toggleHeight = '25';
         fixture.detectChanges();
 
@@ -70,7 +69,6 @@ describe('ToggleBtnComponent', () => {
             By.css('.toggle')
         ).nativeElement;
 
-        expect(toggleEl.classList.contains('appearance-brand')).toBeTrue();
         expect(toggleEl.classList.contains('size-25')).toBeTrue();
     });
 

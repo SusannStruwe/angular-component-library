@@ -32,7 +32,6 @@ The library includes a list of different interaction components:
 - search-input
 - segmented-btn
 - select
-- table
 - tabs-view
 - tag-btn
 - toggle-btn

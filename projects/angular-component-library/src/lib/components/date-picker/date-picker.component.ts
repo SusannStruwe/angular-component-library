@@ -23,8 +23,16 @@ import { Icons } from '../../model/icons';
  * <date-picker-component
  *   [date]="selectedDate"
  *   [withInput]="true"
+ *   [clear]="true"
+ *   [randomId]="'start-date-picker'"
  *   (dateChanged)="dateChanged($event)">
  * </date-picker-component>
+ *
+ * Key inputs:
+ * - `date` defines the current value.
+ * - `withInput` controls whether the native date input is shown.
+ * - `clear` controls whether the current date can be cleared.
+ * - `randomId` can be set explicitly when deterministic DOM ids are needed.
  * ```
  */
 @Component({

@@ -1,9 +1,5 @@
 import { Meta, StoryObj } from '@storybook/angular';
-import {
-    TOGGLE_BTN_APPEARANCES,
-    TOGGLE_BTN_HEIGHTS,
-    ToggleBtnComponent
-} from './toggle-btn.component';
+import { TOGGLE_BTN_HEIGHTS, ToggleBtnComponent } from './toggle-btn.component';
 import { fn } from 'storybook/test';
 
 const meta: Meta<ToggleBtnComponent> = {
@@ -13,12 +9,15 @@ const meta: Meta<ToggleBtnComponent> = {
         label: { control: 'text' },
         checked: { control: 'boolean' },
         isDisabled: { control: 'boolean' },
-        customClass: { control: 'text' },
+        customClass: {
+            control: 'text',
+            description:
+                'Optional custom CSS classes for project-specific styling.'
+        },
         classStyle: {
             control: false,
             description: 'Deprecated: use customClass instead.'
         },
-        appearance: { control: 'radio', options: TOGGLE_BTN_APPEARANCES },
         toggleHeight: {
             control: 'radio',
             options: [...TOGGLE_BTN_HEIGHTS].reverse()
@@ -27,7 +26,6 @@ const meta: Meta<ToggleBtnComponent> = {
     },
     args: {
         checkedChange: fn(),
-        appearance: 'default',
         toggleHeight: 30
     },
     tags: ['autodocs']
@@ -58,29 +56,26 @@ export const Disabled: Story = {
     }
 };
 
-export const Custom: Story = {
+export const DefaultLarge: Story = {
     args: {
         label: 'Enabled',
         checked: true,
-        appearance: 'brand',
         toggleHeight: 30
     }
 };
 
-export const CustomSmall: Story = {
+export const Small: Story = {
     args: {
         label: 'Compact',
         checked: false,
-        appearance: 'brand',
         toggleHeight: 25
     }
 };
 
-export const CustomTiny: Story = {
+export const Tiny: Story = {
     args: {
         label: 'Tiny',
         checked: true,
-        appearance: 'brand',
         toggleHeight: 20
     }
 };

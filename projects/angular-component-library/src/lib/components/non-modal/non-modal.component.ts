@@ -20,8 +20,22 @@ import { Icons } from '../../model/icons';
  *
  * @howToUse
  * ```
- * <non-modal-component>
+ * <non-modal-component
+ *   [id]="'details-panel'"
+ *   [title]="'Details'"
+ *   [sizeClass]="'m'">
+ *   <div>
+ *       <h3>Selected item</h3>
+ *       <p>Place your non-modal content here.</p>
+ *   </div>
  * </non-modal-component>
+ *
+ * Key inputs:
+ * - `id` is required and is used by the modal service.
+ * - `title` and `sizeClass` define the panel header and size.
+ * - The main content is projected into the body.
+ *
+ * Open the panel through the `ModalService` with the configured `id`.
  * ```
  */
 @Component({

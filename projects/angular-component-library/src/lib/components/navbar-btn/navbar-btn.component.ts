@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
@@ -10,8 +10,16 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
  * ```
  * <navbar-btn-component
  *   [label]="'Settings'"
- *   [faIcon]="faCog">
+ *   [faIcon]="faCog"
+ *   [active]="true"
+ *   [disabled]="false"
+ *   [customClass]="'my-app-navbar-btn'">
  * </navbar-btn-component>
+ *
+ * Key inputs:
+ * - `label` and `faIcon` define the button content.
+ * - `active` and `disabled` control the visual state.
+ * - `customClass` can be used to pass additional project-specific classes.
  * ```
  */
 @Component({
@@ -26,7 +34,7 @@ export class NavbarBtnComponent {
     @Input() faIcon?: IconDefinition;
 
     @Input() disabled?: boolean = false;
-    // example --> gray, delete
+    /** Optional custom CSS classes for project-specific styling. */
     @Input() customClass?: string = '';
     /** @deprecated Use customClass instead. */
     @Input() classStyle?: string = '';
@@ -36,5 +44,10 @@ export class NavbarBtnComponent {
 
     get customClassName(): string {
         return this.customClass ?? this.classStyle ?? '';
+    }
+
+    @HostBinding('class')
+    get hostClassName(): string {
+        return this.customClassName;
     }
 }

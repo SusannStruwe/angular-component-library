@@ -35,7 +35,6 @@ The library includes a list of different interaction components:
 - search-input
 - segmented-btn
 - select
-- table
 - tabs-view
 - tag-btn
 - toggle-btn
@@ -43,13 +42,28 @@ The library includes a list of different interaction components:
 
 ## Styling
 
-Die Komponenten verwenden ein einheitliches Styling-Konzept:
+The components use a consistent styling approach:
 
-- `appearance` steuert die visuelle Variante
-- `hoverStyle` steuert das Interaktionsverhalten
-- `customClass` ist für zusätzliche projektspezifische Klassen gedacht
+- `appearance` controls the visual variant
+- `hoverStyle` controls the interaction behavior
+- `customClass` is intended for additional project-specific classes, for example to pass custom CSS classes from an application
 
-Veraltete Felder wie `classStyle` und `classStyles` sollten in neuen Implementierungen nicht mehr verwendet werden.
+Deprecated fields such as `classStyle` and `classStyles` should not be used in new implementations.
+
+Example for application-specific styling via `customClass` and CSS variables:
+
+```html
+<filled-btn-component label="Save" customClass="my-app-primary-btn">
+</filled-btn-component>
+```
+
+```scss
+.my-app-primary-btn {
+    --filled-btn-bg: #d9d9d9;
+    --filled-btn-text-color: #1f2937;
+    --filled-btn-hover-bg: #cfcfcf;
+}
+```
 
 ## License
 

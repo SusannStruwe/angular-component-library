@@ -33,7 +33,9 @@ const meta: Meta<BadgeComponent> = {
                 'current',
                 'manual',
                 'free'
-            ]
+            ],
+            description:
+                'Optional custom CSS classes for project-specific styling.'
         },
         classStyle: {
             control: false,

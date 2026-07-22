@@ -56,9 +56,14 @@ const meta: Meta<BorderedBtnComponent> = {
         isDisabled: { control: 'boolean' },
         appearance: {
             control: 'select',
-            options: BORDERED_BTN_APPEARANCES
+            options: BORDERED_BTN_APPEARANCES,
+            description: 'Built-in appearance variant of the component.'
         },
-        customClass: { control: 'text' },
+        customClass: {
+            control: 'text',
+            description:
+                'Optional custom CSS classes for project-specific styling.'
+        },
         classStyle: {
             control: false,
             description:

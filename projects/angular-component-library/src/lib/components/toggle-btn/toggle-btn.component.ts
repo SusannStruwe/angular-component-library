@@ -1,10 +1,13 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+    Component,
+    EventEmitter,
+    HostBinding,
+    Input,
+    Output
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-export const TOGGLE_BTN_APPEARANCES = ['default', 'brand'] as const;
-export type ToggleBtnAppearance = (typeof TOGGLE_BTN_APPEARANCES)[number];
-type ToggleBtnAppearanceInput = ToggleBtnAppearance | 'custom';
 export const TOGGLE_BTN_HEIGHTS = [20, 25, 30] as const;
 export type ToggleBtnHeightValue = (typeof TOGGLE_BTN_HEIGHTS)[number];
 export type ToggleBtnHeight = ToggleBtnHeightValue | number | `${number}`;
@@ -12,15 +15,23 @@ export type ToggleBtnHeight = ToggleBtnHeightValue | number | `${number}`;
 const DEFAULT_TOGGLE_BTN_HEIGHT: ToggleBtnHeightValue = 30;
 
 /**
- * Component to create segmented buttons.
+ * Component to create toggle buttons.
  *
  * @howToUse
  * ```
  * <toggle-btn-component
  *   [label]="'Notifications'"
  *   [(checked)]="notificationsEnabled"
- *   appearance="brand">
+ *   [toggleHeight]="25"
+ *   [isDisabled]="false"
+ *   [customClass]="'my-toggle'">
  * </toggle-btn-component>
+ *
+ * Key inputs:
+ * - `checked` enables two-way binding for the current toggle state.
+ * - `toggleHeight` controls the size preset.
+ * - `isDisabled` controls whether the user can change the state.
+ * - `customClass` can be used to pass additional project-specific classes.
  * ```
  */
 @Component({
@@ -33,10 +44,10 @@ export class ToggleBtnComponent {
     @Input() label?: string;
     @Input() checked = true;
     @Input() isDisabled = false;
+    /** Optional custom CSS classes for project-specific styling. */
     @Input() customClass?: string;
     /** @deprecated Use customClass instead. */
     @Input() classStyle?: string;
-    @Input() appearance: ToggleBtnAppearanceInput = 'default';
 
     private _toggleHeight: ToggleBtnHeightValue = DEFAULT_TOGGLE_BTN_HEIGHT;
 
@@ -57,20 +68,17 @@ export class ToggleBtnComponent {
 
     @Output() checkedChange = new EventEmitter<boolean>();
 
-    get normalizedAppearance(): ToggleBtnAppearance {
-        return this.appearance === 'custom' ? 'brand' : this.appearance;
-    }
-
-    get appearanceClass(): string {
-        return `appearance-${this.normalizedAppearance}`;
-    }
-
     get sizeClass(): string {
         return `size-${this.toggleHeight}`;
     }
 
     get customClassName(): string {
         return this.customClass ?? this.classStyle ?? '';
+    }
+
+    @HostBinding('class')
+    get hostClassName(): string {
+        return this.customClassName;
     }
 
     toggleState(): void {

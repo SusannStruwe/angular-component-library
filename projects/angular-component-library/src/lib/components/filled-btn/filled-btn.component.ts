@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { HoverStyle } from '../../model/hover-style.enum';
@@ -28,10 +28,24 @@ function isFilledBtnAppearance(
  * @howToUse
  * ```
  * <filled-btn-component
+ *   type="submit"
  *   [ariaLabel]="'Save changes'"
  *   [label]="'Save'"
- *   [faIcon]="faCheck">
+ *   [faIcon]="faCheck"
+ *   [showIcon]="true"
+ *   appearance="default"
+ *   hoverStyle="simple"
+ *   [isDisabled]="false"
+ *   [isActive]="false"
+ *   width="220px"
+ *   [customClass]="'my-app-btn'">
  * </filled-btn-component>
+ *
+ * Key inputs:
+ * - `appearance` controls the built-in visual variant.
+ * - `hoverStyle` controls the interaction behavior.
+ * - `customClass` can be used to pass additional project-specific classes.
+ * - `isActive`, `isDisabled`, `isSpinning`, and `width` control state and layout.
  * ```
  */
 @Component({
@@ -51,7 +65,9 @@ export class FilledBtnComponent {
     @Input() isDisabled?: boolean = false;
     // example --> active or not
     @Input() isActive?: boolean;
+    /** Built-in appearance variant of the component. */
     @Input() appearance: FilledBtnAppearance = 'default';
+    /** Optional custom CSS classes for project-specific styling. */
     @Input() customClass?: string = '';
     /** @deprecated Use appearance or customClass instead. */
     @Input() classStyle?: string = '';
@@ -76,5 +92,10 @@ export class FilledBtnComponent {
         return this.classStyle && !isFilledBtnAppearance(this.classStyle)
             ? this.classStyle
             : '';
+    }
+
+    @HostBinding('class')
+    get hostClassName(): string {
+        return this.customClassName;
     }
 }

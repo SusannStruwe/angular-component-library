@@ -5,8 +5,16 @@ import { Component, Input } from '@angular/core';
  *
  * @howToUse
  * ```
- * <popover-component>
+ * <popover-component
+ *   [show]="showHelpPopover"
+ *   [alignmentRight]="true">
+ *   <p>Popover content goes here.</p>
  * </popover-component>
+ *
+ * Key inputs:
+ * - `show` controls whether the popover is visible.
+ * - `alignmentRight` switches the popover alignment.
+ * - The content is projected into the popover body.
  * ```
  */
 @Component({

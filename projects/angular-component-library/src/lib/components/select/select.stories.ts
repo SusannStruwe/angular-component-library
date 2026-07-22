@@ -65,7 +65,8 @@ const meta: Meta<SelectComponent> = {
             control: {
                 type: 'select'
             },
-            options: SELECT_APPEARANCES
+            options: SELECT_APPEARANCES,
+            description: 'Built-in appearance variant of the component.'
         },
         classStyle: {
             control: false,

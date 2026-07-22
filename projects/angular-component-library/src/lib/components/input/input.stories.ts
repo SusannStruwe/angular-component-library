@@ -15,7 +15,9 @@ const meta: Meta<InputComponent> = {
                 'full-width',
                 'small left',
                 'small right'
-            ]
+            ],
+            description:
+                'Optional custom CSS classes for project-specific styling.'
         },
         classStyles: {
             control: false,
