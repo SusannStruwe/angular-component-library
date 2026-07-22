@@ -55,11 +55,23 @@ p {
         --toggle-thumb-offset-end: 4px;
     }
 
-    &.appearance-custom {
-        --toggle-track-background: var(--toggle-btn-custom-unchecked-background);
-        --toggle-track-border-color: var(--toggle-btn-custom-unchecked-background);
-        --toggle-track-active-background: var(--toggle-btn-custom-checked-background);
-        --toggle-track-active-border-color: var(--toggle-btn-custom-checked-background);
+    &.appearance-brand {
+        --toggle-track-background: var(
+            --toggle-btn-brand-unchecked-background,
+            var(--toggle-btn-custom-unchecked-background)
+        );
+        --toggle-track-border-color: var(
+            --toggle-btn-brand-unchecked-background,
+            var(--toggle-btn-custom-unchecked-background)
+        );
+        --toggle-track-active-background: var(
+            --toggle-btn-brand-checked-background,
+            var(--toggle-btn-custom-checked-background)
+        );
+        --toggle-track-active-border-color: var(
+            --toggle-btn-brand-checked-background,
+            var(--toggle-btn-custom-checked-background)
+        );
         --toggle-track-hover-border-color: color-mix(
             in srgb,
             var(--toggle-track-border-color) 85%,
@@ -73,11 +85,21 @@ p {
         --toggle-track-hover-active-border-color: var(
             --toggle-track-hover-active-background
         );
-        --toggle-thumb-background: var(--toggle-btn-custom-slider-background);
-        --toggle-thumb-active-background: var(--toggle-btn-custom-slider-background);
-        --toggle-thumb-hover-background: var(--toggle-btn-custom-slider-background);
+        --toggle-thumb-background: var(
+            --toggle-btn-brand-slider-background,
+            var(--toggle-btn-custom-slider-background)
+        );
+        --toggle-thumb-active-background: var(
+            --toggle-btn-brand-slider-background,
+            var(--toggle-btn-custom-slider-background)
+        );
+        --toggle-thumb-hover-background: var(
+            --toggle-btn-brand-slider-background,
+            var(--toggle-btn-custom-slider-background)
+        );
         --toggle-thumb-hover-active-background: var(
-            --toggle-btn-custom-slider-background
+            --toggle-btn-brand-slider-background,
+            var(--toggle-btn-custom-slider-background)
         );
     }
 

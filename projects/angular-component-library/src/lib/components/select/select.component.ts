@@ -18,7 +18,7 @@ import { cloneDeep } from 'lodash';
 import { SearchInputComponent } from '../search-input/search-input.component';
 import { FormsModule } from '@angular/forms';
 import { Icons } from '../../model/icons';
-import { SelectStyle } from '../../model/select-style.enum';
+import { SelectAppearance } from '../../model/select-appearance.type';
 
 /**
  * Component to create and show  select
@@ -26,12 +26,13 @@ import { SelectStyle } from '../../model/select-style.enum';
  * @howToUse
  * ```
  * <select-component
- *    [items]="selectItems"
- *    [faIcon]="faCaretDown"
- *    [label]="'Plan: '"
- *    [withFilter]="false"
- *    [selectedItem]="selectedItem.text"
- *    (itemSelected)="selectItemProduction($event)">
+ *   [items]="selectItems"
+ *   [selectedItem]="selectedItem"
+ *   [label]="'Plan:'"
+ *   [faIcon]="faChevronDown"
+ *   [withFilter]="true"
+ *   appearance="light-gray"
+ *   (itemSelected)="onSelectItem($event)">
  * </select-component>
  * ```
  */
@@ -56,11 +57,9 @@ export class SelectComponent implements OnInit, OnChanges {
     @Input() faIconBefore?: IconDefinition;
     @Input() withFilter?: boolean;
     @Input() filterPlaceholder?: string;
-    @Input() appearance?: SelectStyle;
+    @Input() appearance?: SelectAppearance;
     /** @deprecated Use appearance instead. */
-    @Input() selectStyle?: SelectStyle;
-    /** @deprecated Use appearance instead. */
-    @Input() classStyle?: SelectStyle;
+    @Input() classStyle?: SelectAppearance;
     @Input() withBlankOption = false;
     @Input() withDeselect = true;
     @Input() show? = false;
@@ -77,8 +76,8 @@ export class SelectComponent implements OnInit, OnChanges {
     itemsBefore: SelectItem[] = [];
     filter = '';
 
-    get appearanceClass(): SelectStyle | undefined {
-        return this.appearance ?? this.selectStyle ?? this.classStyle;
+    get appearanceClass(): SelectAppearance | undefined {
+        return this.appearance ?? this.classStyle;
     }
 
     ngOnInit(): void {

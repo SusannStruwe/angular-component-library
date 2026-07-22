@@ -1,5 +1,5 @@
 @if (mode === modes.WRITE) {
-    <div class="datepicker">
+    <div class="datepicker" [class.with-overlay]="showOverlayBtn">
         <input
             #dateTimePicker
             [attr.data-testid]="'date-input-' + randomId"
@@ -15,7 +15,7 @@
                 type="button"
                 class="btn-overlay"
                 [style.position]="withInput ? 'absolute' : 'relative'"
-                [style.height.px]="height ?? 40"
+                [style.height.px]="(height ?? 40) - 2"
                 (click)="showDatePicker()">
                 <fa-icon [icon]="faCalender"></fa-icon>
             </button>

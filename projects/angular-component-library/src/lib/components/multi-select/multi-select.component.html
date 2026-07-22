@@ -8,17 +8,22 @@
         [style.background-color]="backgroundColor"
         [style.border-color]="backgroundColor"
         [class.no-padding]="noPadding"
-        (click)="toggleFilter()"
-        class="filter-btn">
+        [class.selected]="show"
+        [class.colored]="hasCustomBackground"
+        (click)="toggleFilter()">
         @if (label) {
-            <span>{{ label }}</span>
+            <span class="label">{{ label }}</span>
         }
-        @if (faIcon) {
-            <fa-icon [icon]="faIcon"></fa-icon>
-        }
-        @if (selectedItems.length !== 0) {
-            <p>{{ selectedItems.length }}</p>
-        }
+        <span class="actions">
+            @if (selectedItems.length !== 0) {
+                <span class="count-badge">{{ selectedItems.length }}</span>
+            }
+            @if (faIcon) {
+                <span class="icon-slot">
+                    <fa-icon [icon]="faIcon"></fa-icon>
+                </span>
+            }
+        </span>
     </button>
 
     <div

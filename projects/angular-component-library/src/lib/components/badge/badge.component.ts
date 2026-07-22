@@ -9,7 +9,8 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
  * @howToUse
  * ```
  * <badge-component
- *  [label]="'scheduler.today' | translate ">
+ *   [label]="'Success'"
+ *   [customClass]="'success'">
  * </badge-component>
  * ```
  */

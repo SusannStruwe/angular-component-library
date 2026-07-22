@@ -15,7 +15,7 @@
         font-weight: var(--font-weight-normal);
         color: var(--field-text-color, var(--text-color));
         background: var(--field-background, white);
-        border: var(--border-width) solid var(--field-border-color, var(--input-border-color));
+        border: var(--border-width) solid var(--outlined-btn-border-color, var(--btn-border-color));
         border-radius: var(--input-radius);
         padding-right: 35px;
         padding-left: 20px;

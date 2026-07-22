@@ -19,10 +19,10 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
  * @howToUse
  * ```
  * <context-menu-component
- *    [items]="selectItems"
- *    [ariaLabel]="'Plan'"
- *    [label]="'Plan: '"
- *    (itemSelected)="selectItemProduction($event)">
+ *   [items]="menuItems"
+ *   [ariaLabel]="'Open actions'"
+ *   [label]="'Actions'"
+ *   (itemSelected)="onSelectAction($event)">
  * </context-menu-component>
  * ```
  */

@@ -9,9 +9,11 @@ import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
  *
  * @howToUse
  * ```
- * <search-input-component
- *  [(input)]="input">
- * </search-input-component>
+ * <input-component
+ *   [(input)]="username"
+ *   [placeholderText]="'Username'"
+ *   customClass="full-width">
+ * </input-component>
  * ```
  */
 @Component({

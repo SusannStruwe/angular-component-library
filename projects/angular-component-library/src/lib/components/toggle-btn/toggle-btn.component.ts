@@ -2,7 +2,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-export type ToggleBtnAppearance = 'default' | 'custom';
+export const TOGGLE_BTN_APPEARANCES = ['default', 'brand'] as const;
+export type ToggleBtnAppearance = (typeof TOGGLE_BTN_APPEARANCES)[number];
+type ToggleBtnAppearanceInput = ToggleBtnAppearance | 'custom';
 export const TOGGLE_BTN_HEIGHTS = [20, 25, 30] as const;
 export type ToggleBtnHeightValue = (typeof TOGGLE_BTN_HEIGHTS)[number];
 export type ToggleBtnHeight = ToggleBtnHeightValue | number | `${number}`;
@@ -15,9 +17,10 @@ const DEFAULT_TOGGLE_BTN_HEIGHT: ToggleBtnHeightValue = 30;
  * @howToUse
  * ```
  * <toggle-btn-component
- *    [label] = "show"
- *    [(state)]="stateChanged($event)">
- *  </toggle-btn-component>
+ *   [label]="'Notifications'"
+ *   [(checked)]="notificationsEnabled"
+ *   appearance="brand">
+ * </toggle-btn-component>
  * ```
  */
 @Component({
@@ -33,7 +36,7 @@ export class ToggleBtnComponent {
     @Input() customClass?: string;
     /** @deprecated Use customClass instead. */
     @Input() classStyle?: string;
-    @Input() appearance: ToggleBtnAppearance = 'default';
+    @Input() appearance: ToggleBtnAppearanceInput = 'default';
 
     private _toggleHeight: ToggleBtnHeightValue = DEFAULT_TOGGLE_BTN_HEIGHT;
 
@@ -54,8 +57,12 @@ export class ToggleBtnComponent {
 
     @Output() checkedChange = new EventEmitter<boolean>();
 
+    get normalizedAppearance(): ToggleBtnAppearance {
+        return this.appearance === 'custom' ? 'brand' : this.appearance;
+    }
+
     get appearanceClass(): string {
-        return `appearance-${this.appearance}`;
+        return `appearance-${this.normalizedAppearance}`;
     }
 
     get sizeClass(): string {

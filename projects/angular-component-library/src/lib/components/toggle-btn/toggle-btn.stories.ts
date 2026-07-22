@@ -1,5 +1,9 @@
 import { Meta, StoryObj } from '@storybook/angular';
-import { TOGGLE_BTN_HEIGHTS, ToggleBtnComponent } from './toggle-btn.component';
+import {
+    TOGGLE_BTN_APPEARANCES,
+    TOGGLE_BTN_HEIGHTS,
+    ToggleBtnComponent
+} from './toggle-btn.component';
 import { fn } from 'storybook/test';
 
 const meta: Meta<ToggleBtnComponent> = {
@@ -14,7 +18,7 @@ const meta: Meta<ToggleBtnComponent> = {
             control: false,
             description: 'Deprecated: use customClass instead.'
         },
-        appearance: { control: 'radio', options: ['default', 'custom'] },
+        appearance: { control: 'radio', options: TOGGLE_BTN_APPEARANCES },
         toggleHeight: {
             control: 'radio',
             options: [...TOGGLE_BTN_HEIGHTS].reverse()
@@ -58,7 +62,7 @@ export const Custom: Story = {
     args: {
         label: 'Enabled',
         checked: true,
-        appearance: 'custom',
+        appearance: 'brand',
         toggleHeight: 30
     }
 };
@@ -67,7 +71,7 @@ export const CustomSmall: Story = {
     args: {
         label: 'Compact',
         checked: false,
-        appearance: 'custom',
+        appearance: 'brand',
         toggleHeight: 25
     }
 };
@@ -76,7 +80,7 @@ export const CustomTiny: Story = {
     args: {
         label: 'Tiny',
         checked: true,
-        appearance: 'custom',
+        appearance: 'brand',
         toggleHeight: 20
     }
 };

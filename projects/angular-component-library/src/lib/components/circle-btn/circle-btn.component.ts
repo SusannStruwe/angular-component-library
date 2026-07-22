@@ -9,8 +9,9 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
  * @howToUse
  * ```
  * <circle-btn-component
+ *   [ariaLabel]="'Reload data'"
  *   [faIcon]="faCog"
- *   [backgroundColor]="red"
+ *   [backgroundColor]="'#486bff'"
  * ></circle-btn-component>
  * ```
  */

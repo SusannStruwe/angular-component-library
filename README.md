@@ -38,6 +38,17 @@ The library includes a list of different interaction components:
 - toggle-btn
 - tooltip
 
+## Styling API
+
+- `appearance` = visual variant
+- `hoverStyle` = interaction behavior
+- `customClass` = additional CSS classes
+
+Deprecated:
+
+- `classStyle`
+- `classStyles`
+
 ## Further details
 
 Further details can be found in [here](./projects/angular-component-library/README.md)

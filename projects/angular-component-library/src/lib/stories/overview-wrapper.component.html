@@ -42,20 +42,20 @@
 
                 <bordered-btn-component
                     [faIcon]="faInfoCircle"
-                    [customClass]="'delete'"
+                    appearance="delete"
                     [label]="'Delete BorderedBtn'">
                 </bordered-btn-component>
 
                 <bordered-btn-component
                     [faIcon]="faInfoCircle"
-                    [customClass]="'delete'"
+                    appearance="delete"
                     [isActive]="true"
                     [label]="'Active delete BorderedBtn'">
                 </bordered-btn-component>
 
                 <bordered-btn-component
                     [faIcon]="faInfoCircle"
-                    [customClass]="'delete'"
+                    appearance="delete"
                     [isDisabled]="true"
                     [label]="'Disabled delete BorderedBtn'">
                 </bordered-btn-component>
@@ -95,20 +95,20 @@
 
                 <borderless-btn-component
                     [faIcon]="faInfoCircle"
-                    [customClass]="'delete'"
+                    appearance="delete"
                     [label]="'Delete BorderlessBtn'">
                 </borderless-btn-component>
 
                 <borderless-btn-component
                     [faIcon]="faInfoCircle"
-                    [customClass]="'delete'"
+                    appearance="delete"
                     [label]="'Active delete BorderlessBtn'"
                     [isActive]="true">
                 </borderless-btn-component>
 
                 <borderless-btn-component
                     [faIcon]="faInfoCircle"
-                    [customClass]="'delete'"
+                    appearance="delete"
                     [label]="'Disabled delete BorderlessBtn'"
                     [isDisabled]="true">
                 </borderless-btn-component>
@@ -147,18 +147,18 @@
                 </filled-btn-component>
 
                 <filled-btn-component
-                    [customClass]="'delete'"
+                    appearance="delete"
                     [label]="'Style delete FilledBtn'">
                 </filled-btn-component>
 
                 <filled-btn-component
-                    [customClass]="'delete'"
+                    appearance="delete"
                     [label]="'Active delete FilledBtn'"
                     [isActive]="true">
                 </filled-btn-component>
 
                 <filled-btn-component
-                    [customClass]="'delete'"
+                    appearance="delete"
                     [isDisabled]="true"
                     [label]="'Disabled delete FilledBtn'">
                 </filled-btn-component>
@@ -212,9 +212,7 @@
                         [checked]="false">
                     </toggle-btn-component>
 
-                    <toggle-btn-component
-                        [label]="'Custom'"
-                        appearance="custom">
+                    <toggle-btn-component [label]="'Brand'" appearance="brand">
                     </toggle-btn-component>
 
                     <toggle-btn-component [label]="'Small'" toggleHeight="30">
@@ -368,7 +366,6 @@
                     [style.max-width]="'fit-content'"
                     [items]="multiSelectItems"
                     [label]="'Please select:'"
-                    [backgroundColor]="'#3f5af3'"
                     [faIcon]="faChevronDown">
                 </multi-select-component>
 
@@ -376,8 +373,7 @@
                     [items]="multiSelectItems"
                     [withFilter]="true"
                     [faIcon]="faFilter"
-                    [style.width.px]="55"
-                    [backgroundColor]="'#3f5af3'">
+                    [style.width.px]="55">
                 </multi-select-component>
 
                 <collapsible-component [(show)]="open">

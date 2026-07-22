@@ -24,8 +24,9 @@ import { FormsModule } from '@angular/forms';
  * ```
  * <multi-select-component
  *   [items]="items"
- *   [faIcon]="faFilter"
- *   [withFilter]="false"
+ *   [label]="'Select items'"
+ *   [faIcon]="faChevronDown"
+ *   [withFilter]="true"
  * ></multi-select-component>
  * ```
  */
@@ -65,6 +66,10 @@ export class MultiSelectComponent implements OnChanges {
     show = false;
 
     randomId: string = Math.floor(Math.random() * 16777215).toString(16);
+
+    get hasCustomBackground(): boolean {
+        return !!this.backgroundColor;
+    }
 
     ngOnChanges() {
         this.selectedItems = [];

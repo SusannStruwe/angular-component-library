@@ -22,13 +22,13 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
  * ```
  * <custom-select-component>
  *   <div header>
- *     <bordered-btn-component
- *      [hoverStyle]="shiningStyle"
- *      [faIcon]="faElipsis">
- *    </bordered-btn-component>
+ *     <borderless-btn-component
+ *       [label]="'Actions'"
+ *       [faIcon]="faEllipsisVertical">
+ *     </borderless-btn-component>
  *   </div>
  *   <div body>
- *      <p>Put your content inside</p>
+ *     <p>Put your content inside</p>
  *   </div>
  * </custom-select-component>
  * ```

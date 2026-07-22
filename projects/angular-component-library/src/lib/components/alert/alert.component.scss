@@ -43,14 +43,12 @@
 
     &.success {
         background: var(--toast-success-color-light);
-        border: 1px solid var(--toast-success-color);
-        border-left: 5px solid var(--toast-success-color);
 
         p,
         a,
         fa-icon {
             display: inline-block;
-            color: var(--toast-success-color);
+            color: var(--toast-success-color-dark);
         }
         .close:hover {
             color: color.adjust($toast-success-color, $lightness: -10%);
@@ -59,14 +57,12 @@
 
     &.error {
         background: var(--toast-error-color-light);
-        border: 1px solid var(--toast-error-color);
-        border-left: 5px solid var(--toast-error-color);
 
         p,
         a,
         fa-icon {
             display: inline-block;
-            color: var(--toast-error-color);
+            color: var(--toast-error-color-dark);
         }
         .close:hover {
             color: color.adjust($toast-error-color, $lightness: -10%);
@@ -75,14 +71,12 @@
 
     &.info {
         background: var(--toast-info-color-light);
-        border: 1px solid var(--toast-info-color);
-        border-left: 5px solid var(--toast-info-color);
 
         p,
         a,
         fa-icon {
             display: inline-block;
-            color: var(--toast-info-color);
+            color: var(--toast-info-color-dark);
         }
         .close:hover {
             color: color.adjust($toast-info-color, $lightness: -10%);
@@ -91,14 +85,12 @@
 
     &.warning {
         background: var(--toast-warning-color-light);
-        border: 1px solid var(--toast-warning-color);
-        border-left: 5px solid var(--toast-warning-color);
 
         p,
         a,
         fa-icon {
             display: inline-block;
-            color: var(--toast-warning-color);
+            color: var(--toast-warning-color-dark);
         }
         .close:hover {
             color: color.adjust($toast-warning-color, $lightness: -10%);

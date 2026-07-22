@@ -26,7 +26,7 @@ import { Icons } from '../model/icons';
 import { SegmentedBtnItem } from '../model/segmented-btn.model';
 import { SelectItem } from '../model/select-item.model';
 import { AlertType } from '../model/alert-type.enum';
-import { SelectStyle } from '../model/select-style.enum';
+import { SelectAppearance } from '../model/select-appearance.type';
 import { TableHeaderComponent } from '../components/table/table-header/table-header.component';
 import { filters, headerItems } from './util';
 import { TableStyle } from '../model/table-style.enum';
@@ -109,7 +109,7 @@ export class OverviewWrapperComponent {
     showAlert = true;
     alertTypes: typeof AlertType = AlertType;
 
-    selectAppearance: SelectStyle = SelectStyle.SCHEDULER;
+    selectAppearance: SelectAppearance = 'scheduler';
 
     // inputs
     duration = 7400;

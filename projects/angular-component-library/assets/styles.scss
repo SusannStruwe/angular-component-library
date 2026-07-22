@@ -47,6 +47,26 @@ body {
     --control-menu-item-hover-background: var(--row-highlight-color);
     --control-menu-item-hover-text-color: var(--accent-color);
     --control-menu-item-hover-icon-color: var(--accent-color);
+    /* Select tokens: neutral default appearance with optional theme overrides */
+    --select-border-color: var(--border-color);
+    --select-text-color: var(--text-color);
+    --select-icon-color: var(--text-color);
+    --select-chevron-background: transparent;
+    --select-chevron-icon-color: var(--text-color);
+    --select-hover-border-color: var(--text-color);
+    --select-hover-text-color: var(--text-color);
+    --select-hover-icon-color: var(--text-color);
+    --select-hover-background: transparent;
+    --select-hover-chevron-background: transparent;
+    --select-hover-chevron-icon-color: var(--text-color);
+    --select-selected-border-color: var(--text-color);
+    --select-selected-text-color: var(--text-color);
+    --select-selected-icon-color: var(--text-color);
+    --select-selected-background: transparent;
+    --select-selected-chevron-background: transparent;
+    --select-selected-chevron-icon-color: var(--text-color);
+    --select-menu-z-index: var(--z-index-7);
+    --select-menu-border-radius: var(--input-radius);
     --field-text-color: var(--text-color);
     --field-border-color: var(--input-border-color);
     --field-hover-border-color: var(--accent-color);
@@ -54,6 +74,15 @@ body {
     --search-field-background: transparent;
     --field-icon-color: #999999;
     --field-icon-hover-color: var(--accent-color);
+    /* Date input tokens: date-picker and date-time-picker */
+    --date-input-border-color: var(--btn-border-color);
+    --date-input-text-color: var(--btn-color);
+    --date-input-background: transparent;
+    --date-input-focus-border-color: var(--accent-color);
+    --date-input-hover-border-color: var(--accent-color);
+    --date-input-overlay-background: var(--fa-icon-color);
+    --date-input-overlay-icon-color: var(--btn-color);
+    --date-input-overlay-icon-hover-color: var(--accent-color);
 
     /* Outlined button tokens: used by bordered/simple and bordered/inverted variants */
     --outlined-btn-text-color: var(--btn-color);
@@ -93,7 +122,11 @@ body {
     --filled-btn-active-icon-color: var(--fa-icon-color);
     --filled-btn-active-background-image: none;
 
-    /* Toggle variant overrides: toggle-btn custom appearance */
+    /* Toggle variant overrides: toggle-btn brand appearance */
+    --toggle-btn-brand-unchecked-background: #aaaaaa;
+    --toggle-btn-brand-checked-background: #b028ba;
+    --toggle-btn-brand-slider-background: #ffffff;
+    /* Deprecated aliases for the former "custom" toggle appearance */
     --toggle-btn-custom-unchecked-background: #aaaaaa;
     --toggle-btn-custom-checked-background: #b028ba;
     --toggle-btn-custom-slider-background: #ffffff;
@@ -125,16 +158,16 @@ body {
     --delete-color-dark: #863018;
 
     /* Toast and alert colors: alert component, ngx-toastr */
-    --toast-info-color-light: #f6f9fd; // #2571c610;
+    --toast-info-color-light: #deeafa; // #2571c610;
     --toast-info-color: #2571c6;
     --toast-info-color-dark: #1a5496;
-    --toast-success-color-light: #f6faf5; // #09850710;
+    --toast-success-color-light: #dcf4d6; // #09850710;
     --toast-success-color: #098507;
     --toast-success-color-dark: #066604;
-    --toast-error-color-light: #faf4f2; //#be432210;
+    --toast-error-color-light: #fde8e2; //#be432210;
     --toast-error-color: #be4322;
     --toast-error-color-dark: #863018;
-    --toast-warning-color-light: #fffcf9; // #ff9c0710;
+    --toast-warning-color-light: #fbedde; // #ff9c0710;
     --toast-warning-color: #ff9c07;
     --toast-warning-color-dark: #de8602;
 
@@ -201,6 +234,7 @@ body {
     --z-index-4: 100; // downtimes, select, multiselect, tabs
     --z-index-5: 101; //frozen zone, loader, sub-navbar
     --z-index-6: 1000; //modals, non-modals, popovers, tooltips
+    --z-index-7: 1001; // select menus and overlays inside higher-level surfaces
 
     /* Shared sizing tokens: most form controls, buttons, tables, tabs */
     --navbar-height: 45px;
@@ -276,12 +310,22 @@ body.theme-light-gray,
     --control-menu-item-hover-background: var(--header-bg-color);
     --control-menu-item-hover-text-color: var(--text-color);
     --control-menu-item-hover-icon-color: var(--text-color);
+    --select-border-color: var(--border-color-light);
+    --select-hover-border-color: var(--border-color);
+    --select-selected-border-color: var(--border-color-light);
     --field-border-color: var(--border-color-light);
     --field-hover-border-color: var(--border-color);
     --field-background: #ffffff;
     --search-field-background: #ffffff;
     --field-icon-color:  #999999;
     --field-icon-hover-color: var(--text-color);
+    --date-input-border-color: var(--field-border-color);
+    --date-input-text-color: var(--field-text-color);
+    --date-input-focus-border-color: var(--field-hover-border-color);
+    --date-input-hover-border-color: var(--field-hover-border-color);
+    --date-input-overlay-background: transparent;
+    --date-input-overlay-icon-color: var(--field-icon-color);
+    --date-input-overlay-icon-hover-color: var(--field-icon-hover-color);
     --outlined-btn-text-color: var(--text-color);
     --outlined-btn-border-color: var(--border-color-light);
     --outlined-btn-hover-background: var(--header-bg-color);

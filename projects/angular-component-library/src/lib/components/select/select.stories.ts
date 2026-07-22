@@ -12,7 +12,10 @@ import {
 import { Icons } from '../../model/icons';
 import { SelectItem } from '../../model/select-item.model';
 import { fn } from 'storybook/test';
-import { SelectStyle } from '../../model/select-style.enum';
+import {
+    SELECT_APPEARANCES,
+    SelectAppearance
+} from '../../model/select-appearance.type';
 
 const iconOptions: Record<string, IconDefinition> = {
     faChevronDown: faChevronDown,
@@ -22,8 +25,6 @@ const iconOptions: Record<string, IconDefinition> = {
     faSpinner: faSpinner,
     faTrash: faTrash
 };
-
-const selectAppearances: typeof SelectStyle = SelectStyle;
 
 const selectItems = [
     new SelectItem('select1', undefined, Icons.faInfoCircle),
@@ -64,12 +65,7 @@ const meta: Meta<SelectComponent> = {
             control: {
                 type: 'select'
             },
-            options: Object.keys(selectAppearances),
-            mapping: SelectStyle
-        },
-        selectStyle: {
-            control: false,
-            description: 'Deprecated: use appearance instead.'
+            options: SELECT_APPEARANCES
         },
         classStyle: {
             control: false,
@@ -119,7 +115,7 @@ export const Light: Story = {
         selectedItem: selectedItem,
         filterPlaceholder: 'Select...',
         show: true,
-        appearance: SelectStyle.LIGHT,
+        appearance: 'light' satisfies SelectAppearance,
         width: '600px',
         menuHeight: '100px'
     },
@@ -139,7 +135,7 @@ export const LightGray: Story = {
         selectedItem: selectedItem,
         filterPlaceholder: 'Select...',
         show: true,
-        appearance: SelectStyle.LIGHT_GRAY,
+        appearance: 'light-gray' satisfies SelectAppearance,
         width: '600px',
         menuHeight: '100px'
     },

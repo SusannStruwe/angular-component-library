@@ -13,10 +13,11 @@
         font-size: var(--font-size);
         outline: none;
         font-family: var(--font-family);
-        border: var(--border-width) solid var(--btn-border-color);
+        border: var(--border-width) solid
+            var(--date-input-border-color, var(--btn-border-color));
         cursor: pointer;
-        color: var(--btn-color);
-        background: transparent;
+        color: var(--date-input-text-color, var(--btn-color));
+        background: var(--date-input-background, transparent);
         box-sizing: border-box;
         border-radius: var(--input-radius);
         padding: 2px 16px 2px 5px;
@@ -24,69 +25,64 @@
     }
 
     .btn-overlay {
-        height: var(--btn-height);
-        line-height: var(--btn-height);
+        height: calc(var(--btn-height) - 2px);
+        line-height: calc(var(--btn-height) - 2px);
         position: absolute;
         top: 0;
         right: 0px;
-        background: var(--fa-icon-color);
-        border: 1px solid var(--btn-border-color);
-        border-left: none;
+        z-index: 1;
+        background: var(--date-input-overlay-background, var(--fa-icon-color));
+        border: none;
         padding: 2px 10px;
         cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
-        border-top-right-radius: var(--input-radius);
-        border-bottom-right-radius: var(--input-radius);
         font: inherit;
+        margin: 1px;
 
         fa-icon {
-            color: var(--btn-color);
+            color: var(--date-input-overlay-icon-color, var(--btn-color));
             font-size: 1.2em;
             display: contents;
         }
     }
 
-    &:hover {
-        input[type='date'] {
-            border-color: var(--accent-color-light);
-        }
-
-        .btn-overlay {
-            border-color: var(--accent-color-light);
-            background-color: var(--accent-color-light);
-
-            fa-icon {
-                color: var(--accent-color);
-            }
+    &.with-overlay {
+        input[type='date']::-webkit-calendar-picker-indicator {
+            opacity: 0;
         }
     }
 
     input:focus,
-    input:focus + .btn-overlay {
-        border-color: var(--accent-color-light);
+    input:focus {
+        border-color: var(--date-input-focus-border-color, var(--accent-color));
     }
 }
 
-.not-emphrazed {
-    input[type='date'] {
-        border: var(--border-width) solid var(--not-emphrazed-color);
-        color: var(--not-emphrazed-color);
-        background: transparent;
-    }
-    .btn-overlay {
-        background: var(--not-emphrazed-color);
-        border: 1px solid var(--not-emphrazed-color);
-
-        &:hover {
-            background-image: var(--darken-gradient);
+/***************************************************************
+Media query to hide hover effects for devices 
+that do not support them, like touch displays
+**************************************************************/
+@media (hover: hover) {
+    .datepicker {
+        input[type='date']:hover {
+            border-color: var(
+                --date-input-hover-border-color,
+                var(--accent-color)
+            );
         }
-    }
 
-    input:focus,
-    input:focus + .btn-overlay {
-        border-color: var(--not-emphrazed-color);
+        .btn-overlay {
+            &:hover {
+                fa-icon {
+                    color: var(
+                        --date-input-overlay-icon-hover-color,
+                        var(--accent-color)
+                    );
+                }
+            }
+        }
     }
 }

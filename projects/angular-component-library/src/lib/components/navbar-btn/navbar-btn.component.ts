@@ -9,8 +9,8 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
  * @howToUse
  * ```
  * <navbar-btn-component
- *  [label]="'scheduler.today' | translate "
- *  [faIcon] = "faCog">
+ *   [label]="'Settings'"
+ *   [faIcon]="faCog">
  * </navbar-btn-component>
  * ```
  */

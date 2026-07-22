@@ -1,6 +1,6 @@
 :host {
     display: flex;
-    border: var(--border-width) solid var(--btn-border-color);
+    border: var(--border-width) solid var(--outlined-btn-border-color, var(--btn-border-color));
     border-radius: var(--border-radius);
     height: var(--btn-height);
     box-sizing: border-box;

@@ -11,7 +11,9 @@ import { Icons } from '../../model/icons';
  * @howToUse
  * ```
  * <search-input-component
- *  [(filter)]="filter">
+ *   [(filter)]="filter"
+ *   [placeholderText]="'Search...'"
+ *   customClass="full-width">
  * </search-input-component>
  * ```
  */

@@ -4,15 +4,26 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { HoverStyle } from '../../model/hover-style.enum';
 
+export const BORDERLESS_BTN_APPEARANCES = ['default', 'delete'] as const;
+export type BorderlessBtnAppearance =
+    (typeof BORDERLESS_BTN_APPEARANCES)[number];
+
+function isBorderlessBtnAppearance(
+    value: string | undefined
+): value is Exclude<BorderlessBtnAppearance, 'default'> {
+    return value === 'delete';
+}
+
 /**
  * Component to create a borderless button.
  *
  * @howToUse
  * ```
  * <borderless-btn-component
- *  [ariaLabel]= "'scheduler.today' | translate "
- *  [label]="'scheduler.today' | translate "
- *  [faIcon] = "faCog">
+ *   [ariaLabel]="'Delete item'"
+ *   [label]="'Delete'"
+ *   [faIcon]="faTrash"
+ *   appearance="delete">
  * </borderless-btn-component>
  * ```
  */
@@ -24,19 +35,14 @@ import { HoverStyle } from '../../model/hover-style.enum';
 })
 export class BorderlessBtnComponent {
     @Input() type: 'button' | 'submit' | 'reset' = 'button';
-
     @Input() ariaLabel: string = 'no-title';
-
     @Input() label?: string;
-
     @Input() faIcon?: IconDefinition;
-
     @Input() showIcon = true;
-
     @Input() isDisabled?: boolean = false;
-    // example --> gray, delete
+    @Input() appearance: BorderlessBtnAppearance = 'default';
     @Input() customClass?: string = '';
-    /** @deprecated Use customClass instead. */
+    /** @deprecated Use appearance or customClass instead. */
     @Input() classStyle?: string = '';
     // example --> filling or shining
     @Input() hoverStyle = HoverStyle.SIMPLE;
@@ -47,7 +53,23 @@ export class BorderlessBtnComponent {
     // example --> 100% or not
     @Input() width?: string;
 
+    get appearanceClass(): string {
+        if (this.appearance !== 'default') {
+            return this.appearance;
+        }
+
+        return isBorderlessBtnAppearance(this.classStyle)
+            ? this.classStyle
+            : '';
+    }
+
     get customClassName(): string {
-        return this.customClass ?? this.classStyle ?? '';
+        if (this.customClass) {
+            return this.customClass;
+        }
+
+        return this.classStyle && !isBorderlessBtnAppearance(this.classStyle)
+            ? this.classStyle
+            : '';
     }
 }

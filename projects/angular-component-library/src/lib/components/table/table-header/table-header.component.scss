@@ -123,12 +123,6 @@ h4 {
     font-family: var(--font-family);
 }
 
-::ng-deep .multi-select {
-
-    .filter-btn {
-        border: none;
-    }
-}
 
 .light {
 
@@ -154,15 +148,6 @@ h4 {
 
         &:first-of-type {
             background-color: var(--table-light-bg-color);
-        }
-    }
-
-    ::ng-deep .multi-select {
-
-        .filter-btn {
-            fa-icon {
-                color: var(--table-light-color);
-            }
         }
     }
 
@@ -196,14 +181,6 @@ h4 {
         }
     }
 
-    ::ng-deep .multi-select {
-
-        .filter-btn {
-            fa-icon {
-                color: var(--fa-icon-color);
-            }
-        }
-    }
 }
 
 /************************************************
@@ -211,24 +188,6 @@ Media query to add hover only on device which support hover
 *********************************************/
 
 @media (hover: hover) {
-    .dark, .light {
-
-        ::ng-deep .multi-select {
-
-            .filter-btn {
-                &:hover, &:focus, &:focus-visible {
-                    background-color: transparent !important;
-                    border: none !important;
-
-                    fa-icon {
-                        color: var(--accent-color);
-                    }
-                }
-
-            }
-        }
-    }
-
 
     .search-input  {
 
