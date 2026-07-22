@@ -72,6 +72,20 @@ body {
     --date-input-overlay-bg: var(--fa-icon-color);
     --date-input-overlay-icon-color: var(--btn-color);
     --date-input-overlay-icon-hover-color: var(--accent-color);
+    /* Toggle tokens: track/thumb colors for default and active states */
+    --toggle-label-color: var(--text-color);
+    --toggle-track-bg: #b0b1b3;
+    --toggle-track-border-color: #b0b1b3;
+    --toggle-track-hover-bg: #999999;
+    --toggle-track-hover-border-color: #999999;
+    --toggle-track-active-bg: var(--accent-color);
+    --toggle-track-active-border-color: var(--accent-color);
+    --toggle-track-hover-active-bg: var(--accent-color-dark);
+    --toggle-track-hover-active-border-color: var(--accent-color-dark);
+    --toggle-thumb-bg: #ffffff;
+    --toggle-thumb-hover-bg: #ffffff;
+    --toggle-thumb-active-bg: #ffffff;
+    --toggle-thumb-hover-active-bg: #ffffff;
     /**
     * @tokens-end
     */
@@ -340,6 +354,19 @@ body.theme-light-gray,
     --date-input-overlay-bg: #ffffff;
     --date-input-overlay-icon-color: var(--field-icon-color);
     --date-input-overlay-icon-hover-color: var(--field-icon-hover-color);
+    --toggle-label-color: var(--text-color);
+    --toggle-track-bg: #b0b1b3;
+    --toggle-track-border-color: #b0b1b3;
+    --toggle-track-hover-bg: #999999;
+    --toggle-track-hover-border-color: #999999;
+    --toggle-track-active-bg: var(--accent-color);
+    --toggle-track-active-border-color: var(--accent-color);
+    --toggle-track-hover-active-bg: var(--accent-color-dark);
+    --toggle-track-hover-active-border-color: var(--accent-color-dark);
+    --toggle-thumb-bg: #ffffff;
+    --toggle-thumb-hover-bg: #ffffff;
+    --toggle-thumb-active-bg: #ffffff;
+    --toggle-thumb-hover-active-bg: #ffffff;
     --bordered-btn-text-color: var(--text-color);
     --bordered-btn-border-color: var(--border-color-light);
     --bordered-btn-hover-bg: var(--surface-subtle-bg);
@@ -441,6 +468,19 @@ body.theme-pail,
     --date-input-overlay-bg: #ffffff;
     --date-input-overlay-icon-color: #717680;
     --date-input-overlay-icon-hover-color: var(--accent-color);
+    --toggle-label-color: var(--text-color);
+    --toggle-track-bg: #b0b1b3;
+    --toggle-track-border-color: #b0b1b3;
+    --toggle-track-hover-bg: #999999;
+    --toggle-track-hover-border-color: #999999;
+    --toggle-track-active-bg: var(--accent-color);
+    --toggle-track-active-border-color: var(--accent-color);
+    --toggle-track-hover-active-bg: var(--accent-color-dark);
+    --toggle-track-hover-active-border-color: var(--accent-color-dark);
+    --toggle-thumb-bg: #ffffff;
+    --toggle-thumb-hover-bg: #ffffff;
+    --toggle-thumb-active-bg: #ffffff;
+    --toggle-thumb-hover-active-bg: #ffffff;
     --bordered-btn-text-color: var(--text-color);
     --bordered-btn-border-color: var(--border-color);
     --bordered-btn-hover-bg: var(--surface-subtle-bg);
@@ -629,40 +669,49 @@ a {
 }
 
 .custom-border-style {
-    border-color: green !important;
-    color: green !important;
 
-    fa-icon {
+    button {
+        border-color: green !important;
         color: green !important;
-    }
+        border-radius: var(--border-radius);
 
-    &:hover,
-    &.active {
-        &:not([disabled]) {
-            color: var(--fa-icon-color) !important;
-            background: green !important;
+        fa-icon {
+            color: green !important;
+        }
 
-            fa-icon {
+        &:hover,
+        &.active {
+            &:not([disabled]) {
                 color: var(--fa-icon-color) !important;
+                background: green !important;
+
+                fa-icon {
+                    color: var(--fa-icon-color) !important;
+                }
             }
         }
-    }
+    }    
 }
 
 .custom-filled-style {
-    background-color: green !important;
-    color: var(--fa-icon-color) !important;
 
-    &:hover,
-    &.active {
-        &:not([disabled]) {
-            color: var(--fa-icon-color);
-            background-image: linear-gradient(
-                rgba(0, 0, 0, 0.1),
-                rgba(0, 0, 0, 0.1)
-            );
+    button {
+        background-color: green !important;
+        color: var(--fa-icon-color) !important;
+        border-radius: var(--border-radius);
+        &:hover,
+        &.active {
+            &:not([disabled]) {
+                color: var(--fa-icon-color);
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.1),
+                    rgba(0, 0, 0, 0.1)
+                );
+            }
         }
     }
+
+
 }
 
 /*=============================================

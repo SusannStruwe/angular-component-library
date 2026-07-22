@@ -64,21 +64,21 @@
                 "name": "Active",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
-            },
-            {
-                "name": "Active",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Active',\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+            },
+            {
+                "name": "Active",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
                 "name": "Active",
@@ -121,36 +121,6 @@
                 "defaultValue": "{\n    args: {\n        label: 1,\n        borderRadius: 50,\n        customClass: 'changes',\n        isDisabled: false\n    }\n}"
             },
             {
-                "name": "Custom",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Enabled',\n        checked: true,\n        appearance: 'brand',\n        toggleHeight: 30\n    }\n}"
-            },
-            {
-                "name": "CustomSmall",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Compact',\n        checked: false,\n        appearance: 'brand',\n        toggleHeight: 25\n    }\n}"
-            },
-            {
-                "name": "CustomTiny",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Tiny',\n        checked: true,\n        appearance: 'brand',\n        toggleHeight: 20\n    }\n}"
-            },
-            {
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -159,6 +129,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Label: ',\n        items: selectItems,\n        selectedItem: selectedItem,\n        filterPlaceholder: 'Select...',\n        show: true\n    },\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items'\n            }\n        }\n    }\n}"
+            },
+            {
+                "name": "DefaultLarge",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Enabled',\n        checked: true,\n        toggleHeight: 30\n    }\n}"
             },
             {
                 "name": "defaultTemplateMock",
@@ -284,21 +264,21 @@
                 "name": "Disabled",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
-            },
-            {
-                "name": "Disabled",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
+            },
+            {
+                "name": "Disabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
             },
             {
                 "name": "Disabled",
@@ -444,16 +424,6 @@
                 "name": "iconOptions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Record<string, IconDefinition>",
-                "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfo: faInfo\n}"
-            },
-            {
-                "name": "iconOptions",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -464,7 +434,7 @@
                 "name": "iconOptions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
@@ -474,7 +444,17 @@
                 "name": "iconOptions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Record<string, IconDefinition>",
+                "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfo: faInfo\n}"
+            },
+            {
+                "name": "iconOptions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Record<string, IconDefinition>",
@@ -684,21 +664,41 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<BadgeComponent>",
-                "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        customClass: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ]\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<AlertComponent>",
                 "defaultValue": "{\n    title: 'Components/Alert',\n    component: AlertComponent,\n    decorators: [\n        moduleMetadata({\n            imports: [RouterModule],\n            providers: [\n                {\n                    provide: ActivatedRoute,\n                    useValue: {\n                        snapshot: {\n                            paramMap: new Map([['id', '123']]),\n                            data: {}\n                        },\n                        params: [{ id: '123' }],\n                        queryParams: {}\n                    } // Mocking der ActivatedRoute, so dass sie params und andere Routen-Daten zurückgibt\n                }\n            ]\n        })\n    ],\n    tags: ['autodocs'],\n    argTypes: {\n        title: { control: 'text', value: '' },\n        message: { control: 'text', value: '' },\n        type: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: AlertType,\n            value: AlertType.SUCCESS\n        },\n        visibleState: { control: 'boolean', value: false },\n        hideCloseBtn: { control: 'boolean', value: false },\n        navigationLink: { control: 'text', value: undefined },\n        navigationLinkLabel: { control: 'text', value: undefined },\n        visibleStateChange: { action: 'changed' }\n    },\n    args: { visibleStateChange: fn() }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<BorderedBtnComponent>",
+                "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        appearance: {\n            control: 'select',\n            options: BORDERED_BTN_APPEARANCES,\n            description: 'Built-in appearance variant of the component.'\n        },\n        customClass: {\n            control: 'text',\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyle: {\n            control: false,\n            description:\n                'Deprecated: use appearance for built-in variants or customClass for external classes instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<BorderlessBtnComponent>",
+                "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        appearance: {\n            control: 'select',\n            options: BORDERLESS_BTN_APPEARANCES,\n            description: 'Built-in appearance variant of the component.'\n        },\n        customClass: {\n            control: 'text',\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyle: {\n            control: false,\n            description:\n                'Deprecated: use appearance for built-in variants or customClass for external classes instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<BadgeComponent>",
+                "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        customClass: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ],\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
             },
             {
                 "name": "meta",
@@ -714,21 +714,11 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<BorderedBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        appearance: {\n            control: 'select',\n            options: BORDERED_BTN_APPEARANCES\n        },\n        customClass: { control: 'text' },\n        classStyle: {\n            control: false,\n            description:\n                'Deprecated: use appearance for built-in variants or customClass for external classes instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CircleBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        customClass: { control: 'text' },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
+                "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        customClass: {\n            control: 'text',\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
             },
             {
                 "name": "meta",
@@ -739,16 +729,6 @@
                 "deprecationMessage": "",
                 "type": "Meta<CollapsibleComponent>",
                 "defaultValue": "{\n    title: 'Components/Collapsible',\n    component: CollapsibleComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A collapsible component provides per default only a \\`<div header></div>\\` and \\`<div content></div>\\`, so you can fill the table how you want.\n\n You could also add a faIcon in header to show that the row can be toggled -> like in the example.\n \n                 `\n            }\n        }\n    },\n    decorators: [\n        (story) => {\n            const storyObj = story();\n            return {\n                moduleMetadata: {\n                    imports: [CollapsibleComponent, FontAwesomeModule]\n                },\n                template: storyObj.template,\n                props: storyObj.props\n            };\n        }\n    ],\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<BorderlessBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        appearance: {\n            control: 'select',\n            options: BORDERLESS_BTN_APPEARANCES\n        },\n        customClass: { control: 'text' },\n        classStyle: {\n            control: false,\n            description:\n                'Deprecated: use appearance for built-in variants or customClass for external classes instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
             },
             {
                 "name": "meta",
@@ -784,21 +764,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<DateTimePickerComponent>",
-                "defaultValue": "{\n    title: 'Components/Date Picker/Date time',\n    component: DateTimePickerComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A date time picker component.\n\n A date is from type string. The format has to be \\`yyyy-mm-dd\\` or \\`yyyy-mm-ddTHH:MM\\`  -> no time zone.\n \n                 `\n            }\n        }\n    },\n    argTypes: {\n        date: { control: 'text', value: '' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' },\n        minWidth: { control: 'number' },\n        randomId: { control: 'text' },\n        dateChange: { action: 'changed' }\n    },\n    args: { dateChange: fn() },\n    tags: ['autodocs']\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<DropzoneComponent>",
                 "defaultValue": "{\n    title: 'Components/Dropzone',\n    component: DropzoneComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        choseFileLabel: { control: 'text' },\n        title: { control: 'text' },\n        subtitle: { control: 'text' },\n        icon: {\n            control: 'select',\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        fileListDisplay: {\n            control: 'select',\n            options: ['detailed', 'summary', 'none']\n        },\n        showButtonIcon: { control: 'boolean' },\n        allowedExtension: { control: 'object' },\n        fileArrayLength: { control: 'number' },\n        files: { control: { type: 'file', accept: '.json' } },\n        maxSizeOfFiles: { control: 'number' },\n        height: { control: 'text' },\n        width: { control: 'text' }\n    },\n    decorators: [\n        (story) => ({\n            template: `<div style=\"width: 600px;\">${story().template}</div>`,\n            props: story().props\n        })\n    ]\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DateTimePickerComponent>",
+                "defaultValue": "{\n    title: 'Components/Date Picker/Date time',\n    component: DateTimePickerComponent,\n    parameters: {\n        docs: {\n            description: {\n                component: `\n A date time picker component.\n\n A date is from type string. The format has to be \\`yyyy-mm-dd\\` or \\`yyyy-mm-ddTHH:MM\\`  -> no time zone.\n \n                 `\n            }\n        }\n    },\n    argTypes: {\n        date: { control: 'text', value: '' },\n        mode: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(types),\n            mapping: EditMode,\n            value: EditMode.WRITE\n        },\n        height: { control: 'number' },\n        minWidth: { control: 'number' },\n        randomId: { control: 'text' },\n        dateChange: { action: 'changed' }\n    },\n    args: { dateChange: fn() },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -818,7 +798,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<FilledBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Filled Btn',\n    component: FilledBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        appearance: {\n            control: 'select',\n            options: FILLED_BTN_APPEARANCES\n        },\n        customClass: { control: 'text' },\n        classStyle: {\n            control: false,\n            description:\n                'Deprecated: use appearance for built-in variants or customClass for external classes instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Buttons/Filled Btn',\n    component: FilledBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        appearance: {\n            control: 'select',\n            options: FILLED_BTN_APPEARANCES,\n            description: 'Built-in appearance variant of the component.'\n        },\n        customClass: {\n            control: 'text',\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyle: {\n            control: false,\n            description:\n                'Deprecated: use appearance for built-in variants or customClass for external classes instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -828,7 +808,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<InputComponent>",
-                "defaultValue": "{\n    title: 'Components/Input',\n    component: InputComponent,\n    argTypes: {\n        input: { control: 'text' },\n        customClass: {\n            control: 'select',\n            options: [\n                '',\n                'no-radius',\n                'full-width',\n                'small left',\n                'small right'\n            ]\n        },\n        classStyles: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        placeholderText: { control: 'text' },\n        type: { control: 'text' },\n        width: { control: 'text' },\n        inputChange: { action: 'change' }\n    },\n    args: {\n        type: 'text',\n        inputChange: fn()\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Input',\n    component: InputComponent,\n    argTypes: {\n        input: { control: 'text' },\n        customClass: {\n            control: 'select',\n            options: [\n                '',\n                'no-radius',\n                'full-width',\n                'small left',\n                'small right'\n            ],\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyles: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        placeholderText: { control: 'text' },\n        type: { control: 'text' },\n        width: { control: 'text' },\n        inputChange: { action: 'change' }\n    },\n    args: {\n        type: 'text',\n        inputChange: fn()\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -858,7 +838,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<NavbarBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Buttons/Navbar Btn',\n    component: NavbarBtnComponent,\n    decorators: [\n        (story) => ({\n            template: `<div [style.background]=\"'black'\">${story().template}</div>`,\n            props: story().props\n        })\n    ],\n    argTypes: {\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        disabled: { control: 'boolean' },\n        customClass: { control: 'text' },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        active: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Buttons/Navbar Btn',\n    component: NavbarBtnComponent,\n    decorators: [\n        (story) => ({\n            template: `<div [style.background]=\"'black'\">${story().template}</div>`,\n            props: story().props\n        })\n    ],\n    argTypes: {\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        disabled: { control: 'boolean' },\n        customClass: {\n            control: 'text',\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        active: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -888,7 +868,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<SearchInputComponent>",
-                "defaultValue": "{\n    title: 'Components/Search Input',\n    component: SearchInputComponent,\n    argTypes: {\n        filter: { control: 'text' },\n        customClass: {\n            control: 'select',\n            options: [\n                '',\n                'no-radius',\n                'full-width',\n                'small left',\n                'small right'\n            ]\n        },\n        classStyles: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        placeholderText: { control: 'text' },\n        filterChange: { action: 'change' }\n    },\n    args: { filterChange: fn() },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Search Input',\n    component: SearchInputComponent,\n    argTypes: {\n        filter: { control: 'text' },\n        customClass: {\n            control: 'select',\n            options: [\n                '',\n                'no-radius',\n                'full-width',\n                'small left',\n                'small right'\n            ],\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyles: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        placeholderText: { control: 'text' },\n        filterChange: { action: 'change' }\n    },\n    args: { filterChange: fn() },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -908,7 +888,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<SelectComponent>",
-                "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        appearance: {\n            control: {\n                type: 'select'\n            },\n            options: SELECT_APPEARANCES\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated legacy alias: use appearance instead.'\n        },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        width: { control: 'text' },\n        menuHeight: { control: 'text' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        appearance: {\n            control: {\n                type: 'select'\n            },\n            options: SELECT_APPEARANCES,\n            description: 'Built-in appearance variant of the component.'\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated legacy alias: use appearance instead.'\n        },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        width: { control: 'text' },\n        menuHeight: { control: 'text' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -938,7 +918,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ToggleBtnComponent>",
-                "defaultValue": "{\n    title: 'Components/Toggle Btn',\n    component: ToggleBtnComponent,\n    argTypes: {\n        label: { control: 'text' },\n        checked: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        customClass: { control: 'text' },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        appearance: { control: 'radio', options: TOGGLE_BTN_APPEARANCES },\n        toggleHeight: {\n            control: 'radio',\n            options: [...TOGGLE_BTN_HEIGHTS].reverse()\n        },\n        checkedChange: { action: 'changed' }\n    },\n    args: {\n        checkedChange: fn(),\n        appearance: 'default',\n        toggleHeight: 30\n    },\n    tags: ['autodocs']\n}"
+                "defaultValue": "{\n    title: 'Components/Toggle Btn',\n    component: ToggleBtnComponent,\n    argTypes: {\n        label: { control: 'text' },\n        checked: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        customClass: {\n            control: 'text',\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        toggleHeight: {\n            control: 'radio',\n            options: [...TOGGLE_BTN_HEIGHTS].reverse()\n        },\n        checkedChange: { action: 'changed' }\n    },\n    args: {\n        checkedChange: fn(),\n        toggleHeight: 30\n    },\n    tags: ['autodocs']\n}"
             },
             {
                 "name": "meta",
@@ -1034,6 +1014,26 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Sample'\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Sample',\n        isDisabled: false\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1054,16 +1054,6 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Sample'\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1079,16 +1069,6 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args\n        },\n        template: defaultTemplateMock\n    }),\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const header = (await canvas.findByTestId(\n            'collapse-header'\n        )) as HTMLInputElement;\n        const content = (await canvas.findByTestId(\n            'collapse-content'\n        )) as HTMLInputElement;\n\n        await waitFor(() => {\n            expect(content.classList.contains('hide')).toBe(true);\n            expect(content.classList.contains('show')).toBe(false);\n        });\n\n        await userEvent.click(header);\n\n        await waitFor(() => {\n            expect(content.classList.contains('show')).toBe(true);\n            expect(content.classList.contains('hide')).toBe(false);\n        });\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        label: 'Sample',\n        isDisabled: false\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1124,21 +1104,21 @@
                 "name": "Sample",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        withInput: true,\n        randomId: 'test123'\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01T14:30';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }\n}"
-            },
-            {
-                "name": "Sample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        height: '220px',\n        width: '600px',\n        title: 'JSON-Dateien hierher ziehen',\n        subtitle: 'Mehrere Dateien koennen gleichzeitig ausgewaehlt werden.',\n        icon: Icons.faUpload,\n        showButtonIcon: false,\n        fileListDisplay: 'summary',\n        allowedExtension: ['json'],\n        choseFileLabel: 'Load Input files',\n        maxSizeOfFiles: null\n    }\n}"
+            },
+            {
+                "name": "Sample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        date: '2025-05-11',\n        withInput: true,\n        randomId: 'test123'\n    },\n    play: async ({ canvasElement }) => {\n        const canvas = within(canvasElement);\n\n        const input = (await canvas.findByTestId(\n            'date-input-test123'\n        )) as HTMLInputElement;\n\n        const newDate = '2025-06-01T14:30';\n\n        await userEvent.clear(input);\n        await userEvent.type(input, newDate);\n\n        // trigger ngModelChange\n        await userEvent.tab();\n\n        await waitFor(() => {\n            expect(input.value).toBe(newDate);\n        });\n    }\n}"
             },
             {
                 "name": "Sample",
@@ -1331,6 +1311,16 @@
                 "defaultValue": "{\n    args: {\n        size: 'small',\n        label: 'Button'\n    }\n}"
             },
             {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Compact',\n        checked: false,\n        toggleHeight: 25\n    }\n}"
+            },
+            {
                 "name": "Spinner",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1364,21 +1354,21 @@
                 "name": "Spinning",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
-            },
-            {
-                "name": "Spinning",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n        label: 'Spinning',\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
+            },
+            {
+                "name": "Spinning",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
             },
             {
                 "name": "Spinning",
@@ -1459,6 +1449,16 @@
                 "deprecationMessage": "",
                 "type": "unknown",
                 "defaultValue": "`   <filled-btn-component\n        (click)=\"click($event)\"\n        [label]=\"'Click me!'\">\n    </filled-btn-component>\n `"
+            },
+            {
+                "name": "Tiny",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        label: 'Tiny',\n        checked: true,\n        toggleHeight: 20\n    }\n}"
             },
             {
                 "name": "types",
@@ -1642,17 +1642,6 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<BadgeComponent>",
-                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 184
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
                 "rawtype": "StoryObj<AlertComponent>",
                 "file": "projects/angular-component-library/src/lib/components/alert/alert.stories.ts",
                 "deprecated": false,
@@ -1664,8 +1653,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CheckboxComponent>",
-                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
+                "rawtype": "StoryObj<BorderedBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1675,8 +1664,30 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<BorderedBtnComponent>",
-                "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                "rawtype": "StoryObj<BorderlessBtnComponent>",
+                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<BadgeComponent>",
+                "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 184
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<CheckboxComponent>",
+                "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1699,17 +1710,6 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<CollapsibleComponent>",
                 "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 184
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<BorderlessBtnComponent>",
-                "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1752,8 +1752,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<DateTimePickerComponent>",
-                "file": "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts",
+                "rawtype": "StoryObj<DropzoneComponent>",
+                "file": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1763,8 +1763,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<DropzoneComponent>",
-                "file": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
+                "rawtype": "StoryObj<DateTimePickerComponent>",
+                "file": "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -2048,7 +2048,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<BorderedBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        appearance: {\n            control: 'select',\n            options: BORDERED_BTN_APPEARANCES\n        },\n        customClass: { control: 'text' },\n        classStyle: {\n            control: false,\n            description:\n                'Deprecated: use appearance for built-in variants or customClass for external classes instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
+                    "defaultValue": "{\n    title: 'Components/Buttons/Bordered Btn',\n    component: BorderedBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        appearance: {\n            control: 'select',\n            options: BORDERED_BTN_APPEARANCES,\n            description: 'Built-in appearance variant of the component.'\n        },\n        customClass: {\n            control: 'text',\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyle: {\n            control: false,\n            description:\n                'Deprecated: use appearance for built-in variants or customClass for external classes instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
                 },
                 {
                     "name": "Sample",
@@ -2089,68 +2089,6 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            click: () => {\n                action('do something')();\n            }\n        },\n        template: templateMock\n    })\n}"
-                }
-            ],
-            "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
-                {
-                    "name": "Active",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
-                },
-                {
-                    "name": "Disabled",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
-                },
-                {
-                    "name": "iconOptions",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Record<string, IconDefinition>",
-                    "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<CircleBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        customClass: { control: 'text' },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
-                },
-                {
-                    "name": "Sample",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faCheck\n    }\n}"
-                },
-                {
-                    "name": "Spinning",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts": [
@@ -2242,7 +2180,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<BorderlessBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        appearance: {\n            control: 'select',\n            options: BORDERLESS_BTN_APPEARANCES\n        },\n        customClass: { control: 'text' },\n        classStyle: {\n            control: false,\n            description:\n                'Deprecated: use appearance for built-in variants or customClass for external classes instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
+                    "defaultValue": "{\n    title: 'Components/Buttons/Borderless Btn',\n    component: BorderlessBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        appearance: {\n            control: 'select',\n            options: BORDERLESS_BTN_APPEARANCES,\n            description: 'Built-in appearance variant of the component.'\n        },\n        customClass: {\n            control: 'text',\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyle: {\n            control: false,\n            description:\n                'Deprecated: use appearance for built-in variants or customClass for external classes instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
                 },
                 {
                     "name": "Sample",
@@ -2283,6 +2221,68 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    render: (args) => ({\n        props: {\n            ...args,\n            click: () => {\n                action('do something')();\n            }\n        },\n        template: templateMock\n    })\n}"
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts": [
+                {
+                    "name": "Active",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isActive: true,\n        faIcon: faInfoCircle\n    }\n}"
+                },
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        isDisabled: true,\n        faIcon: faInfoCircle\n    }\n}"
+                },
+                {
+                    "name": "iconOptions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Record<string, IconDefinition>",
+                    "defaultValue": "{\n    faCheck: faCheck,\n    faExclamation: faExclamation,\n    faInfoCircle: faInfoCircle,\n    faSpinner: faSpinner,\n    faTrash: faTrash\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CircleBtnComponent>",
+                    "defaultValue": "{\n    title: 'Components/Buttons/Circle Btn',\n    component: CircleBtnComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        backgroundColor: { control: 'text' },\n        isDisabled: { control: 'boolean' },\n        customClass: {\n            control: 'text',\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    }\n}"
+                },
+                {
+                    "name": "Sample",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        faIcon: faCheck\n    }\n}"
+                },
+                {
+                    "name": "Spinning",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/circle-btn/circle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        isDisabled: false,\n        isSpinning: true,\n        faIcon: faSpinner\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/filled-btn/filled-btn.stories.ts": [
@@ -2374,7 +2374,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<FilledBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Filled Btn',\n    component: FilledBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        appearance: {\n            control: 'select',\n            options: FILLED_BTN_APPEARANCES\n        },\n        customClass: { control: 'text' },\n        classStyle: {\n            control: false,\n            description:\n                'Deprecated: use appearance for built-in variants or customClass for external classes instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Buttons/Filled Btn',\n    component: FilledBtnComponent,\n    argTypes: {\n        ariaLabel: { control: 'text' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        hoverStyle: {\n            control: {\n                type: 'select'\n            },\n            options: Object.values(hoverStyles),\n            mapping: HoverStyle\n        },\n        showIcon: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        appearance: {\n            control: 'select',\n            options: FILLED_BTN_APPEARANCES,\n            description: 'Built-in appearance variant of the component.'\n        },\n        customClass: {\n            control: 'text',\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyle: {\n            control: false,\n            description:\n                'Deprecated: use appearance for built-in variants or customClass for external classes instead.'\n        },\n        width: { control: 'text' },\n        isSpinning: { control: 'boolean' },\n        isActive: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Sample",
@@ -2456,7 +2456,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<NavbarBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Buttons/Navbar Btn',\n    component: NavbarBtnComponent,\n    decorators: [\n        (story) => ({\n            template: `<div [style.background]=\"'black'\">${story().template}</div>`,\n            props: story().props\n        })\n    ],\n    argTypes: {\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        disabled: { control: 'boolean' },\n        customClass: { control: 'text' },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        active: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Buttons/Navbar Btn',\n    component: NavbarBtnComponent,\n    decorators: [\n        (story) => ({\n            template: `<div [style.background]=\"'black'\">${story().template}</div>`,\n            props: story().props\n        })\n    ],\n    argTypes: {\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        disabled: { control: 'boolean' },\n        customClass: {\n            control: 'text',\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        active: { control: 'boolean' }\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Sample",
@@ -2570,7 +2570,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<BadgeComponent>",
-                    "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        customClass: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ]\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
+                    "defaultValue": "{\n    title: 'Components/Badge',\n    component: BadgeComponent,\n    tags: ['autodocs'],\n    argTypes: {\n        label: { control: 'text' },\n        borderRadius: { control: 'number' },\n        customClass: {\n            control: 'select',\n            options: [\n                'running',\n                'failed',\n                'success',\n                'pending',\n                'changes',\n                'urgent',\n                'frozen',\n                'current',\n                'manual',\n                'free'\n            ],\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        isDisabled: { control: 'boolean' },\n        postIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        preIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        }\n    }\n}"
                 },
                 {
                     "name": "RunningWithPostIcon",
@@ -2601,78 +2601,6 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n        label: 'Success',\n        borderRadius: 10,\n        customClass: 'success',\n        isDisabled: false,\n        postIcon: undefined,\n        preIcon: faInfo\n    }\n}"
-                }
-            ],
-            "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts": [
-                {
-                    "name": "Custom",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Enabled',\n        checked: true,\n        appearance: 'brand',\n        toggleHeight: 30\n    }\n}"
-                },
-                {
-                    "name": "CustomSmall",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Compact',\n        checked: false,\n        appearance: 'brand',\n        toggleHeight: 25\n    }\n}"
-                },
-                {
-                    "name": "CustomTiny",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Tiny',\n        checked: true,\n        appearance: 'brand',\n        toggleHeight: 20\n    }\n}"
-                },
-                {
-                    "name": "Disabled",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        checked: true,\n        isDisabled: true\n    }\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<ToggleBtnComponent>",
-                    "defaultValue": "{\n    title: 'Components/Toggle Btn',\n    component: ToggleBtnComponent,\n    argTypes: {\n        label: { control: 'text' },\n        checked: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        customClass: { control: 'text' },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        appearance: { control: 'radio', options: TOGGLE_BTN_APPEARANCES },\n        toggleHeight: {\n            control: 'radio',\n            options: [...TOGGLE_BTN_HEIGHTS].reverse()\n        },\n        checkedChange: { action: 'changed' }\n    },\n    args: {\n        checkedChange: fn(),\n        appearance: 'default',\n        toggleHeight: 30\n    },\n    tags: ['autodocs']\n}"
-                },
-                {
-                    "name": "Off",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'Off',\n        checked: false\n    }\n}"
-                },
-                {
-                    "name": "On",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n    args: {\n        label: 'On',\n        checked: true\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/select/select.stories.ts": [
@@ -2724,7 +2652,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<SelectComponent>",
-                    "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        appearance: {\n            control: {\n                type: 'select'\n            },\n            options: SELECT_APPEARANCES\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated legacy alias: use appearance instead.'\n        },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        width: { control: 'text' },\n        menuHeight: { control: 'text' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Select/ Single',\n    component: SelectComponent,\n    parameters: {\n        docs: {\n            description: {\n                story: 'Component to select items.'\n            }\n        }\n    },\n    argTypes: {\n        items: { control: 'object' },\n        selectedItem: { control: 'object' },\n        label: { control: 'text' },\n        faIcon: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        faIconBefore: {\n            control: {\n                type: 'select'\n            },\n            options: Object.keys(iconOptions),\n            mapping: iconOptions\n        },\n        appearance: {\n            control: {\n                type: 'select'\n            },\n            options: SELECT_APPEARANCES,\n            description: 'Built-in appearance variant of the component.'\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated legacy alias: use appearance instead.'\n        },\n        withBlankOption: { control: 'boolean' },\n        withDeselect: { control: 'boolean' },\n        withFilter: { control: 'boolean' },\n        filterPlaceholder: { control: 'text' },\n        show: { control: 'boolean' },\n        width: { control: 'text' },\n        menuHeight: { control: 'text' },\n        showChange: { action: 'show' },\n        itemSelected: { action: 'selected' }\n    },\n    args: {\n        showChange: fn(),\n        itemSelected: fn()\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "selectedItem",
@@ -2745,6 +2673,78 @@
                     "deprecationMessage": "",
                     "type": "[]",
                     "defaultValue": "[\n    new SelectItem('select1', undefined, Icons.faInfoCircle),\n    new SelectItem('select2', undefined, Icons.faInfoCircle),\n    new SelectItem('select3')\n]"
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts": [
+                {
+                    "name": "DefaultLarge",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Enabled',\n        checked: true,\n        toggleHeight: 30\n    }\n}"
+                },
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Disabled',\n        checked: true,\n        isDisabled: true\n    }\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ToggleBtnComponent>",
+                    "defaultValue": "{\n    title: 'Components/Toggle Btn',\n    component: ToggleBtnComponent,\n    argTypes: {\n        label: { control: 'text' },\n        checked: { control: 'boolean' },\n        isDisabled: { control: 'boolean' },\n        customClass: {\n            control: 'text',\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyle: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        toggleHeight: {\n            control: 'radio',\n            options: [...TOGGLE_BTN_HEIGHTS].reverse()\n        },\n        checkedChange: { action: 'changed' }\n    },\n    args: {\n        checkedChange: fn(),\n        toggleHeight: 30\n    },\n    tags: ['autodocs']\n}"
+                },
+                {
+                    "name": "Off",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Off',\n        checked: false\n    }\n}"
+                },
+                {
+                    "name": "On",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'On',\n        checked: true\n    }\n}"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Compact',\n        checked: false,\n        toggleHeight: 25\n    }\n}"
+                },
+                {
+                    "name": "Tiny",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        label: 'Tiny',\n        checked: true,\n        toggleHeight: 20\n    }\n}"
                 }
             ],
             "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts": [
@@ -3346,7 +3346,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<InputComponent>",
-                    "defaultValue": "{\n    title: 'Components/Input',\n    component: InputComponent,\n    argTypes: {\n        input: { control: 'text' },\n        customClass: {\n            control: 'select',\n            options: [\n                '',\n                'no-radius',\n                'full-width',\n                'small left',\n                'small right'\n            ]\n        },\n        classStyles: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        placeholderText: { control: 'text' },\n        type: { control: 'text' },\n        width: { control: 'text' },\n        inputChange: { action: 'change' }\n    },\n    args: {\n        type: 'text',\n        inputChange: fn()\n    },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Input',\n    component: InputComponent,\n    argTypes: {\n        input: { control: 'text' },\n        customClass: {\n            control: 'select',\n            options: [\n                '',\n                'no-radius',\n                'full-width',\n                'small left',\n                'small right'\n            ],\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyles: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        placeholderText: { control: 'text' },\n        type: { control: 'text' },\n        width: { control: 'text' },\n        inputChange: { action: 'change' }\n    },\n    args: {\n        type: 'text',\n        inputChange: fn()\n    },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Sample",
@@ -3390,7 +3390,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<SearchInputComponent>",
-                    "defaultValue": "{\n    title: 'Components/Search Input',\n    component: SearchInputComponent,\n    argTypes: {\n        filter: { control: 'text' },\n        customClass: {\n            control: 'select',\n            options: [\n                '',\n                'no-radius',\n                'full-width',\n                'small left',\n                'small right'\n            ]\n        },\n        classStyles: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        placeholderText: { control: 'text' },\n        filterChange: { action: 'change' }\n    },\n    args: { filterChange: fn() },\n    tags: ['autodocs']\n}"
+                    "defaultValue": "{\n    title: 'Components/Search Input',\n    component: SearchInputComponent,\n    argTypes: {\n        filter: { control: 'text' },\n        customClass: {\n            control: 'select',\n            options: [\n                '',\n                'no-radius',\n                'full-width',\n                'small left',\n                'small right'\n            ],\n            description:\n                'Optional custom CSS classes for project-specific styling.'\n        },\n        classStyles: {\n            control: false,\n            description: 'Deprecated: use customClass instead.'\n        },\n        placeholderText: { control: 'text' },\n        filterChange: { action: 'change' }\n    },\n    args: { filterChange: fn() },\n    tags: ['autodocs']\n}"
                 },
                 {
                     "name": "Sample",
@@ -3616,19 +3616,6 @@
                     "kind": 184
                 }
             ],
-            "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<BadgeComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 184
-                }
-            ],
             "projects/angular-component-library/src/lib/components/alert/alert.stories.ts": [
                 {
                     "name": "Story",
@@ -3642,19 +3629,6 @@
                     "kind": 184
                 }
             ],
-            "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<CheckboxComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 184
-                }
-            ],
             "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts": [
                 {
                     "name": "Story",
@@ -3662,6 +3636,45 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<BorderedBtnComponent>",
                     "file": "projects/angular-component-library/src/lib/components/bordered-btn/bordered-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<BorderlessBtnComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/badge/badge.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<BadgeComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/badge/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CheckboxComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/checkbox/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -3688,19 +3701,6 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CollapsibleComponent>",
                     "file": "projects/angular-component-library/src/lib/components/collapsible/collapsible.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 184
-                }
-            ],
-            "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<BorderlessBtnComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/borderless-btn/borderless-btn.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -3746,19 +3746,6 @@
                     "kind": 184
                 }
             ],
-            "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<DateTimePickerComponent>",
-                    "file": "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 184
-                }
-            ],
             "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts": [
                 {
                     "name": "Story",
@@ -3766,6 +3753,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<DropzoneComponent>",
                     "file": "projects/angular-component-library/src/lib/components/dropzone/dropzone.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 184
+                }
+            ],
+            "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DateTimePickerComponent>",
+                    "file": "projects/angular-component-library/src/lib/components/date-time-picker/date-time-picker.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -5556,27 +5556,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Custom",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "CustomSmall",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "CustomTiny",
+                "name": "DefaultLarge",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -5617,6 +5597,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "On",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/angular-component-library/src/lib/components/toggle-btn/toggle-btn.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Tiny",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

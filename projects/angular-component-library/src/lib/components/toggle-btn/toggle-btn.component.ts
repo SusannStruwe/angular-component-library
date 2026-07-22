@@ -31,7 +31,7 @@ const DEFAULT_TOGGLE_BTN_HEIGHT: ToggleBtnHeightValue = 30;
  * - `checked` enables two-way binding for the current toggle state.
  * - `toggleHeight` controls the size preset.
  * - `isDisabled` controls whether the user can change the state.
- * - `customClass` can be used to pass additional project-specific classes.
+ * - `customClass` can be used to pass additional project-specific classes and CSS variable overrides such as `--toggle-thumb-bg`.
  * ```
  */
 @Component({
