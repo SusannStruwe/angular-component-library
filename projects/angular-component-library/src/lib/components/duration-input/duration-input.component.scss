@@ -14,9 +14,20 @@ input {
     margin-right: 5px;
     border: var(--border-width) solid var(--bordered-btn-border-color, var(--btn-border-color));
     border-radius: var(--input-radius);
+    background: var(--field-bg, #ffffff);
+    color: var(--field-text-color, var(--text-color));
     box-sizing: border-box;
     font-family: var(--font-family);
     font-weight: var(--font-weight-normal);
+    -moz-appearance: textfield;
+    appearance: textfield;
+    outline: 0;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 }
 
 span {
@@ -37,8 +48,6 @@ p {
     cursor: default;
 
     -webkit-appearance: none;
-    -moz-appearance: textfield;
-    appearance: textfield;
 }
 
 /***************************************************************
@@ -48,7 +57,7 @@ that do not support them, like touch displays
 @media (hover: hover) {
     input {
         &:hover {
-            border: var(--border-width) solid var(--accent-color);
+            border: var(--border-width) solid var(--field-hover-border-color, var(--accent-color));
         }
     }
 }
