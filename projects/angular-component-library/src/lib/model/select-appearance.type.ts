@@ -11,7 +11,4 @@ export const SELECT_APPEARANCES = [
 export type DeprecatedSchedulerSelectAppearance = 'scheduler';
 
 export type SelectAppearance =
-    | 'light'
-    | 'light-gray'
-    | DeprecatedSchedulerSelectAppearance
-    | 'sidebar';
+    'light' | 'light-gray' | DeprecatedSchedulerSelectAppearance | 'sidebar';
