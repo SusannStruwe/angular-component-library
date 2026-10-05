@@ -7,50 +7,73 @@ on:
     workflow_dispatch: # Allows you to manually trigger the update at any time in the GitHub UI
 
 env:
-    NODE_VERSION: '22'
+    NODE_VERSION: '22.22.3'
 
 jobs:
     dependencies-upgrade:
-        name: Run Update Script & Create PR
-        runs-on: ubuntu-latest
+        name: Run Update Script & Save Branch
+        runs-on: ubuntu-24.04
 
         steps:
             - name: Checkout Repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v7
               with:
                   # Use your stored secret so that the new PR
                   # automatically triggers CI test pipeline
                   token: ${{ secrets.UPDATE_BOT_TOKEN }}
 
             - name: Setup Node.js
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v7
               with:
                   node-version: ${{ env.NODE_VERSION }}
 
             - name: Install current npm dependencies
-              run: npm install
+              run: npm ci
+
+            - name: Determine Angular update target
+              id: target
+              continue-on-error: true
+              run: |
+                  version=$(npm view @angular/core version)
+                  echo "major=${version%%.*}" >> "$GITHUB_OUTPUT"
 
             - name: Run Complete Ecosystem Updates
+              id: update
               run: npm run pipeline:update-all
 
+            - name: Determine Angular version branch
+              id: branch
+              if: always()
+              run: |
+                  node -e 'const p=require("./package.json"); const version=p.dependencies["@angular/core"] || p.devDependencies["@angular/core"]; const target="${{ steps.target.outputs.major }}"; const major=target || version.match(/\d+/)[0]; require("fs").appendFileSync(process.env.GITHUB_OUTPUT, `name=automation/angular-v${major}\nmajor=${major}\n`);'
+
             - name: Sync Library package.json Versions
+              if: always()
               run: node sync-versions.js
 
-            - name: Create Update Branch and Pull Request
-              uses: peter-evans/create-pull-request@v6
+            - name: Save Update Branch and Pull Request
+              if: always()
+              uses: peter-evans/create-pull-request@v8
               with:
                   token: ${{ secrets.UPDATE_BOT_TOKEN }}
                   commit-message: 'chore(deps): monatliches Angular- & Ecosystem-Update'
-                  branch: 'automation/angular-update' # code will be pushed to this new branch
+                  branch: ${{ steps.branch.outputs.name }}
+                  base: main
                   delete-branch: true # Automatically deletes the branch when the PR is merged
+                  draft: ${{ steps.update.outcome == 'failure' }}
                   title: '🚀 Automated: Monthly Dependency- & Migrations-Update'
                   body: |
                       This automated update was triggered by the monthly update pipeline.
 
-                      **Changes Made:**
-                      - The Angular Framework (CLI, Core, Devkit, CDK) was updated, and code migrations were performed.
-                      - Frameworks (Storybook & FontAwesome) were migrated using `ng update`.
-                      - All remaining utilities and devDependencies were updated via `npm update`.
+                      Angular target: v${{ steps.branch.outputs.major }}.
+                      Update command result: ${{ steps.update.outcome }}.
+
+                      If this is a draft pull request, an update group failed. The branch preserves completed changes for manual follow-up.
+
+                      **Update groups attempted:**
+                      - Angular, Angular CLI, CDK, and angular-eslint.
+                      - Font Awesome and Storybook.
+                      - Remaining utilities and devDependencies via `npm update`.
 
                       Please review the changes and the results of the test pipeline before merging this PR into the `main` branch via **Squash and merge**!
                   labels: |
