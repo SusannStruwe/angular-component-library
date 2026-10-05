@@ -67,7 +67,9 @@ for (const update of updates) {
 }
 
 if (failed) {
-    console.error('\nOne or more update groups failed; keeping all completed changes.');
+    console.error(
+        '\nOne or more update groups failed; keeping all completed changes.'
+    );
     process.exitCode = 1;
 } else {
     console.log('\nAll update groups completed successfully.');
