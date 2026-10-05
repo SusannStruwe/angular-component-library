@@ -26,6 +26,7 @@ import { Component, Input } from '@angular/core';
 export class PopoverComponent {
     @Input() alignmentRight = false;
     @Input() show = false;
+    @Input() maxWidth = '450px';
 
     /**
      * Toggle show state

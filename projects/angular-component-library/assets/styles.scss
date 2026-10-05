@@ -520,12 +520,13 @@ body.theme-pail,
 .theme-pail multi-select-component button.active:not([disabled]),
 .theme-pail navbar-btn-component button.active:not([disabled]),
 .theme-pail select-component button.active:not([disabled]),
+.theme-pail select-component button.selected:not([disabled]),
 .theme-pail multi-select-component button.selected:not([disabled]),
 .theme-pail search-input-component input:focus:not([disabled]),
 .theme-pail input-component input:focus:not([disabled]),
 .theme-pail duration-input-component input:focus:not([disabled]),
 .theme-pail duration-input-component input:focus-visible:not([disabled]),
-.theme-pail select-component button.selected:not([disabled]) {
+.theme-pail input:focus:not([disabled]) {
     border-color: var(--theme-active-border-color) !important;
     box-shadow: var(--theme-active-box-shadow);
 }
