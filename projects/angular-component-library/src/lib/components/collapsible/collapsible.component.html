@@ -1,7 +1,7 @@
 <div
     data-testid="collapse-header"
     tabindex="0"
-    [ngClass]="['collapsible-header', classStyles]"
+    [ngClass]="['collapsible-header', customClassName]"
     (click)="collapseContent()"
     (keydown.enter)="collapseContent()"
     (keydown.space)="collapseContent()">
@@ -10,7 +10,7 @@
 
 <div
     data-testid="collapse-content"
-    [ngClass]="['collapsible-content', classStyles]"
+    [ngClass]="['collapsible-content', customClassName]"
     [class.show]="show"
     [class.hide]="!show">
     <ng-content select="[content]"></ng-content>

@@ -6,6 +6,19 @@
     (filesChangeEmitter)="onFileChange($event)">
     <div class="text-wrapper">
         <div class="centered">
+            @if (icon || title || subtitle) {
+                <div class="dz-header">
+                    @if (icon) {
+                        <fa-icon class="dz-icon" [icon]="icon"></fa-icon>
+                    }
+                    @if (title) {
+                        <p class="dz-title">{{ title }}</p>
+                    }
+                    @if (subtitle) {
+                        <p class="dz-subtitle">{{ subtitle }}</p>
+                    }
+                </div>
+            }
             <input
                 id="file-{{ randomId }}"
                 type="file"
@@ -14,38 +27,55 @@
                 multiple />
             <label for="file-{{ randomId }}">
                 <span class="upload-btn ripple">
-                    <fa-icon [icon]="faUpload"></fa-icon>
+                    @if (showButtonIcon) {
+                        <fa-icon [icon]="faUpload"></fa-icon>
+                    }
                     {{ choseFileLabel }}
                 </span>
             </label>
-            <p>
-                ( Format: {{ allowedExtension }} , max
-                {{ maxSizeOfFiles / 1000 }} MB)
+            <p class="dz-meta">
+                @if (hasMaxSizeLimit) {
+                    ( Format: {{ allowedExtension }} , max {{ maxSizeInMb }} MB)
+                } @else {
+                    ( Format: {{ allowedExtension }} )
+                }
             </p>
         </div>
     </div>
 </div>
-@for (file of files; track file; let ind = $index) {
-    <div class="row file-item">
+@if (effectiveFileListDisplay === 'summary' && files.length) {
+    <div class="row file-item file-item-summary">
         <div class="left">
             <span>
                 <fa-icon [icon]="faFile"></fa-icon>
             </span>
-            <p>
-                {{ file.name }} [{{
-                    file.size / FILE_SIZE_CONVERTER
-                        | number: '1.2-2' : getLocale()
-                }}
-                KB]
-            </p>
-        </div>
-        <div class="right">
-            <button
-                type="button"
-                class="remove-file-btn"
-                (click)="removeFile(file)">
-                <fa-icon [icon]="faRemove"></fa-icon>
-            </button>
+            <p>{{ uploadedFilesSummeryTxt }}</p>
         </div>
     </div>
+}
+@if (effectiveFileListDisplay === 'detailed') {
+    @for (file of files; track file; let ind = $index) {
+        <div class="row file-item">
+            <div class="left">
+                <span>
+                    <fa-icon [icon]="faFile"></fa-icon>
+                </span>
+                <p>
+                    {{ file.name }} [{{
+                        file.size / FILE_SIZE_CONVERTER
+                            | number: '1.2-2' : getLocale()
+                    }}
+                    KB]
+                </p>
+            </div>
+            <div class="right">
+                <button
+                    type="button"
+                    class="remove-file-btn"
+                    (click)="removeFile(file)">
+                    <fa-icon [icon]="faRemove"></fa-icon>
+                </button>
+            </div>
+        </div>
+    }
 }

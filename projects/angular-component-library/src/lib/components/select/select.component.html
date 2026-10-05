@@ -2,12 +2,12 @@
     <div
         class="flex"
         (clickOutside)="handleClickOutside()"
-        [ngClass]="[show ? 'selected' : '', classStyle ?? '']">
+        [ngClass]="[show ? 'selected' : '', appearanceClass ?? '']">
         <button
             id="select-component"
             #btn
             type="button"
-            [ngClass]="[show ? 'selected' : '', classStyle ?? '']"
+            [ngClass]="[show ? 'selected' : '', appearanceClass ?? '']"
             [attr.title]="'Select'"
             [attr.aria-label]="'Select'"
             [attr.aria-haspopup]="'menu'"
@@ -44,7 +44,7 @@
             @if (withFilter) {
                 <search-input-component
                     [style.margin.em]="'0.25'"
-                    [classStyles]="'full-width no-radius'"
+                    [customClass]="'full-width no-radius'"
                     [placeholderText]="filterPlaceholder"
                     [(filter)]="filter"
                     (filterChange)="filterAndSort()">

@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+    Component,
+    EventEmitter,
+    HostBinding,
+    Input,
+    Output
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
@@ -9,9 +15,19 @@ import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
  *
  * @howToUse
  * ```
- * <search-input-component
- *  [(input)]="input">
- * </search-input-component>
+ * <input-component
+ *   [(input)]="username"
+ *   [placeholderText]="'Username'"
+ *   type="text"
+ *   width="280px"
+ *   [icon]="faUser"
+ *   [customClass]="'full-width my-app-input'">
+ * </input-component>
+ *
+ * Key inputs:
+ * - `input` enables two-way binding for the current value.
+ * - `placeholderText`, `type`, `width`, and `icon` configure the input behavior and layout.
+ * - `customClass` can be used to pass additional project-specific classes.
  * ```
  */
 @Component({
@@ -22,6 +38,9 @@ import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 })
 export class InputComponent {
     @Input() input: string | number = '';
+    /** Optional custom CSS classes for project-specific styling. */
+    @Input() customClass?: string;
+    /** @deprecated Use customClass instead. */
     @Input() classStyles?: string;
     @Input() placeholderText? = '';
     @Input() type = 'text';
@@ -31,6 +50,15 @@ export class InputComponent {
     @Output() inputChange = new EventEmitter<string | number>();
 
     randomId: string = Math.floor(Math.random() * 16777215).toString(16);
+
+    get customClassName(): string {
+        return this.customClass ?? this.classStyles ?? '';
+    }
+
+    @HostBinding('class')
+    get hostClassName(): string {
+        return this.customClassName;
+    }
 
     /**
      * Input string has changed

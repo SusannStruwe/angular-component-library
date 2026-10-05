@@ -8,7 +8,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { Meta, StoryObj } from '@storybook/angular';
 import { HoverStyle } from '../../model/hover-style.enum';
-import { FilledBtnComponent } from './filled-btn.component';
+import {
+    FILLED_BTN_APPEARANCES,
+    FilledBtnComponent
+} from './filled-btn.component';
 import { action } from 'storybook/actions';
 
 const iconOptions: Record<string, IconDefinition> = {
@@ -48,9 +51,20 @@ const meta: Meta<FilledBtnComponent> = {
         },
         showIcon: { control: 'boolean' },
         isDisabled: { control: 'boolean' },
-        classStyle: {
+        appearance: {
             control: 'select',
-            options: ['delete', 'not-emphrazed', 'navbar-btn']
+            options: FILLED_BTN_APPEARANCES,
+            description: 'Built-in appearance variant of the component.'
+        },
+        customClass: {
+            control: 'text',
+            description:
+                'Optional custom CSS classes for project-specific styling.'
+        },
+        classStyle: {
+            control: false,
+            description:
+                'Deprecated: use appearance for built-in variants or customClass for external classes instead.'
         },
         width: { control: 'text' },
         isSpinning: { control: 'boolean' },
@@ -93,8 +107,7 @@ export const Disabled: Story = {
     args: {
         label: 'Disabled',
         isDisabled: true,
-        faIcon: faInfoCircle,
-        classStyle: 'inverted'
+        faIcon: faInfoCircle
     }
 };
 
@@ -102,7 +115,7 @@ export const Delete: Story = {
     args: {
         label: 'Delete',
         faIcon: faTrash,
-        classStyle: 'delete',
+        appearance: 'delete',
         width: '200px'
     }
 };
@@ -112,7 +125,7 @@ export const DeleteActive: Story = {
         label: 'DeleteActive',
         isActive: true,
         faIcon: faTrash,
-        classStyle: 'delete',
+        appearance: 'delete',
         width: '200px'
     }
 };
@@ -123,7 +136,7 @@ export const DeleteDisabled: Story = {
         isDisabled: true,
         isActive: true,
         faIcon: faTrash,
-        classStyle: 'delete',
+        appearance: 'delete',
         width: '200px'
     }
 };

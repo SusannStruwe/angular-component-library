@@ -20,17 +20,23 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
  *
  * @howToUse
  * ```
- * <custom-select-component>
+ * <custom-select-component
+ *   [(show)]="showActionsMenu">
  *   <div header>
- *     <bordered-btn-component
- *      [hoverStyle]="shiningStyle"
- *      [faIcon]="faElipsis">
- *    </bordered-btn-component>
+ *     <borderless-btn-component
+ *       [label]="'Actions'"
+ *       [faIcon]="faEllipsisVertical">
+ *     </borderless-btn-component>
  *   </div>
  *   <div body>
- *      <p>Put your content inside</p>
+ *     <p>Put your content inside</p>
  *   </div>
  * </custom-select-component>
+ *
+ * Key inputs:
+ * - `show` enables two-way binding for the open state.
+ * - The trigger is projected through the `header` slot.
+ * - The menu content is projected through the `body` slot.
  * ```
  */
 @Component({

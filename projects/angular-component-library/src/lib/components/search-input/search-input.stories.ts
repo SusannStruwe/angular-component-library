@@ -7,7 +7,7 @@ const meta: Meta<SearchInputComponent> = {
     component: SearchInputComponent,
     argTypes: {
         filter: { control: 'text' },
-        classStyles: {
+        customClass: {
             control: 'select',
             options: [
                 '',
@@ -15,7 +15,13 @@ const meta: Meta<SearchInputComponent> = {
                 'full-width',
                 'small left',
                 'small right'
-            ]
+            ],
+            description:
+                'Optional custom CSS classes for project-specific styling.'
+        },
+        classStyles: {
+            control: false,
+            description: 'Deprecated: use customClass instead.'
         },
         placeholderText: { control: 'text' },
         filterChange: { action: 'change' }

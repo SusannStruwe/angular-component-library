@@ -9,8 +9,15 @@ import { Icons } from '../../model/icons';
  * @howToUse
  * ```
  * <tag-btn-component
- *  [label]="string | translate ">
+ *  [label]="'Status: active'"
+ *  [backgroundColor]="'#444'"
+ *  (removeTagSelected)="removeStatusTag($event)">
  * </tag-btn-component>
+ *
+ * Key inputs:
+ * - `label` defines the visible tag text.
+ * - `backgroundColor` controls the tag background.
+ * - `removeTagSelected` emits the label when the remove action is clicked.
  * ```
  */
 @Component({
@@ -21,9 +28,7 @@ import { Icons } from '../../model/icons';
 })
 export class TagBtnComponent {
     @Input() label?: string;
-
     @Input() backgroundColor?: string;
-
     @Output() removeTagSelected = new EventEmitter<string>();
 
     faClose: IconDefinition = Icons.faXmark;

@@ -1,5 +1,13 @@
 import { Meta, StoryObj } from '@storybook/angular';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { DropzoneComponent } from './dropzone.component';
+import { Icons } from '../../model/icons';
+
+const iconOptions: Record<string, IconDefinition> = {
+    upload: Icons.faUpload,
+    file: Icons.faFile,
+    info: Icons.faCircleInfo
+};
 
 const meta: Meta<DropzoneComponent> = {
     title: 'Components/Dropzone',
@@ -7,7 +15,19 @@ const meta: Meta<DropzoneComponent> = {
     tags: ['autodocs'],
     argTypes: {
         choseFileLabel: { control: 'text' },
-        allowedExtension: { control: 'check', options: ['json'] },
+        title: { control: 'text' },
+        subtitle: { control: 'text' },
+        icon: {
+            control: 'select',
+            options: Object.keys(iconOptions),
+            mapping: iconOptions
+        },
+        fileListDisplay: {
+            control: 'select',
+            options: ['detailed', 'summary', 'none']
+        },
+        showButtonIcon: { control: 'boolean' },
+        allowedExtension: { control: 'object' },
         fileArrayLength: { control: 'number' },
         files: { control: { type: 'file', accept: '.json' } },
         maxSizeOfFiles: { control: 'number' },
@@ -27,9 +47,15 @@ type Story = StoryObj<DropzoneComponent>;
 
 export const Sample: Story = {
     args: {
-        height: '100px',
+        height: '220px',
         width: '600px',
+        title: 'JSON-Dateien hierher ziehen',
+        subtitle: 'Mehrere Dateien koennen gleichzeitig ausgewaehlt werden.',
+        icon: Icons.faUpload,
+        showButtonIcon: false,
+        fileListDisplay: 'summary',
+        allowedExtension: ['json'],
         choseFileLabel: 'Load Input files',
-        maxSizeOfFiles: 20000
+        maxSizeOfFiles: null
     }
 };

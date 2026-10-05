@@ -24,7 +24,7 @@ describe('SegmentedBtnComponent', () => {
         fixture.detectChanges();
     });
 
-    it('should create table component', () => {
+    it('should create segmented btn component', () => {
         expect(component).toBeTruthy();
     });
 

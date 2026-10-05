@@ -20,7 +20,7 @@ const meta: Meta<BadgeComponent> = {
     argTypes: {
         label: { control: 'text' },
         borderRadius: { control: 'number' },
-        classStyle: {
+        customClass: {
             control: 'select',
             options: [
                 'running',
@@ -33,7 +33,13 @@ const meta: Meta<BadgeComponent> = {
                 'current',
                 'manual',
                 'free'
-            ]
+            ],
+            description:
+                'Optional custom CSS classes for project-specific styling.'
+        },
+        classStyle: {
+            control: false,
+            description: 'Deprecated: use customClass instead.'
         },
         isDisabled: { control: 'boolean' },
         postIcon: {
@@ -70,7 +76,7 @@ export const RunningWithPostIcon: Story = {
     args: {
         label: 'Running',
         borderRadius: 10,
-        classStyle: 'running',
+        customClass: 'running',
         isDisabled: false,
         postIcon: faCheck,
         preIcon: undefined
@@ -81,7 +87,7 @@ export const SuccessWithPreIcon: Story = {
     args: {
         label: 'Success',
         borderRadius: 10,
-        classStyle: 'success',
+        customClass: 'success',
         isDisabled: false,
         postIcon: undefined,
         preIcon: faInfo
@@ -92,7 +98,7 @@ export const Changes: Story = {
     args: {
         label: 1,
         borderRadius: 50,
-        classStyle: 'changes',
+        customClass: 'changes',
         isDisabled: false
     }
 };

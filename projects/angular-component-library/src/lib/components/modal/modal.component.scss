@@ -33,7 +33,7 @@
         font-size: 1rem;
         margin: auto;
         overflow: hidden;
-        background-color: var(--modal-background);
+        background-color: var(--modal-bg);
 
         &.lg {
             height: 100%;
@@ -100,7 +100,7 @@
                 justify-content: center;
 
                 fa-icon {
-                    font-size: 2em;
+                    font-size: 1.5rem;
                     color: var(--text-color);
                     font-weight: var(--font-weight-normal);
                 }
@@ -215,7 +215,7 @@
             justify-content: flex-end;
             gap: 1em;
 
-            background-color: var(--modal-background);
+            background-color: var(--modal-bg);
             border-top: var(--border-width) solid var(--border-color);
         }
     }

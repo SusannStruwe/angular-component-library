@@ -1,6 +1,6 @@
 {
     "name": "angular-component-library-p",
-    "version": "4.0.1",
+    "version": "4.0.2",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
@@ -13,6 +13,7 @@
         "test": "ng test",
         "lint": "ng lint",
         "prettier": "npx prettier --write .",
+        "prettier:check": "prettier --check .",
         "storybook": "ng run angular-component-library:storybook",
         "test-storybook": "test-storybook --config-dir projects/angular-component-library/.storybook --url http://localhost:6006",
         "build-storybook": "ng run angular-component-library:build-storybook",

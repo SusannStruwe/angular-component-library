@@ -10,8 +10,11 @@ import { Icons } from '../../model/icons';
  * @howToUse
  * ```
  * <no-data-component
- *   [translationKey]="'no.data'">
+ *   [translationKey]="'general.noData'">
  * </no-data-component>
+ *
+ * Key inputs:
+ * - `translationKey` defines the translated message that is shown to the user.
  * ```
  */
 @Component({

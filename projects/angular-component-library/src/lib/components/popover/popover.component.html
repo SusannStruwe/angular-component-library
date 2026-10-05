@@ -3,6 +3,7 @@
     class="popover popup-shadow"
     [class.alignment-right]="alignmentRight"
     [class.show]="show"
-    [class.hide]="!show">
-    <ng-content> </ng-content>
+    [class.hide]="!show"
+    [style.max-width]="maxWidth">
+    <ng-content></ng-content>
 </div>

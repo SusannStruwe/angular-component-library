@@ -13,9 +13,19 @@ import { AlertType } from '../../model/alert-type.enum';
  * ```
  * <alert-component
  *   [(visibleState)]="showAlert"
+ *   [title]="'Saving failed'"
  *   [message]="errorMsg"
  *   [type]="alertTypeError"
+ *   [hideCloseBtn]="false"
+ *   [navigationLink]="'/logs'"
+ *   [navigationLinkLabel]="'Open logs'"
  * ></alert-component>
+ *
+ * Key inputs:
+ * - `visibleState` enables two-way binding for the current visibility.
+ * - `title`, `message`, and `type` define the alert content and state.
+ * - `hideCloseBtn` controls whether the dismiss action is shown.
+ * - `navigationLink` and `navigationLinkLabel` can add an optional action link.
  * ```
  */
 @Component({
@@ -32,9 +42,7 @@ export class AlertComponent {
     @Input() type: AlertType = AlertType.SUCCESS;
     // if state is true, alert is shown
     @Input() visibleState = false;
-
     @Input() hideCloseBtn = false;
-
     @Input() navigationLink?: string;
     @Input() navigationLinkLabel?: string;
 

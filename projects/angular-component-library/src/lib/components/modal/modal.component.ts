@@ -25,14 +25,30 @@ import { SassHelperComponent } from '../sass-helper.component';
  * @howToUse
  * ```
  * <modal-component
- *   [title]="title"
- *   [sizeClass]="sizeClass"
- *   [confirmBtn]="confirmBtn"
- *   [confirmBtnText]="confirmBtnText">
+ *   [id]="'delete-item-modal'"
+ *   [title]="'Delete item'"
+ *   [sizeClass]="['m']"
+ *   [confirmBtn]="true"
+ *   [confirmBtnTxt]="'Delete'"
+ *   [showConfirmBtnLoader]="isDeleting"
+ *   [confirmDisabled]="false"
+ *   [cancelBtn]="true"
+ *   [cancelBtnTxt]="'Cancel'"
+ *   [deleteBtn]="true"
+ *   [deleteBtnTxt]="'Delete permanently'">
  *   <div>
- *       <h2>Place your content inside</h2>
+ *       <h2>Do you really want to delete this item?</h2>
+ *       <p>This action cannot be undone.</p>
  *   </div>
  * </modal-component>
+ *
+ * Key inputs:
+ * - `id` is required and is used by the modal service.
+ * - `title`, `sizeClass`, and projected body content define the modal content.
+ * - `confirmBtn`, `cancelBtn`, `deleteBtn`, and their labels control the footer actions.
+ * - `showConfirmBtnLoader` and `confirmDisabled` control the confirm action state.
+ *
+ * Open the modal through the `ModalService` with the configured `id`.
  * ```
  */
 @Component({

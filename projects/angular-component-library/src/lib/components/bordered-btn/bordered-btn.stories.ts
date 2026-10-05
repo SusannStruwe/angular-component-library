@@ -9,7 +9,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { Meta, StoryObj } from '@storybook/angular';
 import { HoverStyle } from '../../model/hover-style.enum';
-import { BorderedBtnComponent } from './bordered-btn.component';
+import {
+    BORDERED_BTN_APPEARANCES,
+    BorderedBtnComponent
+} from './bordered-btn.component';
 import { action } from 'storybook/actions';
 
 const iconOptions: Record<string, IconDefinition> = {
@@ -51,9 +54,20 @@ const meta: Meta<BorderedBtnComponent> = {
         },
         showIcon: { control: 'boolean' },
         isDisabled: { control: 'boolean' },
-        classStyle: {
+        appearance: {
             control: 'select',
-            options: ['gray', 'delete']
+            options: BORDERED_BTN_APPEARANCES,
+            description: 'Built-in appearance variant of the component.'
+        },
+        customClass: {
+            control: 'text',
+            description:
+                'Optional custom CSS classes for project-specific styling.'
+        },
+        classStyle: {
+            control: false,
+            description:
+                'Deprecated: use appearance for built-in variants or customClass for external classes instead.'
         },
         width: { control: 'text' },
         isSpinning: { control: 'boolean' },
@@ -102,7 +116,7 @@ export const Delete: Story = {
     args: {
         label: 'Delete',
         faIcon: faTrash,
-        classStyle: 'delete',
+        appearance: 'delete',
         width: '200px'
     }
 };
@@ -112,7 +126,7 @@ export const DeleteActive: Story = {
         label: 'DeleteActive',
         isActive: true,
         faIcon: faTrash,
-        classStyle: 'delete',
+        appearance: 'delete',
         width: '200px'
     }
 };
@@ -123,7 +137,7 @@ export const DeleteDisabled: Story = {
         isDisabled: true,
         isActive: true,
         faIcon: faTrash,
-        classStyle: 'delete',
+        appearance: 'delete',
         width: '200px'
     }
 };

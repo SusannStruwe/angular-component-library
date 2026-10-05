@@ -6,6 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { FileDragNDropDirective } from '../../directives/drag-drop-file.directive';
 import { Icons } from '../../model/icons';
+import { FileListDisplayMode } from '../../model/file-list-display-mode.type';
 
 /**
  * Component to upload files by drag and drop or simple upload button
@@ -14,10 +15,25 @@ import { Icons } from '../../model/icons';
  * ```
  * <dropzone-component
  *   [files]="planningInputFiles"
+ *   choseFileLabel="Choose files"
+ *   title="Drop ZIP or JSON files here"
+ *   subtitle="Multiple files can be selected at the same time."
+ *   [icon]="faUpload"
+ *   [showButtonIcon]="true"
+ *   fileListDisplay="summary"
+ *   [allowedExtension]="['zip', 'json']"
  *   [fileArrayLength]="100"
- *   [fileArraySize]="100"
+ *   [maxSizeOfFiles]="5000"
+ *   height="140px"
+ *   width="100%"
  *   (filesChanged)="filesChanged($event)">
  * </dropzone-component>
+ *
+ * Key inputs:
+ * - `files` contains the current file list.
+ * - `allowedExtension`, `fileArrayLength`, and `maxSizeOfFiles` validate incoming files.
+ * - `title`, `subtitle`, `icon`, and `showButtonIcon` control the visible dropzone content.
+ * - `fileListDisplay`, `height`, and `width` control presentation and layout.
  * ```
  */
 @Component({
@@ -31,9 +47,14 @@ export class DropzoneComponent {
 
     @Input() allowedExtension: string[] = ['json'];
     @Input() choseFileLabel: string = '';
+    @Input() title?: string;
+    @Input() subtitle?: string;
+    @Input() icon?: IconDefinition;
+    @Input() showButtonIcon = true;
+    @Input() fileListDisplay: FileListDisplayMode = 'detailed';
     @Input() fileArrayLength = 100;
     @Input() files: File[] = [];
-    @Input() maxSizeOfFiles = 5000; // 10 MB
+    @Input() maxSizeOfFiles: number | null = 5000; // 5 MB total
     @Input() height?: string = '100px';
     @Input() width?: string;
 
@@ -58,16 +79,32 @@ export class DropzoneComponent {
         return this.translate.getCurrentLang();
     }
 
+    get effectiveFileListDisplay(): FileListDisplayMode {
+        return this.fileListDisplay;
+    }
+
+    get uploadedFilesSummeryTxt(): string {
+        return `${this.files.length} uploaded file(s)`;
+    }
+
+    get hasMaxSizeLimit(): boolean {
+        return this.maxSizeOfFiles != null;
+    }
+
+    get maxSizeInMb(): number | null {
+        if (this.maxSizeOfFiles == null) {
+            return null;
+        }
+
+        return this.maxSizeOfFiles / 1000;
+    }
+
     /**
      * Triggered if file changed in drop zone
      * @param files
      */
     onFileChange(fileList: File[]) {
-        if (fileList.length < this.fileArrayLength) {
-            this.addFile(fileList);
-        } else {
-            this.replaceFileWithLastItems(fileList);
-        }
+        this.addFile(fileList);
     }
 
     /**
@@ -82,12 +119,7 @@ export class DropzoneComponent {
             const fileList: FileList | null = (event.target as HTMLInputElement)
                 .files;
             const files = Array.from(fileList as FileList);
-
-            if (files && files.length < this.fileArrayLength) {
-                this.addFile(files);
-            } else {
-                this.replaceFileWithLastItems(files);
-            }
+            this.addFile(files);
         }
     }
 
@@ -98,7 +130,11 @@ export class DropzoneComponent {
     addFile(files: File[] | FileList): void {
         const fileArray = Array.from(files);
 
-        fileArray.forEach((file: File) => {
+        for (const file of fileArray) {
+            if (this.files.length >= this.fileArrayLength) {
+                break;
+            }
+
             if (
                 !this.fileExists(file) &&
                 this.isAllowedFileType(file) &&
@@ -107,7 +143,7 @@ export class DropzoneComponent {
                 this.files.push(file);
                 this.filesChanged.emit(this.files);
             }
-        });
+        }
     }
 
     /**
@@ -176,6 +212,10 @@ export class DropzoneComponent {
      * @returns
      */
     maxListSizeReached(file: File): boolean {
+        if (this.maxSizeOfFiles == null) {
+            return false;
+        }
+
         let kbSize = 0;
         // get size of all olf files
         this.files.forEach((f) => (kbSize = kbSize + f.size));

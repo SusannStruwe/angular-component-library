@@ -53,19 +53,19 @@
     }
 
     &.success {
-        background-color: var(--job-successful-color);
+        background-color: var(--successful-state-color);
     }
 
     &.failed {
-        background-color: var(--job-failed-color);
+        background-color: var(--failed-state-color);
     }
 
     &.pending {
-        background-color: var(--job-pending-color);
+        background-color: var(--pending-state-color);
     }
 
     &.running {
-        background-color: var(--job-running-color);
+        background-color: var(--running-state-color);
     }
 
     &.changes {

@@ -1,145 +1,145 @@
-/*
-CSS Variables -> --accent-color for changing theme
-*/
-$toggle-btn-width: 65px;
-$toggle-btn-height: calc(var(--btn-height) - 10px);
-$slider-height: calc($toggle-btn-height / 2);
-
 :host {
     position: relative;
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    height: var(--btn-height);
 }
 
-span {
+p {
+    margin: 0 5px 0 0;
     font-size: var(--font-size);
-    margin: 0;
-    margin-right: 5px;
     font-weight: var(--font-weight-normal);
-}
-
-.navbar {
-    color: white;
+    font-family: var(--font-family);
+    color: var(--toggle-label-color, inherit);
 }
 
 .toggle {
     position: relative;
-    width: $toggle-btn-width;
-    height: $toggle-btn-height;
-    overflow: hidden;
-    border-radius: 100px;
+    width: var(--toggle-width-current, 65px);
+    height: var(--toggle-height-current, 30px);
+    border-radius: 999px;
 
-    .slider,
-    .layer {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+    &.size-25 {
+        --toggle-height-current: 25px;
+        --toggle-width-current: 54px;
+        --toggle-thumb-size-current: 18px;
+    }
+
+    &.size-20 {
+        --toggle-height-current: 20px;
+        --toggle-width-current: 43px;
+        --toggle-thumb-size-current: 13px;
+        --toggle-thumb-offset-end: 4px;
+    }
+
+    &.disabled {
+        opacity: 0.5;
+    }
+
+    input {
+        min-width: auto;
     }
 
     .checkbox {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        padding: 0;
+        position: absolute;
+        inset: 0;
+        z-index: 2;
         margin: 0;
         opacity: 0;
         cursor: pointer;
-        z-index: 3;
-    }
-
-    .slider {
-        z-index: 2;
-    }
-
-    .layer {
-        width: auto;
-        transition: 0.3s ease all;
-        border: 1px solid var(--btn-border-color);
-        z-index: 1;
-        border-radius: 100px;
-
-        &.active {
-            border: 1px solid var(--accent-color);
-        }
-    }
-
-    /* toggle 1 */
-    .slider:before {
-        content: ' ';
-        position: absolute;
-        left: 3px;
-        bottom: 4px;
-        width: 22px;
-        height: 22px;
-        color: var(--fa-icon-color);
-        font-size: 1.1em;
-        line-height: 0.7em;
-        font-weight: var(--font-weight-medium);
-        text-align: center;
-        background-color: var(--toggle-btn-background);
-        border-radius: 50%;
-        transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
-    }
-
-    .checkbox:checked + .slider:before {
-        content: ' ';
-        color: var(--accent-color);
-        font-size: 1.1em;
-        line-height: 0.9em;
-        font-weight: var(--font-weight-medium);
-        left: calc($toggle-btn-width - $toggle-btn-height + 4px);
-        background-color: var(--fa-icon-color);
-    }
-
-    .checkbox:checked ~ .layer {
-        background-color: var(--accent-color);
     }
 
     .checkbox:disabled {
         cursor: not-allowed;
     }
 
-    .slider,
-    .slider:before,
-    .layer {
-        transition: 0.3s ease all;
+    .track {
+        position: absolute;
+        inset: 0;
+        border: 1px solid
+            var(--toggle-track-border-color, #b0b1b3);
+        border-radius: inherit;
+        background-color: var(--toggle-track-bg, #b0b1b3);
+        transition:
+            border-color 0.3s ease,
+            background-color 0.3s ease;
+    }
+
+    .track::before {
+        content: '';
+        position: absolute;
+        left: var(--toggle-thumb-offset-start, 3px);
+        top: 50%;
+        width: var(--toggle-thumb-size-current, 22px);
+        height: var(--toggle-thumb-size-current, 22px);
+        border-radius: 50%;
+        background-color: var(--toggle-thumb-bg, #ffffff);
+        transform: translateY(-50%);
+        transition:
+            left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15),
+            background-color 0.3s ease;
+    }
+
+    .checkbox:checked + .track {
+        border-color: var(
+            --toggle-track-active-border-color,
+            var(--accent-color, #4b6af5)
+        );
+        background-color: var(
+            --toggle-track-active-bg,
+            var(--accent-color, #4b6af5)
+        );
+    }
+
+    .checkbox:checked + .track::before {
+        left: calc(
+            var(--toggle-width-current, 65px) -
+                var(--toggle-thumb-size-current, 22px) -
+                var(--toggle-thumb-offset-end, 4px)
+        );
+        background-color: var(
+            --toggle-thumb-active-bg,
+            #ffffff
+        );
     }
 }
 
-.disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-/************************************************
-Media query to add hover only on device which support hover
-*********************************************/
-
 @media (hover: hover) {
-    .toggle {
-        &:hover {
-            .layer {
-                border: 1px solid var(--accent-color-light);
-            }
+    .toggle:hover {
+        .track {
+            border-color: var(
+                --toggle-track-hover-border-color,
+                #999999
+            );
+            background-color: var(
+                --toggle-track-hover-bg,
+                var(--toggle-track-bg, #b0b1b3)
+            );
+        }
 
-            /* toggle 1 */
-            .slider:before {
-                color: var(--fa-icon-color);
-                background-color: var(--accent-color);
-            }
+        .track::before {
+            background-color: var(
+                --toggle-thumb-hover-bg,
+                #ffffff
+            );
+        }
 
-            .checkbox:checked + .slider:before {
-                color: var(--accent-color);
-                background-color: var(--fa-icon-color);
-            }
+        .checkbox:checked + .track {
+            border-color: var(
+                --toggle-track-hover-active-border-color,
+                var(--accent-color-dark, #2f49c7)
+            );
+            background-color: var(
+                --toggle-track-hover-active-bg,
+                var(--accent-color-dark, #2f49c7)
+            );
+        }
 
-            .checkbox:checked ~ .layer {
-                background-color: var(--accent-color-light);
-            }
+        .checkbox:checked + .track::before {
+            background-color: var(
+                --toggle-thumb-hover-active-bg,
+                #ffffff
+            );
         }
     }
 }
