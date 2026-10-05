@@ -36,7 +36,15 @@ const meta: Meta<NavbarBtnComponent> = {
             mapping: iconOptions
         },
         disabled: { control: 'boolean' },
-        classStyle: { control: 'text' },
+        customClass: {
+            control: 'text',
+            description:
+                'Optional custom CSS classes for project-specific styling.'
+        },
+        classStyle: {
+            control: false,
+            description: 'Deprecated: use customClass instead.'
+        },
         active: { control: 'boolean' }
     },
     tags: ['autodocs']

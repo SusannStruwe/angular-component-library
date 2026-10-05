@@ -1,6 +1,6 @@
 {
     "name": "angular-component-library",
-    "version": "4.0.1",
+    "version": "4.0.2",
     "peerDependencies": {
         "@angular/cdk": "^21.2.11",
         "@angular/common": "^21.2.13",

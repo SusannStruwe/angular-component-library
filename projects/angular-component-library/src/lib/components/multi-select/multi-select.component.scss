@@ -1,75 +1,127 @@
 :host {
     display: inline-block;
     position: relative;
-}
-
-.filter-btn {
-    min-width: var(--btn-height);
-    justify-content: space-between;
-
-    span {
-        font-weight: var(--font-weight-light);
-        color: var(--fa-icon-color);
-        width: max-content;
-        padding-left: 0.75em;
-    }
-
-    p {
-        text-align: center;
-        font-size: 1.3em;
-        font-weight: var(--font-weight-semibold);
-        color: var(--fa-icon-color);
-        margin-left: 0.25em;
-    }
-
-    fa-icon {
-        color: var(--fa-icon-color);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: var(--btn-height);
-    }
+    font-family: var(--font-family);
 }
 
 button {
+    cursor: pointer;
     position: relative;
     height: var(--btn-height);
+    min-width: var(--btn-height);
     line-height: var(--btn-height);
-    border: 0;
-    padding: var(--btn-padding);
     font-weight: var(--font-weight-light);
     font-size: var(--font-size);
     font-family: var(--font-family);
+    padding: 0;
+    color: var(--select-text-color, var(--text-color));
     background: transparent;
-    border: var(--border-width) solid var(--accent-color);
+    border: var(--border-width) solid
+        var(--select-border-color, var(--border-color));
     border-radius: var(--border-radius);
-    z-index: 10;
     width: 100%;
-    max-width: var(--max-width);
+    max-width: var(--max-width-select);
     overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
+    box-sizing: border-box;
 
-    fa-icon,
-    span {
-        color: var(--accent-color);
+    span,
+    fa-icon {
+        color: inherit;
     }
 
-    &.active {
-        background-color: var(--accent-color) !important;
-        border: var(--border-width) solid var(--accent-color) !important;
+    .label {
+        min-width: 0;
+        width: 100%;
+        padding: 0 10px;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .actions {
+        display: inline-flex;
+        align-items: center;
+        align-self: stretch;
+        margin: auto;
+
+        &.with-label {
+            margin-left: auto;
+        }
+    }
+
+    .count-badge {
+        min-width: 24px;
+        height: 24px;
+        margin: auto 0px auto 2px;
+        border-radius: 999px;
+        background: var(--accent-color-light);
+        color: var(--accent-color);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        font-size: 0.8em;
+        font-weight: var(--font-weight-medium);
+        line-height: 1;
+    }
+
+    .icon-slot {
+        width: var(--btn-height);
+        height: var(--btn-height);
+        padding: 0 10px;
+        background: var(--select-chevron-bg, transparent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    fa-icon {
+        color: var(--select-icon-color, var(--text-color));
+    }
+
+    &.selected {
+        border-color: var(--select-selected-border-color, var(--text-color));
+        background-color: var(--select-selected-bg, transparent);
+
+        .icon-slot {
+            background: var(
+                --select-selected-chevron-bg,
+                transparent
+            );
+        }
 
         fa-icon,
         span {
-            color: var(--fa-icon-color);
+            color: var(--select-selected-text-color, var(--text-color));
         }
     }
 
     &:active:not([disabled]) {
-        background-color: var(--accent-color-dark) !important;
+        border-color: var(--select-selected-border-color, var(--text-color));
+    }
+
+    &.colored {
+        color: var(--fa-icon-color);
+
+        .label,
+        .count-badge,
+        fa-icon {
+            color: var(--fa-icon-color);
+        }
+
+        .count-badge {
+            background: rgb(255 255 255 / 0.18);
+        }
+
+        .icon-slot {
+            background: transparent;
+        }
     }
 
     &:disabled {
@@ -84,14 +136,13 @@ button {
 
 .menu {
     position: absolute;
-    top: calc(var(--btn-height) + 4px);
-    min-width: 150px;
+    top: calc(var(--btn-height) + 5px);
+    min-width: 100%;
     width: max-content;
-    max-width: var(--max-width);
+    max-width: var(--max-width-select);
     height: auto;
-    border-radius: 0;
-    background: var(--menu-background);
-    z-index: var(--z-index-5);
+    background: var(--menu-bg);
+    z-index: var(--select-menu-z-index, var(--z-index-5));
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -118,8 +169,9 @@ button {
 
     input[type='text'] {
         height: var(--input-height);
-        border: 1px solid var(--btn-border-color);
-        border-radius: var(--border-radius);
+        border: var(--border-width) solid
+            var(--field-border-color, var(--border-color));
+        border-radius: 0;
         outline: none;
         cursor: pointer;
         font-size: var(--font-size);
@@ -133,13 +185,14 @@ button {
         flex-direction: column;
 
         &:focus {
-            border-color: var(--accent-color);
+            border-color: var(--field-hover-border-color, var(--accent-color));
         }
     }
 
     .selected-items {
-        border-bottom: 1px solid var(--border-color);
-        margin-bottom: 1.5em;
+        border-top: none;
+        border-bottom: 1px solid
+            var(--control-menu-border-color, var(--border-color));
         overflow: hidden;
     }
 
@@ -148,11 +201,14 @@ button {
         padding: 0;
         margin: 0;
         overflow-y: auto;
-        border-top: 1px solid var(--border-color);
+        border-top: 1px solid
+            var(--control-menu-border-color, var(--border-color));
 
         li {
-            height: var(--btn-height);
-            display: block;
+            min-height: var(--btn-height);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
             position: relative;
             cursor: pointer;
             font-size: var(--font-size);
@@ -160,8 +216,8 @@ button {
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-            padding: 0.5em;
-            color: var(--text-color);
+            padding: 0.25em 0.75em;
+            color: var(--control-menu-item-text-color, var(--text-color));
             border-bottom: 1px solid rgb(var(--border-color-rgb), 0.2);
             text-align: left;
             box-sizing: border-box;
@@ -183,24 +239,26 @@ button {
 
             /* Create a custom checkbox */
             .checkmark {
-                position: absolute;
-                margin-right: 10px;
-                height: 25px;
-                width: 25px;
-                background-color: transparent;
-                border: 1px solid var(--btn-border-color);
-                border-radius: var(--border-radius);
+                position: relative;
+                flex: 0 0 18px;
+                height: 18px;
+                width: 18px;
+                background-color: #ffffff;
+                border: 1px solid
+                    var(--field-border-color, var(--border-color));
+                border-radius: 4px;
+                box-sizing: border-box;
 
                 &:after {
                     content: '';
                     position: absolute;
                     display: none;
-                    left: 9px;
-                    top: 5px;
-                    width: 5px;
-                    height: 10px;
+                    left: 5px;
+                    top: 1px;
+                    width: 4px;
+                    height: 8px;
                     border: solid white;
-                    border-width: 0 3px 3px 0;
+                    border-width: 0 2px 2px 0;
                     -webkit-transform: rotate(45deg);
                     -ms-transform: rotate(45deg);
                     transform: rotate(45deg);
@@ -208,20 +266,23 @@ button {
             }
 
             .text {
-                padding-left: 35px;
                 padding-right: 10px;
-                font-size: 0.9em;
-                line-height: calc(var(--btn-height) - 10px);
-            }
-
-            &:hover input ~ .checkmark {
-                background-color: var(--row-highlight-color);
-                border: 1px solid var(--accent-color);
+                font-size: var(--font-size);
+                line-height: 1.35;
+                text-align: left;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                flex: 1;
             }
 
             & input:checked ~ .checkmark {
-                background-color: var(--accent-color);
-                border: 1px solid var(--accent-color);
+                background-color: var(
+                    --control-menu-item-hover-text-color,
+                    var(--accent-color)
+                );
+                border: 1px solid
+                    var(--control-menu-item-hover-text-color, var(--accent-color));
             }
 
             & input:checked ~ .checkmark:after {
@@ -230,8 +291,21 @@ button {
 
             &:active,
             &.active {
-                background-color: var(--row-highlight-color);
-                color: var(--accent-color);
+                background-color: var(
+                    --control-menu-item-hover-bg,
+                    var(--row-highlight-color)
+                );
+                color: var(
+                    --control-menu-item-hover-text-color,
+                    var(--accent-color)
+                );
+
+                .checkmark {
+                    border-color: var(
+                        --control-menu-item-hover-text-color,
+                        var(--accent-color)
+                    );
+                }
             }
         }
     }
@@ -284,14 +358,56 @@ that do not support them, like touch displays
 **************************************************************/
 @media (hover: hover) {
     button {
-        &:hover,
-        &.active {
-            background-color: var(--accent-color) !important;
-            border: var(--border-width) solid var(--accent-color) !important;
+        &:hover {
+            border-color: var(--select-hover-border-color, var(--text-color));
+            background-color: var(--select-hover-bg, transparent);
 
             fa-icon,
             span {
-                color: var(--fa-icon-color);
+                color: var(--select-hover-text-color, var(--text-color));
+            }
+
+            .icon-slot {
+                background: var(
+                    --select-hover-chevron-bg,
+                    transparent
+                );
+            }
+
+            &.selected {
+                border-color: var(
+                    --select-selected-border-color,
+                    var(--text-color)
+                );
+                background-color: var(
+                    --select-selected-bg,
+                    transparent
+                );
+
+                fa-icon,
+                span {
+                    color: var(
+                        --select-selected-text-color,
+                        var(--text-color)
+                    );
+                }
+
+                .icon-slot {
+                    background: var(
+                        --select-selected-chevron-bg,
+                        transparent
+                    );
+                }
+            }
+
+            &.colored {
+                filter: var(--brightness);
+
+                .label,
+                .count-badge,
+                fa-icon {
+                    color: var(--fa-icon-color);
+                }
             }
         }
     }
@@ -300,8 +416,21 @@ that do not support them, like touch displays
         ul {
             li {
                 &:hover {
-                    background-color: var(--row-highlight-color);
-                    color: var(--accent-color);
+                    background-color: var(
+                        --control-menu-item-hover-bg,
+                        var(--row-highlight-color)
+                    );
+                    color: var(
+                        --control-menu-item-hover-text-color,
+                        var(--accent-color)
+                    );
+
+                    .checkmark {
+                        border-color: var(
+                            --control-menu-item-hover-text-color,
+                            var(--accent-color)
+                        );
+                    }
                 }
             }
         }
@@ -339,17 +468,6 @@ that do not support them, like touch displays
                 span,
                 fa-icon {
                     color: var(--accent-color-dark);
-                }
-            }
-        }
-    }
-
-    .header {
-        &:hover,
-        &:active {
-            .filter-btn {
-                fa-icon {
-                    color: var(--accent-color);
                 }
             }
         }

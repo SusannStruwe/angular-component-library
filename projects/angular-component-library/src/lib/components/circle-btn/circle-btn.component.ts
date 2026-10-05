@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
@@ -9,9 +9,21 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
  * @howToUse
  * ```
  * <circle-btn-component
+ *   [ariaLabel]="'Reload data'"
  *   [faIcon]="faCog"
- *   [backgroundColor]="red"
+ *   [backgroundColor]="'#486bff'"
+ *   [isSpinning]="false"
+ *   [isDisabled]="false"
+ *   [isActive]="false"
+ *   width="44px"
+ *   [customClass]="'my-app-circle-btn'"
  * ></circle-btn-component>
+ *
+ * Key inputs:
+ * - `faIcon` and `ariaLabel` define the button content and accessibility label.
+ * - `backgroundColor` provides a quick color override.
+ * - `isActive`, `isDisabled`, `isSpinning`, and `width` control state and layout.
+ * - `customClass` can be used to pass additional project-specific classes.
  * ```
  */
 @Component({
@@ -33,9 +45,20 @@ export class CircleBtnComponent {
 
     @Input() backgroundColor?: string;
 
-    // example --> gray, delete
+    /** Optional custom CSS classes for project-specific styling. */
+    @Input() customClass?: string = '';
+    /** @deprecated Use customClass instead. */
     @Input() classStyle?: string = '';
 
     // example --> 100% or not
     @Input() width?: string;
+
+    get customClassName(): string {
+        return this.customClass ?? this.classStyle ?? '';
+    }
+
+    @HostBinding('class')
+    get hostClassName(): string {
+        return this.customClassName;
+    }
 }

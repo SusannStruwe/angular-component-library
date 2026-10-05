@@ -4,6 +4,7 @@ import {
     Component,
     ElementRef,
     EventEmitter,
+    HostBinding,
     Input,
     Output,
     ViewChild
@@ -19,11 +20,20 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
  * @howToUse
  * ```
  * <context-menu-component
- *    [items]="selectItems"
- *    [ariaLabel]="'Plan'"
- *    [label]="'Plan: '"
- *    (itemSelected)="selectItemProduction($event)">
+ *   [items]="menuItems"
+ *   [ariaLabel]="'Open actions'"
+ *   [label]="'Actions'"
+ *   [faIcon]="faEllipsisVertical"
+ *   [minWidth]="220"
+ *   [customClass]="'my-app-menu'"
+ *   (itemSelected)="onSelectAction($event)">
  * </context-menu-component>
+ *
+ * Key inputs:
+ * - `items` defines the available context menu actions.
+ * - `label` and `faIcon` define the menu trigger content.
+ * - `minWidth` controls the minimum dropdown width.
+ * - `customClass` can be used to pass additional project-specific classes.
  * ```
  */
 @Component({
@@ -38,6 +48,9 @@ export class ContextMenuComponent {
     @Input() label = '';
     @Input() ariaLabel: string = '';
     @Input() faIcon?: IconDefinition;
+    /** Optional custom CSS classes for project-specific styling. */
+    @Input() customClass?: string;
+    /** @deprecated Use customClass instead. */
     @Input() classStyle?: string;
     @Input() minWidth? = 0;
 
@@ -47,6 +60,15 @@ export class ContextMenuComponent {
     @ViewChild('menu') menu?: ElementRef<HTMLDivElement>;
 
     show = false;
+
+    get customClassName(): string {
+        return this.customClass ?? this.classStyle ?? '';
+    }
+
+    @HostBinding('class')
+    get hostClassName(): string {
+        return this.customClassName;
+    }
 
     /**
      * Toggle show state of menu

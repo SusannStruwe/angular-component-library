@@ -20,8 +20,18 @@ import { EditMode } from '../../model/edit-mode.enum';
  *
  * @howToUse
  * ```
- * <duration-input-component [seconds]="3000">
+ * <duration-input-component
+ *   [(seconds)]="retentionTimeInSeconds"
+ *   [mode]="editModeWrite"
+ *   [maxDuration]="86400"
+ *   [height]="32">
  * </duration-input-component>
+ *
+ * Key inputs:
+ * - `seconds` enables two-way binding for the total duration value.
+ * - `mode` switches between interactive and read-only behavior.
+ * - `maxDuration` limits the maximum allowed duration in seconds.
+ * - `height` controls the input height.
  * ```
  */
 @Component({

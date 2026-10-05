@@ -26,14 +26,25 @@ export const templateMock = `   <tabs-view-component [style.width.px]="200" [sty
  *  (selectedTabChanged)="selectedTabChanged($event)">
  *
  *  <tab-component
- *     [tabTitle]="tab1">
+ *     tabTitle="production"
+ *     [tabIcon]="faBoxArchive"
+ *     [active]="true"
+ *     tooltip="Production data">
+ *      <p>Production content</p>
  *  </tab-component>
  *
  *  <tab-component
- *     [tabTitle]="tab2">
+ *     tabTitle="staff"
+ *     tooltip="Staff related data">
+ *      <p>Staff content</p>
  *  </tab-component>
  *
  * </tabs-view-component>
+ *
+ * Key inputs:
+ * - Child `tab-component` instances define the available tabs.
+ * - `selectedTabChanged` emits the selected `tabTitle`.
+ * - Each tab can provide `tabIcon`, `tooltip`, and `active` state.
  * ```
  */
 @Component({

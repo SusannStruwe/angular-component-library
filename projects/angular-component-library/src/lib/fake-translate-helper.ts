@@ -60,9 +60,9 @@ export class FakeLoader implements TranslateLoader {
                     clock: ''
                 },
                 btn: {
-                    day: 'Day',
-                    week: 'Week',
-                    month: 'Month'
+                    day: 'Disabled',
+                    week: 'Active',
+                    month: 'Default'
                 },
                 general: {
                     search: 'Search ...'
@@ -90,9 +90,9 @@ export class FakeLoader implements TranslateLoader {
                     clock: 'Uhr'
                 },
                 btn: {
-                    day: 'Day',
-                    week: 'Woche',
-                    month: 'Monat'
+                    day: 'Disabled',
+                    week: 'Active',
+                    month: 'Default'
                 },
                 general: {
                     search: 'Suchen ...'

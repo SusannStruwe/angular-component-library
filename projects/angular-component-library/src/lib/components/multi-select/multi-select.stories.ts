@@ -62,8 +62,7 @@ export const Sample: Story = {
     args: {
         label: 'Label',
         faIcon: faFilter,
-        items: selectItems,
-        backgroundColor: 'green'
+        items: selectItems
     }
 };
 
@@ -72,8 +71,15 @@ export const WithFilter: Story = {
         faIcon: faFilter,
         items: selectItems,
         withFilter: true,
+        filterPlaceholder: 'Select...'
+    }
+};
 
-        filterPlaceholder: 'Select...',
+export const WithCustomBackground: Story = {
+    args: {
+        label: 'Label',
+        faIcon: faFilter,
+        items: selectItems,
         backgroundColor: '#486bff'
     }
 };

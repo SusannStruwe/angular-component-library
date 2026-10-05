@@ -18,7 +18,7 @@
         height: var(--tab-bg-height);
         position: relative;
         z-index: var(--z-index-4);
-        background: var(--tabs-background);
+        background: var(--tabs-bg);
 
         .active {
             border-bottom: 3px solid var(--fa-icon-color);

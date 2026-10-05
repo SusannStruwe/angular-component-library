@@ -1,4 +1,4 @@
-<div class="datepicker">
+<div class="datepicker" [class.with-overlay]="showOverlayBtn">
     <input
         [attr.data-testid]="'date-input-' + randomId"
         id="date-input-{{ randomId }}"

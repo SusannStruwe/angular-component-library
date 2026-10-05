@@ -26,10 +26,21 @@ import { Icons } from '../../model/icons';
  * @howToUse
  * ```
  * <date-time-picker-component
- *   [date]="selectedDate"
+ *   [date]="selectedDateTime"
  *   [withInput]="true"
- *   (dateChanged)="dateChanged($event)">
+ *   [mode]="editModeWrite"
+ *   [height]="32"
+ *   [minWidth]="220"
+ *   [randomId]="'appointment-start'"
+ *   (dateChange)="dateChanged($event)"
+ *   (pickerClosed)="pickerClosed($event)">
  * </date-time-picker-component>
+ *
+ * Key inputs:
+ * - `date` defines the current date-time value in native datetime-local format.
+ * - `withInput`, `mode`, `height`, and `minWidth` control display and interaction behavior.
+ * - `dateChange` emits the updated value.
+ * - `pickerClosed` can be used to react when the picker interaction finishes.
  * ```
  */
 @Component({

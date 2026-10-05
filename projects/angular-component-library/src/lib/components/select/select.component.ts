@@ -18,7 +18,7 @@ import { cloneDeep } from 'lodash';
 import { SearchInputComponent } from '../search-input/search-input.component';
 import { FormsModule } from '@angular/forms';
 import { Icons } from '../../model/icons';
-import { SelectStyle } from '../../model/select-style.enum';
+import { SelectAppearance } from '../../model/select-appearance.type';
 
 /**
  * Component to create and show  select
@@ -26,13 +26,28 @@ import { SelectStyle } from '../../model/select-style.enum';
  * @howToUse
  * ```
  * <select-component
- *    [items]="selectItems"
- *    [faIcon]="faCaretDown"
- *    [label]="'Plan: '"
- *    [withFilter]="false"
- *    [selectedItem]="selectedItem.text"
- *    (itemSelected)="selectItemProduction($event)">
+ *   [items]="planOptions"
+ *   [selectedItem]="selectedPlan"
+ *   label="Plan"
+ *   [faIcon]="faChevronDown"
+ *   [faIconBefore]="faLayerGroup"
+ *   [withFilter]="true"
+ *   filterPlaceholder="Filter plans"
+ *   appearance="light-gray"
+ *   [withBlankOption]="true"
+ *   [withDeselect]="false"
+ *   [show]="isPlanSelectOpen"
+ *   width="320px"
+ *   menuHeight="240px"
+ *   (showChange)="isPlanSelectOpen = $event"
+ *   (itemSelected)="onPlanSelected($event)">
  * </select-component>
+ *
+ * Key inputs:
+ * - `items` and `selectedItem` define the available options and current value.
+ * - `appearance` controls the built-in visual variant.
+ * - `withFilter`, `filterPlaceholder`, `withBlankOption`, and `withDeselect` control selection behavior.
+ * - `width`, `menuHeight`, and `show` control layout and open state.
  * ```
  */
 @Component({
@@ -56,7 +71,10 @@ export class SelectComponent implements OnInit, OnChanges {
     @Input() faIconBefore?: IconDefinition;
     @Input() withFilter?: boolean;
     @Input() filterPlaceholder?: string;
-    @Input() classStyle?: SelectStyle;
+    /** Built-in appearance variant of the component. */
+    @Input() appearance?: SelectAppearance;
+    /** @deprecated Use appearance instead. */
+    @Input() classStyle?: SelectAppearance;
     @Input() withBlankOption = false;
     @Input() withDeselect = true;
     @Input() show? = false;
@@ -72,6 +90,10 @@ export class SelectComponent implements OnInit, OnChanges {
 
     itemsBefore: SelectItem[] = [];
     filter = '';
+
+    get appearanceClass(): SelectAppearance | undefined {
+        return this.appearance ?? this.classStyle;
+    }
 
     ngOnInit(): void {
         this.itemsBefore = cloneDeep(this.items);

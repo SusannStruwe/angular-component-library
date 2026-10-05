@@ -12,7 +12,10 @@ import {
 import { Icons } from '../../model/icons';
 import { SelectItem } from '../../model/select-item.model';
 import { fn } from 'storybook/test';
-import { SelectStyle } from '../../model/select-style.enum';
+import {
+    SELECT_APPEARANCES,
+    SelectAppearance
+} from '../../model/select-appearance.type';
 
 const iconOptions: Record<string, IconDefinition> = {
     faChevronDown: faChevronDown,
@@ -22,8 +25,6 @@ const iconOptions: Record<string, IconDefinition> = {
     faSpinner: faSpinner,
     faTrash: faTrash
 };
-
-const selectStyle: typeof SelectStyle = SelectStyle;
 
 const selectItems = [
     new SelectItem('select1', undefined, Icons.faInfoCircle),
@@ -60,12 +61,16 @@ const meta: Meta<SelectComponent> = {
             options: Object.keys(iconOptions),
             mapping: iconOptions
         },
-        classStyle: {
+        appearance: {
             control: {
                 type: 'select'
             },
-            options: Object.keys(selectStyle),
-            mapping: SelectStyle
+            options: SELECT_APPEARANCES,
+            description: 'Built-in appearance variant of the component.'
+        },
+        classStyle: {
+            control: false,
+            description: 'Deprecated legacy alias: use appearance instead.'
         },
         withBlankOption: { control: 'boolean' },
         withDeselect: { control: 'boolean' },
@@ -87,7 +92,7 @@ export default meta;
 
 type Story = StoryObj<SelectComponent>;
 
-export const Sample: Story = {
+export const Default: Story = {
     args: {
         label: 'Label: ',
         items: selectItems,
@@ -111,7 +116,27 @@ export const Light: Story = {
         selectedItem: selectedItem,
         filterPlaceholder: 'Select...',
         show: true,
-        classStyle: SelectStyle.LIGHT,
+        appearance: 'light' satisfies SelectAppearance,
+        width: '600px',
+        menuHeight: '100px'
+    },
+    parameters: {
+        docs: {
+            description: {
+                story: 'Component to select items'
+            }
+        }
+    }
+};
+
+export const LightGray: Story = {
+    args: {
+        label: 'Label: ',
+        items: selectItems,
+        selectedItem: selectedItem,
+        filterPlaceholder: 'Select...',
+        show: true,
+        appearance: 'light-gray' satisfies SelectAppearance,
         width: '600px',
         menuHeight: '100px'
     },

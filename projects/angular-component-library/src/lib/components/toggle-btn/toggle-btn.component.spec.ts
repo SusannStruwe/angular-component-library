@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing';
 import { ToggleBtnComponent } from './toggle-btn.component';
-import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
 import { By } from '@angular/platform-browser';
 
 describe('ToggleBtnComponent', () => {
@@ -11,7 +10,7 @@ describe('ToggleBtnComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [ToggleBtnComponent, FontAwesomeTestingModule],
+            imports: [ToggleBtnComponent],
             providers: []
         });
 
@@ -46,4 +45,52 @@ describe('ToggleBtnComponent', () => {
         fixture.detectChanges();
         expect(component.checked).toBe(false);
     }));
+
+    it('should apply classStyle to label and toggle wrapper', () => {
+        component.classStyle = 'success-toggle settings';
+        fixture.detectChanges();
+
+        const labelEl = fixture.debugElement.query(By.css('p')).nativeElement;
+        const toggleEl = fixture.debugElement.query(
+            By.css('.toggle')
+        ).nativeElement;
+
+        expect(labelEl.classList.contains('success-toggle')).toBeTrue();
+        expect(labelEl.classList.contains('settings')).toBeTrue();
+        expect(toggleEl.classList.contains('success-toggle')).toBeTrue();
+        expect(toggleEl.classList.contains('settings')).toBeTrue();
+    });
+
+    it('should apply the compact size class', () => {
+        component.toggleHeight = '25';
+        fixture.detectChanges();
+
+        const toggleEl = fixture.debugElement.query(
+            By.css('.toggle')
+        ).nativeElement;
+
+        expect(toggleEl.classList.contains('size-25')).toBeTrue();
+    });
+
+    it('should apply the tiny size class', () => {
+        component.toggleHeight = '20';
+        fixture.detectChanges();
+
+        const toggleEl = fixture.debugElement.query(
+            By.css('.toggle')
+        ).nativeElement;
+
+        expect(toggleEl.classList.contains('size-20')).toBeTrue();
+    });
+
+    it('should accept a numeric binding for toggle height', () => {
+        component.toggleHeight = 25;
+        fixture.detectChanges();
+
+        const toggleEl = fixture.debugElement.query(
+            By.css('.toggle')
+        ).nativeElement;
+
+        expect(toggleEl.classList.contains('size-25')).toBeTrue();
+    });
 });

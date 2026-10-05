@@ -32,11 +32,21 @@ The library includes a list of different interaction components:
 - search-input
 - segmented-btn
 - select
-- table
 - tabs-view
 - tag-btn
 - toggle-btn
 - tooltip
+
+## Styling API
+
+- `appearance` = visual variant
+- `hoverStyle` = interaction behavior
+- `customClass` = additional CSS classes
+
+Deprecated:
+
+- `classStyle`
+- `classStyles`
 
 ## Development
 

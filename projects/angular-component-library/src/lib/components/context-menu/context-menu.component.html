@@ -1,7 +1,7 @@
 <div
     class="flex"
     (clickOutside)="handleClickOutside()"
-    [ngClass]="[show ? 'selected' : '', classStyle ?? '']">
+    [ngClass]="[show ? 'selected' : '', customClassName]">
     <button
         #btn
         [ngClass]="[show ? 'selected' : '']"

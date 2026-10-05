@@ -23,10 +23,21 @@ import { FormsModule } from '@angular/forms';
  * @howToUse
  * ```
  * <multi-select-component
- *   [items]="items"
- *   [faIcon]="faFilter"
- *   [withFilter]="false"
+ *   [items]="statusOptions"
+ *   [label]="'Select statuses'"
+ *   [faIcon]="faChevronDown"
+ *   [withFilter]="true"
+ *   filterPlaceholder="Filter statuses"
+ *   [backgroundColor]="'#ffffff'"
+ *   [noPadding]="false"
+ *   (itemsSelected)="onStatusesSelected($event)"
  * ></multi-select-component>
+ *
+ * Key inputs:
+ * - `items` defines the available selectable values.
+ * - `withFilter` and `filterPlaceholder` control search behavior.
+ * - `backgroundColor` and `noPadding` adjust the visual layout.
+ * - `itemsSelected` emits the currently selected values.
  * ```
  */
 @Component({
@@ -65,6 +76,10 @@ export class MultiSelectComponent implements OnChanges {
     show = false;
 
     randomId: string = Math.floor(Math.random() * 16777215).toString(16);
+
+    get hasCustomBackground(): boolean {
+        return !!this.backgroundColor;
+    }
 
     ngOnChanges() {
         this.selectedItems = [];
