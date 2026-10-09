@@ -15,7 +15,7 @@ The library includes a list of different interaction components:
 - collapsible
 - color-palette
 - context-menu
-- costum-select
+- custom-select
 - date-picker
 - date-range-picker
 - date-time-picker
