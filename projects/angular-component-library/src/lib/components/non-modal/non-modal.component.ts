@@ -6,7 +6,8 @@ import {
     OnDestroy,
     OnInit,
     ViewChild,
-    inject
+    inject,
+    ChangeDetectionStrategy
 } from '@angular/core';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -42,6 +43,7 @@ import { Icons } from '../../model/icons';
     selector: 'non-modal-component',
     imports: [CommonModule, FontAwesomeModule, DragDropModule],
     templateUrl: './non-modal.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./non-modal.component.scss']
 })
 export class NonModalComponent implements OnInit, OnDestroy {

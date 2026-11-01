@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+    Component,
+    EventEmitter,
+    Input,
+    Output,
+    ChangeDetectionStrategy
+} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { Icons } from '../../model/icons';
@@ -25,6 +31,7 @@ import { EditMode } from '../../model/edit-mode.enum';
     selector: 'checkbox-component',
     imports: [FontAwesomeModule],
     templateUrl: './checkbox.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./checkbox.component.scss']
 })
 export class CheckboxComponent {

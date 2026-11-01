@@ -6,7 +6,8 @@ import {
     OnDestroy,
     OnInit,
     ViewChild,
-    inject
+    inject,
+    ChangeDetectionStrategy
 } from '@angular/core';
 import { FilledBtnComponent } from '../filled-btn/filled-btn.component';
 import { BorderedBtnComponent } from '../bordered-btn/bordered-btn.component';
@@ -60,6 +61,7 @@ import { SassHelperComponent } from '../sass-helper.component';
         BorderedBtnComponent
     ],
     templateUrl: './modal.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit, OnDestroy {

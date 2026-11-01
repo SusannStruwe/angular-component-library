@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 export const PREFIX = '--';
 
@@ -7,6 +7,7 @@ export const PREFIX = '--';
  */
 @Component({
     selector: 'sass-helper',
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: '<div></div>'
 })
 export class SassHelperComponent {

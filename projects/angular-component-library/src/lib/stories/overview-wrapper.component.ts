@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import type { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { TranslateModule } from '@ngx-translate/core';
@@ -63,6 +63,7 @@ type OverviewThemeClass = '' | 'theme-light-gray' | 'theme-pail';
         CircleBtnComponent
     ],
     templateUrl: './overview-wrapper.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./overview-wrapper.component.scss']
 })
 export class OverviewWrapperComponent {

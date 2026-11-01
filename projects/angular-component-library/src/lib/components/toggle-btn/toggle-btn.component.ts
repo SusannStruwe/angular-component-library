@@ -3,7 +3,8 @@ import {
     EventEmitter,
     HostBinding,
     Input,
-    Output
+    Output,
+    ChangeDetectionStrategy
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -38,6 +39,7 @@ const DEFAULT_TOGGLE_BTN_HEIGHT: ToggleBtnHeightValue = 30;
     selector: 'toggle-btn-component',
     imports: [CommonModule, FormsModule],
     templateUrl: './toggle-btn.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./toggle-btn.component.scss']
 })
 export class ToggleBtnComponent {

@@ -8,7 +8,8 @@ import {
     OnInit,
     Output,
     ViewChild,
-    inject
+    inject,
+    ChangeDetectionStrategy
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -53,6 +54,7 @@ import { Icons } from '../../model/icons';
         TranslateModule
     ],
     templateUrl: './date-time-picker.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./date-time-picker.component.scss']
 })
 export class DateTimePickerComponent implements OnInit {

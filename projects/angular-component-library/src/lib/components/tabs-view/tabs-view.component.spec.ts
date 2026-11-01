@@ -2,12 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TabsViewComponent, templateMock } from './tabs-view.component';
 import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
 import { TabComponent } from './tab/tab.component';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
     selector: 'tabs-view-mock-component',
     standalone: true,
     imports: [TabsViewComponent, TabComponent, FontAwesomeTestingModule],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: templateMock
 })
 class TabsViewMockComponent {

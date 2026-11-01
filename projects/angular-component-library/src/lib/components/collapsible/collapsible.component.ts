@@ -7,7 +7,8 @@ import {
     Input,
     OnInit,
     Output,
-    inject
+    inject,
+    ChangeDetectionStrategy
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -39,6 +40,7 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
     selector: 'collapsible-component',
     imports: [CommonModule, FontAwesomeModule, FormsModule],
     templateUrl: './collapsible.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./collapsible.component.scss']
 })
 export class CollapsibleComponent implements OnInit {

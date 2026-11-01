@@ -4,7 +4,8 @@ import {
     EventEmitter,
     HostBinding,
     Input,
-    Output
+    Output,
+    ChangeDetectionStrategy
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -34,6 +35,7 @@ import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
     selector: 'input-component',
     imports: [CommonModule, FontAwesomeModule, FormsModule],
     templateUrl: './input.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./input.component.scss']
 })
 export class InputComponent {

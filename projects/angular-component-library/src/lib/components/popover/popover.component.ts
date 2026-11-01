@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 /**
  * Component to create and show popover.
@@ -21,6 +21,7 @@ import { Component, Input } from '@angular/core';
     selector: 'popover-component',
     imports: [],
     templateUrl: './popover.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./popover.component.scss']
 })
 export class PopoverComponent {

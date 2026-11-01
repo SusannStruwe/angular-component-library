@@ -1,5 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostBinding, Input } from '@angular/core';
+import {
+    Component,
+    HostBinding,
+    Input,
+    ChangeDetectionStrategy
+} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { HoverStyle } from '../../model/hover-style.enum';
@@ -44,6 +49,7 @@ function isBorderlessBtnAppearance(
     selector: 'borderless-btn-component',
     imports: [CommonModule, FontAwesomeModule],
     templateUrl: './borderless-btn.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./borderless-btn.component.scss']
 })
 export class BorderlessBtnComponent {

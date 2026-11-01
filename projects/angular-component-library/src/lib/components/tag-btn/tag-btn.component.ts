@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+    Component,
+    EventEmitter,
+    Input,
+    Output,
+    ChangeDetectionStrategy
+} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { Icons } from '../../model/icons';
@@ -24,6 +30,7 @@ import { Icons } from '../../model/icons';
     selector: 'tag-btn-component',
     imports: [FontAwesomeModule],
     templateUrl: './tag-btn.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./tag-btn.component.scss']
 })
 export class TagBtnComponent {

@@ -5,7 +5,8 @@ import {
     Input,
     OnInit,
     Output,
-    inject
+    inject,
+    ChangeDetectionStrategy
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -39,6 +40,7 @@ import { Icons } from '../../model/icons';
     selector: 'date-picker-component',
     imports: [CommonModule, FormsModule, FontAwesomeModule, PlatformModule],
     templateUrl: './date-picker.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./date-picker.component.scss']
 })
 export class DatePickerComponent implements OnInit {
