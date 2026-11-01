@@ -1,5 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostBinding, Input } from '@angular/core';
+import {
+    Component,
+    HostBinding,
+    Input,
+    ChangeDetectionStrategy
+} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { HoverStyle } from '../../model/hover-style.enum';
@@ -52,6 +57,7 @@ function isFilledBtnAppearance(
     selector: 'filled-btn-component',
     imports: [CommonModule, FontAwesomeModule],
     templateUrl: './filled-btn.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./filled-btn.component.scss']
 })
 export class FilledBtnComponent {

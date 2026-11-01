@@ -4,7 +4,8 @@ import {
     ContentChildren,
     EventEmitter,
     Output,
-    QueryList
+    QueryList,
+    ChangeDetectionStrategy
 } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TabComponent } from './tab/tab.component';
@@ -51,6 +52,7 @@ export const templateMock = `   <tabs-view-component [style.width.px]="200" [sty
     selector: 'tabs-view-component',
     imports: [FontAwesomeModule, TooltipDirective],
     templateUrl: './tabs-view.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./tabs-view.component.scss']
 })
 export class TabsViewComponent implements AfterContentInit {

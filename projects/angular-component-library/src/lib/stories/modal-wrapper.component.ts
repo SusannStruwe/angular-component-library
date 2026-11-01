@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ModalService } from '../services/modal.service';
 import { ModalComponent } from '../components/modal/modal.component';
@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
         ModalComponent,
         FilledBtnComponent
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './modal-wrapper.component.html'
 })
 export class ModalWrapperComponent {

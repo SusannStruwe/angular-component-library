@@ -1,5 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostBinding, Input } from '@angular/core';
+import {
+    Component,
+    HostBinding,
+    Input,
+    ChangeDetectionStrategy
+} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { HoverStyle } from '../../model/hover-style.enum';
@@ -43,6 +48,7 @@ function isBorderedBtnAppearance(
     selector: 'bordered-btn-component',
     imports: [CommonModule, FontAwesomeModule],
     templateUrl: './bordered-btn.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./bordered-btn.component.scss']
 })
 export class BorderedBtnComponent {

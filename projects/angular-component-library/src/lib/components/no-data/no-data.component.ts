@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { TranslateModule } from '@ngx-translate/core';
@@ -21,6 +21,7 @@ import { Icons } from '../../model/icons';
     selector: 'no-data-component',
     imports: [FontAwesomeModule, TranslateModule],
     templateUrl: './no-data.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./no-data.component.scss']
 })
 export class NoDataComponent {

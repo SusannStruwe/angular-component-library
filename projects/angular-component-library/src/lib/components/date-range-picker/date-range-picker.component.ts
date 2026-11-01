@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
+import {
+    Component,
+    EventEmitter,
+    Input,
+    Output,
+    inject,
+    ChangeDetectionStrategy
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition, faCalendar } from '@fortawesome/free-solid-svg-icons';
@@ -35,6 +42,7 @@ import { DatePickerComponent } from '../date-picker/date-picker.component';
         DatePickerComponent
     ],
     templateUrl: './date-range-picker.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./date-range-picker.component.scss']
 })
 export class DateRangePickerComponent {

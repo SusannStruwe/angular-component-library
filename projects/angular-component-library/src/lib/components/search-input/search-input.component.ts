@@ -4,7 +4,8 @@ import {
     EventEmitter,
     HostBinding,
     Input,
-    Output
+    Output,
+    ChangeDetectionStrategy
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -33,6 +34,7 @@ import { Icons } from '../../model/icons';
     selector: 'search-input-component',
     imports: [CommonModule, FontAwesomeModule, FormsModule],
     templateUrl: './search-input.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./search-input.component.scss']
 })
 export class SearchInputComponent {

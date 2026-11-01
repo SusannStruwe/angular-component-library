@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+    Component,
+    EventEmitter,
+    Input,
+    Output,
+    ChangeDetectionStrategy
+} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { RouterModule } from '@angular/router';
@@ -32,6 +38,7 @@ import { AlertType } from '../../model/alert-type.enum';
     selector: 'alert-component',
     imports: [CommonModule, FontAwesomeModule, RouterModule],
     templateUrl: './alert.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./alert.component.scss']
 })
 export class AlertComponent {

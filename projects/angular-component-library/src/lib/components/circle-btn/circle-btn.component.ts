@@ -1,5 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostBinding, Input } from '@angular/core';
+import {
+    Component,
+    HostBinding,
+    Input,
+    ChangeDetectionStrategy
+} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
@@ -30,6 +35,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
     selector: 'circle-btn-component',
     imports: [CommonModule, FontAwesomeModule],
     templateUrl: './circle-btn.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./circle-btn.component.scss']
 })
 export class CircleBtnComponent {

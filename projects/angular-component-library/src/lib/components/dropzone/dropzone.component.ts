@@ -1,5 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
+import {
+    Component,
+    EventEmitter,
+    Input,
+    Output,
+    inject,
+    ChangeDetectionStrategy
+} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { TranslateService } from '@ngx-translate/core';
@@ -40,6 +47,7 @@ import { FileListDisplayMode } from '../../model/file-list-display-mode.type';
     selector: 'dropzone-component',
     imports: [CommonModule, FontAwesomeModule, FileDragNDropDirective],
     templateUrl: './dropzone.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./dropzone.component.scss']
 })
 export class DropzoneComponent {

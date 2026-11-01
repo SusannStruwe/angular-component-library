@@ -3,7 +3,8 @@ import {
     EventEmitter,
     Input,
     OnChanges,
-    Output
+    Output,
+    ChangeDetectionStrategy
 } from '@angular/core';
 import {
     FormControl,
@@ -38,6 +39,7 @@ import { EditMode } from '../../model/edit-mode.enum';
     selector: 'duration-input-component',
     imports: [TranslateModule, FormsModule, ReactiveFormsModule],
     templateUrl: './duration-input.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./duration-input.component.scss']
 })
 export class DurationInputComponent implements OnChanges {

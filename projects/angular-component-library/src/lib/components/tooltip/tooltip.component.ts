@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 /**
@@ -18,6 +18,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     selector: 'tooltip-component',
     imports: [FontAwesomeModule],
     templateUrl: './tooltip.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./tooltip.component.scss']
 })
 export class TooltipComponent {

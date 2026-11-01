@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AnimationStyle, LoaderStyle } from '../../model/loader-style.enum';
 
@@ -27,6 +27,7 @@ import { AnimationStyle, LoaderStyle } from '../../model/loader-style.enum';
     selector: 'loader-component',
     imports: [CommonModule, FontAwesomeModule],
     templateUrl: './loader.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./loader.component.scss']
 })
 export class LoaderComponent {

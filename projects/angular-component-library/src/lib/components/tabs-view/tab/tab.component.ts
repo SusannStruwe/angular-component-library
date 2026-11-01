@@ -1,4 +1,9 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import {
+    Component,
+    HostBinding,
+    Input,
+    ChangeDetectionStrategy
+} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { TabViewType } from '../../../model/tab-view-type.enum';
@@ -28,6 +33,7 @@ import { CommonModule } from '@angular/common';
     selector: 'tab-component',
     imports: [CommonModule, FontAwesomeModule],
     templateUrl: './tab.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./tab.component.scss']
 })
 export class TabComponent {

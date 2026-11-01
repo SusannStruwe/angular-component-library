@@ -3,7 +3,8 @@ import {
     EventEmitter,
     HostBinding,
     Input,
-    Output
+    Output,
+    ChangeDetectionStrategy
 } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
@@ -43,6 +44,7 @@ export const activeBtn: SegmentedBtnItem = btnArray[1];
     selector: 'segmented-btn-component',
     imports: [FontAwesomeModule, TranslateModule],
     templateUrl: './segmented-btn.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./segmented-btn.component.scss']
 })
 export class SegmentedBtnComponent {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Colors } from '../../model/colors';
 
 /**
@@ -17,6 +17,7 @@ import { Colors } from '../../model/colors';
     selector: 'color-palette-component',
     imports: [],
     templateUrl: './color-palette.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./color-palette.component.scss']
 })
 export class ColorPaletteComponent implements OnInit {
